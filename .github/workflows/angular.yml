@@ -1,11 +1,10 @@
 name: Angular Build
 
-# {1}
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   angular:
@@ -14,26 +13,43 @@ jobs:
     strategy:
       matrix:
         node-version: [20]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-      # {2}
+      # Step 1: Checkout the source code
       - name: Checkout the source code
         uses: actions/checkout@v3
 
-      # {3}
-      - name: Setup Node.js $
+      # Step 2: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: $
+          node-version: 20
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
-      # {4}
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm ci
-      # {5}
+
+      # Step 4: Run Prettier Check
+      - name: Run Prettier
+        run: npm run prettier:check
+
+      # Step 5: Run Prettier Fix
+      - name: Run Prettier
+        run: npm run prettier:fix
+
+      # Step 6: Run ESLint
+      - name: Run ESLint
+        run: npm run lint
+
+      # Step 7: Run Stylelint
+      - name: Run Stylelint
+        run: npm run stylelint
+
+      # Step 8: Run tests
       - name: Run tests
         run: npm run test:ci
-      # {6}
+
+      # Step 9: Build the Angular application
       - name: Build
         run: npm run build
