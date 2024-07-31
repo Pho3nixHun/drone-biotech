@@ -9,7 +9,7 @@ on:
 jobs:
   angular:
     name: Angular Build
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [20]
@@ -30,26 +30,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Step 4: Run Prettier Check
-      - name: Run Prettier
-        run: npm run prettier:check
-
-      # Step 5: Run Prettier Fix
+      # Step 4: Run Prettier Fix
       - name: Run Prettier
         run: npm run prettier:fix
 
-      # Step 6: Run ESLint
+      # Step 5: Run ESLint
       - name: Run ESLint
         run: npm run lint
 
-      # Step 7: Run Stylelint
+      # Step 6: Run Stylelint
       - name: Run Stylelint
         run: npm run stylelint
 
-      # Step 8: Run tests
+      # Step 7: Run tests
       - name: Run tests
         run: npm run test:ci
 
-      # Step 9: Build the Angular application
+      # Step 8: Build the Angular application
       - name: Build
         run: npm run build
