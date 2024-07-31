@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Devcontainer ssh keys
+.devcontainer/.ssh/*
+!.devcontainer/.ssh/config
+!.devcontainer/.ssh/README.md
