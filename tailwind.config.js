@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        'my_spacing': '45rem',
+      },
+      fontFamily: {
+        'jetbrains': ['JetBrains'], // Add your custom font here
+      },
+      
+    },
   },
   plugins: [],
 }
