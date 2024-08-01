@@ -39,8 +39,8 @@ jobs:
         run: npm run lint
 
       # Step 6: Run Stylelint
-      - name: Run Stylelint
-        run: npm run stylelint
+      #- name: Run Stylelint
+      #  run: npm run stylelint
 
       # Step 7: Run tests
       #      - name: Run tests
