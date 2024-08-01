@@ -9,7 +9,11 @@ module.exports = {
         'my_spacing': '45rem',
       },
       fontFamily: {
-        'jetbrains': ['JetBrains'], // Add your custom font here
+        'myjetbrains': ['JetBrains'],
+        'mybolditalic': ['BoldItalic'],
+        'myitalic': ['Italic'],
+        'mybold': ['Bold'],
+        'myregular': ['Regular'],
       },
       
     },
