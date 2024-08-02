@@ -1,5 +1,36 @@
 <section id="contact-section" class="h-screen mt-20">
-  <div class="mx-40">
-    <div class="font-black text-6xl w-1/3 text-left pt-16">Get in touch</div>
+  <div class="mx-40 flex pt-16 space-x-40">
+    <div class="font-black text-6xl w-1/3 text-left">Get in touch</div>
+    <form class="flex flex-col w-2/5 space-y-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <input
+        class="mt-5 border-2 border-black p-2"
+        id="name"
+        formControlName="name"
+        placeholder="Your Name"
+      />
+      <input
+        class="border-2 border-black p-2"
+        id="email"
+        formControlName="email"
+        placeholder="E-mail Address"
+      />
+      <textarea
+        class="border-2 py-2 px-2 h-52 flex max-h-52 border-black placeholder-top-left"
+        id="message"
+        formControlName="message"
+        placeholder="Your Message"
+      ></textarea>
+      <button
+        class="ml-auto p-3 w-1/3 duration-150"
+        type="submit"
+        [disabled]="!contactForm.valid"
+        [ngClass]="{
+          'text-white bg-black hover:bg-slate-800 active:bg-slate-600': contactForm.valid,
+          'bg-gray-400 text-black': !contactForm.valid,
+        }"
+      >
+        Get in touch
+      </button>
+    </form>
   </div>
 </section>
