@@ -3,47 +3,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: 'JetBrains';
-    src: url(assets/fonts/JetBrainsMono-Regular.ttf);
-  }
-
-  @font-face {
-    font-family: 'BoldItalic';
-    src: url(assets/fonts/MesloLGS\ NF\ Bold\ Italic.ttf);
-  }
-
-  @font-face {
-    font-family: 'Italic';
-    src: url(assets/fonts/MesloLGS\ NF\ Italic.ttf);
-  }
-
-  @font-face {
-    font-family: 'Bold';
-    src: url(assets/fonts/MesloLGS\ NF\ Bold.ttf);
-  }
-
-  @font-face {
-    font-family: 'Regular';
-    src: url(assets/fonts/MesloLGS\ NF\ Regular.ttf);
-  }
-}
-
-
-/* Hide scrollbar for all elements */
-* {
-  scrollbar-width: none; /* Firefox */
-}
-
-*::-webkit-scrollbar {
-  display: none; /* Webkit browsers */
-}
-
-html, body {
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 

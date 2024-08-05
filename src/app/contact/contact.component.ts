@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from "../footer/footer.component";
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-contact',
@@ -10,15 +10,15 @@ import { FooterComponent } from "../footer/footer.component";
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
-  contactForm: FormGroup;
+  private readonly formBuilder = inject(FormBuilder);
+  protected readonly contactForm = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    name: ['', [Validators.required]],
+    message: ['', [Validators.required]],
+  });
 
-  constructor(private fb: FormBuilder) {
-    this.contactForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      name: ['', [Validators.required]],
-      message: ['', [Validators.required]],
-    });
-  }
+  constructor() {}
+
   get name() {
     return this.contactForm.get('name')?.value;
   }
@@ -31,7 +31,6 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    console.log(this.contactForm.value)
-    this.contactForm.reset()
+    this.contactForm.reset();
   }
 }

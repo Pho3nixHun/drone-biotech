@@ -3,12 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { HeroComponent } from "./hero/hero.component";
 import { FooterComponent } from "./footer/footer.component";
-import { HomeComponent } from "./home/home.component";
+import { ProductSectionComponent } from "./product-section/product-section.component";
+import { PartnerSectionComponent } from "./partner-section/partner-section.component";
+import { ContactComponent } from "./contact/contact.component";
+import { ScrollIndicatorComponent } from "./scroll-indicator/scroll-indicator.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HeroComponent, FooterComponent, HomeComponent],
+  imports: [RouterOutlet, HeaderComponent, HeroComponent, FooterComponent, ProductSectionComponent, PartnerSectionComponent, ContactComponent, ScrollIndicatorComponent],
   templateUrl: './app.component.html'
 })
 export class AppComponent {
