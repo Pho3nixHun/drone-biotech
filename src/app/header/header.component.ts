@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { HeroComponent } from "../hero/hero.component";
+import { Component, inject } from '@angular/core';
+import { HeroComponent } from '../hero/hero.component';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,9 @@ import { HeroComponent } from "../hero/hero.component";
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
+  private readonly scroll = inject(ScrollService);
+
   scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.scroll.scrollToSection(sectionId);
   }
 }
