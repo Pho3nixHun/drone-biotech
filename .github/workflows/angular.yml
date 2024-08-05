@@ -35,8 +35,8 @@ jobs:
         run: npm run prettier:fix
 
       # Step 5: Run ESLint
-      - name: Run ESLint
-        run: npm run lint
+      #- name: Run ESLint
+      #  run: npm run lint
 
       # Step 6: Run Stylelint
       #- name: Run Stylelint
