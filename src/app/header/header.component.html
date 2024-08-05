@@ -1,11 +1,30 @@
 <nav class="flex justify-center p-4" id="hero-section">
-    <div class="w-11/12 md:w-3/4 flex flex-col md:flex-row justify-between items-center">
-        <a href="#"><img src="../../assets/phoenix.jpg" alt="logo" width="50" height="50" class="mb-4 md:mb-0"></a>
-        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 text-center md:text-left">
-            <li><a href="#" class="hover:text-gray-400 duration-150">Home</a></li>
-            <li><a href="#" class="hover:text-gray-400 duration-150" (click)="scrollToSection('product-section')">Products</a></li>
-            <li><a href="#" class="hover:text-gray-400 duration-150" (click)="scrollToSection('partner-section')">Partners</a></li>
-            <li><a href="#" class="hover:text-gray-400 duration-150" (click)="scrollToSection('contact-section')" >Contacts</a></li>
-        </ul>
-    </div>
+  <div class="w-11/12 md:w-3/4 flex flex-col md:flex-row justify-between items-center">
+    <a href=""
+      ><img src="../../assets/phoenix.jpg" alt="logo" width="50" height="50" class="mb-4 md:mb-0"
+    /></a>
+    <ul
+      class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 text-center md:text-left"
+    >
+      <li><a href="" class="hover:text-gray-400 duration-150">Home</a></li>
+      <li
+        class="sm:hover:text-gray-400 sm:cursor-pointer duration-150"
+        (click)="scrollToSection('product-section')"
+      >
+        Products
+      </li>
+      <li
+        class="sm:hover:text-gray-400 sm:cursor-pointer duration-150"
+        (click)="scrollToSection('partner-section')"
+      >
+        Partners
+      </li>
+      <li
+        class="sm:hover:text-gray-400 sm:cursor-pointer duration-150"
+        (click)="scrollToSection('contact-section')"
+      >
+        Contacts
+      </li>
+    </ul>
+  </div>
 </nav>
