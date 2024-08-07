@@ -1,12 +1,15 @@
 import { Routes } from '@angular/router';
+import { AppRouteSegment } from './app-route-segment';
 
 export const routes: Routes = [
   {
-    path: '',
-    loadComponent: () => import('./landing/landing.component').then((m) => m.LandingComponent),
+    path: AppRouteSegment.ROOT,
+    loadComponent: () =>
+      import('./pages/landing/landing.page.component').then((m) => m.LandingPageComponent),
   },
   {
-    path: 'product/:id',
-    loadComponent: () => import('./product/product.component').then((m) => m.ProductComponent),
+    path: AppRouteSegment.PRODUCT,
+    loadComponent: () =>
+      import('./shared/components/product/product.component').then((m) => m.ProductComponent),
   },
 ];
