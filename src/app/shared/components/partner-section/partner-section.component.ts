@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-partner-section',
   standalone: true,
   imports: [],
-  templateUrl: './partner-section.component.html'
+  templateUrl: './partner-section.component.html',
 })
-export class PartnerSectionComponent {
-
-}
+export class PartnerSectionComponent {}

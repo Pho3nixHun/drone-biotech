@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from '../footer/footer.component';
+import { FooterComponent } from '@components/footer/footer.component';
 
 @Component({
   selector: 'app-contact',
@@ -16,8 +16,6 @@ export class ContactComponent {
     name: ['', [Validators.required]],
     message: ['', [Validators.required]],
   });
-
-  constructor() {}
 
   get name() {
     return this.contactForm.get('name')?.value;
