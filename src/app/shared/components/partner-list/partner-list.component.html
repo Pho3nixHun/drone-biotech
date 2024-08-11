@@ -1,5 +1,5 @@
-<ul class="flex flex-wrap justify-between">
-  <li *ngFor="let partner of partners">
+<ul class="flex flex-wrap justify-between gap-4 sm:gap-6 lg:gap-8">
+  <li *ngFor="let partner of partners" class="w-full sm:w-1/3 lg:w-1/4">
     <app-partner-item [imageSrc]="partner.imageSrc" [altText]="partner.altText"></app-partner-item>
   </li>
 </ul>

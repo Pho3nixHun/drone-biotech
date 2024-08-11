@@ -12,7 +12,7 @@ import { Product } from '@interfaces/product';
 import { Partners } from '@interfaces/partners';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
 import { FormBuilder, Validators } from '@angular/forms';
-import { PartnerCarouselComponent } from "../../shared/components/partner-carousel/partner-carousel.component";
+import { PartnerCarouselComponent } from '@components/partner-carousel/partner-carousel.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -27,8 +27,8 @@ import { PartnerCarouselComponent } from "../../shared/components/partner-carous
     ProductSectionComponent,
     PartnerSectionComponent,
     PartnerListComponent,
-    PartnerCarouselComponent
-],
+    PartnerCarouselComponent,
+  ],
   templateUrl: './landing.page.component.html',
 })
 export class LandingPageComponent {
@@ -38,12 +38,15 @@ export class LandingPageComponent {
     { title: 'Controller', imageSrc: 'assets/lepke.png' },
     { title: 'RTU', imageSrc: 'assets/lepke.png' },
     { title: 'Cloud and Mobile', imageSrc: 'assets/lepke.png' },
+    { title: 'Controller', imageSrc: 'assets/lepke.png' },
+    { title: 'RTU', imageSrc: 'assets/lepke.png' },
+    { title: 'Cloud and Mobile', imageSrc: 'assets/lepke.png' },
   ]);
 
   partners = signal<Partners[]>([
+    { imageSrc: 'assets/farming.jpg', altText: 'farming' },
     { imageSrc: 'assets/lepke.png', altText: 'Lepke' },
-    { imageSrc: 'assets/lepke.png', altText: 'Lepke' },
-    { imageSrc: 'assets/lepke.png', altText: 'Lepke' },
+    { imageSrc: 'assets/farming.jpg', altText: 'farming' },
     { imageSrc: 'assets/lepke.png', altText: 'Lepke' },
   ]);
 

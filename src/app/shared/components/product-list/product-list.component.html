@@ -1,5 +1,5 @@
-<ul class="flex flex-wrap md:flex-nowrap md:space-x-10 mt-20">
-  <li *ngFor="let product of products; let i = index">
+<ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+  <li *ngFor="let product of products; let i = index" class="flex justify-center">
     <app-product-item [imageSrc]="product.imageSrc" [routerLink]="[link, i]" [id]="i + 1">
       {{ product.title }}
     </app-product-item>

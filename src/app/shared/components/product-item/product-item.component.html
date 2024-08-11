@@ -1,7 +1,9 @@
-<a class="cursor-pointer">
-  <img [src]="imageSrc" alt="" />
-  <h1 class="font-bold text-2xl"><ng-content></ng-content></h1>
-  <p class="mt-5">
+<a
+  class="cursor-pointer block p-4 bg-white rounded-md shadow-md hover:shadow-lg transition-shadow duration-200"
+>
+  <img [src]="imageSrc" alt="" class="w-full h-auto object-cover rounded-md" />
+  <h1 class="font-bold text-xl sm:text-2xl mt-4"><ng-content></ng-content></h1>
+  <p class="mt-3 text-gray-600">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellat corrupti, illo id adipisci
     laboriosam cupiditate autem enim reprehenderit facere perspiciatis quis rerum voluptate
     reiciendis fuga quae consequatur eligendi expedita?

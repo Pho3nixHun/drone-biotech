@@ -1,7 +1,11 @@
 <section id="partner-section" class="mt-20">
-  <div class="mx-5 sm:mx-40">
-    <h1 class="text-5xl font-black sm:text-6xl sm:w-1/3 text-left pt-16">Partners</h1>
-    <ng-content select="[slot=partnerlist]"></ng-content>
-    <ng-content select="[slot=partnercarousel]"></ng-content>
+  <div class="mx-5 sm:mx-20 lg:mx-40">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-left pt-8 sm:pt-16">Partners</h1>
+    <div class="mt-10">
+      <ng-content select="[slot=partnerlist]"></ng-content>
+    </div>
+    <div class="mt-10">
+      <ng-content select="[slot=partnercarousel]"></ng-content>
+    </div>
   </div>
 </section>

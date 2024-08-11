@@ -1,34 +1,46 @@
-<section id="contact-section" class="h-screen">
-  <div class="mt-20 mx-5 sm:mx-40 sm:flex pt-16 sm:space-x-40">
-    <div class="text-5xl font-black sm:text-6xl sm:w-1/3 text-left">Get in touch</div>
+<section id="contact-section" class="min-h-screen flex items-center">
+  <div class="w-full mx-5 sm:mx-40 sm:flex sm:space-x-10 pt-16">
+    <!-- Title -->
+    <div class="text-4xl sm:text-5xl lg:text-6xl font-black sm:w-1/3 text-left mb-10 sm:mb-0">
+      Get in touch
+    </div>
+
+    <!-- Form -->
     <form
-      class="flex flex-col sm:w-2/5 space-y-5"
+      class="flex flex-col w-full sm:w-2/3 lg:w-2/5 space-y-5"
       [formGroup]="contactForm"
       (ngSubmit)="onSubmit()"
     >
-      <label for="name" class="text-white"></label>
+      <!-- Name Field -->
+      <label for="name" class="text-white sr-only">Name</label>
       <input
-        class="border-2 border-black p-2"
+        class="border-2 border-black p-3 rounded-md"
         id="name"
         formControlName="name"
         placeholder="Your Name"
       />
-      <label for="email" class="text-white"></label>
+
+      <!-- Email Field -->
+      <label for="email" class="text-white sr-only">Email</label>
       <input
-        class="border-2 border-black p-2"
+        class="border-2 border-black p-3 rounded-md"
         id="email"
         formControlName="email"
         placeholder="E-mail Address"
       />
-      <label for="message" class="text-white"></label>
+
+      <!-- Message Field -->
+      <label for="message" class="text-white sr-only">Message</label>
       <textarea
-        class="border-2 py-2 px-2 h-52 flex max-h-52 border-black placeholder-top-left"
+        class="border-2 py-3 px-4 rounded-md h-40 border-black"
         id="message"
         formControlName="message"
         placeholder="Your Message"
       ></textarea>
+
+      <!-- Submit Button -->
       <button
-        class="ml-auto p-3 w-1/3 duration-150"
+        class="ml-auto p-3 w-full sm:w-1/3 duration-150 rounded-md"
         type="submit"
         [disabled]="!contactForm.valid"
         [ngClass]="{
