@@ -12,6 +12,7 @@ import { Product } from '@interfaces/product';
 import { Partners } from '@interfaces/partners';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
 import { FormBuilder, Validators } from '@angular/forms';
+import { PartnerCarouselComponent } from "../../shared/components/partner-carousel/partner-carousel.component";
 
 @Component({
   selector: 'app-landing-page',
@@ -26,7 +27,8 @@ import { FormBuilder, Validators } from '@angular/forms';
     ProductSectionComponent,
     PartnerSectionComponent,
     PartnerListComponent,
-  ],
+    PartnerCarouselComponent
+],
   templateUrl: './landing.page.component.html',
 })
 export class LandingPageComponent {

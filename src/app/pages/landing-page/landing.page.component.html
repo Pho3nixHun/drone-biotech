@@ -4,6 +4,7 @@
 </app-product-section>
 <app-partner-section>
   <app-partner-list slot="partnerlist" [partners]="partners()"></app-partner-list>
+  <app-partner-carousel slot="partnercarousel"></app-partner-carousel>
 </app-partner-section>
 <app-contact [contactForm]="contactForm" (formSubmitted)="onSubmit()"></app-contact>
 <app-scroll-indicator></app-scroll-indicator>
