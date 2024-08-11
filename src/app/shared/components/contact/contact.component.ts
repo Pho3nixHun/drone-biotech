@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '@components/footer/footer.component';
 
@@ -10,25 +10,11 @@ import { FooterComponent } from '@components/footer/footer.component';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
-  private readonly formBuilder = inject(FormBuilder);
-  protected readonly contactForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    name: ['', [Validators.required]],
-    message: ['', [Validators.required]],
-  });
-
-  get name() {
-    return this.contactForm.get('name')?.value;
-  }
-  get email() {
-    return this.contactForm.get('email')?.value;
-  }
-
-  get message() {
-    return this.contactForm.get('message')?.value;
-  }
+  @Input() contactForm!: FormGroup;
+  @Output() formSubmitted = new EventEmitter<void>();
 
   onSubmit() {
+    this.formSubmitted.emit();
     this.contactForm.reset();
   }
 }
