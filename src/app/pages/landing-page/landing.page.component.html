@@ -1,0 +1,9 @@
+<app-hero></app-hero>
+<app-product-section>
+  <app-product-list slot="productlist" [products]="products()" [link]="link"> </app-product-list>
+</app-product-section>
+<app-partner-section>
+  <app-partner-list slot="partnerlist" [partners]="partners()"></app-partner-list>
+</app-partner-section>
+<app-contact [contactForm]="contactForm" (formSubmitted)="onSubmit()"></app-contact>
+<app-scroll-indicator></app-scroll-indicator>
