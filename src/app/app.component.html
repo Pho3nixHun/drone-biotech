@@ -1,6 +1,8 @@
-<app-header>
-  <app-logo slot="logo" imageSrc="assets/phoenix.jpg"></app-logo>
-  <app-nav slot="nav" [navItems]="navItems()"></app-nav>
-</app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="min-h-screen flex flex-col">
+  <app-header>
+    <app-logo slot="logo" imageSrc="assets/phoenix.jpg"></app-logo>
+    <app-nav slot="nav" [navItems]="navItems()"></app-nav>
+  </app-header>
+  <router-outlet class="flex-grow"></router-outlet>
+  <app-footer></app-footer>
+</div>
