@@ -1,4 +1,5 @@
 export enum AppRouteSegment {
   ROOT = '',
-  PRODUCT = 'product/:id',
+  PRODUCT = 'product',
+  ID = ':id',
 }

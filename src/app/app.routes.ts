@@ -5,11 +5,11 @@ export const routes: Routes = [
   {
     path: AppRouteSegment.ROOT,
     loadComponent: () =>
-      import('./pages/landing/landing.page.component').then((m) => m.LandingPageComponent),
+      import('./pages/landing-page/landing.page.component').then((m) => m.LandingPageComponent),
   },
   {
-    path: AppRouteSegment.PRODUCT,
+    path: AppRouteSegment.PRODUCT + '/' + AppRouteSegment.ID,
     loadComponent: () =>
-      import('./shared/components/product/product.component').then((m) => m.ProductComponent),
+      import('./pages/product-page/product-page.component').then((m) => m.ProductPageComponent),
   },
 ];
