@@ -1,10 +1,10 @@
 <div class="fixed right-4 top-1/2 transform -translate-y-1/2 sm:flex flex-col space-y-2 hidden">
   <div *ngFor="let section of sections; let i = index">
-    <button
+    <a
       [appScroll]="section"
       class="w-10 h-10 rounded-full cursor-pointer hover:bg-black hover:text-white duration-300 flex items-center justify-center text-black font-semibold"
     >
       0{{ i + 1 }}
-    </button>
+    </a>
   </div>
 </div>
