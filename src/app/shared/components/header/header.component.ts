@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HeroComponent } from 'src/app/shared/components/hero/hero.component';
+import { HeroComponent } from '@components/hero/hero.component';
 import { ScrollDirective } from '@directives/scroll.directive';
 
 @Component({

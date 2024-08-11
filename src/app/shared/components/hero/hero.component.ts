@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from 'src/app/shared/components/header/header.component';
+import { HeaderComponent } from '@components/header/header.component';
 import { ScrollDirective } from '@directives/scroll.directive';
 
 @Component({

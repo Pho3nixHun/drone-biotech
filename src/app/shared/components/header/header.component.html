@@ -1,36 +1,6 @@
-<nav class="flex justify-center p-4" id="hero-section">
+<section class="flex justify-center p-4" id="hero-section">
   <div class="w-11/12 md:w-3/4 flex flex-col md:flex-row justify-between items-center">
-    <a href=""
-      ><img src="../../assets/phoenix.jpg" alt="logo" width="50" height="50" class="mb-4 md:mb-0"
-    /></a>
-    <ul
-      class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 text-center md:text-left"
-    >
-      <li><a href="" class="hover:text-gray-400 duration-150">Home</a></li>
-      <li>
-        <button
-          [appScroll]="'product-section'"
-          class="sm:hover:text-gray-400 sm:cursor-pointer duration-150"
-        >
-          Products
-        </button>
-      </li>
-      <li>
-        <button
-          [appScroll]="'partner-section'"
-          class="sm:hover:text-gray-400 sm:cursor-pointer duration-150"
-        >
-          Partners
-        </button>
-      </li>
-      <li>
-        <button
-          [appScroll]="'contact-section'"
-          class="sm:hover:text-gray-400 sm:cursor-pointer duration-150"
-        >
-          Contacts
-        </button>
-      </li>
-    </ul>
+    <ng-content select="[slot=logo]"></ng-content>
+    <ng-content select="[slot=nav]"></ng-content>
   </div>
-</nav>
+</section>
