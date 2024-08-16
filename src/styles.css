@@ -2,8 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.custom-nav-anchor {
-    @apply sm:hover:text-gray-400 duration-150;
-  }
