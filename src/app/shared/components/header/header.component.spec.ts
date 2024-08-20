@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
 import { LogoComponent } from '@components/logo/logo.component';
 import { NavComponent } from '@components/nav/nav.component';
 import { Component } from '@angular/core';
+import { HeaderComponent } from './header.component';
 
 @Component({
   template: `
