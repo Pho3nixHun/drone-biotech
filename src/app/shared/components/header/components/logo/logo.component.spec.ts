@@ -26,7 +26,7 @@ describe('LogoComponent', () => {
     fixture.detectChanges();
     const imgElement: HTMLImageElement = compiled.querySelector('img')!;
     const anchorElement: HTMLAnchorElement = compiled.querySelector('a')!;
-    expect(imgElement.getAttribute('src')).toBe('assets/phoenix.jpg');
+    expect(imgElement.getAttribute('src')).toBe('assets/phoenix.jpg'); 
     expect(anchorElement.getAttribute('href')).toBe('link');
   });
 });

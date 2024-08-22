@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { LogoVM } from '@interfaces/logo-vm';
+import { LogoComponentInterfaces } from '@components/header/components/logo/logo.component.interfaces';
 
 @Component({
   selector: 'app-logo',
@@ -8,5 +8,5 @@ import { LogoVM } from '@interfaces/logo-vm';
   templateUrl: './logo.component.html',
 })
 export class LogoComponent {
-  vm = input<LogoVM | null>(null, { alias: 'vm' });
+  vm = input<LogoComponentInterfaces | null>(null, { alias: 'vm' });
 }
