@@ -32,7 +32,7 @@ describe('AppComponent', () => {
   });
 
   it('should render the correct navigation titles', () => {
-    const anchors = compiled.querySelectorAll('app-nav a');
+    const anchors = compiled.querySelectorAll('app-nav app-nav-item a');
     expect(anchors.length).toBe(4);
     expect(anchors[0].textContent).toContain('Home');
     expect(anchors[1].textContent).toContain('Products');
