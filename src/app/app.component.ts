@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
-import { LogoComponentInterfaces } from '@components/header/components/logo/logo.component.interfaces';
-import { NavItemComponent } from "@components/header/components/nav/components/nav-item/nav-item.component";
+import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
+import { AppComponentInterfaces } from './app.component.interfaces';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +14,7 @@ import { NavItemComponent } from "@components/header/components/nav/components/n
 })
 export class AppComponent {
   title = 'drone-biotech-webapp';
-  logoVM = signal<LogoComponentInterfaces>({ imageSrc: 'assets/phoenix.jpg', routerLink: '' });
+  vm = signal<AppComponentInterfaces>({
+    logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '' },
+  });
 }

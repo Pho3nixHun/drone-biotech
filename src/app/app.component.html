@@ -1,6 +1,6 @@
 <div class="min-h-screen flex flex-col">
   <app-header>
-    <app-logo [vm]="logoVM()"></app-logo>
+    <app-logo [vm]="vm().logoVM"></app-logo>
     <app-nav>
       <app-nav-item>Home</app-nav-item>
       <app-nav-item>Products</app-nav-item>
@@ -8,5 +8,5 @@
       <app-nav-item>Contacts</app-nav-item>
     </app-nav>
   </app-header>
-  <router-outlet class="flex-grow"></router-outlet>
+  <div class="flex-grow"><router-outlet></router-outlet></div>
 </div>
