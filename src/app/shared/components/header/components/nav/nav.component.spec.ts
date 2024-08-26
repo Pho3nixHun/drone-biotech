@@ -6,9 +6,9 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
 @Component({
   template: `
     <app-nav>
-      <app-nav-item id="testnavitem"></app-nav-item>
-      <app-nav-item id="testnavitem"></app-nav-item>
-      <div id="testdivitem">This should not be projected</div>
+      <app-nav-item testnavitem></app-nav-item>
+      <app-nav-item testnavitem></app-nav-item>
+      <div testdivitem>This should not be projected</div>
     </app-nav>
   `,
 })
@@ -30,9 +30,9 @@ describe('NavComponent', () => {
   });
 
   it('should only project <a> elements and ignore other elements', () => {
-    const navItemElements = compiled.querySelectorAll("#testnavitem")!;
+    const navItemElements = compiled.querySelectorAll('[testnavitem]');
     expect(navItemElements.length).toBe(2);
-    const divElements = compiled.querySelectorAll('#testdivitem');
+    const divElements = compiled.querySelectorAll('[testdivitem]');
     expect(divElements.length).toBe(0);
   });
 });
