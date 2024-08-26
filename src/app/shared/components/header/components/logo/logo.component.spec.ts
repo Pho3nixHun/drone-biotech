@@ -22,11 +22,16 @@ describe('LogoComponent', () => {
   });
 
   it('should get input data on the img and the anchor element', () => {
-    fixture.componentRef.setInput('vm', { imageSrc: 'assets/phoenix.jpg', routerLink: 'link' });
+    fixture.componentRef.setInput('vm', {
+      imageSrc: 'assets/phoenix.jpg',
+      routerLink: 'link',
+      altText: 'logo',
+    });
     fixture.detectChanges();
     const imgElement: HTMLImageElement = compiled.querySelector('img')!;
     const anchorElement: HTMLAnchorElement = compiled.querySelector('a')!;
-    expect(imgElement.getAttribute('src')).toBe('assets/phoenix.jpg'); 
+    expect(imgElement.getAttribute('src')).toBe('assets/phoenix.jpg');
+    expect(imgElement.getAttribute('alt')).toBe('logo');
     expect(anchorElement.getAttribute('href')).toBe('link');
   });
 });

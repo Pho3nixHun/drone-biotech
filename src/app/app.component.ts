@@ -4,7 +4,7 @@ import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
-import { AppComponentInterfaces } from './app.component.interfaces';
+import { AppComponentVM } from './app.component.vm';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { AppComponentInterfaces } from './app.component.interfaces';
 })
 export class AppComponent {
   title = 'drone-biotech-webapp';
-  vm = signal<AppComponentInterfaces>({
-    logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '' },
+  vm = signal<AppComponentVM>({
+    logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
   });
 }
