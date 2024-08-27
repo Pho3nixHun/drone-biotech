@@ -2,3 +2,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;
+  }
+
+  p {
+    @apply bg-black bg-opacity-60 font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-center rounded-md py-3 px-4 block transition-colors;
+  }
+
+  /* Primary button styles */
+  .primary {
+    @apply text-white bg-black hover:bg-slate-900 active:bg-slate-800 btn;
+  }
+
+  .primary-ghost {
+    @apply bg-slate-500 hover:bg-slate-600 active:bg-slate-700 text-black btn;
+  }
+
+  .primary-outline {
+    @apply outline outline-1 bg-slate-200 hover:bg-slate-300 active:bg-slate-400 outline-black btn;
+  }
+
+  /* Secondary button styles */
+  .secondary {
+    @apply text-black bg-white hover:bg-slate-100 active:bg-slate-200 btn;
+  }
+
+  .secondary-ghost {
+    @apply text-white bg-slate-300 hover:bg-slate-400 active:bg-slate-500 btn;
+  }
+
+  .secondary-outline {
+    @apply outline outline-1 bg-slate-600 hover:bg-slate-700 active:bg-slate-800 text-white btn;
+  }
+}
