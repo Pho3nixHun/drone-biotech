@@ -6,10 +6,8 @@ import { Component, signal } from '@angular/core';
 @Component({
   template: `
     <app-hero [vm]="vm()">
-      <h1 testH1 slot="title">The future of irrigation is now</h1>
-      <p testP slot="description">
-        IRRIOT is a completely wireless precision irrigation automation system
-      </p>
+      <h1 testH1>The future of irrigation is now</h1>
+      <p testP>IRRIOT is a completely wireless precision irrigation automation system</p>
       <a testAnchor href="" class="primary">Contact Us</a>
       <button testButton>Test button</button>
       <div testDiv>Should not be projected</div>
@@ -60,9 +58,9 @@ describe('HeroComponent', () => {
   });
 
   it('should get input data (backgroundImageSrc)', () => {
-    const sectionElement: HTMLElement = compiled.querySelector('section')!;
-    expect(sectionElement.style.backgroundImage).toBe(
-      `url("${component.vm()!.backgroundImageSrc}")`,
+    const sectionElement: HTMLElement | null = compiled.querySelector('section');
+    expect(sectionElement?.style.backgroundImage).toBe(
+      `url("${component.vm()?.backgroundImageSrc}")`,
     );
   });
 });

@@ -8,7 +8,7 @@
     @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;
   }
 
-  p {
+  app-hero p {
     @apply bg-black bg-opacity-60 font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
   }
 }
