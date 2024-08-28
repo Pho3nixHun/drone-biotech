@@ -12,8 +12,6 @@ export class LandingPageComponent {
   vm = signal<LandingComponentVM>({
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
-      title: 'The future of irrigation is now',
-      description: 'IRRIOT is a completely wireless precision irrigation automation system',
     },
   });
 }
