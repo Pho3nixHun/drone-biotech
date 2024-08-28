@@ -6,8 +6,7 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt update && export DEBIAN_FRONTEND=noninteractive \
-    && apt -y install --no-install-recommends curl wget zsh git net-tools iproute2 vim nano \
-    && apt -y install chromium \
+    && apt -y install chromium --no-install-recommends curl wget zsh git net-tools iproute2 vim nano \
     && apt clean \
     && echo 'export CHROME_BIN=/usr/bin/chromium' >> /home/node/.bashrc
 
