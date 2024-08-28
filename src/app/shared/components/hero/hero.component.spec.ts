@@ -1,24 +1,38 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeroComponent } from './hero.component';
 import { HeroComponentVM } from './hero.component.vm';
+import { Component, signal } from '@angular/core';
 
-describe('HeroComponent', () => {
-  let component: HeroComponent;
-  let fixture: ComponentFixture<HeroComponent>;
-  let compiled: HTMLElement;
-  const vm: HeroComponentVM = {
+@Component({
+  template: `
+    <app-hero [vm]="vm()">
+      <h1 testH1 slot="title">The future of irrigation is now</h1>
+      <p testP slot="description">
+        IRRIOT is a completely wireless precision irrigation automation system
+      </p>
+      <a testAnchor href="" class="primary">Contact Us</a>
+      <button testButton>Test button</button>
+      <div testDiv>Should not be projected</div>
+    </app-hero>
+  `,
+})
+class TestHostComponent {
+  vm = signal<HeroComponentVM | null>({
     backgroundImageSrc: 'assets/farming.jpg',
-    title: 'The future of irrigation is now',
-    description: 'IRRIOT is a completely wireless precision irrigation automation system',
-  };
+  });
+}
+describe('HeroComponent', () => {
+  let component: TestHostComponent;
+  let fixture: ComponentFixture<TestHostComponent>;
+  let compiled: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HeroComponent],
+      declarations: [TestHostComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HeroComponent);
+    fixture = TestBed.createComponent(TestHostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
@@ -28,14 +42,27 @@ describe('HeroComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should get input data and display', () => {
-    fixture.componentRef.setInput('vm', vm);
-    fixture.detectChanges();
+  it('should render projected contents like the <h1>, <p> and <a> elements and ignore other elements', () => {
+    const h1Element = compiled.querySelectorAll('[testH1]');
+    expect(h1Element.length).toBe(1);
 
-    expect(compiled.innerText).toContain(vm.title);
-    expect(compiled.innerText).toContain(vm.description);
+    const pElement = compiled.querySelectorAll('[testP]');
+    expect(pElement.length).toBe(1);
 
+    const anchorElement = compiled.querySelectorAll('[testAnchor]');
+    expect(anchorElement.length).toBe(1);
+
+    const buttonElement = compiled.querySelectorAll('[testButton]');
+    expect(buttonElement.length).toBe(1);
+
+    const divElement = compiled.querySelectorAll('[testDiv]');
+    expect(divElement.length).toBe(0);
+  });
+
+  it('should get input data (backgroundImageSrc)', () => {
     const sectionElement: HTMLElement = compiled.querySelector('section')!;
-    expect(sectionElement.style.backgroundImage).toBe(`url("${vm.backgroundImageSrc}")`);
+    expect(sectionElement.style.backgroundImage).toBe(
+      `url("${component.vm()!.backgroundImageSrc}")`,
+    );
   });
 });
