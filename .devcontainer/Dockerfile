@@ -6,12 +6,15 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt update && export DEBIAN_FRONTEND=noninteractive \
-    && apt -y install --no-install-recommends curl wget zsh git net-tools iproute2 vim nano && apt clean
+    && apt -y install chromium --no-install-recommends curl wget zsh git net-tools iproute2 vim nano \
+    && apt clean \
+    && echo 'export CHROME_BIN=/usr/bin/chromium' >> /home/node/.bashrc
 
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
 USER node
+
 # [Optional] Uncomment if you want to install more global node modules
 RUN npm install -g npm @angular/cli@17.2 @angular/core@17.2.1 typescript@5.2.2
 

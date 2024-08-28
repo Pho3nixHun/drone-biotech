@@ -2,9 +2,9 @@ name: Angular Build
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   angular:
@@ -23,28 +23,28 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "npm"
+          cache: 'npm'
           cache-dependency-path: package-lock.json
 
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Step 4: Run Prettier Fix
-      - name: Run Prettier
-        run: npm run prettier:fix
-
-      # Step 5: Run ESLint
+      # Step 4: Run ESLint
       - name: Run ESLint
         run: npm run lint
 
-      # Step 6: Run Stylelint
-      #- name: Run Stylelint
-      #  run: npm run stylelint
+      # Step 5: Run Stylelint
+      - name: Run Stylelint
+        run: npm run stylelint
+
+      # Step 6: Run Prettier Fix
+      - name: Run Prettier
+        run: npm run prettier:fix
 
       # Step 7: Run tests
-      #      - name: Run tests
-      #       run: npm run test:ci
+      - name: Run tests
+        run: npm run test:ci
 
       # Step 8: Build the Angular application
       - name: Build
