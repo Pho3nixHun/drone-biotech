@@ -6,11 +6,11 @@ import { Component, signal } from '@angular/core';
 @Component({
   template: `
     <app-hero [vm]="vm()">
-      <h1 testH1>The future of irrigation is now</h1>
-      <p testP>IRRIOT is a completely wireless precision irrigation automation system</p>
-      <a testAnchor href="" class="primary">Contact Us</a>
-      <button testButton>Test button</button>
-      <div testDiv>Should not be projected</div>
+      <h1 class="testH1" id="test">The future of irrigation is now</h1>
+      <p class="testP">IRRIOT is a completely wireless precision irrigation automation system</p>
+      <a class="testAnchor" href="">Contact Us</a>
+      <button class="testButton">Test button</button>
+      <div class="testDiv">Should not be projected</div>
     </app-hero>
   `,
 })
@@ -41,19 +41,19 @@ describe('HeroComponent', () => {
   });
 
   it('should render projected contents like the <h1>, <p> and <a> elements and ignore other elements', () => {
-    const h1Element = compiled.querySelectorAll('[testH1]');
+    const h1Element = compiled.querySelectorAll('.testH1');
     expect(h1Element.length).toBe(1);
 
-    const pElement = compiled.querySelectorAll('[testP]');
+    const pElement = compiled.querySelectorAll('.testP');
     expect(pElement.length).toBe(1);
 
-    const anchorElement = compiled.querySelectorAll('[testAnchor]');
+    const anchorElement = compiled.querySelectorAll('.testAnchor');
     expect(anchorElement.length).toBe(1);
 
-    const buttonElement = compiled.querySelectorAll('[testButton]');
+    const buttonElement = compiled.querySelectorAll('.testButton');
     expect(buttonElement.length).toBe(1);
 
-    const divElement = compiled.querySelectorAll('[testDiv]');
+    const divElement = compiled.querySelectorAll('.testDiv');
     expect(divElement.length).toBe(0);
   });
 
