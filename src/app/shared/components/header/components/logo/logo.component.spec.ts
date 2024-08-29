@@ -28,10 +28,10 @@ describe('LogoComponent', () => {
       altText: 'logo',
     });
     fixture.detectChanges();
-    const imgElement: HTMLImageElement = compiled.querySelector('img')!;
-    const anchorElement: HTMLAnchorElement = compiled.querySelector('a')!;
-    expect(imgElement.getAttribute('src')).toBe('assets/phoenix.jpg');
-    expect(imgElement.getAttribute('alt')).toBe('logo');
-    expect(anchorElement.getAttribute('href')).toBe('link');
+    const imgElement: HTMLImageElement | null = compiled.querySelector('img');
+    const anchorElement: HTMLAnchorElement | null = compiled.querySelector('a');
+    expect(imgElement?.getAttribute('src')).toBe('assets/phoenix.jpg');
+    expect(imgElement?.getAttribute('alt')).toBe('logo');
+    expect(anchorElement?.getAttribute('href')).toBe('link');
   });
 });
