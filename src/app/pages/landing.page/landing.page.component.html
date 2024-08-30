@@ -4,3 +4,10 @@
   <a href="" class="primary">Contact Us</a>
   <a href="" class="secondary">Learn More</a>
 </app-hero>
+
+@if (vm().productListVM.productItems.length > 0) {
+  <app-product>
+    <h2>Our Products</h2>
+    <app-product-list [vm]="vm().productListVM" />
+  </app-product>
+}
