@@ -19,7 +19,7 @@
 
 @layer components {
   .frame {
-    @apply py-20 mx-5 sm:mx-20 lg:mx-40 min-h-screen;
+    @apply py-20 mx-5 sm:mx-20 lg:mx-40;
   }
 
   .btn {
