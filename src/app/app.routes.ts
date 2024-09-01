@@ -9,10 +9,10 @@ export const routes: Routes = [
   },
 
   {
-    path: AppRouteSegment.PRODUCT + '/:id',
-    loadComponent: () =>
-      import('./pages/product-item.page/product-item.page.component').then(
-        (m) => m.ProductItemPageComponent,
+    path: AppRouteSegment.PRODUCT,
+    loadChildren: () =>
+      import('./pages/product-item.page/product-routing.module').then(
+        (m) => m.ProductRoutingModule,
       ),
   },
 ];
