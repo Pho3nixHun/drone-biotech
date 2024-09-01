@@ -1,0 +1,17 @@
+<app-hero [vm]="vm().heroVM">
+  <h1>The future of irrigation is now</h1>
+  <p>IRRIOT is a completely wireless precision irrigation automation system</p>
+  <a href="" class="primary">Contact Us</a>
+  <a href="" class="secondary">Learn More</a>
+</app-hero>
+
+@if (vm().productsVM; as vm) {
+  <app-frame>
+    <h2>{{ vm.title }}</h2>
+    <app-product-list>
+      @for (product of vm.productItems; track $index) {
+        <app-product-item [vm]="product" [routerLink]="[vm.link, $index]"></app-product-item>
+      }
+    </app-product-list>
+  </app-frame>
+}
