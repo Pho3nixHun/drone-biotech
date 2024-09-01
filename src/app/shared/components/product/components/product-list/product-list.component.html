@@ -1,12 +1,3 @@
-@if (vm(); as vm) {
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all">
-    @for (product of vm.productItems; track $index) {
-      <app-product-item [routerLink]="[vm.link, $index]">
-        <p slot="id">0{{ $index + 1 }}</p>
-        <img [src]="product.imageSrc" [alt]="product.title" />
-        <h3>{{ product.title }}</h3>
-        <p slot="description">{{ product.description }}</p>
-      </app-product-item>
-    }
-  </div>
-}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all">
+  <ng-content select="app-product-item" />
+</div>
