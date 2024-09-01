@@ -5,11 +5,36 @@ import { ProductComponent } from '@components/product/product.component';
 import { ProductItemComponent } from '@components/product/components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product/components/product-list/product-list.component';
 import { AppRouteSegment } from 'src/app/app-route-segment';
+import { RouterLink } from '@angular/router';
+
+/**
+ * LandingPageComponent
+ *
+ * Type: Container
+ *
+ * Scope:
+ * - Responsible for rendering a hero section followed by a product section.
+ * - Conditionally renders a product section with a list of products.
+ * - Passes relevant data.
+ *
+ * Out-of-Scope:
+ * - Does not handle the internal logic or styling of the `app-hero` and `app-product` components.
+ * - Not responsible for the detailed presentation logic.
+ *
+ * Purpose (optional):
+ * - To serve as a smart container component that integrates business logic, including data fetching and presentation, to create a cohesive user interface.
+ */
 
 @Component({
   selector: 'app-landing.page',
   standalone: true,
-  imports: [HeroComponent, ProductComponent, ProductItemComponent, ProductListComponent],
+  imports: [
+    HeroComponent,
+    ProductComponent,
+    ProductItemComponent,
+    ProductListComponent,
+    RouterLink,
+  ],
   templateUrl: './landing.page.component.html',
 })
 export class LandingPageComponent {

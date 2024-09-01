@@ -8,6 +8,13 @@
 @if (vm().productListVM.productItems.length > 0) {
   <app-product>
     <h2>Our Products</h2>
-    <app-product-list [vm]="vm().productListVM" />
+    <app-product-list>
+      @for (product of vm().productListVM.productItems; track $index) {
+        <app-product-item
+          [vm]="product"
+          [routerLink]="[vm().productListVM.link, $index]"
+        ></app-product-item>
+      }
+    </app-product-list>
   </app-product>
 }
