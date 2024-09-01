@@ -1,20 +1,3 @@
-/* stylelint-disable selector-pseudo-element-no-unknown */
-:host ::ng-deep [slot='id'] {
-  @apply mb-2;
-}
-
-:host ::ng-deep img {
-  @apply w-auto h-auto object-cover rounded-md;
-}
-
-:host ::ng-deep h3 {
-  @apply font-bold text-xl sm:text-2xl mt-4;
-}
-
-:host ::ng-deep [slot='description'] {
-  @apply mt-4;
-}
-
 app-product-item {
   @apply h-full;
 }

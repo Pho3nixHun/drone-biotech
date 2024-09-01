@@ -1,33 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductItemComponent } from './product-item.component';
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-test-host',
-  template: `
-    <app-product-item>
-      <p id="testId" slot="id">Test ID</p>
-      <img id="testImg" src="test.jpg" alt="test" />
-      <h3 id="testTitle">Test Title</h3>
-      <p id="testDescription" slot="description">Test Description</p>
-      <div id="testDiv">Should not be projected</div>
-    </app-product-item>
-  `,
-})
-class TestHostComponent {}
+import { ProductItemComponentVM } from './product-item.component.vm';
 
 describe('ProductItemComponent', () => {
-  let component: TestHostComponent;
-  let fixture: ComponentFixture<TestHostComponent>;
+  let component: ProductItemComponent;
+  let fixture: ComponentFixture<ProductItemComponent>;
   let compiled: HTMLElement;
+  const vm: ProductItemComponentVM = {
+    title: 'Controller',
+    description:
+      'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+    imageSrc: 'assets/lepke.jpg',
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductItemComponent, ProductItemComponent],
-      declarations: [TestHostComponent],
+      imports: [ProductItemComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TestHostComponent);
+    fixture = TestBed.createComponent(ProductItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
@@ -37,20 +28,17 @@ describe('ProductItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should project <p>, <img>, <h3> elements and ignore other elements', () => {
-    const idElement = compiled.querySelectorAll('#testId');
-    expect(idElement.length).toBe(1);
+  it('should get the inputs in the <p>, <img>, <h3> elements', () => {
+    fixture.componentRef.setInput('vm', vm);
+    fixture.detectChanges();
 
-    const imgElement = compiled.querySelectorAll('#testImg');
-    expect(imgElement.length).toBe(1);
+    const imgElement: HTMLElement | null = compiled.querySelector('img');
+    expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
 
-    const titleElement = compiled.querySelectorAll('#testTitle');
-    expect(titleElement.length).toBe(1);
+    const h3Element: HTMLElement | null = compiled.querySelector('h3');
+    expect(h3Element?.innerText).toBe(vm.title);
 
-    const descriptionElement = compiled.querySelectorAll('#testDescription');
-    expect(descriptionElement.length).toBe(1);
-
-    const divElement = compiled.querySelectorAll('#testDiv');
-    expect(divElement.length).toBe(0);
+    const pElement: HTMLElement | null = compiled.querySelector('p');
+    expect(pElement?.innerText).toBe(vm.description);
   });
 });
