@@ -11,8 +11,6 @@ export const routes: Routes = [
   {
     path: AppRouteSegment.PRODUCT,
     loadChildren: () =>
-      import('./pages/product-item-page/product-routing.module').then(
-        (m) => m.ProductRoutingModule,
-      ),
+      import('./pages/products-page/products-routing.module').then((m) => m.ProductsRoutingModule),
   },
 ];
