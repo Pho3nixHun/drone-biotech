@@ -35,7 +35,6 @@ describe('FrameComponent', () => {
   });
 
   it('should contain the projected <div> element', () => {
-    console.log(compiled);
     const divElement: HTMLElement | null = compiled.querySelector('app-frame section div');
     expect(divElement?.innerText).toBe(component.text);
   });
