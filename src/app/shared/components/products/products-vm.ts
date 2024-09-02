@@ -2,6 +2,6 @@ import { ProductItemComponentVM } from '@components/products/product-item/produc
 
 export interface ProductsVM {
   title: string;
-  link: string;
+  link?: string;
   productItems: ProductItemComponentVM[];
 }
