@@ -5,12 +5,14 @@
   <a href="" class="secondary">Learn More</a>
 </app-hero>
 
-@if (vm().productsVM; as vm) {
-  <app-frame>
-    <h2>{{ vm.title }}</h2>
+@if (vm(); as vm) {
+  <app-frame [vm]="vm.frameVMs['productsFrame']">
     <app-product-list>
       @for (product of vm.productItems; track $index) {
-        <app-product-item [vm]="product" [routerLink]="[vm.link, $index]"></app-product-item>
+        <app-product-item
+          [vm]="product"
+          [routerLink]="[vm.links['productLink']]"
+        ></app-product-item>
       }
     </app-product-list>
   </app-frame>

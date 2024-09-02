@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { HeroComponent } from '@components/hero/hero.component';
 import { LandingComponentVM } from './landing.component.vm';
-import { ProductItemComponent } from '@components/products/product-item/product-item.component';
-import { ProductListComponent } from '@components/products/product-list/product-list.component';
+import { ProductItemComponent } from '@components/product-item/product-item.component';
+import { ProductListComponent } from '@components/product-list/product-list.component';
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
@@ -36,29 +36,33 @@ export class LandingPageComponent {
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
     },
-    productsVM: {
-      title: 'Our Products',
-      link: AppRouteSegment.PRODUCT,
-      productItems: [
-        {
-          title: 'Controller',
-          description:
-            'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
-          imageSrc: 'assets/lepke.jpg',
-        },
-        {
-          title: 'RTU',
-          description:
-            'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
-          imageSrc: 'assets/lepke.jpg',
-        },
-        {
-          title: 'Cloud and Mobile',
-          description:
-            'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
-          imageSrc: 'assets/lepke.jpg',
-        },
-      ],
+    frameVMs: {
+      productsFrame: {
+        title: 'Our Products',
+      },
+    },
+    productItems: [
+      {
+        title: 'Controller',
+        description:
+          'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+        imageSrc: 'assets/lepke.jpg',
+      },
+      {
+        title: 'RTU',
+        description:
+          'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
+        imageSrc: 'assets/lepke.jpg',
+      },
+      {
+        title: 'Cloud and Mobile',
+        description:
+          'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
+        imageSrc: 'assets/lepke.jpg',
+      },
+    ],
+    links: {
+      productLink: AppRouteSegment.PRODUCT,
     },
   });
 }
