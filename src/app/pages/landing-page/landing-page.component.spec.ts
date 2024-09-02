@@ -32,4 +32,16 @@ describe('LandingPageComponent', () => {
     expect(anchors[0].textContent).toContain('Contact Us');
     expect(anchors[1].textContent).toContain('Learn More');
   });
+
+  it('should render the correct navigation titles', () => {
+    const anchors = compiled.querySelectorAll('app-hero a');
+    expect(anchors.length).toBe(2);
+    expect(anchors[0].textContent).toContain('Contact Us');
+    expect(anchors[1].textContent).toContain('Learn More');
+  });
+
+  it('should render the <app-product-item> elements inside the <app-product-list> inside the <app-frame>', () => {
+    const products = compiled.querySelectorAll('app-frame app-product-list app-product-item');
+    expect(products.length).toBe(3);
+  });
 });
