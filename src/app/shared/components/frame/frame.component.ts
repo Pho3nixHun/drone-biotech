@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { FrameVM } from './frame-vm';
 
 /**
  * FrameComponent
@@ -22,4 +23,6 @@ import { Component } from '@angular/core';
   standalone: true,
   templateUrl: './frame.component.html',
 })
-export class FrameComponent {}
+export class FrameComponent {
+  vm = input<FrameVM | null>(null, { alias: 'vm' });
+}

@@ -1,30 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FrameComponent } from './frame.component';
-import { Component } from '@angular/core';
-
-@Component({
-  template: `
-    <app-frame>
-      <div>{{ text }}</div>
-    </app-frame>
-  `,
-})
-class TestHostComponent {
-  text = 'Should be projected';
-}
+import { FrameVM } from './frame-vm';
 
 describe('FrameComponent', () => {
-  let component: TestHostComponent;
-  let fixture: ComponentFixture<TestHostComponent>;
+  let component: FrameComponent;
+  let fixture: ComponentFixture<FrameComponent>;
   let compiled: HTMLElement;
+  const vm: FrameVM = { title: 'Our Products' };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FrameComponent],
-      declarations: [TestHostComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TestHostComponent);
+    fixture = TestBed.createComponent(FrameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
@@ -34,8 +23,12 @@ describe('FrameComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain the projected <div> element', () => {
-    const divElement: HTMLElement | null = compiled.querySelector('app-frame section div');
-    expect(divElement?.innerText).toBe(component.text);
+  it('should get the input data and visualize that', () => {
+    fixture.componentRef.setInput('vm', vm);
+    fixture.detectChanges();
+    console.log(compiled);
+
+    const h2Element: HTMLElement | null = compiled.querySelector('h2');
+    expect(h2Element?.innerText).toBe(vm.title);
   });
 });
