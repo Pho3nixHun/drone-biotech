@@ -11,7 +11,7 @@
       @for (product of vm.productItems; track $index) {
         <app-product-item
           [vm]="product"
-          [routerLink]="[vm.links['productLink']]"
+          [routerLink]="[vm.links['productLink'], $index]"
         ></app-product-item>
       }
     </app-product-list>
