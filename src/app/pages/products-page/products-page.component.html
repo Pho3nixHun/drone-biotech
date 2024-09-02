@@ -1,15 +1,13 @@
 @if (productsVM(); as vm) {
-  <app-frame>
-    <ng-container *ngIf="(productId$ | async) !== null; else noProductId">
+  <app-frame [vm]="vm.frameVM">
+    @if ((productId$ | async) !== null) {
       <app-product-item [vm]="vm.productItems[(productId$ | async)!]"></app-product-item>
-    </ng-container>
-    <ng-template #noProductId>
-      <h2>{{ vm.title }}</h2>
+    } @else {
       <app-product-list>
         @for (product of vm.productItems; track $index) {
           <app-product-item [vm]="product" [routerLink]="[$index]" />
         }
       </app-product-list>
-    </ng-template>
+    }
   </app-frame>
 }

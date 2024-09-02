@@ -3,9 +3,9 @@ import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { FrameComponent } from '@components/frame/frame.component';
-import { ProductsVM } from '@components/products/products-vm';
-import { ProductItemComponent } from '@components/products/product-item/product-item.component';
-import { ProductListComponent } from '@components/products/product-list/product-list.component';
+import { ProductItemComponent } from '@components/product-item/product-item.component';
+import { ProductListComponent } from '@components/product-list/product-list.component';
+import { ProductsPageVM } from './products-page-vm';
 
 /**
  * ProductsPageComponent
@@ -30,8 +30,8 @@ import { ProductListComponent } from '@components/products/product-list/product-
   templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
-  productsVM = signal<ProductsVM | null>({
-    title: 'Our Products',
+  productsVM = signal<ProductsPageVM | null>({
+    frameVM: { title: 'Our Products' },
     productItems: [
       {
         title: 'Controller',
