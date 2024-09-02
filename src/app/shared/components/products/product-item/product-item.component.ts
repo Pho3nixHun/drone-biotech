@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, HostBinding, input } from '@angular/core';
 import { ProductItemComponentVM } from './product-item.component.vm';
 
 /**
@@ -25,8 +25,9 @@ import { ProductItemComponentVM } from './product-item.component.vm';
   standalone: true,
   imports: [],
   templateUrl: './product-item.component.html',
-  styleUrl: './product-item.component.css',
 })
 export class ProductItemComponent {
+  @HostBinding('class') hostClass = 'h-full';
+
   vm = input<ProductItemComponentVM | null>(null, { alias: 'vm' });
 }
