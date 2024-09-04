@@ -4,7 +4,7 @@ import { ProductItemComponentVM } from '@components/product-item/product-item.co
 
 export interface LandingComponentVM {
   heroVM: HeroComponentVM;
-  frameVMs: Record<string, FrameVM>;
   productItems: ProductItemComponentVM[];
-  links: Record<string, string>;
+  links: string[];
+  frameVMs: FrameVM[];
 }

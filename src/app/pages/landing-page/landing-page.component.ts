@@ -33,13 +33,10 @@ import { FrameComponent } from '@components/frame/frame.component';
 })
 export class LandingPageComponent {
   vm = signal<LandingComponentVM>({
+    links: [AppRouteSegment.PRODUCT],
+    frameVMs: [{ title: 'Our Products' }],
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
-    },
-    frameVMs: {
-      productsFrame: {
-        title: 'Our Products',
-      },
     },
     productItems: [
       {
@@ -61,8 +58,5 @@ export class LandingPageComponent {
         imageSrc: 'assets/lepke.jpg',
       },
     ],
-    links: {
-      productLink: AppRouteSegment.PRODUCT,
-    },
   });
 }

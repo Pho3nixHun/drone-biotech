@@ -6,13 +6,10 @@
 </app-hero>
 
 @if (vm(); as vm) {
-  <app-frame [vm]="vm.frameVMs['productsFrame']">
+  <app-frame [vm]="vm.frameVMs[0]">
     <app-product-list>
       @for (product of vm.productItems; track $index) {
-        <app-product-item
-          [vm]="product"
-          [routerLink]="[vm.links['productLink'], $index]"
-        ></app-product-item>
+        <app-product-item [vm]="product" [routerLink]="[vm.links[0], $index]"></app-product-item>
       }
     </app-product-list>
   </app-frame>
