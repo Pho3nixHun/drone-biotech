@@ -34,18 +34,21 @@ export class ProductsPageComponent {
     frameVM: { title: 'Our Products' },
     productItems: [
       {
+        id: 1,
         title: 'Controller',
         description:
           'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
         imageSrc: 'assets/lepke.jpg',
       },
       {
+        id: 2,
         title: 'RTU',
         description:
           'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
         imageSrc: 'assets/lepke.jpg',
       },
       {
+        id: 3,
         title: 'Cloud and Mobile',
         description:
           'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',

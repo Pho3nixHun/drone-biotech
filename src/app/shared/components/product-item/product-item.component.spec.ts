@@ -7,6 +7,7 @@ describe('ProductItemComponent', () => {
   let fixture: ComponentFixture<ProductItemComponent>;
   let compiled: HTMLElement;
   const vm: ProductItemComponentVM = {
+    id: 1,
     title: 'Controller',
     description:
       'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
