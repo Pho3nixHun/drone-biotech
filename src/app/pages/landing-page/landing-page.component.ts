@@ -33,32 +33,41 @@ import { FrameComponent } from '@components/frame/frame.component';
 })
 export class LandingPageComponent {
   vm = signal<LandingComponentVM>({
-    links: [AppRouteSegment.PRODUCT],
     frameVMs: [{ title: 'Our Products' }],
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
     },
-    productItems: [
+
+    productList: [
       {
-        id: 1,
-        title: 'Controller',
-        description:
-          'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
-        imageSrc: 'assets/lepke.jpg',
+        routerLink: `${AppRouteSegment.PRODUCT}/1`,
+        productItemVM: {
+          id: 1,
+          title: 'Controller',
+          description:
+            'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+          imageSrc: 'assets/lepke.jpg',
+        },
       },
       {
-        id: 2,
-        title: 'RTU',
-        description:
-          'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
-        imageSrc: 'assets/lepke.jpg',
+        routerLink: `${AppRouteSegment.PRODUCT}/2`,
+        productItemVM: {
+          id: 2,
+          title: 'RTU',
+          description:
+            'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
+          imageSrc: 'assets/lepke.jpg',
+        },
       },
       {
-        id: 3,
-        title: 'Cloud and Mobile',
-        description:
-          'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
-        imageSrc: 'assets/lepke.jpg',
+        routerLink: `${AppRouteSegment.PRODUCT}/3`,
+        productItemVM: {
+          id: 3,
+          title: 'Cloud and Mobile',
+          description:
+            'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
+          imageSrc: 'assets/lepke.jpg',
+        },
       },
     ],
   });

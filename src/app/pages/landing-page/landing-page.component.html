@@ -8,8 +8,8 @@
 
   <app-frame [vm]="vm.frameVMs[0]">
     <app-product-list>
-      @for (product of vm.productItems; track $index) {
-        <app-product-item [vm]="product" [routerLink]="[vm.links[0], product.id]" />
+      @for (item of vm.productList; track $index) {
+        <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
       }
     </app-product-list>
   </app-frame>
