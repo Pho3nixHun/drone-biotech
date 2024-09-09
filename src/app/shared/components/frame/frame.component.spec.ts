@@ -26,7 +26,6 @@ describe('FrameComponent', () => {
   it('should get the input data and visualize that', () => {
     fixture.componentRef.setInput('vm', vm);
     fixture.detectChanges();
-    console.log(compiled);
 
     const h2Element: HTMLElement | null = compiled.querySelector('h2');
     expect(h2Element?.innerText).toBe(vm.title);

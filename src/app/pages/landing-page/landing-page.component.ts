@@ -40,7 +40,7 @@ export class LandingPageComponent {
 
     productList: [
       {
-        routerLink: `${AppRouteSegment.PRODUCT}/1`,
+        routerLink: [AppRouteSegment.PRODUCT, '1'],
         productItemVM: {
           id: 1,
           title: 'Controller',
@@ -50,7 +50,7 @@ export class LandingPageComponent {
         },
       },
       {
-        routerLink: `${AppRouteSegment.PRODUCT}/2`,
+        routerLink: [AppRouteSegment.PRODUCT, '2'],
         productItemVM: {
           id: 2,
           title: 'RTU',
@@ -60,7 +60,7 @@ export class LandingPageComponent {
         },
       },
       {
-        routerLink: `${AppRouteSegment.PRODUCT}/3`,
+        routerLink: [AppRouteSegment.PRODUCT, '3'],
         productItemVM: {
           id: 3,
           title: 'Cloud and Mobile',
