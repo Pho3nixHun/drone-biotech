@@ -1,0 +1,9 @@
+@if (vm(); as vm) {
+  <a
+    class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+  >
+    <img [src]="vm.imageSrc" [alt]="vm.title" class="w-auto h-auto object-cover rounded-md" />
+    <h3 class="font-bold text-xl sm:text-2xl mt-4">{{ vm.title }}</h3>
+    <p class="mt-4">{{ vm.description }}</p>
+  </a>
+}

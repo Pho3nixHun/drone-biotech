@@ -1,0 +1,9 @@
+@if (productsVM(); as vm) {
+  <app-frame [vm]="vm.frameVM">
+    <app-product-list>
+      @for (product of vm.productList; track $index) {
+        <app-product-item [vm]="product.productItemVM" />
+      }
+    </app-product-list>
+  </app-frame>
+}

@@ -1,0 +1,16 @@
+@if (vm(); as vm) {
+  <app-hero [vm]="vm.heroVM">
+    <h1>The future of irrigation is now</h1>
+    <p>IRRIOT is a completely wireless precision irrigation automation system</p>
+    <a href="" class="primary">Contact Us</a>
+    <a href="" class="secondary">Learn More</a>
+  </app-hero>
+
+  <app-frame [vm]="vm.frameVMs[0]">
+    <app-product-list>
+      @for (item of vm.productList; track $index) {
+        <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
+      }
+    </app-product-list>
+  </app-frame>
+}
