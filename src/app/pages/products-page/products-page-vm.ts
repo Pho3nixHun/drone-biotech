@@ -3,5 +3,5 @@ import { ProductItemComponentVM } from '@components/product-item/product-item.co
 
 export interface ProductsPageVM {
   frameVM: FrameVM;
-  productItems: ProductItemComponentVM[];
+  productList: { routerLink: string | string[]; productItemVM: ProductItemComponentVM }[];
 }

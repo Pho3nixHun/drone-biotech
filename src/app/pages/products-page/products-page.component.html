@@ -1,15 +1,9 @@
 @if (productsVM(); as vm) {
-  @if ((productId$ | async) !== null) {
-    <app-frame>
-      <app-product-item [vm]="vm.productItems[(productId$ | async)! - 1]" />
-    </app-frame>
-  } @else {
-    <app-frame [vm]="vm.frameVM">
-      <app-product-list>
-        @for (product of vm.productItems; track $index) {
-          <app-product-item [vm]="product" [routerLink]="[product.id]" />
-        }
-      </app-product-list>
-    </app-frame>
-  }
+  <app-frame [vm]="vm.frameVM">
+    <app-product-list>
+      @for (product of vm.productList; track $index) {
+        <app-product-item [vm]="product.productItemVM" />
+      }
+    </app-product-list>
+  </app-frame>
 }
