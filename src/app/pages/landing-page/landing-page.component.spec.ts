@@ -44,4 +44,12 @@ describe('LandingPageComponent', () => {
     const products = compiled.querySelectorAll('app-frame app-product-list app-product-item');
     expect(products.length).toBe(3);
   });
+
+  it('should render the <app-partner-list> and the <app-carousel> inside the <app-frame>', () => {
+    const carousel = compiled.querySelector('app-frame app-carousel');
+    expect(carousel).toBeTruthy();
+
+    const partnerList = compiled.querySelector('app-frame app-partner-list');
+    expect(partnerList).toBeTruthy();
+  });
 });

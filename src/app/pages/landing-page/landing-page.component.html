@@ -1,11 +1,14 @@
 @if (vm(); as vm) {
+  <!-- Hero section start -->
   <app-hero [vm]="vm.heroVM">
     <h1>The future of irrigation is now</h1>
     <p>IRRIOT is a completely wireless precision irrigation automation system</p>
     <a href="" class="primary">Contact Us</a>
     <a href="" class="secondary">Learn More</a>
   </app-hero>
+  <!-- Hero section end -->
 
+  <!-- Product frame section start -->
   <app-frame [vm]="vm.frameVMs[0]">
     <app-product-list>
       @for (item of vm.productList; track $index) {
@@ -13,4 +16,22 @@
       }
     </app-product-list>
   </app-frame>
+  <!-- Product frame section end -->
+
+  <!-- Partner frame section start -->
+  <app-frame [vm]="vm.frameVMs[1]">
+    <app-partner-list>
+      @for (logo of vm.partnerList; track $index) {
+        <app-partner-logo [vm]="logo" />
+      }
+    </app-partner-list>
+    <app-carousel>
+      @for (testimonial of vm.testimonialList; track $index) {
+        <swiper-slide class="pb-10">
+          <app-testimonial-item [vm]="testimonial" />
+        </swiper-slide>
+      }
+    </app-carousel>
+  </app-frame>
+  <!-- Partner frame section end -->
 }
