@@ -28,6 +28,7 @@
     "@angular/router": "^18.1.2",
     "@ngrx/store": "^18.0.1",
     "rxjs": "~7.8.0",
+    "swiper": "^11.1.12",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
