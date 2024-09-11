@@ -6,7 +6,7 @@
     <a href="" class="secondary">Learn More</a>
   </app-hero>
 
-  <app-frame id="products" [vm]="vm.frameVMs[0]">
+  <app-frame [id]="vm.frameVMs[0].id" [vm]="vm.frameVMs[0]">
     <app-product-list>
       @for (item of vm.productList; track $index) {
         <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
