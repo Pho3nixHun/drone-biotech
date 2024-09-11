@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-item',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './nav-item.component.html',
 })
-export class NavItemComponent {}
+export class NavItemComponent {
+  href = input<string | null>(null, { alias: 'href' });
+}

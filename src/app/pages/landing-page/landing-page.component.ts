@@ -33,7 +33,7 @@ import { FrameComponent } from '@components/frame/frame.component';
 })
 export class LandingPageComponent {
   vm = signal<LandingComponentVM>({
-    frameVMs: [{ title: 'Our Products' }],
+    frameVMs: [{ id: 'products', title: 'Our Products' }],
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
     },

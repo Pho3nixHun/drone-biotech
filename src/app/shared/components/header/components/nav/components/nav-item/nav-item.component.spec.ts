@@ -3,11 +3,14 @@ import { NavItemComponent } from './nav-item.component';
 import { Component } from '@angular/core';
 
 @Component({
-  template: `<app-nav-item>Home</app-nav-item>`,
+  template: `<app-nav-item [href]="link">Home</app-nav-item>`,
 })
-class TestHostComponent {}
+class TestHostComponent {
+  link = '#products';
+}
 
 describe('NavItemComponent', () => {
+  let component: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
 
@@ -18,6 +21,7 @@ describe('NavItemComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestHostComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
@@ -25,5 +29,10 @@ describe('NavItemComponent', () => {
   it("should project the 'Home' title inside the <app-nav-item>", () => {
     const navItemElement = compiled.querySelector('app-nav-item');
     expect(navItemElement?.textContent?.trim()).toBe('Home');
+  });
+
+  it('should get the input', () => {
+    const navItem: HTMLElement | null = compiled.querySelector('a');
+    expect(navItem?.getAttribute('href')).toBe(component.link);
   });
 });
