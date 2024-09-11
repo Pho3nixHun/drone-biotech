@@ -9,7 +9,7 @@ import { FrameComponent } from '@components/frame/frame.component';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
 import { PartnerLogoComponent } from '@components/partner-list/components/partner-logo/partner-logo.component';
 import { TestimonialItemComponent } from '@components/testimonial-item/testimonial-item.component';
-import { CarouselComponent } from '@components/carousel/carousel.component';
+import { SwiperModule } from '@modules/swiper/swiper.module';
 
 /**
  * LandingPageComponent
@@ -42,14 +42,17 @@ import { CarouselComponent } from '@components/carousel/carousel.component';
     PartnerListComponent,
     PartnerLogoComponent,
     TestimonialItemComponent,
-    CarouselComponent,
+    SwiperModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
   vm = signal<LandingComponentVM>({
-    frameVMs: [{ title: 'Our Products' }, { title: 'Partners' }],
+    frameVMs: [
+      { id: 'products', title: 'Our Products' },
+      { id: 'partners', title: 'Partners' },
+    ],
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
     },

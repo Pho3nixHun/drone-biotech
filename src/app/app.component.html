@@ -3,8 +3,8 @@
     <app-logo [vm]="vm().logoVM"></app-logo>
     <app-nav>
       <app-nav-item>Home</app-nav-item>
-      <app-nav-item>Products</app-nav-item>
-      <app-nav-item>Partners</app-nav-item>
+      <app-nav-item [appScrollTo]="'products'">Products</app-nav-item>
+      <app-nav-item [appScrollTo]="'partners'">Partners</app-nav-item>
       <app-nav-item>Contacts</app-nav-item>
     </app-nav>
   </app-header>

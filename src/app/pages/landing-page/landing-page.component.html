@@ -8,8 +8,7 @@
   </app-hero>
   <!-- Hero section end -->
 
-  <!-- Product frame section start -->
-  <app-frame [vm]="vm.frameVMs[0]">
+  <app-frame [id]="vm.frameVMs[0].id" [vm]="vm.frameVMs[0]">
     <app-product-list>
       @for (item of vm.productList; track $index) {
         <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
@@ -19,19 +18,28 @@
   <!-- Product frame section end -->
 
   <!-- Partner frame section start -->
-  <app-frame [vm]="vm.frameVMs[1]">
+  <app-frame [id]="vm.frameVMs[1].id" [vm]="vm.frameVMs[1]">
     <app-partner-list>
       @for (logo of vm.partnerList; track $index) {
         <app-partner-logo [vm]="logo" />
       }
     </app-partner-list>
-    <app-carousel>
+    <swiper-container
+      keyboard="true"
+      pagination="true"
+      pagination-clickable="true"
+      pagination-dynamic-bullets="true"
+      autoplay-delay="2500"
+      autoplay-disable-on-interaction="false"
+      class="w-full sm:w-2/3 md:w-1/2"
+      space-between="30"
+    >
       @for (testimonial of vm.testimonialList; track $index) {
         <swiper-slide class="pb-10">
           <app-testimonial-item [vm]="testimonial" />
         </swiper-slide>
       }
-    </app-carousel>
+    </swiper-container>
   </app-frame>
   <!-- Partner frame section end -->
 }

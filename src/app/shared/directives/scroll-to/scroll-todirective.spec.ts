@@ -1,7 +1,7 @@
 import { Component, DebugElement } from '@angular/core';
-import { ScrollDirective } from './scroll.directive';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { ScrollToDirective } from './scroll-to.directive';
 
 @Component({
   template: `
@@ -9,7 +9,7 @@ import { By } from '@angular/platform-browser';
     <div id="section1">Section 1</div>
   `,
   standalone: true,
-  imports: [ScrollDirective],
+  imports: [ScrollToDirective],
 })
 class TestHostComponent {}
 
@@ -26,7 +26,7 @@ describe('ScrollDirective', () => {
   });
 
   it('should create an instance', () => {
-    const directive = new ScrollDirective();
+    const directive = new ScrollToDirective();
     expect(directive).toBeTruthy();
   });
 
