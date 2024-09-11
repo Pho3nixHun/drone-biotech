@@ -5,11 +5,19 @@ import { LogoComponent } from '@components/header/components/logo/logo.component
 import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
 import { AppComponentVM } from './app.component.vm';
+import { ScrollDirective } from '@directives/scroll/scroll.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, LogoComponent, NavComponent, NavItemComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    LogoComponent,
+    NavComponent,
+    NavItemComponent,
+    ScrollDirective,
+  ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
