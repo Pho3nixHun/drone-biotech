@@ -7,5 +7,5 @@ import { Component, input } from '@angular/core';
   templateUrl: './nav-item.component.html',
 })
 export class NavItemComponent {
-  href = input<string | null>('', { alias: 'href' });
+  href = input<string | null>(null, { alias: 'href' });
 }
