@@ -23,7 +23,8 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/app/shared/components/*"],
-      "@interfaces/*": ["src/app/interfaces/*"]
+      "@interfaces/*": ["src/app/interfaces/*"],
+      "@modules/*": ["src/app/shared/modules/*"]
     }
   },
   "angularCompilerOptions": {

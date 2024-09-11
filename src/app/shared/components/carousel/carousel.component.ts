@@ -1,4 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { SwiperModule } from '@modules/swiper/swiper.module';
 
 /**
  * CarouselComponent
@@ -20,7 +21,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [],
+  imports: [SwiperModule],
   templateUrl: './carousel.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
