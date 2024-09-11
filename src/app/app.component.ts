@@ -5,7 +5,7 @@ import { LogoComponent } from '@components/header/components/logo/logo.component
 import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
 import { AppComponentVM } from './app.component.vm';
-import { ScrollDirective } from '@directives/scroll/scroll.directive';
+import { ScrollToDirective } from '@directives/scroll-to/scroll-to.directive';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ import { ScrollDirective } from '@directives/scroll/scroll.directive';
     LogoComponent,
     NavComponent,
     NavItemComponent,
-    ScrollDirective,
+    ScrollToDirective,
   ],
   templateUrl: './app.component.html',
 })
