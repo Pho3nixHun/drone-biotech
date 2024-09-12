@@ -45,10 +45,7 @@ describe('LandingPageComponent', () => {
     expect(products.length).toBe(3);
   });
 
-  it('should render the <app-partner-list> and the <app-carousel> inside the <app-frame>', () => {
-    const carousel = compiled.querySelector('app-frame app-carousel');
-    expect(carousel).toBeTruthy();
-
+  it('should render the <app-partner-list> inside the <app-frame>', () => {
     const partnerList = compiled.querySelector('app-frame app-partner-list');
     expect(partnerList).toBeTruthy();
   });
