@@ -3,7 +3,7 @@
 export const environment = {
   firebaseConfig: {
     apiKey: 'AIzaSyAZFSqAs0Cz8lXySzEg8TTTHP7YdGoGJQA',
-    authDomain: 'drone-biotech.firebaseapp.com',
+    authDomain: 'localhost',
     projectId: 'drone-biotech',
     storageBucket: 'drone-biotech.appspot.com',
     messagingSenderId: '177789222881',

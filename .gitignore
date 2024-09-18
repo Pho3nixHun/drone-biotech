@@ -87,3 +87,8 @@ Thumbs.db
 .devcontainer/.ssh/*
 !.devcontainer/.ssh/config
 !.devcontainer/.ssh/README.md
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
