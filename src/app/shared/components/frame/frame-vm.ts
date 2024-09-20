@@ -1,4 +1,4 @@
 export interface FrameVM {
   id?: string;
-  title: string;
+  titleKey: string;
 }

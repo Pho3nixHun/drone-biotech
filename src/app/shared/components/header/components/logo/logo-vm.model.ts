@@ -1,4 +1,4 @@
-export interface LogoComponentInterfaces {
+export interface LogoVM {
   imageSrc: string;
   routerLink: string | string[];
   altText: string;
