@@ -24,5 +24,11 @@ export class AppComponent {
   title = 'drone-biotech-webapp';
   vm = signal<AppComponentVM>({
     logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
+    navItems: [
+      { titleKey: 'AppComponent.navItems.0.title' },
+      { titleKey: 'AppComponent.navItems.1.title' },
+      { titleKey: 'AppComponent.navItems.2.title' },
+      { titleKey: 'AppComponent.navItems.3.title' },
+    ],
   });
 }

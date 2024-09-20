@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PartnerLogoComponent } from './partner-logo.component';
-import { PartnerLogoVM } from './partner-logo-vm';
+import { PartnerLogoVM } from './partner-logo-vm.model';
 
 describe('PartnerLogoComponent', () => {
   let component: PartnerLogoComponent;

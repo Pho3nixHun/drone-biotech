@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { HeroComponentVM } from './hero.component.vm';
+import { HeroVM } from './hero-vm.model';
 
 @Component({
   selector: 'app-hero',
@@ -8,5 +8,5 @@ import { HeroComponentVM } from './hero.component.vm';
   templateUrl: './hero.component.html',
 })
 export class HeroComponent {
-  vm = input<HeroComponentVM | null>(null, { alias: 'vm' });
+  vm = input<HeroVM | null>(null, { alias: 'vm' });
 }

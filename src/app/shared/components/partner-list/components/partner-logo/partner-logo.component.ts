@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { PartnerLogoVM } from './partner-logo-vm';
+import { PartnerLogoVM } from './partner-logo-vm.model';
 
 /**
  * PartnerLogoComponent
