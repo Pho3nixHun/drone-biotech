@@ -1,3 +1,5 @@
-<a [href]="href()" class="sm:hover:text-gray-400 duration-150 cursor-pointer">
-  <ng-content />
-</a>
+@if (vm(); as vm) {
+  <a *transloco="let t" href="" class="sm:hover:text-gray-400 duration-150 cursor-pointer">{{
+    t(vm.titleKey)
+  }}</a>
+}

@@ -1,22 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductItemComponent } from './product-item.component';
-import { ProductItemComponentVM } from './product-item.component.vm';
+import { ProductItemVM } from './product-item-vm.model';
+import { getTranslocoModule } from 'transloco-testing.module';
 
 describe('ProductItemComponent', () => {
   let component: ProductItemComponent;
   let fixture: ComponentFixture<ProductItemComponent>;
   let compiled: HTMLElement;
-  const vm: ProductItemComponentVM = {
+  const vm: ProductItemVM = {
     id: 1,
-    title: 'Controller',
-    description:
+    titleKey: 'Controller',
+    descriptionKey:
       'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
     imageSrc: 'assets/lepke.jpg',
   };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductItemComponent],
+      imports: [ProductItemComponent, getTranslocoModule()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProductItemComponent);
@@ -37,9 +38,9 @@ describe('ProductItemComponent', () => {
     expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
 
     const h3Element: HTMLElement | null = compiled.querySelector('h3');
-    expect(h3Element?.innerText).toBe(vm.title);
+    expect(h3Element?.innerText).toBe(vm.titleKey);
 
     const pElement: HTMLElement | null = compiled.querySelector('p');
-    expect(pElement?.innerText).toBe(vm.description);
+    expect(pElement?.innerText).toBe(vm.descriptionKey);
   });
 });

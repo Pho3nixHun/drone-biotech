@@ -1,18 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { getTranslocoModule } from 'transloco-testing.module';
+import { TranslocoService } from '@jsverse/transloco';
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let compiled: HTMLElement;
+  let translocoService: TranslocoService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, getTranslocoModule()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
+    translocoService = TestBed.inject(TranslocoService);
+    translocoService.setActiveLang('en');
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
@@ -34,6 +39,7 @@ describe('AppComponent', () => {
   it('should render the correct navigation titles', () => {
     const anchors = compiled.querySelectorAll('app-nav app-nav-item a');
     expect(anchors.length).toBe(4);
+
     expect(anchors[0].textContent).toContain('Home');
     expect(anchors[1].textContent).toContain('Products');
     expect(anchors[2].textContent).toContain('Partners');

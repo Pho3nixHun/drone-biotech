@@ -1,5 +1,6 @@
 import { Component, HostBinding, input } from '@angular/core';
-import { ProductItemComponentVM } from './product-item.component.vm';
+import { ProductItemVM } from './product-item-vm.model';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * ProductItemComponent
@@ -23,11 +24,11 @@ import { ProductItemComponentVM } from './product-item.component.vm';
 @Component({
   selector: 'app-product-item',
   standalone: true,
-  imports: [],
+  imports: [TranslocoModule],
   templateUrl: './product-item.component.html',
 })
 export class ProductItemComponent {
   @HostBinding('class') hostClass = 'h-full';
 
-  vm = input<ProductItemComponentVM | null>(null, { alias: 'vm' });
+  vm = input<ProductItemVM | null>(null, { alias: 'vm' });
 }

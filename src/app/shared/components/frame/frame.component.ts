@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { FrameVM } from './frame-vm';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * FrameComponent
@@ -22,6 +23,7 @@ import { FrameVM } from './frame-vm';
   selector: 'app-frame',
   standalone: true,
   templateUrl: './frame.component.html',
+  imports: [TranslocoModule],
 })
 export class FrameComponent {
   vm = input<FrameVM | null>(null, { alias: 'vm' });

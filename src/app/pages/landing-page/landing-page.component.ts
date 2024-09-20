@@ -1,6 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import { HeroComponent } from '@components/hero/hero.component';
-import { LandingComponentVM } from './landing.component.vm';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { AppRouteSegment } from 'src/app/app-route-segment';
@@ -10,6 +9,8 @@ import { PartnerListComponent } from '@components/partner-list/partner-list.comp
 import { PartnerLogoComponent } from '@components/partner-list/components/partner-logo/partner-logo.component';
 import { TestimonialItemComponent } from '@components/testimonial-item/testimonial-item.component';
 import { SwiperModule } from '@modules/swiper/swiper.module';
+import { LandingPageVM } from './landing-page-vm.model';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * LandingPageComponent
@@ -43,18 +44,21 @@ import { SwiperModule } from '@modules/swiper/swiper.module';
     PartnerLogoComponent,
     TestimonialItemComponent,
     SwiperModule,
+    TranslocoModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
-  vm = signal<LandingComponentVM>({
+  vm = signal<LandingPageVM>({
     frameVMs: [
-      { id: 'products', title: 'Our Products' },
-      { id: 'partners', title: 'Partners' },
+      { id: 'products', titleKey: 'LandingPage.frames.0.title' },
+      { id: 'partners', titleKey: 'LandingPage.frames.1.title' },
     ],
     heroVM: {
       backgroundImageSrc: 'assets/farming.jpg',
+      titles: ['LandingPage.hero.0.title', 'LandingPage.hero.1.title'],
+      buttonTitles: ['LandingPage.hero.0.buttonTitle', 'LandingPage.hero.1.buttonTitle'],
     },
 
     productList: [
@@ -62,9 +66,8 @@ export class LandingPageComponent {
         routerLink: [AppRouteSegment.PRODUCT, '1'],
         productItemVM: {
           id: 1,
-          title: 'Controller',
-          description:
-            'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+          titleKey: 'LandingPage.products.0.title',
+          descriptionKey: 'LandingPage.products.0.description',
           imageSrc: 'assets/lepke.jpg',
         },
       },
@@ -72,9 +75,8 @@ export class LandingPageComponent {
         routerLink: [AppRouteSegment.PRODUCT, '2'],
         productItemVM: {
           id: 2,
-          title: 'RTU',
-          description:
-            'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
+          titleKey: 'LandingPage.products.1.title',
+          descriptionKey: 'LandingPage.products.1.description',
           imageSrc: 'assets/lepke.jpg',
         },
       },
@@ -82,9 +84,8 @@ export class LandingPageComponent {
         routerLink: [AppRouteSegment.PRODUCT, '3'],
         productItemVM: {
           id: 3,
-          title: 'Cloud and Mobile',
-          description:
-            'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
+          titleKey: 'LandingPage.products.2.title',
+          descriptionKey: 'LandingPage.products.2.description',
           imageSrc: 'assets/lepke.jpg',
         },
       },
@@ -98,34 +99,34 @@ export class LandingPageComponent {
     ],
     testimonialList: [
       {
-        message: 'This is the best product I have ever used!',
+        messageKey: 'LandingPage.testimonials.0.message',
         name: 'John Doe',
-        location: 'CEO, Example Company',
+        roleAndCompanyKey: 'LandingPage.testimonials.0.roleAndCompany',
       },
       {
-        message: 'Amazing service, would highly recommend to anyone.',
+        messageKey: 'LandingPage.testimonials.1.message',
         name: 'Jane Smith',
-        location: 'Marketing Director, Another Company',
+        roleAndCompanyKey: 'LandingPage.testimonials.1.roleAndCompany',
       },
       {
-        message: 'A truly outstanding experience, 5 stars!',
+        messageKey: 'LandingPage.testimonials.2.message',
         name: 'Emily Johnson',
-        location: 'Product Manager, Some Company',
+        roleAndCompanyKey: 'LandingPage.testimonials.2.roleAndCompany',
       },
       {
-        message: 'This is the best product I have ever used!',
-        name: 'John Doe',
-        location: 'CEO, Example Company',
-      },
-      {
-        message: 'Amazing service, would highly recommend to anyone.',
-        name: 'Jane Smith',
-        location: 'Marketing Director, Another Company',
-      },
-      {
-        message: 'A truly outstanding experience, 5 stars!',
+        messageKey: 'LandingPage.testimonials.3.message',
         name: 'Emily Johnson',
-        location: 'Product Manager, Some Company',
+        roleAndCompanyKey: 'LandingPage.testimonials.3.roleAndCompany',
+      },
+      {
+        messageKey: 'LandingPage.testimonials.4.message',
+        name: 'Emily Johnson',
+        roleAndCompanyKey: 'LandingPage.testimonials.4.roleAndCompany',
+      },
+      {
+        messageKey: 'LandingPage.testimonials.5.message',
+        name: 'Emily Johnson',
+        roleAndCompanyKey: 'LandingPage.testimonials.5.roleAndCompany',
       },
     ],
   });

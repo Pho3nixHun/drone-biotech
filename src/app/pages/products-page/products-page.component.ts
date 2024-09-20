@@ -4,7 +4,8 @@ import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
-import { ProductsPageVM } from './products-page-vm';
+import { ProductsPageVM } from './products-page-vm.model';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * ProductsPageComponent
@@ -25,20 +26,26 @@ import { ProductsPageVM } from './products-page-vm';
 @Component({
   selector: 'app-products-page',
   standalone: true,
-  imports: [FrameComponent, CommonModule, ProductItemComponent, ProductListComponent, RouterLink],
+  imports: [
+    FrameComponent,
+    CommonModule,
+    ProductItemComponent,
+    ProductListComponent,
+    RouterLink,
+    TranslocoModule,
+  ],
   templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
   productsVM = signal<ProductsPageVM | null>({
-    frameVM: { title: 'Our Products' },
+    frameVM: { titleKey: 'LandingPage.frames.0.title' },
     productList: [
       {
         routerLink: '1',
         productItemVM: {
           id: 1,
-          title: 'Controller',
-          description:
-            'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+          titleKey: 'LandingPage.products.0.title',
+          descriptionKey: 'LandingPage.products.0.description',
           imageSrc: 'assets/lepke.jpg',
         },
       },
@@ -46,9 +53,8 @@ export class ProductsPageComponent {
         routerLink: '2',
         productItemVM: {
           id: 2,
-          title: 'RTU',
-          description:
-            'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
+          titleKey: 'LandingPage.products.1.title',
+          descriptionKey: 'LandingPage.products.1.description',
           imageSrc: 'assets/lepke.jpg',
         },
       },
@@ -56,9 +62,8 @@ export class ProductsPageComponent {
         routerLink: '3',
         productItemVM: {
           id: 3,
-          title: 'Cloud and Mobile',
-          description:
-            'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
+          titleKey: 'LandingPage.products.2.title',
+          descriptionKey: 'LandingPage.products.2.description',
           imageSrc: 'assets/lepke.jpg',
         },
       },
