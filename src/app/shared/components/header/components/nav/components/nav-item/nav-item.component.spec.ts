@@ -1,20 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavItemComponent } from './nav-item.component';
-import { getTranslocoModule } from 'transloco-testing.module';
-import { NavItemVM } from './nav-item-vm.model';
+import { Component } from '@angular/core';
+
+@Component({
+  template: `<app-nav-item>Home</app-nav-item>`,
+})
+class TestHostComponent {}
 
 describe('NavItemComponent', () => {
-  let component: NavItemComponent;
-  let fixture: ComponentFixture<NavItemComponent>;
+  let component: TestHostComponent;
+  let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
-  const vm: NavItemVM = { titleKey: 'Home' };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavItemComponent, getTranslocoModule()],
+      declarations: [TestHostComponent],
+      imports: [NavItemComponent, NavItemComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(NavItemComponent);
+    fixture = TestBed.createComponent(TestHostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
@@ -24,9 +28,8 @@ describe('NavItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should get the input and visualize it', () => {
-    fixture.componentRef.setInput('vm', vm);
-    fixture.detectChanges();
-    expect(compiled.innerText).toContain(vm.titleKey);
+  it("should project the 'Home' title inside the <app-nav-item>", () => {
+    const navItemElement = compiled.querySelector('app-nav-item');
+    expect(navItemElement?.textContent?.trim()).toBe('Home');
   });
 });

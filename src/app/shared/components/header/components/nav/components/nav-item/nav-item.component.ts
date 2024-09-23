@@ -1,5 +1,4 @@
-import { Component, input } from '@angular/core';
-import { NavItemVM } from './nav-item-vm.model';
+import { Component } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
@@ -8,6 +7,4 @@ import { TranslocoModule } from '@jsverse/transloco';
   imports: [TranslocoModule],
   templateUrl: './nav-item.component.html',
 })
-export class NavItemComponent {
-  vm = input<NavItemVM | null>(null, { alias: 'vm' });
-}
+export class NavItemComponent {}
