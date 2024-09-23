@@ -1,12 +1,16 @@
 @if (vm(); as vm) {
   <div class="min-h-screen flex flex-col">
-    <app-header>
+    <app-header *transloco="let t">
       <app-logo [vm]="vm.logoVM"></app-logo>
       <app-nav>
-        <app-nav-item [vm]="vm.navItems[0]" />
-        <app-nav-item [vm]="vm.navItems[1]" [appScrollTo]="'products'" />
-        <app-nav-item [vm]="vm.navItems[2]" [appScrollTo]="'partners'" />
-        <app-nav-item [vm]="vm.navItems[3]" />
+        <app-nav-item>{{ t('AppComponent.navItems.0.title') }}</app-nav-item>
+        <app-nav-item [appScrollTo]="vm.sectionIDs[0]">{{
+          t('AppComponent.navItems.1.title')
+        }}</app-nav-item>
+        <app-nav-item [appScrollTo]="vm.sectionIDs[1]">{{
+          t('AppComponent.navItems.2.title')
+        }}</app-nav-item>
+        <app-nav-item>{{ t('AppComponent.navItems.3.title') }}</app-nav-item>
       </app-nav>
     </app-header>
     <div class="flex-grow"><router-outlet></router-outlet></div>

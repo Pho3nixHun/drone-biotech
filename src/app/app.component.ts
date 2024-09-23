@@ -6,6 +6,7 @@ import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
 import { AppComponentVM } from './app.component.vm';
 import { ScrollToDirective } from '@directives/scroll-to/scroll-to.directive';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { ScrollToDirective } from '@directives/scroll-to/scroll-to.directive';
     NavComponent,
     NavItemComponent,
     ScrollToDirective,
+    TranslocoModule,
   ],
   templateUrl: './app.component.html',
 })
@@ -24,11 +26,6 @@ export class AppComponent {
   title = 'drone-biotech-webapp';
   vm = signal<AppComponentVM>({
     logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-    navItems: [
-      { titleKey: 'AppComponent.navItems.0.title' },
-      { titleKey: 'AppComponent.navItems.1.title' },
-      { titleKey: 'AppComponent.navItems.2.title' },
-      { titleKey: 'AppComponent.navItems.3.title' },
-    ],
+    sectionIDs: ['products', 'partners'],
   });
 }
