@@ -3,14 +3,14 @@ import { HeroComponent } from './hero.component';
 import { HeroVM } from './hero-vm.model';
 import { Component, signal } from '@angular/core';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { TranslocoService } from '@jsverse/transloco';
 
+const en = { title1: 'Hello', title2: 'World', buttonTitle1: '123', buttonTitle2: '234' };
 @Component({
   template: `
     @if (vm(); as vm) {
       <app-hero [vm]="vm">
         <h1 class="testH1" id="test">{{ vm.titles[0] | transloco }}</h1>
-        <p class="testP">{{ vm.titles[1] }}</p>
+        <p class="testP">{{ vm.titles[1] | transloco }}</p>
         <a class="testAnchor" href="">{{ vm.buttonTitles[0] | transloco }}</a>
         <button class="testButton">{{ vm.buttonTitles[1] | transloco }}</button>
         <div class="testDiv">Should not be projected</div>
@@ -21,25 +21,30 @@ import { TranslocoService } from '@jsverse/transloco';
 class TestHostComponent {
   vm = signal<HeroVM>({
     backgroundImageSrc: 'assets/farming.jpg',
-    titles: ['LandingPage.hero.0.title', 'LandingPage.hero.1.title'],
-    buttonTitles: ['LandingPage.hero.0.buttonTitle', 'LandingPage.hero.1.buttonTitle'],
+    titles: [en.title1, en.title2],
+    buttonTitles: [en.buttonTitle1, en.buttonTitle2],
   });
 }
+
 describe('HeroComponent', () => {
   let component: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
-  let translocoService: TranslocoService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroComponent, getTranslocoModule()],
+      imports: [
+        HeroComponent,
+        getTranslocoModule({
+          langs: { en },
+          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+        }),
+      ],
       declarations: [TestHostComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestHostComponent);
     component = fixture.componentInstance;
-    translocoService = TestBed.inject(TranslocoService);
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
@@ -81,10 +86,15 @@ describe('HeroComponent', () => {
 
   it('should translate correctly', () => {
     const h1Element: HTMLElement | null = compiled.querySelector('.testH1');
-    if (h1Element?.innerText)
-      expect(translocoService.translate(component.vm()?.titles[0])).toBe(h1Element?.innerText);
+    expect(h1Element?.innerHTML).toBe(en.title1);
 
     const pElement: HTMLElement | null = compiled.querySelector('.testP');
-    if (pElement?.innerText) expect(component.vm()?.titles[1]).toBe(pElement?.innerText);
+    expect(pElement?.innerHTML).toBe(en.title2);
+
+    const anchorElement: HTMLElement | null = compiled.querySelector('.testAnchor');
+    expect(anchorElement?.innerHTML).toBe(en.buttonTitle1);
+
+    const buttonElement: HTMLElement | null = compiled.querySelector('.testButton');
+    expect(buttonElement?.innerHTML).toBe(en.buttonTitle2);
   });
 });
