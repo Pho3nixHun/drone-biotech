@@ -10,7 +10,14 @@ describe('ProductsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductsPageComponent, getTranslocoModule(), RouterTestingModule],
+      imports: [
+        ProductsPageComponent,
+        getTranslocoModule({
+          langs: { en: {} },
+          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+        }),
+        RouterTestingModule,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProductsPageComponent);

@@ -3,6 +3,12 @@ import { ProductItemComponent } from './product-item.component';
 import { ProductItemVM } from './product-item-vm.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 
+const en = {
+  title: 'Controller',
+  description:
+    'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+};
+
 describe('ProductItemComponent', () => {
   let component: ProductItemComponent;
   let fixture: ComponentFixture<ProductItemComponent>;
@@ -17,7 +23,13 @@ describe('ProductItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProductItemComponent, getTranslocoModule()],
+      imports: [
+        ProductItemComponent,
+        getTranslocoModule({
+          langs: { en },
+          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+        }),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProductItemComponent);
@@ -38,9 +50,9 @@ describe('ProductItemComponent', () => {
     expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
 
     const h3Element: HTMLElement | null = compiled.querySelector('h3');
-    expect(h3Element?.innerText).toBe(vm.titleKey);
+    expect(h3Element?.innerText).toBe(en.title);
 
     const pElement: HTMLElement | null = compiled.querySelector('p');
-    expect(pElement?.innerText).toBe(vm.descriptionKey);
+    expect(pElement?.innerText).toBe(en.description);
   });
 });

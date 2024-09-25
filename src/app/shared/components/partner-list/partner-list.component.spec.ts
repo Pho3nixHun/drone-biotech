@@ -9,7 +9,7 @@ import { PartnerLogoComponent } from './components/partner-logo/partner-logo.com
     <app-partner-list>
       <app-partner-logo></app-partner-logo>
       <app-partner-logo></app-partner-logo>
-      <app-partner-list></app-partner-list>
+      <app-partner-list>Should not be projected</app-partner-list>
     </app-partner-list>
   `,
 })

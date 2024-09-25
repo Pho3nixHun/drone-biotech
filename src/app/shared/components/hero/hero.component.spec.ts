@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroComponent } from './hero.component';
-import { HeroVM } from './hero-vm.model';
 import { Component, signal } from '@angular/core';
 import { getTranslocoModule } from 'transloco-testing.module';
+import { ExtendedHeroVMWithTitles } from 'src/app/pages/landing-page/landing-page-vm.model';
 
 const en = { title1: 'Hello', title2: 'World', buttonTitle1: '123', buttonTitle2: '234' };
 @Component({
@@ -19,7 +19,7 @@ const en = { title1: 'Hello', title2: 'World', buttonTitle1: '123', buttonTitle2
   `,
 })
 class TestHostComponent {
-  vm = signal<HeroVM>({
+  vm = signal<ExtendedHeroVMWithTitles>({
     backgroundImageSrc: 'assets/farming.jpg',
     titles: [en.title1, en.title2],
     buttonTitles: [en.buttonTitle1, en.buttonTitle2],

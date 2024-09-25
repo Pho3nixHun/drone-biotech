@@ -3,19 +3,27 @@ import { TestimonialItemComponent } from './testimonial-item.component';
 import { TestimonialItemVM } from './testimonial-item-vm.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 
+const en = { message: 'Hello', roleAndCompany: 'World' };
+
 describe('TestimonialItemComponent', () => {
   let component: TestimonialItemComponent;
   let fixture: ComponentFixture<TestimonialItemComponent>;
   let compiled: HTMLElement;
   const vm: TestimonialItemVM = {
-    messageKey: 'A truly outstanding experience, 5 stars!',
+    messageKey: en.message,
     name: 'Emily Johnson',
-    roleAndCompanyKey: 'Product Manager, Some Company',
+    roleAndCompanyKey: en.roleAndCompany,
   };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TestimonialItemComponent, getTranslocoModule()],
+      imports: [
+        TestimonialItemComponent,
+        getTranslocoModule({
+          langs: { en },
+          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+        }),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestimonialItemComponent);
@@ -32,8 +40,8 @@ describe('TestimonialItemComponent', () => {
     fixture.componentRef.setInput('vm', vm);
     fixture.detectChanges();
 
-    expect(compiled.innerText).toContain(vm.messageKey);
+    expect(compiled.innerText).toContain(en.message);
     expect(compiled.innerText).toContain(vm.name);
-    expect(compiled.innerText).toContain(vm.roleAndCompanyKey);
+    expect(compiled.innerText).toContain(en.roleAndCompany);
   });
 });

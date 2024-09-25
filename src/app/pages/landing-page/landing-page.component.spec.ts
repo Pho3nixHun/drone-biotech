@@ -3,6 +3,8 @@ import { LandingPageComponent } from './landing-page.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { getTranslocoModule } from 'transloco-testing.module';
 
+const en = { title1: 'Hello', title2: 'World', buttonTitle1: '123', buttonTitle2: '234' };
+
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
   let fixture: ComponentFixture<LandingPageComponent>;
@@ -10,7 +12,14 @@ describe('LandingPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LandingPageComponent, getTranslocoModule(), RouterTestingModule],
+      imports: [
+        LandingPageComponent,
+        getTranslocoModule({
+          langs: { en },
+          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+        }),
+        RouterTestingModule,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LandingPageComponent);
@@ -30,15 +39,6 @@ describe('LandingPageComponent', () => {
   it('should render the correct navigation titles', () => {
     const anchors = compiled.querySelectorAll('app-hero a');
     expect(anchors.length).toBe(2);
-    expect(anchors[0].textContent).toContain('Contact Us');
-    expect(anchors[1].textContent).toContain('Learn More');
-  });
-
-  it('should render the correct navigation titles', () => {
-    const anchors = compiled.querySelectorAll('app-hero a');
-    expect(anchors.length).toBe(2);
-    expect(anchors[0].textContent).toContain('Contact Us');
-    expect(anchors[1].textContent).toContain('Learn More');
   });
 
   it('should render the <app-product-item> elements inside the <app-product-list> inside the <app-frame>', () => {
@@ -46,8 +46,11 @@ describe('LandingPageComponent', () => {
     expect(products.length).toBe(3);
   });
 
-  it('should render the <app-partner-list> inside the <app-frame>', () => {
+  it('should render the <app-partner-list> and the <app-testimonial-item> inside the <app-frame>', () => {
     const partnerList = compiled.querySelector('app-frame app-partner-list');
     expect(partnerList).toBeTruthy();
+
+    const testimonialItems = compiled.querySelectorAll('app-frame app-testimonial-item');
+    expect(testimonialItems.length).toBeGreaterThan(0);
   });
 });

@@ -3,15 +3,23 @@ import { FrameComponent } from './frame.component';
 import { FrameVM } from './frame-vm';
 import { getTranslocoModule } from 'transloco-testing.module';
 
+const en = { title: 'Our Products' };
+
 describe('FrameComponent', () => {
   let component: FrameComponent;
   let fixture: ComponentFixture<FrameComponent>;
   let compiled: HTMLElement;
-  const vm: FrameVM = { titleKey: 'Our Products' };
+  const vm: FrameVM = { titleKey: en.title };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FrameComponent, getTranslocoModule()],
+      imports: [
+        FrameComponent,
+        getTranslocoModule({
+          langs: { en },
+          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+        }),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FrameComponent);
@@ -29,6 +37,6 @@ describe('FrameComponent', () => {
     fixture.detectChanges();
 
     const h2Element: HTMLElement | null = compiled.querySelector('h2');
-    expect(h2Element?.innerText).toBe(vm.titleKey);
+    expect(h2Element?.innerText).toBe(en.title);
   });
 });
