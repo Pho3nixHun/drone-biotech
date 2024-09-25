@@ -1,45 +1,50 @@
 @if (vm(); as vm) {
   <!-- Hero section start -->
-  <app-hero [vm]="vm.heroVM">
-    <h1>{{ vm.heroVM.titles[0] | transloco }}</h1>
-    <p>{{ vm.heroVM.titles[1] | transloco }}</p>
-    <a href="" class="primary">{{ vm.heroVM.buttonTitles[0] | transloco }}</a>
-    <a href="" class="secondary">{{ vm.heroVM.buttonTitles[1] | transloco }}</a>
+  <app-hero [vm]="vm.extendedHeroVMWithTitles">
+    <h1>{{ vm.extendedHeroVMWithTitles.titles[0] | transloco }}</h1>
+    <p>{{ vm.extendedHeroVMWithTitles.titles[1] | transloco }}</p>
+    <a href="" class="primary">{{ vm.extendedHeroVMWithTitles.buttonTitles[0] | transloco }}</a>
+    <a href="" class="secondary">{{ vm.extendedHeroVMWithTitles.buttonTitles[1] | transloco }}</a>
   </app-hero>
   <!-- Hero section end -->
 
-  <app-frame [id]="vm.frameVMs[0].id" [vm]="vm.frameVMs[0]">
-    <app-product-list>
-      @for (item of vm.productList; track $index) {
-        <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
+  @for (frameVM of vm.extendedFrameVMs; track $index) {
+    <app-frame [id]="frameVM.id" [vm]="frameVM">
+      <!-- Product frame section start -->
+      @if (isProductFrame(frameVM)) {
+        <app-product-list>
+          @for (item of frameVM.productItemVMs; track $index) {
+            <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
+          }
+        </app-product-list>
       }
-    </app-product-list>
-  </app-frame>
-  <!-- Product frame section end -->
+      <!-- Product frame section end -->
 
-  <!-- Partner frame section start -->
-  <app-frame [id]="vm.frameVMs[1].id" [vm]="vm.frameVMs[1]">
-    <app-partner-list>
-      @for (logo of vm.partnerList; track $index) {
-        <app-partner-logo [vm]="logo" />
+      <!-- Partner frame section start -->
+      @else if (isPartnerFrame(frameVM)) {
+        <app-partner-list>
+          @for (logo of frameVM.partnersVM.partnerLogoVMs; track $index) {
+            <app-partner-logo [vm]="logo" />
+          }
+        </app-partner-list>
+        <swiper-container
+          keyboard="true"
+          pagination="true"
+          pagination-clickable="true"
+          pagination-dynamic-bullets="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="false"
+          class="w-full sm:w-2/3 md:w-1/2"
+          space-between="30"
+        >
+          @for (testimonial of frameVM.partnersVM.testimonialItemVMs; track $index) {
+            <swiper-slide class="pb-10">
+              <app-testimonial-item [vm]="testimonial" />
+            </swiper-slide>
+          }
+        </swiper-container>
       }
-    </app-partner-list>
-    <swiper-container
-      keyboard="true"
-      pagination="true"
-      pagination-clickable="true"
-      pagination-dynamic-bullets="true"
-      autoplay-delay="2500"
-      autoplay-disable-on-interaction="false"
-      class="w-full sm:w-2/3 md:w-1/2"
-      space-between="30"
-    >
-      @for (testimonial of vm.testimonialList; track $index) {
-        <swiper-slide class="pb-10">
-          <app-testimonial-item [vm]="testimonial" />
-        </swiper-slide>
-      }
-    </swiper-container>
-  </app-frame>
-  <!-- Partner frame section end -->
+      <!-- Partner frame section end -->
+    </app-frame>
+  }
 }
