@@ -3,14 +3,15 @@
     <app-header *transloco="let t">
       <app-logo [vm]="vm.logoVM"></app-logo>
       <app-nav>
-        <app-nav-item>{{ t('AppComponent.navItems.0.title') }}</app-nav-item>
-        <app-nav-item [appScrollTo]="vm.sectionIDs[0]">{{
-          t('AppComponent.navItems.1.title')
-        }}</app-nav-item>
-        <app-nav-item [appScrollTo]="vm.sectionIDs[1]">{{
-          t('AppComponent.navItems.2.title')
-        }}</app-nav-item>
-        <app-nav-item>{{ t('AppComponent.navItems.3.title') }}</app-nav-item>
+        <!-- hiba start-->
+        @for (navItem of vm.navItemVMs; track $index) {
+          @if (navItem.sectionID) {
+            <app-nav-item [appScrollTo]="navItem.sectionID">{{ t(navItem.titleKey) }}</app-nav-item>
+          } @else {
+            <app-nav-item>{{ t(navItem.titleKey) }}</app-nav-item>
+          }
+        }
+        <!-- hiba end-->
       </app-nav>
     </app-header>
     <div class="flex-grow"><router-outlet></router-outlet></div>
