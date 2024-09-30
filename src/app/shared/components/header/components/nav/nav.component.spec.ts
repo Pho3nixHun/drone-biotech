@@ -6,9 +6,10 @@ import { NavItemComponent } from './components/nav-item/nav-item.component';
 @Component({
   template: `
     <app-nav>
-      <app-nav-item class="testnavitem"></app-nav-item>
-      <app-nav-item class="testnavitem"></app-nav-item>
-      <div class="testdivitem">This should not be projected</div>
+      <app-nav-item></app-nav-item>
+      <app-nav-item></app-nav-item>
+      <div></div>
+      <div></div>
     </app-nav>
   `,
 })
@@ -29,10 +30,10 @@ describe('NavComponent', () => {
     compiled = fixture.debugElement.nativeElement;
   });
 
-  it('should only project <a> elements and ignore other elements', () => {
-    const navItemElements = compiled.querySelectorAll('.testnavitem');
+  it('should project elements inside', () => {
+    const navItemElements = compiled.querySelectorAll('app-nav-item');
     expect(navItemElements.length).toBe(2);
-    const divElements = compiled.querySelectorAll('.testdivitem');
-    expect(divElements.length).toBe(0);
+    const divElements = compiled.querySelectorAll('div');
+    expect(divElements.length).toBe(2);
   });
 });
