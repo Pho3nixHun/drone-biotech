@@ -3,7 +3,6 @@
     <app-header *transloco="let t">
       <app-logo [vm]="vm.logoVM"></app-logo>
       <app-nav>
-        <!-- hiba start-->
         @for (navItem of vm.navItemVMs; track $index) {
           @if (navItem.sectionID) {
             <app-nav-item [appScrollTo]="navItem.sectionID">{{ t(navItem.titleKey) }}</app-nav-item>
@@ -11,7 +10,6 @@
             <app-nav-item>{{ t(navItem.titleKey) }}</app-nav-item>
           }
         }
-        <!-- hiba end-->
       </app-nav>
     </app-header>
     <div class="flex-grow"><router-outlet></router-outlet></div>

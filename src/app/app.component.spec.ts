@@ -38,10 +38,8 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('app-nav')).toBeTruthy();
   });
 
-  /*  
   it('should render the navigation titles', () => {
     const anchors = compiled.querySelectorAll('app-nav app-nav-item a');
     expect(anchors.length).toBe(4);
   });
-  */
 });
