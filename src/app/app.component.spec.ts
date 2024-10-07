@@ -1,13 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { getTranslocoModule } from 'transloco-testing.module';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { signal, WritableSignal } from '@angular/core';
+import { AppService } from './app.service';
+import { AppComponentVM } from './app-vm.model';
+import {
+  appMockVMWithFiveNavItem,
+  appMockVMWithOneNavItem,
+  appMockVMWithoutNavItem,
+} from './app.mock';
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let compiled: HTMLElement;
+  let vmSignal: WritableSignal<AppComponentVM | undefined>;
 
   beforeEach(async () => {
+    const appServiceMock = {
+      getVM: jest.fn(),
+    };
+    vmSignal = signal(undefined);
+    appServiceMock.getVM.mockReturnValue(vmSignal);
+
     await TestBed.configureTestingModule({
       imports: [
         AppComponent,
@@ -15,6 +32,13 @@ describe('AppComponent', () => {
           langs: { en: {} },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
         }),
+        RouterModule.forRoot(routes),
+      ],
+      providers: [
+        {
+          provide: AppService,
+          useValue: appServiceMock,
+        },
       ],
     }).compileComponents();
 
@@ -32,14 +56,45 @@ describe('AppComponent', () => {
     expect(component.title).toEqual('drone-biotech-webapp');
   });
 
-  it('should render app-header, app-logo, and app-nav components', () => {
-    expect(compiled.querySelector('app-header')).toBeTruthy();
-    expect(compiled.querySelector('app-logo')).toBeTruthy();
-    expect(compiled.querySelector('app-nav')).toBeTruthy();
+  it(`should not render the template when the VM is not provided`, () => {
+    //Arrange
+
+    //Act
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 
-  it('should render the navigation titles', () => {
-    const anchors = compiled.querySelectorAll('app-nav app-nav-item a');
-    expect(anchors.length).toBe(4);
+  it(`should not render <app-nav-item> when there is no item provided`, () => {
+    //Arrange
+    vmSignal.set(appMockVMWithoutNavItem);
+
+    //Act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  it(`should render 1 <app-nav-item> when 1 item is provided`, () => {
+    //Arrange
+    vmSignal.set(appMockVMWithOneNavItem);
+
+    //Act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
+    //Arrange
+    vmSignal.set(appMockVMWithFiveNavItem);
+
+    //Act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });

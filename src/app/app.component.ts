@@ -1,14 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
-import { AppComponentVM } from './app-vm.model';
-import { ScrollToDirective } from '@directives/scroll-to/scroll-to.directive';
 import { TranslocoModule } from '@jsverse/transloco';
-import { AppRouteSegment } from './app-route-segment';
 import { CommonModule } from '@angular/common';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +17,6 @@ import { CommonModule } from '@angular/common';
     LogoComponent,
     NavComponent,
     NavItemComponent,
-    ScrollToDirective,
     TranslocoModule,
     CommonModule,
   ],
@@ -27,13 +24,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'drone-biotech-webapp';
-  vm = signal<AppComponentVM>({
-    logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-    navItemVMs: [
-      { titleKey: 'AppComponent.navItems.0.title' },
-      { titleKey: 'AppComponent.navItems.1.title', sectionID: AppRouteSegment.PRODUCT },
-      { titleKey: 'AppComponent.navItems.2.title', sectionID: AppRouteSegment.PARTNERS },
-      { titleKey: 'AppComponent.navItems.3.title' },
-    ],
-  });
+  appService = inject(AppService);
+
+  vm = this.appService.getVM();
 }

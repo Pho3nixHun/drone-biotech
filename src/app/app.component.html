@@ -1,17 +1,15 @@
 @if (vm(); as vm) {
   <div class="min-h-screen flex flex-col">
     <app-header *transloco="let t">
-      <app-logo [vm]="vm.logoVM"></app-logo>
+      <app-logo [vm]="vm.logoVM" />
       <app-nav>
-        @for (navItem of vm.navItemVMs; track $index) {
-          @if (navItem.sectionID) {
-            <app-nav-item [appScrollTo]="navItem.sectionID">{{ t(navItem.titleKey) }}</app-nav-item>
-          } @else {
-            <app-nav-item>{{ t(navItem.titleKey) }}</app-nav-item>
-          }
+        @for (extendedNavItemVM of vm.extendedNavItemVMs; track $index) {
+          <app-nav-item [vm]="extendedNavItemVM.navItemVM">{{
+            t(extendedNavItemVM.labelKey)
+          }}</app-nav-item>
         }
       </app-nav>
     </app-header>
-    <div class="flex-grow"><router-outlet></router-outlet></div>
+    <div class="flex-grow"><router-outlet /></div>
   </div>
 }

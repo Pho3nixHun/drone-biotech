@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should not render <app-nav-item> when there is no item provided 1`] = `
+<div
+  id="root3"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo>
+            <a
+              href=""
+            >
+              <img
+                alt="logo"
+                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+                src="assets/phoenix.jpg"
+              />
+            </a>
+            
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`AppComponent should not render the template when the VM is not provided 1`] = `
+<div
+  id="root2"
+>
+  
+</div>
+`;
+
+exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`] = `
+<div
+  id="root4"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo>
+            <a
+              href=""
+            >
+              <img
+                alt="logo"
+                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+                src="assets/phoenix.jpg"
+              />
+            </a>
+            
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <app-nav-item>
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                >
+                  AppComponent.navItems.0.title
+                </a>
+                
+              </app-nav-item>
+              
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are provided 1`] = `
+<div
+  id="root5"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo>
+            <a
+              href=""
+            >
+              <img
+                alt="logo"
+                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+                src="assets/phoenix.jpg"
+              />
+            </a>
+            
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <app-nav-item>
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                >
+                  AppComponent.navItems.0.title
+                </a>
+                
+              </app-nav-item>
+              <app-nav-item>
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                >
+                  AppComponent.navItems.1.title
+                </a>
+                
+              </app-nav-item>
+              <app-nav-item>
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                >
+                  AppComponent.navItems.2.title
+                </a>
+                
+              </app-nav-item>
+              <app-nav-item>
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                >
+                  AppComponent.navItems.3.title
+                </a>
+                
+              </app-nav-item>
+              <app-nav-item>
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                >
+                  AppComponent.navItems.1.title
+                </a>
+                
+              </app-nav-item>
+              
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      
+    </div>
+  </div>
+  
+</div>
+`;
