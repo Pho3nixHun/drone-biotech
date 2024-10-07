@@ -52,7 +52,6 @@ describe('LandingPageComponent', () => {
         LandingPageComponent,
         RouterModule.forRoot(routes),
         ProductsPageComponent,
-        SwiperModule,
         getTranslocoModule({
           langs: { en: {} },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },

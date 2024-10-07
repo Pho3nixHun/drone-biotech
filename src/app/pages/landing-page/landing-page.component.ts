@@ -56,11 +56,13 @@ import {
 export class LandingPageComponent {
   private readonly landingPageService = inject(LandingPageService);
 
-  isProductFrame(frame: ExtendedFrameVM): frame is ExtendedFrameVMWithExtendedProductItemVMs {
+  protected isProductFrame(
+    frame: ExtendedFrameVM,
+  ): frame is ExtendedFrameVMWithExtendedProductItemVMs {
     return 'productItemVMs' in frame;
   }
 
-  isPartnerFrame(frame: ExtendedFrameVM): frame is ExtendedFrameVMWithPartnersVM {
+  protected isPartnerFrame(frame: ExtendedFrameVM): frame is ExtendedFrameVMWithPartnersVM {
     return 'partnersVM' in frame;
   }
 
