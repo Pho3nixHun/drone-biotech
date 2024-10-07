@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
@@ -32,6 +33,7 @@ describe('LandingPageComponent', () => {
   let compiled: HTMLElement;
   let vmSignal: WritableSignal<LandingPageVM | undefined>;
   let router: Router;
+  let swiper: SwiperModule;
 
   beforeEach(waitForAsync(() => {
     const landingPageServiceMock = {
@@ -45,11 +47,11 @@ describe('LandingPageComponent', () => {
         LandingPageComponent,
         RouterModule.forRoot(routes),
         ProductsPageComponent,
+        SwiperModule,
         getTranslocoModule({
           langs: { en: {} },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
         }),
-        SwiperModule,
       ],
       providers: [
         {
@@ -58,6 +60,8 @@ describe('LandingPageComponent', () => {
         },
       ],
     }).compileComponents();
+
+    swiper = TestBed.inject(SwiperModule);
     router = TestBed.inject(Router);
     router.initialNavigation();
     fixture = TestBed.createComponent(LandingPageComponent);
