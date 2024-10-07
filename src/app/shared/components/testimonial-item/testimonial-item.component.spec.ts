@@ -36,12 +36,25 @@ describe('TestimonialItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  //Snapshot test
+  it('should not render the template when there is not VM provided', () => {
+    //Arrange
+
+    //Act
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  //Snapshot test
   it('should get the input data and visualize it', () => {
+    //Arrange
     fixture.componentRef.setInput('vm', vm);
+
+    //Act
     fixture.detectChanges();
 
-    expect(compiled.innerText).toContain(en.message);
-    expect(compiled.innerText).toContain(vm.name);
-    expect(compiled.innerText).toContain(en.roleAndCompany);
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });
