@@ -7,8 +7,8 @@ import { LogoComponent } from '@components/header/components/logo/logo.component
 @Component({
   template: `
     <app-header>
-      <app-logo class="testlogo"></app-logo>
-      <app-logo class="testlogo"></app-logo>
+      <app-logo class="testlogo" />
+      <app-logo class="testlogo" />
       <app-nav class="testnav">app-nav element 1</app-nav>
       <app-nav class="testnav">app-nav element 2</app-nav>
       <div class="testdiv">This should not be projected</div>
@@ -36,14 +36,13 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  //Snapshot test
   it('should project <app-logo>, <app-nav> elements and ignore other elements', () => {
-    const appLogoElements = compiled.querySelectorAll('.testlogo');
-    expect(appLogoElements.length).toBe(2);
+    // Arrange
 
-    const appNavElements = compiled.querySelectorAll('.testnav');
-    expect(appNavElements.length).toBe(2);
+    // Act
 
-    const divElements = compiled.querySelectorAll('.testdiv');
-    expect(divElements.length).toBe(0);
+    // Assert
+    expect(compiled.innerHTML).toMatchSnapshot();
   });
 });
