@@ -27,12 +27,24 @@ describe('PartnerLogoComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should get the input and visualize it', () => {
+  //Snapshot test
+  it('should not render the template when there is not VM provided', () => {
+    //Arrange
+
+    //Act
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  it('should render the template correctly when there is a VM provided', () => {
+    //Arrange
     fixture.componentRef.setInput('vm', vm);
+
+    //Act
     fixture.detectChanges();
 
-    const imgElement: HTMLElement | null = compiled.querySelector('img');
-    expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
-    expect(imgElement?.getAttribute('alt')).toBe(vm.altText);
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });
