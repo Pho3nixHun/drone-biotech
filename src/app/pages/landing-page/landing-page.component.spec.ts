@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { LandingPageService } from './landing-page.service';
-import { signal, WritableSignal } from '@angular/core';
+import { NgModule, signal, WritableSignal } from '@angular/core';
 import { LandingPageVM } from './landing-page-vm.model';
 import { Router, RouterModule } from '@angular/router';
 import {
@@ -26,6 +26,7 @@ import {
 import { ProductsPageComponent } from '../products-page/products-page.component';
 import { routes } from 'src/app/app.routes';
 import { SwiperModule } from '@modules/swiper/swiper.module';
+import { SwiperTestingModule } from '@modules/swiper/swiper-testing.module';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -33,7 +34,6 @@ describe('LandingPageComponent', () => {
   let compiled: HTMLElement;
   let vmSignal: WritableSignal<LandingPageVM | undefined>;
   let router: Router;
-  let swiper: SwiperModule;
 
   beforeEach(waitForAsync(() => {
     const landingPageServiceMock = {
@@ -58,10 +58,13 @@ describe('LandingPageComponent', () => {
           provide: LandingPageService,
           useValue: landingPageServiceMock,
         },
+        {
+          provide: SwiperModule,
+          useValue: SwiperTestingModule,
+        },
       ],
     }).compileComponents();
 
-    swiper = TestBed.inject(SwiperModule);
     router = TestBed.inject(Router);
     router.initialNavigation();
     fixture = TestBed.createComponent(LandingPageComponent);
