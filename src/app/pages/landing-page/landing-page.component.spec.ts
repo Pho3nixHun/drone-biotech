@@ -26,8 +26,13 @@ import {
 import { ProductsPageComponent } from '../products-page/products-page.component';
 import { routes } from 'src/app/app.routes';
 import { SwiperModule } from '@modules/swiper/swiper.module';
-import { SwiperTestingModule } from '@modules/swiper/swiper-testing.module';
 
+@NgModule({
+  declarations: [],
+  imports: [],
+  providers: [],
+})
+class SwiperTestingModule {}
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
   let fixture: ComponentFixture<LandingPageComponent>;
