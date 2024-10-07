@@ -49,10 +49,7 @@ describe('LandingPageComponent', () => {
           langs: { en: {} },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
         }),
-        {
-          ngModule: SwiperModule,
-          providers: [],
-        },
+        SwiperModule,
       ],
       providers: [
         {
