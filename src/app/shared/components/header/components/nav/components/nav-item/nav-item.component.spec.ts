@@ -1,16 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavItemComponent } from './nav-item.component';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NavItemVM } from 'src/app/app-vm.model';
 
 @Component({
-  template: `<app-nav-item>Home</app-nav-item>`,
+  template: `<app-nav-item [vm]="vm">Home</app-nav-item>`,
 })
-class TestHostComponent {}
+class TestHostComponent {
+  @Input() vm: NavItemVM | null = null;
+}
 
 describe('NavItemComponent', () => {
   let component: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
+  const mockVM: NavItemVM = { href: 'home' };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -28,8 +32,25 @@ describe('NavItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should project the 'Home' title inside the <app-nav-item>", () => {
-    const navItemElement = compiled.querySelector('app-nav-item');
-    expect(navItemElement?.textContent?.trim()).toBe('Home');
+  //Snapshot testing
+  it('should not render the template when the VM is not provided', () => {
+    //Arrange
+
+    //Act
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  //Snapshot testing
+  it('should render the template with the provided VM and ng-content', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', mockVM);
+
+    //Act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });

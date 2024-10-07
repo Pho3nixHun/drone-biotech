@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItemComponent should not render the template when the VM is not provided 1`] = `
+<div
+  id="root1"
+>
+  <app-nav-item>
+    
+  </app-nav-item>
+</div>
+`;
+
+exports[`NavItemComponent should render the template with the provided VM and ng-content 1`] = `
+<div
+  id="root2"
+>
+  <app-nav-item>
+    <a
+      class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+      href="home"
+    >
+      Home
+    </a>
+    
+  </app-nav-item>
+</div>
+`;

@@ -1,3 +1,5 @@
-<a href="" class="sm:hover:text-gray-400 duration-150 cursor-pointer">
-  <ng-content />
-</a>
+@if (vm(); as vm) {
+  <a [href]="vm.href" class="sm:hover:text-gray-400 duration-150 cursor-pointer">
+    <ng-content />
+  </a>
+}
