@@ -18,6 +18,7 @@ class TestHostComponent {}
 describe('NavComponent', () => {
   let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
+  let component: TestHostComponent;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -27,13 +28,24 @@ describe('NavComponent', () => {
 
     fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
+    component = fixture.componentInstance;
     compiled = fixture.debugElement.nativeElement;
   });
 
-  it('should project elements inside', () => {
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  //Snapshot testing
+  it('should project <app-nav-item> elements and ignore other elements', () => {
+    //Arrange
     const navItemElements = compiled.querySelectorAll('app-nav-item');
-    expect(navItemElements.length).toBe(2);
     const divElements = compiled.querySelectorAll('div');
-    expect(divElements.length).toBe(2);
+
+    //Act
+
+    //Assert
+    expect(navItemElements.length).toBe(2);
+    expect(divElements.length).toBe(0);
   });
 });
