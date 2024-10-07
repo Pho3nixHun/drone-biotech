@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { LandingPageService } from './landing-page.service';
-import { NgModule, signal, WritableSignal } from '@angular/core';
+import { signal, WritableSignal } from '@angular/core';
 import { LandingPageVM } from './landing-page-vm.model';
 import { Router, RouterModule } from '@angular/router';
 import {
@@ -25,13 +25,10 @@ import {
 } from './landing-page.mock';
 import { ProductsPageComponent } from '../products-page/products-page.component';
 import { routes } from 'src/app/app.routes';
-import { SwiperModule } from '@modules/swiper/swiper.module';
 
-@NgModule({
-  declarations: [],
-  imports: [],
-})
-export class SwiperTestingModule {}
+jest.mock('swiper/element-bundle', () => ({
+  register: jest.fn(),
+}));
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -61,10 +58,6 @@ describe('LandingPageComponent', () => {
         {
           provide: LandingPageService,
           useValue: landingPageServiceMock,
-        },
-        {
-          provide: SwiperModule,
-          useClass: SwiperTestingModule,
         },
       ],
     }).compileComponents();
