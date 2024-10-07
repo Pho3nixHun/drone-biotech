@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
-import { ProductsPageVM } from './products-page-vm.model';
 import { TranslocoModule } from '@jsverse/transloco';
+import { ProductsPageService } from './products-page.service';
 
 /**
  * ProductsPageComponent
@@ -37,38 +37,7 @@ import { TranslocoModule } from '@jsverse/transloco';
   templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
-  productsVM = signal<ProductsPageVM | null>({
-    extendedFrameVMWithExtendedProductItemVMs: {
-      titleKey: 'LandingPage.frames.0.title',
-      productItemVMs: [
-        {
-          routerLink: '1',
-          productItemVM: {
-            id: 1,
-            titleKey: 'LandingPage.products.0.title',
-            descriptionKey: 'LandingPage.products.0.description',
-            imageSrc: 'assets/lepke.jpg',
-          },
-        },
-        {
-          routerLink: '2',
-          productItemVM: {
-            id: 2,
-            titleKey: 'LandingPage.products.1.title',
-            descriptionKey: 'LandingPage.products.1.description',
-            imageSrc: 'assets/lepke.jpg',
-          },
-        },
-        {
-          routerLink: '3',
-          productItemVM: {
-            id: 3,
-            titleKey: 'LandingPage.products.2.title',
-            descriptionKey: 'LandingPage.products.2.description',
-            imageSrc: 'assets/lepke.jpg',
-          },
-        },
-      ],
-    },
-  });
+  private readonly productsPageService = inject(ProductsPageService);
+
+  protected vm = this.productsPageService.getVM();
 }

@@ -1,4 +1,4 @@
-@if (productsVM(); as vm) {
+@if (vm(); as vm) {
   <app-frame [vm]="vm.extendedFrameVMWithExtendedProductItemVMs">
     <app-product-list>
       @for (item of vm.extendedFrameVMWithExtendedProductItemVMs.productItemVMs; track $index) {

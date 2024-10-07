@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductsPageComponent should not render <app-product-item> when there is no item provided 1`] = `
+<div
+  id="root2"
+>
+  <app-frame>
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          
+        </div>
+      </app-product-list>
+    </section>
+    
+    
+  </app-frame>
+  
+</div>
+`;
+
+exports[`ProductsPageComponent should not render the template when there is no VM provided 1`] = `
+<div
+  id="root1"
+>
+  
+</div>
+`;
+
+exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is provided 1`] = `
+<div
+  id="root3"
+>
+  <app-frame>
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+    </section>
+    
+    
+  </app-frame>
+  
+</div>
+`;
+
+exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items are provided 1`] = `
+<div
+  id="root4"
+>
+  <app-frame>
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+    </section>
+    
+    
+  </app-frame>
+  
+</div>
+`;
