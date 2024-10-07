@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrameComponent should not render the template when there is no VM provided 1`] = `
+<div
+  id="root1"
+>
+  <app-frame>
+    
+  </app-frame>
+</div>
+`;
+
+exports[`FrameComponent should render the template when the VM is provided 1`] = `
+<div
+  id="root2"
+>
+  <app-frame>
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        Our Products
+      </h2>
+      <div>
+        TestDiv
+      </div>
+    </section>
+    
+    
+  </app-frame>
+</div>
+`;
