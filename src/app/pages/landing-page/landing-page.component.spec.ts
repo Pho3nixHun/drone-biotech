@@ -24,6 +24,7 @@ import {
 } from './landing-page.mock';
 import { ProductsPageComponent } from '../products-page/products-page.component';
 import { routes } from 'src/app/app.routes';
+import { SwiperModule } from '@modules/swiper/swiper.module';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -48,6 +49,10 @@ describe('LandingPageComponent', () => {
           langs: { en: {} },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
         }),
+        {
+          ngModule: SwiperModule,
+          providers: [],
+        },
       ],
       providers: [
         {
