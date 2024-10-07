@@ -36,11 +36,16 @@ describe('PartnerListComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  //Snapshot test
   it('should project the <app-partner-logo> and ignore other elements', () => {
+    //Arrange
     const logoItems = compiled.querySelectorAll('app-partner-list app-partner-logo');
-    expect(logoItems.length).toBe(2);
-
     const partnerList = compiled.querySelectorAll('app-partner-list app-partner-list');
+
+    //Act
+
+    //Assert
+    expect(logoItems.length).toBe(2);
     expect(partnerList.length).toBe(0);
   });
 });
