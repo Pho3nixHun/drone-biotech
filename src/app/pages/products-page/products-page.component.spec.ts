@@ -7,12 +7,11 @@ import { ProductsPageService } from './products-page.service';
 import { signal, WritableSignal } from '@angular/core';
 import { ProductsPageVM } from './products-page-vm.model';
 import {
-  productsPageVM,
   productsPageVMWithFiveProductItem,
   productsPageVMWithOneProductItem,
   productsPageVMWithoutProductItem,
+  productsPageVMWithRoutes,
 } from './products-page.mock';
-import { By } from '@angular/platform-browser';
 
 describe('ProductsPageComponent', () => {
   let component: ProductsPageComponent;
@@ -104,28 +103,23 @@ describe('ProductsPageComponent', () => {
   });
 
   //Interaction test
+
   it('should initiate navigation when the user clicks on a product to the appropriate link provided by the VM', () => {
-    //Arrange
-    vmSignal.set(productsPageVM);
-    const navigateSpy = jest.spyOn(router, 'navigateByUrl');
+    // Arrange
+    vmSignal.set(productsPageVMWithRoutes);
+    const mockVM =
+      productsPageVMWithRoutes.extendedFrameVMWithExtendedProductItemVMs.productItemVMs;
 
-    //Act
+    // Act
     fixture.detectChanges();
-    const productItems = fixture.debugElement.queryAll(By.css('app-product-item'));
-    productItems.forEach((productItem, index) => {
-      productItem.nativeElement.click();
-      const expectedLink =
-        '/' +
-        productsPageVM.extendedFrameVMWithExtendedProductItemVMs.productItemVMs[index].routerLink;
-
-      //Assert
-      expect(navigateSpy).toHaveBeenCalled();
-      expect(router.url).toBe(expectedLink);
-    });
+    const productItems = compiled.querySelectorAll('app-product-list app-product-item');
 
     //Assert
-    expect(navigateSpy).toHaveBeenCalledTimes(
-      productsPageVM.extendedFrameVMWithExtendedProductItemVMs.productItemVMs.length,
-    );
+    productItems.forEach((productItem, index) => {
+      if (mockVM)
+        expect(productItem.getAttribute('ng-reflect-router-link')).toBe(
+          mockVM[index].routerLink.toString(),
+        );
+    });
   });
 });

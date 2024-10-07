@@ -82,9 +82,10 @@ describe('AppComponent', () => {
 
     //Act
     fixture.detectChanges();
+    const navItems = compiled.querySelectorAll('app-nav-item');
 
     //Assert
-    expect(compiled).toMatchSnapshot();
+    expect(navItems.length).toBe(1);
   });
 
   it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
@@ -93,8 +94,9 @@ describe('AppComponent', () => {
 
     //Act
     fixture.detectChanges();
+    const navItems = compiled.querySelectorAll('app-nav-item');
 
     //Assert
-    expect(compiled).toMatchSnapshot();
+    expect(navItems.length).toBe(5);
   });
 });

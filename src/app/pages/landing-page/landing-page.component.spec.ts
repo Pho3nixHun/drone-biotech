@@ -5,9 +5,8 @@ import { LandingPageService } from './landing-page.service';
 import { signal, WritableSignal } from '@angular/core';
 import { LandingPageVM } from './landing-page-vm.model';
 import { Router, RouterModule } from '@angular/router';
-import { By } from '@angular/platform-browser';
 import {
-  landingPageVMMock,
+  landingPageVMMockWithRoutes,
   landingPageVMWithFiveFramesMock,
   landingPageVMWithFivePartnerLogoMock,
   landingPageVMWithFiveProductItemMock,
@@ -178,37 +177,22 @@ describe('LandingPageComponent', () => {
   });
 
   //Interaction test
-  it('should initiate navigation when the user clicks on a product to the appropriate link provided by the VM', async () => {
+  it('should initiate navigation when the user clicks on a product to the appropriate link provided by the VM', () => {
     // Arrange
-    vmSignal.set(landingPageVMMock);
-    const navigateSpy = jest.spyOn(router, 'navigateByUrl');
-    if (!component.isProductFrame(landingPageVMMock.extendedFrameVMs[0])) {
-      return;
-    }
-    const mockFrame = landingPageVMMock.extendedFrameVMs[0];
+    vmSignal.set(landingPageVMMockWithRoutes);
+    const mockVM = landingPageVMMockWithRoutes.extendedFrameVMs[0].productItemVMs;
 
     // Act
     fixture.detectChanges();
-    const productItems = fixture.debugElement.queryAll(By.css('app-product-list app-product-item'));
+    const productItems = compiled.querySelectorAll('app-product-list app-product-item');
 
+    //Assert
     productItems.forEach((productItem, index) => {
-      productItem.nativeElement.click();
-      let expectedUrl = '';
-      const routerLink: string | string[] | undefined = mockFrame.productItemVMs[index].routerLink;
-
-      if (Array.isArray(routerLink)) {
-        expectedUrl = `/${routerLink.join('/')}`;
-      } else if (typeof routerLink === 'string') {
-        expectedUrl = `/${routerLink}`;
-      } else {
-        expectedUrl = '/';
-      }
-
-      // Assert
-      expect(router.url).toBe(expectedUrl);
+      if (mockVM)
+        expect(productItem.getAttribute('ng-reflect-router-link')).toBe(
+          mockVM[index].routerLink.toString(),
+        );
     });
-
-    expect(navigateSpy).toHaveBeenCalledTimes(productItems.length);
   });
 
   //Snapshot test

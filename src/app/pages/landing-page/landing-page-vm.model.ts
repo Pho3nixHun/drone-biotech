@@ -4,7 +4,7 @@ import { PartnerLogoVM } from '@components/partner-list/components/partner-logo/
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
 import { TestimonialItemVM } from '@components/testimonial-item/testimonial-item-vm.model';
 
-interface ExtendedProductItemVM {
+export interface ExtendedProductItemVM {
   routerLink?: string | string[];
   productItemVM: ProductItemVM;
 }

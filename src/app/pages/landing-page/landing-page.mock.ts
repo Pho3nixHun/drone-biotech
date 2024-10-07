@@ -1193,3 +1193,93 @@ export const landingPageVMMock: LandingPageVM = {
     secondaryButtonLabelKey: 'LandingPage.hero.secondaryButtonTitleLabel',
   },
 };
+
+export const landingPageVMMockWithRoutes = {
+  extendedFrameVMs: [
+    {
+      id: AppRouteSegment.PRODUCT,
+      titleKey: 'LandingPage.frames.0.title',
+      productItemVMs: [
+        {
+          routerLink: [AppRouteSegment.PRODUCT, '1'],
+          productItemVM: {
+            id: 1,
+            titleKey: 'LandingPage.products.0.title',
+            descriptionKey: 'LandingPage.products.0.description',
+            imageSrc: 'assets/lepke.jpg',
+          },
+        },
+        {
+          routerLink: [AppRouteSegment.PRODUCT, '2'],
+          productItemVM: {
+            id: 2,
+            titleKey: 'LandingPage.products.1.title',
+            descriptionKey: 'LandingPage.products.1.description',
+            imageSrc: 'assets/lepke.jpg',
+          },
+        },
+        {
+          routerLink: [AppRouteSegment.PRODUCT, '3'],
+          productItemVM: {
+            id: 3,
+            titleKey: 'LandingPage.products.2.title',
+            descriptionKey: 'LandingPage.products.2.description',
+            imageSrc: 'assets/lepke.jpg',
+          },
+        },
+      ],
+    },
+    {
+      id: AppRouteSegment.PARTNERS,
+      titleKey: 'LandingPage.frames.1.title',
+      partnersVM: {
+        partnerLogoVMs: [
+          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+        ],
+        testimonialItemVMs: [
+          {
+            messageKey: 'LandingPage.testimonials.0.message',
+            name: 'John Doe',
+            roleAndCompanyKey: 'LandingPage.testimonials.0.roleAndCompany',
+          },
+          {
+            messageKey: 'LandingPage.testimonials.1.message',
+            name: 'Jane Smith',
+            roleAndCompanyKey: 'LandingPage.testimonials.1.roleAndCompany',
+          },
+          {
+            messageKey: 'LandingPage.testimonials.2.message',
+            name: 'Emily Johnson',
+            roleAndCompanyKey: 'LandingPage.testimonials.2.roleAndCompany',
+          },
+          {
+            messageKey: 'LandingPage.testimonials.3.message',
+            name: 'Emily Johnson',
+            roleAndCompanyKey: 'LandingPage.testimonials.3.roleAndCompany',
+          },
+          {
+            messageKey: 'LandingPage.testimonials.4.message',
+            name: 'Emily Johnson',
+            roleAndCompanyKey: 'LandingPage.testimonials.4.roleAndCompany',
+          },
+          {
+            messageKey: 'LandingPage.testimonials.5.message',
+            name: 'Emily Johnson',
+            roleAndCompanyKey: 'LandingPage.testimonials.5.roleAndCompany',
+          },
+        ],
+      },
+    },
+  ],
+  extendedHeroVMWithTitles: {
+    backgroundImageSrc: 'assets/farming.jpg',
+    titleKey: 'LandingPage.hero.title',
+    descriptionKey: 'LandingPage.hero.description',
+    primaryButtonLabelKey: 'LandingPage.hero.primaryButtonLabel',
+    secondaryButtonLabelKey: 'LandingPage.hero.secondaryButtonTitleLabel',
+  },
+};
