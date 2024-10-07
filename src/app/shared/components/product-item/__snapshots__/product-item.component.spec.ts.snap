@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductItemComponent should not render the template when there is not VM provided 1`] = `
+<div
+  class="h-full"
+  id="root1"
+>
+  
+</div>
+`;
+
+exports[`ProductItemComponent should render the template correctly when there is a VM provided 1`] = `
+<div
+  class="h-full"
+  id="root2"
+>
+  <a
+    class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+  >
+    <img
+      alt="Controller"
+      class="w-auto h-auto object-cover rounded-md"
+      src="assets/lepke.jpg"
+    />
+    <h3
+      class="font-bold text-xl sm:text-2xl mt-4"
+    >
+      Controller
+    </h3>
+    <p
+      class="mt-4"
+    >
+      The sleek sports car roared to life, its engine purring with power as it sped down the highway.
+    </p>
+  </a>
+  
+  
+</div>
+`;

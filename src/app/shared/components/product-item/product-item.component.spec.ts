@@ -15,9 +15,8 @@ describe('ProductItemComponent', () => {
   let compiled: HTMLElement;
   const vm: ProductItemVM = {
     id: 1,
-    titleKey: 'Controller',
-    descriptionKey:
-      'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+    titleKey: en.title,
+    descriptionKey: en.description,
     imageSrc: 'assets/lepke.jpg',
   };
 
@@ -42,17 +41,24 @@ describe('ProductItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should get the inputs in the <p>, <img>, <h3> elements', () => {
+  //Snapshot test
+  it('should not render the template when there is not VM provided', () => {
+    //Arrange
+
+    //Act
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  it('should render the template correctly when there is a VM provided', () => {
+    //Arrange
     fixture.componentRef.setInput('vm', vm);
+
+    //Act
     fixture.detectChanges();
 
-    const imgElement: HTMLElement | null = compiled.querySelector('img');
-    expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
-
-    const h3Element: HTMLElement | null = compiled.querySelector('h3');
-    expect(h3Element?.innerText).toBe(en.title);
-
-    const pElement: HTMLElement | null = compiled.querySelector('p');
-    expect(pElement?.innerText).toBe(en.description);
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });
