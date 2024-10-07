@@ -1,10 +1,14 @@
 @if (vm(); as vm) {
   <!-- Hero section start -->
   <app-hero [vm]="vm.extendedHeroVMWithTitles">
-    <h1>{{ vm.extendedHeroVMWithTitles.titles[0] | transloco }}</h1>
-    <p>{{ vm.extendedHeroVMWithTitles.titles[1] | transloco }}</p>
-    <a href="" class="primary">{{ vm.extendedHeroVMWithTitles.buttonTitles[0] | transloco }}</a>
-    <a href="" class="secondary">{{ vm.extendedHeroVMWithTitles.buttonTitles[1] | transloco }}</a>
+    <h1>{{ vm.extendedHeroVMWithTitles.titleKey | transloco }}</h1>
+    <p>{{ vm.extendedHeroVMWithTitles.descriptionKey | transloco }}</p>
+    <a href="" class="primary">{{
+      vm.extendedHeroVMWithTitles.primaryButtonLabelKey | transloco
+    }}</a>
+    <a href="" class="secondary">{{
+      vm.extendedHeroVMWithTitles.secondaryButtonLabelKey | transloco
+    }}</a>
   </app-hero>
   <!-- Hero section end -->
 

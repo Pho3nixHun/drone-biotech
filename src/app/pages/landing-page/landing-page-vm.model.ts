@@ -8,22 +8,26 @@ interface ExtendedProductItemVM {
   routerLink?: string | string[];
   productItemVM: ProductItemVM;
 }
+
 interface PartnersVM {
   partnerLogoVMs: PartnerLogoVM[];
   testimonialItemVMs: TestimonialItemVM[];
 }
 export type ExtendedHeroVMWithTitles = HeroVM & {
-  titles: string[];
-  buttonTitles: string[];
+  titleKey: string;
+  descriptionKey: string;
+  primaryButtonLabelKey: string;
+  secondaryButtonLabelKey: string;
 };
-
-export type ExtendedFrameVM = FrameVM &
-  ({ partnersVM: PartnersVM } | { productItemVMs: ExtendedProductItemVM[] });
 
 export type ExtendedFrameVMWithPartnersVM = FrameVM & { partnersVM: PartnersVM };
 export type ExtendedFrameVMWithExtendedProductItemVMs = FrameVM & {
   productItemVMs: ExtendedProductItemVM[];
 };
+
+export type ExtendedFrameVM =
+  | ExtendedFrameVMWithPartnersVM
+  | ExtendedFrameVMWithExtendedProductItemVMs;
 
 export interface LandingPageVM {
   extendedHeroVMWithTitles: ExtendedHeroVMWithTitles;

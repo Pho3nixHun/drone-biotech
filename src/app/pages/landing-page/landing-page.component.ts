@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { HeroComponent } from '@components/hero/hero.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
-import { AppRouteSegment } from 'src/app/app-route-segment';
 import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
@@ -11,11 +9,11 @@ import { PartnerLogoComponent } from '@components/partner-list/components/partne
 import { TestimonialItemComponent } from '@components/testimonial-item/testimonial-item.component';
 import { SwiperModule } from '@modules/swiper/swiper.module';
 import { TranslocoModule } from '@jsverse/transloco';
+import { LandingPageService } from './landing-page.service';
 import {
   ExtendedFrameVM,
   ExtendedFrameVMWithExtendedProductItemVMs,
   ExtendedFrameVMWithPartnersVM,
-  LandingPageVM,
 } from './landing-page-vm.model';
 
 /**
@@ -56,100 +54,15 @@ import {
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
+  private readonly landingPageService = inject(LandingPageService);
+
   isProductFrame(frame: ExtendedFrameVM): frame is ExtendedFrameVMWithExtendedProductItemVMs {
-    return (frame as any).productItemVMs !== undefined;
+    return 'productItemVMs' in frame;
   }
 
-  // Type guard to check if the frame contains partnersVM
   isPartnerFrame(frame: ExtendedFrameVM): frame is ExtendedFrameVMWithPartnersVM {
-    return (frame as any).partnersVM !== undefined;
+    return 'partnersVM' in frame;
   }
 
-  vm = signal<LandingPageVM>({
-    extendedFrameVMs: [
-      {
-        id: 'products',
-        titleKey: 'LandingPage.frames.0.title',
-        productItemVMs: [
-          {
-            routerLink: [AppRouteSegment.PRODUCT, '1'],
-            productItemVM: {
-              id: 1,
-              titleKey: 'LandingPage.products.0.title',
-              descriptionKey: 'LandingPage.products.0.description',
-              imageSrc: 'assets/lepke.jpg',
-            },
-          },
-          {
-            routerLink: [AppRouteSegment.PRODUCT, '2'],
-            productItemVM: {
-              id: 2,
-              titleKey: 'LandingPage.products.1.title',
-              descriptionKey: 'LandingPage.products.1.description',
-              imageSrc: 'assets/lepke.jpg',
-            },
-          },
-          {
-            routerLink: [AppRouteSegment.PRODUCT, '3'],
-            productItemVM: {
-              id: 3,
-              titleKey: 'LandingPage.products.2.title',
-              descriptionKey: 'LandingPage.products.2.description',
-              imageSrc: 'assets/lepke.jpg',
-            },
-          },
-        ],
-      },
-      {
-        id: 'partners',
-        titleKey: 'LandingPage.frames.1.title',
-        partnersVM: {
-          partnerLogoVMs: [
-            { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-            { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-            { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-            { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-            { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          ],
-          testimonialItemVMs: [
-            {
-              messageKey: 'LandingPage.testimonials.0.message',
-              name: 'John Doe',
-              roleAndCompanyKey: 'LandingPage.testimonials.0.roleAndCompany',
-            },
-            {
-              messageKey: 'LandingPage.testimonials.1.message',
-              name: 'Jane Smith',
-              roleAndCompanyKey: 'LandingPage.testimonials.1.roleAndCompany',
-            },
-            {
-              messageKey: 'LandingPage.testimonials.2.message',
-              name: 'Emily Johnson',
-              roleAndCompanyKey: 'LandingPage.testimonials.2.roleAndCompany',
-            },
-            {
-              messageKey: 'LandingPage.testimonials.3.message',
-              name: 'Emily Johnson',
-              roleAndCompanyKey: 'LandingPage.testimonials.3.roleAndCompany',
-            },
-            {
-              messageKey: 'LandingPage.testimonials.4.message',
-              name: 'Emily Johnson',
-              roleAndCompanyKey: 'LandingPage.testimonials.4.roleAndCompany',
-            },
-            {
-              messageKey: 'LandingPage.testimonials.5.message',
-              name: 'Emily Johnson',
-              roleAndCompanyKey: 'LandingPage.testimonials.5.roleAndCompany',
-            },
-          ],
-        },
-      },
-    ],
-    extendedHeroVMWithTitles: {
-      backgroundImageSrc: 'assets/farming.jpg',
-      titles: ['LandingPage.hero.0.title', 'LandingPage.hero.1.title'],
-      buttonTitles: ['LandingPage.hero.0.buttonTitle', 'LandingPage.hero.1.buttonTitle'],
-    },
-  });
+  protected vm = this.landingPageService.getVM();
 }

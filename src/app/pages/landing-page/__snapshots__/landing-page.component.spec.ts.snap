@@ -1,0 +1,4777 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
+<div
+  id="root11"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should not render <app-product-item> when 0 is provided 1`] = `
+<div
+  id="root7"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is provided 1`] = `
+<div
+  id="root14"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should not render frames when 0 frame is provided 1`] = `
+<div
+  id="root2"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should not render template without VM 1`] = `
+<div
+  id="root1"
+>
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provided 1`] = `
+<div
+  id="root12"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provided 1`] = `
+<div
+  id="root8"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is provided 1`] = `
+<div
+  id="root15"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`] = `
+<div
+  id="root3"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided 1`] = `
+<div
+  id="root13"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 5 <app-product-item> in order when 5 <app-product-item>  are provided 1`] = `
+<div
+  id="root9"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 5 <app-testimonial-item> in order when 5 app-testimonial-item are provided 1`] = `
+<div
+  id="root16"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render 5 frames in order when 5 frames are provided 1`] = `
+<div
+  id="root4"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render only partner frames when only partner frames are provided 1`] = `
+<div
+  id="root6"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          <app-partner-logo>
+            <img
+              alt="logo"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+            
+          </app-partner-logo>
+          
+        </div>
+      </app-partner-list>
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.0.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.0.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.1.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.1.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.2.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.2.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.3.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.3.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.4.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.4.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item>
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "LandingPage.testimonials.5.message"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                LandingPage.testimonials.5.roleAndCompany
+              </p>
+            </div>
+            
+            
+          </app-testimonial-item>
+        </swiper-slide>
+        
+      </swiper-container>
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
+
+exports[`LandingPageComponent should render only product frames when only product frames are provided 1`] = `
+<div
+  id="root5"
+>
+  <app-hero>
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          LandingPage.hero.title
+        </h1>
+        <p>
+          LandingPage.hero.description
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            LandingPage.hero.primaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            LandingPage.hero.secondaryButtonTitleLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </app-hero>
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.0.title
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.0.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.0.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.0.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.1.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.1.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.1.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            
+            
+          </app-product-item>
+          
+        </div>
+      </app-product-list>
+      
+      
+    </section>
+    
+    
+  </app-frame>
+  
+  
+</div>
+`;
