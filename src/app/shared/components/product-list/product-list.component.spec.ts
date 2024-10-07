@@ -7,7 +7,7 @@ import { ProductItemComponent } from '../product-item/product-item.component';
   template: `
     <app-product-list>
       <app-product-item></app-product-item>
-      <app-product-item>This should not been projected</app-product-item>
+      <app-product-item></app-product-item>
       <div>This should not been projected</div>
     </app-product-list>
   `,
@@ -34,11 +34,16 @@ describe('ProductListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain the <app-product-item> elements and ignore other elements', () => {
+  //Snapshot test
+  it('should render the <app-product-item> elements and ignore other elements', () => {
+    //Arrange
     const productItems = compiled.querySelectorAll('app-product-list app-product-item');
-    expect(productItems.length).toBe(2);
-
     const divItems = compiled.querySelectorAll('app-product-list div div');
+
+    //Act
+
+    //Assert
+    expect(productItems.length).toBe(2);
     expect(divItems.length).toBe(0);
   });
 });
