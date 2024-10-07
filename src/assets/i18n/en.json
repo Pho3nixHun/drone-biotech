@@ -22,10 +22,10 @@
   "LandingPage.frames.0.title": "Our Products",
   "LandingPage.frames.1.title": "Partners",
 
-  "LandingPage.hero.0.title": "The future of irrigation is now",
-  "LandingPage.hero.1.title": "IRRIOT is a completely wireless precision irrigation automation system",
-  "LandingPage.hero.0.buttonTitle": "Contact Us",
-  "LandingPage.hero.1.buttonTitle": "Learn More",
+  "LandingPage.hero.title": "The future of irrigation is now",
+  "LandingPage.hero.description": "IRRIOT is a completely wireless precision irrigation automation system",
+  "LandingPage.hero.primaryButtonLabel": "Contact Us",
+  "LandingPage.hero.secondaryButtonTitleLabel": "Learn More",
 
   "AppComponent.navItems.0.title": "Home",
   "AppComponent.navItems.1.title": "Products",

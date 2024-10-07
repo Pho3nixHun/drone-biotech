@@ -22,10 +22,10 @@
   "LandingPage.frames.0.title": "Termékeink",
   "LandingPage.frames.1.title": "Partnereink",
 
-  "LandingPage.hero.0.title": "Az öntözés jövője itt van",
-  "LandingPage.hero.1.title": "Az IRRIOT egy teljesen vezeték nélküli precíziós öntözés automatizálási rendszer",
-  "LandingPage.hero.0.buttonTitle": "Kapcsolatfelvétel",
-  "LandingPage.hero.1.buttonTitle": "Tudj meg többet",
+  "LandingPage.hero.title": "Az öntözés jövője itt van",
+  "LandingPage.hero.description": "Az IRRIOT egy teljesen vezeték nélküli precíziós öntözés automatizálási rendszer",
+  "LandingPage.hero.primaryButtonLabel": "Kapcsolatfelvétel",
+  "LandingPage.hero.secondaryButtonTitleLabel": "Tudj meg többet",
 
   "AppComponent.navItems.0.title": "Kezdőlap",
   "AppComponent.navItems.1.title": "Termékeink",
