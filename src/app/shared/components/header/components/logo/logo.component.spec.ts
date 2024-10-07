@@ -1,10 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LogoComponent } from './logo.component';
+import { LogoVM } from './logo-vm.model';
 
 describe('LogoComponent', () => {
   let component: LogoComponent;
   let fixture: ComponentFixture<LogoComponent>;
   let compiled: HTMLElement;
+  const vm: LogoVM | null = {
+    imageSrc: 'assets/phoenix.jpg',
+    routerLink: 'link',
+    altText: 'logo',
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -21,17 +27,25 @@ describe('LogoComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  //Snapshot test
+  it('should not render the template when there is no VM provided', () => {
+    //Arrange
+
+    //Act
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  //Snapshot testing
   it('should get input data on the img and the anchor element', () => {
-    fixture.componentRef.setInput('vm', {
-      imageSrc: 'assets/phoenix.jpg',
-      routerLink: 'link',
-      altText: 'logo',
-    });
+    //Arrange
+    fixture.componentRef.setInput('vm', vm);
+
+    //Act
     fixture.detectChanges();
-    const imgElement: HTMLImageElement | null = compiled.querySelector('img');
-    const anchorElement: HTMLAnchorElement | null = compiled.querySelector('a');
-    expect(imgElement?.getAttribute('src')).toBe('assets/phoenix.jpg');
-    expect(imgElement?.getAttribute('alt')).toBe('logo');
-    expect(anchorElement?.getAttribute('href')).toBe('link');
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });
