@@ -3,9 +3,10 @@
 exports[`FrameComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root1"
+  ng-version="18.2.7"
 >
   <app-frame>
-    
+    <!--container-->
   </app-frame>
 </div>
 `;
@@ -13,8 +14,11 @@ exports[`FrameComponent should not render the template when there is no VM provi
 exports[`FrameComponent should render the template when the VM is provided 1`] = `
 <div
   id="root2"
+  ng-version="18.2.7"
 >
-  <app-frame>
+  <app-frame
+    ng-reflect-vm="[object Object]"
+  >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
@@ -25,8 +29,8 @@ exports[`FrameComponent should render the template when the VM is provided 1`] =
         TestDiv
       </div>
     </section>
-    
-    
+    <!--container-->
+    <!--container-->
   </app-frame>
 </div>
 `;

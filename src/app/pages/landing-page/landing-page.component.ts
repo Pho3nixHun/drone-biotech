@@ -2,7 +2,6 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { HeroComponent } from '@components/hero/hero.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
-import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
 import { PartnerLogoComponent } from '@components/partner-list/components/partner-logo/partner-logo.component';
@@ -15,6 +14,8 @@ import {
   ExtendedFrameVMWithExtendedProductItemVMs,
   ExtendedFrameVMWithPartnersVM,
 } from './landing-page-vm.model';
+import { NgTemplateOutlet } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 /**
  * LandingPageComponent
@@ -49,6 +50,7 @@ import {
     TestimonialItemComponent,
     SwiperModule,
     TranslocoModule,
+    NgTemplateOutlet
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './landing-page.component.html',
@@ -60,10 +62,6 @@ export class LandingPageComponent {
     frame: ExtendedFrameVM,
   ): frame is ExtendedFrameVMWithExtendedProductItemVMs {
     return 'productItemVMs' in frame;
-  }
-
-  protected isPartnerFrame(frame: ExtendedFrameVM): frame is ExtendedFrameVMWithPartnersVM {
-    return 'partnersVM' in frame;
   }
 
   protected vm = this.landingPageService.getVM();

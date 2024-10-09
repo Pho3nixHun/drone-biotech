@@ -1,6 +1,7 @@
 module.exports = {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+  rootDir: './',
   modulePaths: ['<rootDir>'],
   moduleNameMapper: {
     '^flat': 'node_modules/flat/index.js',
@@ -9,4 +10,5 @@ module.exports = {
     '^@modules/(.*)$': '<rootDir>/src/app/shared/modules/$1',
   },
   transformIgnorePatterns: ['node_modules/?!(.\\*.mjs$|@jsverse)'],
+  snapshotSerializers: ['jest-preset-angular/build/serializers/ng-snapshot.js'],
 };

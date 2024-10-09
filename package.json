@@ -11,7 +11,7 @@
     "test": "jest",
     "test:ci": "jest --runInBand",
     "test:coverage": "jest --coverage",
-    "test:update": "jest --u",
+    "test:update": "jest --updateSnapshot",
     "prepare": "husky install",
     "lint": "ng lint",
     "lint:fix": "eslint --fix 'src/**/*.{ts,js}'",

@@ -1,12 +1,13 @@
 import { TranslocoTestingModule, TranslocoTestingOptions } from '@jsverse/transloco';
 
-export function getTranslocoModule(options: TranslocoTestingOptions = {}) {
-  return TranslocoTestingModule.forRoot({
-    translocoConfig: {
-      availableLangs: ['en', 'hu'],
-      defaultLang: 'en',
-    },
-    preloadLangs: true,
-    ...options,
+const defaultTranslocoTestingOptions: TranslocoTestingOptions = {
+  langs: { en: {} },
+  translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
+  preloadLangs: true,
+};
+
+export const getTranslocoModule = (options: TranslocoTestingOptions = {}) => 
+  TranslocoTestingModule.forRoot({
+    ...defaultTranslocoTestingOptions,
+    ...options
   });
-}

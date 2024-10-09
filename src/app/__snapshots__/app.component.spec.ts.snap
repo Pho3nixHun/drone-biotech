@@ -3,6 +3,7 @@
 exports[`AppComponent should not render <app-nav-item> when there is no item provided 1`] = `
 <div
   id="root3"
+  ng-version="18.2.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -14,7 +15,9 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
         <div
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
-          <app-logo>
+          <app-logo
+            ng-reflect-vm="[object Object]"
+          >
             <a
               href=""
             >
@@ -24,34 +27,35 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
                 src="assets/phoenix.jpg"
               />
             </a>
-            
+            <!--container-->
           </app-logo>
           <app-nav>
             <nav
               class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
             >
-              
+              <!--container-->
             </nav>
           </app-nav>
         </div>
       </section>
     </app-header>
-    
+    <!--container-->
     <div
       class="flex-grow"
     >
       <router-outlet />
-      
+      <!--container-->
     </div>
   </div>
-  
+  <!--container-->
 </div>
 `;
 
 exports[`AppComponent should not render the template when the VM is not provided 1`] = `
 <div
   id="root2"
+  ng-version="18.2.7"
 >
-  
+  <!--container-->
 </div>
 `;

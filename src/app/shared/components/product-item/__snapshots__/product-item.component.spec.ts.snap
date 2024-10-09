@@ -4,8 +4,9 @@ exports[`ProductItemComponent should not render the template when there is not V
 <div
   class="h-full"
   id="root1"
+  ng-version="18.2.7"
 >
-  
+  <!--container-->
 </div>
 `;
 
@@ -13,6 +14,7 @@ exports[`ProductItemComponent should render the template correctly when there is
 <div
   class="h-full"
   id="root2"
+  ng-version="18.2.7"
 >
   <a
     class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -33,7 +35,7 @@ exports[`ProductItemComponent should render the template correctly when there is
       The sleek sports car roared to life, its engine purring with power as it sped down the highway.
     </p>
   </a>
-  
-  
+  <!--container-->
+  <!--container-->
 </div>
 `;
