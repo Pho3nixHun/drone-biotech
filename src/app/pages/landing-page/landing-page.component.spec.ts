@@ -27,9 +27,6 @@ import { ProductsPageComponent } from '../products-page/products-page.component'
 import { routes } from 'src/app/app.routes';
 import { SWIPER_REGISTER, SwiperTestingModule } from '@modules/swiper/swiper-testing.module';
 
-jest.mock('swiper/element-bundle', () => ({
-  register: jest.fn(), // Mock the register function
-}));
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
   let fixture: ComponentFixture<LandingPageComponent>;
