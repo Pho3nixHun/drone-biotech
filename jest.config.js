@@ -1,9 +1,6 @@
 module.exports = {
   preset: 'jest-preset-angular',
-  setupFilesAfterEnv: [
-    '<rootDir>/setup-jest.ts',
-    '<rootDir>/src/app/shared/modules/swiper/swiper-testing.module.js',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   modulePaths: ['<rootDir>'],
   moduleNameMapper: {
     '^flat': 'node_modules/flat/index.js',
