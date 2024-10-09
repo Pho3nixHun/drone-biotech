@@ -25,7 +25,7 @@ import {
 } from './landing-page.mock';
 import { ProductsPageComponent } from '../products-page/products-page.component';
 import { routes } from 'src/app/app.routes';
-import { SwiperTestingModule } from '@modules/swiper/swiper-testing.module';
+import { SWIPER_REGISTER, SwiperTestingModule } from '@modules/swiper/swiper-testing.module';
 
 jest.mock('swiper/element-bundle', () => ({
   register: jest.fn(), // Mock the register function
@@ -44,6 +44,7 @@ describe('LandingPageComponent', () => {
     };
     vmSignal = signal(undefined);
     landingPageServiceMock.getVM.mockReturnValue(vmSignal);
+    registerMock = jest.fn();
 
     TestBed.configureTestingModule({
       imports: [
@@ -61,6 +62,7 @@ describe('LandingPageComponent', () => {
           provide: LandingPageService,
           useValue: landingPageServiceMock,
         },
+        { provide: SWIPER_REGISTER, useValue: registerMock },
       ],
     }).compileComponents();
 
