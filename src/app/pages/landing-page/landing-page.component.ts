@@ -12,7 +12,6 @@ import { LandingPageService } from './landing-page.service';
 import {
   ExtendedFrameVM,
   ExtendedFrameVMWithExtendedProductItemVMs,
-  ExtendedFrameVMWithPartnersVM,
 } from './landing-page-vm.model';
 import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -50,7 +49,7 @@ import { RouterLink } from '@angular/router';
     TestimonialItemComponent,
     SwiperModule,
     TranslocoModule,
-    NgTemplateOutlet
+    NgTemplateOutlet,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './landing-page.component.html',
