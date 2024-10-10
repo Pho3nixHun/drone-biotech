@@ -30,5 +30,5 @@ import { TranslocoModule } from '@jsverse/transloco';
 export class ProductItemComponent {
   @HostBinding('class') hostClass = 'h-full';
 
-  vm = input<ProductItemVM | null>(null, { alias: 'vm' });
+  vm = input.required<ProductItemVM>();
 }

@@ -1,19 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductItemComponent should not render the template when there is not VM provided 1`] = `
-<div
-  class="h-full"
-  id="root1"
-  ng-version="18.2.7"
->
-  <!--container-->
-</div>
-`;
-
 exports[`ProductItemComponent should render the template correctly when there is a VM provided 1`] = `
 <div
   class="h-full"
-  id="root2"
+  id="root0"
   ng-version="18.2.7"
 >
   <a
@@ -35,7 +25,6 @@ exports[`ProductItemComponent should render the template correctly when there is
       The sleek sports car roared to life, its engine purring with power as it sped down the highway.
     </p>
   </a>
-  <!--container-->
   <!--container-->
 </div>
 `;

@@ -1,10 +1,12 @@
-@if (vm(); as vm) {
-  <a
-    *transloco="let t"
-    class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-  >
-    <img [src]="vm.imageSrc" [alt]="vm.titleKey" class="w-auto h-auto object-cover rounded-md" />
-    <h3 class="font-bold text-xl sm:text-2xl mt-4">{{ t(vm.titleKey) }}</h3>
-    <p class="mt-4">{{ t(vm.descriptionKey) }}</p>
-  </a>
-}
+<a
+  *transloco="let t"
+  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+>
+  <img
+    [src]="vm().imageSrc"
+    [alt]="vm().titleKey | transloco"
+    class="w-auto h-auto object-cover rounded-md"
+  />
+  <h3 class="font-bold text-xl sm:text-2xl mt-4">{{ t(vm().titleKey) }}</h3>
+  <p class="mt-4">{{ t(vm().descriptionKey) }}</p>
+</a>
