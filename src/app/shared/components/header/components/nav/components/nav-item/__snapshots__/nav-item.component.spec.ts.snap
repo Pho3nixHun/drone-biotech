@@ -1,19 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavItemComponent should not render the template when the VM is not provided 1`] = `
-<div
-  id="root1"
-  ng-version="18.2.7"
->
-  <app-nav-item>
-    <!--container-->
-  </app-nav-item>
-</div>
-`;
-
 exports[`NavItemComponent should render the template with the provided VM and ng-content 1`] = `
 <div
-  id="root2"
+  id="root0"
   ng-version="18.2.7"
 >
   <app-nav-item
@@ -25,7 +14,6 @@ exports[`NavItemComponent should render the template with the provided VM and ng
     >
       Home
     </a>
-    <!--container-->
   </app-nav-item>
 </div>
 `;
