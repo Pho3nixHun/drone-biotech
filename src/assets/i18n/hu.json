@@ -27,6 +27,12 @@
   "LandingPage.hero.primaryButtonLabel": "Kapcsolatfelvétel",
   "LandingPage.hero.secondaryButtonTitleLabel": "Tudj meg többet",
 
+  "LandingPage.partners.0.altText": "Pillangó",
+  "LandingPage.partners.1.altText": "Pillangó",
+  "LandingPage.partners.2.altText": "Pillangó",
+  "LandingPage.partners.3.altText": "Pillangó",
+  "LandingPage.partners.4.altText": "Pillangó",
+
   "AppComponent.navItems.0.title": "Kezdőlap",
   "AppComponent.navItems.1.title": "Termékeink",
   "AppComponent.navItems.2.title": "Partnereink",

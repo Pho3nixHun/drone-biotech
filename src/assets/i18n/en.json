@@ -27,6 +27,12 @@
   "LandingPage.hero.primaryButtonLabel": "Contact Us",
   "LandingPage.hero.secondaryButtonTitleLabel": "Learn More",
 
+  "LandingPage.partners.0.altText": "Butterfly",
+  "LandingPage.partners.1.altText": "Butterfly",
+  "LandingPage.partners.2.altText": "Butterfly",
+  "LandingPage.partners.3.altText": "Butterfly",
+  "LandingPage.partners.4.altText": "Butterfly",
+
   "AppComponent.navItems.0.title": "Home",
   "AppComponent.navItems.1.title": "Products",
   "AppComponent.navItems.2.title": "Partners",
