@@ -2,23 +2,27 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { NavComponent } from './nav.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { NavItemVM } from './components/nav-item/nav-item-vm';
 
 @Component({
   template: `
     <app-nav>
-      <app-nav-item></app-nav-item>
-      <app-nav-item></app-nav-item>
-      <div></div>
-      <div></div>
+      <app-nav-item [vm]="vm" />
+      <app-nav-item [vm]="vm" />
+      <div>Should not be projected</div>
+      <div>Should not be projected</div>
     </app-nav>
   `,
 })
-class TestHostComponent {}
+class TestHostComponent {
+  vm: NavItemVM = {
+    href: 'link',
+  };
+}
 
 describe('NavComponent', () => {
   let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
-  let component: TestHostComponent;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -28,24 +32,18 @@ describe('NavComponent', () => {
 
     fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
-    component = fixture.componentInstance;
     compiled = fixture.debugElement.nativeElement;
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 
   //Snapshot testing
   it('should project <app-nav-item> elements and ignore other elements', () => {
     //Arrange
-    const navItemElements = compiled.querySelectorAll('app-nav-item');
-    const divElements = compiled.querySelectorAll('div');
+    //No need to arrange
 
     //Act
+    //No need to act
 
     //Assert
-    expect(navItemElements.length).toBe(2);
-    expect(divElements.length).toBe(0);
+    expect(compiled).toMatchSnapshot();
   });
 });
