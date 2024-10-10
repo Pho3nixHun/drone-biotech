@@ -28,5 +28,5 @@ import { TranslocoModule } from '@jsverse/transloco';
   templateUrl: './testimonial-item.component.html',
 })
 export class TestimonialItemComponent {
-  vm = input<TestimonialItemVM | null>(null, { alias: 'vm' });
+  vm = input.required<TestimonialItemVM>();
 }

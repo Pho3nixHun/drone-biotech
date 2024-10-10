@@ -2,7 +2,7 @@
 
 exports[`TestimonialItemComponent should get the input data and visualize it 1`] = `
 <div
-  id="root2"
+  id="root0"
   ng-version="18.2.7"
 >
   <div
@@ -24,16 +24,6 @@ exports[`TestimonialItemComponent should get the input data and visualize it 1`]
       World
     </p>
   </div>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`TestimonialItemComponent should not render the template when there is not VM provided 1`] = `
-<div
-  id="root1"
-  ng-version="18.2.7"
->
   <!--container-->
 </div>
 `;
