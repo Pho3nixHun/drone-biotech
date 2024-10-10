@@ -1,4 +1,4 @@
 export interface PartnerLogoVM {
   imageSrc: string;
-  altText: string;
+  altTextKey: string;
 }

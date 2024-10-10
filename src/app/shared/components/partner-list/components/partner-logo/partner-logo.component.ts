@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { PartnerLogoVM } from './partner-logo-vm.model';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * PartnerLogoComponent
@@ -21,9 +22,9 @@ import { PartnerLogoVM } from './partner-logo-vm.model';
 @Component({
   selector: 'app-partner-logo',
   standalone: true,
-  imports: [],
+  imports: [TranslocoModule],
   templateUrl: './partner-logo.component.html',
 })
 export class PartnerLogoComponent {
-  vm = input<PartnerLogoVM | null>(null, { alias: 'vm' });
+  vm = input.required<PartnerLogoVM>()
 }
