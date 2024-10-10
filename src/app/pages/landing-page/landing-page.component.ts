@@ -22,9 +22,8 @@ import { RouterLink } from '@angular/router';
  * Type: Container
  *
  * Scope:
- * - Responsible for rendering a hero section followed by a product section.
- * - Conditionally renders a product section with a list of products.
- * - Conditionally renders a partner section with a list of partners and a testimonial carousel.
+ * - Responsible for rendering a hero section.
+ * - Conditionally renders a product section with a list of products or a partner section with a list of partners and a testimonial carousel.
  * - Passes relevant data.
  *
  * Out-of-Scope:
@@ -36,7 +35,7 @@ import { RouterLink } from '@angular/router';
  */
 
 @Component({
-  selector: 'app-landing.page',
+  selector: 'app-landing-page',
   standalone: true,
   imports: [
     HeroComponent,

@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { LandingPageService } from './landing-page.service';
 import { landingPageVMMock } from './landing-page.mock';
 
@@ -20,6 +19,7 @@ describe('LandingPageService', () => {
     const vm = service.getVM();
 
     // Act
+      // No need to act
 
     //Assert
     expect(landingPageVMMock).toEqual(vm());

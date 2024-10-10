@@ -81,7 +81,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -108,7 +107,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -137,13 +135,11 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -165,51 +161,46 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -250,7 +241,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -278,7 +268,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -308,7 +297,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -336,7 +324,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -366,7 +353,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -395,13 +381,11 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -494,7 +478,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -521,7 +504,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -550,13 +532,11 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -578,51 +558,46 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -663,7 +638,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -691,7 +665,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -721,7 +694,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -749,7 +721,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -779,7 +750,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -808,13 +778,11 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -907,7 +875,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -934,7 +901,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -963,13 +929,11 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -991,51 +955,46 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -1076,7 +1035,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1104,7 +1062,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -1134,7 +1091,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1162,7 +1118,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -1192,7 +1147,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1221,13 +1175,11 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -1320,7 +1272,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -1347,7 +1298,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -1376,13 +1326,11 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -1404,51 +1352,46 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -1489,7 +1432,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1517,7 +1459,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -1547,7 +1488,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1575,7 +1515,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -1605,7 +1544,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1634,13 +1572,11 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -1733,7 +1669,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -1760,7 +1695,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -1789,13 +1723,11 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -1817,51 +1749,46 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -1902,7 +1829,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1930,7 +1856,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -1960,7 +1885,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -1988,7 +1912,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -2018,7 +1941,6 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2047,13 +1969,11 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -2146,7 +2066,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -2173,7 +2092,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -2202,13 +2120,11 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -2230,51 +2146,46 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -2315,7 +2226,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2343,7 +2253,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -2373,7 +2282,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2401,7 +2309,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -2431,7 +2338,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2460,13 +2366,11 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -2559,7 +2463,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -2586,7 +2489,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -2615,13 +2517,11 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -2643,51 +2543,46 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -2728,7 +2623,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2756,7 +2650,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -2786,7 +2679,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2814,7 +2706,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -2844,7 +2735,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -2873,13 +2763,11 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -2972,7 +2860,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -2999,7 +2886,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -3028,13 +2914,11 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -3056,51 +2940,46 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -3141,7 +3020,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3169,7 +3047,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -3199,7 +3076,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3227,7 +3103,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -3257,7 +3132,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3286,13 +3160,11 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -3385,7 +3257,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -3412,7 +3283,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -3441,13 +3311,11 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -3469,51 +3337,46 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -3554,7 +3417,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3582,7 +3444,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -3612,7 +3473,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3640,7 +3500,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -3670,7 +3529,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3699,13 +3557,11 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -3798,7 +3654,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -3825,7 +3680,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -3854,13 +3708,11 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -3882,51 +3734,46 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -3967,7 +3814,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -3995,7 +3841,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4025,7 +3870,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4053,7 +3897,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4083,7 +3926,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4112,13 +3954,11 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -4211,7 +4051,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -4238,7 +4077,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -4267,13 +4105,11 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -4295,51 +4131,46 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -4380,7 +4211,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4408,7 +4238,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4438,7 +4267,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4466,7 +4294,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4496,7 +4323,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4525,13 +4351,11 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -4624,7 +4448,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -4651,7 +4474,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -4680,13 +4502,11 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -4708,51 +4528,46 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -4793,7 +4608,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4821,7 +4635,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4851,7 +4664,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4879,7 +4691,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4909,7 +4720,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -4938,13 +4748,11 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -5037,7 +4845,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -5064,7 +4871,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -5093,13 +4899,11 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -5121,51 +4925,46 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -5206,7 +5005,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -5234,7 +5032,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -5264,7 +5061,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -5292,7 +5088,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -5322,7 +5117,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -5351,13 +5145,11 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -5450,7 +5242,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -5477,7 +5268,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -5506,13 +5296,11 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -5534,51 +5322,46 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -5619,7 +5402,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -5647,7 +5429,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -5677,7 +5458,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -5705,7 +5485,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -5735,7 +5514,6 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -5764,13 +5542,11 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -5863,7 +5639,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -5890,7 +5665,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -5919,13 +5693,11 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -5947,51 +5719,46 @@ exports[`LandingPageComponent should render only partner frames when only partne
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -6032,7 +5799,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -6060,7 +5826,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -6090,7 +5855,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -6118,7 +5882,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -6148,7 +5911,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -6177,13 +5939,11 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -6276,7 +6036,6 @@ exports[`LandingPageComponent should render only product frames when only produc
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <app-product-item
             class="h-full"
@@ -6303,7 +6062,6 @@ exports[`LandingPageComponent should render only product frames when only produc
                 LandingPage.products.1.description
               </p>
             </a>
-            <!--container-->
             <!--container-->
           </app-product-item>
           <app-product-item
@@ -6332,13 +6090,11 @@ exports[`LandingPageComponent should render only product frames when only produc
               </p>
             </a>
             <!--container-->
-            <!--container-->
           </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->
@@ -6360,51 +6116,46 @@ exports[`LandingPageComponent should render only product frames when only produc
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <app-partner-logo
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="logo"
+              alt="LandingPage.partners.0.altText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
-            <!--container-->
           </app-partner-logo>
           <!--container-->
         </div>
@@ -6445,7 +6196,6 @@ exports[`LandingPageComponent should render only product frames when only produc
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -6473,7 +6223,6 @@ exports[`LandingPageComponent should render only product frames when only produc
                 LandingPage.testimonials.1.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -6503,7 +6252,6 @@ exports[`LandingPageComponent should render only product frames when only produc
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -6531,7 +6279,6 @@ exports[`LandingPageComponent should render only product frames when only produc
                 LandingPage.testimonials.3.roleAndCompany
               </p>
             </div>
-            <!--container-->
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -6561,7 +6308,6 @@ exports[`LandingPageComponent should render only product frames when only produc
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <swiper-slide
@@ -6590,13 +6336,11 @@ exports[`LandingPageComponent should render only product frames when only produc
               </p>
             </div>
             <!--container-->
-            <!--container-->
           </app-testimonial-item>
         </swiper-slide>
         <!--container-->
       </swiper-container>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
   <!--ng-container-->

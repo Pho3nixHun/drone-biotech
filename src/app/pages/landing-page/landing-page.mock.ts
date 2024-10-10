@@ -63,11 +63,11 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -108,11 +108,11 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -153,11 +153,11 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -198,11 +198,11 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -243,11 +243,11 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -300,11 +300,11 @@ export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -407,11 +407,11 @@ export const landingPageVMWithoutProductItemMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -479,11 +479,11 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -587,11 +587,11 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -760,7 +760,7 @@ export const landingPageVMWithOnePartnerLogoMock: LandingPageVM = {
       id: 'partners',
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
-        partnerLogoVMs: [{ imageSrc: 'assets/lepke.jpg', altText: 'logo' }],
+        partnerLogoVMs: [{ imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' }],
         testimonialItemVMs: [
           {
             messageKey: 'LandingPage.testimonials.0.message',
@@ -845,11 +845,11 @@ export const landingPageVMWithFivePartnerLogoMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -935,11 +935,11 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [],
       },
@@ -994,11 +994,11 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -1059,11 +1059,11 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -1144,11 +1144,11 @@ export const landingPageVMMock: LandingPageVM = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
@@ -1234,11 +1234,11 @@ export const landingPageVMMockWithRoutes = {
       titleKey: 'LandingPage.frames.1.title',
       partnersVM: {
         partnerLogoVMs: [
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-          { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
+          { imageSrc: 'assets/lepke.jpg', altTextKey: 'LandingPage.partners.0.altText' },
         ],
         testimonialItemVMs: [
           {
