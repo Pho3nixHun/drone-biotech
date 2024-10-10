@@ -2,7 +2,6 @@ import { ProductsPageVM } from './products-page-vm.model';
 
 export const productsPageVMWithoutProductItem: ProductsPageVM = {
   extendedFrameVMWithExtendedProductItemVMs: {
-    id: 'Products',
     titleKey: 'LandingPage.frames.0.title',
     productItemVMs: [],
   },
@@ -10,7 +9,6 @@ export const productsPageVMWithoutProductItem: ProductsPageVM = {
 
 export const productsPageVMWithOneProductItem: ProductsPageVM = {
   extendedFrameVMWithExtendedProductItemVMs: {
-    id: 'Products',
     titleKey: 'LandingPage.frames.0.title',
     productItemVMs: [
       {
@@ -28,7 +26,6 @@ export const productsPageVMWithOneProductItem: ProductsPageVM = {
 
 export const productsPageVMWithFiveProductItem: ProductsPageVM = {
   extendedFrameVMWithExtendedProductItemVMs: {
-    id: 'Products',
     titleKey: 'LandingPage.frames.0.title',
     productItemVMs: [
       {
@@ -82,7 +79,6 @@ export const productsPageVMWithFiveProductItem: ProductsPageVM = {
 
 export const productsPageVM: ProductsPageVM = {
   extendedFrameVMWithExtendedProductItemVMs: {
-    id: 'Products',
     titleKey: 'LandingPage.frames.0.title',
     productItemVMs: [
       {
@@ -116,9 +112,8 @@ export const productsPageVM: ProductsPageVM = {
   },
 };
 
-export const productsPageVMWithRoutes = {
+export const productsPageVMWithRoutes: ProductsPageVM = {
   extendedFrameVMWithExtendedProductItemVMs: {
-    id: 'Products',
     titleKey: 'LandingPage.frames.0.title',
     productItemVMs: [
       {

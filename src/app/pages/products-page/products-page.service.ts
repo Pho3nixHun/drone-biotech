@@ -6,7 +6,7 @@ import { productsPageVM } from './products-page.mock';
   providedIn: 'root',
 })
 export class ProductsPageService {
-  public getVM(): Signal<ProductsPageVM | null> {
+  public getVM(): Signal<ProductsPageVM> {
     return signal(productsPageVM);
   }
 }

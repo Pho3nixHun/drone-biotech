@@ -1,10 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
-import { TranslocoModule } from '@jsverse/transloco';
 import { ProductsPageService } from './products-page.service';
 
 /**
@@ -28,11 +26,9 @@ import { ProductsPageService } from './products-page.service';
   standalone: true,
   imports: [
     FrameComponent,
-    CommonModule,
     ProductItemComponent,
     ProductListComponent,
     RouterLink,
-    TranslocoModule,
   ],
   templateUrl: './products-page.component.html',
 })
