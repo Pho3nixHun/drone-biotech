@@ -6,7 +6,7 @@ import { appMockVM } from './app.mock';
   providedIn: 'root',
 })
 export class AppService {
-  public getVM(): Signal<AppComponentVM | null> {
+  public getVM(): Signal<AppComponentVM> {
     return signal(appMockVM);
   }
 }

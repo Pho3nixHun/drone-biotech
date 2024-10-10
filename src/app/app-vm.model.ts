@@ -1,9 +1,10 @@
 import { LogoVM } from '@components/header/components/logo/logo-vm.model';
+import { NavItemVM } from '@components/header/components/nav/components/nav-item/nav-item-vm';
 
-export interface NavItemVM {
-  href: string;
+interface ExtendedNavItemVM {
+  navItemVM: NavItemVM;
+  labelKey: string;
 }
-export type ExtendedNavItemVM = { navItemVM: NavItemVM } & { labelKey: string };
 
 export interface AppComponentVM {
   logoVM: LogoVM;

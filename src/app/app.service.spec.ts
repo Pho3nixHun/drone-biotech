@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { AppService } from './app.service';
 import { appMockVM } from './app.mock';
 
@@ -20,6 +19,7 @@ describe('AppService', () => {
     const vm = service.getVM();
 
     // Act
+    //No need to act
 
     //Assert
     expect(appMockVM).toEqual(vm());

@@ -1,73 +1,56 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
-import { signal, WritableSignal } from '@angular/core';
-import { AppService } from './app.service';
-import { AppComponentVM } from './app-vm.model';
+import { provideRouter, Router } from '@angular/router';
 import {
+  appEmptyMockVMForRoutes,
   appMockVMWithFiveNavItem,
   appMockVMWithOneNavItem,
   appMockVMWithoutNavItem,
 } from './app.mock';
+import { provideAppComponentMockService, updateGetVMSignal } from './app-service.mock';
+import { routes } from './app.routes';
+import { AppRouteSegment } from './app-route-segment';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let compiled: HTMLElement;
-  let vmSignal: WritableSignal<AppComponentVM | undefined>;
+  let router: Router;
 
-  beforeEach(async () => {
-    const appServiceMock = {
-      getVM: jest.fn(),
-    };
-    vmSignal = signal(undefined);
-    appServiceMock.getVM.mockReturnValue(vmSignal);
-
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [
         AppComponent,
         getTranslocoModule({
           langs: { en: {} },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
         }),
-        RouterModule.forRoot(routes),
       ],
-      providers: [
-        {
-          provide: AppService,
-          useValue: appServiceMock,
-        },
-      ],
+      providers: [provideAppComponentMockService(), provideRouter(routes)],
     }).compileComponents();
 
+    updateGetVMSignal(undefined);
+    router = TestBed.inject(Router);
     fixture = TestBed.createComponent(AppComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
 
-  it('should create the app', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it(`should have the 'drone-biotech-webapp' title`, () => {
-    expect(component.title).toEqual('drone-biotech-webapp');
-  });
-
+  //Snapshot test
   it(`should not render the template when the VM is not provided`, () => {
     //Arrange
+    //No need for arrange
 
     //Act
+    //No need for act
 
     //Assert
     expect(compiled).toMatchSnapshot();
   });
 
+  //Snapshot test
   it(`should not render <app-nav-item> when there is no item provided`, () => {
     //Arrange
-    vmSignal.set(appMockVMWithoutNavItem);
+    updateGetVMSignal(appMockVMWithoutNavItem);
 
     //Act
     fixture.detectChanges();
@@ -76,27 +59,66 @@ describe('AppComponent', () => {
     expect(compiled).toMatchSnapshot();
   });
 
+  //Snapshot test
   it(`should render 1 <app-nav-item> when 1 item is provided`, () => {
     //Arrange
-    vmSignal.set(appMockVMWithOneNavItem);
+    updateGetVMSignal(appMockVMWithOneNavItem);
 
     //Act
     fixture.detectChanges();
-    const navItems = compiled.querySelectorAll('app-nav-item');
 
     //Assert
-    expect(navItems.length).toBe(1);
+    expect(compiled).toMatchSnapshot();
   });
 
+  //Snapshot test
   it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
     //Arrange
-    vmSignal.set(appMockVMWithFiveNavItem);
+    updateGetVMSignal(appMockVMWithFiveNavItem);
 
     //Act
     fixture.detectChanges();
-    const navItems = compiled.querySelectorAll('app-nav-item');
 
     //Assert
-    expect(navItems.length).toBe(5);
+    expect(compiled).toMatchSnapshot();
+  });
+
+  //Snapshot test
+  it('should navigate to "" and render the LandingPageComponent', async () => {
+    //Arrange
+    updateGetVMSignal(appEmptyMockVMForRoutes);
+
+    //Act
+    await router.navigate(['']);
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  //Snapshot test
+  it('should navigate to "/products" and render the ProductsPageComponent', async () => {
+    //Arrange
+    updateGetVMSignal(appEmptyMockVMForRoutes);
+
+    //Act
+    await router.navigate([AppRouteSegment.PRODUCT]);
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+
+  //Snapshot test
+  it('should navigate to "/products/id" and render the ProductsPageComponent', async () => {
+    //Arrange
+    updateGetVMSignal(appEmptyMockVMForRoutes);
+
+    //Act
+    await router.navigate([AppRouteSegment.PRODUCT, 'id']);
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });

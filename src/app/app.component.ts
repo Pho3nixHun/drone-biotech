@@ -4,9 +4,8 @@ import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
-import { TranslocoModule } from '@jsverse/transloco';
-import { CommonModule } from '@angular/common';
 import { AppService } from './app.service';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +17,11 @@ import { AppService } from './app.service';
     NavComponent,
     NavItemComponent,
     TranslocoModule,
-    CommonModule,
   ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'drone-biotech-webapp';
-  appService = inject(AppService);
-
-  vm = this.appService.getVM();
+  protected title = 'drone-biotech-webapp';
+  private appService = inject(AppService);
+  protected vm = this.appService.getVM();
 }

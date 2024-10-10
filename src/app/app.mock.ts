@@ -36,3 +36,8 @@ export const appMockVM: AppComponentVM = {
     { labelKey: 'AppComponent.navItems.3.title', navItemVM: { href: '' } },
   ],
 };
+
+export const appEmptyMockVMForRoutes: AppComponentVM = {
+  logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
+  extendedNavItemVMs: [],
+};
