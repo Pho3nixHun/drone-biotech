@@ -1,5 +1,3 @@
-@if (vm(); as vm) {
-  <a [href]="vm.routerLink">
-    <img [src]="vm.imageSrc" [alt]="vm.altText" class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0" />
-  </a>
-}
+<a [href]="vm().routerLink">
+  <img [src]="vm().imageSrc" [alt]="vm().altText" class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0" />
+</a>

@@ -3,10 +3,9 @@ import { LogoComponent } from './logo.component';
 import { LogoVM } from './logo-vm.model';
 
 describe('LogoComponent', () => {
-  let component: LogoComponent;
   let fixture: ComponentFixture<LogoComponent>;
   let compiled: HTMLElement;
-  const vm: LogoVM | null = {
+  const vm: LogoVM = {
     imageSrc: 'assets/phoenix.jpg',
     routerLink: 'link',
     altText: 'logo',
@@ -18,27 +17,11 @@ describe('LogoComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(LogoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  //Snapshot test
-  it('should not render the template when there is no VM provided', () => {
-    //Arrange
-
-    //Act
-
-    //Assert
-    expect(compiled).toMatchSnapshot();
-  });
-
   //Snapshot testing
-  it('should get input data on the img and the anchor element', () => {
+  it('should render the template when the VM is provided', () => {
     //Arrange
     fixture.componentRef.setInput('vm', vm);
 

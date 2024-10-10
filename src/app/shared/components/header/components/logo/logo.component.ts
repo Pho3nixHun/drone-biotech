@@ -8,5 +8,5 @@ import { LogoVM } from '@components/header/components/logo/logo-vm.model';
   templateUrl: './logo.component.html',
 })
 export class LogoComponent {
-  vm = input<LogoVM | null>(null, { alias: 'vm' });
+  vm = input.required<LogoVM>();
 }

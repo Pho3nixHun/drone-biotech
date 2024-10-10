@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LogoComponent should get input data on the img and the anchor element 1`] = `
+exports[`LogoComponent should render the template when the VM is provided 1`] = `
 <div
-  id="root2"
+  id="root0"
   ng-version="18.2.7"
 >
   <a
@@ -14,15 +14,5 @@ exports[`LogoComponent should get input data on the img and the anchor element 1
       src="assets/phoenix.jpg"
     />
   </a>
-  <!--container-->
-</div>
-`;
-
-exports[`LogoComponent should not render the template when there is no VM provided 1`] = `
-<div
-  id="root1"
-  ng-version="18.2.7"
->
-  <!--container-->
 </div>
 `;
