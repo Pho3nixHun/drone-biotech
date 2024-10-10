@@ -43,8 +43,8 @@ jobs:
         run: npm run prettier:fix
 
       # Step 7: Run tests
-      - name: Run tests
-        run: npm run test:ci
+      - name: Run test:ci
+        run: npm run test
 
       # Step 8: Build the Angular application
       - name: Build

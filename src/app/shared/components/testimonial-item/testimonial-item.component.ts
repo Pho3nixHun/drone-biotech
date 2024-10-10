@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
-import { TestimonialItemVM } from './testimonial-item-vm';
+import { TestimonialItemVM } from './testimonial-item-vm.model';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * TestimonialItemComponent
@@ -23,9 +24,9 @@ import { TestimonialItemVM } from './testimonial-item-vm';
 @Component({
   selector: 'app-testimonial-item',
   standalone: true,
-  imports: [],
+  imports: [TranslocoModule],
   templateUrl: './testimonial-item.component.html',
 })
 export class TestimonialItemComponent {
-  vm = input<TestimonialItemVM | null>(null, { alias: 'vm' });
+  vm = input.required<TestimonialItemVM>();
 }

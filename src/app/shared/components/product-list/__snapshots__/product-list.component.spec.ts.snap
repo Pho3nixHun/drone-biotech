@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductListComponent should render the template when the VM is provided and ignore other elements 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.7"
+>
+  <app-product-list>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+    >
+      <app-product-item
+        class="h-full"
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+        >
+          <img
+            alt="title"
+            class="w-auto h-auto object-cover rounded-md"
+            src="assets/lepke.jpg"
+          />
+          <h3
+            class="font-bold text-xl sm:text-2xl mt-4"
+          >
+            title
+          </h3>
+          <p
+            class="mt-4"
+          >
+            description
+          </p>
+        </a>
+        <!--container-->
+      </app-product-item>
+      <app-product-item
+        class="h-full"
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+        >
+          <img
+            alt="title"
+            class="w-auto h-auto object-cover rounded-md"
+            src="assets/lepke.jpg"
+          />
+          <h3
+            class="font-bold text-xl sm:text-2xl mt-4"
+          >
+            title
+          </h3>
+          <p
+            class="mt-4"
+          >
+            description
+          </p>
+        </a>
+        <!--container-->
+      </app-product-item>
+    </div>
+  </app-product-list>
+</div>
+`;

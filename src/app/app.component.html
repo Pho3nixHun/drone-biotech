@@ -1,12 +1,13 @@
 <div class="min-h-screen flex flex-col">
-  <app-header>
-    <app-logo [vm]="vm().logoVM"></app-logo>
+  <app-header *transloco="let t">
+    <app-logo [vm]="vm().logoVM" />
     <app-nav>
-      <app-nav-item>Home</app-nav-item>
-      <app-nav-item [appScrollTo]="'products'">Products</app-nav-item>
-      <app-nav-item [appScrollTo]="'partners'">Partners</app-nav-item>
-      <app-nav-item>Contacts</app-nav-item>
+      @for (extendedNavItemVM of vm().extendedNavItemVMs; track $index) {
+        <app-nav-item [vm]="extendedNavItemVM.navItemVM">{{
+          t(extendedNavItemVM.labelKey)
+        }}</app-nav-item>
+      }
     </app-nav>
   </app-header>
-  <div class="flex-grow"><router-outlet></router-outlet></div>
+  <div class="flex-grow"><router-outlet /></div>
 </div>

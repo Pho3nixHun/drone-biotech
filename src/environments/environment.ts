@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 export const environment = {
   firebaseConfig: {
     apiKey: 'AIzaSyAZFSqAs0Cz8lXySzEg8TTTHP7YdGoGJQA',

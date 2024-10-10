@@ -1,10 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LogoComponent } from './logo.component';
+import { LogoVM } from './logo-vm.model';
 
 describe('LogoComponent', () => {
-  let component: LogoComponent;
   let fixture: ComponentFixture<LogoComponent>;
   let compiled: HTMLElement;
+  const vm: LogoVM = {
+    imageSrc: 'assets/phoenix.jpg',
+    routerLink: 'link',
+    altText: 'logo',
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -12,26 +17,18 @@ describe('LogoComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(LogoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  //Snapshot testing
+  it('should render the template when the VM is provided', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', vm);
 
-  it('should get input data on the img and the anchor element', () => {
-    fixture.componentRef.setInput('vm', {
-      imageSrc: 'assets/phoenix.jpg',
-      routerLink: 'link',
-      altText: 'logo',
-    });
+    //Act
     fixture.detectChanges();
-    const imgElement: HTMLImageElement | null = compiled.querySelector('img');
-    const anchorElement: HTMLAnchorElement | null = compiled.querySelector('a');
-    expect(imgElement?.getAttribute('src')).toBe('assets/phoenix.jpg');
-    expect(imgElement?.getAttribute('alt')).toBe('logo');
-    expect(anchorElement?.getAttribute('href')).toBe('link');
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
   });
 });

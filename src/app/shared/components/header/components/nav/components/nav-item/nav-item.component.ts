@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { NavItemVM } from './nav-item-vm';
 
 @Component({
   selector: 'app-nav-item',
@@ -7,5 +8,5 @@ import { Component, input } from '@angular/core';
   templateUrl: './nav-item.component.html',
 })
 export class NavItemComponent {
-  href = input<string | null>(null, { alias: 'href' });
+  vm = input.required<NavItemVM>();
 }
