@@ -26,5 +26,5 @@ import { TranslocoModule } from '@jsverse/transloco';
   imports: [TranslocoModule],
 })
 export class FrameComponent {
-  vm = input<FrameVM | null>(null, { alias: 'vm' });
+  vm = input.required<FrameVM>();
 }

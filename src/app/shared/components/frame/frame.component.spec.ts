@@ -7,17 +7,15 @@ import { FrameVM } from './frame-vm';
 const en = { title: 'Our Products' };
 
 @Component({
-  template: `<app-frame [vm]="vm"><div>TestDiv</div></app-frame>`,
+  template: `<app-frame [vm]="vm"><div>Should be projected</div></app-frame>`,
 })
 class TestHostComponent {
-  @Input() vm: FrameVM | null = null;
+  @Input() vm!: FrameVM;
 }
 describe('FrameComponent', () => {
-  let component: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
   let compiled: HTMLElement;
   const vm: FrameVM = {
-    id: 'id',
     titleKey: en.title,
   };
 
@@ -32,26 +30,10 @@ describe('FrameComponent', () => {
       ],
       declarations: [TestHostComponent],
     }).compileComponents();
-
     fixture = TestBed.createComponent(TestHostComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  //Snapshot test
-  it('should not render the template when there is no VM provided', () => {
-    //Arrange
-
-    //Act
-
-    //Assert
-    expect(compiled).toMatchSnapshot();
-  });
   //Snapshot test
   it('should render the template when the VM is provided', () => {
     //Arrange

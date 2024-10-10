@@ -1,19 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrameComponent should not render the template when there is no VM provided 1`] = `
-<div
-  id="root1"
-  ng-version="18.2.7"
->
-  <app-frame>
-    <!--container-->
-  </app-frame>
-</div>
-`;
-
 exports[`FrameComponent should render the template when the VM is provided 1`] = `
 <div
-  id="root2"
+  id="root0"
   ng-version="18.2.7"
 >
   <app-frame
@@ -26,10 +15,9 @@ exports[`FrameComponent should render the template when the VM is provided 1`] =
         Our Products
       </h2>
       <div>
-        TestDiv
+        Should be projected
       </div>
     </section>
-    <!--container-->
     <!--container-->
   </app-frame>
 </div>

@@ -1,6 +1,4 @@
-@if (vm(); as vm) {
-  <section *transloco="let t" class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40">
-    <h2>{{ t(vm.titleKey) }}</h2>
-    <ng-content />
-  </section>
-}
+<section *transloco="let t" class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40">
+  <h2>{{ t(vm().titleKey) }}</h2>
+  <ng-content />
+</section>
