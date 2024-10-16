@@ -1,5 +1,10 @@
 import { Component, inject, Signal } from '@angular/core';
-import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import {
+    FormGroup,
+    FormControl,
+    Validators,
+    ReactiveFormsModule,
+} from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { Auth } from '@angular/fire/auth';
 import { Store } from '@ngrx/store';
@@ -27,37 +32,50 @@ import { LoginPageVM } from './login-page-vm.model';
  * - To serve as a smart container component that integrates business logic, including data fetching and presentation, to create a cohesive user interface.
  */
 @Component({
-  selector: 'app-login-page',
-  standalone: true,
-  imports: [ReactiveFormsModule, NgClass, LoginFormComponent, TranslocoModule],
-  templateUrl: './login-page.component.html',
+    selector: 'app-login-page',
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        NgClass,
+        LoginFormComponent,
+        TranslocoModule,
+    ],
+    templateUrl: './login-page.component.html',
 })
 export class LoginPageComponent {
-  private readonly store = inject(Store<AuthState>);
-  private readonly auth = inject(Auth);
-  private readonly loginService = inject(LoginPageService);
-  protected vm: Signal<LoginPageVM> = this.loginService.getVM();
+    private readonly store = inject(Store<AuthState>);
+    private readonly auth = inject(Auth);
+    private readonly loginService = inject(LoginPageService);
+    protected vm: Signal<LoginPageVM> = this.loginService.getVM();
 
-  loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-  });
+    loginForm = new FormGroup({
+        email: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [
+            Validators.required,
+            Validators.minLength(6),
+        ]),
+    });
 
-  get email() {
-    return this.loginForm.get('email');
-  }
-
-  get password() {
-    return this.loginForm.get('password');
-  }
-
-  signIn() {
-    if (this.loginForm.valid) {
-      const emailValue = this.email?.value;
-      const passwordValue = this.password?.value;
-      if (emailValue && passwordValue) {
-        this.store.dispatch(AuthActions.signIn({ email: emailValue, password: passwordValue }));
-      }
+    get email() {
+        return this.loginForm.get('email');
     }
-  }
+
+    get password() {
+        return this.loginForm.get('password');
+    }
+
+    signIn() {
+        if (this.loginForm.valid) {
+            const emailValue = this.email?.value;
+            const passwordValue = this.password?.value;
+            if (emailValue && passwordValue) {
+                this.store.dispatch(
+                    AuthActions.signIn({
+                        email: emailValue,
+                        password: passwordValue,
+                    })
+                );
+            }
+        }
+    }
 }

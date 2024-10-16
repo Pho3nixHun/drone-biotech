@@ -5,7 +5,7 @@
         "prettier:check": "prettier --check 'src/**/*.{ts,js,json,css,scss,html}'",
         "prettier:fix": "prettier --write 'src/**/*.{ts,js,json,css,scss,html}'",
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --host 0.0.0.0",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "jest",
@@ -43,11 +43,8 @@
         "@ngrx/store-devtools": "^18.1.1",
         "firebase": "^10.14.1",
         "flyonui": "^1.1.0",
-        "is-json": "^2.0.1",
-        "lodash": "^4.17.21",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
-        "undefined": "^0.1.0",
         "zone.js": "~0.14.3"
     },
     "devDependencies": {
