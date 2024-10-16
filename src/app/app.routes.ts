@@ -7,7 +7,16 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/landing-page/landing-page.component').then((m) => m.LandingPageComponent),
   },
-
+  {
+    path: AppRouteSegment.REGISTER,
+    loadComponent: () =>
+      import('./pages/register-page/register-page.component').then((m) => m.RegisterPageComponent),
+  },
+  {
+    path: AppRouteSegment.LOGIN,
+    loadComponent: () =>
+      import('./pages/login-page/login-page.component').then((m) => m.LoginPageComponent),
+  },
   {
     path: AppRouteSegment.PRODUCT,
     loadChildren: () =>
