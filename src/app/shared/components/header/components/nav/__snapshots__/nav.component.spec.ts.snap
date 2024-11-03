@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavComponent should project <app-nav-item> elements and ignore other elements 1`] = `
+exports[`NavComponent should project <app-nav-item>, <button> elements and ignore other elements 1`] = `
 <div
   id="root0"
   ng-version="18.2.7"
@@ -25,6 +25,9 @@ exports[`NavComponent should project <app-nav-item> elements and ignore other el
           href="link"
         />
       </app-nav-item>
+      <button>
+        Button
+      </button>
     </nav>
   </app-nav>
 </div>

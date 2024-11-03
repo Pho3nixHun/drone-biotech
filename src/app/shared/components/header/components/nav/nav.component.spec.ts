@@ -9,6 +9,7 @@ import { NavItemVM } from './components/nav-item/nav-item-vm';
     <app-nav>
       <app-nav-item [vm]="vm" />
       <app-nav-item [vm]="vm" />
+      <button>Button</button>
       <div>Should not be projected</div>
       <div>Should not be projected</div>
     </app-nav>
@@ -36,7 +37,7 @@ describe('NavComponent', () => {
   });
 
   //Snapshot testing
-  it('should project <app-nav-item> elements and ignore other elements', () => {
+  it('should project <app-nav-item>, <button> elements and ignore other elements', () => {
     //Arrange
     //No need to arrange
 
