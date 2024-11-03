@@ -1,6 +1,22 @@
 import { Component, input } from '@angular/core';
 import { NavItemVM } from './nav-item-vm';
 
+/**
+ * NavItemComponent
+ *
+ * Type: Presentational
+ *
+ * Scope:
+ * - Responsible for structuring a nav item
+ * - Manages the overall layout and styling for the nav item.
+ *
+ * Out-of-Scope:
+ * - Contains no logic related to the behavior or data of the projected contents.
+ * - Not responsible for fetching or transforming data.
+ *
+ * Purpose (optional):
+ * To provide a flexible and reusable nav item.
+ */
 @Component({
   selector: 'app-nav-item',
   standalone: true,
@@ -8,5 +24,5 @@ import { NavItemVM } from './nav-item-vm';
   templateUrl: './nav-item.component.html',
 })
 export class NavItemComponent {
-  vm = input.required<NavItemVM>();
+  public vm = input.required<NavItemVM>();
 }
