@@ -6,9 +6,9 @@ import { NavComponent } from '@components/header/components/nav/nav.component';
 import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
 import { AppService } from './app.service';
 import { TranslocoModule } from '@jsverse/transloco';
+import { MatIconModule } from '@angular/material/icon';
+import { AuthActions } from './stores/auth/auth.actions';
 import { Store } from '@ngrx/store';
-import * as AuthActions from './auth/auth.actions';
-import { AuthState } from './auth/auth.models';
 
 @Component({
   selector: 'app-root',
@@ -20,17 +20,17 @@ import { AuthState } from './auth/auth.models';
     NavComponent,
     NavItemComponent,
     TranslocoModule,
+    MatIconModule,
   ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
   protected title = 'drone-biotech-webapp';
   private readonly appService = inject(AppService);
+  private readonly store = inject(Store);
   protected vm = this.appService.getVM();
 
-  constructor(private readonly store: Store<AuthState>) {}
-
-  register(email: string, password: string) {
-    this.store.dispatch(AuthActions.registerUser({ email, password }));
+  signOut() {
+    this.store.dispatch(AuthActions.signOut());
   }
 }

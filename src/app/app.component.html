@@ -7,7 +7,12 @@
           t(extendedNavItemVM.labelKey)
         }}</app-nav-item>
       }
+      <button mat-icon-button (click)="signOut()">
+        <mat-icon>logout</mat-icon>
+      </button>
     </app-nav>
   </app-header>
-  <div class="flex-grow"><router-outlet /></div>
+  <div class="flex-grow">
+    <router-outlet />
+  </div>
 </div>
