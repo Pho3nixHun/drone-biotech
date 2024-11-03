@@ -1,19 +1,34 @@
-<div class="flex space-x-10 bg-slate-400 h-[75vh]">
-  <div class="bg-slate-200 w-1/2 flex justify-end items-center h-full">
-    <form [formGroup]="loginForm" class="border-2 border-black w-1/2">
-      <label for="email" class="text-xl font-semibold">Email</label>
-      <input
-        id="email"
-        type="email"
-        formControlName="email"
-        class="block border-2 border-black rounded-lg w-full py-2 mb-5"
-      />
-      <button type="submit" class="bg-green-800 w-full py-2 px-5 rounded-lg">Sign Up</button>
-      <div>Already have an account? Log in</div>
-    </form>
+@if (vm(); as vm) {
+  <div class="flex items-center justify-center min-h-screen">
+    <app-login-form [vm]="vm.extendedLoginFormVM.loginFormVM">
+      <h3>
+        {{ vm.extendedLoginFormVM.titleKey | transloco }}
+      </h3>
+      <p>{{ vm.extendedLoginFormVM.descriptionKey | transloco }}</p>
+      <form [formGroup]="loginForm" (ngSubmit)="signIn()" class="w-full max-w-md mx-auto">
+        <input
+          id="email"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200"
+        />
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200"
+        />
+        <button
+          type="submit"
+          [disabled]="!loginForm.valid"
+          [ngClass]="[loginForm.valid ? 'primary' : 'disabled']"
+          class="btn btn-primary"
+        >
+          {{ (vm.extendedLoginFormVM.buttonTitleKey | transloco).toUpperCase() }}
+        </button>
+      </form>
+    </app-login-form>
   </div>
-  <div
-    class="w-1/2 bg-cover bg-no-repeat rounded-2xl h-full"
-    [style.backgroundImage]="'url(assets/farming.jpg)'"
-  ></div>
-</div>
+}
