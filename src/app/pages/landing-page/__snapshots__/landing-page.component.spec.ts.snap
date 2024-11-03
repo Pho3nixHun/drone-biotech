@@ -25,13 +25,13 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -422,13 +422,13 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -819,13 +819,13 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -1216,13 +1216,13 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -1613,13 +1613,13 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -2010,13 +2010,13 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -2407,13 +2407,13 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -2804,13 +2804,13 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -3201,13 +3201,13 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -3598,13 +3598,13 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -3995,13 +3995,13 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -4392,13 +4392,13 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -4789,13 +4789,13 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -5186,13 +5186,13 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -5583,13 +5583,13 @@ exports[`LandingPageComponent should render only partner frames when only partne
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel
@@ -5980,13 +5980,13 @@ exports[`LandingPageComponent should render only product frames when only produc
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             LandingPage.hero.primaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             LandingPage.hero.secondaryButtonTitleLabel

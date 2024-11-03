@@ -2,18 +2,18 @@
   <app-hero [vm]="vm.extendedHeroVMWithTitles">
     <h1>{{ vm.extendedHeroVMWithTitles.titleKey | transloco }}</h1>
     <p>{{ vm.extendedHeroVMWithTitles.descriptionKey | transloco }}</p>
-    <a href="" class="primary">{{
+    <a href="" class="btn btn-primary">{{
       vm.extendedHeroVMWithTitles.primaryButtonLabelKey | transloco
     }}</a>
-    <a href="" class="secondary">{{
+    <a href="" class="btn btn-default">{{
       vm.extendedHeroVMWithTitles.secondaryButtonLabelKey | transloco
     }}</a>
   </app-hero>
 
-  @for (frameVM of vm.extendedFrameVMs; track $index;) {
+  @for (frameVM of vm.extendedFrameVMs; track $index) {
     <ng-container
       [ngTemplateOutlet]="isProductFrame(frameVM) ? productFrame : partnerFrame"
-      [ngTemplateOutletContext]="{frameVM}"
+      [ngTemplateOutletContext]="{ frameVM }"
     ></ng-container>
   }
 } @else {
