@@ -832,6 +832,18 @@ exports[`AppComponent should navigate back to the LoginPage after navigate to ""
             >
               <!--container-->
               <button
+                mat-icon-button=""
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+              <button
                 class="nav-item"
                 mat-icon-button=""
               >
@@ -844,6 +856,680 @@ exports[`AppComponent should navigate back to the LoginPage after navigate to ""
                   logout
                 </mat-icon>
               </button>
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-login-page>
+        <div
+          class="flex items-center justify-center min-h-screen"
+        >
+          <app-login-form
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
+            >
+              <div
+                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
+                style="background-image: url(assets/farming.jpg);"
+              />
+              <div
+                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
+              >
+                <h3>
+                   LoginPage.loginForm.title 
+                </h3>
+                <p>
+                  LoginPage.loginForm.description
+                </p>
+                <div
+                  class="w-full"
+                >
+                  <form
+                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="password"
+                      ng-reflect-name="password"
+                      placeholder="Password"
+                      type="password"
+                    />
+                    <button
+                      class="btn btn-primary disabled"
+                      disabled=""
+                      ng-reflect-ng-class="disabled"
+                      type="submit"
+                    >
+                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </app-login-form>
+        </div>
+        <!--container-->
+      </app-login-page>
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should navigate back to the LoginPage after navigate to "/products" because the user is not logged in 1`] = `
+<div
+  id="root9"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            class="cursor-pointer"
+            ng-reflect-router-link=""
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <!--container-->
+              <button
+                class="nav-item"
+                mat-icon-button=""
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-login-page>
+        <div
+          class="flex items-center justify-center min-h-screen"
+        >
+          <app-login-form
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
+            >
+              <div
+                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
+                style="background-image: url(assets/farming.jpg);"
+              />
+              <div
+                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
+              >
+                <h3>
+                   LoginPage.loginForm.title 
+                </h3>
+                <p>
+                  LoginPage.loginForm.description
+                </p>
+                <div
+                  class="w-full"
+                >
+                  <form
+                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="password"
+                      ng-reflect-name="password"
+                      placeholder="Password"
+                      type="password"
+                    />
+                    <button
+                      class="btn btn-primary disabled"
+                      disabled=""
+                      ng-reflect-ng-class="disabled"
+                      type="submit"
+                    >
+                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </app-login-form>
+        </div>
+        <!--container-->
+      </app-login-page>
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should navigate back to the LoginPage after navigate to "/products/id" because the user is not logged in 1`] = `
+<div
+  id="root10"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            class="cursor-pointer"
+            ng-reflect-router-link=""
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <!--container-->
+              <button
+                class="nav-item"
+                mat-icon-button=""
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-login-page>
+        <div
+          class="flex items-center justify-center min-h-screen"
+        >
+          <app-login-form
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
+            >
+              <div
+                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
+                style="background-image: url(assets/farming.jpg);"
+              />
+              <div
+                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
+              >
+                <h3>
+                   LoginPage.loginForm.title 
+                </h3>
+                <p>
+                  LoginPage.loginForm.description
+                </p>
+                <div
+                  class="w-full"
+                >
+                  <form
+                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="password"
+                      ng-reflect-name="password"
+                      placeholder="Password"
+                      type="password"
+                    />
+                    <button
+                      class="btn btn-primary disabled"
+                      disabled=""
+                      ng-reflect-ng-class="disabled"
+                      type="submit"
+                    >
+                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </app-login-form>
+        </div>
+        <!--container-->
+      </app-login-page>
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should not render <app-nav-item> when there is no item provided 1`] = `
+<div
+  id="root3"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            class="cursor-pointer"
+            ng-reflect-router-link=""
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <!--container-->
+              <button
+                class="nav-item"
+                mat-icon-button=""
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should navigate back to the LoginPage after navigate to "/products" because the user is not logged in 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <a
+              href=""
+            >
+              <img
+                alt="logo"
+                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+                src="assets/phoenix.jpg"
+              />
+            </a>
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <!--container-->
+              <button
+                mat-icon-button=""
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-login-page>
+        <div
+          class="flex items-center justify-center min-h-screen"
+        >
+          <app-login-form
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
+            >
+              <div
+                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
+                style="background-image: url(assets/farming.jpg);"
+              />
+              <div
+                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
+              >
+                <h3>
+                   LoginPage.loginForm.title 
+                </h3>
+                <p>
+                  LoginPage.loginForm.description
+                </p>
+                <div
+                  class="w-full"
+                >
+                  <form
+                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="password"
+                      ng-reflect-name="password"
+                      placeholder="Password"
+                      type="password"
+                    />
+                    <button
+                      class="btn btn-primary disabled"
+                      disabled=""
+                      ng-reflect-ng-class="disabled"
+                      type="submit"
+                    >
+                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </app-login-form>
+        </div>
+        <!--container-->
+      </app-login-page>
+      <!--container-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AppComponent should navigate back to the LoginPage after navigate to "/products/id" because the user is not logged in 1`] = `
+<div
+  id="root3"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            ng-reflect-router-link=""
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <!--container-->
+              <button
+                mat-icon-button=""
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-login-page>
+        <div
+          class="flex items-center justify-center min-h-screen"
+        >
+          <app-login-form
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
+            >
+              <div
+                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
+                style="background-image: url(assets/farming.jpg);"
+              />
+              <div
+                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
+              >
+                <h3>
+                   LoginPage.loginForm.title 
+                </h3>
+                <p>
+                  LoginPage.loginForm.description
+                </p>
+                <div
+                  class="w-full"
+                >
+                  <form
+                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="password"
+                      ng-reflect-name="password"
+                      placeholder="Password"
+                      type="password"
+                    />
+                    <button
+                      class="btn btn-primary disabled"
+                      disabled=""
+                      ng-reflect-ng-class="disabled"
+                      type="submit"
+                    >
+                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </app-login-form>
+        </div>
+        <!--container-->
+      </app-login-page>
+      <!--container-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AppComponent should navigate back to the LoginPage after navigate to "" because the user is not logged in 1`] = `
+<div
+  id="root8"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            class="cursor-pointer"
+            ng-reflect-router-link=""
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <!--container-->
             </nav>
           </app-nav>
         </div>
