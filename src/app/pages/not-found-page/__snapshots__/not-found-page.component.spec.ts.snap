@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPageComponent should not render the template when there is not VM provided 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.7"
+>
+  <!--container-->
+</div>
+`;
+
+exports[`NotFoundPageComponent should render the template when there is a VM provided 1`] = `
+<div
+  id="root1"
+  ng-version="18.2.7"
+>
+  <div
+    class="flex flex-col items-center justify-center h-[50vh] md:h-[75vh] px-4"
+  >
+    <app-message
+      ng-reflect-vm="[object Object]"
+    >
+      <div
+        class="bg-gray-700 p-6 rounded-xl"
+      >
+        <h1
+          class="text-6xl sm:text-8xl font-bold text-white mb-4 text-center w-full"
+        >
+           404! 
+        </h1>
+        <p
+          class="text-white md:text-xl max-w-md"
+        >
+           NotFoundPage.message.description 
+        </p>
+      </div>
+    </app-message>
+  </div>
+  <!--container-->
+</div>
+`;
