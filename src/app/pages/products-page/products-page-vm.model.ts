@@ -1,14 +1,15 @@
 import { FrameVM } from '@components/frame/frame-vm';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
-interface ExtendedProductItemVM {
-  routerLink: string | string[];
-  productItemVM: ProductItemVM;
+interface ProductItemXVM extends WithRouterLink, ProductItemVM {}
+
+interface WithProductItemXVMs {
+  productItemVMs: ProductItemXVM[];
 }
-type ExtendedFrameVMWithExtendedProductItemVMs = FrameVM & {
-  productItemVMs: ExtendedProductItemVM[];
-};
+
+interface ProductListFrame extends FrameVM, WithProductItemXVMs {}
 
 export interface ProductsPageVM {
-  extendedFrameVMWithExtendedProductItemVMs: ExtendedFrameVMWithExtendedProductItemVMs;
+  productListFrame: ProductListFrame;
 }

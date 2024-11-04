@@ -13,10 +13,11 @@ describe('ProductItemComponent', () => {
   let fixture: ComponentFixture<ProductItemComponent>;
   let compiled: HTMLElement;
   const vm: ProductItemVM = {
-    id: 1,
+    id: '1',
     titleKey: en.title,
     descriptionKey: en.description,
     imageSrc: 'assets/lepke.jpg',
+    altTextKey: 'Lepke',
   };
 
   beforeEach(async () => {

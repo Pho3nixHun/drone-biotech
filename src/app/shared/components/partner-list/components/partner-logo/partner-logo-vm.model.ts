@@ -1,4 +1,3 @@
-export interface PartnerLogoVM {
-  imageSrc: string;
-  altTextKey: string;
-}
+import { WithImage } from '@interfaces/with-image.interface';
+
+export type PartnerLogoVM = WithImage;

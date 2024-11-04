@@ -22,6 +22,6 @@ import { TranslocoModule } from '@jsverse/transloco';
 })
 export class AppComponent {
   protected title = 'drone-biotech-webapp';
-  private appService = inject(AppService);
+  private readonly appService = inject(AppService);
   protected vm = this.appService.getVM();
 }

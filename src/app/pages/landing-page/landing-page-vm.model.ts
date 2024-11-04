@@ -3,35 +3,47 @@ import { HeroVM } from '@components/hero/hero-vm.model';
 import { PartnerLogoVM } from '@components/partner-list/components/partner-logo/partner-logo-vm.model';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
 import { TestimonialItemVM } from '@components/testimonial-item/testimonial-item-vm.model';
+import { WithId } from '@interfaces/with-id.interace';
+import { WithLink } from '@interfaces/with-link.interface';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
-interface ExtendedProductItemVM {
-  routerLink?: string | string[];
-  productItemVM: ProductItemVM;
-}
+// We use `interface` here because it's semantically appropriate
+// for extending object structures and ensures clear intent for others.
+interface ProductItemXVM extends WithRouterLink, ProductItemVM {}
+interface PartnerLogoXVM extends Partial<WithLink>, PartnerLogoVM {}
 
-interface PartnersVM {
-  partnerLogoVMs: PartnerLogoVM[];
-  testimonialItemVMs: TestimonialItemVM[];
-}
-
-type ExtendedFrameVMWithPartnersVM = FrameVM & { id: string; partnersVM: PartnersVM };
-export type ExtendedFrameVMWithExtendedProductItemVMs = FrameVM & {
-  id: string;
-  productItemVMs: ExtendedProductItemVM[];
-};
-
-export type ExtendedFrameVM =
-  | ExtendedFrameVMWithPartnersVM
-  | ExtendedFrameVMWithExtendedProductItemVMs;
-
-type ExtendedHeroVMWithTitles = HeroVM & {
+interface HeroXVM extends HeroVM {
   titleKey: string;
   descriptionKey: string;
   primaryButtonLabelKey: string;
   secondaryButtonLabelKey: string;
-};
+}
+
+export interface WithPartnerLogos {
+  partnerLogoXVMs: PartnerLogoXVM[];
+}
+export interface WithTestimonials {
+  testimonialItemVMs: TestimonialItemVM[];
+}
+
+export interface WithProductItemXVMs {
+  productItemXVMs: ProductItemXVM[];
+}
+
+export interface ProductFrame extends FrameVM, WithId, WithProductItemXVMs {}
+export interface PartnerFrame extends FrameVM, WithId, WithPartnerLogos {}
+export interface TestimonialFrame extends FrameVM, WithId, WithTestimonials {}
+export interface PartnerAndTestimonialFrame
+  extends FrameVM,
+    WithId,
+    WithPartnerLogos,
+    WithTestimonials {}
+
+// We use`type` here because it's more appropriate when you need to define a union or more complex type,
+// as `interface` cannot represent a variable that can hold multiple distinct types.
+export type FrameXVM = ProductFrame | PartnerFrame | TestimonialFrame | PartnerAndTestimonialFrame;
 
 export interface LandingPageVM {
-  extendedHeroVMWithTitles: ExtendedHeroVMWithTitles;
-  extendedFrameVMs: ExtendedFrameVM[];
+  heroXVM?: HeroXVM;
+  frameXVMs: FrameXVM[];
 }

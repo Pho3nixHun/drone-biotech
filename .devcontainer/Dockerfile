@@ -37,3 +37,5 @@ RUN (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
     && sudo apt update \
     && sudo apt install gh -y \
     && sudo apt clean
+
+EXPOSE 5000
