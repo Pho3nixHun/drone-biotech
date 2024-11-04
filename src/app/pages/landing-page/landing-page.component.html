@@ -27,7 +27,7 @@
 <ng-template #productFrame let-vm="frameVM">
     <app-frame [id]="vm.id" [vm]="vm">
         <app-product-list>
-            @for (item of vm.productItemVMs; track $index) {
+            @for (item of vm.productItemXVMs; track $index) {
                 <app-product-item [vm]="item" [routerLink]="item.routerLink" />
             }
         </app-product-list>
@@ -36,9 +36,9 @@
 
 <ng-template #partnerFrame let-vm="frameVM">
     <app-frame [id]="vm.id" [vm]="vm">
-        @if (vm.partnerLogoVMs; as partnerLogoVMs) {
+        @if (vm.partnerLogoXVMs; as partnerLogoXVMs) {
             <app-partner-list>
-                @for (logo of partnerLogoVMs; track $index) {
+                @for (logo of partnerLogoXVMs; track $index) {
                     @if (logo.link; as link) {
                         <a
                             [href]="link.href"
@@ -64,10 +64,7 @@
                 class="w-full sm:w-2/3 md:w-1/2"
                 space-between="30"
             >
-                @for (
-                    testimonial of vm.partnersVM.testimonialItemVMs;
-                    track $index
-                ) {
+                @for (testimonial of vm.testimonialItemVMs; track $index) {
                     <swiper-slide class="pb-10">
                         <app-testimonial-item [vm]="testimonial" />
                     </swiper-slide>

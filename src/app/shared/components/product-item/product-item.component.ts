@@ -22,13 +22,13 @@ import { TranslocoModule } from '@jsverse/transloco';
  */
 
 @Component({
-  selector: 'app-product-item',
-  standalone: true,
-  imports: [TranslocoModule],
-  templateUrl: './product-item.component.html',
+    selector: 'app-product-item',
+    standalone: true,
+    imports: [TranslocoModule],
+    templateUrl: './product-item.component.html',
 })
 export class ProductItemComponent {
-  @HostBinding('class') hostClass = 'h-full';
+    @HostBinding('class') hostClass = 'h-full';
 
-  vm = input.required<ProductItemVM>();
+    public vm = input.required<ProductItemVM>();
 }

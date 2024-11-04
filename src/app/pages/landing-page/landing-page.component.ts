@@ -33,33 +33,33 @@ import { Rel } from '@interfaces/with-link.interface';
  */
 
 @Component({
-  selector: 'app-landing-page',
-  standalone: true,
-  imports: [
-    HeroComponent,
-    ProductItemComponent,
-    ProductListComponent,
-    RouterLink,
-    FrameComponent,
-    PartnerListComponent,
-    PartnerLogoComponent,
-    TestimonialItemComponent,
-    SwiperModule,
-    TranslocoModule,
-    NgTemplateOutlet,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './landing-page.component.html',
+    selector: 'app-landing-page',
+    standalone: true,
+    imports: [
+        HeroComponent,
+        ProductItemComponent,
+        ProductListComponent,
+        RouterLink,
+        FrameComponent,
+        PartnerListComponent,
+        PartnerLogoComponent,
+        TestimonialItemComponent,
+        SwiperModule,
+        TranslocoModule,
+        NgTemplateOutlet,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
-  protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
-  protected readonly defaultTarget = '_self';
+    protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
+    protected readonly defaultTarget = '_self';
 
-  private readonly landingPageService = inject(LandingPageService);
+    private readonly landingPageService = inject(LandingPageService);
 
-  protected isProductFrame(frame: FrameXVM): frame is ProductFrame {
-    return 'productItemXVMs' in frame;
-  }
+    protected isProductFrame(frame: FrameXVM): frame is ProductFrame {
+        return 'productItemXVMs' in frame;
+    }
 
-  protected vm = this.landingPageService.getVM();
+    vm = this.landingPageService.getVM();
 }

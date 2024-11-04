@@ -1,6 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavComponent should project <app-nav-item>, <button> elements and ignore other elements 1`] = `
+exports[`NavComponent should assign href with default target and relation if only href is provided in VM 1`] = `
+<div
+  id="root2"
+  ng-version="18.2.7"
+>
+  <app-nav>
+    <nav
+      class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+    >
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+    </nav>
+  </app-nav>
+</div>
+`;
+
+exports[`NavComponent should assign href with target and relation if provided in VM 1`] = `
+<div
+  id="root3"
+  ng-version="18.2.7"
+>
+  <app-nav>
+    <nav
+      class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+    >
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+    </nav>
+  </app-nav>
+</div>
+`;
+
+exports[`NavComponent should assign routerLink if provided in VM 1`] = `
+<div
+  id="root1"
+  ng-version="18.2.7"
+>
+  <app-nav>
+    <nav
+      class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+    >
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+    </nav>
+  </app-nav>
+</div>
+`;
+
+exports[`NavComponent should project <app-nav-item> elements and ignore other elements 1`] = `
 <div
   id="root0"
   ng-version="18.2.7"
@@ -14,7 +116,9 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
       >
         <a
           class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-          href="link"
+          href=""
+          rel="null"
+          target="null"
         />
       </app-nav-item>
       <app-nav-item
@@ -22,7 +126,9 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
       >
         <a
           class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-          href="link"
+          href=""
+          rel="null"
+          target="null"
         />
       </app-nav-item>
       <button>

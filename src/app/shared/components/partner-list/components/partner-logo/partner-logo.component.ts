@@ -20,11 +20,11 @@ import { TranslocoModule } from '@jsverse/transloco';
  */
 
 @Component({
-  selector: 'app-partner-logo',
-  standalone: true,
-  imports: [TranslocoModule],
-  templateUrl: './partner-logo.component.html',
+    selector: 'app-partner-logo',
+    standalone: true,
+    imports: [TranslocoModule],
+    templateUrl: './partner-logo.component.html',
 })
 export class PartnerLogoComponent {
-  vm = input.required<PartnerLogoVM>()
+    public vm = input.required<PartnerLogoVM>();
 }
