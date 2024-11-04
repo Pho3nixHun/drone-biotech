@@ -80,6 +80,7 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
           </section>
           <!--container-->
         </app-hero>
+        <!--container-->
         <app-frame
           id="products"
           ng-reflect-vm="[object Object]"
@@ -195,55 +196,9 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
             <app-partner-list>
               <div
                 class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-              >
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <!--container-->
-              </div>
+              />
             </app-partner-list>
+            <!--container-->
             <swiper-container
               autoplay-delay="2500"
               autoplay-disable-on-interaction="false"
@@ -424,6 +379,7 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
               </swiper-slide>
               <!--container-->
             </swiper-container>
+            <!--container-->
           </section>
           <!--container-->
         </app-frame>
@@ -850,6 +806,8 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
                 <a
                   class="sm:hover:text-gray-400 duration-150 cursor-pointer"
                   href=""
+                  rel="null"
+                  target="null"
                 >
                   AppComponent.navItems.0.title
                 </a>
@@ -909,6 +867,8 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                 <a
                   class="sm:hover:text-gray-400 duration-150 cursor-pointer"
                   href=""
+                  rel="null"
+                  target="null"
                 >
                   AppComponent.navItems.0.title
                 </a>
@@ -919,6 +879,8 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                 <a
                   class="sm:hover:text-gray-400 duration-150 cursor-pointer"
                   href=""
+                  rel="null"
+                  target="null"
                 >
                   AppComponent.navItems.1.title
                 </a>
@@ -929,6 +891,8 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                 <a
                   class="sm:hover:text-gray-400 duration-150 cursor-pointer"
                   href=""
+                  rel="null"
+                  target="null"
                 >
                   AppComponent.navItems.2.title
                 </a>
@@ -939,6 +903,8 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                 <a
                   class="sm:hover:text-gray-400 duration-150 cursor-pointer"
                   href=""
+                  rel="null"
+                  target="null"
                 >
                   AppComponent.navItems.3.title
                 </a>
@@ -949,6 +915,8 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                 <a
                   class="sm:hover:text-gray-400 duration-150 cursor-pointer"
                   href=""
+                  rel="null"
+                  target="null"
                 >
                   AppComponent.navItems.1.title
                 </a>
