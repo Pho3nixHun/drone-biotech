@@ -2,9 +2,9 @@
   <app-header *transloco="let t">
     <app-logo [vm]="vm().logoVM" />
     <app-nav>
-      @for (extendedNavItemVM of vm().extendedNavItemVMs; track $index) {
-        <app-nav-item [vm]="extendedNavItemVM.navItemVM">{{
-          t(extendedNavItemVM.labelKey)
+      @for (navItemXVM of vm().navItemXVMs; track $index) {
+        <app-nav-item [vm]="navItemXVM">{{
+          t(navItemXVM.textKey)
         }}</app-nav-item>
       }
       <button mat-icon-button (click)="signOut()">

@@ -11,26 +11,26 @@ import { AuthActions } from './stores/auth/auth.actions';
 import { Store } from '@ngrx/store';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    LogoComponent,
-    NavComponent,
-    NavItemComponent,
-    TranslocoModule,
-    MatIconModule,
-  ],
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    standalone: true,
+    imports: [
+        RouterOutlet,
+        HeaderComponent,
+        LogoComponent,
+        NavComponent,
+        NavItemComponent,
+        TranslocoModule,
+        MatIconModule,
+    ],
+    templateUrl: './app.component.html',
 })
 export class AppComponent {
-  protected title = 'drone-biotech-webapp';
-  private readonly appService = inject(AppService);
-  private readonly store = inject(Store);
-  protected vm = this.appService.getVM();
+    protected title = 'drone-biotech-webapp';
+    private readonly appService = inject(AppService);
+    private readonly store = inject(Store);
+    protected vm = this.appService.getVM();
 
-  signOut() {
-    this.store.dispatch(AuthActions.signOut());
-  }
+    signOut() {
+        this.store.dispatch(AuthActions.signOut());
+    }
 }

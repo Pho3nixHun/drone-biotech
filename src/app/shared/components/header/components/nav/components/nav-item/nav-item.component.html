@@ -1,4 +1,4 @@
-  <a [href]="vm().href" class="sm:hover:text-gray-400 duration-150 cursor-pointer">
+  <a [href]="link()?.href" [rel]="link()?.rel?.join(' ')" [target]="link()?.target" class="sm:hover:text-gray-400 duration-150 cursor-pointer">
     <ng-content />
   </a>
 

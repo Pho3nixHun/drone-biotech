@@ -1,43 +1,47 @@
+import { Rel } from '@interfaces/with-link.interface';
 import { AppRouteSegment } from './app-route-segment';
 import { AppComponentVM } from './app-vm.model';
 
 export const appMockVMWithoutNavItem: AppComponentVM = {
   logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-  extendedNavItemVMs: [],
+  navItemXVMs: [],
 };
 export const appMockVMWithOneNavItem: AppComponentVM = {
   logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-  extendedNavItemVMs: [{ labelKey: 'AppComponent.navItems.0.title', navItemVM: { href: '' } }],
+  navItemXVMs: [{ textKey: 'AppComponent.navItems.0.title', routerLink: '' }],
 };
 
 export const appMockVMWithFiveNavItem: AppComponentVM = {
   logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-  extendedNavItemVMs: [
-    { labelKey: 'AppComponent.navItems.0.title', navItemVM: { href: '' } },
-    { labelKey: 'AppComponent.navItems.1.title', navItemVM: { href: '' } },
-    { labelKey: 'AppComponent.navItems.2.title', navItemVM: { href: '' } },
-    { labelKey: 'AppComponent.navItems.3.title', navItemVM: { href: '' } },
-    { labelKey: 'AppComponent.navItems.1.title', navItemVM: { href: '' } },
+  navItemXVMs: [
+    { textKey: 'AppComponent.navItems.0.title', routerLink: '' },
+    { textKey: 'AppComponent.navItems.1.title', routerLink: '' },
+    { textKey: 'AppComponent.navItems.2.title', routerLink: '' },
+    { textKey: 'AppComponent.navItems.3.title', routerLink: '' },
+    {
+      textKey: 'AppComponent.navItems.1.title',
+      link: { href: 'example.com', rel: [Rel.NoOpener], target: '_blank' },
+    },
   ],
 };
 
 export const appMockVM: AppComponentVM = {
   logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-  extendedNavItemVMs: [
-    { labelKey: 'AppComponent.navItems.0.title', navItemVM: { href: '' } },
+  navItemXVMs: [
+    { textKey: 'AppComponent.navItems.0.title', routerLink: '' },
     {
-      labelKey: 'AppComponent.navItems.1.title',
-      navItemVM: { href: `#${AppRouteSegment.PRODUCT}` },
+      textKey: 'AppComponent.navItems.1.title',
+      routerLink: `#${AppRouteSegment.PRODUCT}`,
     },
     {
-      labelKey: 'AppComponent.navItems.2.title',
-      navItemVM: { href: `#${AppRouteSegment.PARTNERS}` },
+      textKey: 'AppComponent.navItems.2.title',
+      routerLink: `#${AppRouteSegment.PARTNERS}`,
     },
-    { labelKey: 'AppComponent.navItems.3.title', navItemVM: { href: '' } },
+    { textKey: 'AppComponent.navItems.3.title', routerLink: '' },
   ],
 };
 
 export const appEmptyMockVMForRoutes: AppComponentVM = {
   logoVM: { imageSrc: 'assets/phoenix.jpg', routerLink: '', altText: 'logo' },
-  extendedNavItemVMs: [],
+  navItemXVMs: [],
 };

@@ -2,11 +2,29 @@
 root = true
 
 [*]
+# prettier: not-supported
 charset = utf-8
+# prettier: printWidth
+max_line_length = 80
+# prettier: useTabs
 indent_style = space
-indent_size = 2
+# prettier: tabWidth
+indent_size = 4
+# prettier: tabWidth
+tab_width = 4
+# prettier: singleQuote
+quote_type = single
 insert_final_newline = true
 trim_trailing_whitespace = true
+# prettier: endOfLine
+end_of_line = lf
+curly_bracket_next_line = false
+spaces_around_operators = true
+# prettier: bracketSpacing
+spaces_around_brackets = true
+
+[*.json]
+quote_type = double
 
 [*.ts]
 quote_type = single

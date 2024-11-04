@@ -17,7 +17,7 @@ import { NavItemVM } from './components/nav-item/nav-item-vm';
 })
 class TestHostComponent {
   vm: NavItemVM = {
-    href: 'link',
+    routerLink: '/test',
   };
 }
 
@@ -39,10 +39,48 @@ describe('NavComponent', () => {
   //Snapshot testing
   it('should project <app-nav-item>, <button> elements and ignore other elements', () => {
     //Arrange
-    //No need to arrange
+    fixture.componentRef.setInput('vm', {});
 
     //Act
-    //No need to act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+  it('should assign routerLink if provided in VM', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', {
+      routerLink: '/test',
+    });
+
+    //Act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+  it('should assign href with default target and relation if only href is provided in VM', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', {
+      href: 'http://test.com',
+    });
+
+    //Act
+    fixture.detectChanges();
+
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+  it('should assign href with target and relation if provided in VM', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', {
+      href: 'http://test.com',
+      target: '_blank',
+      rel: 'noopener',
+    });
+
+    //Act
+    fixture.detectChanges();
 
     //Assert
     expect(compiled).toMatchSnapshot();

@@ -9,12 +9,10 @@ import { TestimonialItemComponent } from '@components/testimonial-item/testimoni
 import { SwiperModule } from '@modules/swiper/swiper.module';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
-import {
-  ExtendedFrameVM,
-  ExtendedFrameVMWithExtendedProductItemVMs,
-} from './landing-page-vm.model';
 import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FrameXVM, ProductFrame } from './landing-page-vm.model';
+import { Rel } from '@interfaces/with-link.interface';
 
 /**
  * LandingPageComponent
@@ -54,12 +52,13 @@ import { RouterLink } from '@angular/router';
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
+  protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
+  protected readonly defaultTarget = '_self';
+
   private readonly landingPageService = inject(LandingPageService);
 
-  protected isProductFrame(
-    frame: ExtendedFrameVM,
-  ): frame is ExtendedFrameVMWithExtendedProductItemVMs {
-    return 'productItemVMs' in frame;
+  protected isProductFrame(frame: FrameXVM): frame is ProductFrame {
+    return 'productItemXVMs' in frame;
   }
 
   protected vm = this.landingPageService.getVM();
