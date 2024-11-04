@@ -49,7 +49,7 @@ import { isProductFrame } from './landing-page-vm.model';
         TestimonialItemComponent,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    templateUrl: './landing-page.component.html',
+    templateUrl: './landing-page.component.html',    
 })
 export class LandingPageComponent {
     protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];

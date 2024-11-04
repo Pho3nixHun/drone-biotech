@@ -111,43 +111,6 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
 </div>
 `;
 
-exports[`NavComponent should project the provided content 1`] = `
-<div
-  id="root0"
-  ng-version="18.2.8"
->
-  <app-nav>
-    <nav
-      class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
-    >
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
-        <a
-          class="nav-item"
-          href=""
-          rel="null"
-          target="null"
-        />
-      </app-nav-item>
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
-        <a
-          class="nav-item"
-          href=""
-          rel="null"
-          target="null"
-        />
-      </app-nav-item>
-      <button>
-        Button
-      </button>
-    </nav>
-  </app-nav>
-</div>
-`;
-
 exports[`NavComponent should project <app-nav-item>, <button> elements and ignore other elements 1`] = `
 <div
   id="root0"
@@ -172,6 +135,46 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
       >
         <a
           class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          href=""
+          rel="null"
+          target="null"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+      <button>
+        Button
+      </button>
+    </nav>
+  </app-nav>
+</div>
+`;
+
+exports[`NavComponent should project the provided content 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <app-nav>
+    <nav
+      class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+    >
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="nav-item"
+          href=""
+          rel="null"
+          target="null"
+        />
+      </app-nav-item>
+      <app-nav-item
+        ng-reflect-vm="[object Object]"
+      >
+        <a
+          class="nav-item"
           href=""
           rel="null"
           target="null"

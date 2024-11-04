@@ -1385,6 +1385,25 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
           <!--container-->
           <!--container-->
         </div>
+      </app-product-list>
+    </section>
+    <!--container-->
+  </app-frame>
+  <!--ng-container-->
+  <app-frame
+    id="partners"
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        />
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -3414,6 +3433,114 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             </a>
             <!--container-->
           </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,4"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="LandingPage.products.2.title"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                LandingPage.products.2.title
+              </h3>
+              <p
+                class="mt-4"
+              >
+                LandingPage.products.2.description
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,5"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,4"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,5"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
           <!--container-->
         </div>
       </app-product-list>
@@ -5407,13 +5534,14 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <h2>
         framesTitle
       </h2>
-      <app-partner-list>
+      <app-product-list>
         <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
         >
           <!--container-->
           <app-partner-logo
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
             <img
               alt="partnerLogoAltText"
@@ -5468,6 +5596,25 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
           <!--container-->
           <!--container-->
         </div>
+      </app-product-list>
+    </section>
+    <!--container-->
+  </app-frame>
+  <!--ng-container-->
+  <app-frame
+    id="partners"
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        LandingPage.frames.1.title
+      </h2>
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        />
       </app-partner-list>
       <!--container-->
       <swiper-container
