@@ -39,43 +39,43 @@ describe('NavComponent', () => {
         //Arrange
         fixture.componentRef.setInput('vm', {});
 
-        //Act
-        fixture.detectChanges();
+    //Act
+    fixture.detectChanges();
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+  it('should assign routerLink if provided in VM', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', {
+      routerLink: '/test',
     });
-    it('should assign routerLink if provided in VM', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', {
-            routerLink: '/test',
-        });
 
-        //Act
-        fixture.detectChanges();
+    //Act
+    fixture.detectChanges();
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+  it('should assign href with default target and relation if only href is provided in VM', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', {
+      href: 'http://test.com',
     });
-    it('should assign href with default target and relation if only href is provided in VM', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', {
-            href: 'http://test.com',
-        });
 
-        //Act
-        fixture.detectChanges();
+    //Act
+    fixture.detectChanges();
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
+    //Assert
+    expect(compiled).toMatchSnapshot();
+  });
+  it('should assign href with target and relation if provided in VM', () => {
+    //Arrange
+    fixture.componentRef.setInput('vm', {
+      href: 'http://test.com',
+      target: '_blank',
+      rel: 'noopener',
     });
-    it('should assign href with target and relation if provided in VM', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', {
-            href: 'http://test.com',
-            target: '_blank',
-            rel: 'noopener',
-        });
 
         //Act
         fixture.detectChanges();
