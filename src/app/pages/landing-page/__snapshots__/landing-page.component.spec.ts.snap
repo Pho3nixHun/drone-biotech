@@ -1403,7 +1403,64 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -5614,7 +5671,64 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
