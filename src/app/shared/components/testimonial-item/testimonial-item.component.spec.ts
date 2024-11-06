@@ -6,38 +6,41 @@ import { getTranslocoModule } from 'transloco-testing.module';
 const en = { message: 'Hello', roleAndCompany: 'World' };
 
 describe('TestimonialItemComponent', () => {
-  let fixture: ComponentFixture<TestimonialItemComponent>;
-  let compiled: HTMLElement;
-  const vm: TestimonialItemVM = {
-    messageKey: en.message,
-    name: 'Emily Johnson',
-    roleAndCompanyKey: en.roleAndCompany,
-  };
+    let fixture: ComponentFixture<TestimonialItemComponent>;
+    let compiled: HTMLElement;
+    const vm: TestimonialItemVM = {
+        messageKey: 'altText',
+        name: 'Emily Johnson',
+        roleAndCompanyKey: 'roleAndCompany',
+    };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        TestimonialItemComponent,
-        getTranslocoModule({
-          langs: { en },
-          translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
-        }),
-      ],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [
+                TestimonialItemComponent,
+                getTranslocoModule({
+                    langs: { en },
+                    translocoConfig: {
+                        availableLangs: ['en'],
+                        defaultLang: 'en',
+                    },
+                }),
+            ],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(TestimonialItemComponent);
-    compiled = fixture.debugElement.nativeElement;
-  });
+        fixture = TestBed.createComponent(TestimonialItemComponent);
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  //Snapshot test
-  it('should get the input data and visualize it', () => {
-    //Arrange
-    fixture.componentRef.setInput('vm', vm);
+    //Snapshot test
+    it('should get the input data and visualize it', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', vm);
 
-    //Act
-    fixture.detectChanges();
+        //Act
+        fixture.detectChanges();
 
-    //Assert
-    expect(compiled).toMatchSnapshot();
-  });
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

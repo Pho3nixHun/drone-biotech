@@ -1,13 +1,15 @@
+@let VM = vm();
+
 <div class="min-h-screen flex flex-col">
-  <app-header *transloco="let t">
-    <app-logo [vm]="vm().logoVM" />
-    <app-nav>
-      @for (navItemXVM of vm().navItemXVMs; track $index) {
-        <app-nav-item [vm]="navItemXVM">{{
-          t(navItemXVM.textKey)
-        }}</app-nav-item>
-      }
-    </app-nav>
-  </app-header>
-  <div class="flex-grow"><router-outlet /></div>
+    <app-header *transloco="let t">
+        <app-logo [vm]="VM.logoXVM" [routerLink]="VM.logoXVM.routerLink" />
+        <app-nav>
+            @for (navItemXVM of VM.navItemXVMs; track $index) {
+                <app-nav-item [vm]="navItemXVM">{{
+                    t(navItemXVM.textKey)
+                }}</app-nav-item>
+            }
+        </app-nav>
+    </app-header>
+    <div class="flex-grow"><router-outlet /></div>
 </div>

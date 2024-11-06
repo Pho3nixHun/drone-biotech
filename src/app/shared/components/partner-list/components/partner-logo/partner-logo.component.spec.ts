@@ -9,7 +9,7 @@ describe('PartnerLogoComponent', () => {
     let fixture: ComponentFixture<PartnerLogoComponent>;
     let compiled: HTMLElement;
     const vm: PartnerLogoVM = {
-        altTextKey: en.altText,
+        altTextKey: 'altText',
         imageSrc: 'assets/lepke.jpg',
     };
 
@@ -18,7 +18,7 @@ describe('PartnerLogoComponent', () => {
             imports: [
                 PartnerLogoComponent,
                 getTranslocoModule({
-                    langs: { en: en },
+                    langs: { en },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',

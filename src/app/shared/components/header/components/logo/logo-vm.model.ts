@@ -1,6 +1,4 @@
-import { WithRouterLink } from '@interfaces/with-router-link.interface';
-
-export interface LogoVM extends Partial<WithRouterLink> {
+export interface LogoVM {
     imageSrc: string;
     altText: string;
 }

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductsPageComponent should have the correct routerLinks on product-items 1`] = `
+exports[`ProductsPageComponent should  render the template when the VM is provided 1`] = `
 <div
-  id="root4"
+  id="root1"
   ng-version="18.2.8"
 >
   <app-frame
@@ -12,7 +12,7 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        LandingPage.frames.0.title
+        title0
       </h2>
       <app-product-list>
         <div
@@ -28,19 +28,19 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.0.title"
+                alt="productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.0.title
+                productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.0.description
+                productDescription0
               </p>
             </a>
             <!--container-->
@@ -55,19 +55,19 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.1.title"
+                alt="productAltText1"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.1.title
+                productAltText1
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.1.description
+                productDescription1
               </p>
             </a>
             <!--container-->
@@ -82,19 +82,128 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.2.title"
+                alt="productAltText2"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.2.title
+                productAltText2
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.2.description
+                productDescription2
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <!--container-->
+        </div>
+      </app-product-list>
+    </section>
+    <!--container-->
+  </app-frame>
+  <!--container-->
+</div>
+`;
+
+exports[`ProductsPageComponent should have the correct routerLinks on product-items 1`] = `
+<div
+  id="root5"
+  ng-version="18.2.8"
+>
+  <app-frame
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        title0
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="1"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productAltText0"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productAltText0
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productDescription0
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="2"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productAltText1"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productAltText1
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productDescription1
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="3"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productAltText2"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productAltText2
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productDescription2
               </p>
             </a>
             <!--container-->
@@ -111,7 +220,7 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
 
 exports[`ProductsPageComponent should not render <app-product-item> when there is no item provided 1`] = `
 <div
-  id="root1"
+  id="root2"
   ng-version="18.2.8"
 >
   <app-frame
@@ -121,7 +230,7 @@ exports[`ProductsPageComponent should not render <app-product-item> when there i
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        LandingPage.frames.0.title
+        title0
       </h2>
       <app-product-list>
         <div
@@ -148,7 +257,7 @@ exports[`ProductsPageComponent should not render the template when there is no V
 
 exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is provided 1`] = `
 <div
-  id="root2"
+  id="root3"
   ng-version="18.2.8"
 >
   <app-frame
@@ -158,7 +267,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        LandingPage.frames.0.title
+        title0
       </h2>
       <app-product-list>
         <div
@@ -174,19 +283,19 @@ exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.0.title"
+                alt="productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.0.title
+                productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.0.description
+                productDescription0
               </p>
             </a>
             <!--container-->
@@ -203,7 +312,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is
 
 exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items are provided 1`] = `
 <div
-  id="root3"
+  id="root4"
   ng-version="18.2.8"
 >
   <app-frame
@@ -213,7 +322,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        LandingPage.frames.0.title
+        title0
       </h2>
       <app-product-list>
         <div
@@ -229,19 +338,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.0.title"
+                alt="productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.0.title
+                productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.0.description
+                productDescription0
               </p>
             </a>
             <!--container-->
@@ -256,19 +365,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.1.title"
+                alt="productAltText1"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.1.title
+                productAltText1
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.1.description
+                productDescription1
               </p>
             </a>
             <!--container-->
@@ -283,19 +392,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.2.title"
+                alt="productAltText2"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.2.title
+                productAltText2
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.2.description
+                productDescription2
               </p>
             </a>
             <!--container-->
@@ -310,19 +419,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.1.title"
+                alt="productAltText1"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.1.title
+                productAltText1
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.1.description
+                productDescription1
               </p>
             </a>
             <!--container-->
@@ -337,19 +446,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.2.title"
+                alt="productAltText2"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.2.title
+                productAltText2
               </h3>
               <p
                 class="mt-4"
               >
-                LandingPage.products.2.description
+                productDescription2
               </p>
             </a>
             <!--container-->

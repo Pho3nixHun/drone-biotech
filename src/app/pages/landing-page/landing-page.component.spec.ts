@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import {
+    enLandingMock,
     landingPageVMMock,
     landingPageVMMockWithRoutes,
     landingPageVMWithFiveFramesMock,
@@ -36,7 +37,7 @@ describe('LandingPageComponent', () => {
             imports: [
                 LandingPageComponent,
                 getTranslocoModule({
-                    langs: { en: {} },
+                    langs: { enLandingMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',

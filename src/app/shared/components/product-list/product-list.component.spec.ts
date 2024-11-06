@@ -5,6 +5,11 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
 
+const en = {
+    title: 'Title',
+    description: 'Description',
+    altText: 'Butterfly',
+};
 @Component({
     template: `
         <app-product-list>
@@ -20,7 +25,7 @@ class TestHostComponent {
         titleKey: 'title',
         descriptionKey: 'description',
         imageSrc: 'assets/lepke.jpg',
-        altTextKey: 'Butterfly',
+        altTextKey: 'altText',
     };
 }
 describe('ProductListComponent', () => {
@@ -33,7 +38,7 @@ describe('ProductListComponent', () => {
                 ProductListComponent,
                 ProductItemComponent,
                 getTranslocoModule({
-                    langs: { en: {} },
+                    langs: { en },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',

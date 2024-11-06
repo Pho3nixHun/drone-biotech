@@ -9,6 +9,7 @@ module.exports = {
         '^@directives/(.*)$': '<rootDir>/src/app/shared/directives/$1',
         '^@modules/(.*)$': '<rootDir>/src/app/shared/modules/$1',
         '^@interfaces/(.*)$': '<rootDir>/src/app/shared/interfaces/$1',
+        '^@utils/(.*)$': '<rootDir>/src/app/shared/utils/$1',
     },
     transformIgnorePatterns: ['node_modules/?!(.\\*.mjs$|@jsverse)'],
     snapshotSerializers: [

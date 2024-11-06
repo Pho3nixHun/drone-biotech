@@ -2,7 +2,7 @@
 
 exports[`AppComponent should navigate to "" and render the LandingPageComponent 1`] = `
 <div
-  id="root4"
+  id="root5"
   ng-version="18.2.8"
 >
   <div
@@ -16,17 +16,15 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <a
-              href=""
-            >
-              <img
-                alt="logo"
-                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-                src="assets/phoenix.jpg"
-              />
-            </a>
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -455,7 +453,7 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
 
 exports[`AppComponent should navigate to "/products" and render the ProductsPageComponent 1`] = `
 <div
-  id="root5"
+  id="root6"
   ng-version="18.2.8"
 >
   <div
@@ -469,17 +467,15 @@ exports[`AppComponent should navigate to "/products" and render the ProductsPage
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <a
-              href=""
-            >
-              <img
-                alt="logo"
-                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-                src="assets/phoenix.jpg"
-              />
-            </a>
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -607,7 +603,7 @@ exports[`AppComponent should navigate to "/products" and render the ProductsPage
 
 exports[`AppComponent should navigate to "/products/id" and render the ProductsPageComponent 1`] = `
 <div
-  id="root6"
+  id="root7"
   ng-version="18.2.8"
 >
   <div
@@ -621,17 +617,15 @@ exports[`AppComponent should navigate to "/products/id" and render the ProductsP
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <a
-              href=""
-            >
-              <img
-                alt="logo"
-                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-                src="assets/phoenix.jpg"
-              />
-            </a>
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -759,7 +753,7 @@ exports[`AppComponent should navigate to "/products/id" and render the ProductsP
 
 exports[`AppComponent should not render <app-nav-item> when there is no item provided 1`] = `
 <div
-  id="root1"
+  id="root2"
   ng-version="18.2.8"
 >
   <div
@@ -773,17 +767,15 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <a
-              href=""
-            >
-              <img
-                alt="logo"
-                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-                src="assets/phoenix.jpg"
-              />
-            </a>
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -827,7 +819,7 @@ exports[`AppComponent should not render the template when the VM is not provided
 
 exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`] = `
 <div
-  id="root2"
+  id="root3"
   ng-version="18.2.8"
 >
   <div
@@ -841,17 +833,15 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <a
-              href=""
-            >
-              <img
-                alt="logo"
-                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-                src="assets/phoenix.jpg"
-              />
-            </a>
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -866,7 +856,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
                   rel="null"
                   target="null"
                 >
-                  AppComponent.navItems.0.title
+                  text0
                 </a>
               </app-nav-item>
               <!--container-->
@@ -888,7 +878,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
 
 exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are provided 1`] = `
 <div
-  id="root3"
+  id="root4"
   ng-version="18.2.8"
 >
   <div
@@ -902,17 +892,15 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <a
-              href=""
-            >
-              <img
-                alt="logo"
-                class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-                src="assets/phoenix.jpg"
-              />
-            </a>
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -927,7 +915,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                   rel="null"
                   target="null"
                 >
-                  AppComponent.navItems.0.title
+                  text0
                 </a>
               </app-nav-item>
               <app-nav-item
@@ -939,7 +927,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                   rel="null"
                   target="null"
                 >
-                  AppComponent.navItems.1.title
+                  text1
                 </a>
               </app-nav-item>
               <app-nav-item
@@ -951,7 +939,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                   rel="null"
                   target="null"
                 >
-                  AppComponent.navItems.2.title
+                  text2
                 </a>
               </app-nav-item>
               <app-nav-item
@@ -963,7 +951,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                   rel="null"
                   target="null"
                 >
-                  AppComponent.navItems.3.title
+                  text3
                 </a>
               </app-nav-item>
               <app-nav-item
@@ -975,7 +963,102 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                   rel="null"
                   target="null"
                 >
-                  AppComponent.navItems.1.title
+                  text1
+                </a>
+              </app-nav-item>
+              <!--container-->
+            </nav>
+          </app-nav>
+        </div>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <!--container-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AppComponent should render the template when the VM is provided 1`] = `
+<div
+  id="root1"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="p-4 flex justify-center"
+      >
+        <div
+          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        >
+          <app-logo
+            ng-reflect-router-link=""
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
+          </app-logo>
+          <app-nav>
+            <nav
+              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            >
+              <app-nav-item
+                ng-reflect-vm="[object Object]"
+              >
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                  rel="null"
+                  target="null"
+                >
+                  text0
+                </a>
+              </app-nav-item>
+              <app-nav-item
+                ng-reflect-vm="[object Object]"
+              >
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                  rel="null"
+                  target="null"
+                >
+                  text1
+                </a>
+              </app-nav-item>
+              <app-nav-item
+                ng-reflect-vm="[object Object]"
+              >
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                  rel="null"
+                  target="null"
+                >
+                  text2
+                </a>
+              </app-nav-item>
+              <app-nav-item
+                ng-reflect-vm="[object Object]"
+              >
+                <a
+                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+                  href=""
+                  rel="null"
+                  target="null"
+                >
+                  text3
                 </a>
               </app-nav-item>
               <!--container-->
