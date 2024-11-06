@@ -1398,7 +1398,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        LandingPage.frames.1.title
+        framesTitle
       </h2>
       <app-partner-list>
         <div
@@ -1409,7 +1409,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1420,7 +1420,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1431,7 +1431,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1442,7 +1442,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3500,14 +3500,14 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="LandingPage.products.2.title"
+                alt="productItemAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                LandingPage.products.2.title
+                productItemAltText
               </h3>
               <p
                 class="mt-4"
@@ -5677,7 +5677,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5688,7 +5688,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5699,7 +5699,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5710,7 +5710,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5721,7 +5721,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />

@@ -1,5 +1,6 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { FrameID, LandingPageVM } from './landing-page-vm.model';
+import { FrameID, LandingPageVM } from './landing-page-vm.model';
 
 export const enLandingMock = {
     message0: '0message',
@@ -1335,6 +1336,7 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
 };
 
 export const landingPageVMMockWithRoutes = {
+export const landingPageVMMockWithRoutes = {
     frameXVMs: [
         {
             id: FrameID.PRODUCTS,
@@ -1430,6 +1432,7 @@ export const landingPageVMMockWithRoutes = {
         secondaryButtonLabelKey: 'herosec',
     },
 };
+export const landingPageVMMock = {
 export const landingPageVMMock = {
     frameXVMs: [
         {
