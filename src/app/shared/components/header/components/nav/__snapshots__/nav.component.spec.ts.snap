@@ -3,7 +3,7 @@
 exports[`NavComponent should assign href with default target and relation if only href is provided in VM 1`] = `
 <div
   id="root2"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-nav>
     <nav
@@ -37,7 +37,7 @@ exports[`NavComponent should assign href with default target and relation if onl
 exports[`NavComponent should assign href with target and relation if provided in VM 1`] = `
 <div
   id="root3"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-nav>
     <nav
@@ -71,7 +71,7 @@ exports[`NavComponent should assign href with target and relation if provided in
 exports[`NavComponent should assign routerLink if provided in VM 1`] = `
 <div
   id="root1"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-nav>
     <nav
@@ -105,7 +105,7 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
 exports[`NavComponent should project <app-nav-item> elements and ignore other elements 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-nav>
     <nav

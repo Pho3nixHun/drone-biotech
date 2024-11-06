@@ -3,7 +3,7 @@
 exports[`LandingPageComponent should have the correct routerLinks on product-items 1`] = `
 <div
   id="root12"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -157,7 +157,64 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -356,7 +413,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
 exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
 <div
   id="root13"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -510,7 +567,9 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -709,7 +768,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
 exports[`LandingPageComponent should not render <app-product-item> when 0 is provided 1`] = `
 <div
   id="root9"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -782,7 +841,64 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -981,7 +1097,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
 exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is provided 1`] = `
 <div
   id="root16"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -1135,7 +1251,64 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -1166,7 +1339,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
 exports[`LandingPageComponent should not render frames when 0 frame is provided 1`] = `
 <div
   id="root4"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -1216,7 +1389,7 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
 exports[`LandingPageComponent should not render the hero section when the heroXVM is not provided 1`] = `
 <div
   id="root2"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <!--container-->
   <app-frame
@@ -1334,7 +1507,64 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -1533,7 +1763,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
 exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provided 1`] = `
 <div
   id="root14"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -1687,7 +1917,20 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -1886,7 +2129,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
 exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provided 1`] = `
 <div
   id="root10"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -1986,7 +2229,64 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -2185,7 +2485,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
 exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is provided 1`] = `
 <div
   id="root17"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -2339,7 +2639,64 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -2398,7 +2755,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
 exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`] = `
 <div
   id="root5"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -2550,7 +2907,7 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
 exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided 1`] = `
 <div
   id="root15"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -2704,7 +3061,64 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -2903,7 +3317,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
 exports[`LandingPageComponent should render 5 <app-product-item> in order when 5 <app-product-item>  are provided 1`] = `
 <div
   id="root11"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -3111,7 +3525,64 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -3310,7 +3781,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
 exports[`LandingPageComponent should render 5 <app-testimonial-item> in order when 5 app-testimonial-item are provided 1`] = `
 <div
   id="root18"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -3464,7 +3935,64 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -3635,7 +4163,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
 exports[`LandingPageComponent should render 5 frames in order when 5 frames are provided 1`] = `
 <div
   id="root6"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -3687,7 +4215,64 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -3888,7 +4473,64 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -4089,7 +4731,64 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -4290,7 +4989,64 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -4491,7 +5247,64 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -4690,7 +5503,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
 exports[`LandingPageComponent should render loading state without VM 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <!--container-->
    Loading...
@@ -4704,7 +5517,7 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
 exports[`LandingPageComponent should render only partner frames when only partner frames are provided 1`] = `
 <div
   id="root8"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -4756,7 +5569,70 @@ exports[`LandingPageComponent should render only partner frames when only partne
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <a
+            href="https://example.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <app-partner-logo
+              ng-reflect-vm="[object Object]"
+            >
+              <img
+                alt="LandingPage.partners.0.altText"
+                class="w-52 h-52"
+                src="assets/lepke.jpg"
+              />
+            </app-partner-logo>
+          </a>
+          <!--container-->
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -4955,7 +5831,7 @@ exports[`LandingPageComponent should render only partner frames when only partne
 exports[`LandingPageComponent should render only product frames when only product frames are provided 1`] = `
 <div
   id="root7"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -5107,7 +5983,7 @@ exports[`LandingPageComponent should render only product frames when only produc
 exports[`LandingPageComponent should render the hero section when the heroXVM is provided 1`] = `
 <div
   id="root3"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -5261,7 +6137,64 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container
@@ -5460,7 +6393,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
 exports[`LandingPageComponent should render the template when there is a VM provided 1`] = `
 <div
   id="root1"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"
@@ -5614,7 +6547,64 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <app-partner-list>
         <div
           class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        />
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="LandingPage.partners.0.altText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
       </app-partner-list>
       <!--container-->
       <swiper-container

@@ -3,7 +3,7 @@
 exports[`AppComponent should navigate to "" and render the LandingPageComponent 1`] = `
 <div
   id="root4"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -196,7 +196,64 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
             <app-partner-list>
               <div
                 class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-              />
+              >
+                <!--container-->
+                <app-partner-logo
+                  ng-reflect-vm="[object Object]"
+                >
+                  <img
+                    alt="LandingPage.partners.0.altText"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+                <!--container-->
+                <!--container-->
+                <app-partner-logo
+                  ng-reflect-vm="[object Object]"
+                >
+                  <img
+                    alt="LandingPage.partners.0.altText"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+                <!--container-->
+                <!--container-->
+                <app-partner-logo
+                  ng-reflect-vm="[object Object]"
+                >
+                  <img
+                    alt="LandingPage.partners.0.altText"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+                <!--container-->
+                <!--container-->
+                <app-partner-logo
+                  ng-reflect-vm="[object Object]"
+                >
+                  <img
+                    alt="LandingPage.partners.0.altText"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+                <!--container-->
+                <!--container-->
+                <app-partner-logo
+                  ng-reflect-vm="[object Object]"
+                >
+                  <img
+                    alt="LandingPage.partners.0.altText"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+                <!--container-->
+                <!--container-->
+              </div>
             </app-partner-list>
             <!--container-->
             <swiper-container
@@ -399,7 +456,7 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
 exports[`AppComponent should navigate to "/products" and render the ProductsPageComponent 1`] = `
 <div
   id="root5"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -551,7 +608,7 @@ exports[`AppComponent should navigate to "/products" and render the ProductsPage
 exports[`AppComponent should navigate to "/products/id" and render the ProductsPageComponent 1`] = `
 <div
   id="root6"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -703,7 +760,7 @@ exports[`AppComponent should navigate to "/products/id" and render the ProductsP
 exports[`AppComponent should not render <app-nav-item> when there is no item provided 1`] = `
 <div
   id="root1"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -752,7 +809,7 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
 exports[`AppComponent should not render the template when the VM is not provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -771,7 +828,7 @@ exports[`AppComponent should not render the template when the VM is not provided
 exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`] = `
 <div
   id="root2"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -832,7 +889,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
 exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are provided 1`] = `
 <div
   id="root3"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="min-h-screen flex flex-col"
