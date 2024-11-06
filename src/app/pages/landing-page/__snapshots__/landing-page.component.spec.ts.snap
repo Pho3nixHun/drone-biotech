@@ -5294,10 +5294,10 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          LandingPage.hero.title
+          heroTitle
         </h1>
         <p>
-          LandingPage.hero.description
+          heroDescription
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -5306,13 +5306,13 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             class="primary"
             href=""
           >
-            LandingPage.hero.primaryButtonLabel
+            heroPrimaryButtonLabel
           </a>
           <a
             class="secondary"
             href=""
           >
-            LandingPage.hero.secondaryButtonTitleLabel
+            heroSecondaryButtonLabel
           </a>
         </div>
       </div>
@@ -5405,7 +5405,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        LandingPage.frames.1.title
+        framesTitle
       </h2>
       <app-partner-list>
         <div
@@ -5416,7 +5416,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5427,7 +5427,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5438,7 +5438,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5449,7 +5449,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5460,7 +5460,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="LandingPage.partners.0.altText"
+              alt="partnerLogoAltText"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />

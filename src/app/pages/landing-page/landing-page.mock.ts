@@ -67,61 +67,55 @@ export const landingPageVMDefault: LandingPageVM = {
             partnerLogoXVMs: [
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'LandingPage.partners.0.altText',
+                    altTextKey: 'partnerLogoAltText',
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'LandingPage.partners.0.altText',
+                    altTextKey: 'partnerLogoAltText',
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'LandingPage.partners.0.altText',
+                    altTextKey: 'partnerLogoAltText',
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'LandingPage.partners.0.altText',
+                    altTextKey: 'partnerLogoAltText',
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'LandingPage.partners.0.altText',
+                    altTextKey: 'partnerLogoAltText',
                 },
             ],
             testimonialItemVMs: [
                 {
-                    messageKey: 'LandingPage.testimonials.0.message',
+                    messageKey: 'testimonialMessage',
                     name: 'John Doe',
-                    roleAndCompanyKey:
-                        'LandingPage.testimonials.0.roleAndCompany',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
                 {
-                    messageKey: 'LandingPage.testimonials.1.message',
+                    messageKey: 'testimonialMessage',
                     name: 'Jane Smith',
-                    roleAndCompanyKey:
-                        'LandingPage.testimonials.1.roleAndCompany',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
                 {
-                    messageKey: 'LandingPage.testimonials.2.message',
+                    messageKey: 'testimonialMessage',
                     name: 'Emily Johnson',
-                    roleAndCompanyKey:
-                        'LandingPage.testimonials.2.roleAndCompany',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
                 {
-                    messageKey: 'LandingPage.testimonials.3.message',
+                    messageKey: 'testimonialMessage',
                     name: 'Emily Johnson',
-                    roleAndCompanyKey:
-                        'LandingPage.testimonials.3.roleAndCompany',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
                 {
-                    messageKey: 'LandingPage.testimonials.4.message',
+                    messageKey: 'testimonialMessage',
                     name: 'Emily Johnson',
-                    roleAndCompanyKey:
-                        'LandingPage.testimonials.4.roleAndCompany',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
                 {
-                    messageKey: 'LandingPage.testimonials.5.message',
+                    messageKey: 'testimonialMessage',
                     name: 'Emily Johnson',
-                    roleAndCompanyKey:
-                        'LandingPage.testimonials.5.roleAndCompany',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
         },
