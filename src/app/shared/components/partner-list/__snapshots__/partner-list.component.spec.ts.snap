@@ -27,6 +27,13 @@ exports[`PartnerListComponent should render the template when the VM is provided
           src="assets/lepke.jpg"
         />
       </app-partner-logo>
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          Should not be projected
+        </div>
+      </app-partner-list>
     </div>
   </app-partner-list>
 </div>
