@@ -1,27 +1,27 @@
 import { TestBed } from '@angular/core/testing';
 import { AppService } from './app.service';
-import { appMockVM } from './app.mock';
+import { appVMDefault } from './app.mock';
 
 describe('AppService', () => {
-  let service: AppService;
+    let service: AppService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(AppService);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(AppService);
+    });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it('should be created', () => {
+        expect(service).toBeTruthy();
+    });
 
-  it('should return the appMockVM when the getVM() function is called', () => {
-    // Arrange
-    const vm = service.getVM();
+    it('should return the appVMDefault when the getVM() function is called', () => {
+        // Arrange
+        const vm = service.getVM();
 
-    // Act
-    //No need to act
+        // Act
+        //No need to act
 
-    //Assert
-    expect(appMockVM).toEqual(vm());
-  });
+        //Assert
+        expect(appVMDefault).toEqual(vm());
+    });
 });
