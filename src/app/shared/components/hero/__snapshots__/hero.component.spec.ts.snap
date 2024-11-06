@@ -3,7 +3,7 @@
 exports[`HeroComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root1"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero>
     <!--container-->
@@ -14,7 +14,7 @@ exports[`HeroComponent should not render the template when there is no VM provid
 exports[`HeroComponent should render the template when the VM is provided, project the content and ignore other elements 1`] = `
 <div
   id="root2"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-hero
     ng-reflect-vm="[object Object]"

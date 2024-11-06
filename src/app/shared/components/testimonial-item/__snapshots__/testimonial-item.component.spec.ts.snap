@@ -3,7 +3,7 @@
 exports[`TestimonialItemComponent should get the input data and visualize it 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
