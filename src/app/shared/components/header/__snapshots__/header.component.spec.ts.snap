@@ -15,28 +15,20 @@ exports[`HeaderComponent should project <app-logo>, <app-nav> elements and ignor
         <app-logo
           ng-reflect-vm="[object Object]"
         >
-          <a
-            href="link"
-          >
-            <img
-              alt="lepke"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/lepke.jpg"
-            />
-          </a>
+          <img
+            alt="lepke"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/lepke.jpg"
+          />
         </app-logo>
         <app-logo
           ng-reflect-vm="[object Object]"
         >
-          <a
-            href="link"
-          >
-            <img
-              alt="lepke"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/lepke.jpg"
-            />
-          </a>
+          <img
+            alt="lepke"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/lepke.jpg"
+          />
         </app-logo>
         <app-nav>
           <nav

@@ -11,7 +11,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
 import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { FrameXVM, ProductFrame } from './landing-page-vm.model';
+import { isProductFrame } from './landing-page-vm.model';
 import { Rel } from '@interfaces/with-link.interface';
 
 /**
@@ -57,9 +57,7 @@ export class LandingPageComponent {
 
     private readonly landingPageService = inject(LandingPageService);
 
-    protected isProductFrame(frame: FrameXVM): frame is ProductFrame {
-        return 'productItemXVMs' in frame;
-    }
+    protected isProductFrame = isProductFrame;
 
-    vm = this.landingPageService.getVM();
+    protected vm = this.landingPageService.getVM();
 }

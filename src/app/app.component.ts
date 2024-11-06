@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
@@ -21,6 +21,7 @@ import { Store } from '@ngrx/store';
         NavItemComponent,
         TranslocoModule,
         MatIconModule,
+        RouterLink,
     ],
     templateUrl: './app.component.html',
 })

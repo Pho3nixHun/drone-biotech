@@ -24,12 +24,12 @@ exports[`ProductListComponent should render the template when the VM is provided
           <h3
             class="font-bold text-xl sm:text-2xl mt-4"
           >
-            title
+            Title
           </h3>
           <p
             class="mt-4"
           >
-            description
+            Description
           </p>
         </a>
         <!--container-->
@@ -49,12 +49,12 @@ exports[`ProductListComponent should render the template when the VM is provided
           <h3
             class="font-bold text-xl sm:text-2xl mt-4"
           >
-            title
+            Title
           </h3>
           <p
             class="mt-4"
           >
-            description
+            Description
           </p>
         </a>
         <!--container-->
