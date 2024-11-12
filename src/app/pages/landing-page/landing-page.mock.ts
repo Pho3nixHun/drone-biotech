@@ -34,7 +34,6 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -42,7 +41,6 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -50,7 +48,6 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -127,7 +124,6 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -135,7 +131,6 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -143,7 +138,6 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -546,7 +540,6 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -554,7 +547,6 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -562,7 +554,6 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -663,7 +654,6 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -747,7 +737,6 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -755,7 +744,6 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -763,7 +751,6 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -771,7 +758,6 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '4'],
-                    id: '4',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -779,7 +765,6 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '5'],
-                    id: '5',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -863,7 +848,6 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -871,7 +855,6 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -879,7 +862,6 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -942,7 +924,6 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -950,7 +931,6 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -958,7 +938,6 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1026,7 +1005,6 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1034,7 +1012,6 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1042,7 +1019,6 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1126,7 +1102,6 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1134,7 +1109,6 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1142,7 +1116,6 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1195,7 +1168,6 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1203,7 +1175,6 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1211,7 +1182,6 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1270,7 +1240,6 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1278,7 +1247,6 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1286,7 +1254,6 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1365,7 +1332,6 @@ export const landingPageVMMockWithRoutes = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1373,7 +1339,6 @@ export const landingPageVMMockWithRoutes = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1381,7 +1346,6 @@ export const landingPageVMMockWithRoutes = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1464,7 +1428,6 @@ export const landingPageVMMock = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1472,7 +1435,6 @@ export const landingPageVMMock = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1480,7 +1442,6 @@ export const landingPageVMMock = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'productItemAltText',
                     titleKey: 'productItemAltText',
                     descriptionKey: 'productItemDescription',
@@ -1564,7 +1525,6 @@ export const landingPageVMDefault: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
                     altTextKey: 'LandingPage.products.0.title',
                     titleKey: 'LandingPage.products.0.title',
                     descriptionKey: 'LandingPage.products.0.description',
@@ -1572,7 +1532,6 @@ export const landingPageVMDefault: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
                     altTextKey: 'LandingPage.products.1.title',
                     titleKey: 'LandingPage.products.1.title',
                     descriptionKey: 'LandingPage.products.1.description',
@@ -1580,7 +1539,6 @@ export const landingPageVMDefault: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    id: '3',
                     altTextKey: 'LandingPage.products.2.title',
                     titleKey: 'LandingPage.products.2.title',
                     descriptionKey: 'LandingPage.products.2.description',

@@ -23,7 +23,6 @@ export const productsPageVMWithOneProductItem: ProductsPageVM = {
         productItemVMs: [
             {
                 routerLink: '1',
-                id: '1',
                 altTextKey: 'productAltText0',
                 titleKey: 'productAltText0',
                 descriptionKey: 'productDescription0',
@@ -39,7 +38,6 @@ export const productsPageVMWithFiveProductItem: ProductsPageVM = {
         productItemVMs: [
             {
                 routerLink: '1',
-                id: '1',
                 altTextKey: 'productAltText0',
                 titleKey: 'productAltText0',
                 descriptionKey: 'productDescription0',
@@ -47,7 +45,6 @@ export const productsPageVMWithFiveProductItem: ProductsPageVM = {
             },
             {
                 routerLink: '2',
-                id: '2',
                 altTextKey: 'productAltText1',
                 titleKey: 'productAltText1',
                 descriptionKey: 'productDescription1',
@@ -55,7 +52,6 @@ export const productsPageVMWithFiveProductItem: ProductsPageVM = {
             },
             {
                 routerLink: '3',
-                id: '3',
                 altTextKey: 'productAltText2',
                 titleKey: 'productAltText2',
                 descriptionKey: 'productDescription2',
@@ -63,7 +59,6 @@ export const productsPageVMWithFiveProductItem: ProductsPageVM = {
             },
             {
                 routerLink: '2',
-                id: '2',
                 altTextKey: 'productAltText1',
                 titleKey: 'productAltText1',
                 descriptionKey: 'productDescription1',
@@ -71,7 +66,6 @@ export const productsPageVMWithFiveProductItem: ProductsPageVM = {
             },
             {
                 routerLink: '3',
-                id: '3',
                 altTextKey: 'productAltText2',
                 titleKey: 'productAltText2',
                 descriptionKey: 'productDescription2',
@@ -87,7 +81,6 @@ export const productsPageVMWithRoutes: ProductsPageVM = {
         productItemVMs: [
             {
                 routerLink: '1',
-                id: '1',
                 altTextKey: 'productAltText0',
                 titleKey: 'productAltText0',
                 descriptionKey: 'productDescription0',
@@ -95,7 +88,6 @@ export const productsPageVMWithRoutes: ProductsPageVM = {
             },
             {
                 routerLink: '2',
-                id: '2',
                 altTextKey: 'productAltText1',
                 titleKey: 'productAltText1',
                 descriptionKey: 'productDescription1',
@@ -103,7 +95,6 @@ export const productsPageVMWithRoutes: ProductsPageVM = {
             },
             {
                 routerLink: '3',
-                id: '3',
                 altTextKey: 'productAltText2',
                 titleKey: 'productAltText2',
                 descriptionKey: 'productDescription2',
@@ -119,7 +110,6 @@ export const productsPageVMMock: ProductsPageVM = {
         productItemVMs: [
             {
                 routerLink: '1',
-                id: '1',
                 altTextKey: 'productAltText0',
                 titleKey: 'productAltText0',
                 descriptionKey: 'productDescription0',
@@ -127,7 +117,6 @@ export const productsPageVMMock: ProductsPageVM = {
             },
             {
                 routerLink: '2',
-                id: '2',
                 altTextKey: 'productAltText1',
                 titleKey: 'productAltText1',
                 descriptionKey: 'productDescription1',
@@ -135,7 +124,6 @@ export const productsPageVMMock: ProductsPageVM = {
             },
             {
                 routerLink: '3',
-                id: '3',
                 altTextKey: 'productAltText2',
                 titleKey: 'productAltText2',
                 descriptionKey: 'productDescription2',
@@ -151,7 +139,6 @@ export const productsPageVMDefault: ProductsPageVM = {
         productItemVMs: [
             {
                 routerLink: '1',
-                id: '1',
                 altTextKey: 'LandingPage.products.0.title',
                 titleKey: 'LandingPage.products.0.title',
                 descriptionKey: 'LandingPage.products.0.description',
@@ -159,7 +146,6 @@ export const productsPageVMDefault: ProductsPageVM = {
             },
             {
                 routerLink: '2',
-                id: '2',
                 altTextKey: 'LandingPage.products.1.title',
                 titleKey: 'LandingPage.products.1.title',
                 descriptionKey: 'LandingPage.products.1.description',
@@ -167,7 +153,6 @@ export const productsPageVMDefault: ProductsPageVM = {
             },
             {
                 routerLink: '3',
-                id: '3',
                 altTextKey: 'LandingPage.products.2.title',
                 titleKey: 'LandingPage.products.2.title',
                 descriptionKey: 'LandingPage.products.2.description',

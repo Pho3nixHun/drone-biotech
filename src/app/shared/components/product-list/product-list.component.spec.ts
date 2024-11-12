@@ -21,7 +21,6 @@ const en = {
 })
 class TestHostComponent {
     vm: ProductItemVM = {
-        id: '1',
         titleKey: 'title',
         descriptionKey: 'description',
         imageSrc: 'assets/lepke.jpg',
