@@ -1,38 +1,39 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavItemComponent } from './nav-item.component';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NavItemVM } from './nav-item-vm';
 
 @Component({
-  template: `<app-nav-item [href]="link">Home</app-nav-item>`,
+    template: `<app-nav-item [vm]="vm">Home</app-nav-item>`,
 })
 class TestHostComponent {
-  link = '#products';
+    @Input() vm!: NavItemVM;
 }
 
 describe('NavItemComponent', () => {
-  let component: TestHostComponent;
-  let fixture: ComponentFixture<TestHostComponent>;
-  let compiled: HTMLElement;
+    let fixture: ComponentFixture<TestHostComponent>;
+    let compiled: HTMLElement;
+    const mockVM: NavItemVM = { routerLink: '' };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [TestHostComponent],
-      imports: [NavItemComponent, NavItemComponent],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [TestHostComponent],
+            imports: [NavItemComponent, NavItemComponent],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(TestHostComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
-  });
+        fixture = TestBed.createComponent(TestHostComponent);
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  it("should project the 'Home' title inside the <app-nav-item>", () => {
-    const navItemElement = compiled.querySelector('app-nav-item');
-    expect(navItemElement?.textContent?.trim()).toBe('Home');
-  });
+    //Snapshot testing
+    it('should render the template with the provided VM and ng-content', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', mockVM);
 
-  it('should get the input', () => {
-    const navItem: HTMLElement | null = compiled.querySelector('a');
-    expect(navItem?.getAttribute('href')).toBe(component.link);
-  });
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

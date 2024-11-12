@@ -1,37 +1,33 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LogoComponent } from './logo.component';
+import { LogoVM } from './logo-vm.model';
 
 describe('LogoComponent', () => {
-  let component: LogoComponent;
-  let fixture: ComponentFixture<LogoComponent>;
-  let compiled: HTMLElement;
+    let fixture: ComponentFixture<LogoComponent>;
+    let compiled: HTMLElement;
+    const vm: LogoVM = {
+        imageSrc: 'assets/phoenix.jpg',
+        altText: 'logo',
+    };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LogoComponent],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [LogoComponent],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(LogoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should get input data on the img and the anchor element', () => {
-    fixture.componentRef.setInput('vm', {
-      imageSrc: 'assets/phoenix.jpg',
-      routerLink: 'link',
-      altText: 'logo',
+        fixture = TestBed.createComponent(LogoComponent);
+        compiled = fixture.debugElement.nativeElement;
     });
-    fixture.detectChanges();
-    const imgElement: HTMLImageElement | null = compiled.querySelector('img');
-    const anchorElement: HTMLAnchorElement | null = compiled.querySelector('a');
-    expect(imgElement?.getAttribute('src')).toBe('assets/phoenix.jpg');
-    expect(imgElement?.getAttribute('alt')).toBe('logo');
-    expect(anchorElement?.getAttribute('href')).toBe('link');
-  });
+
+    //Snapshot testing
+    it('should render the template when the VM is provided', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', vm);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

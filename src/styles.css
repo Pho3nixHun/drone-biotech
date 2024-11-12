@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  scroll-snap-align: start; /* Ensures alignment of scrollable elements */
+  scroll-padding-top: 2rem; /* Adds padding for offset when navigating to anchor links */
+}
+
 @layer base {
   h1 {
     @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;

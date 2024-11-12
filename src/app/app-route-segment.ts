@@ -1,3 +1,5 @@
 export enum AppRouteSegment {
-  PRODUCT = 'products',
+    PRODUCT = 'products',
+    PARTNERS = 'partners',
+    LANDING = '',
 }

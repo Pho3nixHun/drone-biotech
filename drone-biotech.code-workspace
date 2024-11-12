@@ -4,22 +4,28 @@
 			"path": "."
 		}
 	],
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"editor.formatOnSave": false,
+		"eslint.format.enable": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"editor.formatOnSave": false,
+		"eslint.format.enable": true
+	},
 	"settings": {
 		"workbench.activityBar.location": "top",
 		"terminal.integrated.defaultProfile.linux": "zsh",
 		"terminal.integrated.fontFamily": "MesloLGS NF",
 		"editor.fontFamily": "JetBrains Mono",
 		"editor.fontLigatures": true,
-		"editor.formatOnSave": true,
-		"[html]": {
-		  "editor.defaultFormatter": "esbenp.prettier-vscode"
-		},
-		"[typescript]": {
-		  "editor.defaultFormatter": "esbenp.prettier-vscode"
-		},
-		"[scss]": {
-		  "editor.defaultFormatter": "esbenp.prettier-vscode"
-		},
 		"gitlens.views.commitDetails.files.layout": "tree",
 		"sonarlint.focusOnNewCode": true,
 		"typescript.updateImportsOnFileMove.enabled": "never",

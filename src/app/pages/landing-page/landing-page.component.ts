@@ -1,15 +1,18 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { HeroComponent } from '@components/hero/hero.component';
-import { LandingComponentVM } from './landing.component.vm';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
-import { AppRouteSegment } from 'src/app/app-route-segment';
-import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
 import { PartnerLogoComponent } from '@components/partner-list/components/partner-logo/partner-logo.component';
 import { TestimonialItemComponent } from '@components/testimonial-item/testimonial-item.component';
 import { SwiperModule } from '@modules/swiper/swiper.module';
+import { TranslocoModule } from '@jsverse/transloco';
+import { LandingPageService } from './landing-page.service';
+import { NgTemplateOutlet } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { isProductFrame } from './landing-page-vm.model';
+import { Rel } from '@interfaces/with-link.interface';
 
 /**
  * LandingPageComponent
@@ -17,9 +20,8 @@ import { SwiperModule } from '@modules/swiper/swiper.module';
  * Type: Container
  *
  * Scope:
- * - Responsible for rendering a hero section followed by a product section.
- * - Conditionally renders a product section with a list of products.
- * - Conditionally renders a partner section with a list of partners and a testimonial carousel.
+ * - Responsible for rendering a hero section.
+ * - Conditionally renders a product section with a list of products or a partner section with a list of partners and a testimonial carousel.
  * - Passes relevant data.
  *
  * Out-of-Scope:
@@ -31,102 +33,31 @@ import { SwiperModule } from '@modules/swiper/swiper.module';
  */
 
 @Component({
-  selector: 'app-landing.page',
-  standalone: true,
-  imports: [
-    HeroComponent,
-    ProductItemComponent,
-    ProductListComponent,
-    RouterLink,
-    FrameComponent,
-    PartnerListComponent,
-    PartnerLogoComponent,
-    TestimonialItemComponent,
-    SwiperModule,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './landing-page.component.html',
+    selector: 'app-landing-page',
+    standalone: true,
+    imports: [
+        HeroComponent,
+        ProductItemComponent,
+        ProductListComponent,
+        RouterLink,
+        FrameComponent,
+        PartnerListComponent,
+        PartnerLogoComponent,
+        TestimonialItemComponent,
+        SwiperModule,
+        TranslocoModule,
+        NgTemplateOutlet,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
-  vm = signal<LandingComponentVM>({
-    frameVMs: [
-      { id: 'products', title: 'Our Products' },
-      { id: 'partners', title: 'Partners' },
-    ],
-    heroVM: {
-      backgroundImageSrc: 'assets/farming.jpg',
-    },
+    protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
+    protected readonly defaultTarget = '_self';
 
-    productList: [
-      {
-        routerLink: [AppRouteSegment.PRODUCT, '1'],
-        productItemVM: {
-          id: 1,
-          title: 'Controller',
-          description:
-            'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
-          imageSrc: 'assets/lepke.jpg',
-        },
-      },
-      {
-        routerLink: [AppRouteSegment.PRODUCT, '2'],
-        productItemVM: {
-          id: 2,
-          title: 'RTU',
-          description:
-            'After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.',
-          imageSrc: 'assets/lepke.jpg',
-        },
-      },
-      {
-        routerLink: [AppRouteSegment.PRODUCT, '3'],
-        productItemVM: {
-          id: 3,
-          title: 'Cloud and Mobile',
-          description:
-            'The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.',
-          imageSrc: 'assets/lepke.jpg',
-        },
-      },
-    ],
-    partnerList: [
-      { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-      { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-      { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-      { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-      { imageSrc: 'assets/lepke.jpg', altText: 'logo' },
-    ],
-    testimonialList: [
-      {
-        message: 'This is the best product I have ever used!',
-        name: 'John Doe',
-        location: 'CEO, Example Company',
-      },
-      {
-        message: 'Amazing service, would highly recommend to anyone.',
-        name: 'Jane Smith',
-        location: 'Marketing Director, Another Company',
-      },
-      {
-        message: 'A truly outstanding experience, 5 stars!',
-        name: 'Emily Johnson',
-        location: 'Product Manager, Some Company',
-      },
-      {
-        message: 'This is the best product I have ever used!',
-        name: 'John Doe',
-        location: 'CEO, Example Company',
-      },
-      {
-        message: 'Amazing service, would highly recommend to anyone.',
-        name: 'Jane Smith',
-        location: 'Marketing Director, Another Company',
-      },
-      {
-        message: 'A truly outstanding experience, 5 stars!',
-        name: 'Emily Johnson',
-        location: 'Product Manager, Some Company',
-      },
-    ],
-  });
+    private readonly landingPageService = inject(LandingPageService);
+
+    protected isProductFrame = isProductFrame;
+
+    protected vm = this.landingPageService.getVM();
 }

@@ -1,38 +1,87 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavComponent } from './nav.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { NavItemVM } from './components/nav-item/nav-item-vm';
 
 @Component({
-  template: `
-    <app-nav>
-      <app-nav-item class="testnavitem"></app-nav-item>
-      <app-nav-item class="testnavitem"></app-nav-item>
-      <div class="testdivitem">This should not be projected</div>
-    </app-nav>
-  `,
+    template: `
+        <app-nav>
+            <app-nav-item [vm]="vm" />
+            <app-nav-item [vm]="vm" />
+            <div>Should not be projected</div>
+            <div>Should not be projected</div>
+        </app-nav>
+    `,
 })
-class TestHostComponent {}
+class TestHostComponent {
+    @Input() vm: NavItemVM = {
+        routerLink: '/test',
+    };
+}
 
 describe('NavComponent', () => {
-  let fixture: ComponentFixture<TestHostComponent>;
-  let compiled: HTMLElement;
+    let fixture: ComponentFixture<TestHostComponent>;
+    let compiled: HTMLElement;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [TestHostComponent],
-      imports: [NavComponent, NavItemComponent],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [TestHostComponent],
+            imports: [NavComponent, NavItemComponent],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(TestHostComponent);
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
-  });
+        fixture = TestBed.createComponent(TestHostComponent);
+        fixture.detectChanges();
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  it('should only project <a> elements and ignore other elements', () => {
-    const navItemElements = compiled.querySelectorAll('.testnavitem');
-    expect(navItemElements.length).toBe(2);
-    const divElements = compiled.querySelectorAll('.testdivitem');
-    expect(divElements.length).toBe(0);
-  });
+    //Snapshot testing
+    it('should project <app-nav-item> elements and ignore other elements', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', {});
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    it('should assign routerLink if provided in VM', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', {
+            routerLink: '/test',
+        });
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    it('should assign href with default target and relation if only href is provided in VM', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', {
+            href: 'http://test.com',
+        });
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    it('should assign href with target and relation if provided in VM', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', {
+            href: 'http://test.com',
+            target: '_blank',
+            rel: 'noopener',
+        });
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

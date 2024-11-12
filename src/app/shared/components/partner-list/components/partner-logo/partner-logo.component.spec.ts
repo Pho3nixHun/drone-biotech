@@ -1,38 +1,45 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PartnerLogoComponent } from './partner-logo.component';
-import { PartnerLogoVM } from './partner-logo-vm';
+import { PartnerLogoVM } from './partner-logo-vm.model';
+import { getTranslocoModule } from 'transloco-testing.module';
+
+const en = { altText: 'logo' };
 
 describe('PartnerLogoComponent', () => {
-  let component: PartnerLogoComponent;
-  let fixture: ComponentFixture<PartnerLogoComponent>;
-  let compiled: HTMLElement;
-  const vm: PartnerLogoVM = {
-    altText: 'logo',
-    imageSrc: 'assets/lepke.jpg',
-  };
+    let fixture: ComponentFixture<PartnerLogoComponent>;
+    let compiled: HTMLElement;
+    const vm: PartnerLogoVM = {
+        altTextKey: 'altText',
+        imageSrc: 'assets/lepke.jpg',
+    };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [PartnerLogoComponent],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [
+                PartnerLogoComponent,
+                getTranslocoModule({
+                    langs: { en },
+                    translocoConfig: {
+                        availableLangs: ['en'],
+                        defaultLang: 'en',
+                    },
+                }),
+            ],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(PartnerLogoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
-  });
+        fixture = TestBed.createComponent(PartnerLogoComponent);
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    //Snapshot test
+    it('should render the template correctly when there is a VM provided', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', vm);
 
-  it('should get the input and visualize it', () => {
-    fixture.componentRef.setInput('vm', vm);
-    fixture.detectChanges();
+        //Act
+        fixture.detectChanges();
 
-    const imgElement: HTMLElement | null = compiled.querySelector('img');
-    expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
-    expect(imgElement?.getAttribute('alt')).toBe(vm.altText);
-  });
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

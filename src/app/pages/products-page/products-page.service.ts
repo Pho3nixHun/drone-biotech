@@ -1,0 +1,12 @@
+import { Injectable, signal, Signal } from '@angular/core';
+import { ProductsPageVM } from './products-page-vm.model';
+import { productsPageVMDefault } from './products-page.mock';
+
+@Injectable({
+    providedIn: 'root',
+})
+export class ProductsPageService {
+    public getVM(): Signal<ProductsPageVM> {
+        return signal(productsPageVMDefault);
+    }
+}

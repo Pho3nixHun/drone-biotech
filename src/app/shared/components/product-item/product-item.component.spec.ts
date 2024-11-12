@@ -1,45 +1,51 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductItemComponent } from './product-item.component';
-import { ProductItemComponentVM } from './product-item.component.vm';
+import { ProductItemVM } from './product-item-vm.model';
+import { getTranslocoModule } from 'transloco-testing.module';
 
-describe('ProductItemComponent', () => {
-  let component: ProductItemComponent;
-  let fixture: ComponentFixture<ProductItemComponent>;
-  let compiled: HTMLElement;
-  const vm: ProductItemComponentVM = {
-    id: 1,
+const en = {
     title: 'Controller',
     description:
-      'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
-    imageSrc: 'assets/lepke.jpg',
-  };
+        'The sleek sports car roared to life, its engine purring with power as it sped down the highway.',
+    altText: 'Lepke',
+};
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ProductItemComponent],
-    }).compileComponents();
+describe('ProductItemComponent', () => {
+    let fixture: ComponentFixture<ProductItemComponent>;
+    let compiled: HTMLElement;
+    const vm: ProductItemVM = {
+        titleKey: 'title',
+        descriptionKey: 'description',
+        imageSrc: 'assets/lepke.jpg',
+        altTextKey: 'altText',
+    };
 
-    fixture = TestBed.createComponent(ProductItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [
+                ProductItemComponent,
+                getTranslocoModule({
+                    langs: { en },
+                    translocoConfig: {
+                        availableLangs: ['en'],
+                        defaultLang: 'en',
+                    },
+                }),
+            ],
+        }).compileComponents();
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+        fixture = TestBed.createComponent(ProductItemComponent);
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  it('should get the inputs in the <p>, <img>, <h3> elements', () => {
-    fixture.componentRef.setInput('vm', vm);
-    fixture.detectChanges();
+    it('should render the template correctly when there is a VM provided', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', vm);
 
-    const imgElement: HTMLElement | null = compiled.querySelector('img');
-    expect(imgElement?.getAttribute('src')).toBe(vm.imageSrc);
+        //Act
+        fixture.detectChanges();
 
-    const h3Element: HTMLElement | null = compiled.querySelector('h3');
-    expect(h3Element?.innerText).toBe(vm.title);
-
-    const pElement: HTMLElement | null = compiled.querySelector('p');
-    expect(pElement?.innerText).toBe(vm.description);
-  });
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

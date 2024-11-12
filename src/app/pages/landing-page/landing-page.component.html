@@ -1,45 +1,75 @@
 @if (vm(); as vm) {
-  <!-- Hero section start -->
-  <app-hero [vm]="vm.heroVM">
-    <h1>The future of irrigation is now</h1>
-    <p>IRRIOT is a completely wireless precision irrigation automation system</p>
-    <a href="" class="primary">Contact Us</a>
-    <a href="" class="secondary">Learn More</a>
-  </app-hero>
-  <!-- Hero section end -->
+    @if (vm.heroXVM; as heroXVM) {
+        <app-hero [vm]="heroXVM">
+            <h1>{{ heroXVM.titleKey | transloco }}</h1>
+            <p>{{ heroXVM.descriptionKey | transloco }}</p>
+            <a href="" class="primary">{{
+                heroXVM.primaryButtonLabelKey | transloco
+            }}</a>
+            <a href="" class="secondary">{{
+                heroXVM.secondaryButtonLabelKey | transloco
+            }}</a>
+        </app-hero>
+    }
 
-  <app-frame [id]="vm.frameVMs[0].id" [vm]="vm.frameVMs[0]">
-    <app-product-list>
-      @for (item of vm.productList; track $index) {
-        <app-product-item [vm]="item.productItemVM" [routerLink]="item.routerLink" />
-      }
-    </app-product-list>
-  </app-frame>
-  <!-- Product frame section end -->
-
-  <!-- Partner frame section start -->
-  <app-frame [id]="vm.frameVMs[1].id" [vm]="vm.frameVMs[1]">
-    <app-partner-list>
-      @for (logo of vm.partnerList; track $index) {
-        <app-partner-logo [vm]="logo" />
-      }
-    </app-partner-list>
-    <swiper-container
-      keyboard="true"
-      pagination="true"
-      pagination-clickable="true"
-      pagination-dynamic-bullets="true"
-      autoplay-delay="2500"
-      autoplay-disable-on-interaction="false"
-      class="w-full sm:w-2/3 md:w-1/2"
-      space-between="30"
-    >
-      @for (testimonial of vm.testimonialList; track $index) {
-        <swiper-slide class="pb-10">
-          <app-testimonial-item [vm]="testimonial" />
-        </swiper-slide>
-      }
-    </swiper-container>
-  </app-frame>
-  <!-- Partner frame section end -->
+    @for (frameVM of vm.frameXVMs; track $index) {
+        <ng-container
+            [ngTemplateOutlet]="
+                isProductFrame(frameVM) ? productFrame : partnerFrame
+            "
+            [ngTemplateOutletContext]="{ frameVM }"
+        ></ng-container>
+    }
+} @else {
+    Loading...
 }
+
+<ng-template #productFrame let-vm="frameVM">
+    <app-frame [id]="vm.id" [vm]="vm">
+        <app-product-list>
+            @for (item of vm.productItemXVMs; track $index) {
+                <app-product-item [vm]="item" [routerLink]="item.routerLink" />
+            }
+        </app-product-list>
+    </app-frame>
+</ng-template>
+
+<ng-template #partnerFrame let-vm="frameVM">
+    <app-frame [id]="vm.id" [vm]="vm">
+        @if (vm.partnerLogoXVMs; as partnerLogoXVMs) {
+            <app-partner-list>
+                @for (logo of partnerLogoXVMs; track $index) {
+                    @if (logo.link; as link) {
+                        <a
+                            [href]="link.href"
+                            [rel]="(link.rel ?? defaultRel).join(' ')"
+                            [target]="link.target ?? defaultTarget"
+                        >
+                            <app-partner-logo [vm]="logo" />
+                        </a>
+                    } @else {
+                        <app-partner-logo [vm]="logo" />
+                    }
+                }
+            </app-partner-list>
+        }
+        @if (vm.testimonialItemVMs) {
+            <swiper-container
+                keyboard="true"
+                pagination="true"
+                pagination-clickable="true"
+                pagination-dynamic-bullets="true"
+                autoplay-delay="2500"
+                autoplay-disable-on-interaction="false"
+                class="w-full sm:w-2/3 md:w-1/2"
+                space-between="30"
+            >
+                @for (testimonial of vm.testimonialItemVMs; track $index) {
+                    <swiper-slide class="pb-10">
+                        <app-testimonial-item [vm]="testimonial" />
+                    </swiper-slide>
+                }
+            </swiper-container>
+        }
+    </app-frame>
+</ng-template>

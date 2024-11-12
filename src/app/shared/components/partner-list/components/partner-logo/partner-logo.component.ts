@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
-import { PartnerLogoVM } from './partner-logo-vm';
+import { PartnerLogoVM } from './partner-logo-vm.model';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * PartnerLogoComponent
@@ -19,11 +20,11 @@ import { PartnerLogoVM } from './partner-logo-vm';
  */
 
 @Component({
-  selector: 'app-partner-logo',
-  standalone: true,
-  imports: [],
-  templateUrl: './partner-logo.component.html',
+    selector: 'app-partner-logo',
+    standalone: true,
+    imports: [TranslocoModule],
+    templateUrl: './partner-logo.component.html',
 })
 export class PartnerLogoComponent {
-  vm = input<PartnerLogoVM | null>(null, { alias: 'vm' });
+    public vm = input.required<PartnerLogoVM>();
 }

@@ -1,42 +1,147 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { getTranslocoModule } from 'transloco-testing.module';
+import { provideRouter, Router } from '@angular/router';
+import {
+    appEmptyMockVMForRoutes,
+    appMockVM,
+    appMockVMWithFiveNavItem,
+    appMockVMWithOneNavItem,
+    appMockVMWithoutNavItem,
+    enAppMock,
+} from './app.mock';
+import {
+    provideAppComponentMockService,
+    updateGetVMSignal,
+} from './app-service.mock';
+import { routes } from './app.routes';
+import { AppRouteSegment } from './app-route-segment';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
-  let compiled: HTMLElement;
+    let fixture: ComponentFixture<AppComponent>;
+    let compiled: HTMLElement;
+    let router: Router;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                AppComponent,
+                getTranslocoModule({
+                    langs: { enAppMock },
+                    translocoConfig: {
+                        availableLangs: ['en'],
+                        defaultLang: 'en',
+                    },
+                }),
+            ],
+            providers: [
+                provideAppComponentMockService(),
+                provideRouter(routes),
+            ],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
-  });
+        updateGetVMSignal(undefined);
+        router = TestBed.inject(Router);
+        fixture = TestBed.createComponent(AppComponent);
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  it('should create the app', () => {
-    expect(component).toBeTruthy();
-  });
+    //Snapshot test
+    it(`should not render the template when the VM is not provided`, () => {
+        //Arrange
+        //No need for arrange
 
-  it(`should have the 'drone-biotech-webapp' title`, () => {
-    expect(component.title).toEqual('drone-biotech-webapp');
-  });
+        //Act
+        //No need for act
 
-  it('should render app-header, app-logo, and app-nav components', () => {
-    expect(compiled.querySelector('app-header')).toBeTruthy();
-    expect(compiled.querySelector('app-logo')).toBeTruthy();
-    expect(compiled.querySelector('app-nav')).toBeTruthy();
-  });
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 
-  it('should render the correct navigation titles', () => {
-    const anchors = compiled.querySelectorAll('app-nav app-nav-item a');
-    expect(anchors.length).toBe(4);
-    expect(anchors[0].textContent).toContain('Home');
-    expect(anchors[1].textContent).toContain('Products');
-    expect(anchors[2].textContent).toContain('Partners');
-    expect(anchors[3].textContent).toContain('Contacts');
-  });
+    //Snapshot test
+    it(`should render the template when the VM is provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVM);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it(`should not render <app-nav-item> when there is no item provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVMWithoutNavItem);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it(`should render 1 <app-nav-item> when 1 item is provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVMWithOneNavItem);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVMWithFiveNavItem);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should navigate to "" and render the LandingPageComponent', async () => {
+        //Arrange
+        updateGetVMSignal(appEmptyMockVMForRoutes);
+
+        //Act
+        await router.navigate(['']);
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should navigate to "/products" and render the ProductsPageComponent', async () => {
+        //Arrange
+        updateGetVMSignal(appEmptyMockVMForRoutes);
+
+        //Act
+        await router.navigate([AppRouteSegment.PRODUCT]);
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should navigate to "/products/id" and render the ProductsPageComponent', async () => {
+        //Arrange
+        updateGetVMSignal(appEmptyMockVMForRoutes);
+
+        //Act
+        await router.navigate([AppRouteSegment.PRODUCT, 'id']);
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });
