@@ -7,7 +7,7 @@ export const enLoginPageMock= {
 };
 
 export const loginPageVMMock: LoginPageVM = {
-    extendedLoginFormVM: {
+    loginFormXVM: {
         loginFormVM: { backgroundImageSrc: 'assets/farming.jpg' },
         titleKey: 'title',
         descriptionKey: 'description',
@@ -15,7 +15,7 @@ export const loginPageVMMock: LoginPageVM = {
     },
 };
 export const loginPageVMDefault: LoginPageVM = {
-    extendedLoginFormVM: {
+    loginFormXVM: {
         loginFormVM: { backgroundImageSrc: 'assets/farming.jpg' },
         titleKey: 'LoginPage.loginForm.title',
         descriptionKey: 'LoginPage.loginForm.description',

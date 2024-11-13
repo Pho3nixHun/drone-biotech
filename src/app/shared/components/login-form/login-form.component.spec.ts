@@ -33,6 +33,7 @@ describe('LoginFormComponent', () => {
     compiled = fixture.debugElement.nativeElement;
   });
 
+  //Snapshot testing
   it('should project the contents, render the template correctly when there is a VM provided', () => {
     //Arrange
     fixture.componentRef.setInput('vm', vm);

@@ -1,10 +1,10 @@
 @if (vm(); as vm) {
     <div class="flex items-center justify-center min-h-screen">
-        <app-login-form [vm]="vm.extendedLoginFormVM.loginFormVM">
+        <app-login-form [vm]="vm.loginFormXVM.loginFormVM">
             <h3>
-                {{ vm.extendedLoginFormVM.titleKey | transloco }}
+                {{ vm.loginFormXVM.titleKey | transloco }}
             </h3>
-            <p>{{ vm.extendedLoginFormVM.descriptionKey | transloco }}</p>
+            <p>{{ vm.loginFormXVM.descriptionKey | transloco }}</p>
             <form
                 [formGroup]="loginForm"
                 (ngSubmit)="signIn()"
@@ -32,7 +32,7 @@
                 >
                     {{
                         (
-                            vm.extendedLoginFormVM.buttonTitleKey | transloco
+                            vm.loginFormXVM.buttonTitleKey | transloco
                         ).toUpperCase()
                     }}
                 </button>

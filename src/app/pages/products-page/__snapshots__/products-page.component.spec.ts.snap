@@ -12,7 +12,7 @@ exports[`ProductsPageComponent should  render the template when the VM is provid
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        title0
+        0title
       </h2>
       <app-product-list>
         <div
@@ -28,19 +28,19 @@ exports[`ProductsPageComponent should  render the template when the VM is provid
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText0"
+                alt="0productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText0
+                0productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription0
+                0productDescription0
               </p>
             </a>
             <!--container-->
@@ -55,19 +55,19 @@ exports[`ProductsPageComponent should  render the template when the VM is provid
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText1"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText1
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription1
+                1productDescription
               </p>
             </a>
             <!--container-->
@@ -82,19 +82,19 @@ exports[`ProductsPageComponent should  render the template when the VM is provid
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText2"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText2
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription2
+                2productDescription
               </p>
             </a>
             <!--container-->
@@ -121,7 +121,7 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        title0
+        0title
       </h2>
       <app-product-list>
         <div
@@ -137,19 +137,19 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText0"
+                alt="0productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText0
+                0productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription0
+                0productDescription0
               </p>
             </a>
             <!--container-->
@@ -164,19 +164,19 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText1"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText1
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription1
+                1productDescription
               </p>
             </a>
             <!--container-->
@@ -191,19 +191,19 @@ exports[`ProductsPageComponent should have the correct routerLinks on product-it
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText2"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText2
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription2
+                2productDescription
               </p>
             </a>
             <!--container-->
@@ -230,7 +230,7 @@ exports[`ProductsPageComponent should not render <app-product-item> when there i
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        title0
+        0title
       </h2>
       <app-product-list>
         <div
@@ -267,7 +267,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        title0
+        0title
       </h2>
       <app-product-list>
         <div
@@ -283,19 +283,19 @@ exports[`ProductsPageComponent should render 1 <app-product-item> when 1 item is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText0"
+                alt="0productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText0
+                0productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription0
+                0productDescription0
               </p>
             </a>
             <!--container-->
@@ -322,7 +322,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        title0
+        0title
       </h2>
       <app-product-list>
         <div
@@ -338,19 +338,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText0"
+                alt="0productAltText0"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText0
+                0productAltText0
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription0
+                0productDescription0
               </p>
             </a>
             <!--container-->
@@ -365,19 +365,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText1"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText1
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription1
+                1productDescription
               </p>
             </a>
             <!--container-->
@@ -392,19 +392,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText2"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText2
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription2
+                2productDescription
               </p>
             </a>
             <!--container-->
@@ -419,19 +419,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText1"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText1
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription1
+                1productDescription
               </p>
             </a>
             <!--container-->
@@ -446,19 +446,19 @@ exports[`ProductsPageComponent should render 5 <app-product-item> when 5 items a
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productAltText2"
+                alt="1productAltText"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productAltText2
+                1productAltText
               </h3>
               <p
                 class="mt-4"
               >
-                productDescription2
+                2productDescription
               </p>
             </a>
             <!--container-->

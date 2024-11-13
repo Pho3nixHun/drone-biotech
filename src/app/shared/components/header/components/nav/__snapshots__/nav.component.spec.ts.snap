@@ -32,12 +32,6 @@ exports[`NavComponent should assign href with default target and relation if onl
       <button>
         Button
       </button>
-      <div>
-        Should not be projected
-      </div>
-      <div>
-        Should not be projected
-      </div>
     </nav>
   </app-nav>
 </div>
@@ -75,12 +69,6 @@ exports[`NavComponent should assign href with target and relation if provided in
       <button>
         Button
       </button>
-      <div>
-        Should not be projected
-      </div>
-      <div>
-        Should not be projected
-      </div>
     </nav>
   </app-nav>
 </div>
@@ -118,18 +106,12 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
       <button>
         Button
       </button>
-      <div>
-        Should not be projected
-      </div>
-      <div>
-        Should not be projected
-      </div>
     </nav>
   </app-nav>
 </div>
 `;
 
-exports[`NavComponent should project <app-nav-item>, <button> elements and ignore other elements 1`] = `
+exports[`NavComponent should project the provided content 1`] = `
 <div
   id="root0"
   ng-version="18.2.8"
@@ -161,12 +143,6 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
       <button>
         Button
       </button>
-      <div>
-        Should not be projected
-      </div>
-      <div>
-        Should not be projected
-      </div>
     </nav>
   </app-nav>
 </div>

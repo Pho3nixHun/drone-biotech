@@ -24,7 +24,7 @@ describe('ProductsPageComponent', () => {
             imports: [
                 ProductsPageComponent,
                 getTranslocoModule({
-                    langs: { enProductsPageMock },
+                    langs: { en: enProductsPageMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',

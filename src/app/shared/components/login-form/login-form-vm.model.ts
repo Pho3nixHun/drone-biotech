@@ -2,7 +2,7 @@ export interface LoginFormVM {
   backgroundImageSrc: string;
 }
 
-export interface ExtendedLoginFormVM {
+export interface LoginFormXVM {
   loginFormVM: LoginFormVM;
   titleKey: string;
   descriptionKey: string;

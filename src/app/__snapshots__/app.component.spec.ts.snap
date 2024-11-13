@@ -1285,7 +1285,7 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
                 href="/"
                 ng-reflect-router-link=""
               >
-                title0
+                0title
               </a>
               <!--ng-container-->
               <app-nav-item
@@ -1297,7 +1297,7 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
                   rel="noopener noreferrer"
                   target="_self"
                 >
-                  title1
+                  1title
                 </a>
               </app-nav-item>
               <!--ng-container-->
@@ -1310,7 +1310,7 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
                   rel="noopener noreferrer"
                   target="_self"
                 >
-                  title2
+                  2title
                 </a>
               </app-nav-item>
               <!--ng-container-->
@@ -1323,7 +1323,7 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
                   rel="noopener noreferrer"
                   target="_self"
                 >
-                  title3
+                  3title
                 </a>
               </app-nav-item>
               <!--ng-container-->
@@ -1773,7 +1773,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
                 href="/"
                 ng-reflect-router-link=""
               >
-                title0
+                0title
               </a>
               <!--ng-container-->
               <app-nav-item
@@ -1785,7 +1785,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
                   rel="noopener noreferrer"
                   target="_self"
                 >
-                  title1
+                  1title
                 </a>
               </app-nav-item>
               <!--ng-container-->
@@ -1798,7 +1798,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
                   rel="noopener noreferrer"
                   target="_self"
                 >
-                  title2
+                  2title
                 </a>
               </app-nav-item>
               <!--ng-container-->
@@ -1811,7 +1811,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
                   rel="noopener noreferrer"
                   target="_self"
                 >
-                  title3
+                  3title
                 </a>
               </app-nav-item>
               <!--ng-container-->
