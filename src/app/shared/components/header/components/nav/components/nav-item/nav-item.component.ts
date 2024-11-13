@@ -25,10 +25,16 @@ import { isWithLink } from '@interfaces/with-link.interface';
     templateUrl: './nav-item.component.html',
 })
 export class NavItemComponent {
-    public vm = input.required<NavItemVM>();
+    public vm = input.required<NavItemVM>({ alias: 'vm' });
+    private VM: NavItemVM | undefined;
     protected link = computed(() => {
-        if (isWithLink(this.vm)) {
-            return { rel: defaultRel, target: defaultTarget, ...this.vm.link };
+        this.VM = this.vm();
+        if (isWithLink(this.VM)) {
+            return {
+                rel: defaultRel,
+                target: defaultTarget,
+                link: this.VM.link.href,
+            };
         }
         return null;
     });

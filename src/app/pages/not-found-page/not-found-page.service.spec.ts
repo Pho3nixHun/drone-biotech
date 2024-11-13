@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { NotFoundPageService } from './not-found-page.service';
-import { notFoundPageVM } from './not-found-page.mock';
+import { notFoundPageVMDefault } from './not-found-page.mock';
 
 describe('NotFoundPageService', () => {
   let service: NotFoundPageService;
@@ -19,6 +19,6 @@ describe('NotFoundPageService', () => {
     // No need to act
 
     //Assert
-    expect(notFoundPageVM).toEqual(vm());
+    expect(notFoundPageVMDefault).toEqual(vm());
   });
 });

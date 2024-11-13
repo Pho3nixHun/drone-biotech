@@ -19,7 +19,7 @@ describe('LandingPageService', () => {
         const vm = service.getVM();
 
         // Act
-        // No need to act
+        /* There is no need to act*/
 
         //Assert
         expect(landingPageVMDefault).toEqual(vm());

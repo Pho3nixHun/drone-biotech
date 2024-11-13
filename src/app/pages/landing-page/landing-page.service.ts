@@ -10,3 +10,4 @@ export class LandingPageService {
         return signal(landingPageVMDefault);
     }
 }
+

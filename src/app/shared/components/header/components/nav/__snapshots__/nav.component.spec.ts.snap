@@ -13,7 +13,7 @@ exports[`NavComponent should assign href with default target and relation if onl
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
@@ -23,12 +23,21 @@ exports[`NavComponent should assign href with default target and relation if onl
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
         />
       </app-nav-item>
+      <button>
+        Button
+      </button>
+      <div>
+        Should not be projected
+      </div>
+      <div>
+        Should not be projected
+      </div>
     </nav>
   </app-nav>
 </div>
@@ -47,7 +56,7 @@ exports[`NavComponent should assign href with target and relation if provided in
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
@@ -57,12 +66,21 @@ exports[`NavComponent should assign href with target and relation if provided in
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
         />
       </app-nav-item>
+      <button>
+        Button
+      </button>
+      <div>
+        Should not be projected
+      </div>
+      <div>
+        Should not be projected
+      </div>
     </nav>
   </app-nav>
 </div>
@@ -81,7 +99,7 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
@@ -91,41 +109,7 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-          href=""
-          rel="null"
-          target="null"
-        />
-      </app-nav-item>
-    </nav>
-  </app-nav>
-</div>
-`;
-
-exports[`NavComponent should project <app-nav-item> elements and ignore other elements 1`] = `
-<div
-  id="root0"
-  ng-version="18.2.8"
->
-  <app-nav>
-    <nav
-      class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
-    >
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
-        <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-          href=""
-          rel="null"
-          target="null"
-        />
-      </app-nav-item>
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
-        <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
@@ -134,6 +118,12 @@ exports[`NavComponent should project <app-nav-item> elements and ignore other el
       <button>
         Button
       </button>
+      <div>
+        Should not be projected
+      </div>
+      <div>
+        Should not be projected
+      </div>
     </nav>
   </app-nav>
 </div>
@@ -152,7 +142,7 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
@@ -162,7 +152,7 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
         ng-reflect-vm="[object Object]"
       >
         <a
-          class="sm:hover:text-gray-400 duration-150 cursor-pointer"
+          class="nav-item"
           href=""
           rel="null"
           target="null"
@@ -171,6 +161,12 @@ exports[`NavComponent should project <app-nav-item>, <button> elements and ignor
       <button>
         Button
       </button>
+      <div>
+        Should not be projected
+      </div>
+      <div>
+        Should not be projected
+      </div>
     </nav>
   </app-nav>
 </div>

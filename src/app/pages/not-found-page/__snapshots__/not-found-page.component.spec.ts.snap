@@ -3,7 +3,7 @@
 exports[`NotFoundPageComponent should not render the template when there is not VM provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <!--container-->
 </div>
@@ -12,7 +12,7 @@ exports[`NotFoundPageComponent should not render the template when there is not 
 exports[`NotFoundPageComponent should render the template when there is a VM provided 1`] = `
 <div
   id="root1"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="flex flex-col items-center justify-center h-[50vh] md:h-[75vh] px-4"
@@ -31,7 +31,7 @@ exports[`NotFoundPageComponent should render the template when there is a VM pro
         <p
           class="text-white md:text-xl max-w-md"
         >
-           NotFoundPage.message.description 
+           desc 
         </p>
       </div>
     </app-message>

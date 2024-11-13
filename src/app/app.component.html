@@ -1,18 +1,36 @@
-@let VM = vm();
+@if (vm(); as VM) {
+    <div class="min-h-screen flex flex-col">
+        <app-header>
+            <app-logo
+                [vm]="VM.logoXVM"
+                [routerLink]="VM.logoXVM.routerLink"
+                class="cursor-pointer"
+            />
+            <app-nav>
+                @for (navItemXVM of VM.navItemXVMs; track $index) {
+                    <ng-container
+                        [ngTemplateOutlet]="
+                            isWithLink(navItemXVM) ? withLink : withRouterLink
+                        "
+                        [ngTemplateOutletContext]="{ navItemXVM }"
+                    >
+                    </ng-container>
+                }
+                <button mat-icon-button (click)="signOut()" class="nav-item">
+                    <mat-icon>logout</mat-icon>
+                </button>
+            </app-nav>
+        </app-header>
+        <div class="flex-grow"><router-outlet /></div>
+    </div>
 
-<div class="min-h-screen flex flex-col">
-    <app-header *transloco="let t">
-        <app-logo [vm]="VM.logoXVM" [routerLink]="VM.logoXVM.routerLink" />
-        <app-nav>
-            @for (navItemXVM of VM.navItemXVMs; track $index) {
-                <app-nav-item [vm]="navItemXVM">{{
-                    t(navItemXVM.textKey)
-                }}</app-nav-item>
-            }
-            <button mat-icon-button (click)="signOut()">
-                <mat-icon>logout</mat-icon>
-            </button>
-        </app-nav>
-    </app-header>
-    <div class="flex-grow"><router-outlet /></div>
-</div>
+    <ng-template #withLink let-vm="navItemXVM">
+        <app-nav-item [vm]="vm">{{ vm.textKey | transloco }}</app-nav-item>
+    </ng-template>
+
+    <ng-template #withRouterLink let-vm="navItemXVM">
+        <a [routerLink]="vm.routerLink" class="nav-item">{{
+            vm.textKey | transloco
+        }}</a>
+    </ng-template>
+}

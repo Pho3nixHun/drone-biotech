@@ -13,5 +13,6 @@ export interface WithLink {
     };
 }
 
-export const isWithLink = (obj: unknown): obj is WithLink =>
-    typeof obj === 'object' && isNotNull(obj) && 'link' in obj;
+export const isWithLink = (obj: unknown): obj is WithLink => {
+    return typeof obj === 'object' && isNotNull(obj) && 'link' in obj;
+};

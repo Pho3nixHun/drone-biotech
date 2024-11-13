@@ -16,10 +16,10 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -28,13 +28,13 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -50,7 +50,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -66,19 +66,19 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -93,19 +93,19 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -120,19 +120,19 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -152,7 +152,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -163,7 +163,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -174,7 +174,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -185,7 +185,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -196,7 +196,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -207,7 +207,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -239,7 +239,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -249,7 +249,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -267,7 +267,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -277,7 +277,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -295,7 +295,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -305,7 +305,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -323,7 +323,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -333,7 +333,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -351,7 +351,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -361,7 +361,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -379,7 +379,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -389,7 +389,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -426,10 +426,10 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -438,13 +438,13 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -460,7 +460,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -476,19 +476,19 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -503,19 +503,19 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -530,19 +530,19 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -562,7 +562,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -594,7 +594,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -604,7 +604,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -622,7 +622,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -632,7 +632,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -650,7 +650,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -660,7 +660,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -678,7 +678,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -688,7 +688,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -706,7 +706,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -716,7 +716,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -734,7 +734,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -744,7 +744,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -781,10 +781,10 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -793,13 +793,13 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -815,7 +815,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -836,7 +836,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -847,7 +847,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -858,7 +858,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -869,7 +869,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -880,7 +880,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -891,7 +891,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -923,7 +923,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -933,7 +933,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -951,7 +951,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -961,7 +961,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -979,7 +979,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -989,7 +989,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -1007,7 +1007,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1017,7 +1017,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -1035,7 +1035,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1045,7 +1045,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -1063,7 +1063,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1073,7 +1073,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -1110,10 +1110,10 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -1122,13 +1122,13 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -1144,7 +1144,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -1160,19 +1160,19 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -1187,19 +1187,19 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -1214,19 +1214,19 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -1246,7 +1246,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -1257,7 +1257,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1268,7 +1268,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1279,7 +1279,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1290,7 +1290,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1301,7 +1301,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1361,13 +1361,13 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
             heroPrimaryButtonLabel
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
             heroSecondaryButtonLabel
@@ -1400,7 +1400,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -1416,19 +1416,19 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -1443,19 +1443,19 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -1470,19 +1470,19 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -1502,7 +1502,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -1513,7 +1513,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1524,7 +1524,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1535,7 +1535,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1546,7 +1546,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1557,7 +1557,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1589,7 +1589,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1599,7 +1599,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -1617,7 +1617,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1627,7 +1627,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -1645,7 +1645,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1655,7 +1655,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -1673,7 +1673,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1683,7 +1683,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -1701,7 +1701,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1711,7 +1711,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -1729,7 +1729,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1739,7 +1739,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -1776,10 +1776,10 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -1788,13 +1788,13 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -1810,7 +1810,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -1826,19 +1826,19 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -1853,19 +1853,19 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -1880,19 +1880,19 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -1912,7 +1912,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -1923,7 +1923,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -1955,7 +1955,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1965,7 +1965,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -1983,7 +1983,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -1993,7 +1993,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -2011,7 +2011,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2021,7 +2021,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -2039,7 +2039,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2049,7 +2049,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -2067,7 +2067,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2077,7 +2077,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -2095,7 +2095,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2105,7 +2105,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -2142,10 +2142,10 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -2154,13 +2154,13 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -2176,7 +2176,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -2192,19 +2192,19 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -2224,7 +2224,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -2235,7 +2235,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2246,7 +2246,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2257,7 +2257,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2268,7 +2268,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2279,7 +2279,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2311,7 +2311,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2321,7 +2321,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -2339,7 +2339,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2349,7 +2349,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -2367,7 +2367,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2377,7 +2377,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -2395,7 +2395,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2405,7 +2405,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -2423,7 +2423,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2433,7 +2433,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -2451,7 +2451,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2461,7 +2461,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -2498,10 +2498,10 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -2510,13 +2510,13 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -2532,7 +2532,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -2548,19 +2548,19 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -2575,19 +2575,19 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -2602,19 +2602,19 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -2634,7 +2634,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -2645,7 +2645,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2656,7 +2656,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2667,7 +2667,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2678,7 +2678,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2689,7 +2689,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -2721,7 +2721,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -2731,7 +2731,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -2768,25 +2768,25 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -2802,7 +2802,7 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -2818,19 +2818,19 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -2845,19 +2845,19 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -2872,19 +2872,19 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -2920,10 +2920,10 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -2932,13 +2932,13 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -2954,7 +2954,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -2970,19 +2970,19 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -2997,19 +2997,19 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -3024,19 +3024,19 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -3056,7 +3056,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -3067,7 +3067,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3078,7 +3078,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3089,7 +3089,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3100,7 +3100,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3111,7 +3111,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3143,7 +3143,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3153,7 +3153,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -3171,7 +3171,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3181,7 +3181,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -3199,7 +3199,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3209,7 +3209,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -3227,7 +3227,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3237,7 +3237,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -3255,7 +3255,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3265,7 +3265,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -3283,7 +3283,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3293,7 +3293,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -3330,10 +3330,10 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -3342,13 +3342,13 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -3364,7 +3364,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -3380,19 +3380,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -3407,19 +3407,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -3434,19 +3434,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -3461,19 +3461,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -3488,19 +3488,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -3520,7 +3520,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -3531,7 +3531,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3542,7 +3542,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3553,7 +3553,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3564,7 +3564,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3575,7 +3575,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3607,7 +3607,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3617,7 +3617,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -3635,7 +3635,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3645,7 +3645,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -3663,7 +3663,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3673,7 +3673,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -3691,7 +3691,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3701,7 +3701,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -3719,7 +3719,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3729,7 +3729,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -3747,7 +3747,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -3757,7 +3757,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -3794,10 +3794,10 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -3806,13 +3806,13 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -3828,7 +3828,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -3844,19 +3844,19 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -3871,19 +3871,19 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -3898,19 +3898,19 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -3930,7 +3930,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -3941,7 +3941,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3952,7 +3952,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3963,7 +3963,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3974,7 +3974,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -3985,7 +3985,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -4017,7 +4017,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4027,7 +4027,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -4045,7 +4045,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4055,7 +4055,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -4073,7 +4073,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4083,7 +4083,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -4101,7 +4101,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4111,7 +4111,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -4129,7 +4129,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4139,7 +4139,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -4176,10 +4176,10 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -4188,13 +4188,13 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -4203,14 +4203,116 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
   </app-hero>
   <!--container-->
   <app-frame
-    id="partners"
+    id="0"
     ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,1"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="0prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                0prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                0proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,2"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="1prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                1prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                1proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="2prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                2prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                2proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <!--container-->
+        </div>
+      </app-product-list>
+    </section>
+    <!--container-->
+  </app-frame>
+  <!--ng-container-->
+  <app-frame
+    id="1"
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -4221,7 +4323,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -4232,7 +4334,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -4243,7 +4345,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -4254,7 +4356,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -4265,7 +4367,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -4297,7 +4399,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4307,7 +4409,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -4325,7 +4427,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4335,7 +4437,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -4353,7 +4455,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4363,7 +4465,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -4381,7 +4483,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4391,7 +4493,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -4409,7 +4511,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4419,7 +4521,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -4437,7 +4539,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -4447,7 +4549,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -4461,530 +4563,218 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
   </app-frame>
   <!--ng-container-->
   <app-frame
-    id="partners"
+    id="2"
     ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
-      <app-partner-list>
+      <app-product-list>
         <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
         >
-          <!--container-->
-          <app-partner-logo
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,1"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="0prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                0prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                0proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,2"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="1prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                1prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                1proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="2prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                2prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                2proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
           <!--container-->
         </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
-      >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
+      </app-product-list>
     </section>
     <!--container-->
   </app-frame>
   <!--ng-container-->
   <app-frame
-    id="partners"
+    id="3"
     ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
-      <app-partner-list>
+      <app-product-list>
         <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
         >
-          <!--container-->
-          <app-partner-logo
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,1"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="0prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                0prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                0proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,2"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="1prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                1prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                1proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="2prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                2prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                2proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
           <!--container-->
         </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
-      >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
+      </app-product-list>
     </section>
     <!--container-->
   </app-frame>
   <!--ng-container-->
   <app-frame
-    id="partners"
+    id="4"
     ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -4995,7 +4785,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5006,7 +4796,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5017,7 +4807,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5028,7 +4818,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5039,7 +4829,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5071,7 +4861,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -5081,7 +4871,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -5099,7 +4889,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -5109,7 +4899,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -5127,7 +4917,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -5137,7 +4927,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -5155,7 +4945,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -5165,7 +4955,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -5183,7 +4973,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -5193,7 +4983,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -5211,7 +5001,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -5221,265 +5011,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
-    </section>
-    <!--container-->
-  </app-frame>
-  <!--ng-container-->
-  <app-frame
-    id="partners"
-    ng-reflect-vm="[object Object]"
-  >
-    <section
-      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-    >
-      <h2>
-        framesTitle
-      </h2>
-      <app-partner-list>
-        <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        >
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-        </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
-      >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -5530,10 +5062,10 @@ exports[`LandingPageComponent should render only partner frames when only partne
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -5542,13 +5074,13 @@ exports[`LandingPageComponent should render only partner frames when only partne
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -5557,265 +5089,103 @@ exports[`LandingPageComponent should render only partner frames when only partne
   </app-hero>
   <!--container-->
   <app-frame
-    id="partners"
+    id="products"
     ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
-      <app-partner-list>
+      <app-product-list>
         <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
         >
-          <a
-            href="https://example.com"
-            rel="noopener noreferrer"
-            target="_blank"
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,1"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <app-partner-logo
-              ng-reflect-vm="[object Object]"
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="partnerLogoAltText"
-                class="w-52 h-52"
+                alt="0prodtit"
+                class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
-            </app-partner-logo>
-          </a>
-          <!--container-->
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                0prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                0proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,2"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="1prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                1prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                1proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="2prodtit"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                2prodtit
+              </h3>
+              <p
+                class="mt-4"
+              >
+                2proddesc
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
           <!--container-->
         </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
-      >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
+      </app-product-list>
     </section>
     <!--container-->
   </app-frame>
@@ -5844,10 +5214,10 @@ exports[`LandingPageComponent should render only product frames when only produc
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -5856,13 +5226,13 @@ exports[`LandingPageComponent should render only product frames when only produc
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -5878,7 +5248,7 @@ exports[`LandingPageComponent should render only product frames when only produc
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -5894,19 +5264,19 @@ exports[`LandingPageComponent should render only product frames when only produc
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -5921,19 +5291,19 @@ exports[`LandingPageComponent should render only product frames when only produc
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -5948,19 +5318,19 @@ exports[`LandingPageComponent should render only product frames when only produc
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -5996,25 +5366,25 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -6030,7 +5400,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -6046,19 +5416,19 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -6073,19 +5443,19 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -6100,19 +5470,19 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -6132,7 +5502,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -6143,7 +5513,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6154,7 +5524,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6165,7 +5535,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6176,7 +5546,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6187,7 +5557,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6219,7 +5589,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6229,7 +5599,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -6247,7 +5617,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6257,7 +5627,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -6275,7 +5645,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6285,7 +5655,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -6303,7 +5673,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6313,7 +5683,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -6331,7 +5701,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6341,7 +5711,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -6359,7 +5729,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6369,7 +5739,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->
@@ -6406,10 +5776,10 @@ exports[`LandingPageComponent should render the template when there is a VM prov
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -6418,13 +5788,13 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -6440,7 +5810,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        0frame
       </h2>
       <app-product-list>
         <div
@@ -6456,19 +5826,19 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="0prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                0prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                0proddesc
               </p>
             </a>
             <!--container-->
@@ -6483,19 +5853,19 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="1prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                1prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                1proddesc
               </p>
             </a>
             <!--container-->
@@ -6510,19 +5880,19 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
-                alt="productItemAltText"
+                alt="2prodtit"
                 class="w-auto h-auto object-cover rounded-md"
                 src="assets/lepke.jpg"
               />
               <h3
                 class="font-bold text-xl sm:text-2xl mt-4"
               >
-                productItemAltText
+                2prodtit
               </h3>
               <p
                 class="mt-4"
               >
-                productItemDescription
+                2proddesc
               </p>
             </a>
             <!--container-->
@@ -6542,7 +5912,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-partner-list>
         <div
@@ -6553,7 +5923,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6564,7 +5934,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6575,7 +5945,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6586,7 +5956,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6597,7 +5967,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -6629,7 +5999,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "0message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6639,7 +6009,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                0role
               </p>
             </div>
             <!--container-->
@@ -6657,7 +6027,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "1message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6667,7 +6037,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                1role
               </p>
             </div>
             <!--container-->
@@ -6685,7 +6055,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "2message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6695,7 +6065,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                2role
               </p>
             </div>
             <!--container-->
@@ -6713,7 +6083,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "3message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6723,7 +6093,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                3role
               </p>
             </div>
             <!--container-->
@@ -6741,7 +6111,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "4message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6751,7 +6121,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                4role
               </p>
             </div>
             <!--container-->
@@ -6769,7 +6139,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-lg italic text-gray-700"
               >
-                "testimonialMessage"
+                "5message"
               </p>
               <p
                 class="font-semibold text-gray-900 mt-4"
@@ -6779,7 +6149,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               <p
                 class="text-gray-500"
               >
-                testimonialRoleAndCompany
+                5role
               </p>
             </div>
             <!--container-->

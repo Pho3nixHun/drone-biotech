@@ -3,7 +3,7 @@
 exports[`LoginFormComponent should project the contents, render the template correctly when there is a VM provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <app-login-form
     ng-reflect-vm="[object Object]"

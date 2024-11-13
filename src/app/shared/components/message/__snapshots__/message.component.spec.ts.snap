@@ -3,7 +3,7 @@
 exports[`MessageComponent should render the template when there is a VM provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="bg-gray-700 p-6 rounded-xl"

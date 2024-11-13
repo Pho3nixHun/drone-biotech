@@ -37,7 +37,7 @@ describe('LandingPageComponent', () => {
             imports: [
                 LandingPageComponent,
                 getTranslocoModule({
-                    langs: { enLandingMock },
+                    langs: { en:enLandingMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',

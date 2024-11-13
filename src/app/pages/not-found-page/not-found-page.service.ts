@@ -1,5 +1,5 @@
 import { Injectable, Signal, signal } from '@angular/core';
-import { notFoundPageVM } from './not-found-page.mock';
+import { notFoundPageVMDefault } from './not-found-page.mock';
 import { NotFoundPageVM } from './not-found-page-vm.model';
 import { NotFoundPageServiceModel } from './not-found-page.service.model';
 
@@ -8,6 +8,6 @@ import { NotFoundPageServiceModel } from './not-found-page.service.model';
 })
 export class NotFoundPageService implements NotFoundPageServiceModel {
   public getVM(): Signal<NotFoundPageVM> {
-    return signal(notFoundPageVM);
+    return signal(notFoundPageVMDefault);
   }
 }

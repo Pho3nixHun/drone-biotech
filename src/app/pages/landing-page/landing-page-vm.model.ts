@@ -64,6 +64,6 @@ export interface LandingPageVM {
 }
 
 export enum FrameID {
-    PRODUCT = 'products',
+    PRODUCTS = 'products',
     PARTNERS = 'partners',
 }

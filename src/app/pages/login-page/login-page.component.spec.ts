@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LoginPageComponent } from './login-page.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { Auth } from '@angular/fire/auth';
@@ -7,7 +6,7 @@ import {
     provideLoginPageMockService,
     updateGetVMSignal,
 } from './login-page.service.mock';
-import { loginPageVM } from './login-page.mock';
+import { enLoginPageMock, loginPageVMMock } from './login-page.mock';
 import { getTranslocoModule } from 'transloco-testing.module';
 
 describe('LoginPageComponent', () => {
@@ -20,7 +19,7 @@ describe('LoginPageComponent', () => {
             imports: [
                 LoginPageComponent,
                 getTranslocoModule({
-                    langs: { en: {} },
+                    langs: { en: enLoginPageMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',
@@ -55,7 +54,7 @@ describe('LoginPageComponent', () => {
     //Snapshot test
     it('should render the template when there is a VM provided', () => {
         //Arrange
-        updateGetVMSignal(loginPageVM);
+        updateGetVMSignal(loginPageVMMock);
 
         //Act
         fixture.detectChanges();
@@ -102,7 +101,7 @@ describe('LoginPageComponent', () => {
 
     it('should disable the submit button if the loginForm is invalid', () => {
         //Arrange
-        updateGetVMSignal(loginPageVM);
+        updateGetVMSignal(loginPageVMMock);
 
         //Act
         component.loginForm.get('email')?.setValue('');
@@ -118,7 +117,7 @@ describe('LoginPageComponent', () => {
 
     it('should enable the submit button if the loginForm is valid', () => {
         //Arrange
-        updateGetVMSignal(loginPageVM);
+        updateGetVMSignal(loginPageVMMock);
 
         //Act
         component.loginForm.get('email')?.setValue('test@example.com');

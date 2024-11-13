@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
@@ -9,6 +9,8 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthActions } from './stores/auth/auth.actions';
 import { Store } from '@ngrx/store';
+import { NgTemplateOutlet } from '@angular/common';
+import { isWithLink } from '@interfaces/with-link.interface';
 
 @Component({
     selector: 'app-root',
@@ -21,7 +23,8 @@ import { Store } from '@ngrx/store';
         NavItemComponent,
         TranslocoModule,
         MatIconModule,
-        RouterLink,
+        RouterModule,
+        NgTemplateOutlet,
     ],
     templateUrl: './app.component.html',
 })
@@ -30,6 +33,8 @@ export class AppComponent {
     private readonly appService = inject(AppService);
     private readonly store = inject(Store);
     protected vm = this.appService.getVM();
+
+    isWithLink = isWithLink;
 
     signOut() {
         this.store.dispatch(AuthActions.signOut());

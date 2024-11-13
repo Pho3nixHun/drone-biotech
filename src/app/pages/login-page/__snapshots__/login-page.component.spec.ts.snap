@@ -3,7 +3,7 @@
 exports[`LoginPageComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <!--container-->
 </div>
@@ -12,7 +12,7 @@ exports[`LoginPageComponent should not render the template when there is no VM p
 exports[`LoginPageComponent should render the template when there is a VM provided 1`] = `
 <div
   id="root1"
-  ng-version="18.2.7"
+  ng-version="18.2.8"
 >
   <div
     class="flex items-center justify-center min-h-screen"
@@ -31,10 +31,10 @@ exports[`LoginPageComponent should render the template when there is a VM provid
           class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
         >
           <h3>
-             LoginPage.loginForm.title 
+             tit 
           </h3>
           <p>
-            LoginPage.loginForm.description
+            desc
           </p>
           <div
             class="w-full"
@@ -66,7 +66,7 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                 ng-reflect-ng-class="disabled"
                 type="submit"
               >
-                 LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                 BUTT 
               </button>
             </form>
           </div>

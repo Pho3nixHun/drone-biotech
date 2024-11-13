@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NotFoundPageComponent } from './not-found-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { provideNotFoundPageMockService, updateGetVMSignal } from './not-found-page.service.mock';
-import { notFoundPageVM } from './not-found-page.mock';
+import { enNotFoundPageMock, notFoundPageVMMock } from './not-found-page.mock';
 
 describe('NotFoundPageComponent', () => {
   let fixture: ComponentFixture<NotFoundPageComponent>;
@@ -13,7 +13,7 @@ describe('NotFoundPageComponent', () => {
       imports: [
         NotFoundPageComponent,
         getTranslocoModule({
-          langs: { en: {} },
+          langs: { en: enNotFoundPageMock },
           translocoConfig: { availableLangs: ['en'], defaultLang: 'en' },
         }),
       ],
@@ -38,7 +38,7 @@ describe('NotFoundPageComponent', () => {
   //Snapshot test
   it('should render the template when there is a VM provided', () => {
     //Arrange
-    updateGetVMSignal(notFoundPageVM);
+    updateGetVMSignal(notFoundPageVMMock);
     //Act
     fixture.detectChanges();
     //Assert

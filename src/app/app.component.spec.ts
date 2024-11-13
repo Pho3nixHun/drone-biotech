@@ -4,12 +4,15 @@ import { getTranslocoModule } from 'transloco-testing.module';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { provideRouter, Router } from '@angular/router';
 import {
+    enAppMock,
     appEmptyMockVMForRoutes,
     appMockVM,
     appMockVMWithFiveNavItem,
     appMockVMWithOneNavItem,
     appMockVMWithoutNavItem,
-    enAppMock,
+    appMockVMWithOneAnchor,
+    appMockVMWithFiveAnchor,
+    appMockVMWithNavItemAndAnchor,
 } from './app.mock';
 import {
     provideAppComponentMockService,
@@ -41,7 +44,7 @@ describe('AppComponent', () => {
             imports: [
                 AppComponent,
                 getTranslocoModule({
-                    langs: { en: {} },
+                    langs: { en: enAppMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',
@@ -115,11 +118,44 @@ describe('AppComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
-
     //Snapshot test
     it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
         //Arrange
         updateGetVMSignal(appMockVMWithFiveNavItem);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it(`should render 1 <a> with routerLink when 1 item is provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVMWithOneAnchor);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    //Snapshot test
+    it(`should render 5 <a> with routerLink in order when 5 items are provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVMWithFiveAnchor);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    //Snapshot test
+    it(`should render <app-nav-item> and <a> with routerLink in order when both of them are provided`, () => {
+        //Arrange
+        updateGetVMSignal(appMockVMWithNavItemAndAnchor);
 
         //Act
         fixture.detectChanges();
