@@ -183,6 +183,12 @@ exports[`NavComponent should project the provided content 1`] = `
       <button>
         Button
       </button>
+      <div>
+        Should not be projected
+      </div>
+      <div>
+        Should not be projected
+      </div>
     </nav>
   </app-nav>
 </div>

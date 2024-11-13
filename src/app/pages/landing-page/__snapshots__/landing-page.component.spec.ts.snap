@@ -1928,10 +1928,10 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
@@ -1940,13 +1940,63 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
             class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--container-->
+  </app-hero>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provided 1`] = `
+<div
+  id="root4"
+  ng-version="18.2.8"
+>
+  <app-hero
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          herotit0
+        </h1>
+        <p>
+          herodesc0
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="btn btn-primary"
+            href=""
+          >
+            heroprim0
+          </a>
+          <a
+            class="btn btn-default"
+            href=""
+          >
+            herosec0
           </a>
         </div>
       </div>
@@ -4328,6 +4378,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             class="h-full"
             ng-reflect-router-link="products,1"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
             <div
               class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
@@ -4347,18 +4398,17 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               >
                 0proddesc
               </p>
-            </div>
+            </a>
             <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
                 alt="1prodtit"
@@ -4371,11 +4421,11 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
                 1prodtit
               </h3>
               <p
-                class="text-gray-500"
+                class="mt-4"
               >
                 1proddesc
               </p>
-            </div>
+            </a>
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -4792,6 +4842,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             class="h-full"
             ng-reflect-router-link="products,1"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
             <div
               class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
@@ -4811,18 +4862,17 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               >
                 0proddesc
               </p>
-            </div>
+            </a>
             <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
             ng-reflect-vm="[object Object]"
+            tabindex="0"
           >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
             >
               <img
                 alt="1prodtit"
@@ -4835,11 +4885,11 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
                 1prodtit
               </h3>
               <p
-                class="text-gray-500"
+                class="mt-4"
               >
                 1proddesc
               </p>
-            </div>
+            </a>
             <!--container-->
           </app-testimonial-item>
         </swiper-slide>
@@ -5478,25 +5528,25 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
         class="flex flex-col mx-10 space-y-5"
       >
         <h1>
-          heroTitle
+          herotit0
         </h1>
         <p>
-          heroDescription
+          herodesc0
         </p>
         <div
           class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
         >
           <a
-            class="primary"
+            class="btn btn-primary"
             href=""
           >
-            heroPrimaryButtonLabel
+            heroprim0
           </a>
           <a
-            class="secondary"
+            class="btn btn-default"
             href=""
           >
-            heroSecondaryButtonLabel
+            herosec0
           </a>
         </div>
       </div>
@@ -5589,7 +5639,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
     >
       <h2>
-        framesTitle
+        1frame
       </h2>
       <app-product-list>
         <div
@@ -5677,7 +5727,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="0part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5688,7 +5738,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="1part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5699,7 +5749,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="2part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5710,7 +5760,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="3part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />
@@ -5721,7 +5771,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             ng-reflect-vm="[object Object]"
           >
             <img
-              alt="partnerLogoAltText"
+              alt="4part"
               class="w-52 h-52"
               src="assets/lepke.jpg"
             />

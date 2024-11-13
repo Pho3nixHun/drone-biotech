@@ -825,6 +825,13 @@ exports[`AppComponent should navigate back to the LoginPage after navigate to ""
               class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
               src="assets/phoenix.jpg"
             />
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -1089,6 +1096,13 @@ exports[`AppComponent should navigate back to the LoginPage after navigate to "/
               class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
               src="assets/phoenix.jpg"
             />
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -1208,6 +1222,13 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
             class="cursor-pointer"
             ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
             tabindex="0"
           >
             <img
@@ -1961,6 +1982,13 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
               class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
               src="assets/phoenix.jpg"
             />
+            tabindex="0"
+          >
+            <img
+              alt="logo"
+              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+              src="assets/phoenix.jpg"
+            />
           </app-logo>
           <app-nav>
             <nav
@@ -2549,6 +2577,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
           class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
         >
           <app-logo
+            class="cursor-pointer"
             ng-reflect-router-link=""
             ng-reflect-vm="[object Object]"
             tabindex="0"
@@ -2563,56 +2592,56 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
             <nav
               class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
             >
+              <a
+                class="nav-item"
+                href="/"
+                ng-reflect-router-link=""
+              >
+                title0
+              </a>
+              <!--ng-container-->
               <app-nav-item
                 ng-reflect-vm="[object Object]"
               >
                 <a
-                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-                  href=""
-                  rel="null"
-                  target="null"
+                  class="nav-item"
+                  href="#products"
+                  rel="noopener noreferrer"
+                  target="_self"
                 >
-                  text0
+                  title1
                 </a>
               </app-nav-item>
+              <!--ng-container-->
               <app-nav-item
                 ng-reflect-vm="[object Object]"
               >
                 <a
-                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-                  href=""
-                  rel="null"
-                  target="null"
+                  class="nav-item"
+                  href="#partners"
+                  rel="noopener noreferrer"
+                  target="_self"
                 >
-                  text1
+                  title2
                 </a>
               </app-nav-item>
+              <!--ng-container-->
               <app-nav-item
                 ng-reflect-vm="[object Object]"
               >
                 <a
-                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-                  href=""
-                  rel="null"
-                  target="null"
+                  class="nav-item"
+                  href="#products"
+                  rel="noopener noreferrer"
+                  target="_self"
                 >
-                  text2
+                  title3
                 </a>
               </app-nav-item>
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
-              >
-                <a
-                  class="sm:hover:text-gray-400 duration-150 cursor-pointer"
-                  href=""
-                  rel="null"
-                  target="null"
-                >
-                  text3
-                </a>
-              </app-nav-item>
+              <!--ng-container-->
               <!--container-->
               <button
+                class="nav-item"
                 mat-icon-button=""
               >
                 <mat-icon
@@ -2629,7 +2658,6 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
         </div>
       </section>
     </app-header>
-    <!--container-->
     <div
       class="flex-grow"
     >
@@ -2637,5 +2665,8 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
       <!--container-->
     </div>
   </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
 </div>
 `;
