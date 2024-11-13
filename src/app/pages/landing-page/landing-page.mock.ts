@@ -1,6 +1,5 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { FrameID, LandingPageVM } from './landing-page-vm.model';
-import { FrameID, LandingPageVM } from './landing-page-vm.model';
 
 export const enLandingMock = {
     message0: '0message',
@@ -310,28 +309,16 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             titleKey: 'frame1',
             partnerLogoXVMs: [
                 {
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
                 },
                 {
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
                 },
                 {
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
@@ -434,28 +421,16 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             titleKey: 'frame1',
             partnerLogoXVMs: [
                 {
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
                 },
                 {
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
                 },
                 {
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
@@ -1342,7 +1317,6 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
 };
 
 export const landingPageVMMockWithRoutes = {
-export const landingPageVMMockWithRoutes = {
     frameXVMs: [
         {
             id: FrameID.PRODUCTS,
@@ -1438,7 +1412,6 @@ export const landingPageVMMockWithRoutes = {
         secondaryButtonLabelKey: 'herosec',
     },
 };
-export const landingPageVMMock = {
 export const landingPageVMMock = {
     frameXVMs: [
         {
