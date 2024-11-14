@@ -65,17 +65,19 @@ export class LoginPageComponent {
     }
 
     signIn() {
-        if (this.loginForm.valid) {
-            const emailValue = this.email?.value;
-            const passwordValue = this.password?.value;
-            if (emailValue && passwordValue) {
-                this.store.dispatch(
-                    AuthActions.signIn({
-                        email: emailValue,
-                        password: passwordValue,
-                    })
-                );
-            }
+        const isFormValid = this.loginForm.valid;
+        const emailValue = this.email?.value;
+        const passwordValue = this.password?.value;
+
+        const hasCredentials = !!emailValue && !!passwordValue;
+
+        if (isFormValid && hasCredentials) {
+            this.store.dispatch(
+                AuthActions.signIn({
+                    email: emailValue,
+                    password: passwordValue,
+                })
+            );
         }
     }
 }

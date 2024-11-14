@@ -13,7 +13,7 @@ import { AuthActions } from './auth.actions';
 import { mapFirebaseUser } from './auth.mapping';
 import { Router } from '@angular/router';
 
-export const retrieveUser = createEffect(
+export const retrieveUser$ = createEffect(
     (auth = inject(Auth)) =>
         new Observable<User | null>((subscriber) =>
             onAuthStateChanged(auth, subscriber)
@@ -31,7 +31,7 @@ export const retrieveUser = createEffect(
     { functional: true }
 );
 
-export const navigateAfterSignIn = createEffect(
+export const navigateAfterSignIn$ = createEffect(
     (actions$ = inject(Actions), router = inject(Router)) =>
         actions$.pipe(
             ofType(AuthActions.signInSuccess),
@@ -42,7 +42,7 @@ export const navigateAfterSignIn = createEffect(
     { functional: true, dispatch: false }
 );
 
-export const navigateAfterSignOut = createEffect(
+export const navigateAfterSignOut$ = createEffect(
     (actions$ = inject(Actions), router = inject(Router)) =>
         actions$.pipe(
             ofType(AuthActions.signOutSuccess),

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, OnChanges, SimpleChanges } from '@angular/core';
 import { LoginFormVM } from './login-form-vm.model';
 /**
  * LoginFormComponent
@@ -18,11 +18,14 @@ import { LoginFormVM } from './login-form-vm.model';
  */
 
 @Component({
-  selector: 'app-login-form',
-  standalone: true,
-  imports: [],
-  templateUrl: './login-form.component.html',
+    selector: 'app-login-form',
+    standalone: true,
+    imports: [],
+    templateUrl: './login-form.component.html',
 })
-export class LoginFormComponent {
-  public vm = input.required<LoginFormVM>();
+export class LoginFormComponent implements OnChanges {
+    ngOnChanges(changes: SimpleChanges): void {
+        console.log(changes);
+    }
+    public vm = input.required<LoginFormVM>();
 }

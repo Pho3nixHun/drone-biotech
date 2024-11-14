@@ -5,7 +5,7 @@ import { inject } from '@angular/core';
 import { PersistentModuleConfig } from './persistent.module';
 import { JSONValue } from 'src/app/shared/interfaces/JSON-value.interface';
 
-export const loadKeyValue = createEffect(
+export const loadKeyValue$ = createEffect(
     (config = inject(PersistentModuleConfig)) =>
         of(true).pipe(
             map(() => {
@@ -28,7 +28,7 @@ export const loadKeyValue = createEffect(
     { functional: true }
 );
 
-export const saveKeyValue = createEffect(
+export const saveKeyValue$ = createEffect(
     (actions$ = inject(Actions), config = inject(PersistentModuleConfig)) =>
         actions$.pipe(
             ofType(PersistentActions.saveKeyValue),

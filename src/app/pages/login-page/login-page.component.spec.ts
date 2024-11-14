@@ -78,10 +78,9 @@ describe('LoginPageComponent', () => {
     it('should validate the email format', () => {
         //Arrange
         const emailControl = component.loginForm.get('email');
-        emailControl?.setValue('invalidEmail');
 
         //Act
-        //There is no need to act
+        emailControl?.setValue('invalidEmail');
 
         //Assert
         expect(emailControl?.hasError('email')).toBe(true);
@@ -90,10 +89,9 @@ describe('LoginPageComponent', () => {
     it('should validate the password format', () => {
         //Arrange
         const passwordControl = component.loginForm.get('password');
-        passwordControl?.setValue('');
 
         //Act
-        //There is no need to act
+        passwordControl?.setValue('');
 
         //Assert
         expect(passwordControl?.hasError('required')).toBe(true);

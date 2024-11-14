@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HeroComponent } from '@components/hero/hero.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
@@ -43,7 +43,7 @@ import { isProductFrame } from './landing-page-vm.model';
         PartnerLogoComponent,
         ProductItemComponent,
         ProductListComponent,
-        RouterLink,
+        RouterModule,
         SwiperModule,
         TranslocoModule,
         TestimonialItemComponent,
@@ -55,7 +55,7 @@ export class LandingPageComponent {
     protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
     protected readonly defaultTarget = '_self';
     private readonly landingPageService = inject(LandingPageService);
-    protected vm = this.landingPageService.getVM();
 
     protected isProductFrame = isProductFrame;
+    protected vm = this.landingPageService.getVM();
 }

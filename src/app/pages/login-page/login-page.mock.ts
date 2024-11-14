@@ -1,6 +1,6 @@
 import { LoginPageVM } from './login-page-vm.model';
 
-export const enLoginPageMock= {
+export const enLoginPageMock = {
     title: 'tit',
     description: 'desc',
     button: 'butt',
@@ -8,7 +8,7 @@ export const enLoginPageMock= {
 
 export const loginPageVMMock: LoginPageVM = {
     loginFormXVM: {
-        loginFormVM: { backgroundImageSrc: 'assets/farming.jpg' },
+        backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'title',
         descriptionKey: 'description',
         buttonTitleKey: 'button',
@@ -16,7 +16,7 @@ export const loginPageVMMock: LoginPageVM = {
 };
 export const loginPageVMDefault: LoginPageVM = {
     loginFormXVM: {
-        loginFormVM: { backgroundImageSrc: 'assets/farming.jpg' },
+        backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'LoginPage.loginForm.title',
         descriptionKey: 'LoginPage.loginForm.description',
         buttonTitleKey: 'LoginPage.loginForm.buttonTitle',

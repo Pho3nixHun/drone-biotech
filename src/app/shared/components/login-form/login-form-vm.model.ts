@@ -1,10 +1,9 @@
 export interface LoginFormVM {
-  backgroundImageSrc: string;
+    backgroundImageSrc: string;
 }
 
-export interface LoginFormXVM {
-  loginFormVM: LoginFormVM;
-  titleKey: string;
-  descriptionKey: string;
-  buttonTitleKey: string;
+export interface LoginFormXVM extends LoginFormVM {
+    titleKey: string;
+    descriptionKey: string;
+    buttonTitleKey: string;
 }

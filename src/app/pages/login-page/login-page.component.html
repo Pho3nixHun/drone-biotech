@@ -1,10 +1,11 @@
-@if (vm(); as vm) {
+@if (vm()) {
+    @let VM = vm().loginFormXVM;
     <div class="flex items-center justify-center min-h-screen">
-        <app-login-form [vm]="vm.loginFormXVM.loginFormVM">
+        <app-login-form [vm]="VM">
             <h3>
-                {{ vm.loginFormXVM.titleKey | transloco }}
+                {{ VM.titleKey | transloco }}
             </h3>
-            <p>{{ vm.loginFormXVM.descriptionKey | transloco }}</p>
+            <p>{{ VM.descriptionKey | transloco }}</p>
             <form
                 [formGroup]="loginForm"
                 (ngSubmit)="signIn()"
@@ -30,11 +31,7 @@
                     [ngClass]="[loginForm.valid ? 'primary' : 'disabled']"
                     class="btn btn-primary"
                 >
-                    {{
-                        (
-                            vm.loginFormXVM.buttonTitleKey | transloco
-                        ).toUpperCase()
-                    }}
+                    {{ (VM.buttonTitleKey | transloco).toUpperCase() }}
                 </button>
             </form>
         </app-login-form>
