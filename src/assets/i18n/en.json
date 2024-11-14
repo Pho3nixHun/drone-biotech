@@ -36,5 +36,11 @@
   "AppComponent.navItems.0.title": "Home",
   "AppComponent.navItems.1.title": "Products",
   "AppComponent.navItems.2.title": "Partners",
-  "AppComponent.navItems.3.title": "Contacts"
+  "AppComponent.navItems.3.title": "Contacts",
+
+  "NotFoundPage.message.description": "Sorry, we couldn't find this page. But don't worry, you can find plenty of other things on our homepage.",
+
+  "LoginPage.loginForm.title": "Welcome to Phoenix!",
+  "LoginPage.loginForm.description": "Phoenix is ...",
+  "LoginPage.loginForm.buttonTitle": "Login"
 }

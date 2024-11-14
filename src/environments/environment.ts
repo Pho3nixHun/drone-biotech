@@ -1,4 +1,6 @@
-export const environment = {
+import { Environment } from './environment.model';
+
+export const environment: Environment = {
   firebaseConfig: {
     apiKey: 'AIzaSyAZFSqAs0Cz8lXySzEg8TTTHP7YdGoGJQA',
     authDomain: 'localhost',

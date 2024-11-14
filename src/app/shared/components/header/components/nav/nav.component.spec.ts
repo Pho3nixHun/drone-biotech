@@ -9,8 +9,7 @@ import { NavItemVM } from './components/nav-item/nav-item-vm';
         <app-nav>
             <app-nav-item [vm]="vm" />
             <app-nav-item [vm]="vm" />
-            <div>Should not be projected</div>
-            <div>Should not be projected</div>
+            <button>Button</button>
         </app-nav>
     `,
 })
@@ -34,9 +33,9 @@ describe('NavComponent', () => {
         fixture.detectChanges();
         compiled = fixture.debugElement.nativeElement;
     });
-
+  
     //Snapshot testing
-    it('should project <app-nav-item> elements and ignore other elements', () => {
+    it('should project the provided content', () => {
         //Arrange
         fixture.componentRef.setInput('vm', {});
 
@@ -78,7 +77,7 @@ describe('NavComponent', () => {
             rel: 'noopener',
         });
 
-        //Act
+         //Act
         fixture.detectChanges();
 
         //Assert

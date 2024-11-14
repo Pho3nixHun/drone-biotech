@@ -1,13 +1,13 @@
 import { ProductsPageVM } from './products-page-vm.model';
 
 export const enProductsPageMock = {
-    title0: 'title0',
-    productAltText0: 'title0',
-    productDescription0: 'title1',
-    productAltText1: 'title0',
-    productDescription1: 'title1',
-    productAltText2: 'title0',
-    productDescription2: 'title1',
+    title0: '0title',
+    productAltText0: '0productAltText0',
+    productDescription0: '0productDescription0',
+    productAltText1: '1productAltText',
+    productDescription1: '1productDescription',
+    productAltText2: '1productAltText',
+    productDescription2: '2productDescription',
 };
 
 export const productsPageVMWithoutProductItem: ProductsPageVM = {
@@ -103,7 +103,6 @@ export const productsPageVMWithRoutes: ProductsPageVM = {
         ],
     },
 };
-
 export const productsPageVMMock: ProductsPageVM = {
     productListFrame: {
         titleKey: 'title0',
