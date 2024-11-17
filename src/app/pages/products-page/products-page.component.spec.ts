@@ -52,7 +52,7 @@ describe('ProductsPageComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
     //Snapshot test
-    it('should  render the template when the VM is provided', () => {
+    it('should render the template when the VM is provided', () => {
         //Arrange
         updateGetVMSignal(productsPageVMMock);
 

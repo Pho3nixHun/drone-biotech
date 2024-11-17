@@ -13,6 +13,7 @@ import {
     landingPageVMWithOnePartnerLogoXMock,
     landingPageVMWithOneProductItemMock,
     landingPageVMWithOneTestimonialMock,
+    landingPageVMWithOnlyContactFrameMock,
     landingPageVMWithOnlyPartnerFrameMock,
     landingPageVMWithOnlyProductFrameMock,
     landingPageVMWithoutFrameMock,
@@ -31,6 +32,7 @@ import { provideRouter } from '@angular/router';
 describe('LandingPageComponent', () => {
     let fixture: ComponentFixture<LandingPageComponent>;
     let compiled: HTMLElement;
+    let component: LandingPageComponent;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -53,6 +55,7 @@ describe('LandingPageComponent', () => {
         updateGetVMSignal(undefined);
         fixture = TestBed.createComponent(LandingPageComponent);
         fixture.detectChanges();
+        component = fixture.componentInstance;
         compiled = fixture.debugElement.nativeElement;
     });
 
@@ -148,6 +151,18 @@ describe('LandingPageComponent', () => {
     it('should render only partner frames when only partner frames are provided', () => {
         // Arrange
         updateGetVMSignal(landingPageVMWithOnlyPartnerFrameMock);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should render only contact frames when only contact frames are provided', () => {
+        // Arrange
+        updateGetVMSignal(landingPageVMWithOnlyContactFrameMock);
 
         // Act
         fixture.detectChanges();
@@ -274,5 +289,103 @@ describe('LandingPageComponent', () => {
 
         //Assert
         expect(compiled).toMatchSnapshot();
+    });
+
+    it('should initialize form controls with empty values', () => {
+        //Arrange
+        //There is no need to arrange
+
+        //Act
+        //There is no need to act
+
+        //Assert
+        expect(component.messageForm.get('email')?.value).toBe('');
+        expect(component.messageForm.get('name')?.value).toBe('');
+        expect(component.messageForm.get('subject')?.value).toBe('');
+        expect(component.messageForm.get('message')?.value).toBe('');
+    });
+
+    it('should validate the email format', () => {
+        //Arrange
+        const emailControl = component.messageForm.get('email');
+        emailControl?.setValue('invalidEmail');
+
+        //Act
+        //There is no need to act
+
+        //Assert
+        expect(emailControl?.hasError('email')).toBe(true);
+    });
+
+    it('should validate the name format', () => {
+        //Arrange
+        const nameControl = component.messageForm.get('name');
+        nameControl?.setValue('');
+
+        //Act
+        //There is no need to act
+
+        //Assert
+        expect(nameControl?.hasError('required')).toBe(true);
+    });
+
+    it('should validate the subject format', () => {
+        //Arrange
+        const subjectControl = component.messageForm.get('subject');
+        subjectControl?.setValue('');
+
+        //Act
+        //There is no need to act
+
+        //Assert
+        expect(subjectControl?.hasError('required')).toBe(true);
+    });
+
+    it('should validate the message format', () => {
+        //Arrange
+        const messageControl = component.messageForm.get('message');
+        messageControl?.setValue('');
+
+        //Act
+        //There is no need to act
+
+        //Assert
+        expect(messageControl?.hasError('required')).toBe(true);
+    });
+
+    it('should disable the submit button if the messageForm is invalid', () => {
+        //Arrange
+        updateGetVMSignal(landingPageVMMock);
+
+        //Act
+        component.messageForm.get('email')?.setValue('');
+        component.messageForm.get('name')?.setValue('');
+        component.messageForm.get('message')?.setValue('');
+        component.messageForm.get('subject')?.setValue('');
+        fixture.detectChanges();
+
+        //Assert
+        const button = fixture.nativeElement.querySelector(
+            'form button[type="submit"]'
+        );
+        expect(button.disabled).toBe(true);
+    });
+
+    it('should enable the submit button if the messageForm is valid', () => {
+        //Arrange
+        updateGetVMSignal(landingPageVMMock);
+
+        //Act
+        component.messageForm.get('email')?.setValue('test@example.com');
+        component.messageForm.get('name')?.setValue('name');
+        component.messageForm.get('message')?.setValue('message');
+        component.messageForm.get('subject')?.setValue('subject');
+        fixture.detectChanges();
+
+        //Assert
+        const button = fixture.nativeElement.querySelector(
+            'button[type="submit"]'
+        );
+        expect(button.disabled).toBe(false);
     });
 });

@@ -1,6 +1,7 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { FrameID, LandingPageVM } from './landing-page-vm.model';
 import { Rel } from '@interfaces/with-link.interface';
+//import { Rel } from '@interfaces/with-link.interface';
 export const enLandingMock = {
     framesTitle: 'framesTitle',
     productItemAltText: 'altText',
@@ -13,6 +14,10 @@ export const enLandingMock = {
     heroDescription: 'heroDescription',
     heroPrimaryButtonLabel: 'heroPrimaryButtonLabel',
     heroSecondaryButtonLabel: 'heroSecondaryButtonLabel',
+    contactButtonTitle: 'title',
+    contactMessage: 'message',
+    contactName: 'name',
+    contactSubject: 'subject',
 };
 
 export const landingPageVMWithoutFrameMock: LandingPageVM = {
@@ -30,6 +35,7 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
     frameXVMs: [
         {
             id: AppRouteSegment.PRODUCT,
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -57,6 +63,7 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
         },
         {
             id: AppRouteSegment.PARTNERS,
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -113,6 +120,18 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
                 },
             ],
         },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
     ],
 };
 
@@ -120,6 +139,7 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -159,6 +179,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -217,6 +238,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -274,7 +296,20 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             ],
         },
         {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
+        {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -332,120 +367,16 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             ],
         },
         {
-            id: 'partners',
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
             titleKey: 'framesTitle',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-            ],
-        },
-        {
-            id: 'partners',
-            titleKey: 'framesTitle',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'partnerLogoAltText',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-                {
-                    messageKey: 'testimonialMessage',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'testimonialRoleAndCompany',
-                },
-            ],
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -461,6 +392,7 @@ export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -536,6 +468,7 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -575,11 +508,13 @@ export const landingPageVMWithoutProductItemMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [],
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -635,6 +570,18 @@ export const landingPageVMWithoutProductItemMock: LandingPageVM = {
                     roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -650,6 +597,7 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -663,6 +611,7 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -719,6 +668,18 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
                 },
             ],
         },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
     ],
     heroXVM: {
         backgroundImageSrc: 'assets/farming.jpg',
@@ -733,6 +694,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -774,6 +736,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -830,6 +793,18 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                 },
             ],
         },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
     ],
     heroXVM: {
         backgroundImageSrc: 'assets/farming.jpg',
@@ -844,6 +819,7 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -871,6 +847,7 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [],
             testimonialItemVMs: [
@@ -906,6 +883,18 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
                 },
             ],
         },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
     ],
     heroXVM: {
         backgroundImageSrc: 'assets/farming.jpg',
@@ -920,6 +909,7 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -947,6 +937,7 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -986,6 +977,18 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
                     roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -1001,6 +1004,7 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -1028,6 +1032,7 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -1084,6 +1089,18 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
                 },
             ],
         },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
     ],
     heroXVM: {
         backgroundImageSrc: 'assets/farming.jpg',
@@ -1098,6 +1115,7 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -1125,6 +1143,7 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -1150,6 +1169,18 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
             ],
             testimonialItemVMs: [],
         },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
     ],
     heroXVM: {
         backgroundImageSrc: 'assets/farming.jpg',
@@ -1164,6 +1195,7 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -1191,6 +1223,7 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -1221,6 +1254,18 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
                     roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -1236,6 +1281,7 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
     frameXVMs: [
         {
             id: 'products',
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -1263,6 +1309,7 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
         },
         {
             id: 'partners',
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -1313,6 +1360,18 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
                     roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -1324,10 +1383,11 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
     },
 };
 
-export const landingPageVMMockWithRoutes = {
+export const landingPageVMMockWithRoutes: LandingPageVM = {
     frameXVMs: [
         {
             id: AppRouteSegment.PRODUCT,
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -1355,6 +1415,7 @@ export const landingPageVMMockWithRoutes = {
         },
         {
             id: AppRouteSegment.PARTNERS,
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -1410,6 +1471,18 @@ export const landingPageVMMockWithRoutes = {
                     roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -1420,10 +1493,11 @@ export const landingPageVMMockWithRoutes = {
         secondaryButtonLabelKey: 'heroSecondaryButtonLabel',
     },
 };
-export const landingPageVMMock = {
+export const landingPageVMMock: LandingPageVM = {
     frameXVMs: [
         {
             id: AppRouteSegment.PRODUCT,
+            type: 'productFrame',
             titleKey: 'framesTitle',
             productItemXVMs: [
                 {
@@ -1451,6 +1525,7 @@ export const landingPageVMMock = {
         },
         {
             id: AppRouteSegment.PARTNERS,
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'framesTitle',
             partnerLogoXVMs: [
                 {
@@ -1506,6 +1581,129 @@ export const landingPageVMMock = {
                     roleAndCompanyKey: 'testimonialRoleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
+        },
+    ],
+    heroXVM: {
+        backgroundImageSrc: 'assets/farming.jpg',
+        titleKey: 'heroTitle',
+        descriptionKey: 'heroDescription',
+        primaryButtonLabelKey: 'heroPrimaryButtonLabel',
+        secondaryButtonLabelKey: 'heroSecondaryButtonLabel',
+    },
+};
+
+export const landingPageVMWithOnlyContactFrameMock: LandingPageVM = {
+    frameXVMs: [
+        {
+            id: AppRouteSegment.PRODUCT,
+            type: 'productFrame',
+            titleKey: 'framesTitle',
+            productItemXVMs: [
+                {
+                    routerLink: [AppRouteSegment.PRODUCT, '1'],
+                    altTextKey: 'productItemAltText',
+                    titleKey: 'productItemAltText',
+                    descriptionKey: 'productItemDescription',
+                    imageSrc: 'assets/lepke.jpg',
+                },
+                {
+                    routerLink: [AppRouteSegment.PRODUCT, '2'],
+                    altTextKey: 'productItemAltText',
+                    titleKey: 'productItemAltText',
+                    descriptionKey: 'productItemDescription',
+                    imageSrc: 'assets/lepke.jpg',
+                },
+                {
+                    routerLink: [AppRouteSegment.PRODUCT, '3'],
+                    altTextKey: 'productItemAltText',
+                    titleKey: 'productItemAltText',
+                    descriptionKey: 'productItemDescription',
+                    imageSrc: 'assets/lepke.jpg',
+                },
+            ],
+        },
+        {
+            id: AppRouteSegment.PARTNERS,
+            type: 'partnerAndTestimonialFrame',
+            titleKey: 'framesTitle',
+            partnerLogoXVMs: [
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'partnerLogoAltText',
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'partnerLogoAltText',
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'partnerLogoAltText',
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'partnerLogoAltText',
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'partnerLogoAltText',
+                },
+            ],
+            testimonialItemVMs: [
+                {
+                    messageKey: 'testimonialMessage',
+                    name: 'John Doe',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
+                },
+                {
+                    messageKey: 'testimonialMessage',
+                    name: 'Jane Smith',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
+                },
+                {
+                    messageKey: 'testimonialMessage',
+                    name: 'Emily Johnson',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
+                },
+                {
+                    messageKey: 'testimonialMessage',
+                    name: 'Emily Johnson',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
+                },
+                {
+                    messageKey: 'testimonialMessage',
+                    name: 'Emily Johnson',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
+                },
+                {
+                    messageKey: 'testimonialMessage',
+                    name: 'Emily Johnson',
+                    roleAndCompanyKey: 'testimonialRoleAndCompany',
+                },
+            ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'framesTitle',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'contactButtonTitle',
+                messageKey: 'contactMessage',
+                nameKey: 'contactName',
+                subjectKey: 'contactSubject',
+            },
         },
     ],
     heroXVM: {
@@ -1521,6 +1719,7 @@ export const landingPageVMDefault: LandingPageVM = {
     frameXVMs: [
         {
             id: FrameID.PRODUCT,
+            type: 'productFrame',
             titleKey: 'LandingPage.frames.0.title',
             productItemXVMs: [
                 {
@@ -1548,6 +1747,7 @@ export const landingPageVMDefault: LandingPageVM = {
         },
         {
             id: FrameID.PARTNERS,
+            type: 'partnerAndTestimonialFrame',
             titleKey: 'LandingPage.frames.1.title',
             partnerLogoXVMs: [
                 {
@@ -1609,6 +1809,18 @@ export const landingPageVMDefault: LandingPageVM = {
                         'LandingPage.testimonials.5.roleAndCompany',
                 },
             ],
+        },
+        {
+            id: FrameID.CONTACT,
+            type: 'contactFrame',
+            titleKey: 'LandingPage.contact.title',
+            backgroundImageSrc: 'assets/farming.jpg',
+            contactFormXVM: {
+                buttonTitleKey: 'LandingPage.contact.buttonTitle',
+                messageKey: 'LandingPage.contact.message',
+                nameKey: 'LandingPage.contact.name',
+                subjectKey: 'LandingPage.contact.subject',
+            },
         },
     ],
     heroXVM: {

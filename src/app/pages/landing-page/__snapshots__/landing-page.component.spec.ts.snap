@@ -2,416 +2,6 @@
 
 exports[`LandingPageComponent should have the correct routerLinks on product-items 1`] = `
 <div
-  id="root12"
-  ng-version="18.2.8"
->
-  <app-hero
-    ng-reflect-vm="[object Object]"
-  >
-    <section
-      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-      style="background-image: url(assets/farming.jpg);"
-    >
-      <div
-        class="flex flex-col mx-10 space-y-5"
-      >
-        <h1>
-          heroTitle
-        </h1>
-        <p>
-          heroDescription
-        </p>
-        <div
-          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
-        >
-          <a
-            class="primary"
-            href=""
-          >
-            heroPrimaryButtonLabel
-          </a>
-          <a
-            class="secondary"
-            href=""
-          >
-            heroSecondaryButtonLabel
-          </a>
-        </div>
-      </div>
-    </section>
-    <!--container-->
-  </app-hero>
-  <!--container-->
-  <app-frame
-    id="products"
-    ng-reflect-vm="[object Object]"
-  >
-    <section
-      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-    >
-      <h2>
-        framesTitle
-      </h2>
-      <app-product-list>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-        >
-          <app-product-item
-            class="h-full"
-            ng-reflect-router-link="products,1"
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
-          >
-            <a
-              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-            >
-              <img
-                alt="productItemAltText"
-                class="w-auto h-auto object-cover rounded-md"
-                src="assets/lepke.jpg"
-              />
-              <h3
-                class="font-bold text-xl sm:text-2xl mt-4"
-              >
-                productItemAltText
-              </h3>
-              <p
-                class="mt-4"
-              >
-                productItemDescription
-              </p>
-            </a>
-            <!--container-->
-          </app-product-item>
-          <app-product-item
-            class="h-full"
-            ng-reflect-router-link="products,2"
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
-          >
-            <a
-              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-            >
-              <img
-                alt="productItemAltText"
-                class="w-auto h-auto object-cover rounded-md"
-                src="assets/lepke.jpg"
-              />
-              <h3
-                class="font-bold text-xl sm:text-2xl mt-4"
-              >
-                productItemAltText
-              </h3>
-              <p
-                class="mt-4"
-              >
-                productItemDescription
-              </p>
-            </a>
-            <!--container-->
-          </app-product-item>
-          <app-product-item
-            class="h-full"
-            ng-reflect-router-link="products,3"
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
-          >
-            <a
-              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-            >
-              <img
-                alt="productItemAltText"
-                class="w-auto h-auto object-cover rounded-md"
-                src="assets/lepke.jpg"
-              />
-              <h3
-                class="font-bold text-xl sm:text-2xl mt-4"
-              >
-                productItemAltText
-              </h3>
-              <p
-                class="mt-4"
-              >
-                productItemDescription
-              </p>
-            </a>
-            <!--container-->
-          </app-product-item>
-          <!--container-->
-        </div>
-      </app-product-list>
-    </section>
-    <!--container-->
-  </app-frame>
-  <!--ng-container-->
-  <app-frame
-    id="partners"
-    ng-reflect-vm="[object Object]"
-  >
-    <section
-      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-    >
-      <h2>
-        framesTitle
-      </h2>
-      <app-partner-list>
-        <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        >
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-        </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
-      >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
-    </section>
-    <!--container-->
-  </app-frame>
-  <!--ng-container-->
-  <!--container-->
-  <!--container-->
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
-<div
   id="root13"
   ng-version="18.2.8"
 >
@@ -454,7 +44,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -551,12 +140,500 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        framesTitle
+      </h2>
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
+      </app-partner-list>
+      <!--container-->
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <!--container-->
+      </swiper-container>
+      <!--container-->
+    </section>
+  </app-frame>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
+<div
+  id="root14"
+  ng-version="18.2.8"
+>
+  <app-hero
     ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          heroTitle
+        </h1>
+        <p>
+          heroDescription
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            heroPrimaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            heroSecondaryButtonLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--container-->
+  </app-hero>
+  <!--container-->
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        framesTitle
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,1"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,2"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <!--container-->
+        </div>
+      </app-product-list>
+    </section>
+  </app-frame>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <app-frame
+    id="partners"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -754,9 +831,84 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -767,7 +919,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
 
 exports[`LandingPageComponent should not render <app-product-item> when 0 is provided 1`] = `
 <div
-  id="root9"
+  id="root10"
   ng-version="18.2.8"
 >
   <app-hero
@@ -809,7 +961,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -825,12 +976,14 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -1083,9 +1236,84 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -1096,7 +1324,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
 
 exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is provided 1`] = `
 <div
-  id="root16"
+  id="root17"
   ng-version="18.2.8"
 >
   <app-hero
@@ -1138,7 +1366,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -1235,12 +1462,14 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -1325,9 +1554,84 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -1383,6 +1687,7 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
   <!--container-->
   <!--container-->
   <!--container-->
+  <!--container-->
 </div>
 `;
 
@@ -1394,7 +1699,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -1491,12 +1795,14 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -1749,9 +2055,84 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -1762,7 +2143,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
 
 exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provided 1`] = `
 <div
-  id="root14"
+  id="root15"
   ng-version="18.2.8"
 >
   <app-hero
@@ -1804,7 +2185,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -1901,12 +2281,14 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -2115,9 +2497,84 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -2128,7 +2585,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
 
 exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provided 1`] = `
 <div
-  id="root10"
+  id="root11"
   ng-version="18.2.8"
 >
   <app-hero
@@ -2170,7 +2627,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -2213,12 +2669,14 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -2471,9 +2929,84 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -2484,7 +3017,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
 
 exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is provided 1`] = `
 <div
-  id="root17"
+  id="root18"
   ng-version="18.2.8"
 >
   <app-hero
@@ -2526,7 +3059,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -2623,12 +3155,14 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -2741,9 +3275,84 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -2796,7 +3405,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -2893,9 +3501,12 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -2906,7 +3517,7 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
 
 exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided 1`] = `
 <div
-  id="root15"
+  id="root16"
   ng-version="18.2.8"
 >
   <app-hero
@@ -2948,7 +3559,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -3045,12 +3655,14 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -3303,9 +3915,84 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -3316,7 +4003,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
 
 exports[`LandingPageComponent should render 5 <app-product-item> in order when 5 <app-product-item>  are provided 1`] = `
 <div
-  id="root11"
+  id="root12"
   ng-version="18.2.8"
 >
   <app-hero
@@ -3358,7 +4045,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -3509,12 +4195,14 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -3767,9 +4455,84 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -3780,7 +4543,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
 
 exports[`LandingPageComponent should render 5 <app-testimonial-item> in order when 5 app-testimonial-item are provided 1`] = `
 <div
-  id="root18"
+  id="root19"
   ng-version="18.2.8"
 >
   <app-hero
@@ -3822,7 +4585,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -3919,12 +4681,14 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -4149,9 +4913,84 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -4202,9 +5041,9 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
     <!--container-->
   </app-hero>
   <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -4457,12 +5296,13 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -4715,12 +5555,86 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -4973,525 +5887,84 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
-  <app-frame
-    id="partners"
-    ng-reflect-vm="[object Object]"
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
   >
-    <section
-      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    <app-frame
+      id="contact"
     >
-      <h2>
-        framesTitle
-      </h2>
-      <app-partner-list>
-        <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-        >
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-        </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
       >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
-    </section>
-    <!--container-->
-  </app-frame>
-  <!--ng-container-->
-  <app-frame
-    id="partners"
-    ng-reflect-vm="[object Object]"
-  >
-    <section
-      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-    >
-      <h2>
-        framesTitle
-      </h2>
-      <app-partner-list>
         <div
-          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
         >
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
+          <h2
+            class="text-white"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
           >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
-          <app-partner-logo
-            ng-reflect-vm="[object Object]"
-          >
-            <img
-              alt="partnerLogoAltText"
-              class="w-52 h-52"
-              src="assets/lepke.jpg"
-            />
-          </app-partner-logo>
-          <!--container-->
-          <!--container-->
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
         </div>
-      </app-partner-list>
-      <!--container-->
-      <swiper-container
-        autoplay-delay="2500"
-        autoplay-disable-on-interaction="false"
-        class="w-full sm:w-2/3 md:w-1/2"
-        keyboard="true"
-        pagination="true"
-        pagination-clickable="true"
-        pagination-dynamic-bullets="true"
-        space-between="30"
-      >
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                John Doe
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Jane Smith
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <swiper-slide
-          class="pb-10"
-        >
-          <app-testimonial-item
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-            >
-              <p
-                class="text-lg italic text-gray-700"
-              >
-                "testimonialMessage"
-              </p>
-              <p
-                class="font-semibold text-gray-900 mt-4"
-              >
-                Emily Johnson
-              </p>
-              <p
-                class="text-gray-500"
-              >
-                testimonialRoleAndCompany
-              </p>
-            </div>
-            <!--container-->
-          </app-testimonial-item>
-        </swiper-slide>
-        <!--container-->
-      </swiper-container>
-      <!--container-->
-    </section>
-    <!--container-->
-  </app-frame>
+      </section>
+    </app-frame>
+  </div>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -5508,6 +5981,493 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
   <!--container-->
    Loading...
 
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should render only contact frames when only contact frames are provided 1`] = `
+<div
+  id="root9"
+  ng-version="18.2.8"
+>
+  <app-hero
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
+      style="background-image: url(assets/farming.jpg);"
+    >
+      <div
+        class="flex flex-col mx-10 space-y-5"
+      >
+        <h1>
+          heroTitle
+        </h1>
+        <p>
+          heroDescription
+        </p>
+        <div
+          class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+        >
+          <a
+            class="primary"
+            href=""
+          >
+            heroPrimaryButtonLabel
+          </a>
+          <a
+            class="secondary"
+            href=""
+          >
+            heroSecondaryButtonLabel
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--container-->
+  </app-hero>
+  <!--container-->
+  <app-frame
+    id="products"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        framesTitle
+      </h2>
+      <app-product-list>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+        >
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,1"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,2"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <app-product-item
+            class="h-full"
+            ng-reflect-router-link="products,3"
+            ng-reflect-vm="[object Object]"
+            tabindex="0"
+          >
+            <a
+              class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+            >
+              <img
+                alt="productItemAltText"
+                class="w-auto h-auto object-cover rounded-md"
+                src="assets/lepke.jpg"
+              />
+              <h3
+                class="font-bold text-xl sm:text-2xl mt-4"
+              >
+                productItemAltText
+              </h3>
+              <p
+                class="mt-4"
+              >
+                productItemDescription
+              </p>
+            </a>
+            <!--container-->
+          </app-product-item>
+          <!--container-->
+        </div>
+      </app-product-list>
+    </section>
+  </app-frame>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <app-frame
+    id="partners"
+  >
+    <section
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+    >
+      <h2>
+        framesTitle
+      </h2>
+      <app-partner-list>
+        <div
+          class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+        >
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+          <app-partner-logo
+            ng-reflect-vm="[object Object]"
+          >
+            <img
+              alt="partnerLogoAltText"
+              class="w-52 h-52"
+              src="assets/lepke.jpg"
+            />
+          </app-partner-logo>
+          <!--container-->
+          <!--container-->
+        </div>
+      </app-partner-list>
+      <!--container-->
+      <swiper-container
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        class="w-full sm:w-2/3 md:w-1/2"
+        keyboard="true"
+        pagination="true"
+        pagination-clickable="true"
+        pagination-dynamic-bullets="true"
+        space-between="30"
+      >
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                John Doe
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Jane Smith
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <swiper-slide
+          class="pb-10"
+        >
+          <app-testimonial-item
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
+            >
+              <p
+                class="text-lg italic text-gray-700"
+              >
+                "testimonialMessage"
+              </p>
+              <p
+                class="font-semibold text-gray-900 mt-4"
+              >
+                Emily Johnson
+              </p>
+              <p
+                class="text-gray-500"
+              >
+                testimonialRoleAndCompany
+              </p>
+            </div>
+            <!--container-->
+          </app-testimonial-item>
+        </swiper-slide>
+        <!--container-->
+      </swiper-container>
+      <!--container-->
+    </section>
+  </app-frame>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -5556,9 +6516,9 @@ exports[`LandingPageComponent should render only partner frames when only partne
     <!--container-->
   </app-hero>
   <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -5817,9 +6777,11 @@ exports[`LandingPageComponent should render only partner frames when only partne
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -5872,7 +6834,6 @@ exports[`LandingPageComponent should render only product frames when only produc
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -5969,9 +6930,12 @@ exports[`LandingPageComponent should render only product frames when only produc
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -6024,7 +6988,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -6121,12 +7084,14 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -6379,9 +7344,84 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->
@@ -6434,7 +7474,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
   <!--container-->
   <app-frame
     id="products"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -6531,12 +7570,14 @@ exports[`LandingPageComponent should render the template when there is a VM prov
         </div>
       </app-product-list>
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
   <app-frame
     id="partners"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -6789,9 +7830,84 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       </swiper-container>
       <!--container-->
     </section>
-    <!--container-->
   </app-frame>
   <!--ng-container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <div
+    style="background-image: url(assets/farming.jpg);"
+  >
+    <app-frame
+      id="contact"
+    >
+      <section
+        class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+        >
+          <h2
+            class="text-white"
+          >
+            framesTitle
+          </h2>
+          <div
+            class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+          >
+            <form
+              class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="name"
+                id="name"
+                ng-reflect-name="name"
+                placeholder="contactName"
+                type="name"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class="custom-input ng-untouched ng-pristine ng-invalid"
+                formcontrolname="subject"
+                ng-reflect-name="subject"
+                placeholder="contactSubject"
+              />
+              <textarea
+                class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                formcontrolname="message"
+                ng-reflect-name="message"
+                placeholder="contactMessage"
+              >
+                                        
+              </textarea>
+              <button
+                class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                disabled=""
+                ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                type="submit"
+              >
+                 contactButtonTitle 
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </app-frame>
+  </div>
+  <!--ng-container-->
+  <!--container-->
+  <!--container-->
   <!--container-->
   <!--container-->
   <!--container-->

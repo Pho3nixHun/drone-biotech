@@ -9,10 +9,15 @@ import { TestimonialItemComponent } from '@components/testimonial-item/testimoni
 import { SwiperModule } from '@modules/swiper/swiper.module';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
-import { NgTemplateOutlet } from '@angular/common';
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { isProductFrame } from './landing-page-vm.model';
 import { Rel } from '@interfaces/with-link.interface';
+import {
+    FormGroup,
+    FormControl,
+    Validators,
+    ReactiveFormsModule,
+} from '@angular/forms';
 
 /**
  * LandingPageComponent
@@ -47,6 +52,8 @@ import { Rel } from '@interfaces/with-link.interface';
         SwiperModule,
         TranslocoModule,
         NgTemplateOutlet,
+        ReactiveFormsModule,
+        NgClass,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './landing-page.component.html',
@@ -56,8 +63,29 @@ export class LandingPageComponent {
     protected readonly defaultTarget = '_self';
 
     private readonly landingPageService = inject(LandingPageService);
-
-    protected isProductFrame = isProductFrame;
-
     protected vm = this.landingPageService.getVM();
+
+    public messageForm = new FormGroup({
+        name: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        subject: new FormControl('', [Validators.required]),
+        message: new FormControl('', [Validators.required]),
+    });
+
+    get name() {
+        return this.messageForm.get('name');
+    }
+    get email() {
+        return this.messageForm.get('email');
+    }
+    get subject() {
+        return this.messageForm.get('subject');
+    }
+    get message() {
+        return this.messageForm.get('message');
+    }
+
+    protected signIn() {
+        this.messageForm.reset();
+    }
 }

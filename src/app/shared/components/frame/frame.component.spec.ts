@@ -1,30 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FrameComponent } from './frame.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { Component, Input } from '@angular/core';
-import { FrameVM } from './frame-vm';
-
-const en = { title: 'Our Products' };
+import { Component } from '@angular/core';
 
 @Component({
-    template: `<app-frame [vm]="vm"><div>Should be projected</div></app-frame>`,
+    template: `<app-frame><div>Should be projected</div></app-frame>`,
 })
-class TestHostComponent {
-    @Input() vm!: FrameVM;
-}
+class TestHostComponent {}
 describe('FrameComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
-    const vm: FrameVM = {
-        titleKey: 'title',
-    };
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
                 FrameComponent,
                 getTranslocoModule({
-                    langs: { en },
+                    langs: {},
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',
@@ -38,12 +30,12 @@ describe('FrameComponent', () => {
     });
 
     //Snapshot test
-    it('should render the template when the VM is provided', () => {
+    it('should project the provided content', () => {
         //Arrange
-        fixture.componentRef.setInput('vm', vm);
+        //There is no need to arrange
 
         //Act
-        fixture.detectChanges();
+        //There is no need to act
 
         //Assert
         expect(compiled).toMatchSnapshot();

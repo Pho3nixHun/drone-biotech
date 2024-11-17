@@ -81,7 +81,6 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
         <!--container-->
         <app-frame
           id="products"
-          ng-reflect-vm="[object Object]"
         >
           <section
             class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -178,12 +177,14 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
               </div>
             </app-product-list>
           </section>
-          <!--container-->
         </app-frame>
         <!--ng-container-->
+        <!--container-->
+        <!--container-->
+        <!--container-->
+        <!--container-->
         <app-frame
           id="partners"
-          ng-reflect-vm="[object Object]"
         >
           <section
             class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
@@ -436,9 +437,84 @@ exports[`AppComponent should navigate to "" and render the LandingPageComponent 
             </swiper-container>
             <!--container-->
           </section>
-          <!--container-->
         </app-frame>
         <!--ng-container-->
+        <!--container-->
+        <!--container-->
+        <!--container-->
+        <!--container-->
+        <div
+          style="background-image: url(assets/farming.jpg);"
+        >
+          <app-frame
+            id="contact"
+          >
+            <section
+              class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+            >
+              <div
+                class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between w-full"
+              >
+                <h2
+                  class="text-white"
+                >
+                  LandingPage.contact.title
+                </h2>
+                <div
+                  class="w-4/5 md:w-3/5 lg:w-2/5 mx-auto lg:mx-0 bg-white p-5"
+                >
+                  <form
+                    class="flex flex-col items-end ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="custom-input ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="name"
+                      id="name"
+                      ng-reflect-name="name"
+                      placeholder="LandingPage.contact.name"
+                      type="name"
+                    />
+                    <input
+                      class="custom-input ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="custom-input ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="subject"
+                      ng-reflect-name="subject"
+                      placeholder="LandingPage.contact.subject"
+                    />
+                    <textarea
+                      class="custom-input h-40 resize-none ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="message"
+                      ng-reflect-name="message"
+                      placeholder="LandingPage.contact.message"
+                    >
+                                              
+                    </textarea>
+                    <button
+                      class="text-white h-10 px-4 py-2 bg-gray-400 cursor-not-allowed opacity-50"
+                      disabled=""
+                      ng-reflect-ng-class="bg-gray-400 cursor-not-allowed"
+                      type="submit"
+                    >
+                       LandingPage.contact.buttonTitle 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </app-frame>
+        </div>
+        <!--ng-container-->
+        <!--container-->
+        <!--container-->
         <!--container-->
         <!--container-->
         <!--container-->
@@ -493,9 +569,7 @@ exports[`AppComponent should navigate to "/products" and render the ProductsPage
     >
       <router-outlet />
       <app-products-page>
-        <app-frame
-          ng-reflect-vm="[object Object]"
-        >
+        <app-frame>
           <section
             class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
           >
@@ -591,7 +665,6 @@ exports[`AppComponent should navigate to "/products" and render the ProductsPage
               </div>
             </app-product-list>
           </section>
-          <!--container-->
         </app-frame>
         <!--container-->
       </app-products-page>
@@ -643,9 +716,7 @@ exports[`AppComponent should navigate to "/products/id" and render the ProductsP
     >
       <router-outlet />
       <app-products-page>
-        <app-frame
-          ng-reflect-vm="[object Object]"
-        >
+        <app-frame>
           <section
             class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
           >
@@ -741,7 +812,6 @@ exports[`AppComponent should navigate to "/products/id" and render the ProductsP
               </div>
             </app-product-list>
           </section>
-          <!--container-->
         </app-frame>
         <!--container-->
       </app-products-page>

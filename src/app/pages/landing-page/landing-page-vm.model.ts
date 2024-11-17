@@ -1,16 +1,23 @@
-import { FrameVM } from '@components/frame/frame-vm';
 import { HeroVM } from '@components/hero/hero-vm.model';
 import { PartnerLogoVM } from '@components/partner-list/components/partner-logo/partner-logo-vm.model';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
 import { TestimonialItemVM } from '@components/testimonial-item/testimonial-item-vm.model';
-import { isWithId, WithId } from '@interfaces/with-id.interace';
+import { WithBackgroundImageSrc } from '@interfaces/with-background-image-src.interface';
+import { WithId } from '@interfaces/with-id.interace';
 import { WithLink } from '@interfaces/with-link.interface';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
+import { WithTitle } from '@interfaces/with-title.interface';
 
 // We use `interface` here because it's semantically appropriate
 // for extending object structures and ensures clear intent for others.
 interface ProductItemXVM extends WithRouterLink, ProductItemVM {}
 interface PartnerLogoXVM extends Partial<WithLink>, PartnerLogoVM {}
+interface ContactFormXVM {
+    nameKey: string;
+    messageKey: string;
+    subjectKey: string;
+    buttonTitleKey: string;
+}
 
 interface HeroXVM extends HeroVM {
     titleKey: string;
@@ -29,6 +36,9 @@ export interface WithTestimonials {
 export interface WithProductItemXVMs {
     productItemXVMs: ProductItemXVM[];
 }
+export interface WithContactForm {
+    contactFormXVM: ContactFormXVM;
+}
 
 export const isWithProductItemXVMs = (
     obj: object
@@ -36,19 +46,29 @@ export const isWithProductItemXVMs = (
     return 'productItemXVMs' in obj;
 };
 
-export interface ProductFrame extends FrameVM, WithId, WithProductItemXVMs {}
-
-export const isProductFrame = (frame: FrameXVM): frame is ProductFrame => {
-    return isWithId(frame) && isWithProductItemXVMs(frame);
-};
-
-export interface PartnerFrame extends FrameVM, WithId, WithPartnerLogos {}
-export interface TestimonialFrame extends FrameVM, WithId, WithTestimonials {}
+export interface ProductFrame extends WithTitle, WithId, WithProductItemXVMs {
+    type: 'productFrame';
+}
+export interface PartnerFrame extends WithTitle, WithId, WithPartnerLogos {
+    type: 'partnerFrame';
+}
+export interface TestimonialFrame extends WithTitle, WithId, WithTestimonials {
+    type: 'testimonialFrame';
+}
 export interface PartnerAndTestimonialFrame
-    extends FrameVM,
+    extends WithTitle,
         WithId,
         WithPartnerLogos,
-        WithTestimonials {}
+        WithTestimonials {
+    type: 'partnerAndTestimonialFrame';
+}
+export interface ContactFrame
+    extends WithTitle,
+        WithId,
+        WithContactForm,
+        WithBackgroundImageSrc {
+    type: 'contactFrame';
+}
 
 // We use`type` here because it's more appropriate when you need to define a union or more complex type,
 // as `interface` cannot represent a variable that can hold multiple distinct types.
@@ -56,7 +76,8 @@ export type FrameXVM =
     | ProductFrame
     | PartnerFrame
     | TestimonialFrame
-    | PartnerAndTestimonialFrame;
+    | PartnerAndTestimonialFrame
+    | ContactFrame;
 
 export interface LandingPageVM {
     heroXVM?: HeroXVM;
@@ -66,4 +87,5 @@ export interface LandingPageVM {
 export enum FrameID {
     PRODUCT = 'products',
     PARTNERS = 'partners',
+    CONTACT = 'contact',
 }
