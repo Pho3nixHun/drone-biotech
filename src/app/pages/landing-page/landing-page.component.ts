@@ -85,7 +85,7 @@ export class LandingPageComponent {
         return this.messageForm.get('message');
     }
 
-    protected signIn() {
+    protected sendMessage() {
         this.messageForm.reset();
     }
 }
