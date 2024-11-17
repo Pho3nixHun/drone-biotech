@@ -25,7 +25,14 @@
     </div>
 
     <ng-template #withLink let-vm="navItemXVM">
-        <app-nav-item [vm]="vm">{{ vm.textKey | transloco }}</app-nav-item>
+        <a
+            [href]="vm.link.href"
+            [rel]="vm.link.rel ? vm.link.rel?.join(' ') : defaultRel"
+            [target]="vm.link.target ? vm.link.target : defaultTarget"
+            class="nav-item"
+        >
+            {{ vm.textKey | transloco }}
+        </a>
     </ng-template>
 
     <ng-template #withRouterLink let-vm="navItemXVM">

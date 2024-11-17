@@ -11,6 +11,10 @@ import { AuthActions } from './stores/auth/auth.actions';
 import { Store } from '@ngrx/store';
 import { NgTemplateOutlet } from '@angular/common';
 import { isWithLink } from '@interfaces/with-link.interface';
+import {
+    defaultRel,
+    defaultTarget,
+} from '@components/header/components/nav/components/nav-item/nav-item-vm';
 
 @Component({
     selector: 'app-root',
@@ -33,7 +37,8 @@ export class AppComponent {
     private readonly appService = inject(AppService);
     private readonly store = inject(Store);
     protected vm = this.appService.getVM();
-
+    defaultRel = defaultRel;
+    defaultTarget = defaultTarget;
     isWithLink = isWithLink;
 
     signOut() {
