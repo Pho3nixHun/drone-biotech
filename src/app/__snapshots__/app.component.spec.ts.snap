@@ -1288,44 +1288,32 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
                 0title
               </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  1title
-                </a>
-              </app-nav-item>
+                 1title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#partners"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#partners"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  2title
-                </a>
-              </app-nav-item>
+                 2title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  3title
-                </a>
-              </app-nav-item>
+                 3title 
+              </a>
               <!--ng-container-->
               <!--container-->
               <button
@@ -1461,18 +1449,14 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
             <nav
               class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
             >
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  0title
-                </a>
-              </app-nav-item>
+                 0title 
+              </a>
               <!--ng-container-->
               <!--container-->
               <button
@@ -1640,70 +1624,50 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
             <nav
               class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
             >
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  0title
-                </a>
-              </app-nav-item>
+                 0title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  1title
-                </a>
-              </app-nav-item>
+                 1title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  2title
-                </a>
-              </app-nav-item>
+                 2title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  3title
-                </a>
-              </app-nav-item>
+                 3title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  4title
-                </a>
-              </app-nav-item>
+                 4title 
+              </a>
               <!--ng-container-->
               <!--container-->
               <button
@@ -1776,44 +1740,32 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
                 0title
               </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  1title
-                </a>
-              </app-nav-item>
+                 1title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#partners"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#partners"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  2title
-                </a>
-              </app-nav-item>
+                 2title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  3title
-                </a>
-              </app-nav-item>
+                 3title 
+              </a>
               <!--ng-container-->
               <!--container-->
               <button
@@ -1886,44 +1838,32 @@ exports[`AppComponent should render the template when the VM is provided 2`] = `
                 0title
               </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  1title
-                </a>
-              </app-nav-item>
+                 1title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#partners"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#partners"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  2title
-                </a>
-              </app-nav-item>
+                 2title 
+              </a>
               <!--ng-container-->
-              <app-nav-item
-                ng-reflect-vm="[object Object]"
+              <a
+                class="nav-item"
+                href="#products"
+                rel="noopener,noreferrer"
+                target="_self"
               >
-                <a
-                  class="nav-item"
-                  href="#products"
-                  rel="noopener noreferrer"
-                  target="_self"
-                >
-                  3title
-                </a>
-              </app-nav-item>
+                 3title 
+              </a>
               <!--ng-container-->
               <!--container-->
               <button
