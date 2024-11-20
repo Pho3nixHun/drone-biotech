@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, computed, inject } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
@@ -22,18 +22,24 @@ import { ProductsPageService } from './products-page.service';
  * - To serve as a smart container component that integrates business logic, including data fetching and presentation, to create a cohesive user interface.
  */
 @Component({
-  selector: 'app-products-page',
-  standalone: true,
-  imports: [
-    FrameComponent,
-    ProductItemComponent,
-    ProductListComponent,
-    RouterLink,
-  ],
-  templateUrl: './products-page.component.html',
+    selector: 'app-products-page',
+    standalone: true,
+    imports: [
+        FrameComponent,
+        ProductItemComponent,
+        ProductListComponent,
+        RouterLink,
+    ],
+    templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
-  private readonly productsPageService = inject(ProductsPageService);
-
-  protected vm = this.productsPageService.getVM();
+    private readonly productsPageService = inject(ProductsPageService);
+    private readonly activatedRoute = inject(ActivatedRoute);
+    public vm = this.productsPageService.getVM();
+    public filteredVM = computed(() => {
+        return this.vm().productListFrame.productItemVMs.find(
+            (item) =>
+                item.routerLink === this.activatedRoute.snapshot.params['id']
+        );
+    });
 }
