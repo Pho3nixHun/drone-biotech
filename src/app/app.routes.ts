@@ -11,6 +11,7 @@ export const routes: Routes = [
             import('./pages/landing-page/landing-page.component').then(
                 (m) => m.LandingPageComponent
             ),
+        data: { headerCanBeShown: true },
     },
     {
         path: AppRouteSegment.LOGIN,
@@ -19,6 +20,7 @@ export const routes: Routes = [
             import('./pages/login-page/login-page.component').then(
                 (m) => m.LoginPageComponent
             ),
+        data: { headerCanBeShown: false },
     },
     {
         path: AppRouteSegment.PRODUCT,
@@ -27,6 +29,7 @@ export const routes: Routes = [
             import('./pages/products-page/products-routing.module').then(
                 (m) => m.ProductsRoutingModule
             ),
+        data: { headerCanBeShown: true },
     },
     {
         path: '**',
@@ -35,5 +38,6 @@ export const routes: Routes = [
             import('./pages/not-found-page/not-found-page.component').then(
                 (m) => m.NotFoundPageComponent
             ),
+        data: { headerCanBeShown: true },
     },
 ];

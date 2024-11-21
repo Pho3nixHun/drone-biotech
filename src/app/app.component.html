@@ -1,26 +1,34 @@
 @if (vm(); as VM) {
     <div class="min-h-screen flex flex-col">
-        <app-header>
-            <app-logo
-                [vm]="VM.logoXVM"
-                [routerLink]="VM.logoXVM.routerLink"
-                class="cursor-pointer"
-            />
-            <app-nav>
-                @for (navItemXVM of VM.navItemXVMs; track $index) {
-                    <ng-container
-                        [ngTemplateOutlet]="
-                            isWithLink(navItemXVM) ? withLink : withRouterLink
-                        "
-                        [ngTemplateOutletContext]="{ navItemXVM }"
+        @if (headerCanBeShown$ | async) {
+            <app-header>
+                <app-logo
+                    [vm]="VM.logoXVM"
+                    [routerLink]="VM.logoXVM.routerLink"
+                    class="cursor-pointer"
+                />
+                <app-nav>
+                    @for (navItemXVM of VM.navItemXVMs; track $index) {
+                        <ng-container
+                            [ngTemplateOutlet]="
+                                isWithLink(navItemXVM)
+                                    ? withLink
+                                    : withRouterLink
+                            "
+                            [ngTemplateOutletContext]="{ navItemXVM }"
+                        >
+                        </ng-container>
+                    }
+                    <button
+                        mat-icon-button
+                        (click)="signOut()"
+                        class="nav-item"
                     >
-                    </ng-container>
-                }
-                <button mat-icon-button (click)="signOut()" class="nav-item">
-                    <mat-icon>logout</mat-icon>
-                </button>
-            </app-nav>
-        </app-header>
+                        <mat-icon>logout</mat-icon>
+                    </button>
+                </app-nav>
+            </app-header>
+        }
         <div class="flex-grow"><router-outlet /></div>
     </div>
 
