@@ -3,7 +3,6 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
-import { NavItemComponent } from '@components/header/components/nav/components/nav-item/nav-item.component';
 import { AppService } from './app.service';
 import { TranslocoModule } from '@jsverse/transloco';
 import { MatIconModule } from '@angular/material/icon';
