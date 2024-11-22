@@ -1,9 +1,9 @@
 @if (vm(); as vm) {
-  <app-frame [vm]="vm.productListFrame">
-    <app-product-list>
-      @for (item of vm.productListFrame.productItemVMs; track $index) {
-        <app-product-item [vm]="item" [routerLink]="item.routerLink" />
-      }
-    </app-product-list>
-  </app-frame>
+    <app-frame [vm]="vm.productListFrame">
+        <app-product-list>
+            @if (filteredItemVM(); as filteredItemVM) {
+                <app-product-item [vm]="filteredItemVM" />
+            }
+        </app-product-list>
+    </app-frame>
 }

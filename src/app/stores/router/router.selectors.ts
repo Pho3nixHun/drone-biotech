@@ -9,3 +9,8 @@ export const selectHeaderCanBeShown = createSelector(
     selectRouterState,
     (router) => router?.state.data['headerCanBeShown']
 );
+
+export const selectID = createSelector(
+    selectRouterState,
+    (router) => router?.state.params['id']
+);
