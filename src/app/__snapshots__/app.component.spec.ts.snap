@@ -10,44 +10,40 @@ exports[`AppComponent can navigate to the to "" because the user is logged in so
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
             >
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -478,44 +474,40 @@ exports[`AppComponent can navigate to the to "/products" because the user is log
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
             >
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -564,44 +556,40 @@ exports[`AppComponent can navigate to the to "/products/id" because the user is 
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
             >
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -905,44 +893,40 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
             >
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -1000,79 +984,75 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
             >
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                0title
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 1title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#partners"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 2title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 3title 
-              </a>
-              <!--ng-container-->
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -1099,52 +1079,48 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
             >
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
+              0title
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                0title
-              </a>
-              <!--ng-container-->
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -1171,53 +1147,49 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
             >
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
+               0title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                 0title 
-              </a>
-              <!--ng-container-->
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -1244,84 +1216,80 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
             >
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
+            >
+              1title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
+            >
+              2title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
+            >
+              3title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
+            >
+              4title
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                0title
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
-              >
-                1title
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
-              >
-                2title
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
-              >
-                3title
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
-              >
-                4title
-              </a>
-              <!--ng-container-->
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -1348,89 +1316,85 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
             >
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
+               0title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               4title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                 0title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 1title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 2title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 3title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 4title 
-              </a>
-              <!--ng-container-->
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->
@@ -1457,79 +1421,75 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
   >
     <app-header>
       <section
-        class="p-4 flex justify-center"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
       >
-        <div
-          class="w-full space-y-4 flex flex-col justify-between items-center md:w-3/4 md:flex-row md:space-y-0"
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
         >
-          <app-logo
-            class="cursor-pointer"
-            ng-reflect-router-link=""
-            ng-reflect-vm="[object Object]"
-            tabindex="0"
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
-            <img
-              alt="logo"
-              class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-              src="assets/phoenix.jpg"
-            />
-          </app-logo>
-          <app-nav>
-            <nav
-              class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
             >
-              <a
-                class="nav-item"
-                href="/"
-                ng-reflect-router-link=""
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
               >
-                0title
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 1title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#partners"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 2title 
-              </a>
-              <!--ng-container-->
-              <a
-                class="nav-item"
-                href="#products"
-                rel="noopener,noreferrer"
-                target="_self"
-              >
-                 3title 
-              </a>
-              <!--ng-container-->
-              <!--container-->
-              <button
-                class="nav-item"
-                mat-icon-button=""
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  logout
-                </mat-icon>
-              </button>
-            </nav>
-          </app-nav>
-        </div>
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
       </section>
     </app-header>
     <!--container-->

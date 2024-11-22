@@ -1,5 +1,7 @@
 @if (vm(); as vm) {
-  <div class="flex flex-col items-center justify-center h-[50vh] md:h-[75vh] px-4">
-    <app-message [vm]="vm.messageVM" />
-  </div>
+    <div
+        class="flex flex-col items-center justify-center w-full h-full min-h-screen"
+    >
+        <app-message [vm]="vm.messageVM" />
+    </div>
 }

@@ -15,7 +15,7 @@ exports[`NotFoundPageComponent should render the template when there is a VM pro
   ng-version="18.2.8"
 >
   <div
-    class="flex flex-col items-center justify-center h-[50vh] md:h-[75vh] px-4"
+    class="flex flex-col items-center justify-center w-full h-full min-h-screen"
   >
     <app-message
       ng-reflect-vm="[object Object]"

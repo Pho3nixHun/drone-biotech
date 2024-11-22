@@ -16,7 +16,7 @@ exports[`MessageComponent should render the template when there is a VM provided
     <p
       class="text-white md:text-xl max-w-md"
     >
-       description 
+       desc 
     </p>
   </div>
 </div>

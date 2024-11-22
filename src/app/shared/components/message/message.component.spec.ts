@@ -3,14 +3,14 @@ import { MessageComponent } from './message.component';
 import { MessageVM } from './message-vm.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 
-const en = { description: 'description' };
+const en = { description: 'desc' };
 describe('MessageComponent', () => {
     let fixture: ComponentFixture<MessageComponent>;
     let compiled: HTMLElement;
 
     const vm: MessageVM = {
         title: '404!',
-        descriptionKey: en.description,
+        descriptionKey: 'description',
     };
 
     beforeEach(async () => {

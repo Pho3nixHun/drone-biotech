@@ -25,12 +25,7 @@ import { provideTranslocoPersistTranslations } from '@jsverse/transloco-persist-
 import { provideTranslocoPersistLang } from '@jsverse/transloco-persist-lang';
 import { provideTranslocoLocale } from '@jsverse/transloco-locale';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import {
-    provideRouterStore,
-    routerReducer,
-    RouterState,
-    StoreRouterConnectingModule,
-} from '@ngrx/router-store';
+import { provideRouterStore, routerReducer } from '@ngrx/router-store';
 import { AuthStoreModule } from './stores/auth/auth.module';
 import { EffectsModule } from '@ngrx/effects';
 import {
@@ -104,11 +99,7 @@ export const appConfig: ApplicationConfig = {
             ),
             EffectsModule.forRoot([]),
             AuthStoreModule,
-            PersistentModule,
-            StoreRouterConnectingModule.forRoot({
-                stateKey: 'router', // Specify the key under which the router state will be stored
-                routerState: RouterState.Full, // Use Full to store complete router state
-            })
+            PersistentModule
         ),
         provideRouterStore({ serializer: CustomRouterStateSerializer }),
         ...(devMode ? [provideStoreDevtools()] : []),
