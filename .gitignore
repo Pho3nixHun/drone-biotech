@@ -96,4 +96,3 @@ Thumbs.db
 **/*.log
 
 # API keys
-/src/environments/api-keys.ts
