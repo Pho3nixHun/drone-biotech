@@ -16,6 +16,7 @@ import {
 } from '@components/header/components/nav/components/nav-item/nav-item-vm';
 import { selectHeaderCanBeShown } from './stores/router/router.selectors';
 import { Observable, of } from 'rxjs';
+import { LoadGoogleMapsModule } from '@modules/google-maps/load-google-maps.module';
 
 @Component({
     selector: 'app-root',
@@ -30,6 +31,7 @@ import { Observable, of } from 'rxjs';
         RouterModule,
         NgTemplateOutlet,
         AsyncPipe,
+        LoadGoogleMapsModule,
     ],
     templateUrl: './app.component.html',
 })

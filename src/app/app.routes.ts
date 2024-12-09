@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { AppRouteSegment } from './app-route-segment';
-import { LoginGuard } from './shared/guards/login/login.guard';
-import { AuthGuard } from './shared/guards/auth/auth.guard';
+import { LoginGuard } from '@guards/login/login.guard';
+import { AuthGuard } from '@guards/auth/auth.guard';
 
 export const routes: Routes = [
     {
@@ -28,6 +28,15 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./pages/products-page/products-routing.module').then(
                 (m) => m.ProductsRoutingModule
+            ),
+        data: { headerCanBeShown: true },
+    },
+    {
+        path: AppRouteSegment.ORDERS,
+        canActivate: [AuthGuard],
+        loadChildren: () =>
+            import('./pages/orders-pages/orders-routing.module').then(
+                (m) => m.OrdersRoutingModule
             ),
         data: { headerCanBeShown: true },
     },

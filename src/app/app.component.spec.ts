@@ -23,15 +23,20 @@ import { routes } from './app.routes';
 import {
     provideAuthGuard,
     updateAuthenticated,
-} from './shared/guards/auth/auth.guard.mock';
+} from '@guards/auth/auth.guard.mock';
 import {
     provideLoginGuard,
     updateLoggedIn,
-} from './shared/guards/login/login.guard.mock';
+} from '@guards/login/login.guard.mock';
 import { Auth } from '@angular/fire/auth';
 import { of } from 'rxjs';
 import { AuthActions } from './stores/auth/auth.actions';
 import { selectHeaderCanBeShown } from './stores/router/router.selectors';
+import {
+    provideMockDrawingControlOptions,
+    provideMockMapOptions,
+    provideMockPolygonOptions,
+} from '@services/maps-config/maps-config-vm.model';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
@@ -59,6 +64,9 @@ describe('AppComponent', () => {
                 provideRouter(routes),
                 provideMockStore(),
                 { provide: Auth, useValue: of(null) },
+                provideMockDrawingControlOptions(),
+                provideMockMapOptions(),
+                provideMockPolygonOptions(),
             ],
         }).compileComponents();
 
@@ -237,7 +245,21 @@ describe('AppComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-    it('can navigate to the to "" because the user is logged in so it should render the LandingPage', async () => {
+    //Snapshot test
+    it('should navigate back to the LoginPage after navigate to "/orders/new" because the user is not logged in', async () => {
+        //Arrange
+        store.overrideSelector(selectHeaderCanBeShown, false);
+        updateGetVMSignal(appEmptyMockVMForRoutes);
+
+        //Act
+        await router.navigate([AppRouteSegment.ORDERS, AppRouteSegment.NEW]);
+        fixture.detectChanges();
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot testing
+    it('can navigate to "" because the user is logged in so it should render the LandingPage', async () => {
         //Arrange
         store.overrideSelector(selectHeaderCanBeShown, true);
         updateGetVMSignal(appEmptyMockVMForRoutes);
@@ -252,8 +274,8 @@ describe('AppComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-    //Snapshot test
-    it('can navigate to the to "/products" because the user is logged in so it should render the ProductsPage', async () => {
+    //Snapshot testing
+    it('can navigate to "/products" because the user is logged in so it should render the ProductsPage', async () => {
         //Arrange
         store.overrideSelector(selectHeaderCanBeShown, true);
         updateGetVMSignal(appEmptyMockVMForRoutes);
@@ -268,7 +290,8 @@ describe('AppComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-    it('can navigate to the to "/products/id" because the user is logged in so it should render the ProductsPage', async () => {
+    //Snapshot testing
+    it('can navigate to "/products/id" because the user is logged in so it should render the ProductsPage', async () => {
         //Arrange
         store.overrideSelector(selectHeaderCanBeShown, true);
         updateGetVMSignal(appEmptyMockVMForRoutes);
@@ -277,6 +300,22 @@ describe('AppComponent', () => {
 
         //Act
         await router.navigate([AppRouteSegment.PRODUCT, 'id']);
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot testing
+    it('can navigate to "/orders/new" because the user is logged in so it should render the OrdersNewPage', async () => {
+        //Arrange
+        store.overrideSelector(selectHeaderCanBeShown, true);
+        updateGetVMSignal(appEmptyMockVMForRoutes);
+        updateAuthenticated(true);
+        updateLoggedIn(true);
+
+        //Act
+        await router.navigate([AppRouteSegment.ORDERS, AppRouteSegment.NEW]);
         fixture.detectChanges();
 
         //Assert

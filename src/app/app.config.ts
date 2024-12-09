@@ -35,6 +35,11 @@ import {
 import { browserLocalPersistence, setPersistence } from 'firebase/auth';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
+import {
+    POLYGON_OPTIONS,
+    DRAWING_CONTROL_OPTIONS,
+    MAP_OPTIONS,
+} from '@services/maps-config/maps-config-vm.model';
 
 /*
 import {
@@ -105,6 +110,30 @@ export const appConfig: ApplicationConfig = {
         ...(devMode ? [provideStoreDevtools()] : []),
         provideAnimationsAsync(),
 
+        {
+            provide: POLYGON_OPTIONS,
+            useValue: {
+                clickable: true,
+                draggable: false,
+                editable: true,
+                fillColor: '#ADFF2F',
+                fillOpacity: 0.5,
+            },
+        },
+        {
+            provide: DRAWING_CONTROL_OPTIONS,
+            useValue: {
+                drawingModes: ['polygon'],
+            },
+        },
+        {
+            provide: MAP_OPTIONS,
+            useValue: {
+                mapTypeId: 'roadmap',
+                disableDoubleClickZoom: true,
+                clickableIcons: false,
+            },
+        },
         /*
   
 

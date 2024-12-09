@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppComponent can navigate to the to "" because the user is logged in so it should render the LandingPage 1`] = `
+exports[`AppComponent can navigate to "" because the user is logged in so it should render the LandingPage 1`] = `
 <div
-  id="root13"
+  id="root14"
   ng-version="18.2.8"
 >
   <div
@@ -464,9 +464,121 @@ exports[`AppComponent can navigate to the to "" because the user is logged in so
 </div>
 `;
 
-exports[`AppComponent can navigate to the to "/products" because the user is logged in so it should render the ProductsPage 1`] = `
+exports[`AppComponent can navigate to "/orders/new" because the user is logged in so it should render the OrdersNewPage 1`] = `
 <div
-  id="root14"
+  id="root17"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+      >
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
+        >
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+          >
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-orders-new-page>
+        <app-frame
+          ng-reflect-vm="[object Object]"
+        >
+          <section
+            class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+          >
+            <h2>
+              OrdersNewPage.frame.title
+            </h2>
+            <form
+              class="flex flex-col justify-center space-y-4 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <app-maps
+                class="ng-untouched ng-pristine ng-invalid"
+                formcontrolname="coordinates"
+                ng-reflect-config-v-m="[object Object]"
+                ng-reflect-name="coordinates"
+              >
+                <div
+                  id="map-canvas"
+                  style="width: 100%; height: 80vh;"
+                />
+              </app-maps>
+              <div
+                class="flex flex-row justify-between"
+              >
+                <button
+                  class="btn disabled"
+                  disabled=""
+                  ng-reflect-ng-class="disabled"
+                  type="button"
+                >
+                   OrdersNewPage.map.deleteControlButtonText 
+                </button>
+                <button
+                  class="btn disabled"
+                  disabled=""
+                  ng-reflect-ng-class="disabled"
+                  type="submit"
+                >
+                   OrdersNewPage.button.title 
+                </button>
+              </div>
+            </form>
+          </section>
+          <!--container-->
+        </app-frame>
+        <!--container-->
+      </app-orders-new-page>
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent can navigate to "/products" because the user is logged in so it should render the ProductsPage 1`] = `
+<div
+  id="root15"
   ng-version="18.2.8"
 >
   <div
@@ -546,9 +658,9 @@ exports[`AppComponent can navigate to the to "/products" because the user is log
 </div>
 `;
 
-exports[`AppComponent can navigate to the to "/products/id" because the user is logged in so it should render the ProductsPage 1`] = `
+exports[`AppComponent can navigate to "/products/id" because the user is logged in so it should render the ProductsPage 1`] = `
 <div
-  id="root15"
+  id="root16"
   ng-version="18.2.8"
 >
   <div
@@ -631,6 +743,91 @@ exports[`AppComponent can navigate to the to "/products/id" because the user is 
 exports[`AppComponent should navigate back to the LoginPage after navigate to "" because the user is not logged in 1`] = `
 <div
   id="root10"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <!--container-->
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <app-login-page>
+        <div
+          class="flex items-center justify-center min-h-screen"
+        >
+          <app-login-form
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
+            >
+              <div
+                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
+                style="background-image: url(assets/farming.jpg);"
+              />
+              <div
+                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
+              >
+                <h3>
+                   LoginPage.loginForm.title 
+                </h3>
+                <p>
+                  LoginPage.loginForm.description
+                </p>
+                <div
+                  class="w-full"
+                >
+                  <form
+                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
+                    ng-reflect-form="[object Object]"
+                    novalidate=""
+                  >
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="email"
+                      ng-reflect-name="email"
+                      placeholder="Email"
+                      type="email"
+                    />
+                    <input
+                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="password"
+                      ng-reflect-name="password"
+                      placeholder="Password"
+                      type="password"
+                    />
+                    <button
+                      class="btn btn-primary disabled"
+                      disabled=""
+                      ng-reflect-ng-class="disabled"
+                      type="submit"
+                    >
+                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </app-login-form>
+        </div>
+        <!--container-->
+      </app-login-page>
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should navigate back to the LoginPage after navigate to "/orders/new" because the user is not logged in 1`] = `
+<div
+  id="root13"
   ng-version="18.2.8"
 >
   <div
