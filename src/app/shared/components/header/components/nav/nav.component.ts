@@ -18,9 +18,9 @@ import { Component } from '@angular/core';
  * To provide a flexible and reusable navbar.
  */
 @Component({
-  selector: 'app-nav',
-  standalone: true,
-  imports: [],
-  templateUrl: './nav.component.html',
+    selector: 'app-nav',
+    standalone: true,
+    imports: [],
+    templateUrl: './nav.component.html',
 })
 export class NavComponent {}

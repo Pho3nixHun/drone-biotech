@@ -35,7 +35,7 @@ export const routes: Routes = [
         path: AppRouteSegment.ORDERS,
         canActivate: [AuthGuard],
         loadChildren: () =>
-            import('./pages/orders-pages/orders-routing.module').then(
+            import('./pages/orders-new-page/orders-routing.module').then(
                 (m) => m.OrdersRoutingModule
             ),
         data: { headerCanBeShown: true },

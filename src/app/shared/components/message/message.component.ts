@@ -17,11 +17,11 @@ import { TranslocoModule } from '@jsverse/transloco';
  */
 
 @Component({
-  selector: 'app-message',
-  standalone: true,
-  imports: [TranslocoModule],
-  templateUrl: './message.component.html',
+    selector: 'app-message',
+    standalone: true,
+    imports: [TranslocoModule],
+    templateUrl: './message.component.html',
 })
 export class MessageComponent {
-  public vm = input.required<MessageVM>();
+    public vm = input.required<MessageVM>();
 }

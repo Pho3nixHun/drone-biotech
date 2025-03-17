@@ -3,22 +3,22 @@ import { Auth, onAuthStateChanged } from '@angular/fire/auth';
 import { inject, Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  private readonly auth = inject(Auth);
-  private readonly router = inject(Router);
+    private readonly auth = inject(Auth);
+    private readonly router = inject(Router);
 
-  canActivate(): Promise<boolean> {
-    return new Promise((resolve) => {
-      onAuthStateChanged(this.auth, (user) => {
-        if (user) {
-          resolve(true);
-        } else {
-          this.router.navigate(['/login']);
-          resolve(false);
-        }
-      });
-    });
-  }
+    canActivate(): Promise<boolean> {
+        return new Promise((resolve) => {
+            onAuthStateChanged(this.auth, (user) => {
+                if (user) {
+                    resolve(true);
+                } else {
+                    this.router.navigate(['/login']);
+                    resolve(false);
+                }
+            });
+        });
+    }
 }

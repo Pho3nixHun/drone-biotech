@@ -37,7 +37,7 @@ describe('LandingPageComponent', () => {
             imports: [
                 LandingPageComponent,
                 getTranslocoModule({
-                    langs: { en:enLandingMock },
+                    langs: { en: enLandingMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',
@@ -108,7 +108,7 @@ describe('LandingPageComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-   //Snapshot test
+    //Snapshot test
     it('should render 1 frame when 1 frame is provided', () => {
         // Arrange
         updateGetVMSignal(landingPageVMWithOneFrameMock);
@@ -119,8 +119,8 @@ describe('LandingPageComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-  
-   //Snapshot test
+
+    //Snapshot test
     it('should render 5 frames in order when 5 frames are provided', () => {
         // Arrange
         updateGetVMSignal(landingPageVMWithFiveFramesMock);
@@ -132,18 +132,18 @@ describe('LandingPageComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-     //Snapshot test
+    //Snapshot test
     it('should render only product frames when only product frames are provided', () => {
         // Arrange
         updateGetVMSignal(landingPageVMWithOnlyProductFrameMock);
 
-         // Act
+        // Act
         fixture.detectChanges();
 
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-  
+
     //Snapshot test
     it('should render only partner frames when only partner frames are provided', () => {
         // Arrange
@@ -156,7 +156,7 @@ describe('LandingPageComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-      //Snapshot test
+    //Snapshot test
     it('should not render <app-product-item> when 0 is provided', () => {
         // Arrange
         updateGetVMSignal(landingPageVMWithoutProductItemMock);
@@ -191,7 +191,7 @@ describe('LandingPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
- 
+
     //Snapshot test
     it('should have the correct routerLinks on product-items', () => {
         // Arrange
@@ -203,7 +203,7 @@ describe('LandingPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
-  
+
     //Snapshot test
     it('should not render <app-partner-logo> when 0 is provided', () => {
         // Arrange
@@ -215,19 +215,19 @@ describe('LandingPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
-   
+
     //Snapshot test
     it('should render 1 <app-partner-logo> when 1 is provided', () => {
         // Arrange
         updateGetVMSignal(landingPageVMWithOnePartnerLogoXMock);
 
-         // Act
+        // Act
         fixture.detectChanges();
 
         //Assert
         expect(compiled).toMatchSnapshot();
     });
-  
+
     //Snapshot test
     it('should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided', () => {
         // Arrange
@@ -239,7 +239,7 @@ describe('LandingPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
- 
+
     //Snapshot test
     it('should not render <app-testimonial-item> when 0 is provided', () => {
         // Arrange
@@ -251,7 +251,7 @@ describe('LandingPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
-  
+
     //Snapshot test
     it('should render 1 <app-testimonial-item> when 1 is provided', () => {
         // Arrange
@@ -263,7 +263,7 @@ describe('LandingPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
-  
+
     //Snapshot test
     it('should render 5 <app-testimonial-item> in order when 5 app-testimonial-item are provided', () => {
         // Arrange

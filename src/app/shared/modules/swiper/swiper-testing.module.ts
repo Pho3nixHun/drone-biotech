@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 
 @NgModule()
-class SwiperTestingModule {
-}
+class SwiperTestingModule {}
 
 export const provideSwiperTestingModule = () => ({
-  provide: 'SwiperModule',
-  useClass: SwiperTestingModule,
+    provide: 'SwiperModule',
+    useClass: SwiperTestingModule,
 });

@@ -17,11 +17,11 @@ import { LogoVM } from '@components/header/components/logo/logo-vm.model';
  * To provide a flexible and reusable logo item.
  */
 @Component({
-  selector: 'app-logo',
-  standalone: true,
-  imports: [],
-  templateUrl: './logo.component.html',
+    selector: 'app-logo',
+    standalone: true,
+    imports: [],
+    templateUrl: './logo.component.html',
 })
 export class LogoComponent {
-  public vm = input.required<LogoVM>();
+    public vm = input.required<LogoVM>();
 }

@@ -4,6 +4,8 @@
         "transloco",
         "typeguard",
         "noopener",
-        "noreferrer"
+        "noreferrer",
+        "trichogramma",
+        "jsverse"
     ]
 }

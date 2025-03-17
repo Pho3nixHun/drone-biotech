@@ -37,6 +37,7 @@
     "AppComponent.navItems.1.title": "Termékeink",
     "AppComponent.navItems.2.title": "Partnereink",
     "AppComponent.navItems.3.title": "Kapcsolatfelvétel",
+    "AppComponent.navItems.4.title": "Rendelés",
 
     "NotFoundPage.message.description": "Elnézést kérünk, nem találjuk ezt az oldalt. De ne aggódjon, rengeteg más dolgot találhat a kezdőlapunkon.",
 
@@ -44,7 +45,46 @@
     "LoginPage.loginForm.description": "Phoenix ...",
     "LoginPage.loginForm.buttonTitle": "Belépés",
 
-    "OrdersNewPage.frame.title": "Új rendelés",
-    "OrdersNewPage.button.title": "Rendelés küldése",
-    "OrdersNewPage.map.deleteControlButtonText": "Polygon törlése"
+    "OrdersNewPage.title": "Új rendelés leadása",
+    "OrdersNewPage.submitButtonText": "Elfogadás",
+    "OrdersNewPage.emailLabel": "Email",
+    "OrdersNewPage.endCustomerLabel": "Vég-ügyfél ",
+    "OrdersNewPage.nameLabel": "Név",
+    "OrdersNewPage.phoneNumberLabel": "Telefonszám",
+    "OrdersNewPage.internalOrderNumberLabel": "Belső megrendelésszám ",
+    "OrdersNewPage.areasDataLabel": "Területmenedzsment",
+
+    "OrdersNewPage.areasDataFormControl.actionsHeader": "Műveletek",
+    "OrdersNewPage.areasDataFormControl.targetAreaSizeHeader": "Terület ",
+    "OrdersNewPage.areasDataFormControl.entryPointHeader": "Behajtás helye",
+    "OrdersNewPage.areasDataFormControl.doseHeader": "Dózis",
+    "OrdersNewPage.areasDataFormControl.applicationDateHeader": " Dátum",
+    "OrdersNewPage.areasDataFormControl.trichogrammaRequirementHeader": "Szóróanyagigény",
+    "OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeHeader": "Távolság",
+    "OrdersNewPage.areasDataFormControl.totalDistanceFromHeadOfficeHeader": "Össztáv",
+    "OrdersNewPage.areasDataFormControl.totalTrichogrammaRequirementHeader": "Teljes szóróanyagigény",
+    "OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader": "Összterület",
+
+    "OrdersNewPage.areasDataFormControl.applicationDateValue": "{ applicationDate, date, long } { applicationDate, time, short }",
+    "OrdersNewPage.areasDataFormControl.targetAreaSizeValue": "{count, number, :: .00} ha",
+    "OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeValue": "{count, number, :: .00} km",
+    "OrdersNewPage.areasDataFormControl.doseValue": "{count, number} egység/ha",
+    "OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue": "{count, number, :: .00} egység",
+
+    "OrdersNewPage.areasDataDialog.title.edit": "Terület szerkesztése",
+    "OrdersNewPage.areasDataDialog.title.add": "Terület hozzáadása",
+    "OrdersNewPage.areasDataDialog.cancelButtonText": "Vissza",
+    "OrdersNewPage.areasDataDialog.submitButtonText": "Elfogadás",
+    "OrdersNewPage.areasDataDialog.applicationDateLabel": "Kezelés időpontja",
+    "OrdersNewPage.areasDataDialog.dosePerHqLabel": "Dózis/hektár",
+
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Terület hozzáadása",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Terület törlése",
+    "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText": "Behajtási hely hozzáadása",
+    "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText": "Behajtás helyének törlése",
+
+    "OrdersNewPage.deleteDialog.title": "Biztos vagy benne?",
+    "OrdersNewPage.deleteDialog.warningText": "Valóban ki szeretnéd törölni ezeket az adatokat? Ez a művelet nem visszafordítható.",
+    "OrdersNewPage.deleteDialog.submitButtonText": "Törlés",
+    "OrdersNewPage.deleteDialog.cancelButtonText": "Vissza"
 }

@@ -141,6 +141,10 @@ export const appVMDefault: AppComponentVM = {
             textKey: 'AppComponent.navItems.3.title',
             link: { href: `#${FrameID.PRODUCTS}` },
         },
+        {
+            textKey: 'AppComponent.navItems.4.title',
+            routerLink: [AppRouteSegment.ORDERS, AppRouteSegment.NEW],
+        },
     ],
 };
 

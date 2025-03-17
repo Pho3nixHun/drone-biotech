@@ -21,12 +21,12 @@ import { MessageComponent } from '@components/message/message.component';
  */
 
 @Component({
-  selector: 'app-not-found-page',
-  standalone: true,
-  imports: [MessageComponent],
-  templateUrl: './not-found-page.component.html',
+    selector: 'app-not-found-page',
+    standalone: true,
+    imports: [MessageComponent],
+    templateUrl: './not-found-page.component.html',
 })
 export class NotFoundPageComponent {
-  private readonly notFoundPageService = inject(NotFoundPageService);
-  protected vm: Signal<NotFoundPageVM> = this.notFoundPageService.getVM();
+    private readonly notFoundPageService = inject(NotFoundPageService);
+    protected vm: Signal<NotFoundPageVM> = this.notFoundPageService.getVM();
 }

@@ -6,15 +6,15 @@ import { LoginPageServiceModel } from './login-page.service.model';
 const getVMSignal = signal<LoginPageVM | undefined>(undefined);
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 class LoginPageMockService extends LoginPageServiceModel {
-  public getVM = () => getVMSignal;
+    public getVM = () => getVMSignal;
 }
 
 export const provideLoginPageMockService = () => ({
-  provide: LoginPageService,
-  useClass: LoginPageMockService,
+    provide: LoginPageService,
+    useClass: LoginPageMockService,
 });
 
 export const updateGetVMSignal = getVMSignal.set.bind(getVMSignal);

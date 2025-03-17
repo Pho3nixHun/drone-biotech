@@ -533,11 +533,11 @@ exports[`AppComponent can navigate to "/orders/new" because the user is logged i
               <app-maps
                 class="ng-untouched ng-pristine ng-invalid"
                 formcontrolname="coordinates"
-                ng-reflect-config-v-m="[object Object]"
                 ng-reflect-name="coordinates"
+                ng-reflect-vm="[object Object]"
               >
                 <div
-                  id="map-canvas"
+                  ng-reflect-attached-signal_="[Signal: null]"
                   style="width: 100%; height: 80vh;"
                 />
               </app-maps>

@@ -4,10 +4,10 @@ import { LoginPageVM } from './login-page-vm.model';
 import { loginPageVMDefault } from './login-page.mock';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class LoginPageService extends LoginPageServiceModel {
-  override getVM(): Signal<LoginPageVM> {
-    return signal(loginPageVMDefault);
-  }
+    override getVM(): Signal<LoginPageVM> {
+        return signal(loginPageVMDefault);
+    }
 }

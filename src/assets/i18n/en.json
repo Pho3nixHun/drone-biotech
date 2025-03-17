@@ -37,6 +37,7 @@
     "AppComponent.navItems.1.title": "Products",
     "AppComponent.navItems.2.title": "Partners",
     "AppComponent.navItems.3.title": "Contacts",
+    "AppComponent.navItems.4.title": "Order",
 
     "NotFoundPage.message.description": "Sorry, we couldn't find this page. But don't worry, you can find plenty of other things on our homepage.",
 
@@ -44,7 +45,46 @@
     "LoginPage.loginForm.description": "Phoenix is ...",
     "LoginPage.loginForm.buttonTitle": "Login",
 
-    "OrdersNewPage.frame.title": "New Order",
-    "OrdersNewPage.button.title": "Send order",
-    "OrdersNewPage.map.deleteControlButtonText": "Remove polygon"
+    "OrdersNewPage.title": "Place new order",
+    "OrdersNewPage.submitButtonText": "Submit",
+    "OrdersNewPage.emailLabel": "Email",
+    "OrdersNewPage.endCustomerLabel": "End customer",
+    "OrdersNewPage.nameLabel": "Name",
+    "OrdersNewPage.phoneNumberLabel": "Phone number",
+    "OrdersNewPage.internalOrderNumberLabel": "Internal order number",
+    "OrdersNewPage.areasDataLabel": "Field management",
+
+    "OrdersNewPage.areasDataFormControl.actionsHeader": "Actions",
+    "OrdersNewPage.areasDataFormControl.targetAreaSizeHeader": "Area",
+    "OrdersNewPage.areasDataFormControl.entryPointHeader": "Entry point",
+    "OrdersNewPage.areasDataFormControl.doseHeader": "Dose",
+    "OrdersNewPage.areasDataFormControl.applicationDateHeader": "Date",
+    "OrdersNewPage.areasDataFormControl.trichogrammaRequirementHeader": "Required capsules",
+    "OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeHeader": "Distance",
+    "OrdersNewPage.areasDataFormControl.totalDistanceFromHeadOfficeHeader": "Total distance",
+    "OrdersNewPage.areasDataFormControl.totalTrichogrammaRequirementHeader": "Total required capsules",
+    "OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader": "Total area",
+
+    "OrdersNewPage.areasDataFormControl.applicationDateValue": "{ applicationDate, date, long } { applicationDate, time, short }",
+    "OrdersNewPage.areasDataFormControl.targetAreaSizeValue": "{count, number, :: .00} ha",
+    "OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeValue": "{count, number, :: .00} km",
+    "OrdersNewPage.areasDataFormControl.doseValue": "{count, plural, one {1 unit/ha} other {# units/ha}}",
+    "OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue": "{count, number, :: .00} pieces",
+
+    "OrdersNewPage.areasDataDialog.title.edit": "Edit the area",
+    "OrdersNewPage.areasDataDialog.title.add": "Add a new area",
+    "OrdersNewPage.areasDataDialog.cancelButtonText": "Cancel",
+    "OrdersNewPage.areasDataDialog.submitButtonText": "Submit",
+    "OrdersNewPage.areasDataDialog.applicationDateLabel": "Application date",
+    "OrdersNewPage.areasDataDialog.dosePerHqLabel": "Dose/Hq",
+
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Delete target area",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Add target area",
+    "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText": "Add entry point",
+    "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText": "Delete entry point",
+
+    "OrdersNewPage.deleteDialog.title": "Are you sure?",
+    "OrdersNewPage.deleteDialog.warningText": "Do you really want to delete these records? This process cannot be undone.",
+    "OrdersNewPage.deleteDialog.submitButtonText": "Delete",
+    "OrdersNewPage.deleteDialog.cancelButtonText": "Cancel"
 }

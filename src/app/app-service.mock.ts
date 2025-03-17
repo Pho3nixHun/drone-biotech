@@ -5,15 +5,15 @@ import { AppService } from './app.service';
 const getVMSignal = signal<AppComponentVM | undefined>(undefined);
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 class AppComponentMockService {
-  public getVM = () => getVMSignal;
+    public getVM = () => getVMSignal;
 }
 
 export const provideAppComponentMockService = () => ({
-  provide: AppService,
-  useClass: AppComponentMockService,
+    provide: AppService,
+    useClass: AppComponentMockService,
 });
 
 export const updateGetVMSignal = getVMSignal.set.bind(getVMSignal);

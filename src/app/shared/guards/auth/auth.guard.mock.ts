@@ -6,26 +6,26 @@ import { AuthGuard } from './auth.guard';
 const isAuthenticatedSignal = signal<boolean>(false);
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class AuthGuardMock implements CanActivate {
-  private readonly router = inject(Router);
+    private readonly router = inject(Router);
 
-  canActivate(): boolean {
-    if (isAuthenticatedSignal()) {
-      return true;
-    } else {
-      this.router.navigate(['login']);
-      return false;
+    canActivate(): boolean {
+        if (isAuthenticatedSignal()) {
+            return true;
+        } else {
+            this.router.navigate(['login']);
+            return false;
+        }
     }
-  }
 }
 
 export const updateAuthenticated = (authState: boolean): void => {
-  isAuthenticatedSignal.set(authState);
+    isAuthenticatedSignal.set(authState);
 };
 
 export const provideAuthGuard = () => ({
-  provide: AuthGuard,
-  useClass: AuthGuardMock,
+    provide: AuthGuard,
+    useClass: AuthGuardMock,
 });

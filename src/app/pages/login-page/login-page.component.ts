@@ -1,10 +1,5 @@
 import { Component, inject, Signal } from '@angular/core';
-import {
-    FormGroup,
-    FormControl,
-    Validators,
-    ReactiveFormsModule,
-} from '@angular/forms';
+import { Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { Auth } from '@angular/fire/auth';
 import { Store } from '@ngrx/store';
@@ -46,14 +41,12 @@ export class LoginPageComponent {
     private readonly store = inject(Store<AuthState>);
     private readonly auth = inject(Auth);
     private readonly loginService = inject(LoginPageService);
+    private readonly fb = inject(FormBuilder);
     protected vm: Signal<LoginPageVM> = this.loginService.getVM();
 
-    loginForm = new FormGroup({
-        email: new FormControl('', [Validators.required, Validators.email]),
-        password: new FormControl('', [
-            Validators.required,
-            Validators.minLength(6),
-        ]),
+    loginForm = this.fb.group({
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
     });
 
     get email() {

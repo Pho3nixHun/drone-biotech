@@ -18,9 +18,9 @@ import { Component } from '@angular/core';
  * - To provide a flexible and reusable layout that contains PartnerLogoComponent-s.
  */
 @Component({
-  selector: 'app-partner-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './partner-list.component.html',
+    selector: 'app-partner-list',
+    standalone: true,
+    imports: [],
+    templateUrl: './partner-list.component.html',
 })
 export class PartnerListComponent {}

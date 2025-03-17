@@ -4,10 +4,10 @@ import { NotFoundPageVM } from './not-found-page-vm.model';
 import { NotFoundPageServiceModel } from './not-found-page.service.model';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class NotFoundPageService implements NotFoundPageServiceModel {
-  public getVM(): Signal<NotFoundPageVM> {
-    return signal(notFoundPageVMDefault);
-  }
+    public getVM(): Signal<NotFoundPageVM> {
+        return signal(notFoundPageVMDefault);
+    }
 }

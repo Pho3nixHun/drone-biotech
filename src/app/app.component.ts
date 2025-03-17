@@ -1,22 +1,20 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { LogoComponent } from '@components/header/components/logo/logo.component';
 import { NavComponent } from '@components/header/components/nav/nav.component';
 import { AppService } from './app.service';
-import { TranslocoModule } from '@jsverse/transloco';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthActions } from './stores/auth/auth.actions';
 import { Store } from '@ngrx/store';
 import { AsyncPipe, NgTemplateOutlet } from '@angular/common';
 import { isWithLink } from '@interfaces/with-link.interface';
+import { selectHeaderCanBeShown } from './stores/router/router.selectors';
 import {
     defaultRel,
     defaultTarget,
 } from '@components/header/components/nav/components/nav-item/nav-item-vm';
-import { selectHeaderCanBeShown } from './stores/router/router.selectors';
-import { Observable, of } from 'rxjs';
-import { LoadGoogleMapsModule } from '@modules/google-maps/load-google-maps.module';
 
 @Component({
     selector: 'app-root',
@@ -31,16 +29,17 @@ import { LoadGoogleMapsModule } from '@modules/google-maps/load-google-maps.modu
         RouterModule,
         NgTemplateOutlet,
         AsyncPipe,
-        LoadGoogleMapsModule,
     ],
     templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
     protected title = 'drone-biotech-webapp';
     private readonly appService = inject(AppService);
     private readonly store = inject(Store);
     protected vm = this.appService.getVM();
-    protected headerCanBeShown$: Observable<boolean> = of(false);
+    protected headerCanBeShown$ = this.store.select(selectHeaderCanBeShown);
+    private readonly ser = inject(TranslocoService);
+    asd = this.ser.setActiveLang('en');
 
     defaultRel = defaultRel;
     defaultTarget = defaultTarget;
@@ -48,9 +47,5 @@ export class AppComponent implements OnInit {
 
     signOut() {
         this.store.dispatch(AuthActions.signOut());
-    }
-
-    ngOnInit(): void {
-        this.headerCanBeShown$ = this.store.select(selectHeaderCanBeShown);
     }
 }

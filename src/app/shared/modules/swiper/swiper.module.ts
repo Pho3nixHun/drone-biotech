@@ -5,7 +5,7 @@ import { register } from 'swiper/element-bundle';
 
 @NgModule()
 export class SwiperModule {
-  constructor() {
-    register();
-  }
+    constructor() {
+        register();
+    }
 }

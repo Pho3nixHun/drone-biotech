@@ -34,9 +34,10 @@ import { AuthActions } from './stores/auth/auth.actions';
 import { selectHeaderCanBeShown } from './stores/router/router.selectors';
 import {
     provideMockDrawingControlOptions,
+    provideMockGoogleMapsConfig,
     provideMockMapOptions,
     provideMockPolygonOptions,
-} from '@services/maps-config/maps-config-vm.model';
+} from '@components/maps/maps-vm.model';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
@@ -67,6 +68,7 @@ describe('AppComponent', () => {
                 provideMockDrawingControlOptions(),
                 provideMockMapOptions(),
                 provideMockPolygonOptions(),
+                provideMockGoogleMapsConfig(),
             ],
         }).compileComponents();
 

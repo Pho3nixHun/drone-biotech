@@ -33,7 +33,7 @@ describe('NavComponent', () => {
         fixture.detectChanges();
         compiled = fixture.debugElement.nativeElement;
     });
-  
+
     //Snapshot testing
     it('should project the provided content', () => {
         //Arrange
@@ -77,7 +77,7 @@ describe('NavComponent', () => {
             rel: 'noopener',
         });
 
-         //Act
+        //Act
         fixture.detectChanges();
 
         //Assert

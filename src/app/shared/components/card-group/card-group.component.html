@@ -1,0 +1,10 @@
+<div
+    class="grid xl:grid-cols-[1fr_2fr_1fr_1fr_1fr_1fr_1fr] md:grid-cols-2 gap-3 text-left duration-500 transition-all"
+>
+    <div
+        class="xl:display hidden xl:grid grid-cols-subgrid col-span-full sm:hover:bg-gray-100 bg-gray-100 sm:bg-white"
+    >
+        <ng-content select="div" />
+    </div>
+    <ng-content select="app-card-item" />
+</div>

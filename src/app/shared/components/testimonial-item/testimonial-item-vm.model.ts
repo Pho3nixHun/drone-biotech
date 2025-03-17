@@ -1,5 +1,5 @@
 export interface TestimonialItemVM {
-  messageKey: string;
-  name: string;
-  roleAndCompanyKey: string;
+    messageKey: string;
+    name: string;
+    roleAndCompanyKey: string;
 }

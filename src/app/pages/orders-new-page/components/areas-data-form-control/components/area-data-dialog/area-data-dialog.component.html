@@ -1,0 +1,70 @@
+@if (vm) {
+    <div class="bg-white w-1200 p-10 rounded-lg shadow-md" *transloco="let t">
+        <h1 class="text-2xl font-semibold text-gray-800 mb-6">
+            {{ t(vm.titleKey) }}
+        </h1>
+        <form [formGroup]="areaDataFormGroup" class="flex flex-col space-y-4">
+            <div class="flex flex-col md:flex-row md:space-x-4">
+                <div class="flex flex-col w-full md:w-1/2">
+                    <app-map-area-select-form-control
+                        [vm]="vm.mapAreaSelectFormControlVM"
+                        formControlName="targetArea"
+                        class="border rounded-md focus:ring focus:ring-blue-300 mt-1 p-2"
+                    />
+                </div>
+                <div class="flex flex-col w-full md:w-1/2">
+                    <app-map-point-select-form-control
+                        [vm]="vm.mapPointSelectFormControlVM"
+                        formControlName="entryPoint"
+                    />
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <label for="dosePerHq" class="font-medium text-gray-700">{{
+                    t(vm.dosePerHqLabelKey)
+                }}</label>
+                <input
+                    id="dosePerHq"
+                    type="number"
+                    formControlName="dosePerHq"
+                    min="0"
+                    class="p-2 border rounded-md focus:ring focus:ring-blue-300"
+                />
+            </div>
+
+            <div class="flex flex-col">
+                <label
+                    for="applicationDate"
+                    class="font-medium text-gray-700"
+                    >{{ t(vm.applicationDateLabelKey) }}</label
+                >
+                <input
+                    id="applicationDate"
+                    type="datetime-local"
+                    formControlName="applicationDate"
+                    class="p-2 border rounded-md focus:ring focus:ring-blue-300"
+                />
+            </div>
+
+            <div class="flex flex-row justify-end space-x-3">
+                <button
+                    (click)="submitForm()"
+                    [disabled]="areaDataFormGroup.invalid"
+                    [ngClass]="[
+                        areaDataFormGroup.valid ? 'btn-primary' : 'disabled',
+                    ]"
+                    class="btn"
+                >
+                    {{ t(vm.submitButtonTextKey) }}
+                </button>
+                <button
+                    (click)="resetFormWithCloseDialog()"
+                    class="btn btn-error"
+                >
+                    {{ t(vm.cancelButtonTextKey) }}
+                </button>
+            </div>
+        </form>
+    </div>
+}

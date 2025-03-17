@@ -18,9 +18,9 @@ import { Component } from '@angular/core';
  * To provide a flexible and reusable header section layout.
  */
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [],
-  templateUrl: './header.component.html',
+    selector: 'app-header',
+    standalone: true,
+    imports: [],
+    templateUrl: './header.component.html',
 })
 export class HeaderComponent {}

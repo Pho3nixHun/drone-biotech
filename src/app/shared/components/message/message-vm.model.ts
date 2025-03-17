@@ -1,4 +1,4 @@
 export interface MessageVM {
-  title: string;
-  descriptionKey: string;
+    title: string;
+    descriptionKey: string;
 }

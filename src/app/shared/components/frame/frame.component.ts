@@ -20,11 +20,11 @@ import { TranslocoModule } from '@jsverse/transloco';
  * To provide a flexible and reusable section layout.
  */
 @Component({
-  selector: 'app-frame',
-  standalone: true,
-  templateUrl: './frame.component.html',
-  imports: [TranslocoModule],
+    selector: 'app-frame',
+    standalone: true,
+    templateUrl: './frame.component.html',
+    imports: [TranslocoModule],
 })
 export class FrameComponent {
-  vm = input.required<FrameVM>();
+    vm = input.required<FrameVM>();
 }
