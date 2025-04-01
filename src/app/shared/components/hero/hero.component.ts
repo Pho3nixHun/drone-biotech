@@ -22,5 +22,5 @@ import { HeroVM } from './hero-vm.model';
     templateUrl: './hero.component.html',
 })
 export class HeroComponent {
-    vm = input<HeroVM | null>(null, { alias: 'vm' });
+    public vm = input<HeroVM | null>(null, { alias: 'vm' });
 }

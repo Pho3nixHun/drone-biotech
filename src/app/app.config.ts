@@ -12,7 +12,12 @@ import {
     FirebaseApp,
 } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { getAuth, provideAuth } from '@angular/fire/auth';
+import {
+    browserLocalPersistence,
+    getAuth,
+    provideAuth,
+    setPersistence,
+} from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { StoreModule } from '@ngrx/store';
 import { routes } from './app.routes';
@@ -21,7 +26,6 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideRouterStore, routerReducer } from '@ngrx/router-store';
 import { AuthStoreModule } from './stores/auth/auth.module';
 import { EffectsModule } from '@ngrx/effects';
-import { browserLocalPersistence, setPersistence } from 'firebase/auth';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
