@@ -1,7 +1,7 @@
 @if (vm(); as vm) {
-    <div
-        class="flex flex-col items-center justify-center w-full h-full min-h-screen"
+    <app-page-section
+        class="flex flex-col items-center justify-center min-h-screen w-full flex-grow"
     >
-        <app-message [vm]="vm.messageVM" />
-    </div>
+        <app-not-found-message [vm]="vm.notFoundMessageVM" />
+    </app-page-section>
 }

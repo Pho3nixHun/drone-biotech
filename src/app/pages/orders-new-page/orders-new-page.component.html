@@ -1,98 +1,99 @@
 @if (vm(); as vm) {
-    @let frameXVM = vm.frameXVM;
-    <app-frame [vm]="vm.frameXVM" *transloco="let t">
-        <!-- Form areasDataFormGroup -->
-        <form
-            [formGroup]="areasDataFormGroup"
-            class="w-full mx-auto bg-white sm:p-8 sm:shadow-md rounded-lg space-y-6"
-        >
-            <!-- Internal Order Number -->
-            <label for="internalOrderNumber" class="form-label">{{
-                t(frameXVM.internalOrderNumberLabelKey)
-            }}</label>
-            <input
-                id="internalOrderNumber"
-                type="text"
-                formControlName="internalOrderNumber"
-                class="form-input"
-            />
-
-            <!-- Contact Group -->
-            <div
-                formGroupName="contact"
-                class="p-6 bg-gray-100 rounded-lg space-y-4"
+    <app-page-section>
+        <app-frame [vm]="vm.frameXVM" *transloco="let t">
+            <!-- Form areasDataFormGroup -->
+            <form
+                [formGroup]="areasDataFormGroup"
+                class="w-full mx-auto bg-white sm:p-8 sm:shadow-md space-y-6"
             >
-                <!-- Name -->
-                <label for="name" class="form-label">{{
-                    t(frameXVM.nameLabelKey)
+                <!-- Internal Order Number -->
+                <label for="internalOrderNumber" class="form-label">{{
+                    t(vm.frameXVM.internalOrderNumberLabelKey)
                 }}</label>
                 <input
-                    id="name"
+                    id="internalOrderNumber"
                     type="text"
-                    formControlName="name"
-                    autocomplete="name"
+                    formControlName="internalOrderNumber"
                     class="form-input"
                 />
 
-                <!-- Phone number -->
-                <label for="phoneNumber" class="form-label">{{
-                    t(frameXVM.phoneNumberLabelKey)
-                }}</label>
+                <!-- Contact Group -->
+                <div formGroupName="contact" class="p-6 bg-gray-100 space-y-4">
+                    <!-- Name -->
+                    <label for="name" class="form-label">{{
+                        t(vm.frameXVM.nameLabelKey)
+                    }}</label>
+                    <input
+                        id="name"
+                        type="text"
+                        formControlName="name"
+                        autocomplete="name"
+                        class="form-input"
+                    />
+
+                    <!-- Phone number -->
+                    <label for="phoneNumber" class="form-label">{{
+                        t(vm.frameXVM.phoneNumberLabelKey)
+                    }}</label>
+                    <input
+                        id="phoneNumber"
+                        type="tel"
+                        formControlName="phoneNumber"
+                        class="form-input"
+                    />
+
+                    <!-- Email -->
+                    <label for="email" class="form-label">{{
+                        t(vm.frameXVM.emailLabelKey)
+                    }}</label>
+                    <input
+                        id="email"
+                        type="email"
+                        formControlName="email"
+                        autocomplete="email"
+                        class="form-input"
+                    />
+                </div>
+
+                <!-- End Customer -->
+                <label
+                    for="endCustomer"
+                    class="block tracking-widest font-medium text-gray-700"
+                    >{{ t(vm.frameXVM.endCustomerLabelKey) }}</label
+                >
                 <input
-                    id="phoneNumber"
-                    type="tel"
-                    formControlName="phoneNumber"
+                    id="endCustomer"
+                    type="text"
+                    formControlName="endCustomer"
                     class="form-input"
                 />
 
-                <!-- Email -->
-                <label for="email" class="form-label">{{
-                    t(frameXVM.emailLabelKey)
-                }}</label>
-                <input
-                    id="email"
-                    type="email"
-                    formControlName="email"
-                    autocomplete="email"
-                    class="form-input"
-                />
-            </div>
+                <!-- AreaData-->
 
-            <!-- End Customer -->
-            <label for="endCustomer" class="form-label">{{
-                t(frameXVM.endCustomerLabelKey)
-            }}</label>
-            <input
-                id="endCustomer"
-                type="text"
-                formControlName="endCustomer"
-                class="form-input"
-            />
+                <app-areas-data-form-control
+                    formControlName="areasData"
+                    [vm]="vm.frameXVM.areasDataFormControlVM"
+                    class="w-full block mt-3"
+                >
+                    <label for="areasData" class="form-label">{{
+                        t(vm.frameXVM.areasDataLabelKey)
+                    }}</label>
+                </app-areas-data-form-control>
 
-            <!-- AreaData-->
-
-            <label for="areasData" class="form-label">{{
-                t(frameXVM.areasDataLabelKey)
-            }}</label>
-            <app-areas-data-form-control
-                formControlName="areasData"
-                [vm]="areasDataFormControlVM()"
-                class="w-full block mt-3"
-            />
-
-            <!-- Submit Button -->
-            <button
-                (click)="submitForm()"
-                [disabled]="!areasDataFormGroup.valid"
-                [ngClass]="[
-                    areasDataFormGroup.valid ? 'btn-primary' : 'btn-disabled',
-                ]"
-                class="w-full btn"
-            >
-                {{ t(vm.frameXVM.submitButtonTextKey) }}
-            </button>
-        </form>
-
-        <pre>{{ areasDataFormGroup.value | json }}</pre>
-    </app-frame>
+                <!-- Submit Button -->
+                <button
+                    (click)="submitForm()"
+                    [disabled]="!areasDataFormGroup.valid"
+                    [ngClass]="[
+                        areasDataFormGroup.valid
+                            ? 'btn-primary'
+                            : 'btn-disabled',
+                    ]"
+                    class="w-full btn"
+                >
+                    {{ t(vm.frameXVM.submitButtonTextKey) }}
+                </button>
+            </form>
+        </app-frame>
+    </app-page-section>
 }

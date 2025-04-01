@@ -11,13 +11,12 @@ export class OrdersNewPageMockService {
     }
 }
 
-export const updateVMSignal = (vm: OrdersNewPageVM | undefined) => {
+export const updateVMSignal = (vm: OrdersNewPageVM | undefined) =>
     vmSignal.set(vm);
-};
 
 const vmSignal = signal<OrdersNewPageVM | undefined>(undefined);
 
-export const provideOrdersNewPageMock = () => ({
+export const provideOrdersNewPageMockService = () => ({
     provide: OrdersNewPageService,
     useClass: OrdersNewPageMockService,
 });

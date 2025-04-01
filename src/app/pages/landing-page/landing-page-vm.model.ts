@@ -9,7 +9,7 @@ import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
 // We use `interface` here because it's semantically appropriate
 // for extending object structures and ensures clear intent for others.
-interface ProductItemXVM extends WithRouterLink, ProductItemVM {}
+export interface ProductItemXVM extends WithRouterLink, ProductItemVM, WithId {}
 interface PartnerLogoXVM extends Partial<WithLink>, PartnerLogoVM {}
 
 interface HeroXVM extends HeroVM {

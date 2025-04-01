@@ -13,6 +13,7 @@ import { Rel } from '@interfaces/with-link.interface';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
 import { isProductFrame } from './landing-page-vm.model';
+import { PageSectionComponent } from '@components/page-section/page-section.component';
 
 /**
  * LandingPageComponent
@@ -47,15 +48,16 @@ import { isProductFrame } from './landing-page-vm.model';
         SwiperModule,
         TranslocoModule,
         TestimonialItemComponent,
+        PageSectionComponent,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
+    private readonly landingPageService = inject(LandingPageService);
+    protected readonly vm = this.landingPageService.getVM();
+
     protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
     protected readonly defaultTarget = '_self';
-    private readonly landingPageService = inject(LandingPageService);
-
-    protected isProductFrame = isProductFrame;
-    protected vm = this.landingPageService.getVM();
+    protected readonly isProductFrame = isProductFrame;
 }

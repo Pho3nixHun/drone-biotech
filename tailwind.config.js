@@ -6,9 +6,15 @@ module.exports = {
     theme: {
         extend: {
             width: {
-                "500": '500px',
-                "1200": '1200px'
+                "300": '75rem', // 1200px
+                "230": '57.5rem', // 920px
+                "172": '43rem', // 688px (md)
+                "140": '35rem', // 560px (sm)
+                "96": '24rem' // 384px 
             },
+            height: {
+                "200": '50rem', //800px
+            }
         },
     },
     plugins: [
@@ -29,26 +35,17 @@ module.exports = {
             const ordersPage = {
                 '.form-label': {
                     'display': 'block',
-                    'font-weight': 600,
-                    'color': '#374151'
+                    'font-weight': 500,
+                    'color': '#4a5568',
+                    'letter-spacing': '0.1em'
                 },
                 '.form-input': {
                     'width': '100%',
                     'padding': '0.75rem',
                     'border': '1px solid #d1d5db',
-                    'border-radius': '0.5rem',
-                    'outline': 'none',
-                    '&:focus': {
-                        'box-shadow': '0 0 0 3px #93c5fd',
-                    },
                 },
-                '.table-padding th, td': {
-                    'padding-left': '1rem' /* 16px */,
-                    'padding-right': '1rem' /* 16px */,
-                    'padding-bottom': '0.5rem' /* 8px */,
-                    'padding-top': '0.5rem' /* 8px */,
-                }
             }
+
             addComponents([header, ordersPage]);
         }),
     ],

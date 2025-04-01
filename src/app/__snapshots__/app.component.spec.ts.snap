@@ -1,1086 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppComponent can navigate to "" because the user is logged in so it should render the LandingPage 1`] = `
-<div
-  id="root14"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <app-header>
-      <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
-      >
-        <app-logo
-          class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
-          tabindex="0"
-        >
-          <img
-            alt="logo"
-            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-            src="assets/phoenix.jpg"
-          />
-        </app-logo>
-        <app-nav>
-          <nav
-            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
-          >
-            <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                logout
-              </mat-icon>
-            </button>
-          </nav>
-        </app-nav>
-      </section>
-    </app-header>
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-landing-page>
-        <app-hero
-          ng-reflect-vm="[object Object]"
-        >
-          <section
-            class="mt-10 h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-            style="background-image: url(assets/farming.jpg);"
-          >
-            <div
-              class="flex flex-col mx-10 space-y-5"
-            >
-              <h1>
-                LandingPage.hero.title
-              </h1>
-              <p>
-                LandingPage.hero.description
-              </p>
-              <div
-                class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
-              >
-                <a
-                  class="btn btn-primary"
-                  href=""
-                >
-                  LandingPage.hero.primaryButtonLabel
-                </a>
-                <a
-                  class="btn btn-default"
-                  href=""
-                >
-                  LandingPage.hero.secondaryButtonTitleLabel
-                </a>
-              </div>
-            </div>
-          </section>
-          <!--container-->
-        </app-hero>
-        <!--container-->
-        <app-frame
-          id="products"
-          ng-reflect-vm="[object Object]"
-        >
-          <section
-            class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-          >
-            <h2>
-              LandingPage.frames.0.title
-            </h2>
-            <app-product-list>
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-              >
-                <app-product-item
-                  class="h-full"
-                  ng-reflect-router-link="products,1"
-                  ng-reflect-vm="[object Object]"
-                  tabindex="0"
-                >
-                  <a
-                    class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                  >
-                    <img
-                      alt="LandingPage.products.0.title"
-                      class="w-auto h-auto object-cover rounded-md"
-                      src="assets/lepke.jpg"
-                    />
-                    <h3
-                      class="font-bold text-xl sm:text-2xl mt-4"
-                    >
-                      LandingPage.products.0.title
-                    </h3>
-                    <p
-                      class="mt-4"
-                    >
-                      LandingPage.products.0.description
-                    </p>
-                  </a>
-                  <!--container-->
-                </app-product-item>
-                <app-product-item
-                  class="h-full"
-                  ng-reflect-router-link="products,2"
-                  ng-reflect-vm="[object Object]"
-                  tabindex="0"
-                >
-                  <a
-                    class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                  >
-                    <img
-                      alt="LandingPage.products.1.title"
-                      class="w-auto h-auto object-cover rounded-md"
-                      src="assets/lepke.jpg"
-                    />
-                    <h3
-                      class="font-bold text-xl sm:text-2xl mt-4"
-                    >
-                      LandingPage.products.1.title
-                    </h3>
-                    <p
-                      class="mt-4"
-                    >
-                      LandingPage.products.1.description
-                    </p>
-                  </a>
-                  <!--container-->
-                </app-product-item>
-                <app-product-item
-                  class="h-full"
-                  ng-reflect-router-link="products,3"
-                  ng-reflect-vm="[object Object]"
-                  tabindex="0"
-                >
-                  <a
-                    class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                  >
-                    <img
-                      alt="LandingPage.products.2.title"
-                      class="w-auto h-auto object-cover rounded-md"
-                      src="assets/lepke.jpg"
-                    />
-                    <h3
-                      class="font-bold text-xl sm:text-2xl mt-4"
-                    >
-                      LandingPage.products.2.title
-                    </h3>
-                    <p
-                      class="mt-4"
-                    >
-                      LandingPage.products.2.description
-                    </p>
-                  </a>
-                  <!--container-->
-                </app-product-item>
-                <!--container-->
-              </div>
-            </app-product-list>
-          </section>
-          <!--container-->
-        </app-frame>
-        <!--ng-container-->
-        <app-frame
-          id="partners"
-          ng-reflect-vm="[object Object]"
-        >
-          <section
-            class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-          >
-            <h2>
-              LandingPage.frames.1.title
-            </h2>
-            <app-partner-list>
-              <div
-                class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-              >
-                <!--container-->
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <!--container-->
-                <!--container-->
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <!--container-->
-                <!--container-->
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <!--container-->
-                <!--container-->
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <!--container-->
-                <!--container-->
-                <app-partner-logo
-                  ng-reflect-vm="[object Object]"
-                >
-                  <img
-                    alt="LandingPage.partners.0.altText"
-                    class="w-52 h-52"
-                    src="assets/lepke.jpg"
-                  />
-                </app-partner-logo>
-                <!--container-->
-                <!--container-->
-              </div>
-            </app-partner-list>
-            <!--container-->
-            <swiper-container
-              autoplay-delay="2500"
-              autoplay-disable-on-interaction="false"
-              class="w-full sm:w-2/3 md:w-1/2"
-              keyboard="true"
-              pagination="true"
-              pagination-clickable="true"
-              pagination-dynamic-bullets="true"
-              space-between="30"
-            >
-              <swiper-slide
-                class="pb-10"
-              >
-                <app-testimonial-item
-                  ng-reflect-vm="[object Object]"
-                >
-                  <div
-                    class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                  >
-                    <p
-                      class="text-lg italic text-gray-700"
-                    >
-                      "LandingPage.testimonials.0.message"
-                    </p>
-                    <p
-                      class="font-semibold text-gray-900 mt-4"
-                    >
-                      John Doe
-                    </p>
-                    <p
-                      class="text-gray-500"
-                    >
-                      LandingPage.testimonials.0.roleAndCompany
-                    </p>
-                  </div>
-                  <!--container-->
-                </app-testimonial-item>
-              </swiper-slide>
-              <swiper-slide
-                class="pb-10"
-              >
-                <app-testimonial-item
-                  ng-reflect-vm="[object Object]"
-                >
-                  <div
-                    class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                  >
-                    <p
-                      class="text-lg italic text-gray-700"
-                    >
-                      "LandingPage.testimonials.1.message"
-                    </p>
-                    <p
-                      class="font-semibold text-gray-900 mt-4"
-                    >
-                      Jane Smith
-                    </p>
-                    <p
-                      class="text-gray-500"
-                    >
-                      LandingPage.testimonials.1.roleAndCompany
-                    </p>
-                  </div>
-                  <!--container-->
-                </app-testimonial-item>
-              </swiper-slide>
-              <swiper-slide
-                class="pb-10"
-              >
-                <app-testimonial-item
-                  ng-reflect-vm="[object Object]"
-                >
-                  <div
-                    class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                  >
-                    <p
-                      class="text-lg italic text-gray-700"
-                    >
-                      "LandingPage.testimonials.2.message"
-                    </p>
-                    <p
-                      class="font-semibold text-gray-900 mt-4"
-                    >
-                      Emily Johnson
-                    </p>
-                    <p
-                      class="text-gray-500"
-                    >
-                      LandingPage.testimonials.2.roleAndCompany
-                    </p>
-                  </div>
-                  <!--container-->
-                </app-testimonial-item>
-              </swiper-slide>
-              <swiper-slide
-                class="pb-10"
-              >
-                <app-testimonial-item
-                  ng-reflect-vm="[object Object]"
-                >
-                  <div
-                    class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                  >
-                    <p
-                      class="text-lg italic text-gray-700"
-                    >
-                      "LandingPage.testimonials.3.message"
-                    </p>
-                    <p
-                      class="font-semibold text-gray-900 mt-4"
-                    >
-                      Emily Johnson
-                    </p>
-                    <p
-                      class="text-gray-500"
-                    >
-                      LandingPage.testimonials.3.roleAndCompany
-                    </p>
-                  </div>
-                  <!--container-->
-                </app-testimonial-item>
-              </swiper-slide>
-              <swiper-slide
-                class="pb-10"
-              >
-                <app-testimonial-item
-                  ng-reflect-vm="[object Object]"
-                >
-                  <div
-                    class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                  >
-                    <p
-                      class="text-lg italic text-gray-700"
-                    >
-                      "LandingPage.testimonials.4.message"
-                    </p>
-                    <p
-                      class="font-semibold text-gray-900 mt-4"
-                    >
-                      Emily Johnson
-                    </p>
-                    <p
-                      class="text-gray-500"
-                    >
-                      LandingPage.testimonials.4.roleAndCompany
-                    </p>
-                  </div>
-                  <!--container-->
-                </app-testimonial-item>
-              </swiper-slide>
-              <swiper-slide
-                class="pb-10"
-              >
-                <app-testimonial-item
-                  ng-reflect-vm="[object Object]"
-                >
-                  <div
-                    class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                  >
-                    <p
-                      class="text-lg italic text-gray-700"
-                    >
-                      "LandingPage.testimonials.5.message"
-                    </p>
-                    <p
-                      class="font-semibold text-gray-900 mt-4"
-                    >
-                      Emily Johnson
-                    </p>
-                    <p
-                      class="text-gray-500"
-                    >
-                      LandingPage.testimonials.5.roleAndCompany
-                    </p>
-                  </div>
-                  <!--container-->
-                </app-testimonial-item>
-              </swiper-slide>
-              <!--container-->
-            </swiper-container>
-            <!--container-->
-          </section>
-          <!--container-->
-        </app-frame>
-        <!--ng-container-->
-        <!--container-->
-        <!--container-->
-        <!--container-->
-        <!--container-->
-        <!--container-->
-      </app-landing-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent can navigate to "/orders/new" because the user is logged in so it should render the OrdersNewPage 1`] = `
-<div
-  id="root17"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <app-header>
-      <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
-      >
-        <app-logo
-          class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
-          tabindex="0"
-        >
-          <img
-            alt="logo"
-            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-            src="assets/phoenix.jpg"
-          />
-        </app-logo>
-        <app-nav>
-          <nav
-            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
-          >
-            <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                logout
-              </mat-icon>
-            </button>
-          </nav>
-        </app-nav>
-      </section>
-    </app-header>
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-orders-new-page>
-        <app-frame
-          ng-reflect-vm="[object Object]"
-        >
-          <section
-            class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-          >
-            <h2>
-              OrdersNewPage.frame.title
-            </h2>
-            <form
-              class="flex flex-col justify-center space-y-4 ng-untouched ng-pristine ng-invalid"
-              ng-reflect-form="[object Object]"
-              novalidate=""
-            >
-              <app-maps
-                class="ng-untouched ng-pristine ng-invalid"
-                formcontrolname="coordinates"
-                ng-reflect-name="coordinates"
-                ng-reflect-vm="[object Object]"
-              >
-                <div
-                  ng-reflect-attached-signal_="[Signal: null]"
-                  style="width: 100%; height: 80vh;"
-                />
-              </app-maps>
-              <div
-                class="flex flex-row justify-between"
-              >
-                <button
-                  class="btn disabled"
-                  disabled=""
-                  ng-reflect-ng-class="disabled"
-                  type="button"
-                >
-                   OrdersNewPage.map.deleteControlButtonText 
-                </button>
-                <button
-                  class="btn disabled"
-                  disabled=""
-                  ng-reflect-ng-class="disabled"
-                  type="submit"
-                >
-                   OrdersNewPage.button.title 
-                </button>
-              </div>
-            </form>
-          </section>
-          <!--container-->
-        </app-frame>
-        <!--container-->
-      </app-orders-new-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent can navigate to "/products" because the user is logged in so it should render the ProductsPage 1`] = `
-<div
-  id="root15"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <app-header>
-      <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
-      >
-        <app-logo
-          class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
-          tabindex="0"
-        >
-          <img
-            alt="logo"
-            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-            src="assets/phoenix.jpg"
-          />
-        </app-logo>
-        <app-nav>
-          <nav
-            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
-          >
-            <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                logout
-              </mat-icon>
-            </button>
-          </nav>
-        </app-nav>
-      </section>
-    </app-header>
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-products-page>
-        <app-frame
-          ng-reflect-vm="[object Object]"
-        >
-          <section
-            class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-          >
-            <h2>
-              LandingPage.frames.0.title
-            </h2>
-            <app-product-list>
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-              >
-                <!--container-->
-              </div>
-            </app-product-list>
-          </section>
-          <!--container-->
-        </app-frame>
-        <!--container-->
-      </app-products-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent can navigate to "/products/id" because the user is logged in so it should render the ProductsPage 1`] = `
-<div
-  id="root16"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <app-header>
-      <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
-      >
-        <app-logo
-          class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
-          tabindex="0"
-        >
-          <img
-            alt="logo"
-            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
-            src="assets/phoenix.jpg"
-          />
-        </app-logo>
-        <app-nav>
-          <nav
-            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
-          >
-            <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                logout
-              </mat-icon>
-            </button>
-          </nav>
-        </app-nav>
-      </section>
-    </app-header>
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-products-page>
-        <app-frame
-          ng-reflect-vm="[object Object]"
-        >
-          <section
-            class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
-          >
-            <h2>
-              LandingPage.frames.0.title
-            </h2>
-            <app-product-list>
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-              >
-                <!--container-->
-              </div>
-            </app-product-list>
-          </section>
-          <!--container-->
-        </app-frame>
-        <!--container-->
-      </app-products-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should navigate back to the LoginPage after navigate to "" because the user is not logged in 1`] = `
-<div
-  id="root10"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-login-page>
-        <div
-          class="flex items-center justify-center min-h-screen"
-        >
-          <app-login-form
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
-            >
-              <div
-                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
-                style="background-image: url(assets/farming.jpg);"
-              />
-              <div
-                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
-              >
-                <h3>
-                   LoginPage.loginForm.title 
-                </h3>
-                <p>
-                  LoginPage.loginForm.description
-                </p>
-                <div
-                  class="w-full"
-                >
-                  <form
-                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
-                    novalidate=""
-                  >
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="email"
-                      id="email"
-                      ng-reflect-name="email"
-                      placeholder="Email"
-                      type="email"
-                    />
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="password"
-                      id="password"
-                      ng-reflect-name="password"
-                      placeholder="Password"
-                      type="password"
-                    />
-                    <button
-                      class="btn btn-primary disabled"
-                      disabled=""
-                      ng-reflect-ng-class="disabled"
-                      type="submit"
-                    >
-                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </app-login-form>
-        </div>
-        <!--container-->
-      </app-login-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should navigate back to the LoginPage after navigate to "/orders/new" because the user is not logged in 1`] = `
-<div
-  id="root13"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-login-page>
-        <div
-          class="flex items-center justify-center min-h-screen"
-        >
-          <app-login-form
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
-            >
-              <div
-                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
-                style="background-image: url(assets/farming.jpg);"
-              />
-              <div
-                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
-              >
-                <h3>
-                   LoginPage.loginForm.title 
-                </h3>
-                <p>
-                  LoginPage.loginForm.description
-                </p>
-                <div
-                  class="w-full"
-                >
-                  <form
-                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
-                    novalidate=""
-                  >
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="email"
-                      id="email"
-                      ng-reflect-name="email"
-                      placeholder="Email"
-                      type="email"
-                    />
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="password"
-                      id="password"
-                      ng-reflect-name="password"
-                      placeholder="Password"
-                      type="password"
-                    />
-                    <button
-                      class="btn btn-primary disabled"
-                      disabled=""
-                      ng-reflect-ng-class="disabled"
-                      type="submit"
-                    >
-                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </app-login-form>
-        </div>
-        <!--container-->
-      </app-login-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should navigate back to the LoginPage after navigate to "/products" because the user is not logged in 1`] = `
-<div
-  id="root11"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-login-page>
-        <div
-          class="flex items-center justify-center min-h-screen"
-        >
-          <app-login-form
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
-            >
-              <div
-                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
-                style="background-image: url(assets/farming.jpg);"
-              />
-              <div
-                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
-              >
-                <h3>
-                   LoginPage.loginForm.title 
-                </h3>
-                <p>
-                  LoginPage.loginForm.description
-                </p>
-                <div
-                  class="w-full"
-                >
-                  <form
-                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
-                    novalidate=""
-                  >
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="email"
-                      id="email"
-                      ng-reflect-name="email"
-                      placeholder="Email"
-                      type="email"
-                    />
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="password"
-                      id="password"
-                      ng-reflect-name="password"
-                      placeholder="Password"
-                      type="password"
-                    />
-                    <button
-                      class="btn btn-primary disabled"
-                      disabled=""
-                      ng-reflect-ng-class="disabled"
-                      type="submit"
-                    >
-                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </app-login-form>
-        </div>
-        <!--container-->
-      </app-login-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should navigate back to the LoginPage after navigate to "/products/id" because the user is not logged in 1`] = `
-<div
-  id="root12"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <app-login-page>
-        <div
-          class="flex items-center justify-center min-h-screen"
-        >
-          <app-login-form
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] md:w-[100vh] max-w-4xl mx-5 md:mx-0"
-            >
-              <div
-                class="bg-cover bg-no-repeat rounded-2xl h-48 md:h-full md:w-1/2"
-                style="background-image: url(assets/farming.jpg);"
-              />
-              <div
-                class="flex flex-col items-center justify-center p-5 text-center w-full h-full md:w-1/2"
-              >
-                <h3>
-                   LoginPage.loginForm.title 
-                </h3>
-                <p>
-                  LoginPage.loginForm.description
-                </p>
-                <div
-                  class="w-full"
-                >
-                  <form
-                    class="w-full max-w-md mx-auto ng-untouched ng-pristine ng-invalid"
-                    ng-reflect-form="[object Object]"
-                    novalidate=""
-                  >
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="email"
-                      id="email"
-                      ng-reflect-name="email"
-                      placeholder="Email"
-                      type="email"
-                    />
-                    <input
-                      class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200 ng-untouched ng-pristine ng-invalid"
-                      formcontrolname="password"
-                      id="password"
-                      ng-reflect-name="password"
-                      placeholder="Password"
-                      type="password"
-                    />
-                    <button
-                      class="btn btn-primary disabled"
-                      disabled=""
-                      ng-reflect-ng-class="disabled"
-                      type="submit"
-                    >
-                       LOGINPAGE.LOGINFORM.BUTTONTITLE 
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </app-login-form>
-        </div>
-        <!--container-->
-      </app-login-page>
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should not render <app-nav-item> when there is no item provided 1`] = `
+exports[`AppComponent when rendering the UI should not render <app-nav-item> when there is no item provided 1`] = `
 <div
   id="root4"
   ng-version="18.2.8"
@@ -1090,7 +10,7 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
   >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1140,7 +60,7 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
 </div>
 `;
 
-exports[`AppComponent should not render the <app-header> when the headerCanBeShown$ value is false 1`] = `
+exports[`AppComponent when rendering the UI should not render the <app-header> when the headerCanBeShown$ value is false 1`] = `
 <div
   id="root2"
   ng-version="18.2.8"
@@ -1148,40 +68,9 @@ exports[`AppComponent should not render the <app-header> when the headerCanBeSho
   <div
     class="min-h-screen flex flex-col"
   >
-    <!--container-->
-    <div
-      class="flex-grow"
-    >
-      <router-outlet />
-      <!--container-->
-    </div>
-  </div>
-  <!--container-->
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should not render the template when the VM is not provided 1`] = `
-<div
-  id="root0"
-  ng-version="18.2.8"
->
-  <!--container-->
-</div>
-`;
-
-exports[`AppComponent should render <app-nav-item> and <a> with routerLink in order when both of them are provided 1`] = `
-<div
-  id="root9"
-  ng-version="18.2.8"
->
-  <div
-    class="min-h-screen flex flex-col"
-  >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1266,7 +155,111 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
 </div>
 `;
 
-exports[`AppComponent should render 1 <a> with routerLink when 1 item is provided 1`] = `
+exports[`AppComponent when rendering the UI should not render the template when the VM is not provided 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent when rendering the UI should render <app-nav-item> and <a> with routerLink in order when both of them are provided 1`] = `
+<div
+  id="root9"
+  ng-version="18.2.8"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
+      >
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
+        >
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+          >
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
+            >
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow"
+    >
+      <router-outlet />
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent when rendering the UI should render 1 <a> with routerLink when 1 item is provided 1`] = `
 <div
   id="root7"
   ng-version="18.2.8"
@@ -1276,7 +269,7 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
   >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1334,7 +327,7 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
 </div>
 `;
 
-exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`] = `
+exports[`AppComponent when rendering the UI should render 1 <app-nav-item> when 1 item is provided 1`] = `
 <div
   id="root5"
   ng-version="18.2.8"
@@ -1344,7 +337,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
   >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1403,7 +396,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
 </div>
 `;
 
-exports[`AppComponent should render 5 <a> with routerLink in order when 5 items are provided 1`] = `
+exports[`AppComponent when rendering the UI should render 5 <a> with routerLink in order when 5 items are provided 1`] = `
 <div
   id="root8"
   ng-version="18.2.8"
@@ -1413,7 +406,7 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
   >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1503,7 +496,7 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
 </div>
 `;
 
-exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are provided 1`] = `
+exports[`AppComponent when rendering the UI should render 5 <app-nav-item> in order when 5 items are provided 1`] = `
 <div
   id="root6"
   ng-version="18.2.8"
@@ -1513,7 +506,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
   >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1608,7 +601,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
 </div>
 `;
 
-exports[`AppComponent should render the <app-header> when the headerCanBeShown$ value is true 1`] = `
+exports[`AppComponent when rendering the UI should render the <app-header> when the headerCanBeShown$ value is true 1`] = `
 <div
   id="root3"
   ng-version="18.2.8"
@@ -1618,7 +611,7 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
   >
     <app-header>
       <section
-        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all"
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
       >
         <app-logo
           class="cursor-pointer"
@@ -1703,7 +696,7 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
 </div>
 `;
 
-exports[`AppComponent should render the template when the VM is provided 1`] = `
+exports[`AppComponent when rendering the UI should render the template when the VM is provided 1`] = `
 <div
   id="root1"
   ng-version="18.2.8"
@@ -1711,6 +704,79 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
   <div
     class="min-h-screen flex flex-col"
   >
+    <app-header>
+      <section
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
+      >
+        <app-logo
+          class="cursor-pointer"
+          ng-reflect-router-link=""
+          ng-reflect-vm="[object Object]"
+          tabindex="0"
+        >
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+          >
+            <a
+              class="nav-item"
+              href="/"
+              ng-reflect-router-link=""
+            >
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <button
+              class="nav-item"
+              mat-icon-button=""
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                logout
+              </mat-icon>
+            </button>
+          </nav>
+        </app-nav>
+      </section>
+    </app-header>
     <!--container-->
     <div
       class="flex-grow"

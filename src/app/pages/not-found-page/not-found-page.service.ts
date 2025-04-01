@@ -1,6 +1,6 @@
 import { Injectable, Signal, signal } from '@angular/core';
 import { notFoundPageVMDefault } from './not-found-page.mock';
-import { NotFoundPageVM } from './not-found-page-vm.model';
+import { NotFoundPageVM } from './not-found-page.model';
 import { NotFoundPageServiceModel } from './not-found-page.service.model';
 
 @Injectable({

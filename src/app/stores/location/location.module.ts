@@ -11,3 +11,8 @@ import { locationFeature } from './location.state';
     ],
 })
 export class LocationStoreModule {}
+
+@NgModule({
+    imports: [EffectsModule.forRoot([]), StoreModule.forRoot({})],
+})
+export class LocationStoreMockModule {}

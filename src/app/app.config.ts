@@ -25,18 +25,18 @@ import { browserLocalPersistence, setPersistence } from 'firebase/auth';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
-
 import {
     POLYGON_OPTIONS,
     MAP_OPTIONS,
 } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-area-select-form-control/map-area-select-form-control.model';
 import { ENTRY_POINT_MARKER_OPTIONS } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-point-select-form-control/map-point-select-form-control.model';
 import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
-import {
-    GOOGLE_MAPS_LOADER_CONFIG,
-    provideGoogleMapsLibraries,
-} from '@services/google-maps-loader/google-maps-loader.model';
+
 import { TranslocoModule } from '@modules/transloco/transloco.module';
+import {
+    provideGoogleMapsLibraries,
+    GOOGLE_MAPS_LOADER_CONFIG,
+} from './shared/providers/google-maps-provider';
 
 const devMode = isDevMode();
 
@@ -67,7 +67,7 @@ export const appConfig: ApplicationConfig = {
             provide: POLYGON_OPTIONS,
             useValue: {
                 clickable: true,
-                draggable: false,
+                draggable: true,
                 editable: true,
                 fillOpacity: 0.5,
                 strokeColor: 'blue',

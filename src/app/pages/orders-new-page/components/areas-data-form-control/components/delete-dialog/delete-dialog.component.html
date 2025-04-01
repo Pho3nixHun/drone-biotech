@@ -1,26 +1,18 @@
 @if (vm(); as vm) {
-    <div
-        class="bg-white w-500 p-10 rounded-lg shadow-md flex flex-col"
+    <app-base-dialog
+        class="w-80 md:w-96 block"
+        (cancelOnClick)="cancelClick()"
+        [vm]="vm"
         *transloco="let t"
     >
-        <button
-            mat-icon-button
-            (click)="cancelClick()"
-            class="ml-auto text-gray-700"
-        >
-            <mat-icon>close</mat-icon>
-        </button>
-        <h2 class="mx-auto text-3xl">{{ t(vm.titleKey) }}</h2>
-        <h3 class="mx-auto text-center my-10 text-gray-700 text-lg">
+        <h3 class="text-lg">
             {{ t(vm.warningTextKey) }}
         </h3>
-        <div class="flex flex-row space-x-5 justify-center">
-            <button (click)="cancelClick()" class="btn btn-secondary w-1/3">
-                {{ t(vm.cancelButtonTextKey) }}
-            </button>
-            <button (click)="deleteClick()" class="btn btn-error w-1/3">
-                {{ t(vm.submitButtonTextKey) }}
-            </button>
-        </div>
-    </div>
+        <button (click)="cancelClick()" class="btn btn-secondary">
+            {{ t(vm.cancelButtonTextKey) }}
+        </button>
+        <button (click)="deleteClick()" class="btn btn-error">
+            {{ t(vm.submitButtonTextKey) }}
+        </button>
+    </app-base-dialog>
 }

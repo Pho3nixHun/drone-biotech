@@ -36,14 +36,21 @@
     "AppComponent.navItems.0.title": "Kezdőlap",
     "AppComponent.navItems.1.title": "Termékeink",
     "AppComponent.navItems.2.title": "Partnereink",
-    "AppComponent.navItems.3.title": "Kapcsolatfelvétel",
-    "AppComponent.navItems.4.title": "Rendelés",
+    "AppComponent.navItems.3.title": "Rendelés",
 
     "NotFoundPage.message.description": "Elnézést kérünk, nem találjuk ezt az oldalt. De ne aggódjon, rengeteg más dolgot találhat a kezdőlapunkon.",
+    "NotFoundPage.message.buttonText": "Vissza",
 
     "LoginPage.loginForm.title": "Üdv a Phoenix-nél!",
     "LoginPage.loginForm.description": "Phoenix ...",
     "LoginPage.loginForm.buttonTitle": "Belépés",
+    "LoginPage.loginForm.passwordPlaceholder": "Jelszó",
+    "LoginPage.loginForm.emailLabel": "Email",
+    "LoginPage.loginForm.passwordLabel": "Jelszó",
+
+    "LoginPage.error.invalid": "Érvénytelen hitelesítő adatok. Kérlek, ellenőrizd az e-mail címed és jelszavad, majd próbáld újra.",
+    "LoginPage.error.many": "Túl sok próbálkozás. Kérlek, próbáld meg később.",
+    "LoginPage.error.unknown": "Hoppá, valami hiba történt.",
 
     "OrdersNewPage.title": "Új rendelés leadása",
     "OrdersNewPage.submitButtonText": "Elfogadás",
@@ -77,6 +84,8 @@
     "OrdersNewPage.areasDataDialog.submitButtonText": "Elfogadás",
     "OrdersNewPage.areasDataDialog.applicationDateLabel": "Kezelés időpontja",
     "OrdersNewPage.areasDataDialog.dosePerHqLabel": "Dózis/hektár",
+    "OrdersNewPage.areasDataDialog.entryPointLabelKey": "Behajtási hely",
+    "OrdersNewPage.areasDataDialog.targetAreaLabelKey": "Terület",
 
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Terület hozzáadása",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Terület törlése",

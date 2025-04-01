@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteDialogComponent when the vm is correct should render the content 1`] = `
+<div
+  id="root1"
+  ng-version="18.2.8"
+>
+  <app-base-dialog
+    class="w-80 md:w-96 block"
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+    >
+      <div
+        class="flex justify-between"
+      >
+        <h3
+          class="text-3xl"
+        >
+           tit 
+        </h3>
+        <button>
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate text-3xl material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+            style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;"
+          >
+            close
+          </mat-icon>
+        </button>
+      </div>
+      <div
+        class="space-y-4"
+      >
+        <h3
+          class="text-lg"
+        >
+           warning 
+        </h3>
+      </div>
+      <div
+        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
+      >
+        <button
+          class="btn btn-secondary"
+        >
+           cancel 
+        </button>
+        <button
+          class="btn btn-error"
+        >
+           submit 
+        </button>
+      </div>
+    </section>
+    <!--container-->
+  </app-base-dialog>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DeleteDialogComponent when the vm is not correct should not render the content if not DeleteDialogVM is provided 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <!--container-->
+</div>
+`;

@@ -6,11 +6,12 @@ import {
     MAP_OPTIONS,
     POLYGON_OPTIONS,
 } from './map-area-select-form-control.model';
+import { MapAreaSelectFormControlMockServiceModel } from './map-area-select-form-control.service.mock';
 
 @Injectable({
     providedIn: 'root',
 })
-export class MapAreaSelectFormControlService {
+export class MapAreaSelectFormControlService extends MapAreaSelectFormControlMockServiceModel {
     public initializeMap(
         mapCanvas: HTMLElement,
         mapOptions: google.maps.MapOptions,

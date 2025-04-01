@@ -7,10 +7,10 @@ export const selectRouterState =
 
 export const selectHeaderCanBeShown = createSelector(
     selectRouterState,
-    (router) => router?.state.data['headerCanBeShown']
+    (router): boolean => router?.state.data['headerCanBeShown']
 );
 
 export const selectID = createSelector(
     selectRouterState,
-    (router) => router?.state.params['id']
+    (router): string => router?.state.params['id']
 );

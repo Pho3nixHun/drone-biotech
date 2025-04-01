@@ -36,14 +36,21 @@
     "AppComponent.navItems.0.title": "Home",
     "AppComponent.navItems.1.title": "Products",
     "AppComponent.navItems.2.title": "Partners",
-    "AppComponent.navItems.3.title": "Contacts",
-    "AppComponent.navItems.4.title": "Order",
+    "AppComponent.navItems.3.title": "Order",
 
     "NotFoundPage.message.description": "Sorry, we couldn't find this page. But don't worry, you can find plenty of other things on our homepage.",
+    "NotFoundPage.message.buttonText": "Go home",
 
     "LoginPage.loginForm.title": "Welcome to Phoenix!",
     "LoginPage.loginForm.description": "Phoenix is ...",
     "LoginPage.loginForm.buttonTitle": "Login",
+    "LoginPage.loginForm.passwordPlaceholder": "Password",
+    "LoginPage.loginForm.emailLabel": "Email",
+    "LoginPage.loginForm.passwordLabel": "Password",
+
+    "LoginPage.error.invalid": "Invalid credentials. Please check your email and password and try again.",
+    "LoginPage.error.many": "Too many attempts. Please try again later.",
+    "LoginPage.error.unknown": "Oppps, something wrong happened.",
 
     "OrdersNewPage.title": "Place new order",
     "OrdersNewPage.submitButtonText": "Submit",
@@ -77,6 +84,8 @@
     "OrdersNewPage.areasDataDialog.submitButtonText": "Submit",
     "OrdersNewPage.areasDataDialog.applicationDateLabel": "Application date",
     "OrdersNewPage.areasDataDialog.dosePerHqLabel": "Dose/Hq",
+    "OrdersNewPage.areasDataDialog.entryPointLabelKey": "Entry point",
+    "OrdersNewPage.areasDataDialog.targetAreaLabelKey": "Target area",
 
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Delete target area",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Add target area",

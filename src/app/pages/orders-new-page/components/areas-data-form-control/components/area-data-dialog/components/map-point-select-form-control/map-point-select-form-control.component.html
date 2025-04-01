@@ -1,11 +1,8 @@
-<div
-    class="flex flex-col space-y-4 mt-1 bg-white border rounded-md p-2 focus:ring focus:ring-blue-300"
-    tabindex="0"
->
+<div class="flex flex-col space-y-4 bg-white" *transloco="let t">
     <div
         #mapCanvas
         [appElementRef]="mapInitializer"
-        class="w-full h-[50vh]"
+        class="w-full h-[40vh]"
     ></div>
 
     <button
@@ -14,7 +11,7 @@
         [ngClass]="entryPoint() ? 'btn-disabled' : 'btn-primary'"
         [disabled]="entryPoint() ? true : false"
     >
-        {{ vm().addButtonTextKey | transloco }}
+        {{ t(vm().addButtonTextKey) }}
     </button>
 
     <button
@@ -23,6 +20,6 @@
         [ngClass]="entryPoint() ? 'btn-error' : 'btn-disabled'"
         [disabled]="entryPoint() ? false : true"
     >
-        {{ vm().deleteButtonTextKey | transloco }}
+        {{ t(vm().deleteButtonTextKey) }}
     </button>
 </div>

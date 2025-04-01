@@ -38,7 +38,7 @@ export class MapPointSelectFormControlComponent
     private readonly mapPointSelectFormControlService = inject(
         MapPointSelectFormControlService
     );
-    public vm = input.required<MapPointSelectFormControlVM>();
+    public readonly vm = input.required<MapPointSelectFormControlVM>();
     private readonly writeEntryPointSignal = signal<Coordinates | null>(null);
 
     protected readonly entryPoint = computed<Coordinates | null>(() => {
@@ -95,17 +95,5 @@ export class MapPointSelectFormControlComponent
 
     registerOnTouched(fn: () => void): void {
         this.onTouched = fn;
-    }
-
-    public isFocused = false;
-    onFocus(): void {
-        this.isFocused = true;
-        console.log('Map is focused');
-    }
-
-    onBlur(): void {
-        this.isFocused = false;
-        this.onTouched(); // Notify Angular forms that the control was touched
-        console.log('Map lost focus');
     }
 }

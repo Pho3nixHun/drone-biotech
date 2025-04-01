@@ -3,6 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { from, Observable, of } from 'rxjs';
 import {
     Auth,
+    AuthError,
     onAuthStateChanged,
     signInWithEmailAndPassword,
     signOut,
@@ -10,8 +11,9 @@ import {
 } from '@angular/fire/auth';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { AuthActions } from './auth.actions';
-import { mapFirebaseUser } from './auth.mapping';
+import { mapFirebaseError, mapFirebaseUser } from './auth.mapping';
 import { Router } from '@angular/router';
+import { AppRouteSegment } from 'src/app/app-route-segment';
 
 export const retrieveUser$ = createEffect(
     (auth = inject(Auth)) =>
@@ -36,7 +38,7 @@ export const navigateAfterSignIn$ = createEffect(
         actions$.pipe(
             ofType(AuthActions.signInSuccess),
             tap(() => {
-                router.navigate(['']);
+                router.navigate([AppRouteSegment.LANDING]);
             })
         ),
     { functional: true, dispatch: false }
@@ -47,7 +49,7 @@ export const navigateAfterSignOut$ = createEffect(
         actions$.pipe(
             ofType(AuthActions.signOutSuccess),
             tap(() => {
-                router.navigate(['/login']);
+                router.navigate([AppRouteSegment.LOGIN]);
             })
         ),
     { functional: true, dispatch: false }
@@ -64,9 +66,13 @@ export const signInUser$ = createEffect(
                             user: mapFirebaseUser(userCredential.user),
                         })
                     ),
-                    catchError((error) =>
-                        of(AuthActions.signInFailure({ error }))
-                    )
+                    catchError((error: AuthError) => {
+                        return of(
+                            AuthActions.signInFailure({
+                                error: mapFirebaseError(error),
+                            })
+                        );
+                    })
                 )
             )
         ),

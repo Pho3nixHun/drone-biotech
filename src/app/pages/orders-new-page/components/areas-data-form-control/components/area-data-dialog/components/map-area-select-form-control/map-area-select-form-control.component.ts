@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import {
     Component,
     computed,
@@ -84,7 +83,9 @@ export class MapAreaSelectFormControlComponent implements ControlValueAccessor {
         this.mapAreaSelectFormControlService.deletePolygon();
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     private onChange: (value: Coordinates[] | null) => void = () => {};
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     private onTouched: () => void = () => {};
 
     writeValue(value: Coordinates[] | null): void {

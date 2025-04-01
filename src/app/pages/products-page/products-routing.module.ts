@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: '', // /products route
+        path: '',
         loadComponent: () =>
             import('../products-page/products-page.component').then(
                 (m) => m.ProductsPageComponent
             ),
     },
     {
-        path: ':id', // /products/:id route
+        path: ':id',
         loadComponent: () =>
             import('../products-page/products-page.component').then(
                 (m) => m.ProductsPageComponent

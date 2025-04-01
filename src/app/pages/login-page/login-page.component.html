@@ -1,39 +1,48 @@
-@if (vm()) {
-    @let VM = vm().loginFormXVM;
-    <div class="flex items-center justify-center min-h-screen">
-        <app-login-form [vm]="VM">
-            <h3>
-                {{ VM.titleKey | transloco }}
-            </h3>
-            <p>{{ VM.descriptionKey | transloco }}</p>
-            <form
-                [formGroup]="loginForm"
-                (ngSubmit)="signIn()"
-                class="w-full max-w-md mx-auto"
-            >
+@if (vm(); as vm) {
+    <section
+        class="flex flex-col items-center justify-center min-h-screen px-4 md:px-0"
+        *transloco="let t"
+    >
+        @let formXVM = vm.loginFormXVM;
+
+        <app-login-form [vm]="formXVM">
+            @if (authError(); as errorMessage) {
+                <p class="text-red-500 text-sm">{{ t(errorMessage) }}</p>
+            }
+            <form [formGroup]="loginForm" class="w-full space-y-4">
+                <label for="email" class="block font-medium">
+                    {{ t(formXVM.emailLabelKey) }}
+                </label>
                 <input
                     id="email"
                     type="email"
                     placeholder="Email"
                     formControlName="email"
-                    class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200"
+                    class="block w-full border border-gray-300 p-2 rounded-md"
                 />
+
+                <label for="password" class="block font-medium">
+                    {{ t(formXVM.passwordLabelKey) }}
+                </label>
                 <input
                     id="password"
                     type="password"
-                    placeholder="Password"
+                    [placeholder]="t(formXVM.passwordPlaceholderKey)"
                     formControlName="password"
-                    class="block rounded-full py-4 px-5 mb-5 w-full bg-gray-200"
+                    class="block w-full border border-gray-300 p-2 rounded-md"
                 />
+
                 <button
-                    type="submit"
-                    [disabled]="!loginForm.valid"
-                    [ngClass]="[loginForm.valid ? 'primary' : 'disabled']"
-                    class="btn btn-primary"
+                    (click)="signIn()"
+                    [disabled]="loginForm.invalid"
+                    class="btn w-full"
+                    [ngClass]="[
+                        loginForm.valid ? 'btn-secondary' : 'btn-disabled',
+                    ]"
                 >
-                    {{ (VM.buttonTitleKey | transloco).toUpperCase() }}
+                    {{ t(formXVM.buttonTitleKey) }}
                 </button>
             </form>
         </app-login-form>
-    </div>
+    </section>
 }

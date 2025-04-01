@@ -37,29 +37,7 @@ export const landingPageVMDefault: LandingPageVM = {
         {
             id: FrameID.PRODUCTS,
             titleKey: 'LandingPage.frames.0.title',
-            productItemXVMs: [
-                {
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'LandingPage.products.0.title',
-                    titleKey: 'LandingPage.products.0.title',
-                    descriptionKey: 'LandingPage.products.0.description',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'LandingPage.products.1.title',
-                    titleKey: 'LandingPage.products.1.title',
-                    descriptionKey: 'LandingPage.products.1.description',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'LandingPage.products.2.title',
-                    titleKey: 'LandingPage.products.2.title',
-                    descriptionKey: 'LandingPage.products.2.description',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
+            productItemXVMs: [],
         },
         {
             id: FrameID.PARTNERS,
@@ -154,6 +132,7 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
             productItemXVMs: [
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
+                    id: '1',
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
                     descriptionKey: 'proddesc0',
@@ -161,12 +140,14 @@ export const landingPageVMWithoutHeroXVM: LandingPageVM = {
                 },
                 {
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
+                    id: '2',
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
                     descriptionKey: 'proddesc1',
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -243,6 +224,7 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -250,6 +232,7 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -257,6 +240,7 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -282,6 +266,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -289,6 +274,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -296,6 +282,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -367,6 +354,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -374,6 +362,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -381,6 +370,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -394,6 +384,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -401,6 +392,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -408,6 +400,7 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -491,6 +484,7 @@ export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -498,6 +492,7 @@ export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -505,6 +500,7 @@ export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -530,6 +526,7 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -537,6 +534,7 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -544,6 +542,7 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -644,6 +643,7 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -727,6 +727,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -734,6 +735,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -742,6 +744,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                 },
 
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -749,6 +752,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '4',
                     routerLink: [AppRouteSegment.PRODUCT, '4'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -756,6 +760,7 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '5',
                     routerLink: [AppRouteSegment.PRODUCT, '5'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -839,6 +844,7 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -846,6 +852,7 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -853,6 +860,7 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -915,6 +923,7 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -922,6 +931,7 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -929,6 +939,7 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -996,6 +1007,7 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -1003,6 +1015,7 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -1010,6 +1023,7 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -1093,6 +1107,7 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -1100,6 +1115,7 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -1107,6 +1123,7 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -1159,6 +1176,7 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -1166,6 +1184,7 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -1173,6 +1192,7 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -1231,6 +1251,7 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -1238,6 +1259,7 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -1245,6 +1267,7 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -1316,13 +1339,15 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
     },
 };
 
-export const landingPageVMMockWithRoutes = {
+export const landingPageVMMockWithRoutes: LandingPageVM = {
     frameXVMs: [
         {
             id: FrameID.PRODUCTS,
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
+
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -1330,6 +1355,8 @@ export const landingPageVMMockWithRoutes = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '1',
+
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -1337,6 +1364,8 @@ export const landingPageVMMockWithRoutes = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '1',
+
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',
@@ -1412,13 +1441,14 @@ export const landingPageVMMockWithRoutes = {
         secondaryButtonLabelKey: 'herosec',
     },
 };
-export const landingPageVMMock = {
+export const landingPageVMMock: LandingPageVM = {
     frameXVMs: [
         {
             id: FrameID.PRODUCTS,
             titleKey: 'frame0',
             productItemXVMs: [
                 {
+                    id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
                     altTextKey: 'prodtit0',
                     titleKey: 'prodtit0',
@@ -1426,6 +1456,8 @@ export const landingPageVMMock = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '2',
+
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
                     altTextKey: 'prodtit1',
                     titleKey: 'prodtit1',
@@ -1433,6 +1465,7 @@ export const landingPageVMMock = {
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
+                    id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
                     altTextKey: 'prodtit2',
                     titleKey: 'prodtit2',

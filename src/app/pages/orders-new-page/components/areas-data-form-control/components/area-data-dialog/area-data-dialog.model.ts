@@ -2,10 +2,13 @@ import { isObject } from '@utils/is-object.typeguard';
 import { MapAreaSelectFormControlVM } from './components/map-area-select-form-control/map-area-select-form-control.model';
 import { MapPointSelectFormControlVM } from './components/map-point-select-form-control/map-point-select-form-control.model';
 import { DialogReasonBase } from '@services/dialog/dialog.service';
+import { BaseDialogVM } from '@components/base-dialog/base-dialog.model';
 
-export interface AreaDataDialogVM {
-    titleKey: string;
+export interface AreaDataDialogVM extends BaseDialogVM {
+    type: 'areaDataDialogVM';
     dosePerHqLabelKey: string;
+    entryPointLabelKey: string;
+    targetAreaLabelKey: string;
     applicationDateLabelKey: string;
     cancelButtonTextKey: string;
     submitButtonTextKey: string;
@@ -45,4 +48,8 @@ export function isAreaDataDialogResultWithAreaData(
         'type' in data &&
         data.type === 'areaDataDialogResultWithAreaData'
     );
+}
+
+export function isAreaDataDialogVM(data: unknown): data is AreaDataDialogVM {
+    return isObject(data) && 'type' in data && data.type === 'areaDataDialogVM';
 }

@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { AppRouteSegment } from './app-route-segment';
-import { LoginGuard } from '@guards/login/login.guard';
-import { AuthGuard } from '@guards/auth/auth.guard';
+import { authenticatedUserGuard } from '@guards/authenticated-user/authenticated-user.guard';
+import { guestOnlyGuard } from '@guards/guest-only/guest-only.guard';
 
 export const routes: Routes = [
     {
         path: AppRouteSegment.LANDING,
-        canActivate: [AuthGuard],
+        canActivate: [authenticatedUserGuard],
         loadComponent: () =>
             import('./pages/landing-page/landing-page.component').then(
                 (m) => m.LandingPageComponent
@@ -15,7 +15,7 @@ export const routes: Routes = [
     },
     {
         path: AppRouteSegment.LOGIN,
-        canActivate: [LoginGuard],
+        canActivate: [guestOnlyGuard],
         loadComponent: () =>
             import('./pages/login-page/login-page.component').then(
                 (m) => m.LoginPageComponent
@@ -24,7 +24,7 @@ export const routes: Routes = [
     },
     {
         path: AppRouteSegment.PRODUCT,
-        canActivate: [AuthGuard],
+        canActivate: [authenticatedUserGuard],
         loadChildren: () =>
             import('./pages/products-page/products-routing.module').then(
                 (m) => m.ProductsRoutingModule
@@ -33,7 +33,7 @@ export const routes: Routes = [
     },
     {
         path: AppRouteSegment.ORDERS,
-        canActivate: [AuthGuard],
+        canActivate: [authenticatedUserGuard],
         loadChildren: () =>
             import('./pages/orders-new-page/orders-routing.module').then(
                 (m) => m.OrdersRoutingModule
@@ -42,7 +42,7 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        canActivate: [AuthGuard],
+        canActivate: [authenticatedUserGuard],
         loadComponent: () =>
             import('./pages/not-found-page/not-found-page.component').then(
                 (m) => m.NotFoundPageComponent

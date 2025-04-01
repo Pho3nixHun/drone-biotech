@@ -1,127 +1,148 @@
 @if (vm(); as vm) {
     <div *transloco="let t">
-        <button (click)="addAreaData()">Add</button>
-        <app-card-group>
-            <div>
-                {{ t(vm.targetAreaSizeHeaderKey) }}
-            </div>
-            <div>
-                {{ t(vm.entryPointHeaderKey) }}
-            </div>
-            <div>{{ t(vm.doseHeaderKey) }}</div>
-            <div>{{ t(vm.applicationDateHeaderKey) }}</div>
-            <div>{{ t(vm.trichogrammaRequirementHeaderKey) }}</div>
-            <div>{{ t(vm.distanceFromHeadOfficeHeaderKey) }}</div>
-            <div>{{ t(vm.actionsHeaderKey) }}</div>
+        <div class="flex flex-row justify-between pr-3 xl:pr-2">
+            <ng-content select="label" />
+            <button
+                mat-icon-button
+                class="bg-emerald-400 hover:bg-emerald-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
+                (click)="addAreaData()"
+            >
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+        @if (xAreaData$() | async; as xAreaData) {
+            <app-card-group>
+                <div class="flex items-center">
+                    {{ t(vm.targetAreaSizeHeaderKey) }}
+                </div>
+                <div class="flex items-center">
+                    {{ t(vm.entryPointHeaderKey) }}
+                </div>
+                <div class="flex items-center">{{ t(vm.doseHeaderKey) }}</div>
+                <div class="flex items-center">
+                    {{ t(vm.applicationDateHeaderKey) }}
+                </div>
+                <div class="flex items-center">
+                    {{ t(vm.trichogrammaRequirementHeaderKey) }}
+                </div>
+                <div class="flex items-center">
+                    {{ t(vm.distanceFromHeadOfficeHeaderKey) }}
+                </div>
+                <div class="flex items-center">
+                    {{ t(vm.actionsHeaderKey) }}
+                </div>
 
-            @for (area of xAreaData$() | async; track $index) {
-                <app-card-item
-                    class="p-3 xl:p-0 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] rounded-lg xl:rounded-none duration-500 transition-all bg-gray-100"
-                >
-                    <app-key-value [label]="vm.targetAreaSizeHeaderKey">
-                        {{
-                            t(vm.targetAreaSizeValueKey, {
-                                count: area.targetAreaSize,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vm.entryPointHeaderKey">
-                        {{ area.entryPointAddress }}
-                        {{
-                            t(vm.entryPointValueKey, {
-                                count: area.entryPointAddress,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vm.doseHeaderKey">
-                        {{
-                            t(vm.doseValueKey, {
-                                count: area.dosePerHq,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vm.applicationDateHeaderKey">
-                        {{
-                            t(vm.applicationDateValueKey, {
-                                applicationDate: area.applicationDate,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value
-                        [label]="vm.trichogrammaRequirementHeaderKey"
+                @for (area of xAreaData; track $index) {
+                    <app-card-item
+                        class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
                     >
-                        {{
-                            t(vm.trichogrammaRequirementValueKey, {
-                                count: area.trichogrammaRequirement,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vm.distanceFromHeadOfficeHeaderKey">
-                        {{
-                            t(vm.distanceFromHeadOfficeValueKey, {
-                                count: area.distanceFromHeadOffice,
-                            })
-                        }}
-                    </app-key-value>
-                    <button
-                        mat-icon-button
-                        class="bg-blue-600 hover:bg-blue-500 text-white h-11 w-11 items-center justify-center text-center rounded-full inline-flex"
-                        (click)="editAreaData(area.id)"
+                        <app-key-value [label]="vm.targetAreaSizeHeaderKey">
+                            {{
+                                t(vm.targetAreaSizeValueKey, {
+                                    count: area.targetAreaSize,
+                                })
+                            }}
+                        </app-key-value>
+                        <app-key-value [label]="vm.entryPointHeaderKey">
+                            {{ area.entryPointAddress }}
+                            {{
+                                t(vm.entryPointValueKey, {
+                                    count: area.entryPointAddress,
+                                })
+                            }}
+                        </app-key-value>
+                        <app-key-value [label]="vm.doseHeaderKey">
+                            {{
+                                t(vm.doseValueKey, {
+                                    count: area.dosePerHq,
+                                })
+                            }}
+                        </app-key-value>
+                        <app-key-value [label]="vm.applicationDateHeaderKey">
+                            {{
+                                t(vm.applicationDateValueKey, {
+                                    applicationDate: area.applicationDate,
+                                })
+                            }}
+                        </app-key-value>
+                        <app-key-value
+                            [label]="vm.trichogrammaRequirementHeaderKey"
+                        >
+                            {{
+                                t(vm.trichogrammaRequirementValueKey, {
+                                    count: area.trichogrammaRequirement,
+                                })
+                            }}
+                        </app-key-value>
+                        <app-key-value
+                            [label]="vm.distanceFromHeadOfficeHeaderKey"
+                        >
+                            {{
+                                t(vm.distanceFromHeadOfficeValueKey, {
+                                    count: area.distanceFromHeadOffice,
+                                })
+                            }}
+                        </app-key-value>
+                        <button
+                            mat-icon-button
+                            class="bg-blue-400 hover:bg-blue-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
+                            (click)="editAreaData(area.id)"
+                        >
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button
+                            mat-icon-button
+                            class="bg-red-400 hover:bg-red-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
+                            (click)="deleteAreaData(area.id)"
+                        >
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </app-card-item>
+                }
+            </app-card-group>
+            @let data = totalAreaXData$() | async;
+            @if (data) {
+                <div class="grid grid-cols-3 gap-1">
+                    <div
+                        class="grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
                     >
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                    <button
-                        mat-icon-button
-                        class="bg-red-600 hover:bg-red-500 text-white h-11 w-11 items-center justify-center text-center rounded-full inline-flex"
-                        (click)="deleteAreaData(area.id)"
-                    >
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </app-card-item>
-            }
-        </app-card-group>
-        @let totalAreaData = totalAreaXData$() | async;
-        @if (totalAreaData) {
-            <table class="w-full border rounded-lg mt-10">
-                <thead class="bg-gray-200">
-                    <tr class="text-left text-gray-700 font-semibold">
-                        <th class="border">
+                        <div>
                             {{ t(vm.totalTargetAreaSizeHeaderKey) }}
-                        </th>
-                        <th class="border">
+                        </div>
+                        <div>
                             {{ t(vm.totalTrichogrammaRequirementHeaderKey) }}
-                        </th>
-                        <th class="border">
+                        </div>
+                        <div>
                             {{ t(vm.totalDistanceFromHeadOfficeHeaderKey) }}
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="odd:bg-white even:bg-gray-100">
-                        <td
-                            class="border"
-                            [transloco]="vm.targetAreaSizeValueKey"
-                            [translocoParams]="{
-                                count: totalAreaData.totalTargetAreaSize,
-                            }"
-                        ></td>
-                        <td
-                            class="border"
-                            [transloco]="vm.trichogrammaRequirementValueKey"
-                            [translocoParams]="{
-                                count: totalAreaData.totalTrichogrammaRequirement,
-                            }"
-                        ></td>
-                        <td
-                            class="border"
-                            [transloco]="vm.distanceFromHeadOfficeValueKey"
-                            [translocoParams]="{
-                                count: totalAreaData.totalDistanceFromHeadOffice,
-                            }"
-                        ></td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                    </div>
+                    <div
+                        class="grid grid-cols-subgrid col-span-full p-3 bg-gray-100 border border-gray-300"
+                    >
+                        <div>
+                            {{
+                                t(vm.targetAreaSizeValueKey, {
+                                    count: data.totalTargetAreaSize,
+                                })
+                            }}
+                        </div>
+                        <div>
+                            {{
+                                t(vm.trichogrammaRequirementValueKey, {
+                                    count: data.totalTrichogrammaRequirement,
+                                })
+                            }}
+                        </div>
+                        <div>
+                            {{
+                                t(vm.distanceFromHeadOfficeValueKey, {
+                                    count: data.totalDistanceFromHeadOffice,
+                                })
+                            }}
+                        </div>
+                    </div>
+                </div>
+            }
         }
     </div>
 }

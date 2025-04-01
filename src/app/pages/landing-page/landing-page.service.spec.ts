@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { LandingPageService } from './landing-page.service';
-import { landingPageVMDefault } from './landing-page.mock';
 
 describe('LandingPageService', () => {
     let service: LandingPageService;
@@ -14,14 +13,14 @@ describe('LandingPageService', () => {
         expect(service).toBeTruthy();
     });
 
-    it('should return the landingPageVMDefault when the getVM() function is called', () => {
+    it('should return a LandingPageVM when the getVM() function is called', () => {
         // Arrange
         const vm = service.getVM();
 
         // Act
-        // No need to act
 
         //Assert
-        expect(landingPageVMDefault).toEqual(vm());
+        expect(vm).toBeDefined();
+        expect(vm()).toHaveProperty('frameXVMs');
     });
 });

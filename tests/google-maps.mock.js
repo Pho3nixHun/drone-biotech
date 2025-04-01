@@ -17,5 +17,8 @@ global.google = {
         Polygon: jest.fn(() => ({
             getPath: jest.fn(),
         })),
+        Geocoder: jest.fn(() => ({
+            geocode: jest.fn(),
+        })),
     },
 };

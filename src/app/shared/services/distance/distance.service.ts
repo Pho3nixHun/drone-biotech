@@ -15,19 +15,23 @@ import {
     providedIn: 'root',
 })
 export class DistanceService {
-    private readonly headOfficeLocation = inject(HEAD_OFFICE_LOCATION);
     private readonly httpClient = inject(HttpClient);
+    private readonly headOfficeLocation = inject(HEAD_OFFICE_LOCATION);
+    public readonly cache = new Map<string, number>();
     private readonly apiUrl =
         'https://routes.googleapis.com/directions/v2:computeRoutes';
 
-    private readonly cache = new Map<string, number>();
-
-    public getDistance(destination: Coordinates) {
+    public getDistance(destination: Coordinates): Observable<number> {
         const cacheKey = JSON.stringify(destination);
         const cacheValue = this.cache.get(cacheKey);
 
         if (cacheValue) {
             return of(cacheValue);
+        }
+
+        if (destination === this.headOfficeLocation) {
+            this.cache.set(cacheKey, 0);
+            return of(0);
         }
 
         const request: DistanceFromDestinationRequest = {
@@ -58,7 +62,7 @@ export class DistanceService {
 
         const headers = new HttpHeaders({
             'Content-Type': 'application/json',
-            'X-Goog-FieldMask': `routes.distanceMeters`,
+            'X-Goog-FieldMask': 'routes.distanceMeters',
             'X-Goog-Api-Key': environment.googleMapsConfig.apiKey,
         });
 
@@ -73,13 +77,13 @@ export class DistanceService {
             );
     }
 
-    public getTotalShortestDistance(
+    public getShortestDistanceWithWaypoints(
         wayPoints: Coordinates | Coordinates[]
     ): Observable<number> {
         const cacheKey = JSON.stringify(
             Array.isArray(wayPoints)
                 ? wayPoints.sort((a, b) => a.lat - b.lat || a.lng - b.lng)
-                : Array.of(wayPoints)
+                : [wayPoints]
         );
 
         const cacheValue = this.cache.get(cacheKey);

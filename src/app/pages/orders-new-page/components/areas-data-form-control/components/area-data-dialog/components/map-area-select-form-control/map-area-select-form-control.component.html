@@ -2,22 +2,21 @@
     <div
         #mapCanvas
         [appElementRef]="mapInitialize"
-        class="w-full h-[50vh]"
+        class="w-full h-[40vh]"
     ></div>
-    @let area = targetArea();
     <button
         (click)="drawPolygon(null)"
         class="btn"
-        [ngClass]="[area ? 'btn-disabled' : 'btn-primary']"
-        [disabled]="area ? true : false"
+        [ngClass]="[targetArea() ? 'btn-disabled' : 'btn-primary']"
+        [disabled]="targetArea() ? true : false"
     >
         {{ vm().addButtonTextKey | transloco }}
     </button>
     <button
         (click)="deletePolygon()"
         class="btn"
-        [ngClass]="[area ? 'btn-error' : 'btn-disabled']"
-        [disabled]="area ? false : true"
+        [ngClass]="[targetArea() ? 'btn-error' : 'btn-disabled']"
+        [disabled]="targetArea() ? false : true"
     >
         {{ vm().deleteButtonTextKey | transloco }}
     </button>

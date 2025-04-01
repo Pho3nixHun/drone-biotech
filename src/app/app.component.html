@@ -1,14 +1,14 @@
-@if (vm(); as VM) {
+@if (vm(); as vm) {
     <div class="min-h-screen flex flex-col">
-        @if (headerCanBeShown$ | async) {
+        @if (headerCanBeShown()) {
             <app-header>
                 <app-logo
-                    [vm]="VM.logoXVM"
-                    [routerLink]="VM.logoXVM.routerLink"
+                    [vm]="vm.logoXVM"
+                    [routerLink]="vm.logoXVM.routerLink"
                     class="cursor-pointer"
                 />
                 <app-nav>
-                    @for (navItemXVM of VM.navItemXVMs; track $index) {
+                    @for (navItemXVM of vm.navItemXVMs; track $index) {
                         <ng-container
                             [ngTemplateOutlet]="
                                 isWithLink(navItemXVM)

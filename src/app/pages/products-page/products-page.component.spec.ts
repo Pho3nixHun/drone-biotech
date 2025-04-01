@@ -1,19 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductsPageComponent } from './products-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { provideRouter } from '@angular/router';
-import { enProductsPageMock, productsPageVMMock } from './products-page.mock';
+import {
+    enProductsPageMock,
+    productsPageVMMock,
+    productsPageVMWithFiveProductItem,
+    productsPageVMWithOneProductItem,
+} from './products-page.mock';
 import {
     provideProductsPageMockService,
     updateGetVMSignal,
 } from './products-page.service.mock';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { selectID } from 'src/app/stores/router/router.selectors';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('ProductsPageComponent', () => {
     let fixture: ComponentFixture<ProductsPageComponent>;
     let compiled: HTMLElement;
-    let store: MockStore;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -27,16 +29,11 @@ describe('ProductsPageComponent', () => {
                     },
                 }),
             ],
-            providers: [
-                provideProductsPageMockService(),
-                provideRouter([]),
-                provideMockStore(),
-            ],
+            providers: [provideProductsPageMockService(), provideMockStore()],
         }).compileComponents();
 
         updateGetVMSignal(undefined);
 
-        store = TestBed.inject(MockStore);
         fixture = TestBed.createComponent(ProductsPageComponent);
         compiled = fixture.debugElement.nativeElement;
     });
@@ -52,6 +49,7 @@ describe('ProductsPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
+
     //Snapshot test
     it('should render the template when the VM is provided', () => {
         //Arrange
@@ -65,10 +63,9 @@ describe('ProductsPageComponent', () => {
     });
 
     //Snapshot test
-    it('should not render <app-product-item> when the ID is not correct', () => {
+    it('should render 1 <app-product-item> if 1 items are provided', () => {
         //Arrange
-        store.overrideSelector(selectID, 'asd');
-        updateGetVMSignal(productsPageVMMock);
+        updateGetVMSignal(productsPageVMWithOneProductItem);
 
         //Act
         fixture.detectChanges();
@@ -78,19 +75,14 @@ describe('ProductsPageComponent', () => {
     });
 
     //Snapshot test
-    it('should render the correct <app-product-item> when the correct ID is provided', () => {
-        productsPageVMMock.productListFrame.productItemVMs.forEach(
-            (element) => {
-                //Arrange
-                store.overrideSelector(selectID, element.id);
-                updateGetVMSignal(productsPageVMMock);
+    it('should render 5 <app-product-item> if 5 items are provided', () => {
+        //Arrange
+        updateGetVMSignal(productsPageVMWithFiveProductItem);
 
-                //Act
-                fixture.detectChanges();
+        //Act
+        fixture.detectChanges();
 
-                //Assert
-                expect(compiled).toMatchSnapshot();
-            }
-        );
+        //Assert
+        expect(compiled).toMatchSnapshot();
     });
 });

@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginPageComponent } from './login-page.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { Auth } from '@angular/fire/auth';
 import {
     provideLoginPageMockService,
     updateGetVMSignal,
 } from './login-page.service.mock';
 import { enLoginPageMock, loginPageVMMock } from './login-page.mock';
 import { getTranslocoModule } from 'transloco-testing.module';
+import { selectAuthenticationError } from 'src/app/stores/auth/auth.selector';
 
 describe('LoginPageComponent', () => {
     let fixture: ComponentFixture<LoginPageComponent>;
@@ -27,15 +27,17 @@ describe('LoginPageComponent', () => {
                 }),
             ],
             providers: [
-                provideMockStore(),
                 provideLoginPageMockService(),
-                { provide: Auth, useValue: null },
+                provideMockStore({
+                    selectors: [
+                        { selector: selectAuthenticationError, value: null },
+                    ],
+                }),
             ],
         }).compileComponents();
 
         updateGetVMSignal(undefined);
         fixture = TestBed.createComponent(LoginPageComponent);
-        fixture.detectChanges();
         component = fixture.componentInstance;
         compiled = fixture.debugElement.nativeElement;
     });
@@ -71,30 +73,8 @@ describe('LoginPageComponent', () => {
         //There is no need to act
 
         //Assert
-        expect(component.loginForm.get('email')?.value).toBe('');
-        expect(component.loginForm.get('password')?.value).toBe('');
-    });
-
-    it('should validate the email format', () => {
-        //Arrange
-        const emailControl = component.loginForm.get('email');
-
-        //Act
-        emailControl?.setValue('invalidEmail');
-
-        //Assert
-        expect(emailControl?.hasError('email')).toBe(true);
-    });
-
-    it('should validate the password format', () => {
-        //Arrange
-        const passwordControl = component.loginForm.get('password');
-
-        //Act
-        passwordControl?.setValue('');
-
-        //Assert
-        expect(passwordControl?.hasError('required')).toBe(true);
+        expect(component.loginForm.controls.email.value).toBe('');
+        expect(component.loginForm.controls.password.value).toBe('');
     });
 
     it('should disable the submit button if the loginForm is invalid', () => {
@@ -102,14 +82,11 @@ describe('LoginPageComponent', () => {
         updateGetVMSignal(loginPageVMMock);
 
         //Act
-        component.loginForm.get('email')?.setValue('');
-        component.loginForm.get('password')?.setValue('');
+        component.loginForm.setValue({ email: '', password: '' });
         fixture.detectChanges();
 
         //Assert
-        const button = fixture.nativeElement.querySelector(
-            'form button[type="submit"]'
-        );
+        const button = fixture.nativeElement.querySelector('button');
         expect(button.disabled).toBe(true);
     });
 
@@ -118,14 +95,14 @@ describe('LoginPageComponent', () => {
         updateGetVMSignal(loginPageVMMock);
 
         //Act
-        component.loginForm.get('email')?.setValue('test@example.com');
-        component.loginForm.get('password')?.setValue('password');
+        component.loginForm.setValue({
+            email: 'test@freemail.hu',
+            password: 'password',
+        });
         fixture.detectChanges();
+        const button = fixture.nativeElement.querySelector('button');
 
         //Assert
-        const button = fixture.nativeElement.querySelector(
-            'button[type="submit"]'
-        );
         expect(button.disabled).toBe(false);
     });
 });

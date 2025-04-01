@@ -4,11 +4,12 @@ import { ENTRY_POINT_MARKER_OPTIONS } from './map-point-select-form-control.mode
 import { toObservable } from '@angular/core/rxjs-interop';
 import { Observable, switchMap } from 'rxjs';
 import { MAP_OPTIONS } from '../map-area-select-form-control/map-area-select-form-control.model';
+import { MapPointSelectFormControlMockServiceModel } from './map-point-select-form-control.service.mock';
 
 @Injectable({
     providedIn: 'root',
 })
-export class MapPointSelectFormControlService {
+export class MapPointSelectFormControlService extends MapPointSelectFormControlMockServiceModel {
     public initializeMap(
         mapCanvas: HTMLElement,
         mapOptions: google.maps.MapOptions,

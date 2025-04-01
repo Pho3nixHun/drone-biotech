@@ -1,10 +1,11 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
-import { Store } from '@ngrx/store';
-import { selectID } from 'src/app/stores/router/router.selectors';
+import { PageSectionComponent } from '../../shared/components/page-section/page-section.component';
+import { isArray } from '@utils/is-array.typeguard';
+import { NgTemplateOutlet } from '@angular/common';
 
 /**
  * ProductsPageComponent
@@ -25,25 +26,18 @@ import { selectID } from 'src/app/stores/router/router.selectors';
 @Component({
     selector: 'app-products-page',
     standalone: true,
-    imports: [FrameComponent, ProductItemComponent, ProductListComponent],
+    imports: [
+        FrameComponent,
+        ProductItemComponent,
+        ProductListComponent,
+        PageSectionComponent,
+        NgTemplateOutlet,
+    ],
     templateUrl: './products-page.component.html',
 })
-export class ProductsPageComponent implements OnInit {
+export class ProductsPageComponent {
     private readonly productsPageService = inject(ProductsPageService);
-    private readonly store = inject(Store);
-    protected vm = this.productsPageService.getVM();
-    protected id = signal<string | null>(null);
-    public filteredItemVM = computed(() => {
-        return this.vm().productListFrame.productItemVMs.find((item) =>
-            item.id === this.id() ? this.id() : null
-        );
-    });
-    ngOnInit(): void {
-        this.store
-            .select(selectID)
-            .subscribe((data) => {
-                this.id.set(data);
-            })
-            .unsubscribe();
-    }
+    protected readonly vm = this.productsPageService.getVM();
+
+    isArray = isArray;
 }

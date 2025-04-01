@@ -1,9 +1,23 @@
 @if (vm(); as vm) {
-    <app-frame [vm]="vm.productListFrame">
-        <app-product-list>
-            @if (filteredItemVM(); as filteredItemVM) {
-                <app-product-item [vm]="filteredItemVM" />
-            }
-        </app-product-list>
-    </app-frame>
+    <app-page-section>
+        <app-frame [vm]="vm.productListFrame">
+            <app-product-list>
+                @let products = vm.productListFrame.productItemVMs;
+                <ng-container
+                    [ngTemplateOutlet]="isArray(products) ? moreItems : oneItem"
+                    [ngTemplateOutletContext]="{ products }"
+                ></ng-container>
+            </app-product-list>
+        </app-frame>
+    </app-page-section>
+
+    <ng-template #oneItem let-itemVM="products">
+        <app-product-item [vm]="itemVM" />
+    </ng-template>
+
+    <ng-template #moreItems let-itemVMs="products">
+        @for (item of itemVMs; track $index) {
+            <app-product-item [vm]="item" />
+        }
+    </ng-template>
 }

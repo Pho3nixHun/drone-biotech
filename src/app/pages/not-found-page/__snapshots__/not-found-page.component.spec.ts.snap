@@ -14,28 +14,19 @@ exports[`NotFoundPageComponent should render the template when there is a VM pro
   id="root1"
   ng-version="18.2.8"
 >
-  <div
-    class="flex flex-col items-center justify-center w-full h-full min-h-screen"
+  <app-page-section
+    class="flex flex-col items-center justify-center min-h-screen w-full flex-grow"
   >
-    <app-message
-      ng-reflect-vm="[object Object]"
+    <section
+      class="mt-72 md:mt-25"
     >
-      <div
-        class="bg-gray-700 p-6 rounded-xl"
+      <app-not-found-message
+        ng-reflect-vm="[object Object]"
       >
-        <h1
-          class="text-6xl sm:text-8xl font-bold text-white mb-4 text-center w-full"
-        >
-           404! 
-        </h1>
-        <p
-          class="text-white md:text-xl max-w-md"
-        >
-           desc 
-        </p>
-      </div>
-    </app-message>
-  </div>
+        <!--container-->
+      </app-not-found-message>
+    </section>
+  </app-page-section>
   <!--container-->
 </div>
 `;

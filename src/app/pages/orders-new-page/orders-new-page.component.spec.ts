@@ -1,19 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { OrdersNewPageComponent } from './orders-new-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
+import { enMock, ordersNewPageVMMock } from './orders-new-page.mock';
+import { OrdersNewPageComponent } from './orders-new-page.component';
 import {
-    provideOrdersNewPageMock,
+    provideOrdersNewPageMockService,
     updateVMSignal,
 } from './orders-new-page.service.mock';
-import { enMock, ordersNewPageVMMock } from './orders-new-page.mock';
-import { provideHttpClient } from '@angular/common/http';
-import {
-    provideMockDrawingControlOptions,
-    provideMockGoogleMapsConfig,
-    provideMockMapOptions,
-    provideMockPolygonOptions,
-} from '@components/maps/maps-vm.model';
+import { LocationStoreMockModule } from 'src/app/stores/location/location.module';
 
 describe('OrdersNewPageComponent', () => {
     let component: OrdersNewPageComponent;
@@ -24,6 +17,7 @@ describe('OrdersNewPageComponent', () => {
         await TestBed.configureTestingModule({
             imports: [
                 OrdersNewPageComponent,
+                LocationStoreMockModule,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {
@@ -32,19 +26,11 @@ describe('OrdersNewPageComponent', () => {
                     },
                 }),
             ],
-            providers: [
-                provideOrdersNewPageMock(),
-                provideMockMapOptions(),
-                provideMockDrawingControlOptions(),
-                provideMockPolygonOptions(),
-                provideMockGoogleMapsConfig(),
-                provideHttpClient(),
-            ],
+            providers: [provideOrdersNewPageMockService()],
         }).compileComponents();
 
         fixture = TestBed.createComponent(OrdersNewPageComponent);
         compiled = fixture.debugElement.nativeElement;
-
         component = fixture.componentInstance;
     });
 
@@ -57,62 +43,57 @@ describe('OrdersNewPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
+
     //Snapshot testing
     it('should render the template when the VM is provided', () => {
         //Arrange
         updateVMSignal(ordersNewPageVMMock);
+
         //Act
         fixture.detectChanges();
+
         //Assert
         expect(compiled).toMatchSnapshot();
     });
 
-    it('should initialize the form control with empty value', () => {
-        //Arrange
-        //There is no need to arrange
+    it('should set the areasDataFormGroup to invalid if there is no value in the form', () => {
+        // Arrange
 
-        //Act
-        //There is no need to act
+        // Act
 
-        //Assert
-        expect(
-            component.coordinatesForm.get('coordinates')?.value
-        ).toStrictEqual([]);
+        // Assert
+        expect(component.areasDataFormGroup.touched).toBe(false);
+        expect(component.areasDataFormGroup.invalid).toBe(true);
     });
 
-    it('should disable the submit button if the coordinatesForm is invalid', () => {
+    it('should set the areasDataFormGroup to valid if the form is fulfilled with correct values', () => {
         //Arrange
-        updateVMSignal(ordersNewPageVMMock);
 
         //Act
-        component.coordinatesForm
-            .get('coordinates')
-            ?.setValue([{ lat: 10, lng: 10 }]);
-        fixture.detectChanges();
+        component.areasDataFormGroup.setValue({
+            areasData: [
+                {
+                    applicationDate: new Date(),
+                    dosePerHq: 10,
+                    entryPoint: { lat: 10, lng: 10 },
+                    id: 10,
+                    targetArea: [
+                        { lat: 10, lng: 10 },
+                        { lat: 20, lng: 20 },
+                        { lat: 30, lng: 30 },
+                    ],
+                },
+            ],
+            contact: {
+                email: 'test@gmail.com',
+                name: 'Joe',
+                phoneNumber: '06301111111',
+            },
+            endCustomer: 'customer',
+            internalOrderNumber: 'number',
+        });
 
-        //Assert
-        const button = fixture.nativeElement.querySelector(
-            'form button[type="submit"]'
-        );
-        expect(button.disabled).toBe(true);
-    });
-
-    it('should enable the submit button if the coordinatesForm is valid', () => {
-        //Arrange
-        updateVMSignal(ordersNewPageVMMock);
-
-        //Act
-        component.coordinatesForm.get('coordinates')?.setValue([
-            { lat: 10, lng: 11 },
-            { lat: 20, lng: 21 },
-            { lat: 30, lng: 31 },
-        ]);
-        fixture.detectChanges();
-
-        //Assert
-        const button = fixture.nativeElement.querySelector(
-            'button[type="submit"]'
-        );
-        expect(button.disabled).toBe(false);
+        // Assert
+        expect(component.areasDataFormGroup.valid).toBe(true);
     });
 });

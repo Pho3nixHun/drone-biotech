@@ -10,5 +10,9 @@ export interface User extends Record<string, JSONValue> {
 export interface AuthState {
     user: User | null;
     loading: boolean;
-    error: Error | null;
+    error: AuthenticationError | null;
+}
+
+export interface AuthenticationError extends Error {
+    code: string;
 }

@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AreaDataDialogComponent when the vm is correct without areaData should render the content if the correct vm is provided 1`] = `
+<div
+  id="root2"
+  ng-version="18.2.8"
+>
+  <app-base-dialog
+    class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block overflow-auto"
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+    >
+      <div
+        class="flex justify-between"
+      >
+        <h3
+          class="text-3xl"
+        >
+           tit 
+        </h3>
+        <button>
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate text-3xl material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+            style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;"
+          >
+            close
+          </mat-icon>
+        </button>
+      </div>
+      <div
+        class="space-y-4"
+      >
+        <form
+          class="space-y-4 ng-untouched ng-pristine ng-invalid"
+          ng-reflect-form="[object Object]"
+          novalidate=""
+        >
+          <div
+            class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4"
+          >
+            <div
+              class="flex flex-col w-full lg:w-1/2"
+            >
+              <label
+                for="targetArea"
+              >
+                targetArea
+              </label>
+              <app-map-area-select-form-control
+                class="border rounded-md mt-1 p-2 ng-untouched ng-pristine ng-invalid"
+                formcontrolname="targetArea"
+                ng-reflect-name="targetArea"
+                ng-reflect-vm="[object Object]"
+              >
+                <div
+                  class="flex flex-col space-y-4 bg-white"
+                >
+                  <div
+                    class="w-full h-[40vh]"
+                    ng-reflect-attached-callback="(mapCanvas) => {
+        if (!"
+                  />
+                  <button
+                    class="btn btn-primary"
+                    ng-reflect-ng-class="btn-primary"
+                  >
+                     addButton 
+                  </button>
+                  <button
+                    class="btn btn-disabled"
+                    disabled=""
+                    ng-reflect-ng-class="btn-disabled"
+                  >
+                     deleteButton 
+                  </button>
+                </div>
+              </app-map-area-select-form-control>
+            </div>
+            <div
+              class="flex flex-col w-full lg:w-1/2"
+            >
+              <label
+                for="entryPoint"
+              >
+                entryPoint
+              </label>
+              <app-map-point-select-form-control
+                class="border rounded-md mt-1 p-2 ng-untouched ng-pristine ng-invalid"
+                formcontrolname="entryPoint"
+                ng-reflect-name="entryPoint"
+                ng-reflect-vm="[object Object]"
+              >
+                <div
+                  class="flex flex-col space-y-4 bg-white"
+                >
+                  <div
+                    class="w-full h-[40vh]"
+                    ng-reflect-attached-callback="async (mapCanvas) => {
+       "
+                  />
+                  <button
+                    class="btn btn-primary"
+                    ng-reflect-ng-class="btn-primary"
+                  >
+                     addButton 
+                  </button>
+                  <button
+                    class="btn btn-disabled"
+                    disabled=""
+                    ng-reflect-ng-class="btn-disabled"
+                  >
+                     deleteButton 
+                  </button>
+                </div>
+                <!--container-->
+              </app-map-point-select-form-control>
+            </div>
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <label
+              for="dosePerHq"
+            >
+              dosePerHq
+            </label>
+            <input
+              class="p-2 border rounded-md ng-untouched ng-pristine ng-invalid"
+              formcontrolname="dosePerHq"
+              id="dosePerHq"
+              min="0"
+              ng-reflect-min="0"
+              ng-reflect-name="dosePerHq"
+              type="number"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <label
+              for="applicationDate"
+            >
+              applicationDate
+            </label>
+            <input
+              class="p-2 border rounded-md ng-untouched ng-pristine ng-invalid"
+              formcontrolname="applicationDate"
+              id="applicationDate"
+              ng-reflect-name="applicationDate"
+              type="datetime-local"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
+      >
+        <button
+          class="btn disabled"
+          disabled=""
+          ng-reflect-ng-class="disabled"
+        >
+           submitButton 
+        </button>
+        <button
+          class="btn btn-error"
+        >
+           cancelButton 
+        </button>
+      </div>
+    </section>
+    <!--container-->
+  </app-base-dialog>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AreaDataDialogComponent when the vm is not correct should not render the content 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <!--container-->
+</div>
+`;

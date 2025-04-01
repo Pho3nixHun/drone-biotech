@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-    scroll-snap-align: start; /* Ensures alignment of scrollable elements */
-    scroll-padding-top: 2rem; /* Adds padding for offset when navigating to anchor links */
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    scroll-padding-top: 2rem;
 }
 
 @layer base {
@@ -16,14 +16,6 @@ html {
 
     h2 {
         @apply font-black text-4xl sm:text-5xl lg:text-6xl transition-all ease-in-out;
-    }
-
-    app-login-form h3 {
-        @apply text-black text-2xl tracking-wider mt-8 md:mt-0;
-    }
-
-    app-login-form p {
-        @apply mt-3 mb-8;
     }
 
     app-hero p {

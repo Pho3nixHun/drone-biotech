@@ -1,11 +1,8 @@
 import { FrameVM } from '@components/frame/frame-vm';
-import { ProductItemVM } from '@components/product-item/product-item-vm.model';
-import { WithId } from '@interfaces/with-id.interface';
-
-interface ProductItemXVM extends WithId, ProductItemVM {}
+import { ProductItemXVM } from '../landing-page/landing-page-vm.model';
 
 interface WithProductItemXVMs {
-    productItemVMs: ProductItemXVM[];
+    productItemVMs: ProductItemXVM | ProductItemXVM[] | undefined;
 }
 
 interface ProductListFrame extends FrameVM, WithProductItemXVMs {}

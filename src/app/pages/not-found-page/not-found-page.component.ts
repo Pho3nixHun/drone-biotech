@@ -1,7 +1,7 @@
-import { Component, inject, Signal } from '@angular/core';
-import { NotFoundPageVM } from './not-found-page-vm.model';
+import { Component, inject } from '@angular/core';
 import { NotFoundPageService } from './not-found-page.service';
-import { MessageComponent } from '@components/message/message.component';
+import { PageSectionComponent } from '@components/page-section/page-section.component';
+import { NotFoundMessageComponent } from './components/not-found-message/not-found-message.component';
 
 /**
  * NotFoundPageComponent
@@ -13,7 +13,7 @@ import { MessageComponent } from '@components/message/message.component';
  * - Passes relevant data.
  *
  * Out-of-Scope:
- * - Does not handle the internal logic or styling of the `app-message`.
+ * - Does not handle the internal logic or styling of the `app-not-found-message`.
  * - Not responsible for the detailed presentation logic.
  *
  * Purpose (optional):
@@ -23,10 +23,9 @@ import { MessageComponent } from '@components/message/message.component';
 @Component({
     selector: 'app-not-found-page',
     standalone: true,
-    imports: [MessageComponent],
+    imports: [PageSectionComponent, NotFoundMessageComponent],
     templateUrl: './not-found-page.component.html',
 })
 export class NotFoundPageComponent {
-    private readonly notFoundPageService = inject(NotFoundPageService);
-    protected vm: Signal<NotFoundPageVM> = this.notFoundPageService.getVM();
+    protected readonly vm = inject(NotFoundPageService).getVM();
 }

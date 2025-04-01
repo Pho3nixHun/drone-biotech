@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import {
     Component,
     computed,
@@ -21,31 +20,29 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DialogService } from '@services/dialog/dialog.service';
 import { AreaDataDialogComponent } from './components/area-data-dialog/area-data-dialog.component';
-import { AsyncPipe } from '@angular/common';
 import { filter, lastValueFrom, map } from 'rxjs';
 import { DistanceService } from '@services/distance/distance.service';
 import { getAreaOfPolygon } from 'geolib';
 import { TranslocoModule } from '@jsverse/transloco';
 import { ReverseGeocodingService } from '@services/reverse-geocoding/reverse-geocoding.service';
-import { TranslocoLocaleModule } from '@jsverse/transloco-locale';
 import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
 import { isDeleteDialogResult } from './components/delete-dialog/delete-dialog.model';
-import { CardGroupComponent } from '../../../../shared/components/card-group/card-group.component';
-import { CardItemComponent } from '../../../../shared/components/card-item/card-item.component';
-import { KeyValueComponent } from '../../../../shared/components/key-value/key-value.component';
+import { CardGroupComponent } from '@components/card-group/card-group.component';
+import { CardItemComponent } from '@components/card-item/card-item.component';
+import { KeyValueComponent } from '@components/key-value/key-value.component';
 import { MatIconModule } from '@angular/material/icon';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-areas-data-form-control',
     standalone: true,
     imports: [
-        AsyncPipe,
         TranslocoModule,
-        TranslocoLocaleModule,
         CardGroupComponent,
         CardItemComponent,
         KeyValueComponent,
         MatIconModule,
+        AsyncPipe,
     ],
     providers: [
         {
@@ -58,7 +55,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class AreasDataFormControlComponent implements ControlValueAccessor {
     public vm = input.required<AreasDataFormControlVM>();
-    public areaData = signal<AreaData[]>([]);
+    private readonly areaData = signal<AreaData[]>([]);
     private readonly distanceService = inject(DistanceService);
     private readonly dialogService = inject(DialogService);
     private readonly reverseGeocodingService = inject(ReverseGeocodingService);
@@ -79,6 +76,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
                     )
                 )
         );
+
         if (response) {
             this.areaData.set([...this.areaData(), response]);
         }
@@ -86,35 +84,32 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
 
     protected async editAreaData(id: number) {
         const areaData = this.areaData().find((item) => item.id === id);
-        if (areaData) {
-            const vm: AreaDataDialogVM = {
-                ...this.vm().editAreaDataDialogVM,
-                areaData,
-            };
+        if (!areaData) return;
 
-            const response: AreaData | null = await lastValueFrom(
-                this.dialogService
-                    .create(vm, AreaDataDialogComponent)
-                    .result$.pipe(
-                        map((data: unknown) =>
-                            isAreaDataDialogResultWithAreaData(data)
-                                ? data.areaData
-                                : null
-                        )
+        const vm: AreaDataDialogVM = {
+            ...this.vm().editAreaDataDialogVM,
+            areaData,
+        };
+
+        const response = await lastValueFrom(
+            this.dialogService
+                .create(vm, AreaDataDialogComponent)
+                .result$.pipe(
+                    map((data: unknown) =>
+                        isAreaDataDialogResultWithAreaData(data)
+                            ? data.areaData
+                            : null
                     )
+                )
+        );
+
+        if (response) {
+            this.areaData.set(
+                this.areaData().reduce<AreaData[]>(
+                    (acc, curr) => [...acc, curr.id === id ? response : curr],
+                    []
+                )
             );
-
-            if (response) {
-                this.areaData.set(
-                    this.areaData().reduce<AreaData[]>(
-                        (acc, curr) => [
-                            ...acc,
-                            curr.id === id ? response : curr,
-                        ],
-                        []
-                    )
-                );
-            }
         }
     }
 
@@ -138,39 +133,42 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         }
     }
 
-    protected xAreaData$ = computed<Promise<AreaXData[]>>(async () => {
-        const areaDataPromises: Promise<AreaXData>[] = this.areaData().map(
-            async (data) => {
-                const targetAreaSize =
-                    getAreaOfPolygon(data.targetArea) / 10000;
-                return {
-                    ...data,
-                    targetAreaSize,
-                    entryPointAddress:
-                        await this.reverseGeocodingService.getAddressByCoordinates(
-                            data.entryPoint
-                        ),
-                    trichogrammaRequirement: targetAreaSize * data.dosePerHq,
-                    distanceFromHeadOffice:
-                        (await lastValueFrom(
-                            this.distanceService.getDistance(data.entryPoint)
-                        )) / 1000,
-                };
-            }
-        );
-        return await Promise.all(areaDataPromises);
+    protected xAreaData$ = computed<Promise<AreaXData[] | null>>(async () => {
+        const areaData = this.areaData();
+        return areaData.length === 0
+            ? null
+            : await Promise.all(
+                  areaData.map(async (data) => {
+                      const targetAreaSize =
+                          getAreaOfPolygon(data.targetArea) / 10000;
+                      return {
+                          ...data,
+                          targetAreaSize,
+                          entryPointAddress:
+                              await this.reverseGeocodingService.getAddressByCoordinates(
+                                  data.entryPoint
+                              ),
+                          trichogrammaRequirement:
+                              targetAreaSize * data.dosePerHq,
+                          distanceFromHeadOffice:
+                              (await lastValueFrom(
+                                  this.distanceService.getDistance(
+                                      data.entryPoint
+                                  )
+                              )) / 1000,
+                      };
+                  })
+              );
     });
 
     protected totalAreaXData$ = computed<Promise<TotalAreaXData | null>>(
         async () => {
             const xAreaData = await this.xAreaData$();
-            if (xAreaData.length === 0) {
-                return null;
-            }
+            if (!xAreaData || xAreaData.length === 0) return null;
             return {
                 totalDistanceFromHeadOffice:
                     (await lastValueFrom(
-                        this.distanceService.getTotalShortestDistance(
+                        this.distanceService.getShortestDistanceWithWaypoints(
                             xAreaData.map((item) => item.entryPoint)
                         )
                     )) / 1000,
@@ -190,7 +188,9 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         this.onChange(this.areaData());
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     onChange: (value: AreaData[]) => void = () => {};
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     onTouched: () => void = () => {};
 
     writeValue(value: AreaData[]): void {

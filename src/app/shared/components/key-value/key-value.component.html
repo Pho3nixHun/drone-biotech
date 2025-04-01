@@ -1,10 +1,13 @@
-<div class="duration-500 h-full flex flex-col justify-center">
+<div
+    class="duration-500 h-full flex flex-col justify-center"
+    *transloco="let t"
+>
     @if (label(); as label) {
-        <div
-            class="xl:hidden display uppercase text-gray-600 text-xs tracking-widest"
+        <p
+            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
         >
-            {{ label | transloco }}
-        </div>
+            {{ t(label) }}
+        </p>
     }
-    <div class="font-medium"><ng-content /></div>
+    <ng-content />
 </div>

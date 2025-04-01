@@ -1,8 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { getTranslocoModule } from 'transloco-testing.module';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { provideRouter, Router } from '@angular/router';
+import { AppComponent } from './app.component';
+import { getTranslocoModule } from 'transloco-testing.module';
+import { AuthActions } from './stores/auth/auth.actions';
+import { selectHeaderCanBeShown } from './stores/router/router.selectors';
+import { AppRouteSegment } from './app-route-segment';
+import { routes } from './app.routes';
 import {
     enAppMock,
     appEmptyMockVMForRoutes,
@@ -18,26 +22,14 @@ import {
     provideAppComponentMockService,
     updateGetVMSignal,
 } from './app-service.mock';
-import { AppRouteSegment } from './app-route-segment';
-import { routes } from './app.routes';
 import {
-    provideAuthGuard,
-    updateAuthenticated,
-} from '@guards/auth/auth.guard.mock';
+    provideAuthenticatedUserGuard,
+    updateAuthenticatedUserGuard,
+} from '@guards/authenticated-user/authenticated-user.guard.mock';
 import {
-    provideLoginGuard,
-    updateLoggedIn,
-} from '@guards/login/login.guard.mock';
-import { Auth } from '@angular/fire/auth';
-import { of } from 'rxjs';
-import { AuthActions } from './stores/auth/auth.actions';
-import { selectHeaderCanBeShown } from './stores/router/router.selectors';
-import {
-    provideMockDrawingControlOptions,
-    provideMockGoogleMapsConfig,
-    provideMockMapOptions,
-    provideMockPolygonOptions,
-} from '@components/maps/maps-vm.model';
+    provideGuestOnlyGuard,
+    updateGuestOnlyGuard,
+} from '@guards/guest-only/guest-only.guard.mock';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
@@ -45,7 +37,6 @@ describe('AppComponent', () => {
     let compiled: HTMLElement;
     let router: Router;
     let store: MockStore;
-
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [
@@ -60,296 +51,280 @@ describe('AppComponent', () => {
             ],
             providers: [
                 provideAppComponentMockService(),
-                provideAuthGuard(),
-                provideLoginGuard(),
                 provideRouter(routes),
-                provideMockStore(),
-                { provide: Auth, useValue: of(null) },
-                provideMockDrawingControlOptions(),
-                provideMockMapOptions(),
-                provideMockPolygonOptions(),
-                provideMockGoogleMapsConfig(),
+                provideGuestOnlyGuard(),
+                provideAuthenticatedUserGuard(),
+                provideMockStore({
+                    selectors: [
+                        { selector: selectHeaderCanBeShown, value: true },
+                    ],
+                }),
             ],
         }).compileComponents();
 
-        updateGetVMSignal(undefined);
-        updateAuthenticated(false);
-        updateLoggedIn(false);
+        fixture = TestBed.createComponent(AppComponent);
         router = TestBed.inject(Router);
         store = TestBed.inject(MockStore);
-        fixture = TestBed.createComponent(AppComponent);
-        component = fixture.componentInstance;
         compiled = fixture.debugElement.nativeElement;
+        component = fixture.componentInstance;
     });
 
-    it(`should not render the template when the VM is not provided`, () => {
-        //Arrange
-        //No need for arrange
+    describe('when rendering the UI', () => {
+        // Snapshot testing
+        it(`should not render the template when the VM is not provided`, () => {
+            //Arrange
+            updateGetVMSignal(undefined);
 
-        //Act
-        //No need for act
+            //Act
+            fixture.detectChanges();
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+
+        //Snapshot testing
+        it(`should render the template when the VM is provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVM);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+
+        //Snapshot test
+        it(`should not render the <app-header> when the headerCanBeShown$ value is false`, () => {
+            //Arrange
+            store.overrideSelector(selectHeaderCanBeShown, true);
+            updateGetVMSignal(appMockVM);
+
+            //Act
+            store.refreshState();
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+
+        //Snapshot test
+        it(`should render the <app-header> when the headerCanBeShown$ value is true`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVM);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+
+        //Snapshot test
+        it(`should not render <app-nav-item> when there is no item provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVMWithoutNavItem);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+
+        //Snapshot test
+        it(`should render 1 <app-nav-item> when 1 item is provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVMWithOneNavItem);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+        //Snapshot test
+        it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVMWithFiveNavItem);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+
+        //Snapshot test
+        it(`should render 1 <a> with routerLink when 1 item is provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVMWithOneAnchor);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+        //Snapshot test
+        it(`should render 5 <a> with routerLink in order when 5 items are provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVMWithFiveAnchor);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
+        //Snapshot test
+        it(`should render <app-nav-item> and <a> with routerLink in order when both of them are provided`, () => {
+            //Arrange
+            updateGetVMSignal(appMockVMWithNavItemAndAnchor);
+
+            //Act
+            fixture.detectChanges();
+
+            //Assert
+            expect(compiled).toMatchSnapshot();
+        });
     });
 
-    //Snapshot test
-    it(`should render the template when the VM is provided`, () => {
-        //Arrange
-        updateGetVMSignal(appMockVM);
+    describe('when the user is logged in', () => {
+        beforeEach(() => {
+            updateAuthenticatedUserGuard(true);
+            updateGuestOnlyGuard(true);
+        });
 
-        //Act
-        fixture.detectChanges();
+        //Unit testing
+        it('can navigate to LandingPage', async () => {
+            //Arrange
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
+            //Act
+            await router.navigate([AppRouteSegment.LANDING]);
+
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.LANDING}`);
+        });
+
+        //Unit testing
+        it('can navigate to "/products"', async () => {
+            //Arrange
+
+            //Act
+            await router.navigate([AppRouteSegment.PRODUCT]);
+
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.PRODUCT}`);
+        });
+
+        //Unit testing
+        it('can navigate to "/products/id"', async () => {
+            //Arrange
+
+            //Act
+            await router.navigate([AppRouteSegment.PRODUCT, 'id']);
+
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.PRODUCT}/id`);
+        });
+
+        //Unit testing
+        it('can navigate to "/orders/new"', async () => {
+            //Arrange
+
+            //Act
+            await router.navigate([
+                AppRouteSegment.ORDERS,
+                AppRouteSegment.NEW,
+            ]);
+
+            //Assert
+            expect(router.url).toBe(
+                `/${AppRouteSegment.ORDERS}/${AppRouteSegment.NEW}`
+            );
+        });
+
+        //Interaction test
+        it('should call signOut function when the button is clicked', () => {
+            //Arrange
+            updateGetVMSignal(appEmptyMockVMForRoutes);
+            const signOutSpy = jest.spyOn(component, 'signOut');
+
+            //Act
+            fixture.detectChanges();
+            fixture.nativeElement
+                .querySelector('button[mat-icon-button]')
+                .click();
+
+            //Assert
+            expect(signOutSpy).toHaveBeenCalled();
+        });
+
+        //Unit test
+        it('should dispatch signOut action when signOut function is called', () => {
+            //Arrange
+            const storeSpy = jest.spyOn(store, 'dispatch');
+
+            //Act
+            component.signOut();
+
+            //Assert
+            expect(storeSpy).toHaveBeenCalledWith(AuthActions.signOut());
+        });
     });
 
-    //Snapshot test
-    it(`should not render the <app-header> when the headerCanBeShown$ value is false`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, false);
-        updateGetVMSignal(appMockVM);
+    describe('when the user is not logged in', () => {
+        beforeEach(() => {
+            updateAuthenticatedUserGuard(false);
+            updateGuestOnlyGuard(false);
+        });
 
-        //Act
-        fixture.detectChanges();
+        //Unit test
+        it('should navigate back to the LoginPage after navigate to LandingPage', async () => {
+            //Arrange
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
+            //Act
+            await router.navigate([AppRouteSegment.LANDING]);
 
-    //Snapshot test
-    it(`should render the <app-header> when the headerCanBeShown$ value is true`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVM);
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
+        });
 
-        //Act
-        fixture.detectChanges();
+        //Unit test
+        it('should navigate back to the LoginPage after navigate to "/products"', async () => {
+            //Arrange
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
+            //Act
+            await router.navigate([AppRouteSegment.PRODUCT]);
 
-    //Snapshot test
-    it(`should not render <app-nav-item> when there is no item provided`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithoutNavItem);
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
+        });
 
-        //Act
-        fixture.detectChanges();
+        //Unit test
+        it('should navigate back to the LoginPage after navigate to "/products/id"', async () => {
+            //Arrange
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
+            //Act
+            await router.navigate([AppRouteSegment.PRODUCT, 'id']);
 
-    //Snapshot test
-    it(`should render 1 <app-nav-item> when 1 item is provided`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithOneNavItem);
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
+        });
 
-        //Act
-        fixture.detectChanges();
+        //Unit test
+        it('should navigate back to the LoginPage after navigate to "/orders/new"', async () => {
+            //Arrange
 
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    //Snapshot test
-    it(`should render 5 <app-nav-item> in order when 5 items are provided`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithFiveNavItem);
+            //Act
+            await router.navigate([
+                AppRouteSegment.ORDERS,
+                AppRouteSegment.NEW,
+            ]);
 
-        //Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it(`should render 1 <a> with routerLink when 1 item is provided`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithOneAnchor);
-
-        //Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    //Snapshot test
-    it(`should render 5 <a> with routerLink in order when 5 items are provided`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithFiveAnchor);
-
-        //Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    //Snapshot test
-    it(`should render <app-nav-item> and <a> with routerLink in order when both of them are provided`, () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithNavItemAndAnchor);
-
-        //Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should navigate back to the LoginPage after navigate to "" because the user is not logged in', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, false);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-
-        //Act
-        await router.navigate(['']);
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should navigate back to the LoginPage after navigate to "/products" because the user is not logged in', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, false);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-
-        //Act
-        await router.navigate([AppRouteSegment.PRODUCT]);
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should navigate back to the LoginPage after navigate to "/products/id" because the user is not logged in', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, false);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-
-        //Act
-        await router.navigate([AppRouteSegment.PRODUCT, 'id']);
-        fixture.detectChanges();
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should navigate back to the LoginPage after navigate to "/orders/new" because the user is not logged in', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, false);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-
-        //Act
-        await router.navigate([AppRouteSegment.ORDERS, AppRouteSegment.NEW]);
-        fixture.detectChanges();
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot testing
-    it('can navigate to "" because the user is logged in so it should render the LandingPage', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-        updateAuthenticated(true);
-        updateLoggedIn(true);
-
-        //Act
-        await router.navigate(['']);
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot testing
-    it('can navigate to "/products" because the user is logged in so it should render the ProductsPage', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-        updateAuthenticated(true);
-        updateLoggedIn(true);
-
-        //Act
-        await router.navigate([AppRouteSegment.PRODUCT]);
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot testing
-    it('can navigate to "/products/id" because the user is logged in so it should render the ProductsPage', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-        updateAuthenticated(true);
-        updateLoggedIn(true);
-
-        //Act
-        await router.navigate([AppRouteSegment.PRODUCT, 'id']);
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot testing
-    it('can navigate to "/orders/new" because the user is logged in so it should render the OrdersNewPage', async () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-        updateAuthenticated(true);
-        updateLoggedIn(true);
-
-        //Act
-        await router.navigate([AppRouteSegment.ORDERS, AppRouteSegment.NEW]);
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    it('should call signOut function when the button is clicked', () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appEmptyMockVMForRoutes);
-        const signOutSpy = jest.spyOn(component, 'signOut');
-
-        //Act
-        fixture.detectChanges();
-        const button = fixture.nativeElement.querySelector(
-            'button[mat-icon-button]'
-        );
-        button.click();
-
-        //Assert
-        expect(signOutSpy).toHaveBeenCalled();
-    });
-
-    it('should dispatch signOut action when signOut function is called', () => {
-        //Arrange
-        store.overrideSelector(selectHeaderCanBeShown, true);
-        const storeSpy = jest.spyOn(store, 'dispatch');
-
-        //Act
-        component.signOut();
-
-        //Assert
-        expect(storeSpy).toHaveBeenCalledWith(AuthActions.signOut());
+            //Assert
+            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
+        });
     });
 });

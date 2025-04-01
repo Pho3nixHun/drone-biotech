@@ -9,8 +9,6 @@ export const selectActualPosition = createSelector(
     selectLocationState,
     (location: LocationState): Coordinates | null => {
         const loc = location.location;
-        if (!loc) return null;
-        console.log({ lat: loc.lat, lng: loc.lng });
-        return { lat: loc.lat, lng: loc.lng };
+        return loc ? { lat: loc.lat, lng: loc.lng } : null;
     }
 );

@@ -9,7 +9,7 @@ exports[`FrameComponent should render the template when the VM is provided 1`] =
     ng-reflect-vm="[object Object]"
   >
     <section
-      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40"
+      class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
     >
       <h2>
         Our Products

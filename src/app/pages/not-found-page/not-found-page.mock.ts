@@ -1,18 +1,27 @@
-import { NotFoundPageVM } from './not-found-page-vm.model';
+import { AppRouteSegment } from 'src/app/app-route-segment';
+import { NotFoundPageVM } from './not-found-page.model';
 
 export const enNotFoundPageMock = {
     description: 'desc',
 };
 
 export const notFoundPageVMDefault: NotFoundPageVM = {
-    messageVM: {
-        title: '404!',
+    notFoundMessageVM: {
+        titleKey: '404',
         descriptionKey: 'NotFoundPage.message.description',
+        navItem: {
+            routerLink: AppRouteSegment.LANDING,
+            textKey: 'NotFoundPage.message.buttonText',
+        },
     },
 };
 export const notFoundPageVMMock: NotFoundPageVM = {
-    messageVM: {
-        title: '404!',
-        descriptionKey: 'description',
+    notFoundMessageVM: {
+        titleKey: '404',
+        descriptionKey: 'NotFoundPage.message.description',
+        navItem: {
+            routerLink: AppRouteSegment.LANDING,
+            textKey: 'NotFoundPage.message.buttonText',
+        },
     },
 };

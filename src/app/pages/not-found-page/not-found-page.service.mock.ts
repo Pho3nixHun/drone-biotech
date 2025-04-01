@@ -1,7 +1,7 @@
 import { Injectable, Signal, signal } from '@angular/core';
 import { NotFoundPageServiceModel } from './not-found-page.service.model';
 import { NotFoundPageService } from './not-found-page.service';
-import { NotFoundPageVM } from './not-found-page-vm.model';
+import { NotFoundPageVM } from './not-found-page.model';
 
 @Injectable({
     providedIn: 'root',

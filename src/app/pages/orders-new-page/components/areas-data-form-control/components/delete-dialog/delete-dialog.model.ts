@@ -2,6 +2,7 @@ import { DialogReasonBase } from '@services/dialog/dialog.service';
 import { isObject } from '@utils/is-object.typeguard';
 
 export interface DeleteDialogVM {
+    type: 'deleteDialogVM';
     titleKey: string;
     warningTextKey: string;
     submitButtonTextKey: string;
@@ -19,3 +20,7 @@ export const isDeleteDialogResult = (
         isObject(data) && 'type' in data && data.type === 'deleteDialogReason'
     );
 };
+
+export function isDeleteDialogVM(data: unknown): data is DeleteDialogVM {
+    return isObject(data) && 'type' in data && data.type === 'deleteDialogVM';
+}

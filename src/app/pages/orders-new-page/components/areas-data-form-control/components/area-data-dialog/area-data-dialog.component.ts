@@ -1,54 +1,63 @@
+import { NgClass } from '@angular/common';
+import { TranslocoModule } from '@jsverse/transloco';
+import { Component, computed, inject, signal } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
+import { BaseDialogComponent } from '@components/base-dialog/base-dialog.component';
+import { MapAreaSelectFormControlComponent } from './components/map-area-select-form-control/map-area-select-form-control.component';
+import { MapPointSelectFormControlComponent } from './components/map-point-select-form-control/map-point-select-form-control.component';
 import {
     AreaDataDialogResultWithAreaData,
     AreaDataDialogResultWithoutAreaData,
     AreaDataDialogVM,
     Coordinates,
+    isAreaDataDialogVM,
 } from './area-data-dialog.model';
-import { Component, inject } from '@angular/core';
-import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgClass } from '@angular/common';
-import { MapAreaSelectFormControlComponent } from './components/map-area-select-form-control/map-area-select-form-control.component';
-import { MapPointSelectFormControlComponent } from './components/map-point-select-form-control/map-point-select-form-control.component';
-import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-area-data-dialog',
     standalone: true,
     imports: [
+        NgClass,
         ReactiveFormsModule,
+        TranslocoModule,
+        BaseDialogComponent,
         MapAreaSelectFormControlComponent,
         MapPointSelectFormControlComponent,
-        NgClass,
-        TranslocoModule,
     ],
     templateUrl: './area-data-dialog.component.html',
 })
 export class AreaDataDialogComponent {
-    protected readonly vm: AreaDataDialogVM = inject(DIALOG_DATA);
     protected readonly dialogRef = inject(DIALOG_REF);
+    protected readonly unknownVM = signal<unknown>(inject(DIALOG_DATA));
+
+    protected readonly vm = computed<AreaDataDialogVM | null>(() => {
+        const vm = this.unknownVM();
+        return isAreaDataDialogVM(vm) ? vm : null;
+    });
+
     private readonly fb = inject(FormBuilder);
 
     public areaDataFormGroup = this.fb.group({
         targetArea: this.fb.control<Coordinates[] | null>(
-            this.vm.areaData?.targetArea ?? null,
+            this.vm()?.areaData?.targetArea ?? null,
             Validators.required
         ),
         entryPoint: this.fb.control<Coordinates | null>(
-            this.vm.areaData?.entryPoint ?? null,
+            this.vm()?.areaData?.entryPoint ?? null,
             Validators.required
         ),
         dosePerHq: this.fb.control<number | null>(
-            this.vm.areaData?.dosePerHq ?? null,
-            [Validators.min(0), Validators.required]
+            this.vm()?.areaData?.dosePerHq ?? null,
+            [Validators.min(1), Validators.required]
         ),
         applicationDate: this.fb.control<Date | null>(
-            this.vm.areaData?.applicationDate ?? null,
+            this.vm()?.areaData?.applicationDate ?? null,
             Validators.required
         ),
     });
 
-    resetFormWithCloseDialog() {
+    protected resetFormWithCloseDialog() {
         this.areaDataFormGroup.reset();
         const closeData: AreaDataDialogResultWithoutAreaData = {
             reasonType: 'cancel',
