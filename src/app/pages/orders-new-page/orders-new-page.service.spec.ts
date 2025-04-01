@@ -1,14 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { OrdersNewPageService } from './orders-new-page.service';
-import {
-    ordersNewPageVMDefault,
-    ordersNewPageVMMock,
-} from './orders-new-page.mock';
+import { ordersNewPageVMDefault } from './orders-new-page.mock';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { selectActualPosition } from 'src/app/stores/location/location.selectors';
 import { StoreModule } from '@ngrx/store';
 import { updateVMSignal } from './orders-new-page.service.mock';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { OrdersNewPageVM } from './orders-new-page-vm.model';
 
 describe('OrdersNewPageService', () => {
