@@ -1,6 +1,6 @@
 @if (vm(); as vm) {
     <div class="min-h-screen flex flex-col">
-        @if (headerCanBeShown()) {
+        @if (vm.headerCanBeShown) {
             <app-header>
                 <app-logo
                     [vm]="vm.logoXVM"

@@ -11,6 +11,7 @@ export const enAppMock = {
 };
 
 export const appMockVMWithoutNavItem: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -19,6 +20,7 @@ export const appMockVMWithoutNavItem: AppComponentVM = {
     navItemXVMs: [],
 };
 export const appMockVMWithOneNavItem: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -28,6 +30,7 @@ export const appMockVMWithOneNavItem: AppComponentVM = {
 };
 
 export const appMockVMWithFiveNavItem: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -43,6 +46,7 @@ export const appMockVMWithFiveNavItem: AppComponentVM = {
 };
 
 export const appMockVMWithOneAnchor: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -52,6 +56,7 @@ export const appMockVMWithOneAnchor: AppComponentVM = {
 };
 
 export const appMockVMWithFiveAnchor: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -67,6 +72,7 @@ export const appMockVMWithFiveAnchor: AppComponentVM = {
 };
 
 export const appMockVMWithNavItemAndAnchor: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -93,6 +99,7 @@ export const appMockVMWithNavItemAndAnchor: AppComponentVM = {
 };
 
 export const appMockVM: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -119,6 +126,7 @@ export const appMockVM: AppComponentVM = {
 };
 
 export const appVMDefault: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',
@@ -145,6 +153,7 @@ export const appVMDefault: AppComponentVM = {
 };
 
 export const appEmptyMockVMForRoutes: AppComponentVM = {
+    headerCanBeShown: false,
     logoXVM: {
         imageSrc: 'assets/phoenix.jpg',
         routerLink: '',

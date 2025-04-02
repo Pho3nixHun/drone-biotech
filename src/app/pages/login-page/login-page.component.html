@@ -6,8 +6,10 @@
         @let formXVM = vm.loginFormXVM;
 
         <app-login-form [vm]="formXVM">
-            @if (authError(); as errorMessage) {
-                <p class="text-red-500 text-sm">{{ t(errorMessage) }}</p>
+            @if (formXVM.errorMessageKey) {
+                <p class="text-red-500 text-sm">
+                    {{ t(formXVM.errorMessageKey) }}
+                </p>
             }
             <form [formGroup]="loginForm" class="w-full space-y-4">
                 <label for="email" class="block font-medium">

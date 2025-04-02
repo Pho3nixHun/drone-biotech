@@ -8,6 +8,7 @@ export const enLoginPageMock = {
 
 export const loginPageVMMock: LoginPageVM = {
     loginFormXVM: {
+        errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'title',
         emailLabelKey: 'email',
@@ -19,6 +20,7 @@ export const loginPageVMMock: LoginPageVM = {
 };
 export const loginPageVMDefault: LoginPageVM = {
     loginFormXVM: {
+        errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
         emailLabelKey: 'LoginPage.loginForm.emailLabel',
         passwordLabelKey: 'LoginPage.loginForm.passwordLabel',

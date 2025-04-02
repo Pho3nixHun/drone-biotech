@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
-import { NotFoundPageService } from './not-found-page.service';
+import { Component } from '@angular/core';
 import { PageSectionComponent } from '@components/page-section/page-section.component';
 import { NotFoundMessageComponent } from './components/not-found-message/not-found-message.component';
+import { notFoundPageVMDefault } from './not-found-page.mock';
 
 /**
  * NotFoundPageComponent
@@ -27,5 +27,5 @@ import { NotFoundMessageComponent } from './components/not-found-message/not-fou
     templateUrl: './not-found-page.component.html',
 })
 export class NotFoundPageComponent {
-    protected readonly vm = inject(NotFoundPageService).getVM();
+    protected readonly vm = notFoundPageVMDefault;
 }

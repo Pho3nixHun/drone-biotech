@@ -10,8 +10,6 @@ import { AuthActions } from './stores/auth/auth.actions';
 import { Store } from '@ngrx/store';
 import { NgTemplateOutlet } from '@angular/common';
 import { isWithLink } from '@interfaces/with-link.interface';
-import { selectHeaderCanBeShown } from './stores/router/router.selectors';
-import { toSignal } from '@angular/core/rxjs-interop';
 import {
     defaultRel,
     defaultTarget,
@@ -34,13 +32,9 @@ import {
 })
 export class AppComponent {
     protected title = 'drone-biotech-webapp';
-    private readonly appService = inject(AppService);
+    protected readonly vm = inject(AppService).getVM();
     private readonly store = inject(Store);
-    protected readonly vm = this.appService.getVM();
-    protected headerCanBeShown = toSignal(
-        this.store.select(selectHeaderCanBeShown),
-        { initialValue: false }
-    );
+
     protected readonly defaultRel = defaultRel;
     protected readonly defaultTarget = defaultTarget;
     protected readonly isWithLink = isWithLink;

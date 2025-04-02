@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Coordinates } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
-import { ReverseGeocodingServiceModel } from './reverse-geocoding.service.mock';
 
 @Injectable({
     providedIn: 'root',
 })
-export class ReverseGeocodingService extends ReverseGeocodingServiceModel {
+export class ReverseGeocodingService {
     public readonly cache = new Map<string, string>();
     private readonly geocoder = new google.maps.Geocoder();
 
