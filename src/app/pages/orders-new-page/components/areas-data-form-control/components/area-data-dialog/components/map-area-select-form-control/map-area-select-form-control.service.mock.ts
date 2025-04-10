@@ -5,38 +5,23 @@ import { Coordinates } from '../../area-data-dialog.model';
 import { Injectable, signal } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
-
-export abstract class MapAreaSelectFormControlMockServiceModel {
-    public abstract initializeMap(
-        mapCanvas: HTMLElement,
-        mapOptions: google.maps.MapOptions,
-        targetArea: Coordinates[] | null
-    ): void;
-    public abstract drawPolygon(coordinates: Coordinates[] | null): void;
-    public abstract deletePolygon(): void;
-    public abstract getPaths(
-        path: google.maps.MVCArray<google.maps.LatLng>
-    ): Coordinates[];
-    public abstract editPolygon$: Observable<Coordinates[] | null>;
-}
-
 @Injectable({
     providedIn: 'root',
 })
-export class MapAreaSelectFormControlMockService extends MapAreaSelectFormControlMockServiceModel {
-    public override initializeMap(
+export class MapAreaSelectFormControlMockService {
+    public initializeMap(
         mapCanvas: HTMLElement,
         mapOptions: google.maps.MapOptions,
         targetArea: Coordinates[] | null
     ): void {}
-    public override drawPolygon(coordinates: Coordinates[] | null): void {}
-    public override deletePolygon(): void {}
-    public override getPaths(
+    public drawPolygon(coordinates: Coordinates[] | null): void {}
+    public deletePolygon(): void {}
+    public getPaths(
         path: google.maps.MVCArray<google.maps.LatLng>
     ): Coordinates[] {
         return [];
     }
-    public override editPolygon$: Observable<Coordinates[] | null> =
+    public editPolygon$: Observable<Coordinates[] | null> =
         toObservable(polygonSignal);
 }
 

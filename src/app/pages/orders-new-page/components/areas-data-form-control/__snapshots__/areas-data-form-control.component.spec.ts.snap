@@ -28,6 +28,5 @@ exports[`AreasDataFormControlComponent should render the template when the VM is
     <!--container-->
   </div>
   <!--container-->
-  <!--container-->
 </app-areas-data-form-control>
 `;

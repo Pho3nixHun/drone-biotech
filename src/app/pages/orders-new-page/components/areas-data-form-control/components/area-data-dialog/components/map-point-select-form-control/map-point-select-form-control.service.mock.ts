@@ -6,37 +6,20 @@ import { MapPointSelectFormControlService } from './map-point-select-form-contro
 import { Observable } from 'rxjs';
 import { toObservable } from '@angular/core/rxjs-interop';
 
-export abstract class MapPointSelectFormControlMockServiceModel {
-    public abstract drawMarker(coordinates: Coordinates | null): void;
-    public abstract deleteMarker(): void;
-    public abstract getPath(
-        pos:
-            | google.maps.LatLng
-            | google.maps.LatLngLiteral
-            | google.maps.LatLngAltitudeLiteral
-    ): Coordinates;
-    public abstract editEntryPoint$: Observable<Coordinates | null>;
-    public abstract initializeMap(
-        mapCanvas: HTMLElement,
-        mapOptions: google.maps.MapOptions,
-        entryPoint: Coordinates | null
-    ): void;
-}
-
 @Injectable({
     providedIn: 'root',
 })
-export class MapPointSelectFormControlMockService extends MapPointSelectFormControlMockServiceModel {
-    public override initializeMap(
+export class MapPointSelectFormControlMockService {
+    public initializeMap(
         mapCanvas: HTMLElement,
         mapOptions: google.maps.MapOptions,
         entryPoint: Coordinates | null
     ): void {}
-    public override editEntryPoint$: Observable<Coordinates | null> =
+    public editEntryPoint$: Observable<Coordinates | null> =
         toObservable(entryPointSignal);
-    public override drawMarker(coordinates: Coordinates | null): void {}
-    public override deleteMarker(): void {}
-    public override getPath(
+    public drawMarker(coordinates: Coordinates | null): void {}
+    public deleteMarker(): void {}
+    public getPath(
         pos:
             | google.maps.LatLng
             | google.maps.LatLngLiteral

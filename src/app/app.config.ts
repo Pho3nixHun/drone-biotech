@@ -16,7 +16,6 @@ import {
     browserLocalPersistence,
     getAuth,
     provideAuth,
-    setPersistence,
 } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { StoreModule } from '@ngrx/store';
@@ -51,7 +50,7 @@ export const appConfig: ApplicationConfig = {
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideAuth(() => {
             const auth = getAuth(inject(FirebaseApp));
-            setPersistence(auth, browserLocalPersistence);
+            auth.setPersistence(browserLocalPersistence);
             return auth;
         }),
         provideFirestore(() => getFirestore()),
