@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppRouteSegment } from 'src/app/app-route-segment';
+import { OrdersRouteSegment } from './orders-route-segment';
 
 export const routes: Routes = [
     {
-        path: AppRouteSegment.NEW,
+        path: OrdersRouteSegment.NEW,
         loadComponent: () =>
             import('./orders-new-page.component').then(
                 (m) => m.OrdersNewPageComponent

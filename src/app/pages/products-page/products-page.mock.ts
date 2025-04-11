@@ -13,13 +13,15 @@ export const enProductsPageMock = {
 export const productsPageVMWithOneProductItem: ProductsPageVM = {
     productListFrame: {
         titleKey: 'title0',
-        productItemVMs: {
-            id: '1',
-            altTextKey: 'productAltText0',
-            titleKey: 'productAltText0',
-            descriptionKey: 'productDescription0',
-            imageSrc: 'assets/lepke.jpg',
-        },
+        productItemVMs: [
+            {
+                id: '1',
+                altTextKey: 'productAltText0',
+                titleKey: 'productAltText0',
+                descriptionKey: 'productDescription0',
+                imageSrc: 'assets/lepke.jpg',
+            },
+        ],
     },
 };
 

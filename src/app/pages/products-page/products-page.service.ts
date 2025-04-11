@@ -14,13 +14,12 @@ export class ProductsPageService {
     private readonly productsService = inject(ProductsService);
     private readonly store = inject(Store);
     private readonly idSignal = toSignal(this.store.select(selectID));
-    private readonly productsSignal = computed<
-        ProductItemXVM | ProductItemXVM[] | undefined
-    >(() => {
+    private readonly productsSignal = computed<ProductItemXVM[] | null>(() => {
         const id = this.idSignal();
-
         if (!id) return this.productsService.getAllProducts();
-        return this.productsService.getProductById(id) ?? undefined;
+
+        const productItem = this.productsService.getProductById(id);
+        return productItem ? Array.of(productItem) : null;
     });
 
     private readonly computedVM = computed<ProductsPageVM>(() => {

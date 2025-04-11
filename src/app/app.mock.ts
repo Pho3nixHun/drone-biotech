@@ -1,6 +1,7 @@
 import { AppComponentVM } from './app-vm.model';
 import { FrameID } from './pages/landing-page/landing-page-vm.model';
 import { AppRouteSegment } from './app-route-segment';
+import { OrdersRouteSegment } from './pages/orders-new-page/orders-route-segment';
 
 export const enAppMock = {
     text0: '0title',
@@ -147,7 +148,7 @@ export const appVMDefault: AppComponentVM = {
         },
         {
             textKey: 'AppComponent.navItems.3.title',
-            routerLink: [AppRouteSegment.ORDERS, AppRouteSegment.NEW],
+            routerLink: [AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
         },
     ],
 };

@@ -30,6 +30,7 @@ import {
     provideGuestOnlyGuard,
     updateGuestOnlyGuard,
 } from '@guards/guest-only/guest-only.guard.mock';
+import { OrdersRouteSegment } from './pages/orders-new-page/orders-route-segment';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
@@ -236,12 +237,12 @@ describe('AppComponent', () => {
             //Act
             await router.navigate([
                 AppRouteSegment.ORDERS,
-                AppRouteSegment.NEW,
+                OrdersRouteSegment.NEW,
             ]);
 
             //Assert
             expect(router.url).toBe(
-                `/${AppRouteSegment.ORDERS}/${AppRouteSegment.NEW}`
+                `/${AppRouteSegment.ORDERS}/${OrdersRouteSegment.NEW}`
             );
         });
 
@@ -320,7 +321,7 @@ describe('AppComponent', () => {
             //Act
             await router.navigate([
                 AppRouteSegment.ORDERS,
-                AppRouteSegment.NEW,
+                OrdersRouteSegment.NEW,
             ]);
 
             //Assert

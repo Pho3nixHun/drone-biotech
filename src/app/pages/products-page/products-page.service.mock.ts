@@ -16,17 +16,13 @@ class ProductsPageMockService {
     private readonly productsService = inject(ProductsService);
     private readonly store = inject(Store);
     private readonly idSignal = toSignal(this.store.select(selectID));
-    private readonly productsSignal = computed<
-        ProductItemXVM | ProductItemXVM[]
-    >(() => {
+    private readonly productsSignal = computed<ProductItemXVM[] | null>(() => {
         const id = this.idSignal();
 
         if (!id) return this.productsService.getAllProducts();
 
-        return (
-            this.productsService.getProductById(id) ??
-            this.productsService.getAllProducts()
-        );
+        const productItem = this.productsService.getProductById(id);
+        return productItem ? Array.of(productItem) : null;
     });
 
     private readonly computedVM = computed<ProductsPageVM | undefined>(() => {

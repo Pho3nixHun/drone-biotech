@@ -31,7 +31,7 @@ describe('ProductsPageService', () => {
     //Unit test
     it('should return the vm with 1 productItem when the route matches the id when the getVM() function is called', () => {
         // Arrange
-        store.overrideSelector(selectID, '1asd');
+        store.overrideSelector(selectID, '1');
         store.refreshState();
         const vm = service.getVM();
 
@@ -39,7 +39,7 @@ describe('ProductsPageService', () => {
 
         //Assert
         const product = vm().productListFrame.productItemVMs;
-        expect(product).toBe(undefined);
+        expect(product?.length).toBe(1);
     });
 
     //Unit test
@@ -53,6 +53,6 @@ describe('ProductsPageService', () => {
 
         //Assert
         const product = vm().productListFrame.productItemVMs;
-        expect(product).toBe(undefined);
+        expect(product).toBe(null);
     });
 });

@@ -4,8 +4,6 @@ import { ProductItemComponent } from '@components/product-item/product-item.comp
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
 import { PageSectionComponent } from '../../shared/components/page-section/page-section.component';
-import { isArray } from '@utils/is-array.typeguard';
-import { NgTemplateOutlet } from '@angular/common';
 
 /**
  * ProductsPageComponent
@@ -31,13 +29,10 @@ import { NgTemplateOutlet } from '@angular/common';
         ProductItemComponent,
         ProductListComponent,
         PageSectionComponent,
-        NgTemplateOutlet,
     ],
     templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
     private readonly productsPageService = inject(ProductsPageService);
     protected readonly vm = this.productsPageService.getVM();
-
-    isArray = isArray;
 }

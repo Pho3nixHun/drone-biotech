@@ -107,16 +107,14 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
                 <!--container-->
               </app-product-item>
               <!--container-->
-              <!--ng-container-->
             </div>
           </app-product-list>
         </section>
         <!--container-->
       </app-frame>
+      <!--container-->
     </section>
   </app-page-section>
-  <!--container-->
-  <!--container-->
   <!--container-->
 </div>
 `;
@@ -219,16 +217,14 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
                 <!--container-->
               </app-product-item>
               <!--container-->
-              <!--ng-container-->
             </div>
           </app-product-list>
         </section>
         <!--container-->
       </app-frame>
+      <!--container-->
     </section>
   </app-page-section>
-  <!--container-->
-  <!--container-->
   <!--container-->
 </div>
 `;
@@ -331,16 +327,14 @@ exports[`ProductsPageComponent should render the template when the VM is provide
                 <!--container-->
               </app-product-item>
               <!--container-->
-              <!--ng-container-->
             </div>
           </app-product-list>
         </section>
         <!--container-->
       </app-frame>
+      <!--container-->
     </section>
   </app-page-section>
-  <!--container-->
-  <!--container-->
   <!--container-->
 </div>
 `;
