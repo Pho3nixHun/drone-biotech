@@ -1,15 +1,51 @@
-@let VM = vm();
+@if (vm(); as vm) {
+    <div class="min-h-screen flex flex-col">
+        @if (vm.headerCanBeShown) {
+            <app-header>
+                <app-logo
+                    [vm]="vm.logoXVM"
+                    [routerLink]="vm.logoXVM.routerLink"
+                    class="cursor-pointer"
+                />
+                <app-nav>
+                    @for (navItemXVM of vm.navItemXVMs; track $index) {
+                        <ng-container
+                            [ngTemplateOutlet]="
+                                isWithLink(navItemXVM)
+                                    ? withLink
+                                    : withRouterLink
+                            "
+                            [ngTemplateOutletContext]="{ navItemXVM }"
+                        >
+                        </ng-container>
+                    }
+                    <button
+                        mat-icon-button
+                        (click)="signOut()"
+                        class="nav-item"
+                    >
+                        <mat-icon>logout</mat-icon>
+                    </button>
+                </app-nav>
+            </app-header>
+        }
+        <div class="flex-grow"><router-outlet /></div>
+    </div>
 
-<div class="min-h-screen flex flex-col">
-    <app-header *transloco="let t">
-        <app-logo [vm]="VM.logoXVM" [routerLink]="VM.logoXVM.routerLink" />
-        <app-nav>
-            @for (navItemXVM of VM.navItemXVMs; track $index) {
-                <app-nav-item [vm]="navItemXVM">{{
-                    t(navItemXVM.textKey)
-                }}</app-nav-item>
-            }
-        </app-nav>
-    </app-header>
-    <div class="flex-grow"><router-outlet /></div>
-</div>
+    <ng-template #withLink let-vm="navItemXVM">
+        <a
+            [href]="vm.link.href"
+            [rel]="vm.link.rel ? vm.link.rel?.join(' ') : defaultRel"
+            [target]="vm.link.target ? vm.link.target : defaultTarget"
+            class="nav-item"
+        >
+            {{ vm.textKey | transloco }}
+        </a>
+    </ng-template>
+
+    <ng-template #withRouterLink let-vm="navItemXVM">
+        <a [routerLink]="vm.routerLink" class="nav-item">{{
+            vm.textKey | transloco
+        }}</a>
+    </ng-template>
+}

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPageComponent should render the template 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <app-page-section
+    class="flex flex-col items-center justify-center min-h-screen w-full flex-grow"
+  >
+    <section
+      class="mt-72 md:mt-25"
+    >
+      <app-not-found-message>
+        <!--container-->
+      </app-not-found-message>
+    </section>
+  </app-page-section>
+</div>
+`;

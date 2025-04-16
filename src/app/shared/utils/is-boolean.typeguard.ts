@@ -13,15 +13,13 @@ export const isBooleanFalse = (value: unknown): value is 'false' =>
 export const isBooleanString = (value: unknown): value is 'true' | 'false' =>
     value === 'true' || value === 'false';
 
-export const assertBoolean = (
-    value: unknown
-): asserts value is boolean => {
+export const assertBoolean = (value: unknown): asserts value is boolean => {
     if (!isBoolean(value)) {
         throw new TypeError(
             `Expected value to be boolean, but received: ${value}`
         );
     }
-}
+};
 
 export const assertNonBoolean = (
     value: unknown

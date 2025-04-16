@@ -94,3 +94,6 @@ Thumbs.db
 .runtimeconfig.json
 
 **/*.log
+
+# API keys
+environment.ts

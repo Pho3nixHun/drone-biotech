@@ -1,0 +1,13 @@
+<div class="text-center space-y-5 mx-5" *transloco="let t">
+    <h1
+        class="text-6xl sm:text-8xl font-bold text-center mb-4 w-full text-black"
+    >
+        {{ t(vm().titleKey) }}
+    </h1>
+    <p class="md:text-xl">
+        {{ t(vm().descriptionKey) }}
+    </p>
+    <a [routerLink]="[vm().navItem.routerLink]" class="btn btn-secondary">{{
+        t(vm().navItem.textKey)
+    }}</a>
+</div>

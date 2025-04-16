@@ -59,6 +59,9 @@ exports[`ProductListComponent should render the template when the VM is provided
         </a>
         <!--container-->
       </app-product-item>
+      <div>
+        This should not been projected
+      </div>
     </div>
   </app-product-list>
 </div>

@@ -1,4 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HeroComponent } from '@components/hero/hero.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
@@ -7,12 +9,11 @@ import { PartnerListComponent } from '@components/partner-list/partner-list.comp
 import { PartnerLogoComponent } from '@components/partner-list/components/partner-logo/partner-logo.component';
 import { TestimonialItemComponent } from '@components/testimonial-item/testimonial-item.component';
 import { SwiperModule } from '@modules/swiper/swiper.module';
+import { Rel } from '@interfaces/with-link.interface';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
-import { NgTemplateOutlet } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { isProductFrame } from './landing-page-vm.model';
-import { Rel } from '@interfaces/with-link.interface';
+import { PageSectionComponent } from '@components/page-section/page-section.component';
 
 /**
  * LandingPageComponent
@@ -36,28 +37,27 @@ import { Rel } from '@interfaces/with-link.interface';
     selector: 'app-landing-page',
     standalone: true,
     imports: [
-        HeroComponent,
-        ProductItemComponent,
-        ProductListComponent,
-        RouterLink,
         FrameComponent,
+        HeroComponent,
+        NgTemplateOutlet,
         PartnerListComponent,
         PartnerLogoComponent,
-        TestimonialItemComponent,
+        ProductItemComponent,
+        ProductListComponent,
+        RouterModule,
         SwiperModule,
         TranslocoModule,
-        NgTemplateOutlet,
+        TestimonialItemComponent,
+        PageSectionComponent,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
+    private readonly landingPageService = inject(LandingPageService);
+    protected readonly vm = this.landingPageService.getVM();
+
     protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
     protected readonly defaultTarget = '_self';
-
-    private readonly landingPageService = inject(LandingPageService);
-
-    protected isProductFrame = isProductFrame;
-
-    protected vm = this.landingPageService.getVM();
+    protected readonly isProductFrame = isProductFrame;
 }

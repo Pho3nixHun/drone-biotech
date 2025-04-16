@@ -1,28 +1,30 @@
-@if (vm(); as vm) {
-    @if (vm.heroXVM; as heroXVM) {
-        <app-hero [vm]="heroXVM">
-            <h1>{{ heroXVM.titleKey | transloco }}</h1>
-            <p>{{ heroXVM.descriptionKey | transloco }}</p>
-            <a href="" class="primary">{{
-                heroXVM.primaryButtonLabelKey | transloco
-            }}</a>
-            <a href="" class="secondary">{{
-                heroXVM.secondaryButtonLabelKey | transloco
-            }}</a>
-        </app-hero>
-    }
+<app-page-section>
+    @if (vm(); as vm) {
+        @if (vm.heroXVM; as heroXVM) {
+            <app-hero [vm]="heroXVM" *transloco="let t">
+                <h1>{{ t(heroXVM.titleKey) }}</h1>
+                <p>{{ t(heroXVM.descriptionKey) }}</p>
+                <a href="" class="btn btn-primary">{{
+                    t(heroXVM.primaryButtonLabelKey)
+                }}</a>
+                <a href="" class="btn btn-default">{{
+                    t(heroXVM.secondaryButtonLabelKey)
+                }}</a>
+            </app-hero>
+        }
 
-    @for (frameVM of vm.frameXVMs; track $index) {
-        <ng-container
-            [ngTemplateOutlet]="
-                isProductFrame(frameVM) ? productFrame : partnerFrame
-            "
-            [ngTemplateOutletContext]="{ frameVM }"
-        ></ng-container>
+        @for (frameVM of vm.frameXVMs; track $index) {
+            <ng-container
+                [ngTemplateOutlet]="
+                    isProductFrame(frameVM) ? productFrame : partnerFrame
+                "
+                [ngTemplateOutletContext]="{ frameVM }"
+            ></ng-container>
+        }
+    } @else {
+        Loading...
     }
-} @else {
-    Loading...
-}
+</app-page-section>
 
 <ng-template #productFrame let-vm="frameVM">
     <app-frame [id]="vm.id" [vm]="vm">

@@ -1,0 +1,13 @@
+<div
+    class="duration-500 h-full flex flex-col justify-center"
+    *transloco="let t"
+>
+    @if (label(); as label) {
+        <p
+            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+        >
+            {{ t(label) }}
+        </p>
+    }
+    <ng-content />
+</div>

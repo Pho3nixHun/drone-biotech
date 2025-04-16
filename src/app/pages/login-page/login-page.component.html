@@ -1,0 +1,50 @@
+@if (vm(); as vm) {
+    <section
+        class="flex flex-col items-center justify-center min-h-screen px-4 md:px-0"
+        *transloco="let t"
+    >
+        @let formXVM = vm.loginFormXVM;
+
+        <app-login-form [vm]="formXVM">
+            @if (formXVM.errorMessageKey) {
+                <p class="text-red-500 text-sm">
+                    {{ t(formXVM.errorMessageKey) }}
+                </p>
+            }
+            <form [formGroup]="loginForm" class="w-full space-y-4">
+                <label for="email" class="block font-medium">
+                    {{ t(formXVM.emailLabelKey) }}
+                </label>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                    formControlName="email"
+                    class="block w-full border border-gray-300 p-2 rounded-md"
+                />
+
+                <label for="password" class="block font-medium">
+                    {{ t(formXVM.passwordLabelKey) }}
+                </label>
+                <input
+                    id="password"
+                    type="password"
+                    [placeholder]="t(formXVM.passwordPlaceholderKey)"
+                    formControlName="password"
+                    class="block w-full border border-gray-300 p-2 rounded-md"
+                />
+
+                <button
+                    (click)="signIn()"
+                    [disabled]="loginForm.invalid"
+                    class="btn w-full"
+                    [ngClass]="[
+                        loginForm.valid ? 'btn-secondary' : 'btn-disabled',
+                    ]"
+                >
+                    {{ t(formXVM.buttonTitleKey) }}
+                </button>
+            </form>
+        </app-login-form>
+    </section>
+}

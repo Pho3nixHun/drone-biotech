@@ -3,13 +3,13 @@ import { HeroVM } from '@components/hero/hero-vm.model';
 import { PartnerLogoVM } from '@components/partner-list/components/partner-logo/partner-logo-vm.model';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
 import { TestimonialItemVM } from '@components/testimonial-item/testimonial-item-vm.model';
-import { isWithId, WithId } from '@interfaces/with-id.interace';
+import { isWithId, WithId } from '@interfaces/with-id.interface';
 import { WithLink } from '@interfaces/with-link.interface';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
 // We use `interface` here because it's semantically appropriate
 // for extending object structures and ensures clear intent for others.
-interface ProductItemXVM extends WithRouterLink, ProductItemVM {}
+export interface ProductItemXVM extends WithRouterLink, ProductItemVM, WithId {}
 interface PartnerLogoXVM extends Partial<WithLink>, PartnerLogoVM {}
 
 interface HeroXVM extends HeroVM {
@@ -64,6 +64,6 @@ export interface LandingPageVM {
 }
 
 export enum FrameID {
-    PRODUCT = 'products',
+    PRODUCTS = 'products',
     PARTNERS = 'partners',
 }

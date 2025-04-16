@@ -1,3 +1,3 @@
 export interface WithBackgroundImageSrc {
-  backgroundImageSrc: string;
+    backgroundImageSrc: string;
 }

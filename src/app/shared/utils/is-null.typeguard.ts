@@ -3,7 +3,9 @@ export const isNotNull = <T>(value: T | null): value is T => !isNull(value);
 
 export const assertNull = (value: unknown): asserts value is null => {
     if (!isNull(value)) {
-        throw new TypeError(`Expected value to be null, but received: ${value}`);
+        throw new TypeError(
+            `Expected value to be null, but received: ${value}`
+        );
     }
 };
 export const assertNonNull = <T>(value: T | null): asserts value is T => {

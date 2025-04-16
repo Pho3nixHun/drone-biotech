@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginFormComponent should project the contents, render the template correctly when there is a VM provided 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <app-login-form
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] w-full max-w-4xl md:mx-0 bg-white rounded-2xl shadow-md overflow-hidden"
+    >
+      <div
+        class="md:w-1/2 w-full"
+      >
+        <img
+          alt="desc"
+          class="h-48 md:h-full w-full object-cover"
+          src="assets/phoenix.jpg"
+        />
+      </div>
+      <div
+        class="flex flex-col justify-center p-5 w-full md:w-1/2 space-y-4"
+      >
+        <h3
+          class="text-2xl tracking-wider"
+        >
+           tit 
+        </h3>
+        <p>
+          desc
+        </p>
+        <p>
+          <div>
+            Should not be projected
+          </div>
+          <p>
+            Should be projected
+          </p>
+        </p>
+        <div
+          class="w-full"
+        >
+          <form>
+            Should be projected
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--container-->
+  </app-login-form>
+</div>
+`;

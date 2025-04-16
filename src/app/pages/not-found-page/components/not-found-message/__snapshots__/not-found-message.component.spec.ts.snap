@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundMessageComponent should render the template when the VM is provided 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <app-not-found-message
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="text-center space-y-5 mx-5"
+    >
+      <h1
+        class="text-6xl sm:text-8xl font-bold text-center mb-4 w-full text-black"
+      >
+         tit 
+      </h1>
+      <p
+        class="md:text-xl"
+      >
+         desc 
+      </p>
+      <a
+        class="btn btn-secondary"
+        href="/link"
+        ng-reflect-router-link="link"
+      >
+        txt
+      </a>
+    </div>
+    <!--container-->
+  </app-not-found-message>
+</div>
+`;

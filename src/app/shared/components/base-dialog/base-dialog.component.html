@@ -1,0 +1,31 @@
+<section
+    class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+    *transloco="let t"
+>
+    <div class="flex justify-between">
+        <h3 class="text-3xl">
+            {{ t(vm().titleKey) }}
+        </h3>
+        <button (click)="onClick()">
+            <mat-icon
+                class="text-3xl"
+                style="
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                "
+                >close</mat-icon
+            >
+        </button>
+    </div>
+    <div class="space-y-4">
+        <ng-content />
+    </div>
+    <div
+        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
+    >
+        <ng-content select="button" />
+    </div>
+</section>

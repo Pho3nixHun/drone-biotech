@@ -1,0 +1,22 @@
+<div
+    class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] w-full max-w-4xl md:mx-0 bg-white rounded-2xl shadow-md overflow-hidden"
+    *transloco="let t"
+>
+    <div class="md:w-1/2 w-full">
+        <img
+            [src]="vm().backgroundImageSrc"
+            [alt]="t(vm().descriptionKey)"
+            class="h-48 md:h-full w-full object-cover"
+        />
+    </div>
+    <div class="flex flex-col justify-center p-5 w-full md:w-1/2 space-y-4">
+        <h3 class="text-2xl tracking-wider">
+            {{ t(vm().titleKey) }}
+        </h3>
+        <p>{{ t(vm().descriptionKey) }}</p>
+        <p><ng-content /></p>
+        <div class="w-full">
+            <ng-content select="form" />
+        </div>
+    </div>
+</div>

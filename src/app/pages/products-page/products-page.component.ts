@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
+import { PageSectionComponent } from '../../shared/components/page-section/page-section.component';
 
 /**
  * ProductsPageComponent
@@ -22,18 +22,17 @@ import { ProductsPageService } from './products-page.service';
  * - To serve as a smart container component that integrates business logic, including data fetching and presentation, to create a cohesive user interface.
  */
 @Component({
-  selector: 'app-products-page',
-  standalone: true,
-  imports: [
-    FrameComponent,
-    ProductItemComponent,
-    ProductListComponent,
-    RouterLink,
-  ],
-  templateUrl: './products-page.component.html',
+    selector: 'app-products-page',
+    standalone: true,
+    imports: [
+        FrameComponent,
+        ProductItemComponent,
+        ProductListComponent,
+        PageSectionComponent,
+    ],
+    templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
-  private readonly productsPageService = inject(ProductsPageService);
-
-  protected vm = this.productsPageService.getVM();
+    private readonly productsPageService = inject(ProductsPageService);
+    protected readonly vm = this.productsPageService.getVM();
 }

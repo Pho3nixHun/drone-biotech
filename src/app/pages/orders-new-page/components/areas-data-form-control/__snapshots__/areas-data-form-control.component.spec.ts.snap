@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AreasDataFormControlComponent should render the template when the VM is provided 1`] = `
+<app-areas-data-form-control
+  class="ng-untouched ng-pristine ng-valid"
+  formcontrolname="areaData"
+  ng-reflect-name="areaData"
+  ng-reflect-vm="[object Object]"
+>
+  <div>
+    <div
+      class="flex flex-row justify-between pr-3 xl:pr-2"
+    >
+      <button
+        class="bg-emerald-400 hover:bg-emerald-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
+        mat-icon-button=""
+      >
+        <mat-icon
+          aria-hidden="true"
+          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+          data-mat-icon-type="font"
+          role="img"
+        >
+          add
+        </mat-icon>
+      </button>
+    </div>
+    <!--container-->
+  </div>
+  <!--container-->
+</app-areas-data-form-control>
+`;

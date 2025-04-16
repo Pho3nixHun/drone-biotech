@@ -1,3 +1,3 @@
 export interface FrameVM {
-  titleKey: string;
+    titleKey: string;
 }

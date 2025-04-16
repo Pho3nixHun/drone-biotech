@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPageComponent should not render the template when there is no VM provided 1`] = `
+<div
+  id="root0"
+  ng-version="18.2.8"
+>
+  <!--container-->
+</div>
+`;
+
+exports[`LoginPageComponent should render the template when there is a VM provided 1`] = `
+<div
+  id="root1"
+  ng-version="18.2.8"
+>
+  <section
+    class="flex flex-col items-center justify-center min-h-screen px-4 md:px-0"
+  >
+    <app-login-form
+      ng-reflect-vm="[object Object]"
+    >
+      <div
+        class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] w-full max-w-4xl md:mx-0 bg-white rounded-2xl shadow-md overflow-hidden"
+      >
+        <div
+          class="md:w-1/2 w-full"
+        >
+          <img
+            alt="desc"
+            class="h-48 md:h-full w-full object-cover"
+            src="assets/farming.jpg"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-center p-5 w-full md:w-1/2 space-y-4"
+        >
+          <h3
+            class="text-2xl tracking-wider"
+          >
+             tit 
+          </h3>
+          <p>
+            desc
+          </p>
+          <p>
+            <!--container-->
+          </p>
+          <div
+            class="w-full"
+          >
+            <form
+              class="w-full space-y-4 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              novalidate=""
+            >
+              <label
+                class="block font-medium"
+                for="email"
+              >
+                 email 
+              </label>
+              <input
+                class="block w-full border border-gray-300 p-2 rounded-md ng-untouched ng-pristine ng-invalid"
+                formcontrolname="email"
+                id="email"
+                ng-reflect-name="email"
+                placeholder="Email"
+                type="email"
+              />
+              <label
+                class="block font-medium"
+                for="password"
+              >
+                 password 
+              </label>
+              <input
+                class="block w-full border border-gray-300 p-2 rounded-md ng-untouched ng-pristine ng-invalid"
+                formcontrolname="password"
+                id="password"
+                ng-reflect-name="password"
+                placeholder="password"
+                type="password"
+              />
+              <button
+                class="btn w-full btn-disabled"
+                disabled=""
+                ng-reflect-ng-class="btn-disabled"
+              >
+                 butt 
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--container-->
+    </app-login-form>
+  </section>
+  <!--container-->
+  <!--container-->
+</div>
+`;

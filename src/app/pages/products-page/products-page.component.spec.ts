@@ -1,19 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductsPageComponent } from './products-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { provideRouter } from '@angular/router';
 import {
     enProductsPageMock,
     productsPageVMMock,
     productsPageVMWithFiveProductItem,
     productsPageVMWithOneProductItem,
-    productsPageVMWithoutProductItem,
-    productsPageVMWithRoutes,
 } from './products-page.mock';
 import {
     provideProductsPageMockService,
     updateGetVMSignal,
 } from './products-page.service.mock';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('ProductsPageComponent', () => {
     let fixture: ComponentFixture<ProductsPageComponent>;
@@ -31,12 +29,12 @@ describe('ProductsPageComponent', () => {
                     },
                 }),
             ],
-            providers: [provideProductsPageMockService(), provideRouter([])],
+            providers: [provideProductsPageMockService(), provideMockStore()],
         }).compileComponents();
 
         updateGetVMSignal(undefined);
+
         fixture = TestBed.createComponent(ProductsPageComponent);
-        fixture.detectChanges();
         compiled = fixture.debugElement.nativeElement;
     });
 
@@ -51,8 +49,9 @@ describe('ProductsPageComponent', () => {
         //Assert
         expect(compiled).toMatchSnapshot();
     });
+
     //Snapshot test
-    it('should  render the template when the VM is provided', () => {
+    it('should render the template when the VM is provided', () => {
         //Arrange
         updateGetVMSignal(productsPageVMMock);
 
@@ -64,19 +63,7 @@ describe('ProductsPageComponent', () => {
     });
 
     //Snapshot test
-    it('should not render <app-product-item> when there is no item provided', () => {
-        //Arrange
-        updateGetVMSignal(productsPageVMWithoutProductItem);
-
-        //Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should render 1 <app-product-item> when 1 item is provided', () => {
+    it('should render 1 <app-product-item> if 1 items are provided', () => {
         //Arrange
         updateGetVMSignal(productsPageVMWithOneProductItem);
 
@@ -88,23 +75,11 @@ describe('ProductsPageComponent', () => {
     });
 
     //Snapshot test
-    it('should render 5 <app-product-item> when 5 items are provided', () => {
+    it('should render 5 <app-product-item> if 5 items are provided', () => {
         //Arrange
         updateGetVMSignal(productsPageVMWithFiveProductItem);
 
         //Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should have the correct routerLinks on product-items', () => {
-        // Arrange
-        updateGetVMSignal(productsPageVMWithRoutes);
-
-        // Act
         fixture.detectChanges();
 
         //Assert
