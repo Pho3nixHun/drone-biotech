@@ -22,9 +22,8 @@ import { notFoundPageVMDefault } from './not-found-page.mock';
 
 @Component({
     selector: 'app-not-found-page',
-    standalone: true,
     imports: [PageSectionComponent, NotFoundMessageComponent],
-    templateUrl: './not-found-page.component.html',
+    templateUrl: './not-found-page.component.html'
 })
 export class NotFoundPageComponent {
     protected readonly vm = notFoundPageVMDefault;

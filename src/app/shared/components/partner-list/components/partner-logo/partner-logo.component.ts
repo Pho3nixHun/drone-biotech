@@ -21,9 +21,8 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-partner-logo',
-    standalone: true,
     imports: [TranslocoModule],
-    templateUrl: './partner-logo.component.html',
+    templateUrl: './partner-logo.component.html'
 })
 export class PartnerLogoComponent {
     public vm = input.required<PartnerLogoVM>();

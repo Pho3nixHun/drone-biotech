@@ -17,7 +17,6 @@ import {
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     imports: [
         RouterOutlet,
         HeaderComponent,
@@ -28,7 +27,7 @@ import {
         RouterModule,
         NgTemplateOutlet,
     ],
-    templateUrl: './app.component.html',
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
     protected title = 'drone-biotech-webapp';

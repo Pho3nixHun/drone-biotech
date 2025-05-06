@@ -17,9 +17,8 @@ import { HeroVM } from './hero-vm.model';
 
 @Component({
     selector: 'app-hero',
-    standalone: true,
     imports: [],
-    templateUrl: './hero.component.html',
+    templateUrl: './hero.component.html'
 })
 export class HeroComponent {
     public vm = input<HeroVM | null>(null, { alias: 'vm' });

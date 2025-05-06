@@ -21,7 +21,6 @@ import { ElementRefDirective } from '@directives/element-ref.directive';
 
 @Component({
     selector: 'app-map-area-select-form-control',
-    standalone: true,
     imports: [TranslocoModule, NgClass, ElementRefDirective],
     providers: [
         {
@@ -30,7 +29,7 @@ import { ElementRefDirective } from '@directives/element-ref.directive';
             multi: true,
         },
     ],
-    templateUrl: './map-area-select-form-control.component.html',
+    templateUrl: './map-area-select-form-control.component.html'
 })
 export class MapAreaSelectFormControlComponent implements ControlValueAccessor {
     public vm = input.required<MapAreaSelectFormControlVM>();

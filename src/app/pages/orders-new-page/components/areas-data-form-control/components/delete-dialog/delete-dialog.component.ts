@@ -7,9 +7,8 @@ import { BaseDialogComponent } from '@components/base-dialog/base-dialog.compone
 
 @Component({
     selector: 'app-delete-dialog',
-    standalone: true,
     imports: [MatIconModule, TranslocoModule, BaseDialogComponent],
-    templateUrl: './delete-dialog.component.html',
+    templateUrl: './delete-dialog.component.html'
 })
 export class DeleteDialogComponent {
     protected readonly unknownVM = signal<unknown>(inject(DIALOG_DATA));

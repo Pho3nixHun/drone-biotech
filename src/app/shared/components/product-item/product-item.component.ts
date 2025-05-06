@@ -23,9 +23,8 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-product-item',
-    standalone: true,
     imports: [TranslocoModule],
-    templateUrl: './product-item.component.html',
+    templateUrl: './product-item.component.html'
 })
 export class ProductItemComponent {
     @HostBinding('class') hostClass = 'h-full';

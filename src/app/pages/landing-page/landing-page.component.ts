@@ -35,7 +35,6 @@ import { PageSectionComponent } from '@components/page-section/page-section.comp
 
 @Component({
     selector: 'app-landing-page',
-    standalone: true,
     imports: [
         FrameComponent,
         HeroComponent,
@@ -51,7 +50,7 @@ import { PageSectionComponent } from '@components/page-section/page-section.comp
         PageSectionComponent,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    templateUrl: './landing-page.component.html',
+    templateUrl: './landing-page.component.html'
 })
 export class LandingPageComponent {
     private readonly landingPageService = inject(LandingPageService);

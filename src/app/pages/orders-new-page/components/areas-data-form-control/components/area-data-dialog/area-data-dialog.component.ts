@@ -16,7 +16,6 @@ import {
 
 @Component({
     selector: 'app-area-data-dialog',
-    standalone: true,
     imports: [
         NgClass,
         ReactiveFormsModule,
@@ -25,7 +24,7 @@ import {
         MapAreaSelectFormControlComponent,
         MapPointSelectFormControlComponent,
     ],
-    templateUrl: './area-data-dialog.component.html',
+    templateUrl: './area-data-dialog.component.html'
 })
 export class AreaDataDialogComponent {
     protected readonly dialogRef = inject(DIALOG_REF);

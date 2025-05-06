@@ -20,9 +20,8 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-login-form',
-    standalone: true,
     imports: [TranslocoModule],
-    templateUrl: './login-form.component.html',
+    templateUrl: './login-form.component.html'
 })
 export class LoginFormComponent {
     public vm = input.required<LoginFormVM>();

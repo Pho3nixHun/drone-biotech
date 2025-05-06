@@ -21,7 +21,6 @@ import {
 
 @Component({
     selector: 'app-map-point-select-form-control',
-    standalone: true,
     imports: [TranslocoModule, NgClass, ElementRefDirective],
     providers: [
         {
@@ -30,7 +29,7 @@ import {
             multi: true,
         },
     ],
-    templateUrl: './map-point-select-form-control.component.html',
+    templateUrl: './map-point-select-form-control.component.html'
 })
 export class MapPointSelectFormControlComponent
     implements ControlValueAccessor

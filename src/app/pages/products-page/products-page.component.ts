@@ -23,14 +23,13 @@ import { PageSectionComponent } from '../../shared/components/page-section/page-
  */
 @Component({
     selector: 'app-products-page',
-    standalone: true,
     imports: [
         FrameComponent,
         ProductItemComponent,
         ProductListComponent,
         PageSectionComponent,
     ],
-    templateUrl: './products-page.component.html',
+    templateUrl: './products-page.component.html'
 })
 export class ProductsPageComponent {
     private readonly productsPageService = inject(ProductsPageService);

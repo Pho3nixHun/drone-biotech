@@ -35,7 +35,6 @@ import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-areas-data-form-control',
-    standalone: true,
     imports: [
         TranslocoModule,
         CardGroupComponent,
@@ -51,7 +50,7 @@ import { AsyncPipe } from '@angular/common';
             multi: true,
         },
     ],
-    templateUrl: './areas-data-form-control.component.html',
+    templateUrl: './areas-data-form-control.component.html'
 })
 export class AreasDataFormControlComponent implements ControlValueAccessor {
     public vm = input.required<AreasDataFormControlVM>();

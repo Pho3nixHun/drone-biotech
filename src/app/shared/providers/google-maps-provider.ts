@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, inject, InjectionToken } from '@angular/core';
+import { inject, InjectionToken, provideAppInitializer } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { TranslocoService } from '@jsverse/transloco';
 
@@ -19,11 +19,8 @@ export const provideMockGoogleMapsLoaderConfig = () => ({
     useValue: {},
 });
 
-export const provideGoogleMapsLibraries = () => ({
-    provide: APP_INITIALIZER,
-    multi: true,
-    useFactory:
-        (
+export const provideGoogleMapsLibraries = () => (provideAppInitializer(() => {
+        const initializerFn = ((
             config = inject(GOOGLE_MAPS_LOADER_CONFIG),
             translocoService = inject(TranslocoService)
         ) =>
@@ -40,6 +37,6 @@ export const provideGoogleMapsLibraries = () => ({
                 loader.importLibrary('maps'),
                 loader.importLibrary('marker'),
             ]);
-        },
-    deps: [GOOGLE_MAPS_LOADER_CONFIG, TranslocoService],
-});
+        })(inject(GOOGLE_MAPS_LOADER_CONFIG), inject(TranslocoService));
+        return initializerFn();
+      }));
