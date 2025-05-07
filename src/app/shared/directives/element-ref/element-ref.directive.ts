@@ -6,20 +6,19 @@ import {
     AfterViewInit,
     Directive,
     ElementRef,
-    Input,
+    WritableSignal,
     inject,
+    input,
 } from '@angular/core';
 
 @Directive({
     selector: '[appElementRef]',
-    standalone: true,
 })
 export class ElementRefDirective<T> implements AfterViewInit {
-    @Input('appElementRef')
-    public attachedCallback!: (element: ElementRef<T> | null) => void;
+    public signal = input.required<WritableSignal<ElementRef<T> | null>>();
+    private readonly elementRef = inject(ElementRef<T>);
 
-    private readonly elementRef: ElementRef<T> = inject(ElementRef);
-    public ngAfterViewInit(): void {
-        this.attachedCallback(this.elementRef);
+    public ngAfterViewInit() {
+        return this.signal().set(this.elementRef);
     }
 }

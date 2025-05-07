@@ -1,0 +1,40 @@
+<div class="flex flex-col space-y-4 bg-white" *transloco="let t">
+    <div class="flex flex-col w-1/2">
+        <label for="coordinates">{{ t(vm().coordinatesLabelKey) }}</label>
+        <textarea
+            [id]="coordinatesControl"
+            [formControl]="coordinatesControl"
+            class="p-2 border rounded-md min-h-32"
+            [ngClass]="
+                coordinatesControl.invalid && coordinatesControl.dirty
+                    ? 'border-red-200 bg-red-100'
+                    : ''
+            "
+        ></textarea>
+    </div>
+
+    <button
+        (click)="drawPolygon(null)"
+        class="btn"
+        [ngClass]="[polygonPathsSignal() ? 'btn-disabled' : 'btn-primary']"
+        [disabled]="!!polygonPathsSignal()"
+    >
+        {{ t(vm().addButtonTextKey) }}
+    </button>
+    <button
+        (click)="editPolygon()"
+        class="btn"
+        [disabled]="!canBeEdited()"
+        [ngClass]="canBeEdited() ? 'btn-secondary' : 'btn-disabled'"
+    >
+        {{ t(vm().editButtonTextKey) }}
+    </button>
+    <button
+        class="btn"
+        (click)="deletePolygon()"
+        [ngClass]="[polygonPathsSignal() ? 'btn-error' : 'btn-disabled']"
+        [disabled]="!polygonPathsSignal()"
+    >
+        {{ t(vm().deleteButtonTextKey) }}
+    </button>
+</div>

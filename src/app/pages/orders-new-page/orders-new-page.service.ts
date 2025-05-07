@@ -29,32 +29,20 @@ export class OrdersNewPageService {
                     addAreaDataDialogVM: {
                         ...ordersNewPageVMDefault.frameXVM
                             .areasDataFormControlVM.addAreaDataDialogVM,
-                        mapAreaSelectFormControlVM: {
+                        mapFormControlVM: {
                             ...ordersNewPageVMDefault.frameXVM
                                 .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapAreaSelectFormControlVM,
-                            defaultCenter: actualPosition,
-                        },
-                        mapPointSelectFormControlVM: {
-                            ...ordersNewPageVMDefault.frameXVM
-                                .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapPointSelectFormControlVM,
+                                .mapFormControlVM,
                             defaultCenter: actualPosition,
                         },
                     },
                     editAreaDataDialogVM: {
                         ...ordersNewPageVMDefault.frameXVM
                             .areasDataFormControlVM.addAreaDataDialogVM,
-                        mapAreaSelectFormControlVM: {
+                        mapFormControlVM: {
                             ...ordersNewPageVMDefault.frameXVM
                                 .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapAreaSelectFormControlVM,
-                            defaultCenter: actualPosition,
-                        },
-                        mapPointSelectFormControlVM: {
-                            ...ordersNewPageVMDefault.frameXVM
-                                .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapPointSelectFormControlVM,
+                                .mapFormControlVM,
                             defaultCenter: actualPosition,
                         },
                     },

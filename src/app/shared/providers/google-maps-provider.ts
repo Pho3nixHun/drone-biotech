@@ -36,6 +36,7 @@ export const provideGoogleMapsLibraries = () => (provideAppInitializer(() => {
             return Promise.all([
                 loader.importLibrary('maps'),
                 loader.importLibrary('marker'),
+                loader.importLibrary('places'),
             ]);
         })(inject(GOOGLE_MAPS_LOADER_CONFIG), inject(TranslocoService));
         return initializerFn();

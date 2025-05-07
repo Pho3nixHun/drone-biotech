@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Injectable, signal } from '@angular/core';
-import { Coordinates } from '../../area-data-dialog.model';
+import { Coordinates } from '../../../../area-data-dialog.model';
 import { MapPointSelectFormControlService } from './map-point-select-form-control.service';
 import { Observable } from 'rxjs';
 import { toObservable } from '@angular/core/rxjs-interop';

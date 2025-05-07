@@ -10,22 +10,39 @@ export const enMock = {
     targetAreaLabel: 'targetArea',
     title: 'tit',
     entryPointLabel: 'entryPoint',
+    areaValue: 'area',
+    editButtonText: 'edit',
+    coordinatesLabel: 'coordinates',
+    commentLabel: 'comment',
+    missionNameLabel: 'missionName',
 };
 
 export const mockVMWithoutAreaData: AreaDataDialogVM = {
+    commentLabelKey: enMock.commentLabel,
+    coordinatesLabelKey: enMock.coordinatesLabel,
+    missionNameLabelKey: enMock.missionNameLabel,
     applicationDateLabelKey: enMock.applicationDateLabel,
     areaData: null,
     cancelButtonTextKey: enMock.cancelButtonText,
     dosePerHqLabelKey: enMock.dosePerHqLabel,
-    mapAreaSelectFormControlVM: {
-        addButtonTextKey: enMock.addButtonText,
+    mapFormControlVM: {
         defaultCenter: null,
-        deleteButtonTextKey: enMock.deleteButtonText,
-    },
-    mapPointSelectFormControlVM: {
-        addButtonTextKey: enMock.addButtonText,
-        defaultCenter: null,
-        deleteButtonTextKey: enMock.deleteButtonText,
+
+        mapAreaSelectFormControlVM: {
+            areaValueKey: enMock.areaValue,
+            editButtonTextKey: enMock.editButtonText,
+            coordinatesLabelKey: enMock.coordinatesLabel,
+            addButtonTextKey: enMock.addButtonText,
+            deleteButtonTextKey: enMock.deleteButtonText,
+        },
+        mapPointSelectFormControlVM: {
+            addButtonTextKey: enMock.addButtonText,
+            deleteButtonTextKey: enMock.deleteButtonText,
+        },
+        mapSearchInputFormControlVM: {
+            distanceValueKey: enMock.dosePerHqLabel,
+            placeholderKey: enMock.dosePerHqLabel,
+        },
     },
     submitButtonTextKey: enMock.submitButtonText,
     targetAreaLabelKey: enMock.targetAreaLabel,
@@ -35,8 +52,13 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
 };
 
 export const mockVMWithAreaData: AreaDataDialogVM = {
+    commentLabelKey: enMock.commentLabel,
+    coordinatesLabelKey: enMock.coordinatesLabel,
+    missionNameLabelKey: enMock.missionNameLabel,
     applicationDateLabelKey: enMock.applicationDateLabel,
     areaData: {
+        comment: enMock.commentLabel,
+        missionName: enMock.missionNameLabel,
         applicationDate: new Date(10),
         dosePerHq: 1,
         entryPoint: { lat: 10, lng: 10 },
@@ -45,16 +67,26 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
     },
     cancelButtonTextKey: enMock.cancelButtonText,
     dosePerHqLabelKey: enMock.dosePerHqLabel,
-    mapAreaSelectFormControlVM: {
-        addButtonTextKey: enMock.addButtonText,
+    mapFormControlVM: {
         defaultCenter: null,
-        deleteButtonTextKey: enMock.deleteButtonText,
+
+        mapAreaSelectFormControlVM: {
+            areaValueKey: enMock.areaValue,
+            editButtonTextKey: enMock.editButtonText,
+            coordinatesLabelKey: enMock.coordinatesLabel,
+            addButtonTextKey: enMock.addButtonText,
+            deleteButtonTextKey: enMock.deleteButtonText,
+        },
+        mapPointSelectFormControlVM: {
+            addButtonTextKey: enMock.addButtonText,
+            deleteButtonTextKey: enMock.deleteButtonText,
+        },
+        mapSearchInputFormControlVM: {
+            distanceValueKey: enMock.dosePerHqLabel,
+            placeholderKey: enMock.dosePerHqLabel,
+        },
     },
-    mapPointSelectFormControlVM: {
-        addButtonTextKey: enMock.addButtonText,
-        defaultCenter: null,
-        deleteButtonTextKey: enMock.deleteButtonText,
-    },
+
     submitButtonTextKey: enMock.submitButtonText,
     targetAreaLabelKey: enMock.targetAreaLabel,
     titleKey: enMock.title,

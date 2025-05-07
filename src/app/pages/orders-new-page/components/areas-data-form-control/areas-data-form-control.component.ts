@@ -33,6 +33,9 @@ import { KeyValueComponent } from '@components/key-value/key-value.component';
 import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe } from '@angular/common';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const noop = () => {};
+
 @Component({
     selector: 'app-areas-data-form-control',
     imports: [
@@ -50,7 +53,7 @@ import { AsyncPipe } from '@angular/common';
             multi: true,
         },
     ],
-    templateUrl: './areas-data-form-control.component.html'
+    templateUrl: './areas-data-form-control.component.html',
 })
 export class AreasDataFormControlComponent implements ControlValueAccessor {
     public vm = input.required<AreasDataFormControlVM>();
@@ -188,12 +191,12 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
     });
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onChange: (value: AreaData[]) => void = () => {};
+    onChange: (value: AreaData[]) => void = noop;
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onTouched: () => void = () => {};
+    onTouched: () => void = noop;
 
-    writeValue(value: AreaData[]): void {
-        this.areaData.set(value);
+    writeValue(value: AreaData[] | null): void {
+        this.areaData.set(value ?? []);
     }
 
     registerOnChange(fn: (value: AreaData[]) => void): void {

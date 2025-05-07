@@ -71,6 +71,8 @@
     "OrdersNewPage.areasDataFormControl.totalDistanceFromHeadOfficeHeader": "Total distance",
     "OrdersNewPage.areasDataFormControl.totalTrichogrammaRequirementHeader": "Total required capsules",
     "OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader": "Total area",
+    "OrdersNewPage.areasDataFormControl.missionHeader": "Mission",
+    "OrdersNewPage.areasDataFormControl.commentHeader": "Comment",
 
     "OrdersNewPage.areasDataFormControl.applicationDateValue": "{ applicationDate, date, long } { applicationDate, time, short }",
     "OrdersNewPage.areasDataFormControl.targetAreaSizeValue": "{count, number, :: .00} ha",
@@ -86,9 +88,18 @@
     "OrdersNewPage.areasDataDialog.dosePerHqLabel": "Dose/Hq",
     "OrdersNewPage.areasDataDialog.entryPointLabelKey": "Entry point",
     "OrdersNewPage.areasDataDialog.targetAreaLabelKey": "Target area",
+    "OrdersNewPage.areasDataDialog.missionNameLabel": "Mission name",
+    "OrdersNewPage.areasDataDialog.commentLabel": "Comment",
 
-    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Delete target area",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel": "Coordinates",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Add target area",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText": "Edit area",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Delete target area",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey": "{value, number, :: .00} ha",
+
+    "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue": "{value, number, :: .0} km",
+    "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder": "Search in the map",
+
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText": "Add entry point",
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText": "Delete entry point",
 

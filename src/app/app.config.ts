@@ -29,10 +29,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
 import {
+    INFO_WINDOW_OPTIONS,
     POLYGON_OPTIONS,
-    MAP_OPTIONS,
-} from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-area-select-form-control/map-area-select-form-control.model';
-import { ENTRY_POINT_MARKER_OPTIONS } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-point-select-form-control/map-point-select-form-control.model';
+} from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
+import { ENTRY_POINT_MARKER_OPTIONS } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
 import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
 
 import { TranslocoModule } from '@modules/transloco/transloco.module';
@@ -40,6 +40,7 @@ import {
     provideGoogleMapsLibraries,
     GOOGLE_MAPS_LOADER_CONFIG,
 } from './shared/providers/google-maps-provider';
+import { MAP_OPTIONS } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.model';
 
 const devMode = isDevMode();
 
@@ -69,8 +70,8 @@ export const appConfig: ApplicationConfig = {
         {
             provide: POLYGON_OPTIONS,
             useValue: {
-                clickable: true,
-                draggable: true,
+                clickable: false,
+                draggable: false,
                 editable: true,
                 fillOpacity: 0.5,
                 strokeColor: 'blue',
@@ -106,6 +107,13 @@ export const appConfig: ApplicationConfig = {
         {
             provide: HEAD_OFFICE_LOCATION,
             useValue: { lat: 47.312498121576795, lng: 21.309304570654604 },
+        },
+        {
+            provide: INFO_WINDOW_OPTIONS,
+            useValue: {
+                disableAutoPan: true,
+                headerDisabled: true,
+            },
         },
     ],
 };

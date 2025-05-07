@@ -14,6 +14,11 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
         areasDataFormControlVM: {
             addAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                coordinatesLabelKey:
+                    'OrdersNewPage.areasDataDialog.coordinatesLabel',
+                commentLabelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
+                missionNameLabelKey:
+                    'OrdersNewPage.areasDataDialog.missionNameLabel',
                 cancelButtonTextKey:
                     'OrdersNewPage.areasDataDialog.cancelButtonText',
                 submitButtonTextKey:
@@ -26,19 +31,32 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     'OrdersNewPage.areasDataDialog.entryPointLabelKey',
                 targetAreaLabelKey:
                     'OrdersNewPage.areasDataDialog.targetAreaLabelKey',
-                mapAreaSelectFormControlVM: {
+                mapFormControlVM: {
                     defaultCenter: null,
-                    addButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
-                    deleteButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
-                },
-                mapPointSelectFormControlVM: {
-                    defaultCenter: null,
-                    addButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
-                    deleteButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                    mapSearchInputFormControlVM: {
+                        distanceValueKey:
+                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue',
+                        placeholderKey:
+                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder',
+                    },
+                    mapAreaSelectFormControlVM: {
+                        areaValueKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
+                        addButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
+                        editButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
+                        deleteButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                        coordinatesLabelKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
+                    },
+                    mapPointSelectFormControlVM: {
+                        addButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
+                        deleteButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                    },
                 },
                 areaData: null,
                 titleKey: 'OrdersNewPage.areasDataDialog.title.add',
@@ -46,6 +64,11 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
 
             editAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                coordinatesLabelKey:
+                    'OrdersNewPage.areasDataDialog.coordinatesLabel',
+                commentLabelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
+                missionNameLabelKey:
+                    'OrdersNewPage.areasDataDialog.missionNameLabel',
                 cancelButtonTextKey:
                     'OrdersNewPage.areasDataDialog.cancelButtonText',
                 submitButtonTextKey:
@@ -58,20 +81,34 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     'OrdersNewPage.areasDataDialog.entryPointLabelKey',
                 targetAreaLabelKey:
                     'OrdersNewPage.areasDataDialog.targetAreaLabelKey',
-                mapAreaSelectFormControlVM: {
+                mapFormControlVM: {
                     defaultCenter: null,
-                    addButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
-                    deleteButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                    mapSearchInputFormControlVM: {
+                        distanceValueKey:
+                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue',
+                        placeholderKey:
+                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder',
+                    },
+                    mapAreaSelectFormControlVM: {
+                        areaValueKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
+                        addButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
+                        editButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
+                        deleteButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                        coordinatesLabelKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
+                    },
+                    mapPointSelectFormControlVM: {
+                        addButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
+                        deleteButtonTextKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                    },
                 },
-                mapPointSelectFormControlVM: {
-                    defaultCenter: null,
-                    addButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
-                    deleteButtonTextKey:
-                        'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
-                },
+
                 areaData: null,
                 titleKey: 'OrdersNewPage.areasDataDialog.title.edit',
             },
@@ -114,11 +151,18 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                 'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
             trichogrammaRequirementValueKey:
                 'OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue',
+            commentHeaderKey:
+                'OrdersNewPage.areasDataFormControl.commentHeader',
+            missionHeaderKey:
+                'OrdersNewPage.areasDataFormControl.missionHeader',
         },
     },
 };
 
 export const enMock = {
+    coordinatesLabel: 'coords',
+    commentLabel: 'comment',
+    missionLabel: 'mission',
     frameTitle: 'tit',
     submitButtonText: 'sub',
     emailLabel: 'email',
@@ -153,6 +197,12 @@ export const enMock = {
     targetAreaSizeValue: 'targetAreaSize',
     trichogrammaRequirementValue: 'trichogrammaRequirement',
     warning: 'warn',
+    placeholder: 'place',
+    distanceValue: 'distance',
+    commentHeader: 'comment',
+    missionHeader: 'mission',
+    areaValue: 'area',
+    editButton: 'edit',
 };
 
 export const ordersNewPageVMMock: OrdersNewPageVM = {
@@ -169,21 +219,32 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
         areasDataFormControlVM: {
             addAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                coordinatesLabelKey: enMock.coordinatesLabel,
+                commentLabelKey: enMock.commentLabel,
+                missionNameLabelKey: enMock.missionLabel,
                 cancelButtonTextKey: enMock.cancelButtonText,
                 submitButtonTextKey: enMock.submitButtonText,
                 applicationDateLabelKey: enMock.applicationDateLabel,
                 dosePerHqLabelKey: enMock.dosePerHqLabel,
                 entryPointLabelKey: enMock.entryPointLabel,
                 targetAreaLabelKey: enMock.targetAreaLabel,
-                mapAreaSelectFormControlVM: {
+                mapFormControlVM: {
                     defaultCenter: null,
-                    addButtonTextKey: enMock.addButtonText,
-                    deleteButtonTextKey: enMock.deleteButtonText,
-                },
-                mapPointSelectFormControlVM: {
-                    defaultCenter: null,
-                    addButtonTextKey: enMock.addButtonText,
-                    deleteButtonTextKey: enMock.deleteButtonText,
+                    mapSearchInputFormControlVM: {
+                        placeholderKey: enMock.placeholder,
+                        distanceValueKey: enMock.distanceValue,
+                    },
+                    mapAreaSelectFormControlVM: {
+                        areaValueKey: enMock.areaValue,
+                        addButtonTextKey: enMock.addButtonText,
+                        deleteButtonTextKey: enMock.deleteButtonText,
+                        coordinatesLabelKey: enMock.coordinatesLabel,
+                        editButtonTextKey: enMock.editButton,
+                    },
+                    mapPointSelectFormControlVM: {
+                        addButtonTextKey: enMock.addButtonText,
+                        deleteButtonTextKey: enMock.deleteButtonText,
+                    },
                 },
                 areaData: null,
                 titleKey: enMock.title,
@@ -191,22 +252,35 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
 
             editAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                coordinatesLabelKey: enMock.coordinatesLabel,
+                commentLabelKey: enMock.commentLabel,
+                missionNameLabelKey: enMock.missionLabel,
                 cancelButtonTextKey: enMock.cancelButtonText,
                 submitButtonTextKey: enMock.submitButtonText,
                 applicationDateLabelKey: enMock.applicationDateLabel,
                 dosePerHqLabelKey: enMock.dosePerHqLabel,
                 entryPointLabelKey: enMock.entryPointLabel,
                 targetAreaLabelKey: enMock.targetAreaLabel,
-                mapAreaSelectFormControlVM: {
+                mapFormControlVM: {
                     defaultCenter: null,
-                    addButtonTextKey: enMock.addButtonText,
-                    deleteButtonTextKey: enMock.deleteButtonText,
+
+                    mapSearchInputFormControlVM: {
+                        placeholderKey: enMock.placeholder,
+                        distanceValueKey: enMock.distanceValue,
+                    },
+                    mapAreaSelectFormControlVM: {
+                        areaValueKey: enMock.areaValue,
+                        addButtonTextKey: enMock.addButtonText,
+                        editButtonTextKey: enMock.editButton,
+                        deleteButtonTextKey: enMock.deleteButtonText,
+                        coordinatesLabelKey: enMock.coordinatesLabel,
+                    },
+                    mapPointSelectFormControlVM: {
+                        addButtonTextKey: enMock.addButtonText,
+                        deleteButtonTextKey: enMock.deleteButtonText,
+                    },
                 },
-                mapPointSelectFormControlVM: {
-                    defaultCenter: null,
-                    addButtonTextKey: enMock.addButtonText,
-                    deleteButtonTextKey: enMock.deleteButtonText,
-                },
+
                 areaData: null,
                 titleKey: enMock.title,
             },
@@ -239,6 +313,8 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
             targetAreaSizeValueKey: enMock.targetAreaSizeValue,
             trichogrammaRequirementValueKey:
                 enMock.trichogrammaRequirementValue,
+            commentHeaderKey: enMock.commentHeader,
+            missionHeaderKey: enMock.missionHeader,
         },
     },
 };
