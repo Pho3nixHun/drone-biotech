@@ -29,7 +29,8 @@
             "@modules/*": ["src/app/shared/modules/*"],
             "@utils/*": ["src/app/shared/utils/*"],
             "@guards/*": ["src/app/shared/guards/*"],
-            "@services/*": ["src/app/shared/services/*"]
+            "@services/*": ["src/app/shared/services/*"],
+            "@stores/*": ["src/app/stores/*"]
         }
     },
     "angularCompilerOptions": {

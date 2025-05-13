@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Place } from './map-search-input-auto-complete.model';
 import { from, map, Observable } from 'rxjs';
-import { Coordinates } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
+import { Place } from './auto-complete.model';
 import { isNotNull } from '@utils/is-null.typeguard';
+import {
+    Coordinates,
+    METRES_TO_KILOMETERS,
+} from '@stores/location/location.model';
 
 @Injectable({
     providedIn: 'root',
 })
-export class MapSearchInputAutoCompleteService {
+export class AutoCompleteService {
     public getPlaces(
         place: string,
         origin: Coordinates | null
@@ -31,7 +34,8 @@ export class MapSearchInputAutoCompleteService {
                                   description: place.text.text,
                                   placeId: place.placeId,
                                   distance: place.distanceMeters
-                                      ? place.distanceMeters / 1000
+                                      ? place.distanceMeters /
+                                        METRES_TO_KILOMETERS
                                       : null,
                               }
                             : null;

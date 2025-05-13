@@ -5,7 +5,6 @@ import { lastValueFrom, of } from 'rxjs';
 import {
     provideMockHeadOfficeLocation,
     RoutesResponse,
-    updateHeadOfficeLocation,
 } from './distance.model';
 
 describe('DistanceService', () => {
@@ -16,7 +15,6 @@ describe('DistanceService', () => {
         TestBed.configureTestingModule({
             providers: [provideHttpClient(), provideMockHeadOfficeLocation()],
         });
-        updateHeadOfficeLocation({ lat: 12, lng: 12 });
         service = TestBed.inject(DistanceService);
         httpClient = TestBed.inject(HttpClient);
     });

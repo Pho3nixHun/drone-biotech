@@ -32,6 +32,10 @@ import { CardItemComponent } from '@components/card-item/card-item.component';
 import { KeyValueComponent } from '@components/key-value/key-value.component';
 import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe } from '@angular/common';
+import {
+    METRES_TO_KILOMETERS,
+    SQUARE_METRES_TO_HECTARE,
+} from '@stores/location/location.model';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
@@ -67,6 +71,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
             ...this.vm().addAreaDataDialogVM,
             areaData: null,
         };
+
         const response: AreaData | null = await lastValueFrom(
             this.dialogService
                 .create(vm, AreaDataDialogComponent)
@@ -84,7 +89,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         }
     }
 
-    protected async editAreaData(id: number) {
+    protected async editAreaData(id: string) {
         const areaData = this.areaData().find((item) => item.id === id);
         if (!areaData) return;
 
@@ -115,7 +120,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         }
     }
 
-    protected async deleteAreaData(id: number) {
+    protected async deleteAreaData(id: string) {
         const response = await lastValueFrom(
             this.dialogService
                 .create(this.vm().deleteDialogVM, DeleteDialogComponent)
@@ -142,7 +147,8 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
             : await Promise.all(
                   areaData.map(async (data) => {
                       const targetAreaSize =
-                          getAreaOfPolygon(data.targetArea) / 10000;
+                          getAreaOfPolygon(data.targetArea) /
+                          SQUARE_METRES_TO_HECTARE;
                       return {
                           ...data,
                           targetAreaSize,
@@ -157,7 +163,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
                                   this.distanceService.getDistance(
                                       data.entryPoint
                                   )
-                              )) / 1000,
+                              )) / METRES_TO_KILOMETERS,
                       };
                   })
               );
@@ -173,7 +179,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
                         this.distanceService.getShortestDistanceWithWaypoints(
                             xAreaData.map((item) => item.entryPoint)
                         )
-                    )) / 1000,
+                    )) / METRES_TO_KILOMETERS,
                 totalTargetAreaSize: xAreaData.reduce(
                     (acc, curr) => acc + curr.targetAreaSize,
                     0
@@ -186,24 +192,24 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         }
     );
 
-    private readonly areaDataEffect = effect(() => {
-        this.onChange(this.areaData());
-    });
+    private readonly areaDataEffect = effect(() =>
+        this.onChange(this.areaData())
+    );
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onChange: (value: AreaData[]) => void = noop;
+    public onChange: (value: AreaData[]) => void = noop;
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onTouched: () => void = noop;
+    public onTouched: () => void = noop;
 
-    writeValue(value: AreaData[] | null): void {
+    public writeValue(value: AreaData[] | null): void {
         this.areaData.set(value ?? []);
     }
 
-    registerOnChange(fn: (value: AreaData[]) => void): void {
+    public registerOnChange(fn: (value: AreaData[]) => void): void {
         this.onChange = fn;
     }
 
-    registerOnTouched(fn: () => void): void {
+    public registerOnTouched(fn: () => void): void {
         this.onTouched = fn;
     }
 }

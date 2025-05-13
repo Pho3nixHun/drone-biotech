@@ -11,6 +11,10 @@ import {
     POLYGON_OPTIONS,
 } from './map-area-select-form-control.model';
 import {
+    Coordinates,
+    SQUARE_METRES_TO_HECTARE,
+} from '@stores/location/location.model';
+import {
     ControlValueAccessor,
     FormBuilder,
     NG_VALUE_ACCESSOR,
@@ -18,7 +22,6 @@ import {
     Validators,
 } from '@angular/forms';
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
-import { Coordinates } from '../../../../area-data-dialog.model';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NgClass } from '@angular/common';
@@ -129,7 +132,9 @@ export class MapAreaSelectFormControlComponent implements ControlValueAccessor {
 
     private readonly areSizeInHaSignal = computed(() => {
         const polygon = this.polygonPathsSignal();
-        return polygon ? getAreaOfPolygon(polygon) / 10000 : null;
+        return polygon
+            ? getAreaOfPolygon(polygon) / SQUARE_METRES_TO_HECTARE
+            : null;
     });
 
     protected drawPolygon(coordinates: Coordinates[] | null) {
@@ -151,7 +156,8 @@ export class MapAreaSelectFormControlComponent implements ControlValueAccessor {
     private onTouched: () => void = noop;
 
     public writeValue(value: Coordinates[] | null) {
-        if (value) this.areaSelectService.drawPolygon(value);
+        if (value) return this.areaSelectService.drawPolygon(value);
+        this.areaSelectService.deletePolygon();
     }
 
     public registerOnChange(fn: (value: Coordinates[] | null) => void): void {

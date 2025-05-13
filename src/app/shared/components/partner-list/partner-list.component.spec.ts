@@ -10,6 +10,7 @@ const en = {
 };
 
 @Component({
+    imports: [PartnerListComponent, PartnerLogoComponent],
     template: `
         <app-partner-list>
             <app-partner-logo [vm]="vm" />
@@ -31,8 +32,7 @@ describe('PartnerListComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                PartnerListComponent,
-                PartnerLogoComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en },
                     translocoConfig: {
@@ -41,7 +41,6 @@ describe('PartnerListComponent', () => {
                     },
                 }),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);

@@ -7,10 +7,9 @@ import {
     inject,
     input,
     output,
-    resource,
     signal,
 } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { rxResource, toSignal } from '@angular/core/rxjs-interop';
 import {
     ControlValueAccessor,
     FormBuilder,
@@ -18,19 +17,18 @@ import {
     ReactiveFormsModule,
 } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { MapSearchInputAutoCompleteService } from '@services/map-search-input-auto-complete/map-search-input-auto-complete.service';
+import { AutoCompleteService } from '@services/auto-complete/auto-complete.service';
 import {
     debounceTime,
     distinctUntilChanged,
     filter,
-    firstValueFrom,
     of,
     switchMap,
 } from 'rxjs';
 import { MapSearchInputFormControlVM } from './map-search-input-form-control.model';
-import { Place } from '@services/map-search-input-auto-complete/map-search-input-auto-complete.model';
+import { Coordinates } from '@stores/location/location.model';
+import { Place } from '@services/auto-complete/auto-complete.model';
 import { TranslocoModule } from '@jsverse/transloco';
-import { Coordinates } from '../../../../area-data-dialog.model';
 import { isNotNull } from '@utils/is-null.typeguard';
 import { NgClass } from '@angular/common';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
@@ -60,7 +58,7 @@ const noop = () => {};
 export class MapSearchInputFormControlComponent
     implements ControlValueAccessor
 {
-    private readonly service = inject(MapSearchInputAutoCompleteService);
+    private readonly service = inject(AutoCompleteService);
     private readonly fb = inject(FormBuilder);
 
     public readonly vm = input.required<MapSearchInputFormControlVM>();
@@ -89,14 +87,12 @@ export class MapSearchInputFormControlComponent
         { initialValue: [] }
     );
 
-    private readonly locationResource = resource({
+    private readonly locationResource = rxResource({
         request: () => this.selectedPlace(),
         loader: ({ request }) =>
             request
-                ? firstValueFrom(
-                      this.service.getLocationByPlaceId(request.placeId)
-                  )
-                : Promise.resolve(null),
+                ? this.service.getLocationByPlaceId(request.placeId)
+                : of(null),
         defaultValue: null,
     });
 

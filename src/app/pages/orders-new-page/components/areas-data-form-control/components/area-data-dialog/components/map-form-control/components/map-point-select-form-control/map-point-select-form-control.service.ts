@@ -1,6 +1,6 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { Coordinates } from '../../../../area-data-dialog.model';
 import { ENTRY_POINT_MARKER_OPTIONS } from './map-point-select-form-control.model';
+import { Coordinates } from '@stores/location/location.model';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { Observable, switchMap } from 'rxjs';
 
@@ -63,7 +63,10 @@ export class MapPointSelectFormControlService {
     public drawMarker(coordinates: Coordinates | null) {
         if (coordinates) return this.setMarkerPathSignal.set(coordinates);
 
-        const center = this.mapSignal()?.getCenter();
+        const map = this.mapSignal();
+        if (!map) return;
+
+        const center = map.getCenter();
         if (!center) return;
 
         this.setMarkerPathSignal.set({
@@ -75,7 +78,6 @@ export class MapPointSelectFormControlService {
     public deleteMarker() {
         const marker = this.entryPointMarkerSignal();
         if (marker) {
-            console.log(marker);
             marker.map = null;
             this.setMarkerPathSignal.set(null);
         }

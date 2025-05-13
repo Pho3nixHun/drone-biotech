@@ -7,6 +7,7 @@ import { FrameVM } from './frame-vm';
 const en = { title: 'Our Products' };
 
 @Component({
+    imports: [FrameComponent],
     template: `<app-frame [vm]="vm"><div>Should be projected</div></app-frame>`,
 })
 class TestHostComponent {
@@ -22,7 +23,7 @@ describe('FrameComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                FrameComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en },
                     translocoConfig: {
@@ -31,7 +32,6 @@ describe('FrameComponent', () => {
                     },
                 }),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;

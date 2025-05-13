@@ -19,9 +19,9 @@ import {
     Validators,
 } from '@angular/forms';
 import { MAP_OPTIONS, MapFormControlVM } from './map-form-control.model';
+import { Coordinates } from '@stores/location/location.model';
 import { MapAreaSelectFormControlComponent } from './components/map-area-select-form-control/map-area-select-form-control.component';
 import { MapPointSelectFormControlComponent } from './components/map-point-select-form-control/map-point-select-form-control.component';
-import { Coordinates } from '../../area-data-dialog.model';
 import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
 import { MapSearchInputFormControlComponent } from './components/map-search-input-form-control/map-search-input-form-control.component';
 import { distinctUntilChanged, map } from 'rxjs';
@@ -137,10 +137,9 @@ export class MapFormControlComponent implements ControlValueAccessor {
         { initialValue: { targetArea: null, entryPoint: null } }
     );
 
-    private readonly mapFormValueEffect = effect(() => {
-        console.log(this.mapForm.value);
-        this.onChange(this.mapFormValue());
-    });
+    private readonly mapFormValueEffect = effect(() =>
+        this.onChange(this.mapFormValue())
+    );
 
     private onChange: (value: {
         targetArea: Coordinates[] | null;

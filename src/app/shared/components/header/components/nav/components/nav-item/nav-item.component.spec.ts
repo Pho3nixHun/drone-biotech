@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
 import { NavItemVM } from './nav-item-vm';
 
 @Component({
+    imports: [NavItemComponent],
     template: `<app-nav-item [vm]="vm">Home</app-nav-item>`,
 })
 class TestHostComponent {
@@ -17,8 +18,7 @@ describe('NavItemComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [TestHostComponent],
-            imports: [NavItemComponent, NavItemComponent],
+            imports: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);

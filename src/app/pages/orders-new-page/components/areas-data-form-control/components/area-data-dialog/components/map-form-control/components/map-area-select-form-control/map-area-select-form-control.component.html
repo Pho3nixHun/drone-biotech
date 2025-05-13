@@ -5,11 +5,10 @@
             [id]="coordinatesControl"
             [formControl]="coordinatesControl"
             class="p-2 border rounded-md min-h-32"
-            [ngClass]="
-                coordinatesControl.invalid && coordinatesControl.dirty
-                    ? 'border-red-200 bg-red-100'
-                    : ''
-            "
+            [ngClass]="{
+                'border-red-200 bg-red-100':
+                    coordinatesControl.invalid && coordinatesControl.dirty,
+            }"
         ></textarea>
     </div>
 

@@ -26,3 +26,11 @@ export class LocationError extends Error {
         super(`Failed to get location cause: ${type}`, { cause: type });
     }
 }
+
+export interface Coordinates {
+    lat: number;
+    lng: number;
+}
+
+export const METRES_TO_KILOMETERS = 1000;
+export const SQUARE_METRES_TO_HECTARE = 10000;

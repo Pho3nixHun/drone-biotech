@@ -62,7 +62,7 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         applicationDate: new Date(10),
         dosePerHq: 1,
         entryPoint: { lat: 10, lng: 10 },
-        id: 1,
+        id: 'id',
         targetArea: [{ lat: 10, lng: 10 }],
     },
     cancelButtonTextKey: enMock.cancelButtonText,

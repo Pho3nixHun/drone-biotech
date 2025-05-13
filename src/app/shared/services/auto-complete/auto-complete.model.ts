@@ -1,5 +1,4 @@
-import { Coordinates } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
-
+import { Coordinates } from '@stores/location/location.model';
 export interface AutoCompleteRequest {
     input: string;
     includedRegionCodes: string[];

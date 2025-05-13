@@ -3,6 +3,7 @@ import { PageSectionComponent } from './page-section.component';
 import { Component } from '@angular/core';
 
 @Component({
+    imports: [PageSectionComponent],
     template: `
         <app-page-section>
             <p>Should be projected</p>
@@ -17,8 +18,7 @@ describe('PageSectionComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [PageSectionComponent],
-            declarations: [TestHostComponent],
+            imports: [TestHostComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;

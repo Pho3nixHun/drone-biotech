@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
 import { HeroVM } from './hero-vm.model';
 
 @Component({
+    imports: [HeroComponent],
     template: ` <app-hero [vm]="vm"
         ><h1>Hello</h1>
         <p>World</p>
@@ -24,8 +25,7 @@ describe('HeroComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [HeroComponent],
-            declarations: [TestHostComponent],
+            imports: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);

@@ -7,6 +7,7 @@ import { getTranslocoModule } from 'transloco-testing.module';
 
 const en = { description: 'desc', title: 'tit' };
 @Component({
+    imports: [LoginFormComponent],
     template: `
         <app-login-form [vm]="vm()">
             <div>Should not be projected</div>
@@ -32,7 +33,7 @@ describe('LoginFormComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                LoginFormComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en: en },
                     translocoConfig: {
@@ -41,7 +42,6 @@ describe('LoginFormComponent', () => {
                     },
                 }),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);
@@ -55,6 +55,7 @@ describe('LoginFormComponent', () => {
 
         //Act
         fixture.detectChanges();
+
         //Assert
         expect(compiled).toMatchSnapshot();
     });

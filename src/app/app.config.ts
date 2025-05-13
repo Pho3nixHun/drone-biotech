@@ -28,19 +28,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
-import {
-    INFO_WINDOW_OPTIONS,
-    POLYGON_OPTIONS,
-} from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
-import { ENTRY_POINT_MARKER_OPTIONS } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
-import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
-
 import { TranslocoModule } from '@modules/transloco/transloco.module';
-import {
-    provideGoogleMapsLibraries,
-    GOOGLE_MAPS_LOADER_CONFIG,
-} from './shared/providers/google-maps-provider';
-import { MAP_OPTIONS } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.model';
+import { mapFormControlConfig } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.config';
 
 const devMode = isDevMode();
 
@@ -66,55 +55,7 @@ export const appConfig: ApplicationConfig = {
         provideRouterStore({ serializer: CustomRouterStateSerializer }),
         ...(devMode ? [provideStoreDevtools()] : []),
         provideAnimationsAsync(),
-        provideGoogleMapsLibraries(),
-        {
-            provide: POLYGON_OPTIONS,
-            useValue: {
-                clickable: false,
-                draggable: false,
-                editable: true,
-                fillOpacity: 0.5,
-                strokeColor: 'blue',
-                fillColor: 'blue',
-            },
-        },
-        {
-            provide: MAP_OPTIONS,
-            useValue: {
-                mapTypeId: 'roadmap',
-                disableDoubleClickZoom: true,
-                clickableIcons: false,
-                mapId: 'DEMO_MAP_ID',
-                zoom: 14,
-                streetViewControl: false,
-            },
-        },
-        {
-            provide: ENTRY_POINT_MARKER_OPTIONS,
-            useValue: {
-                gmpDraggable: true,
-            },
-        },
-        {
-            provide: GOOGLE_MAPS_LOADER_CONFIG,
-            useValue: {
-                url: 'https://maps.googleapis.com/maps/api/js?',
-                key: environment.googleMapsConfig.apiKey,
-                version: '3.59',
-                region: 'HU',
-            },
-        },
-        {
-            provide: HEAD_OFFICE_LOCATION,
-            useValue: { lat: 47.312498121576795, lng: 21.309304570654604 },
-        },
-        {
-            provide: INFO_WINDOW_OPTIONS,
-            useValue: {
-                disableAutoPan: true,
-                headerDisabled: true,
-            },
-        },
+        mapFormControlConfig,
     ],
 };
 

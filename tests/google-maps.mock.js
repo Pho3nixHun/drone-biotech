@@ -5,6 +5,7 @@ global.google = {
         Map: jest.fn(() => ({
             setCenter: jest.fn(),
             setZoom: jest.fn(),
+            setOptions: jest.fn()
         })),
         drawing: {
             DrawingManager: jest.fn(() => ({
@@ -20,5 +21,20 @@ global.google = {
         Geocoder: jest.fn(() => ({
             geocode: jest.fn(),
         })),
+        InfoWindow: jest.fn(() => ({
+            open: jest.fn(),
+            close: jest.fn(),
+        })),
+        ControlPosition: jest.fn(() => ({
+            TOP_RIGHT: jest.fn(),
+        })),
+        MVCArray: jest.fn().mockImplementation((items = []) => {
+            return {
+                getArray: jest.fn(() => items),
+                getAt: jest.fn((i) => items[i]),
+                getLength: jest.fn(() => items.length),
+                forEach: jest.fn((cb) => items.forEach(cb)),
+            };
+        }),
     },
 };

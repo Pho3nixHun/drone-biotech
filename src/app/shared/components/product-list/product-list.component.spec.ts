@@ -11,6 +11,7 @@ const en = {
     altText: 'Butterfly',
 };
 @Component({
+    imports: [ProductListComponent, ProductItemComponent],
     template: `
         <app-product-list>
             <app-product-item [vm]="vm" />
@@ -34,8 +35,7 @@ describe('ProductListComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                ProductListComponent,
-                ProductItemComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en },
                     translocoConfig: {
@@ -44,11 +44,9 @@ describe('ProductListComponent', () => {
                     },
                 }),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);
-        fixture.detectChanges();
         compiled = fixture.debugElement.nativeElement;
     });
 
@@ -58,7 +56,7 @@ describe('ProductListComponent', () => {
         /*No need for arrange*/
 
         //Act
-        /*No need for act*/
+        fixture.detectChanges();
         //Assert
         expect(compiled).toMatchSnapshot();
     });

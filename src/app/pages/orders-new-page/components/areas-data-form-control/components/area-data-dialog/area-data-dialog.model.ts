@@ -2,6 +2,7 @@ import { isObject } from '@utils/is-object.typeguard';
 import { DialogReasonBase } from '@services/dialog/dialog.service';
 import { BaseDialogVM } from '@components/base-dialog/base-dialog.model';
 import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
+import { Coordinates } from '@stores/location/location.model';
 
 export interface AreaDataDialogVM extends BaseDialogVM {
     type: 'areaDataDialogVM';
@@ -19,18 +20,13 @@ export interface AreaDataDialogVM extends BaseDialogVM {
 }
 
 export interface AreaData {
-    id: number;
+    id: string;
     comment: string;
     missionName: string;
     targetArea: Coordinates[];
     entryPoint: Coordinates;
     dosePerHq: number;
     applicationDate: Date;
-}
-
-export interface Coordinates {
-    lat: number;
-    lng: number;
 }
 
 export interface AreaDataDialogResultWithAreaData extends DialogReasonBase {

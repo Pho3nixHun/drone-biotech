@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
-import { Component, computed, effect, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
 import { BaseDialogComponent } from '@components/base-dialog/base-dialog.component';
@@ -8,15 +8,12 @@ import {
     AreaDataDialogResultWithAreaData,
     AreaDataDialogResultWithoutAreaData,
     AreaDataDialogVM,
-    Coordinates,
     isAreaDataDialogVM,
 } from './area-data-dialog.model';
 import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
-import { Store } from '@ngrx/store';
-import { selectURL } from 'src/app/stores/router/router.selectors';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter, map } from 'rxjs';
+import { v4 as uuidv4 } from 'uuid';
+import { Coordinates } from '@stores/location/location.model';
+import { isNullish } from '@utils/is-nullish.typeguard';
 
 @Component({
     selector: 'app-area-data-dialog',
@@ -27,11 +24,9 @@ import { filter, map } from 'rxjs';
         BaseDialogComponent,
         MapFormControlComponent,
     ],
-    templateUrl: './area-data-dialog.component.html'
+    templateUrl: './area-data-dialog.component.html',
 })
 export class AreaDataDialogComponent {
-    private readonly store = inject(Store);
-    private readonly router = inject(Router);
     private readonly fb = inject(FormBuilder);
     protected readonly dialogRef = inject(DIALOG_REF);
     protected readonly unknownVM = signal<unknown>(inject(DIALOG_DATA));
@@ -39,25 +34,6 @@ export class AreaDataDialogComponent {
     protected readonly vm = computed<AreaDataDialogVM | null>(() => {
         const vm = this.unknownVM();
         return isAreaDataDialogVM(vm) ? vm : null;
-    });
-
-    private readonly currentUrl = toSignal(this.store.select(selectURL));
-
-    private readonly navigationEndUrl = toSignal(
-        this.router.events
-            .pipe(filter((event) => event instanceof NavigationEnd))
-            .pipe(map((route) => route.url))
-    );
-
-    private readonly closeDialogEffect = effect(() => {
-        const current = this.currentUrl();
-        const next = this.navigationEndUrl();
-        if (current == next) {
-            const closeData: AreaDataDialogResultWithoutAreaData = {
-                reasonType: 'cancel',
-            };
-            this.dialogRef.close(closeData);
-        }
     });
 
     public areaDataFormGroup = this.fb.group({
@@ -85,10 +61,7 @@ export class AreaDataDialogComponent {
             this.vm()?.areaData?.applicationDate ?? null,
             Validators.required
         ),
-        comment: this.fb.control<string>(
-            this.vm()?.areaData?.comment ?? '',
-            Validators.required
-        ),
+        comment: this.fb.control<string>(this.vm()?.areaData?.comment ?? ''),
     });
 
     protected resetFormWithCloseDialog() {
@@ -99,12 +72,18 @@ export class AreaDataDialogComponent {
         this.areaDataFormGroup.reset();
     }
 
-    submitForm() {
+    protected submitForm() {
         if (this.areaDataFormGroup.invalid) return;
 
         const { missionName, map, dosePerHq, applicationDate, comment } =
             this.areaDataFormGroup.value;
-        if (!dosePerHq || !applicationDate || !missionName || !comment || !map)
+        if (
+            !map ||
+            !dosePerHq ||
+            !applicationDate ||
+            isNullish(missionName) ||
+            isNullish(comment)
+        )
             return;
 
         const { targetArea, entryPoint } = map;
@@ -114,7 +93,7 @@ export class AreaDataDialogComponent {
             reasonType: 'submit',
             type: 'areaDataDialogResultWithAreaData',
             areaData: {
-                id: Date.now(),
+                id: uuidv4(),
                 missionName,
                 targetArea,
                 entryPoint,

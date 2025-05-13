@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MapPointSelectFormControlService } from './map-point-select-form-control.service';
-import { Coordinates } from '../../../../area-data-dialog.model';
 import { TranslocoModule } from '@jsverse/transloco';
 import {
     ENTRY_POINT_MARKER_OPTIONS,
@@ -9,6 +8,7 @@ import {
 } from './map-point-select-form-control.model';
 import { NgClass } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { Coordinates } from '@stores/location/location.model';
 import { Component, effect, forwardRef, inject, input } from '@angular/core';
 
 const noop = () => {};
@@ -68,7 +68,8 @@ export class MapPointSelectFormControlComponent
     private onTouched: () => void = noop;
 
     public writeValue(value: Coordinates | null): void {
-        if (value) this.pointSelectService.drawMarker(value);
+        if (value) return this.pointSelectService.drawMarker(value);
+        this.pointSelectService.deleteMarker();
     }
 
     public registerOnChange(fn: (value: Coordinates | null) => void): void {

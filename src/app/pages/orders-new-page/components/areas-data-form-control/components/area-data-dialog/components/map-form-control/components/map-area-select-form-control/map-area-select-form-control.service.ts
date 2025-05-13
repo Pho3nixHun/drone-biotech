@@ -1,6 +1,6 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Observable, switchMap } from 'rxjs';
-import { Coordinates } from '../../../../area-data-dialog.model';
+import { Coordinates } from '@stores/location/location.model';
 import { toObservable } from '@angular/core/rxjs-interop';
 import {
     INFO_WINDOW_OPTIONS,

@@ -1,36 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MapPointSelectFormControlComponent should render the template when the VM is provided 1`] = `
-<div
-  id="root0"
-  ng-version="18.2.8"
+<app-map-point-select-form-control
+  class="ng-untouched ng-dirty ng-valid"
+  ng-reflect-form="[object Object]"
+  ng-reflect-map-ref="[object Object]"
+  ng-reflect-vm="[object Object]"
 >
-  <app-map-point-select-form-control
-    ng-reflect-vm="[object Object]"
+  <div
+    class="flex flex-col space-y-4 bg-white"
   >
-    <div
-      class="flex flex-col space-y-4 bg-white"
+    <button
+      class="btn btn-primary"
+      ng-reflect-ng-class="btn-primary"
     >
-      <div
-        class="w-full h-[40vh]"
-        ng-reflect-attached-callback="async (mapCanvas) => {
-       "
-      />
-      <button
-        class="btn btn-primary"
-        ng-reflect-ng-class="btn-primary"
-      >
-         addButton 
-      </button>
-      <button
-        class="btn btn-disabled"
-        disabled=""
-        ng-reflect-ng-class="btn-disabled"
-      >
-         deleteButton 
-      </button>
-    </div>
-    <!--container-->
-  </app-map-point-select-form-control>
-</div>
+       addButton 
+    </button>
+    <button
+      class="btn btn-disabled"
+      disabled=""
+      ng-reflect-ng-class="btn-disabled"
+    >
+       deleteButton 
+    </button>
+  </div>
+  <!--container-->
+</app-map-point-select-form-control>
 `;

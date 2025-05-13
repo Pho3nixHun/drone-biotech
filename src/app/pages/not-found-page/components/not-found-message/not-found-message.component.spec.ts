@@ -12,6 +12,7 @@ const enMock = {
 };
 
 @Component({
+    imports: [NotFoundMessageComponent],
     template: ` <app-not-found-message [vm]="vm"></app-not-found-message> `,
 })
 class TestHostComponent {
@@ -29,7 +30,7 @@ describe('NotFoundMessageComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                NotFoundMessageComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {
@@ -39,7 +40,6 @@ describe('NotFoundMessageComponent', () => {
                 }),
             ],
             providers: [provideRouter([])],
-            declarations: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);

@@ -3,7 +3,7 @@
 exports[`ProductsPageComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.8"
+  ng-version="19.2.9"
 >
   <!--container-->
 </div>
@@ -12,7 +12,7 @@ exports[`ProductsPageComponent should not render the template when there is no V
 exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are provided 1`] = `
 <div
   id="root2"
-  ng-version="18.2.8"
+  ng-version="19.2.9"
 >
   <app-page-section>
     <section
@@ -122,7 +122,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
 exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are provided 1`] = `
 <div
   id="root3"
-  ng-version="18.2.8"
+  ng-version="19.2.9"
 >
   <app-page-section>
     <section
@@ -232,7 +232,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
 exports[`ProductsPageComponent should render the template when the VM is provided 1`] = `
 <div
   id="root1"
-  ng-version="18.2.8"
+  ng-version="19.2.9"
 >
   <app-page-section>
     <section
