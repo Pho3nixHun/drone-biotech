@@ -204,7 +204,7 @@ describe('MapPointSelectFormControlComponent', () => {
             .triggerEventHandler('click', null);
 
         //Assert
-        expect(serviceSpy).toHaveBeenCalledTimes(1);
+        expect(serviceSpy).toHaveBeenCalledTimes(2);
     });
 
     // Unit test

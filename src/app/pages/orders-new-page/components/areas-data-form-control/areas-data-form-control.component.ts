@@ -196,9 +196,8 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         this.onChange(this.areaData())
     );
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
     public onChange: (value: AreaData[]) => void = noop;
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+
     public onTouched: () => void = noop;
 
     public writeValue(value: AreaData[] | null): void {
