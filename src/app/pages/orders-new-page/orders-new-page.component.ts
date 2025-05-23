@@ -8,6 +8,7 @@ import { LocationStoreModule } from 'src/app/stores/location/location.module';
 import { TranslocoModule } from '@jsverse/transloco';
 import { AreasDataFormControlComponent } from './components/areas-data-form-control/areas-data-form-control.component';
 import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
+import { ORDERS_NEW_PAGE_PROVIDERS } from './orders-new-page.config';
 
 /**
  * OrdersNewPageComponent
@@ -37,7 +38,8 @@ import { AreaData } from './components/areas-data-form-control/components/area-d
         AreasDataFormControlComponent,
         PageSectionComponent,
     ],
-    templateUrl: './orders-new-page.component.html'
+    templateUrl: './orders-new-page.component.html',
+    providers: [ORDERS_NEW_PAGE_PROVIDERS],
 })
 export class OrdersNewPageComponent {
     private readonly ordersService = inject(OrdersNewPageService);

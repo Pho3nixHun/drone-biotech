@@ -1,0 +1,10 @@
+<div appElementRef [signal]="divSignal" style="height: 500px"></div>
+
+<app-map-area-select-form-control
+    [mapRef]="mapSignal()"
+    [formControl]="mapForm.controls.targetArea"
+/>
+<app-map-point-select-form-control
+    [mapRef]="mapSignal()"
+    [formControl]="mapForm.controls.entryPoint"
+/>

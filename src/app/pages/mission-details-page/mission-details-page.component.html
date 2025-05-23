@@ -1,0 +1,169 @@
+@if (vm(); as vm) {
+    <app-page-section *transloco="let t">
+        <app-frame>
+            <!-- Frame title -->
+            <h2>
+                {{ t(vm.titleKey, { name: vm.missionDataXVM.missionName }) }}
+            </h2>
+
+            <!-- Mission header -->
+            <app-mission-header>
+                <!-- Mission status -->
+                <app-mission-status
+                    class="rounded-full"
+                    [ngClass]="
+                        mapMissionStatusTypeToCSSStyle(
+                            vm.missionDataXVM.missionStatusType
+                        )
+                    "
+                >
+                    {{
+                        t(
+                            mapMissionStatusTypeToTranslocoKey(
+                                vm.missionDataXVM.missionStatusType
+                            )
+                        )
+                    }}
+                </app-mission-status>
+
+                <!-- Creation date -->
+                <p class="text-gray-700">
+                    {{
+                        t(vm.createdDateValueKey, {
+                            date: vm.missionDataXVM.createdDate,
+                        })
+                    }}
+                </p>
+
+                <!-- Button for open entry point on Google Maps-->
+                <a
+                    class="btn btn-primary"
+                    [href]="vm.navigateButtonVM.link.href"
+                    [target]="vm.navigateButtonVM.link.target"
+                    [rel]="vm.navigateButtonVM.link.rel"
+                >
+                    {{ t(vm.navigateButtonVM.textKey) }}
+                </a>
+            </app-mission-header>
+
+            <!-- Map to visualize target area, entry point -->
+            <app-map-form-control [formControl]="mapControl" />
+
+            <div class="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
+                <!-- Mission details -->
+                <app-mission-grid-item
+                    [vm]="vm.detailsGridItemVM"
+                    class="w-full md:w-1/2"
+                >
+                    <app-details-item-list>
+                        @for (
+                            item of vm.detailsGridItemVM.detailsItemXVMs;
+                            track $index
+                        ) {
+                            <app-details-item>
+                                <div
+                                    class="flex items-center justify-center rounded-full h-10 w-10"
+                                    [ngClass]="
+                                        mapDetailsItemTypeToCSSStyle(item.type)
+                                    "
+                                >
+                                    <mat-icon>{{ item.matIconName }}</mat-icon>
+                                </div>
+
+                                <h3 class="text-sm text-gray-600">
+                                    {{ t(item.labelKey) }}
+                                </h3>
+                                <p>
+                                    @if (isString(item.value)) {
+                                        {{ item.value }}
+                                    } @else {
+                                        {{
+                                            t(
+                                                item.value.valueKey,
+                                                item.value.params
+                                            )
+                                        }}
+                                    }
+                                </p>
+                            </app-details-item>
+                        }
+                    </app-details-item-list>
+                </app-mission-grid-item>
+
+                <!-- Supplies -->
+                <app-mission-grid-item
+                    [vm]="vm.suppliesGridItemVM"
+                    class="w-full md:w-1/2"
+                >
+                    <app-supply-item-list>
+                        @for (
+                            item of vm.suppliesGridItemVM.supplyItemXVMs;
+                            track $index
+                        ) {
+                            <app-supply-item>
+                                <h3>{{ item.name }}</h3>
+                                <p class="font-light">
+                                    {{ item.quantity }} {{ item.unit }}
+                                </p>
+                            </app-supply-item>
+                        }
+                    </app-supply-item-list>
+                </app-mission-grid-item>
+            </div>
+
+            <!-- Progress update form control -->
+            <app-mission-grid-item [vm]="vm.progressGridItemVM">
+                <app-progress-update-form-control
+                    [vm]="vm.progressGridItemVM.formControlVM"
+                    [formControl]="progressLogItemControl"
+                />
+            </app-mission-grid-item>
+
+            <!-- Message -->
+            <app-mission-grid-item [vm]="vm.messagesGridItemVM">
+                <!-- Message item list -->
+                <app-message-item-list>
+                    @for (
+                        item of vm.messagesGridItemVM.messageItemXVMs;
+                        track $index
+                    ) {
+                        <!-- Message items -->
+                        <app-message-item>
+                            <img
+                                [src]="item.backgroundImageSrc"
+                                [alt]="item.altText"
+                                class="h-8 w-8 rounded-full"
+                            />
+                            <h3>{{ item.name }}</h3>
+                            <p class="text-gray-700">{{ item.message }}</p>
+                            <time class="text-gray-600 text-sm">{{
+                                t(vm.messagesGridItemVM.dateValueKey, {
+                                    date: item.date,
+                                })
+                            }}</time>
+                        </app-message-item>
+                    }
+                </app-message-item-list>
+
+                <!-- Input for message -->
+                <div class="w-full flex flex-row">
+                    <input
+                        type="text"
+                        [formControl]="messageControl"
+                        class="p-2 w-full border border-gray-300 rounded-l-md"
+                    />
+                    <button
+                        (click)="sendMessage()"
+                        [disabled]="messageControl.invalid"
+                        [ngClass]="
+                            messageControl.valid ? 'bg-blue-600' : 'bg-gray-500'
+                        "
+                        class="bg-blue-600 text-white font-bold py-2 px-3 rounded-r-md"
+                    >
+                        {{ t(vm.messagesGridItemVM.submitButtonTextKey) }}
+                    </button>
+                </div>
+            </app-mission-grid-item>
+        </app-frame>
+    </app-page-section>
+}
