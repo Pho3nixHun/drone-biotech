@@ -1,0 +1,128 @@
+@if (vm(); as vm) {
+    <app-base-dialog
+        class="w-230 block"
+        (cancelOnClick)="cancelClick()"
+        [vm]="vm"
+        *transloco="let t"
+    >
+        @if (vm.confirmTextKey) {
+            <h3 class="font-medium text-lg">
+                {{ t(vm.confirmTextKey) }}
+            </h3>
+        }
+
+        @if (form(); as formGroup) {
+            <ng-container
+                [ngTemplateOutlet]="formTemplate"
+                [ngTemplateOutletContext]="{
+                    vm,
+                    formGroup,
+                }"
+            />
+        }
+    </app-base-dialog>
+}
+
+<ng-template #formTemplate let-vm="vm" let-formGroup="formGroup">
+    <form
+        [formGroup]="formGroup"
+        class="flex flex-col space-y-4"
+        *transloco="let t"
+    >
+        @for (control of vm.formGroupConfig; track $index) {
+            @switch (control.abstractControlType) {
+                @case ('control') {
+                    <ng-container
+                        [ngTemplateOutlet]="controlTemplate"
+                        [ngTemplateOutletContext]="{ control }"
+                    />
+                }
+                @default {
+                    <ng-container
+                        [ngTemplateOutlet]="groupTemplate"
+                        [ngTemplateOutletContext]="{ control }"
+                    />
+                }
+            }
+        }
+
+        <ng-template #controlTemplate let-control="control">
+            <mat-form-field>
+                <mat-label>{{ t(control.controlLabelKey) }}</mat-label>
+                @switch (control.fieldType) {
+                    @case ('textarea') {
+                        <textarea
+                            matInput
+                            [formControlName]="control.controlName"
+                        ></textarea>
+                    }
+                    @case ('dropdown') {
+                        <mat-select [formControlName]="control.controlName">
+                            @for (option of control.items; track $index) {
+                                <mat-option [value]="option.value">
+                                    {{ option.label }}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    }
+                    @default {
+                        <input
+                            matInput
+                            [type]="control.fieldType"
+                            [formControlName]="control.controlName"
+                        />
+                    }
+                }
+            </mat-form-field>
+        </ng-template>
+
+        <ng-template #groupTemplate let-control="control">
+            <div [formGroupName]="control.controlName">
+                @switch (control.fieldType) {
+                    @case ('checklistgroup') {
+                        <label
+                            [for]="control.controlName"
+                            class="text-gray-600"
+                        >
+                            {{ t(control.controlLabelKey) }}
+                        </label>
+                        @for (item of control.items; track $index) {
+                            <div>
+                                <mat-checkbox
+                                    [formControlName]="item.controlName"
+                                ></mat-checkbox>
+
+                                <label [for]="item.controlName">{{
+                                    item.controlName
+                                }}</label>
+                            </div>
+                        }
+                    }
+                    @case ('filegroup') {
+                        <label [for]="control.controlName" class="btn">
+                            {{ t(control.controlLabelKey) }}
+                        </label>
+                        <input
+                            [id]="control.controlName"
+                            [type]="control.item.fieldType"
+                            [formControlName]="control.item.controlName"
+                            [accept]="control.item.accept"
+                            class="hidden"
+                        />
+                    }
+                }
+            </div>
+        </ng-template>
+        <pre>{{ formGroup.value | json }}</pre>
+        <button (click)="cancelClick()" class="btn btn-error">
+            {{ t(vm.cancelButtonTextKey) }}
+        </button>
+        <button
+            class="btn"
+            [ngClass]="formGroup.valid ? 'btn-primary' : 'btn-disabled'"
+            (click)="submitForm()"
+        >
+            {{ t(vm.submitButtonTextKey) }}
+        </button>
+    </form>
+</ng-template>

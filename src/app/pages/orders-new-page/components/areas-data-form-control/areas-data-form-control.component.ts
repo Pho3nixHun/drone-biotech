@@ -4,6 +4,7 @@ import {
     effect,
     forwardRef,
     inject,
+    Injector,
     input,
     signal,
 } from '@angular/core';
@@ -20,7 +21,7 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DialogService } from '@services/dialog/dialog.service';
 import { AreaDataDialogComponent } from './components/area-data-dialog/area-data-dialog.component';
-import { filter, lastValueFrom, map } from 'rxjs';
+import { filter, lastValueFrom, map, noop } from 'rxjs';
 import { DistanceService } from '@services/distance/distance.service';
 import { getAreaOfPolygon } from 'geolib';
 import { TranslocoModule } from '@jsverse/transloco';
@@ -36,9 +37,6 @@ import {
     METRES_TO_KILOMETERS,
     SQUARE_METRES_TO_HECTARE,
 } from '@stores/location/location.model';
-
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-const noop = () => {};
 
 @Component({
     selector: 'app-areas-data-form-control',
@@ -56,6 +54,10 @@ const noop = () => {};
             useExisting: forwardRef(() => AreasDataFormControlComponent),
             multi: true,
         },
+        {
+            provide: DialogService,
+            deps: [Injector],
+        },
     ],
     templateUrl: './areas-data-form-control.component.html',
 })
@@ -63,8 +65,8 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
     public vm = input.required<AreasDataFormControlVM>();
     private readonly areaData = signal<AreaData[]>([]);
     private readonly distanceService = inject(DistanceService);
-    private readonly dialogService = inject(DialogService);
     private readonly reverseGeocodingService = inject(ReverseGeocodingService);
+    private readonly dialogService = inject(DialogService);
 
     protected async addAreaData() {
         const vm: AreaDataDialogVM = {

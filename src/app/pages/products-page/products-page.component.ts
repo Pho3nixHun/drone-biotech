@@ -4,6 +4,7 @@ import { ProductItemComponent } from '@components/product-item/product-item.comp
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
 import { PageSectionComponent } from '../../shared/components/page-section/page-section.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * ProductsPageComponent
@@ -28,8 +29,9 @@ import { PageSectionComponent } from '../../shared/components/page-section/page-
         ProductItemComponent,
         ProductListComponent,
         PageSectionComponent,
+        TranslocoModule,
     ],
-    templateUrl: './products-page.component.html'
+    templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
     private readonly productsPageService = inject(ProductsPageService);
