@@ -10,6 +10,7 @@ import { AreaData } from './components/areas-data-form-control/components/area-d
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { ORDERS_NEW_PAGE_PROVIDERS } from './orders-new-page.config';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { ORDERS_NEW_PAGE_PROVIDERS } from './orders-new-page.config';
 
 /**
  * OrdersNewPageComponent

@@ -39,6 +39,11 @@ import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.confi
 import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';
 import { officeDashboardPageConfig } from './pages/office-dashboard-page/office-dashboard-page.config';
 import { orderDetailsPageConfig } from './pages/order-details-page/order-details-page.config';
+import {
+    GOOGLE_MAPS_LOADER_CONFIG,
+    HEAD_OFFICE_LOCATION,
+    provideGoogleMapsLibraries,
+} from './shared/providers/google-maps-provider';
 
 const devMode = isDevMode();
 

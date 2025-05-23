@@ -17,6 +17,7 @@ export const routes: Routes = [
                 '../mission-details-page/mission-details-page-routing.module'
             ).then((m) => m.MissionDetailsPageRoutingModule),
     },
+
     {
         path: OrdersRouteSegment.DETAILS,
         loadComponent: () =>

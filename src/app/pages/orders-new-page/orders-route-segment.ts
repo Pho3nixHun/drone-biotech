@@ -3,4 +3,5 @@ export enum OrdersRouteSegment {
     DETAILS = 'details',
     MISSIONS = 'missions',
     DETAILS = 'details',
+    MISSIONS = 'missions',
 }
