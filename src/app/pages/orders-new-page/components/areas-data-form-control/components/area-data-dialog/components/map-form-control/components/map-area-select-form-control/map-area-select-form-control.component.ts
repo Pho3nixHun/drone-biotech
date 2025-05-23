@@ -6,10 +6,7 @@ import {
     inject,
     input,
 } from '@angular/core';
-import {
-    MapAreaSelectFormControlVM,
-    POLYGON_OPTIONS,
-} from './map-area-select-form-control.model';
+import { MapAreaSelectFormControlVM } from './map-area-select-form-control.model';
 import {
     Coordinates,
     SQUARE_METRES_TO_HECTARE,
@@ -32,6 +29,7 @@ import {
     mapStringToCoordinates,
 } from '../../map-form-control.model';
 import { map } from 'rxjs';
+import { POLYGON_OPTIONS } from '@providers/google-maps-provider';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};

@@ -26,6 +26,7 @@
             "@components/*": ["src/app/shared/components/*"],
             "@directives/*": ["src/app/shared/directives/*"],
             "@interfaces/*": ["src/app/shared/interfaces/*"],
+            "@providers/*": ["src/app/shared/providers/*"],
             "@modules/*": ["src/app/shared/modules/*"],
             "@utils/*": ["src/app/shared/utils/*"],
             "@guards/*": ["src/app/shared/guards/*"],

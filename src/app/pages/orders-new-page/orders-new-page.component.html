@@ -2,6 +2,7 @@
     <app-page-layout>
         <app-frame [vm]="vm.frameXVM" *transloco="let t">
             <!-- Form areasDataFormGroup -->
+            <h2>{{ t(vm.frameXVM.titleKey) }}</h2>
             <form
                 [formGroup]="areasDataFormGroup"
                 class="w-full mx-auto bg-white sm:p-8 sm:shadow-md space-y-6"

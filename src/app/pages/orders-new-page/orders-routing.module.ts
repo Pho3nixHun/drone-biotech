@@ -11,6 +11,13 @@ export const routes: Routes = [
             ),
     },
     {
+        path: `:id/${OrdersRouteSegment.MISSIONS}`,
+        loadChildren: () =>
+            import(
+                '../mission-details-page/mission-details-page-routing.module'
+            ).then((m) => m.MissionDetailsPageRoutingModule),
+    },
+    {
         path: OrdersRouteSegment.DETAILS,
         loadComponent: () =>
             import('../order-details-page/order-details-page.component').then(

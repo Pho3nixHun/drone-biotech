@@ -45,13 +45,13 @@ export const DIALOG_DATA = new InjectionToken<any>('DIALOG_DATA');
 export const DIALOG_REF = new InjectionToken<DialogRef>('DIALOG_REF');
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'any',
 })
 export class DialogService {
     private readonly overlay = inject(Overlay);
     private readonly store = inject(Store);
-
     private readonly routerEvent$ = this.store.select(selectURL);
+    private readonly parentInjector = inject(Injector);
     private readonly overlayRef = this.overlay.create({
         hasBackdrop: true,
         positionStrategy: this.overlay
@@ -83,6 +83,7 @@ export class DialogService {
         });
 
         const injector = Injector.create({
+            parent: this.parentInjector,
             providers: [
                 {
                     provide: DIALOG_DATA,

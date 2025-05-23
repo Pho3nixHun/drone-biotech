@@ -5,11 +5,11 @@ import { environment } from 'src/environments/environment';
 import { Coordinates } from '@stores/location/location.model';
 import {
     DistanceFromDestinationRequest,
-    HEAD_OFFICE_LOCATION,
     mapCoordinatesToWaypoints,
     RoutesRequest,
     RoutesResponse,
 } from './distance.model';
+import { HEAD_OFFICE_LOCATION } from '@providers/google-maps-provider';
 
 @Injectable({
     providedIn: 'root',

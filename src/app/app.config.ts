@@ -29,7 +29,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
 import { TranslocoModule } from '@modules/transloco/transloco.module';
-import { mapFormControlConfig } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.config';
+import {
+    GOOGLE_MAPS_LOADER_CONFIG,
+    HEAD_OFFICE_LOCATION,
+    provideGoogleMapsLibraries,
+} from './shared/providers/google-maps-provider';
 import { pilotDashboardPageConfig } from './pages/pilot-dashboard-page/pilot-dashboard-page.config';
 import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.config';
 import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';
@@ -66,7 +70,20 @@ export const appConfig: ApplicationConfig = {
         provideRouterStore({ serializer: CustomRouterStateSerializer }),
         ...(devMode ? [provideStoreDevtools()] : []),
         provideAnimationsAsync(),
-        mapFormControlConfig,
+        provideGoogleMapsLibraries(),
+        {
+            provide: GOOGLE_MAPS_LOADER_CONFIG,
+            useValue: {
+                url: 'https://maps.googleapis.com/maps/api/js?',
+                key: environment.googleMapsConfig.apiKey,
+                version: '3.59',
+                region: 'HU',
+            },
+        },
+        {
+            provide: HEAD_OFFICE_LOCATION,
+            useValue: { lat: 47.312498121576795, lng: 21.309304570654604 },
+        },
         pilotDashboardPageConfig,
         officeDashboardPageConfig,
         dashboardPageConfig,
