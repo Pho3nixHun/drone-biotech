@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormDialogComponent when the vm is correct should render the template correctly 1`] = `
+<div
+  id="root1"
+  ng-version="19.2.9"
+>
+  <app-base-dialog
+    class="w-230 block"
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+    >
+      <div
+        class="flex justify-between rounded-t-lg p-4 bg-gray-200 border-b-2 border-gray-400"
+      >
+        <h3
+          class="text-3xl"
+        >
+           title 
+        </h3>
+        <button>
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate text-3xl material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+            style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;"
+          >
+            close
+          </mat-icon>
+        </button>
+      </div>
+      <div
+        class="space-y-4 p-4"
+      >
+        <h3
+          class="font-medium text-lg"
+        >
+           confirm 
+        </h3>
+        <!--container-->
+        <form
+          class="flex flex-col space-y-4 ng-untouched ng-pristine ng-invalid"
+          ng-reflect-form="[object Object]"
+          novalidate=""
+        >
+          <mat-form-field
+            class="mat-mdc-form-field mat-mdc-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-hide-placeholder mat-primary ng-untouched ng-pristine ng-invalid"
+          >
+            <!--container-->
+            <div
+              class="mat-mdc-text-field-wrapper mdc-text-field mdc-text-field--filled"
+            >
+              <div
+                class="mat-mdc-form-field-focus-overlay"
+              />
+              <!--container-->
+              <div
+                class="mat-mdc-form-field-flex"
+              >
+                <!--container-->
+                <!--container-->
+                <!--container-->
+                <div
+                  class="mat-mdc-form-field-infix"
+                >
+                  <label
+                    class="mdc-floating-label mat-mdc-floating-label"
+                    for="mat-input-a0"
+                    id="mat-mdc-form-field-label-a0"
+                    matformfieldfloatinglabel=""
+                    ng-reflect-floating="false"
+                    ng-reflect-monitor-resize="false"
+                  >
+                    <mat-label>
+                      label
+                    </mat-label>
+                    <span
+                      aria-hidden="true"
+                      class="mat-mdc-form-field-required-marker mdc-floating-label--required"
+                    />
+                    <!--container-->
+                  </label>
+                  <!--container-->
+                  <!--bindings={
+  "ng-reflect-ng-template-outlet": "[object Object]"
+}-->
+                  <!--container-->
+                  <textarea
+                    aria-required="true"
+                    class="mat-mdc-input-element ng-untouched ng-pristine ng-invalid mat-mdc-form-field-textarea-control mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored"
+                    id="mat-input-a0"
+                    matinput=""
+                    ng-reflect-name="reason"
+                    required=""
+                  />
+                  <!--container-->
+                  <!--container-->
+                  <!--container-->
+                </div>
+                <!--container-->
+                <!--container-->
+              </div>
+              <div
+                class="mdc-line-ripple mdc-line-ripple--deactivating"
+                matformfieldlineripple=""
+              />
+              <!--container-->
+            </div>
+            <div
+              class="mat-mdc-form-field-subscript-wrapper mat-mdc-form-field-bottom-align"
+            >
+              <div
+                aria-atomic="true"
+                aria-live="polite"
+                class="mat-mdc-form-field-hint-wrapper"
+              >
+                <!--container-->
+                <!--container-->
+                <div
+                  class="mat-mdc-form-field-hint-spacer"
+                />
+                <!--container-->
+              </div>
+            </div>
+          </mat-form-field>
+          <!--ng-container-->
+          <!--container-->
+          <!--container-->
+          <mat-form-field
+            class="mat-mdc-form-field mat-mdc-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-hide-placeholder mat-primary ng-untouched ng-pristine ng-invalid"
+          >
+            <!--container-->
+            <div
+              class="mat-mdc-text-field-wrapper mdc-text-field mdc-text-field--filled"
+            >
+              <div
+                class="mat-mdc-form-field-focus-overlay"
+              />
+              <!--container-->
+              <div
+                class="mat-mdc-form-field-flex"
+              >
+                <!--container-->
+                <!--container-->
+                <!--container-->
+                <div
+                  class="mat-mdc-form-field-infix"
+                >
+                  <label
+                    class="mdc-floating-label mat-mdc-floating-label"
+                    for="mat-input-a1"
+                    id="mat-mdc-form-field-label-a1"
+                    matformfieldfloatinglabel=""
+                    ng-reflect-floating="false"
+                    ng-reflect-monitor-resize="false"
+                  >
+                    <mat-label>
+                      Text
+                    </mat-label>
+                    <span
+                      aria-hidden="true"
+                      class="mat-mdc-form-field-required-marker mdc-floating-label--required"
+                    />
+                    <!--container-->
+                  </label>
+                  <!--container-->
+                  <!--bindings={
+  "ng-reflect-ng-template-outlet": "[object Object]"
+}-->
+                  <!--container-->
+                  <!--container-->
+                  <!--container-->
+                  <input
+                    aria-required="true"
+                    class="mat-mdc-input-element ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored"
+                    id="mat-input-a1"
+                    matinput=""
+                    ng-reflect-name="text"
+                    ng-reflect-type="text"
+                    required=""
+                    type="text"
+                  />
+                  <!--container-->
+                </div>
+                <!--container-->
+                <!--container-->
+              </div>
+              <div
+                class="mdc-line-ripple mdc-line-ripple--deactivating"
+                matformfieldlineripple=""
+              />
+              <!--container-->
+            </div>
+            <div
+              class="mat-mdc-form-field-subscript-wrapper mat-mdc-form-field-bottom-align"
+            >
+              <div
+                aria-atomic="true"
+                aria-live="polite"
+                class="mat-mdc-form-field-hint-wrapper"
+              >
+                <!--container-->
+                <!--container-->
+                <div
+                  class="mat-mdc-form-field-hint-spacer"
+                />
+                <!--container-->
+              </div>
+            </div>
+          </mat-form-field>
+          <!--ng-container-->
+          <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--container-->
+          <pre>
+            {
+  "reason": "",
+  "text": ""
+}
+          </pre>
+          <button
+            class="btn btn-error"
+          >
+             MissionDetailsPage.formDialog.cancelButtonText 
+          </button>
+          <button
+            class="btn btn-disabled"
+            ng-reflect-ng-class="btn-disabled"
+          >
+             MissionDetailsPage.formDialog.submitButtonText 
+          </button>
+        </form>
+        <!--container-->
+        <!--ng-container-->
+        <!--container-->
+      </div>
+      <div
+        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3 rounded-b-lg bg-gray-200 border-t-2 p-4 border-gray-400"
+      />
+    </section>
+    <!--container-->
+  </app-base-dialog>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`FormDialogComponent when the vm is not correct should not render the content 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <!--container-->
+  <!--container-->
+</div>
+`;

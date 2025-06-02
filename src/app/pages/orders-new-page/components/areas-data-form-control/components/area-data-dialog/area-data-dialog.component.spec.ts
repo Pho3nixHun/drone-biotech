@@ -1,23 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AreaDataDialogComponent } from './area-data-dialog.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { provideMockEntryPointMarkerOptions } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
-import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
 import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
 import {
     provideMockDialogDataFactory,
     provideMockDialogRef,
     updateDialogDataSignal,
 } from 'src/app/shared/providers/dialog-provider';
-import { provideMockPolygonOptions } from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
 import {
     enMock,
     mockVMWithAreaData,
     mockVMWithoutAreaData,
 } from './area-data-dialog.component.mock';
-import { provideMockMapOptions } from './components/map-form-control/map-form-control.model';
 import { provideMockStore } from '@ngrx/store/testing';
+import {
+    provideMockHeadOfficeLocation,
+    provideMockMapOptions,
+    provideMockPolygonOptions,
+    provideMockEntryPointMarkerOptions,
+} from '@providers/google-maps-provider';
 
 describe('AreaDataDialogComponent', () => {
     let fixture: ComponentFixture<AreaDataDialogComponent>;
@@ -43,7 +44,6 @@ describe('AreaDataDialogComponent', () => {
                 provideMockMapOptions(),
                 provideMockPolygonOptions(),
                 provideMockEntryPointMarkerOptions(),
-                provideMockDialogService(),
                 provideMockStore(),
             ],
         }).compileComponents();

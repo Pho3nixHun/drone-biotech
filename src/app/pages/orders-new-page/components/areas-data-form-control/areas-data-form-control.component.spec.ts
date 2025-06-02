@@ -7,8 +7,7 @@ import { of } from 'rxjs';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { AreasDataFormControlComponent } from './areas-data-form-control.component';
 import { enMock, ordersNewPageVMMock } from '../../orders-new-page.mock';
-import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
+import { DialogServiceMock } from '@services/dialog/dialog.service.mock';
 import { DialogService } from '@services/dialog/dialog.service';
 import { DeleteDialogReason } from './components/delete-dialog/delete-dialog.model';
 import {
@@ -25,6 +24,11 @@ import {
     AreaDataDialogResultWithoutAreaData,
 } from './components/area-data-dialog/area-data-dialog.model';
 import { METRES_TO_KILOMETERS } from '@stores/location/location.model';
+import {
+    provideMockHeadOfficeLocation,
+    provideMockMapOptions,
+} from '@providers/google-maps-provider';
+import { provideStore } from '@ngrx/store';
 
 const areaData = [
     {
@@ -81,17 +85,22 @@ describe('AreasDataFormControlComponent', () => {
             providers: [
                 provideHttpClient(),
                 provideMockHeadOfficeLocation(),
-                provideMockDialogService(),
                 provideMockReverseGeocodingService(),
                 provideMockDistanceService(),
+                provideMockMapOptions(),
+                provideStore(),
             ],
         }).compileComponents();
+        TestBed.overrideProvider(DialogService, {
+            useFactory: () => new DialogServiceMock(),
+        });
 
         fixture = TestBed.createComponent(TestHostComponent);
-        dialogService = TestBed.inject(DialogService);
+
         debugEl = fixture.debugElement.query(
             By.directive(AreasDataFormControlComponent)
         );
+        dialogService = debugEl.injector.get(DialogService);
         component = debugEl.componentInstance;
         compiled = debugEl.nativeElement;
     });
@@ -167,6 +176,7 @@ describe('AreasDataFormControlComponent', () => {
     // Unit test
     it('should put the response data of the dialog to the areaData if the reasonType is submit when the addAreaData() method is called', async () => {
         //Arrange
+
         jest.spyOn(dialogService, 'create').mockReturnValue({
             result$: of<AreaDataDialogResultWithAreaData>({
                 reasonType: 'submit',

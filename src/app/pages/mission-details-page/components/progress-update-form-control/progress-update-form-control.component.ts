@@ -3,6 +3,7 @@ import {
     effect,
     forwardRef,
     inject,
+    Injector,
     input,
     signal,
 } from '@angular/core';
@@ -65,6 +66,10 @@ import { isFormDialogResultWithData } from './components/form-dialog/form-dialog
             provide: NG_VALUE_ACCESSOR,
             useExisting: forwardRef(() => ProgressUpdateFormControlComponent),
             multi: true,
+        },
+        {
+            provide: DialogService,
+            deps: [Injector],
         },
     ],
     templateUrl: './progress-update-form-control.component.html',

@@ -13,6 +13,7 @@ module.exports = {
         '^@utils/(.*)$': '<rootDir>/src/app/shared/utils/$1',
         '^@services/(.*)$': '<rootDir>/src/app/shared/services/$1',
         '^@stores/(.*)$': '<rootDir>/src/app/stores/$1',
+        '^@providers/(.*)$': '<rootDir>/src/app/shared/providers/$1',
     },
     transformIgnorePatterns: ['node_modules/?!(.\\*.mjs$|@jsverse)'],
     snapshotSerializers: [

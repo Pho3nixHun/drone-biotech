@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BaseDialogComponent } from './base-dialog.component';
 import { Component, input } from '@angular/core';
 import { BaseDialogVM } from './base-dialog.model';

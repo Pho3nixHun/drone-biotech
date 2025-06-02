@@ -2,10 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { DistanceService } from './distance.service';
 import { lastValueFrom, of } from 'rxjs';
-import {
-    provideMockHeadOfficeLocation,
-    RoutesResponse,
-} from './distance.model';
+import { RoutesResponse } from './distance.model';
+import { provideMockHeadOfficeLocation } from '@providers/google-maps-provider';
 
 describe('DistanceService', () => {
     let service: DistanceService;

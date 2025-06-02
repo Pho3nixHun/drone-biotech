@@ -1,30 +1,27 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import {
-    AreaDataDialogResultWithAreaData,
-    AreaDataDialogResultWithoutAreaData,
-} from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
-import { DialogService } from './dialog.service';
+import { noop, Subject } from 'rxjs';
+import { DialogRef } from './dialog.service';
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'any',
 })
-class DialogServiceMock {
-    create = jest.fn();
+export class DialogServiceMock {
+    public create(_vm: unknown, _component: unknown): DialogRef {
+        return {
+            result$: dialogResponse.asObservable(),
+            close: () => noop,
+            open: () => noop,
+            onClose: () => noop,
+            result: () => noop,
+            portal: undefined,
+            resultSubject$: new Subject(),
+        } as unknown as DialogRef;
+    }
 }
 
-export const provideMockDialogService = () => ({
-    provide: DialogService,
-    useClass: DialogServiceMock,
-});
-
 // Using Subject instead of signal to avoid requiring an initial value
-const areaDataDialogResponse = new Subject<
-    AreaDataDialogResultWithoutAreaData | AreaDataDialogResultWithAreaData
->();
+const dialogResponse = new Subject<unknown>();
 
-export const updateAreaDataDialogResponse = (
-    response:
-        | AreaDataDialogResultWithoutAreaData
-        | AreaDataDialogResultWithAreaData
-) => areaDataDialogResponse.next(response);
+export const updateDialogResponse = (response: unknown) =>
+    dialogResponse.next(response);

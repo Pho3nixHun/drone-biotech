@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionHeaderComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-mission-header>
+    <div
+      class="flex items-center justify-between"
+    >
+      <div
+        class="flex space-x-2 items-center"
+      >
+        <app-mission-status>
+          <div
+            class="px-3 py-1 w-max"
+          />
+        </app-mission-status>
+        <p>
+          Should be projected
+        </p>
+      </div>
+      <a
+        href=""
+      >
+        Should be projected
+      </a>
+    </div>
+  </app-mission-header>
+</div>
+`;
