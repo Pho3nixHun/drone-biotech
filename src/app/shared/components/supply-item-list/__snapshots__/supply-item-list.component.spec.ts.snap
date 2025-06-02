@@ -1,29 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SupplyItemListComponent should create 1`] = `
-<div
-  id="root0"
-  ng-version="19.2.9"
->
-  <app-supply-item-list>
-    <div
-      class="flex flex-col space-y-2"
-    >
-      <app-supply-item>
-        <div
-          class="flex flex-col"
-        />
-      </app-supply-item>
-      <app-supply-item>
-        <div
-          class="flex flex-col"
-        />
-      </app-supply-item>
-    </div>
-  </app-supply-item-list>
-</div>
-`;
-
 exports[`SupplyItemListComponent should project the content and render the template correctly 1`] = `
 <div
   id="root0"

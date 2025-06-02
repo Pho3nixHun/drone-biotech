@@ -22,26 +22,3 @@ exports[`MapFormControlComponent should render the template correctly 1`] = `
   />
 </app-map-form-control>
 `;
-
-exports[`MapFormControlComponent should render the template correctly when the VM is provided 1`] = `
-<app-map-form-control
-  class="ng-untouched ng-pristine ng-valid"
-  ng-reflect-form="[object Object]"
->
-  <div
-    appelementref=""
-    ng-reflect-signal="[Signal: null]"
-    style="height: 500px;"
-  />
-  <app-map-area-select-form-control
-    class="ng-untouched ng-dirty ng-valid"
-    ng-reflect-form="[object Object]"
-    ng-reflect-map-ref="[object Object]"
-  />
-  <app-map-point-select-form-control
-    class="ng-untouched ng-dirty ng-valid"
-    ng-reflect-form="[object Object]"
-    ng-reflect-map-ref="[object Object]"
-  />
-</app-map-form-control>
-`;
