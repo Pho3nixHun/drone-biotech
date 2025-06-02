@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionGridItemComponent should render the template if the input is provided and project the content 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-mission-grid-item
+    ng-reflect-vm="[object Object]"
+  >
+    <section
+      class="bg-white rounded-lg p-5 space-y-5 w-full shadow-md"
+    >
+      <h3
+        class="text-lg font-medium tracking-wide"
+      >
+         val 
+      </h3>
+      <div
+        class="space-y-5 h-full"
+      >
+        <div>
+          Should be projected
+        </div>
+      </div>
+    </section>
+  </app-mission-grid-item>
+</div>
+`;

@@ -88,8 +88,8 @@ export interface FormDialogVM extends BaseDialogVM {
     type: 'formDialogVM';
     confirmTextKey?: string;
     formGroupConfig: FormGroupConfig;
-    cancelButtonTextKey: 'MissionDetailsPage.formDialog.cancelButtonText';
-    submitButtonTextKey: 'MissionDetailsPage.formDialog.submitButtonText';
+    cancelButtonTextKey: string;
+    submitButtonTextKey: string;
 }
 
 export interface FormDialogResultWithoutData extends DialogReasonBase {
