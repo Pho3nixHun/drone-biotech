@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageItemComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-message-item>
+    <div
+      class="w-full flex flex-row space-x-3"
+    >
+      <img
+        alt="Should be projected"
+        src=""
+      />
+      <div
+        class="bg-gray-200 w-full flex flex-row justify-between p-3 rounded-lg"
+      >
+        <div>
+          <h3>
+            Should be projected
+          </h3>
+          <p>
+            Should be projected
+          </p>
+        </div>
+        <time
+          datetime=""
+        >
+          Should be projected
+        </time>
+      </div>
+    </div>
+  </app-message-item>
+</div>
+`;

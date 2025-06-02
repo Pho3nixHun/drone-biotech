@@ -7,7 +7,7 @@ exports[`PageSectionComponent should render the template when the VM is provided
 >
   <app-page-section>
     <section
-      class="mt-72 md:mt-25"
+      class="mt-80 md:mt-32 flex flex-col space-y-28"
     >
       <p>
         Should be projected

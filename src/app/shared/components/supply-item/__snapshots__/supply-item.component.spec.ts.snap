@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SupplyItemComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-supply-item>
+    <div
+      class="flex flex-col"
+    >
+      <h3>
+        Should be projected
+      </h3>
+      <p>
+        Should be projected
+      </p>
+    </div>
+  </app-supply-item>
+</div>
+`;
