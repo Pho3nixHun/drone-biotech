@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressFrameComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-progress-frame>
+    <div
+      class="space-y-4 w-full flex flex-col h-full"
+    >
+      <div
+        class="font-medium text-gray-700"
+      >
+        <h3>
+          Should be projected
+        </h3>
+      </div>
+      <div>
+        Should be projected
+      </div>
+    </div>
+  </app-progress-frame>
+</div>
+`;

@@ -1,11 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapAreaSelectFormControlComponent } from './map-area-select-form-control.component';
-import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import {
-    MapAreaSelectFormControlVM,
-    provideMockInfoWindowOptions,
-    provideMockPolygonOptions,
-} from './map-area-select-form-control.model';
+import { MapAreaSelectFormControlVM } from './map-area-select-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import {
@@ -24,8 +19,13 @@ import {
 } from './map-area-select-form-control.service.mock';
 import { By } from '@angular/platform-browser';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
-import { provideMockMapOptions } from '../../map-form-control.model';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import {
+    provideMockHeadOfficeLocation,
+    provideMockMapOptions,
+    provideMockInfoWindowOptions,
+    provideMockPolygonOptions,
+} from '@providers/google-maps-provider';
 
 const enMock = {
     addButtonText: 'addButton',

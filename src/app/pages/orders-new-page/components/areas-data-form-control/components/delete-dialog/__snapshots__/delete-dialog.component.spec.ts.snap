@@ -10,10 +10,10 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
     ng-reflect-vm="[object Object]"
   >
     <section
-      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+      class="rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
     >
       <div
-        class="flex justify-between"
+        class="flex justify-between rounded-t-lg p-4 bg-gray-200 border-b-2 border-gray-400"
       >
         <h3
           class="text-3xl"
@@ -33,7 +33,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
         </button>
       </div>
       <div
-        class="space-y-4"
+        class="space-y-4 p-4"
       >
         <h3
           class="text-lg"
@@ -42,7 +42,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
         </h3>
       </div>
       <div
-        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
+        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3 rounded-b-lg bg-gray-200 border-t-2 p-4 border-gray-400"
       >
         <button
           class="btn btn-secondary"

@@ -2,7 +2,6 @@
 import {
     Component,
     computed,
-    CUSTOM_ELEMENTS_SCHEMA,
     effect,
     ElementRef,
     forwardRef,
@@ -18,16 +17,19 @@ import {
     ReactiveFormsModule,
     Validators,
 } from '@angular/forms';
-import { MAP_OPTIONS, MapFormControlVM } from './map-form-control.model';
+import { MapFormControlVM } from './map-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 import { MapAreaSelectFormControlComponent } from './components/map-area-select-form-control/map-area-select-form-control.component';
 import { MapPointSelectFormControlComponent } from './components/map-point-select-form-control/map-point-select-form-control.component';
-import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
 import { MapSearchInputFormControlComponent } from './components/map-search-input-form-control/map-search-input-form-control.component';
 import { distinctUntilChanged, map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { getCenter } from 'geolib';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
+import {
+    MAP_OPTIONS,
+    HEAD_OFFICE_LOCATION,
+} from '@providers/google-maps-provider';
 
 @Component({
     selector: 'app-map-form-control',
@@ -45,7 +47,7 @@ import { ElementRefDirective } from '@directives/element-ref/element-ref.directi
             multi: true,
         },
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    schemas: [],
     templateUrl: './map-form-control.component.html',
 })
 export class MapFormControlComponent implements ControlValueAccessor {

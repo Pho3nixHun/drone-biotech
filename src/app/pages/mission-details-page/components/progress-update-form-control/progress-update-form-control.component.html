@@ -1,0 +1,78 @@
+@let statusVM = vm().statusFrameVM;
+@let logVM = vm().logFrameVM;
+@let groups = statusVM.progressItemGroupVMs;
+
+<div class="flex flex-row h-full space-x-4" *transloco="let t">
+    <!-- Update status of the mission -->
+    @if (groups.length > 0) {
+        <app-progress-frame class="w-1/2">
+            <h3>{{ t(statusVM.titleKey) }}</h3>
+
+            <!-- Progress item groups -->
+            @for (group of groups; track $index) {
+                <app-progress-item-group>
+                    <!--Step indicator for the group -->
+                    <app-step-indicator
+                        class="rounded-full"
+                        [ngClass]="mapStepIndicatorNumberToCSSStyle($index + 1)"
+                        >{{ $index + 1 }}
+                    </app-step-indicator>
+                    <h3 class="font-medium">{{ t(group.titleKey) }}</h3>
+
+                    <!-- Progress items -->
+                    @for (item of group.progressItemVMs; track $index) {
+                        <button
+                            (click)="openDialog(item.type, item.actionType)"
+                            [disabled]="item.disabled"
+                            class="p-2 flex items-center justify-between rounded-md ml-9"
+                            [ngClass]="
+                                item.disabled
+                                    ? 'bg-gray-300 text-gray-600'
+                                    : mapProgressItemTypeToCSSStyle(item.type)
+                            "
+                        >
+                            {{
+                                t(mapProgressItemTypeToTranslocoKey(item.type))
+                            }}
+                            <mat-icon>{{ item.matIconName }}</mat-icon>
+                        </button>
+                    }
+                </app-progress-item-group>
+            }
+        </app-progress-frame>
+    }
+    <!-- Previous logs -->
+    <app-progress-frame [ngClass]="groups.length > 0 ? 'w-1/2' : 'w-full'">
+        <h3>{{ t(logVM.titleKey) }}</h3>
+        <!-- Progress log items list -->
+        <app-progress-log-item-list>
+            @for (item of logVM.logItemVMs; track $index) {
+                <!-- Progress log items -->
+                <app-progress-log-item
+                    class="border-l-4"
+                    [ngClass]="
+                        mapProgressItemTypeToCSSBorderStyle(item.statusType)
+                    "
+                >
+                    <h3>
+                        {{
+                            t(
+                                mapProgressItemTypeToTranslocoKey(
+                                    item.statusType
+                                )
+                            )
+                        }}
+                    </h3>
+                    <p>{{ item.description }}</p>
+                    <time>
+                        {{
+                            t(logVM.progressItemDateValueKey, {
+                                date: item.date,
+                            })
+                        }}
+                    </time>
+                </app-progress-log-item>
+            }
+        </app-progress-log-item-list>
+    </app-progress-frame>
+</div>

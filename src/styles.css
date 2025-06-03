@@ -15,7 +15,7 @@ html {
     }
 
     h2 {
-        @apply font-black text-4xl sm:text-5xl lg:text-6xl transition-all ease-in-out;
+        @apply font-black text-2xl sm:text-3xl lg:text-4xl transition-all ease-in-out;
     }
 
     app-hero p {
