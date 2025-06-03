@@ -24,18 +24,21 @@ import {
     AreaDataDialogResultWithAreaData,
     AreaDataDialogResultWithoutAreaData,
 } from './components/area-data-dialog/area-data-dialog.model';
+import { METRES_TO_KILOMETERS } from '@stores/location/location.model';
 
 const areaData = [
     {
         applicationDate: new Date(100),
         dosePerHq: 2,
         entryPoint: { lat: 10, lng: 10 },
-        id: 1,
+        id: 'id',
         targetArea: [
             { lat: 10, lng: 10 },
             { lat: 20, lng: 20 },
             { lat: 30, lng: 30 },
         ],
+        comment: 'comment',
+        missionName: 'mission',
     },
 ];
 @Component({
@@ -47,6 +50,7 @@ const areaData = [
             ></app-areas-data-form-control>
         </form>
     `,
+    imports: [AreasDataFormControlComponent, ReactiveFormsModule],
 })
 class TestHostComponent {
     public vm = ordersNewPageVMMock.frameXVM.areasDataFormControlVM;
@@ -65,8 +69,7 @@ describe('AreasDataFormControlComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                AreasDataFormControlComponent,
-                ReactiveFormsModule,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {
@@ -82,7 +85,6 @@ describe('AreasDataFormControlComponent', () => {
                 provideMockReverseGeocodingService(),
                 provideMockDistanceService(),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);
@@ -123,7 +125,7 @@ describe('AreasDataFormControlComponent', () => {
     it('should correctly calculate the totalDistanceFromHeadOffice from meters to kilometers', async () => {
         // Arrange
         const distanceInMetres = 10000;
-        const distanceInKm = distanceInMetres / 1000;
+        const distanceInKm = distanceInMetres / METRES_TO_KILOMETERS;
         updateDistance(distanceInMetres);
 
         // Act
@@ -173,8 +175,10 @@ describe('AreasDataFormControlComponent', () => {
                     applicationDate: new Date(1),
                     dosePerHq: 1,
                     entryPoint: { lat: 1, lng: 1 },
-                    id: 1,
+                    id: 'id',
                     targetArea: [{ lat: 1, lng: 1 }],
+                    comment: 'comment',
+                    missionName: 'mission',
                 },
             }),
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -219,7 +223,7 @@ describe('AreasDataFormControlComponent', () => {
 
         //Act
         fixture.detectChanges();
-        await component['deleteAreaData'](1);
+        await component['deleteAreaData']('id');
 
         // Assert
         expect(component['areaData']().length).toEqual(0);
@@ -238,7 +242,7 @@ describe('AreasDataFormControlComponent', () => {
 
         // Act
         fixture.detectChanges();
-        await component['deleteAreaData'](1);
+        await component['deleteAreaData']('id');
 
         // Assert
         expect(component['areaData']().length).toEqual(1);
@@ -254,8 +258,10 @@ describe('AreasDataFormControlComponent', () => {
                 applicationDate: new Date(1),
                 dosePerHq: 1,
                 entryPoint: { lat: 1, lng: 1 },
-                id: 1,
+                id: 'id',
                 targetArea: [{ lat: 1, lng: 1 }],
+                comment: 'comment',
+                missionName: 'mission',
             },
         };
         jest.spyOn(dialogService, 'create').mockReturnValue({
@@ -265,7 +271,7 @@ describe('AreasDataFormControlComponent', () => {
 
         // Act
         fixture.detectChanges();
-        await component['editAreaData'](1);
+        await component['editAreaData']('id');
 
         // Assert
         expect(component['areaData']()[0]).toEqual(response.areaData);
@@ -283,7 +289,7 @@ describe('AreasDataFormControlComponent', () => {
 
         //Act
         fixture.detectChanges();
-        await component['editAreaData'](1);
+        await component['editAreaData']('id');
 
         // Assert
         expect(component['areaData']()[0]).toEqual(areaData[0]);

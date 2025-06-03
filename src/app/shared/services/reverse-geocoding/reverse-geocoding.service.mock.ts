@@ -1,6 +1,6 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { Coordinates } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { ReverseGeocodingService } from './reverse-geocoding.service';
+import { Coordinates } from '@stores/location/location.model';
 
 @Injectable({
     providedIn: 'root',

@@ -1,33 +1,32 @@
 import { isObject } from '@utils/is-object.typeguard';
-import { MapAreaSelectFormControlVM } from './components/map-area-select-form-control/map-area-select-form-control.model';
-import { MapPointSelectFormControlVM } from './components/map-point-select-form-control/map-point-select-form-control.model';
 import { DialogReasonBase } from '@services/dialog/dialog.service';
 import { BaseDialogVM } from '@components/base-dialog/base-dialog.model';
+import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
+import { Coordinates } from '@stores/location/location.model';
 
 export interface AreaDataDialogVM extends BaseDialogVM {
     type: 'areaDataDialogVM';
+    missionNameLabelKey: string;
     dosePerHqLabelKey: string;
+    coordinatesLabelKey: string;
     entryPointLabelKey: string;
     targetAreaLabelKey: string;
     applicationDateLabelKey: string;
+    commentLabelKey: string;
     cancelButtonTextKey: string;
     submitButtonTextKey: string;
     areaData: AreaData | null;
-    mapAreaSelectFormControlVM: MapAreaSelectFormControlVM;
-    mapPointSelectFormControlVM: MapPointSelectFormControlVM;
+    mapFormControlVM: MapFormControlVM;
 }
 
 export interface AreaData {
-    id: number;
+    id: string;
+    comment: string;
+    missionName: string;
     targetArea: Coordinates[];
     entryPoint: Coordinates;
     dosePerHq: number;
     applicationDate: Date;
-}
-
-export interface Coordinates {
-    lat: number;
-    lng: number;
 }
 
 export interface AreaDataDialogResultWithAreaData extends DialogReasonBase {

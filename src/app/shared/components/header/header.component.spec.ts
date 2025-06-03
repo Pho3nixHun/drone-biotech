@@ -6,6 +6,7 @@ import { LogoComponent } from '@components/header/components/logo/logo.component
 import { LogoVM } from './components/logo/logo-vm.model';
 
 @Component({
+    imports: [HeaderComponent, LogoComponent, NavComponent],
     template: `
         <app-header>
             <app-logo [vm]="vm" />
@@ -28,11 +29,9 @@ describe('HeaderComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [HeaderComponent, LogoComponent, NavComponent],
-            declarations: [TestHostComponent],
+            imports: [TestHostComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(TestHostComponent);
-        fixture.detectChanges();
         compiled = fixture.debugElement.nativeElement;
     });
 
@@ -41,6 +40,7 @@ describe('HeaderComponent', () => {
         // Arrange
 
         // Act
+        fixture.detectChanges();
 
         // Assert
         expect(compiled).toMatchSnapshot();

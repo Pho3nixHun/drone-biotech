@@ -3,7 +3,7 @@
 exports[`DeleteDialogComponent when the vm is correct should render the content 1`] = `
 <div
   id="root1"
-  ng-version="18.2.8"
+  ng-version="19.2.9"
 >
   <app-base-dialog
     class="w-80 md:w-96 block"
@@ -66,7 +66,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
 exports[`DeleteDialogComponent when the vm is not correct should not render the content if not DeleteDialogVM is provided 1`] = `
 <div
   id="root0"
-  ng-version="18.2.8"
+  ng-version="19.2.9"
 >
   <!--container-->
 </div>

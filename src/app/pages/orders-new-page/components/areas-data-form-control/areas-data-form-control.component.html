@@ -14,6 +14,9 @@
     @if (xAreaData$() | async; as xAreaData) {
         <app-card-group>
             <div class="flex items-center">
+                {{ t(vModel.missionHeaderKey) }}
+            </div>
+            <div class="flex items-center">
                 {{ t(vModel.targetAreaSizeHeaderKey) }}
             </div>
             <div class="flex items-center">
@@ -30,6 +33,9 @@
                 {{ t(vModel.distanceFromHeadOfficeHeaderKey) }}
             </div>
             <div class="flex items-center">
+                {{ t(vModel.commentHeaderKey) }}
+            </div>
+            <div class="flex items-center">
                 {{ t(vModel.actionsHeaderKey) }}
             </div>
 
@@ -37,6 +43,9 @@
                 <app-card-item
                     class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
                 >
+                    <app-key-value [label]="vModel.missionHeaderKey">
+                        {{ area.missionName }}
+                    </app-key-value>
                     <app-key-value [label]="vModel.targetAreaSizeHeaderKey">
                         {{
                             t(vModel.targetAreaSizeValueKey, {
@@ -83,6 +92,9 @@
                                 count: area.distanceFromHeadOffice,
                             })
                         }}
+                    </app-key-value>
+                    <app-key-value [label]="vModel.commentHeaderKey">
+                        {{ area.comment }}
                     </app-key-value>
                     <button
                         mat-icon-button

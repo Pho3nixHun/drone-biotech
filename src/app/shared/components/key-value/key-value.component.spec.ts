@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { KeyValueComponent } from './key-value.component';
 import { Component, input } from '@angular/core';
 import { getTranslocoModule } from 'transloco-testing.module';
@@ -9,6 +8,7 @@ const en = {
 };
 
 @Component({
+    imports: [KeyValueComponent],
     template: `
         <app-key-value [label]="vm()">
             <p>Should be projected</p>
@@ -26,7 +26,7 @@ describe('KeyValueComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                KeyValueComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en: en },
                     translocoConfig: {
@@ -35,7 +35,6 @@ describe('KeyValueComponent', () => {
                     },
                 }),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;

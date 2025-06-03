@@ -25,14 +25,13 @@ import { LoginPageService } from './login-page.service';
  */
 @Component({
     selector: 'app-login-page',
-    standalone: true,
     imports: [
         ReactiveFormsModule,
         NgClass,
         LoginFormComponent,
         TranslocoModule,
     ],
-    templateUrl: './login-page.component.html',
+    templateUrl: './login-page.component.html'
 })
 export class LoginPageComponent {
     protected readonly vm = inject(LoginPageService).getVM();

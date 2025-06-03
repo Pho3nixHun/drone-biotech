@@ -2,7 +2,7 @@
 
 exports[`AreasDataFormControlComponent should render the template when the VM is provided 1`] = `
 <app-areas-data-form-control
-  class="ng-untouched ng-pristine ng-valid"
+  class="ng-untouched ng-dirty ng-valid"
   formcontrolname="areaData"
   ng-reflect-name="areaData"
   ng-reflect-vm="[object Object]"

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AreaDataDialogComponent } from './area-data-dialog.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { provideMockEntryPointMarkerOptions } from './components/map-point-select-form-control/map-point-select-form-control.model';
+import { provideMockEntryPointMarkerOptions } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
 import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
 import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
@@ -10,15 +10,14 @@ import {
     provideMockDialogRef,
     updateDialogDataSignal,
 } from 'src/app/shared/providers/dialog-provider';
-import {
-    provideMockMapOptions,
-    provideMockPolygonOptions,
-} from './components/map-area-select-form-control/map-area-select-form-control.model';
+import { provideMockPolygonOptions } from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
 import {
     enMock,
     mockVMWithAreaData,
     mockVMWithoutAreaData,
 } from './area-data-dialog.component.mock';
+import { provideMockMapOptions } from './components/map-form-control/map-form-control.model';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('AreaDataDialogComponent', () => {
     let fixture: ComponentFixture<AreaDataDialogComponent>;
@@ -45,6 +44,7 @@ describe('AreaDataDialogComponent', () => {
                 provideMockPolygonOptions(),
                 provideMockEntryPointMarkerOptions(),
                 provideMockDialogService(),
+                provideMockStore(),
             ],
         }).compileComponents();
     });
@@ -79,14 +79,16 @@ describe('AreaDataDialogComponent', () => {
 
             // Act
             const value = component.areaDataFormGroup.getRawValue();
-            const { applicationDate, dosePerHq, entryPoint, targetArea } =
+            const { applicationDate, dosePerHq, comment, map, missionName } =
                 value;
 
             // Assert
             expect(applicationDate).toStrictEqual(new Date(10));
             expect(dosePerHq).toBe(1);
-            expect(entryPoint).toStrictEqual({ lat: 10, lng: 10 });
-            expect(targetArea).toStrictEqual([{ lat: 10, lng: 10 }]);
+            expect(map?.entryPoint).toStrictEqual({ lat: 10, lng: 10 });
+            expect(map?.targetArea).toStrictEqual([{ lat: 10, lng: 10 }]);
+            expect(comment).toStrictEqual(enMock.commentLabel);
+            expect(missionName).toStrictEqual(enMock.missionNameLabel);
         });
     });
 
@@ -116,14 +118,16 @@ describe('AreaDataDialogComponent', () => {
 
             // Act
             const value = component.areaDataFormGroup.getRawValue();
-            const { applicationDate, dosePerHq, entryPoint, targetArea } =
+            const { applicationDate, dosePerHq, comment, map, missionName } =
                 value;
 
             // Assert
             expect(applicationDate).toBe(null);
             expect(dosePerHq).toBe(null);
-            expect(entryPoint).toBe(null);
-            expect(targetArea).toBe(null);
+            expect(comment).toBe('');
+            expect(map?.entryPoint).toBe(null);
+            expect(map?.targetArea).toBe(null);
+            expect(missionName).toBe('');
         });
 
         // Unit testing
@@ -146,12 +150,16 @@ describe('AreaDataDialogComponent', () => {
             component.areaDataFormGroup.setValue({
                 applicationDate: new Date(),
                 dosePerHq: 10,
-                entryPoint: { lat: 10, lng: 10 },
-                targetArea: [
-                    { lat: 10, lng: 10 },
-                    { lat: 20, lng: 20 },
-                    { lat: 30, lng: 30 },
-                ],
+                map: {
+                    entryPoint: { lat: 10, lng: 10 },
+                    targetArea: [
+                        { lat: 10, lng: 10 },
+                        { lat: 20, lng: 20 },
+                        { lat: 30, lng: 30 },
+                    ],
+                },
+                comment: 'comment',
+                missionName: 'mission',
             });
             const closeSpy = jest.spyOn(dialogRef, 'close');
             const resetSpy = jest.spyOn(component.areaDataFormGroup, 'reset');

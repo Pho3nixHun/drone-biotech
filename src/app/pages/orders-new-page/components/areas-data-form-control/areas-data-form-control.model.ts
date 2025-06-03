@@ -12,6 +12,9 @@ export interface AreasDataFormControlVM {
     entryPointHeaderKey: string;
     entryPointValueKey: string;
 
+    missionHeaderKey: string;
+    commentHeaderKey: string;
+
     doseHeaderKey: string;
     doseValueKey: string;
 

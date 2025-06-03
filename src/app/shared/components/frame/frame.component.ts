@@ -21,9 +21,8 @@ import { TranslocoModule } from '@jsverse/transloco';
  */
 @Component({
     selector: 'app-frame',
-    standalone: true,
     templateUrl: './frame.component.html',
-    imports: [TranslocoModule],
+    imports: [TranslocoModule]
 })
 export class FrameComponent {
     vm = input.required<FrameVM>();

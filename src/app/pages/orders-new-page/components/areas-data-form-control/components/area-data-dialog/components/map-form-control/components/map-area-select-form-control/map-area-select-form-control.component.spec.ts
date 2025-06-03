@@ -1,48 +1,88 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapAreaSelectFormControlComponent } from './map-area-select-form-control.component';
-import {
-    provideMockHeadOfficeLocation,
-    updateHeadOfficeLocation,
-} from '@services/distance/distance.model';
+import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
 import {
     MapAreaSelectFormControlVM,
-    provideMockMapOptions,
+    provideMockInfoWindowOptions,
     provideMockPolygonOptions,
 } from './map-area-select-form-control.model';
+import { Coordinates } from '@stores/location/location.model';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { Component, DebugElement, input } from '@angular/core';
+import {
+    Component,
+    computed,
+    DebugElement,
+    ElementRef,
+    inject,
+    input,
+    signal,
+} from '@angular/core';
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
 import {
-    provideMapAreaSelectFormControlMockService,
+    MapAreaSelectFormControlMockService,
     updatePolygonSignal,
 } from './map-area-select-form-control.service.mock';
 import { By } from '@angular/platform-browser';
-import { ElementRefDirective } from '@directives/element-ref.directive';
+import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
+import { provideMockMapOptions } from '../../map-form-control.model';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
-const enMock = { addButtonText: 'addButton', deleteButtonText: 'deleteButton' };
-const headOfficeLocation = { lat: 10, lng: 10 };
+const enMock = {
+    addButtonText: 'addButton',
+    deleteButtonText: 'deleteButton',
+    areaValue: 'area',
+    coordinatesLabel: 'coordinates',
+    editButton: 'edit',
+};
 
 const vm: MapAreaSelectFormControlVM = {
     deleteButtonTextKey: enMock.deleteButtonText,
     addButtonTextKey: enMock.addButtonText,
-    defaultCenter: null,
+    areaValueKey: enMock.areaValue,
+    coordinatesLabelKey: enMock.coordinatesLabel,
+    editButtonTextKey: enMock.editButton,
 };
 @Component({
-    template: `<app-map-area-select-form-control [vm]="vm()" />`,
+    imports: [
+        MapAreaSelectFormControlComponent,
+        ReactiveFormsModule,
+        ElementRefDirective,
+    ],
+    template: ` <div
+            appElementRef
+            [signal]="divSignal"
+            style="height: 600px"
+        ></div>
+
+        <app-map-area-select-form-control
+            [mapRef]="mapSignal()"
+            [vm]="vm()"
+            [formControl]="control"
+        />`,
 })
 class TestHostComponent {
+    private readonly fb = inject(FormBuilder);
     public vm = input.required<MapAreaSelectFormControlVM>();
+    public control = this.fb.control<Coordinates[] | null>([]);
+    protected readonly divSignal = signal<ElementRef<HTMLElement> | null>(null);
+    protected readonly mapSignal = computed(() => {
+        const canvas = this.divSignal();
+        if (!canvas) return null;
+        return new google.maps.Map(canvas.nativeElement);
+    });
 }
 
 describe('MapAreaSelectFormControlComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
-    let service: MapAreaSelectFormControlService;
+    let component: TestHostComponent;
+    let mapAreaSelectFormControlComponent: MapAreaSelectFormControlComponent;
+    let innerDebugElement: DebugElement;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                MapAreaSelectFormControlComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {
@@ -54,15 +94,22 @@ describe('MapAreaSelectFormControlComponent', () => {
             providers: [
                 provideMockHeadOfficeLocation(),
                 provideMockMapOptions(),
+                provideMockInfoWindowOptions(),
                 provideMockPolygonOptions(),
-                provideMapAreaSelectFormControlMockService(),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
-        updateHeadOfficeLocation(headOfficeLocation);
+        TestBed.overrideProvider(MapAreaSelectFormControlService, {
+            useFactory: () => new MapAreaSelectFormControlMockService(),
+        });
         fixture = TestBed.createComponent(TestHostComponent);
-        service = TestBed.inject(MapAreaSelectFormControlService);
         compiled = fixture.debugElement.nativeElement;
+
+        component = fixture.componentInstance;
+        innerDebugElement = fixture.debugElement.query(
+            By.directive(MapAreaSelectFormControlComponent)
+        );
+        mapAreaSelectFormControlComponent = innerDebugElement.componentInstance;
+        compiled = innerDebugElement.nativeElement;
     });
 
     // Snapshot test
@@ -86,7 +133,6 @@ describe('MapAreaSelectFormControlComponent', () => {
             { lat: 20, lng: 20 },
             { lat: 30, lng: 30 },
         ]);
-
         // Act
         fixture.detectChanges();
         const addButton: DebugElement = fixture.debugElement.query(
@@ -156,9 +202,12 @@ describe('MapAreaSelectFormControlComponent', () => {
 
         //Act
         fixture.detectChanges();
-        const serviceSpy = jest.spyOn(service, 'drawPolygon');
+        const serviceSpy = jest.spyOn(
+            mapAreaSelectFormControlComponent['areaSelectService'],
+            'drawPolygon'
+        );
         fixture.debugElement
-            .query(By.css('button'))
+            .query(By.css('button.btn-primary'))
             .triggerEventHandler('click', null);
 
         //Assert
@@ -177,7 +226,10 @@ describe('MapAreaSelectFormControlComponent', () => {
 
         //Act
         fixture.detectChanges();
-        const serviceSpy = jest.spyOn(service, 'deletePolygon');
+        const serviceSpy = jest.spyOn(
+            mapAreaSelectFormControlComponent['areaSelectService'],
+            'deletePolygon'
+        );
         fixture.debugElement
             .query(By.css('button.btn-error'))
             .triggerEventHandler('click', null);
@@ -189,77 +241,15 @@ describe('MapAreaSelectFormControlComponent', () => {
     it('should initialize the map with the mapCanvas', () => {
         //Arrange
         fixture.componentRef.setInput('vm', vm);
-        const serviceSpy = jest.spyOn(service, 'initializeMap');
+        const serviceSpy = jest.spyOn(
+            mapAreaSelectFormControlComponent['areaSelectService'],
+            'initializeMap'
+        );
 
         //Act
         fixture.detectChanges();
-        const mapCanvas = fixture.debugElement.query(
-            By.directive(ElementRefDirective)
-        );
 
         // Assert
-        expect(serviceSpy).toHaveBeenCalledWith(
-            mapCanvas.nativeElement,
-            { center: headOfficeLocation },
-            null
-        );
-    });
-
-    // Unit test
-    it('should initialize the map with the defaultCenter if there is no target area', () => {
-        //Arrange
-        const center = { lat: 2, lng: 2 };
-        const vmWithCenter: MapAreaSelectFormControlVM = {
-            deleteButtonTextKey: enMock.deleteButtonText,
-            addButtonTextKey: enMock.addButtonText,
-            defaultCenter: center,
-        };
-        fixture.componentRef.setInput('vm', vmWithCenter);
-        const serviceSpy = jest.spyOn(service, 'initializeMap');
-
-        //Act
-        fixture.detectChanges();
-        const mapCanvas = fixture.debugElement.query(
-            By.directive(ElementRefDirective)
-        );
-
-        // Assert
-        expect(serviceSpy).toHaveBeenCalledWith(
-            mapCanvas.nativeElement,
-            {
-                center: center,
-            },
-            null
-        );
-    });
-
-    // Unit test
-    it('should initialize the map with the center of the target area', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', vm);
-        const serviceSpy = jest.spyOn(service, 'initializeMap');
-        const coords = [
-            { lat: 1, lng: 1 },
-            { lat: 2, lng: 2 },
-            { lat: 3, lng: 3 },
-        ];
-
-        //Act
-        fixture.debugElement
-            .query(By.directive(MapAreaSelectFormControlComponent))
-            .componentInstance.writeValue(coords);
-        fixture.detectChanges();
-        const mapCanvas = fixture.debugElement.query(
-            By.directive(ElementRefDirective)
-        );
-
-        // Assert
-        expect(serviceSpy).toHaveBeenCalledWith(
-            mapCanvas.nativeElement,
-            {
-                center: { lat: 2.0002029184309347, lng: 1.9995936371374778 },
-            },
-            coords
-        );
+        expect(serviceSpy).toHaveBeenCalledWith(component['mapSignal']());
     });
 });

@@ -22,9 +22,8 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-key-value',
-    standalone: true,
     imports: [TranslocoModule],
-    templateUrl: './key-value.component.html',
+    templateUrl: './key-value.component.html'
 })
 export class KeyValueComponent {
     public label = input.required<string>();

@@ -1,6 +1,6 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { Coordinates } from '@stores/location/location.model';
 import { LocationState } from './location.model';
-import { Coordinates } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 
 export const selectLocationState =
     createFeatureSelector<LocationState>('location');

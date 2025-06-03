@@ -16,7 +16,7 @@ RUN apt update && export DEBIAN_FRONTEND=noninteractive \
 USER node
 
 # [Optional] Uncomment if you want to install more global node modules
-RUN npm install -g npm @angular/cli@17.2 @angular/core@17.2.1 typescript@5.2.2
+RUN npm install -g npm @angular/cli@19.2.10 @angular/core@19.2.9 typescript@5.5.2
 
 # [Optional] Install OhMyZsh
 # RUN sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"

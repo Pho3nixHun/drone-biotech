@@ -71,6 +71,8 @@
     "OrdersNewPage.areasDataFormControl.totalDistanceFromHeadOfficeHeader": "Össztáv",
     "OrdersNewPage.areasDataFormControl.totalTrichogrammaRequirementHeader": "Teljes szóróanyagigény",
     "OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader": "Összterület",
+    "OrdersNewPage.areasDataFormControl.missionHeader": "Misszió",
+    "OrdersNewPage.areasDataFormControl.commentHeader": "Megjegyzés",
 
     "OrdersNewPage.areasDataFormControl.applicationDateValue": "{ applicationDate, date, long } { applicationDate, time, short }",
     "OrdersNewPage.areasDataFormControl.targetAreaSizeValue": "{count, number, :: .00} ha",
@@ -86,9 +88,18 @@
     "OrdersNewPage.areasDataDialog.dosePerHqLabel": "Dózis/hektár",
     "OrdersNewPage.areasDataDialog.entryPointLabelKey": "Behajtási hely",
     "OrdersNewPage.areasDataDialog.targetAreaLabelKey": "Terület",
+    "OrdersNewPage.areasDataDialog.missionNameLabel": "Misszió neve",
+    "OrdersNewPage.areasDataDialog.commentLabel": "Megjegyzés",
 
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel": "Koordináták",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Terület hozzáadása",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText": "Terület szerkesztése",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Terület törlése",
+    "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey": "{value, number, :: .00} ha",
+
+    "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue": "{value, number, :: .0} km",
+    "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder": "Keresés a térképen",
+
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText": "Behajtási hely hozzáadása",
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText": "Behajtás helyének törlése",
 

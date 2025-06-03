@@ -7,9 +7,9 @@ import {
 } from '@angular/cdk/overlay';
 import { ComponentPortal, Portal } from '@angular/cdk/portal';
 import { Injectable, InjectionToken, Injector, inject } from '@angular/core';
-import { getRouterSelectors } from '@ngrx/router-store';
 import { Store } from '@ngrx/store';
-import { Observable, Subject, merge, skip } from 'rxjs';
+import { Observable, Subject, map, merge, skip } from 'rxjs';
+import { selectURL } from 'src/app/stores/router/router.selectors';
 
 export interface DialogReasonBase {
     reasonType: 'submit' | 'cancel';
@@ -51,9 +51,7 @@ export class DialogService {
     private readonly overlay = inject(Overlay);
     private readonly store = inject(Store);
 
-    private readonly routerEvent$ = this.store.select(
-        getRouterSelectors().selectCurrentRoute
-    );
+    private readonly routerEvent$ = this.store.select(selectURL);
     private readonly overlayRef = this.overlay.create({
         hasBackdrop: true,
         positionStrategy: this.overlay
@@ -69,7 +67,10 @@ export class DialogService {
         component: any,
         scrollStrategy?: ScrollStrategy,
         positionStrategy?: GlobalPositionStrategy,
-        close$: Observable<void> = this.routerEvent$.pipe(skip(1))
+        close$: Observable<void> = this.routerEvent$.pipe(
+            skip(1),
+            map(() => void 0)
+        )
     ): DialogRef<R> {
         if (positionStrategy) {
             this.overlayRef.updatePositionStrategy(positionStrategy);

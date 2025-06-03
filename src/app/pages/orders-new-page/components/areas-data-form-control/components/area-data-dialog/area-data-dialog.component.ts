@@ -4,30 +4,30 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
 import { BaseDialogComponent } from '@components/base-dialog/base-dialog.component';
-import { MapAreaSelectFormControlComponent } from './components/map-area-select-form-control/map-area-select-form-control.component';
-import { MapPointSelectFormControlComponent } from './components/map-point-select-form-control/map-point-select-form-control.component';
 import {
     AreaDataDialogResultWithAreaData,
     AreaDataDialogResultWithoutAreaData,
     AreaDataDialogVM,
-    Coordinates,
     isAreaDataDialogVM,
 } from './area-data-dialog.model';
+import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
+import { v4 as uuidv4 } from 'uuid';
+import { Coordinates } from '@stores/location/location.model';
+import { isNullish } from '@utils/is-nullish.typeguard';
 
 @Component({
     selector: 'app-area-data-dialog',
-    standalone: true,
     imports: [
         NgClass,
         ReactiveFormsModule,
         TranslocoModule,
         BaseDialogComponent,
-        MapAreaSelectFormControlComponent,
-        MapPointSelectFormControlComponent,
+        MapFormControlComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
 })
 export class AreaDataDialogComponent {
+    private readonly fb = inject(FormBuilder);
     protected readonly dialogRef = inject(DIALOG_REF);
     protected readonly unknownVM = signal<unknown>(inject(DIALOG_DATA));
 
@@ -36,17 +36,23 @@ export class AreaDataDialogComponent {
         return isAreaDataDialogVM(vm) ? vm : null;
     });
 
-    private readonly fb = inject(FormBuilder);
-
     public areaDataFormGroup = this.fb.group({
-        targetArea: this.fb.control<Coordinates[] | null>(
-            this.vm()?.areaData?.targetArea ?? null,
+        missionName: this.fb.control<string>(
+            this.vm()?.areaData?.missionName ?? '',
+            [Validators.required, Validators.maxLength(120)]
+        ),
+
+        map: this.fb.control<{
+            targetArea: Coordinates[] | null;
+            entryPoint: Coordinates | null;
+        }>(
+            {
+                targetArea: this.vm()?.areaData?.targetArea ?? null,
+                entryPoint: this.vm()?.areaData?.entryPoint ?? null,
+            },
             Validators.required
         ),
-        entryPoint: this.fb.control<Coordinates | null>(
-            this.vm()?.areaData?.entryPoint ?? null,
-            Validators.required
-        ),
+
         dosePerHq: this.fb.control<number | null>(
             this.vm()?.areaData?.dosePerHq ?? null,
             [Validators.min(1), Validators.required]
@@ -55,37 +61,48 @@ export class AreaDataDialogComponent {
             this.vm()?.areaData?.applicationDate ?? null,
             Validators.required
         ),
+        comment: this.fb.control<string>(this.vm()?.areaData?.comment ?? ''),
     });
 
     protected resetFormWithCloseDialog() {
-        this.areaDataFormGroup.reset();
         const closeData: AreaDataDialogResultWithoutAreaData = {
             reasonType: 'cancel',
         };
         this.dialogRef.close(closeData);
+        this.areaDataFormGroup.reset();
     }
 
-    submitForm() {
-        if (this.areaDataFormGroup.invalid) {
-            return;
-        }
-        const { targetArea, entryPoint, dosePerHq, applicationDate } =
-            this.areaDataFormGroup.value;
+    protected submitForm() {
+        if (this.areaDataFormGroup.invalid) return;
 
-        if (targetArea && entryPoint && dosePerHq && applicationDate) {
-            const closeData: AreaDataDialogResultWithAreaData = {
-                reasonType: 'submit',
-                type: 'areaDataDialogResultWithAreaData',
-                areaData: {
-                    id: Date.now(),
-                    targetArea,
-                    entryPoint,
-                    dosePerHq,
-                    applicationDate,
-                },
-            };
-            this.areaDataFormGroup.reset();
-            this.dialogRef.close(closeData);
-        }
+        const { missionName, map, dosePerHq, applicationDate, comment } =
+            this.areaDataFormGroup.value;
+        if (
+            !map ||
+            !dosePerHq ||
+            !applicationDate ||
+            isNullish(missionName) ||
+            isNullish(comment)
+        )
+            return;
+
+        const { targetArea, entryPoint } = map;
+        if (!entryPoint || !targetArea) return;
+
+        const closeData: AreaDataDialogResultWithAreaData = {
+            reasonType: 'submit',
+            type: 'areaDataDialogResultWithAreaData',
+            areaData: {
+                id: uuidv4(),
+                missionName,
+                targetArea,
+                entryPoint,
+                dosePerHq,
+                applicationDate,
+                comment,
+            },
+        };
+        this.dialogRef.close(closeData);
+        this.areaDataFormGroup.reset();
     }
 }

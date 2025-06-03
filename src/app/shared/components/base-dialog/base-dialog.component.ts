@@ -21,9 +21,8 @@ import { BaseDialogVM } from './base-dialog.model';
  */
 @Component({
     selector: 'app-base-dialog',
-    standalone: true,
     imports: [MatIconModule, TranslocoModule],
-    templateUrl: './base-dialog.component.html',
+    templateUrl: './base-dialog.component.html'
 })
 export class BaseDialogComponent {
     public vm = input.required<BaseDialogVM>();

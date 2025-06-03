@@ -20,7 +20,6 @@ import { isWithLink } from '@interfaces/with-link.interface';
  */
 @Component({
     selector: 'app-nav-item',
-    standalone: true,
     imports: [],
     templateUrl: './nav-item.component.html',
 })

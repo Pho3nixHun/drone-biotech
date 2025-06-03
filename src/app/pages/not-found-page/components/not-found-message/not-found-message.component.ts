@@ -20,9 +20,8 @@ import { RouterModule } from '@angular/router';
  */
 @Component({
     selector: 'app-not-found-message',
-    standalone: true,
     imports: [TranslocoModule, RouterModule],
-    templateUrl: './not-found-message.component.html',
+    templateUrl: './not-found-message.component.html'
 })
 export class NotFoundMessageComponent {
     public vm = input.required<NotFoundMessageVM>();

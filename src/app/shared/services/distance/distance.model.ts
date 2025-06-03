@@ -1,15 +1,13 @@
-import { InjectionToken, signal } from '@angular/core';
-import { Coordinates } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
+import { InjectionToken } from '@angular/core';
 import { Location } from 'src/app/stores/location/location.model';
+import { Coordinates } from '@stores/location/location.model';
 
-export const provideMockHeadOfficeLocation = () => ({
+export const provideMockHeadOfficeLocation = (
+    coordinates: Coordinates = { lat: 90, lng: 90 }
+) => ({
     provide: HEAD_OFFICE_LOCATION,
-    useValue: headOfficeSignal(),
+    useValue: coordinates,
 });
-
-export const updateHeadOfficeLocation = (coordinates: Coordinates) =>
-    headOfficeSignal.set(coordinates);
-const headOfficeSignal = signal<Coordinates>({ lat: 12, lng: 12 });
 
 export const HEAD_OFFICE_LOCATION = new InjectionToken<Coordinates>(
     'Config for the location of the headOffice'

@@ -1,0 +1,20 @@
+<div class="flex flex-col space-y-2">
+    <app-map-search-input-form-control
+        [defaultCenter]="vm().defaultCenter"
+        [vm]="vm().mapSearchInputFormControlVM"
+        (changeBounds)="setMapBounds($event)"
+    />
+
+    <div appElementRef [signal]="divSignal" style="height: 600px"></div>
+
+    <app-map-area-select-form-control
+        [mapRef]="mapSignal()"
+        [vm]="vm().mapAreaSelectFormControlVM"
+        [formControl]="mapForm.controls.targetArea"
+    />
+    <app-map-point-select-form-control
+        [mapRef]="mapSignal()"
+        [vm]="vm().mapPointSelectFormControlVM"
+        [formControl]="mapForm.controls.entryPoint"
+    />
+</div>

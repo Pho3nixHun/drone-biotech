@@ -68,20 +68,20 @@ describe('OrdersNewPageComponent', () => {
 
     it('should set the areasDataFormGroup to valid if the form is fulfilled with correct values', () => {
         //Arrange
-
-        //Act
         component.areasDataFormGroup.setValue({
             areasData: [
                 {
                     applicationDate: new Date(),
                     dosePerHq: 10,
                     entryPoint: { lat: 10, lng: 10 },
-                    id: 10,
+                    id: 'id',
                     targetArea: [
                         { lat: 10, lng: 10 },
                         { lat: 20, lng: 20 },
                         { lat: 30, lng: 30 },
                     ],
+                    comment: 'comment',
+                    missionName: 'mission',
                 },
             ],
             contact: {
@@ -93,7 +93,43 @@ describe('OrdersNewPageComponent', () => {
             internalOrderNumber: 'number',
         });
 
+        //Act
+
         // Assert
         expect(component.areasDataFormGroup.valid).toBe(true);
+    });
+
+    it('should reset the value of the form after submitting if the form is valid', () => {
+        //Arrange
+        component.areasDataFormGroup.setValue({
+            areasData: [
+                {
+                    applicationDate: new Date(),
+                    dosePerHq: 10,
+                    entryPoint: { lat: 10, lng: 10 },
+                    id: 'id',
+                    targetArea: [
+                        { lat: 10, lng: 10 },
+                        { lat: 20, lng: 20 },
+                        { lat: 30, lng: 30 },
+                    ],
+                    comment: 'comment',
+                    missionName: 'mission',
+                },
+            ],
+            contact: {
+                email: 'test@gmail.com',
+                name: 'Joe',
+                phoneNumber: '06301111111',
+            },
+            endCustomer: 'customer',
+            internalOrderNumber: 'number',
+        });
+        component['submitForm']();
+
+        //Act
+
+        // Assert
+        expect(component.areasDataFormGroup.invalid).toBe(true);
     });
 });

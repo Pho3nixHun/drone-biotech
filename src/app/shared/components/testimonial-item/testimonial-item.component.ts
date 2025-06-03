@@ -23,9 +23,8 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-testimonial-item',
-    standalone: true,
     imports: [TranslocoModule],
-    templateUrl: './testimonial-item.component.html',
+    templateUrl: './testimonial-item.component.html'
 })
 export class TestimonialItemComponent {
     public vm = input.required<TestimonialItemVM>();

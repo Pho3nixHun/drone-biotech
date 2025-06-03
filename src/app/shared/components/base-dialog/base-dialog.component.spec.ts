@@ -9,6 +9,7 @@ import { By } from '@angular/platform-browser';
 const en = { title: 'value' };
 
 @Component({
+    imports: [BaseDialogComponent],
     template: `
         <app-base-dialog [vm]="vm()">
             <button>Should be projected</button>
@@ -29,7 +30,7 @@ describe('BaseDialogComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                BaseDialogComponent,
+                TestHostComponent,
                 getTranslocoModule({
                     langs: { en: en },
                     translocoConfig: {
@@ -38,7 +39,6 @@ describe('BaseDialogComponent', () => {
                     },
                 }),
             ],
-            declarations: [TestHostComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;
