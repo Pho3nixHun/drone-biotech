@@ -114,6 +114,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
     </section>
   </app-page-layout>
   <!--container-->
+  <!--container-->
 </div>
 `;
 
@@ -222,6 +223,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
     </section>
   </app-page-layout>
   <!--container-->
+  <!--container-->
 </div>
 `;
 
@@ -329,6 +331,7 @@ exports[`ProductsPageComponent should render the template when the VM is provide
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
 </div>
 `;
