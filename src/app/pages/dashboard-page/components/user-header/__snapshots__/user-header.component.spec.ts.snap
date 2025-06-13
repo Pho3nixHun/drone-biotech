@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserHeaderComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-user-header>
+    <header
+      class="flex flex-row items-center space-x-3"
+    >
+      <div
+        class="w-full flex flex-row justify-between space-x-10"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <h2>
+            Should be projected
+          </h2>
+          <p>
+            Should be projected
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-end"
+        >
+          <small>
+            Should be projected
+          </small>
+          <time>
+            Should be projected
+          </time>
+        </div>
+      </div>
+    </header>
+  </app-user-header>
+</div>
+`;

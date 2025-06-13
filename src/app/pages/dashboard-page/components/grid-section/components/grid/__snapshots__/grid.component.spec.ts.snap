@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-grid>
+    <div
+      class="grid gap-4 grid-cols-subgrid col-span-full"
+    >
+      <p>
+        Should be projected
+      </p>
+    </div>
+  </app-grid>
+</div>
+`;

@@ -1,0 +1,805 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardPageComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-page-section>
+    <section
+      class="mt-72 md:mt-25"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+        >
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-blue-600"
+                ng-reflect-ng-class="bg-blue-600"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                     DashboardPage.title 
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                     DashboardPage.roleDashboard 
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    DashboardPage.userHeader.loginText
+                  </small>
+                  <time>
+                    DashboardPage.date
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <button
+            class="btn w-fit"
+          >
+             Change role 
+          </button>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    📋
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       DashboardPage.summary.activeOrder.title 
+                    </h4>
+                    <p
+                      class="text-2xl font-semibold tracking-wider text-blue-600"
+                      ng-reflect-ng-class="text-blue-600"
+                    >
+                      <!--container-->
+                       2 
+                      <!--container-->
+                    </p>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    🌾
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       DashboardPage.summary.totalArea.title 
+                    </h4>
+                    <p
+                      class="text-2xl font-semibold tracking-wider text-green-600"
+                      ng-reflect-ng-class="text-green-600"
+                    >
+                       DashboardPage.hectareQuantity 
+                      <!--container-->
+                      <!--container-->
+                    </p>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    💰
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       DashboardPage.summary.spending.title 
+                    </h4>
+                    <p
+                      class="text-2xl font-semibold tracking-wider text-purple-600"
+                      ng-reflect-ng-class="text-purple-600"
+                    >
+                       DashboardPage.moneyQuantity 
+                      <!--container-->
+                      <!--container-->
+                    </p>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    ⏳
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       DashboardPage.summary.pending.title 
+                    </h4>
+                    <p
+                      class="text-2xl font-semibold tracking-wider text-yellow-600"
+                      ng-reflect-ng-class="text-yellow-600"
+                    >
+                      <!--container-->
+                       3 
+                      <!--container-->
+                    </p>
+                  </div>
+                </div>
+              </app-summary-item>
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <app-grid-section>
+            <div
+              class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+            >
+              <app-grid-section-header>
+                <div
+                  class="flex flex-row justify-between"
+                >
+                  <h3
+                    class="text-xl font-medium"
+                  >
+                     DashboardPage.myOrders.title 
+                  </h3>
+                  <!--container-->
+                </div>
+              </app-grid-section-header>
+              <app-grid
+                class="grid grid-cols-6"
+                ng-reflect-ng-class="grid-cols-6"
+              >
+                <div
+                  class="grid gap-4 grid-cols-subgrid col-span-full"
+                >
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.id.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.creationDate.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.areaInHa.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.status.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.moneyValue.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.actions.title 
+                  </h4>
+                  <!--container-->
+                  <div
+                    class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                  >
+                    <app-grid-item
+                      class="grid grid-cols-subgrid xl:col-span-full"
+                    >
+                      <div
+                        class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                      >
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.id.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.id.title 
+                            </p>
+                            <!--container-->
+                            <p
+                              class="font-medium text-blue-800"
+                            >
+                               B-78901 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <!--container-->
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.creationDate.tit"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.creationDate.title 
+                            </p>
+                            <!--container-->
+                            <time>
+                              DashboardPage.dateValue
+                            </time>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.areaInHa.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.areaInHa.title 
+                            </p>
+                            <!--container-->
+                            <div>
+                              347.5
+                            </div>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.status.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.status.title 
+                            </p>
+                            <!--container-->
+                            <app-labeled-badge
+                              ng-reflect-color="bg-yellow-200 text-yellow-600"
+                            >
+                              <div
+                                class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                              >
+                                 DashboardPage.active 
+                              </div>
+                            </app-labeled-badge>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.moneyValue.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.moneyValue.title 
+                            </p>
+                            <!--container-->
+                            <p>
+                               DashboardPage.moneyValue 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <a
+                          class="block w-max text-blue-500"
+                          href="/orders"
+                          ng-reflect-ng-class="text-blue-500"
+                          ng-reflect-router-link="/orders"
+                        >
+                          DashboardPage.action.details.text
+                        </a>
+                        <!--container-->
+                      </div>
+                    </app-grid-item>
+                    <!--container-->
+                    <app-grid-item
+                      class="grid grid-cols-subgrid xl:col-span-full"
+                    >
+                      <div
+                        class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                      >
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.id.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.id.title 
+                            </p>
+                            <!--container-->
+                            <p
+                              class="font-medium text-blue-800"
+                            >
+                               B-78902 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <!--container-->
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.creationDate.tit"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.creationDate.title 
+                            </p>
+                            <!--container-->
+                            <time>
+                              DashboardPage.dateValue
+                            </time>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.areaInHa.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.areaInHa.title 
+                            </p>
+                            <!--container-->
+                            <div>
+                              125.8
+                            </div>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.status.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.status.title 
+                            </p>
+                            <!--container-->
+                            <app-labeled-badge
+                              ng-reflect-color="bg-green-200 text-green-600"
+                            >
+                              <div
+                                class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              >
+                                 DashboardPage.completed 
+                              </div>
+                            </app-labeled-badge>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.moneyValue.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.moneyValue.title 
+                            </p>
+                            <!--container-->
+                            <p>
+                               DashboardPage.moneyValue 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <a
+                          class="block w-max text-blue-500"
+                          href="/orders"
+                          ng-reflect-ng-class="text-blue-500"
+                          ng-reflect-router-link="/orders"
+                        >
+                          DashboardPage.action.details.text
+                        </a>
+                        <!--container-->
+                      </div>
+                    </app-grid-item>
+                    <!--container-->
+                    <!--container-->
+                    <!--container-->
+                    <!--ng-container-->
+                    <!--container-->
+                    <!--container-->
+                    <!--container-->
+                  </div>
+                </div>
+              </app-grid>
+            </div>
+          </app-grid-section>
+          <app-grid-section>
+            <div
+              class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+            >
+              <app-grid-section-header>
+                <div
+                  class="flex flex-row justify-between"
+                >
+                  <h3
+                    class="text-xl font-medium"
+                  >
+                     DashboardPage.companyOrders.title 
+                  </h3>
+                  <!--container-->
+                </div>
+              </app-grid-section-header>
+              <app-grid
+                class="grid grid-cols-6"
+                ng-reflect-ng-class="grid-cols-6"
+              >
+                <div
+                  class="grid gap-4 grid-cols-subgrid col-span-full"
+                >
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.id.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.requester.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.creationDate.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.areaInHa.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.status.title 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
+                  >
+                     DashboardPage.moneyValue.title 
+                  </h4>
+                  <!--container-->
+                  <div
+                    class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                  >
+                    <app-grid-item
+                      class="grid grid-cols-subgrid xl:col-span-full"
+                    >
+                      <div
+                        class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                      >
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.id.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.id.title 
+                            </p>
+                            <!--container-->
+                            <p
+                              class="font-medium text-blue-800"
+                            >
+                               B-78903 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.requester.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.requester.title 
+                            </p>
+                            <!--container-->
+                            <p>
+                              Mike Thompson
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <!--container-->
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.creationDate.tit"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.creationDate.title 
+                            </p>
+                            <!--container-->
+                            <time>
+                              DashboardPage.dateValue
+                            </time>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.areaInHa.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.areaInHa.title 
+                            </p>
+                            <!--container-->
+                            <div>
+                              89.2
+                            </div>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.status.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.status.title 
+                            </p>
+                            <!--container-->
+                            <app-labeled-badge
+                              ng-reflect-color="bg-pink-200 text-pink-600"
+                            >
+                              <div
+                                class="h-fit py-2 px-4 rounded-full w-fit bg-pink-200 text-pink-600"
+                              >
+                                 DashboardPage.pending 
+                              </div>
+                            </app-labeled-badge>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.moneyValue.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.moneyValue.title 
+                            </p>
+                            <!--container-->
+                            <p>
+                               DashboardPage.moneyValue 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <!--container-->
+                      </div>
+                    </app-grid-item>
+                    <!--container-->
+                    <app-grid-item
+                      class="grid grid-cols-subgrid xl:col-span-full"
+                    >
+                      <div
+                        class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                      >
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.id.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.id.title 
+                            </p>
+                            <!--container-->
+                            <p
+                              class="font-medium text-blue-800"
+                            >
+                               B-78904 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.requester.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.requester.title 
+                            </p>
+                            <!--container-->
+                            <p>
+                              Lisa Martinez
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <!--container-->
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.creationDate.tit"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.creationDate.title 
+                            </p>
+                            <!--container-->
+                            <time>
+                              DashboardPage.dateValue
+                            </time>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.areaInHa.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.areaInHa.title 
+                            </p>
+                            <!--container-->
+                            <div>
+                              234.7
+                            </div>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.status.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.status.title 
+                            </p>
+                            <!--container-->
+                            <app-labeled-badge
+                              ng-reflect-color="bg-yellow-200 text-yellow-600"
+                            >
+                              <div
+                                class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                              >
+                                 DashboardPage.active 
+                              </div>
+                            </app-labeled-badge>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <app-key-value
+                          ng-reflect-label="DashboardPage.moneyValue.title"
+                        >
+                          <div
+                            class="duration-500 h-full flex flex-col justify-center"
+                          >
+                            <p
+                              class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                            >
+                               DashboardPage.moneyValue.title 
+                            </p>
+                            <!--container-->
+                            <p>
+                               DashboardPage.moneyValue 
+                            </p>
+                          </div>
+                          <!--container-->
+                        </app-key-value>
+                        <!--container-->
+                      </div>
+                    </app-grid-item>
+                    <!--container-->
+                    <!--container-->
+                    <!--container-->
+                    <!--ng-container-->
+                    <!--container-->
+                    <!--container-->
+                    <!--container-->
+                  </div>
+                </div>
+              </app-grid>
+            </div>
+          </app-grid-section>
+          <!--container-->
+        </section>
+      </app-frame>
+    </section>
+  </app-page-section>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
