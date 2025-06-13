@@ -1,13 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FrameComponent } from './frame.component';
+import { GridComponent } from './grid.component';
 import { Component } from '@angular/core';
 
 @Component({
-    imports: [FrameComponent],
-    template: `<app-frame><div>Should be projected</div></app-frame>`,
+    imports: [GridComponent],
+    template: `
+        <app-grid>
+            <p>Should be projected</p>
+        </app-grid>
+    `,
 })
 class TestHostComponent {}
-describe('FrameComponent', () => {
+
+describe('GridComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
 
@@ -15,18 +20,19 @@ describe('FrameComponent', () => {
         await TestBed.configureTestingModule({
             imports: [TestHostComponent],
         }).compileComponents();
+
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;
     });
 
-    //Snapshot test
+    // Snapshot testing
     it('should render the template correctly', () => {
-        //Arrange
+        // There is no need to arrange
 
-        //Act
+        // Act
         fixture.detectChanges();
 
-        //Assert
+        // Assert
         expect(compiled).toMatchSnapshot();
     });
 });

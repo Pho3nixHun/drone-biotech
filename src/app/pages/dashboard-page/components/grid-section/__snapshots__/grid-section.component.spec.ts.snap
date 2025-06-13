@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridSectionComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-grid-section>
+    <div
+      class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+    >
+      <app-grid-section-header>
+        <div
+          class="flex flex-row justify-between"
+        />
+      </app-grid-section-header>
+      <app-grid>
+        <div
+          class="grid gap-4 grid-cols-subgrid col-span-full"
+        />
+      </app-grid>
+    </div>
+  </app-grid-section>
+</div>
+`;

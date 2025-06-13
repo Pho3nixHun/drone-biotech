@@ -3,10 +3,10 @@
         <app-frame>
             <!-- Header that contains everything about the user -->
             <app-user-header>
-                <div
+                <span
                     class="h-8 w-8 rounded-full"
                     [ngClass]="mapRoleToCSSStyle(vm.userHeaderXVM.user.role)"
-                ></div>
+                ></span>
                 <h2>
                     {{
                         t(vm.userHeaderXVM.titleKey, {
