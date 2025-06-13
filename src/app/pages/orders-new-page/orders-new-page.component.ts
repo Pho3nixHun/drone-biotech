@@ -37,7 +37,7 @@ import { AreaData } from './components/areas-data-form-control/components/area-d
         AreasDataFormControlComponent,
         PageSectionComponent,
     ],
-    templateUrl: './orders-new-page.component.html'
+    templateUrl: './orders-new-page.component.html',
 })
 export class OrdersNewPageComponent {
     private readonly ordersService = inject(OrdersNewPageService);

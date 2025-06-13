@@ -41,6 +41,15 @@ export const routes: Routes = [
         data: { headerCanBeShown: true },
     },
     {
+        path: AppRouteSegment.DASHBOARD,
+        canActivate: [authenticatedUserGuard],
+        loadComponent: () =>
+            import('./pages/dashboard-page/dashboard-page.component').then(
+                (m) => m.DashboardPageComponent
+            ),
+        data: { headerCanBeShown: true },
+    },
+    {
         path: '**',
         canActivate: [authenticatedUserGuard],
         loadComponent: () =>

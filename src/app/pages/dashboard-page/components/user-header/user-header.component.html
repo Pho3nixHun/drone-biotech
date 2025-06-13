@@ -1,0 +1,11 @@
+<header class="flex flex-row items-center space-x-3">
+    <ng-content select="div" />
+    <div class="w-full flex flex-row justify-between space-x-10">
+        <div class="flex flex-col">
+            <ng-content select="[h2, p]" />
+        </div>
+        <div class="flex flex-col justify-end">
+            <ng-content select="[small, time]" />
+        </div>
+    </div>
+</header>
