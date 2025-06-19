@@ -6,6 +6,8 @@ export const mapFirebaseUser = (user: FirebaseUser): User => ({
     photoURL: user.photoURL,
     email: user.email,
     displayName: user.displayName,
+    role: 'pilot',
+    name: 'Alex Rodriguez',
 });
 
 export const mapFirebaseError = (error: AuthError): AuthenticationError => {

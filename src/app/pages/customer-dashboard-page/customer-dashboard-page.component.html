@@ -1,0 +1,140 @@
+@if (vm(); as vm) {
+    <app-dashboard-spacer *transloco="let t">
+        <app-summary-item-list>
+            @for (summary of vm.summaryXVMs; track $index) {
+                <app-summary-item>
+                    <span class="text-2xl">{{ summary.emoji }}</span>
+                    <h4 class="text-gray-700 font-medium">
+                        {{ t(summary.titleKey) }}
+                    </h4>
+                    <p
+                        class="text-2xl font-semibold tracking-wider"
+                        [ngClass]="summary.color"
+                    >
+                        @if (hasValueKey(summary.quantity)) {
+                            {{
+                                t(summary.quantity.valueKey, {
+                                    count: summary.quantity.value,
+                                })
+                            }}
+                        } @else {
+                            {{ summary.quantity.value }}
+                        }
+                    </p>
+                </app-summary-item>
+            }
+        </app-summary-item-list>
+
+        @for (gridXVM of vm.gridXVMs; track $index) {
+            <app-grid-section>
+                <app-grid-section-header>
+                    <h3 class="text-xl font-medium">
+                        {{ t(gridXVM.titleKey) }}
+                    </h3>
+                    @if (myOrdersGridXVM(gridXVM)) {
+                        <a
+                            [routerLink]="gridXVM.navigationAnchor.routerLink"
+                            class="btn btn-primary"
+                            >{{ t(gridXVM.navigationAnchor.textKey) }}
+                        </a>
+                    }
+                </app-grid-section-header>
+                <app-grid [vm]="gridXVM">
+                    <app-grid-header
+                        class="grid grid-cols-subgrid col-span-full"
+                    >
+                        @for (header of gridXVM.headerKeys; track $index) {
+                            <h4
+                                class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                            >
+                                {{ t(header) }}
+                            </h4>
+                        }
+                    </app-grid-header>
+                    <app-grid-item-list
+                        class="grid grid-cols-subgrid col-span-full"
+                    >
+                        @for (orderXVM of gridXVM.orderXVMs; track $index) {
+                            <app-grid-item
+                                class="grid grid-cols-subgrid xl:col-span-full"
+                                *transloco="let t"
+                            >
+                                <app-key-value [label]="orderXVM.idKV.key">
+                                    <p class="font-medium text-blue-800">
+                                        {{ orderXVM.idKV.value }}
+                                    </p>
+                                </app-key-value>
+
+                                @if (isCompanyOrderXVM(orderXVM)) {
+                                    <app-key-value
+                                        [label]="orderXVM.requesterKV.key"
+                                    >
+                                        <p>
+                                            {{ orderXVM.requesterKV.value }}
+                                        </p>
+                                    </app-key-value>
+                                }
+
+                                <app-key-value
+                                    [label]="orderXVM.creationDateKV.key"
+                                >
+                                    <time>{{
+                                        t(orderXVM.creationDateKV.valueKey, {
+                                            date: orderXVM.creationDateKV.value,
+                                        })
+                                    }}</time>
+                                </app-key-value>
+
+                                <app-key-value
+                                    [label]="orderXVM.totalAreaInHaKV.key"
+                                >
+                                    <div>
+                                        {{ orderXVM.totalAreaInHaKV.value }}
+                                    </div>
+                                </app-key-value>
+
+                                <app-key-value [label]="orderXVM.badgeKV.key">
+                                    <app-labeled-badge
+                                        [color]="orderXVM.badgeKV.value.color"
+                                    >
+                                        {{ t(orderXVM.badgeKV.value.textKey) }}
+                                    </app-labeled-badge>
+                                </app-key-value>
+
+                                <app-key-value
+                                    [label]="orderXVM.moneyValueKV.key"
+                                >
+                                    <p>
+                                        {{
+                                            t(orderXVM.moneyValueKV.valueKey, {
+                                                count: orderXVM.moneyValueKV
+                                                    .value,
+                                            })
+                                        }}
+                                    </p>
+                                </app-key-value>
+
+                                @if (
+                                    isMyOrderXVM(orderXVM) &&
+                                    orderXVM.navigationAnchor
+                                ) {
+                                    <a
+                                        [ngClass]="
+                                            orderXVM.navigationAnchor.textColor
+                                        "
+                                        [routerLink]="
+                                            orderXVM.navigationAnchor.routerLink
+                                        "
+                                        >{{
+                                            t(orderXVM.navigationAnchor.textKey)
+                                        }}</a
+                                    >
+                                }
+                            </app-grid-item>
+                        }
+                    </app-grid-item-list>
+                </app-grid>
+            </app-grid-section>
+        }
+    </app-dashboard-spacer>
+}

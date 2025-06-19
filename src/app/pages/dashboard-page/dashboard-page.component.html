@@ -1,344 +1,41 @@
-@if (vm(); as vm) {
-    <app-page-section *transloco="let t">
-        <app-frame>
-            <!-- Header that contains everything about the user -->
-            <app-user-header>
-                <span
-                    class="h-8 w-8 rounded-full"
-                    [ngClass]="mapRoleToCSSStyle(vm.userHeaderXVM.user.role)"
-                ></span>
-                <h2>
-                    {{
-                        t(vm.userHeaderXVM.titleKey, {
-                            name: vm.userHeaderXVM.user.name,
-                        })
-                    }}
-                </h2>
-                <p class="text-gray-600">
-                    {{
-                        t(vm.userHeaderXVM.roleDashboardKey, {
-                            role: vm.userHeaderXVM.user.role | titlecase,
-                        })
-                    }}
-                </p>
-                <small class="text-gray-600">{{
-                    t(vm.userHeaderXVM.loginTextKey)
-                }}</small>
-                <time>{{
-                    t(vm.userHeaderXVM.dateKey, {
-                        date: vm.userHeaderXVM.user.lastLoginDate,
-                    })
-                }}</time>
-            </app-user-header>
-
-            <!--Test only-->
-            <button (click)="changeUser()" class="btn w-fit">
-                Change role
-            </button>
-            <!--Test only-->
-
-            <!-- Summaries -->
-            <app-summary-item-list>
-                @for (item of vm.summaryItemList; track $index) {
-                    <app-summary-item>
-                        @let quantityKey =
-                            mapSummaryItemUnitTypeToTranslocoQuantityKey(
-                                item.unitType
-                            );
-
-                        <span class="text-2xl">{{ item.emoji }}</span>
-                        <h4 class="text-gray-700 font-medium">
-                            {{ t(item.titleKey) }}
-                        </h4>
-                        <p
-                            class="text-2xl font-semibold tracking-wider"
-                            [ngClass]="
-                                mapSummaryItemColorTypeToCSSTextColor(
-                                    item.colorType
-                                )
-                            "
-                        >
-                            @if (quantityKey) {
-                                {{
-                                    t(quantityKey, {
-                                        count: item.quantity,
-                                    })
-                                }}
-                            } @else {
-                                {{ item.quantity }}
-                            }
-                        </p>
-                    </app-summary-item>
-                }
-            </app-summary-item-list>
-
-            @for (gridXVM of vm.gridXVMs; track $index) {
-                <app-grid-section>
-                    <app-grid-section-header>
-                        <h3 class="text-xl font-medium">
-                            {{ t(gridXVM.titleKey) }}
-                        </h3>
-                        @if (gridXVM.navigationAnchor) {
-                            <a
-                                [routerLink]="
-                                    gridXVM.navigationAnchor.routerLink
-                                "
-                                class="btn btn-primary"
-                                >{{ t(gridXVM.navigationAnchor.textKey) }}
-                            </a>
-                        }
-                    </app-grid-section-header>
-                    <app-grid class="grid" [ngClass]="gridXVM.gridColsLength">
-                        @for (header of gridXVM.headerKeys; track $index) {
-                            <h4
-                                class="uppercase xl:flex items-center text-gray-500 text-sm font-medium xl:display hidden"
-                            >
-                                {{ t(header) }}
-                            </h4>
-                        }
-
-                        <div
-                            class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
-                        >
-                            @switch (gridXVM.type) {
-                                @case ('customer') {
-                                    <ng-container
-                                        [ngTemplateOutlet]="customer"
-                                        [ngTemplateOutletContext]="{
-                                            gridXVM,
-                                        }"
-                                    >
-                                    </ng-container>
-                                }
-                                @case ('pilot') {
-                                    <ng-container
-                                        [ngTemplateOutlet]="pilot"
-                                        [ngTemplateOutletContext]="{
-                                            gridXVM,
-                                        }"
-                                    >
-                                    </ng-container>
-                                }
-                                @case ('office') {
-                                    <ng-container
-                                        [ngTemplateOutlet]="operations"
-                                        [ngTemplateOutletContext]="{
-                                            gridXVM,
-                                        }"
-                                    >
-                                    </ng-container>
-                                }
-                            }
-                        </div>
-                    </app-grid>
-                </app-grid-section>
-            }
-        </app-frame>
-    </app-page-section>
-}
-
-<ng-template #customer let-gridXVM="gridXVM">
-    @if (isCustomerGridXVM(gridXVM)) {
-        @for (orderXVM of gridXVM.orderXVMs; track $index) {
-            <app-grid-item
-                class="grid grid-cols-subgrid xl:col-span-full"
-                *transloco="let t"
-            >
-                <app-key-value [label]="orderXVM.idKV.key">
-                    <p class="font-medium text-blue-800">
-                        {{ orderXVM.idKV.value }}
-                    </p>
-                </app-key-value>
-
-                @if (isCompanyOrderXVM(orderXVM)) {
-                    <app-key-value [label]="orderXVM.requesterKV.key">
-                        <p>{{ orderXVM.requesterKV.value }}</p>
-                    </app-key-value>
-                }
-
-                <app-key-value [label]="orderXVM.creationDateKV.key">
-                    <time>{{
-                        t(orderXVM.creationDateKV.valueKey, {
-                            date: orderXVM.creationDateKV.value,
-                        })
-                    }}</time>
-                </app-key-value>
-
-                <app-key-value [label]="orderXVM.totalAreaInHaKV.key">
-                    <div>{{ orderXVM.totalAreaInHaKV.value }}</div>
-                </app-key-value>
-
-                <app-key-value [label]="orderXVM.badgeKV.key">
-                    <app-labeled-badge [color]="orderXVM.badgeKV.value.color">
-                        {{ t(orderXVM.badgeKV.value.textKey) }}
-                    </app-labeled-badge>
-                </app-key-value>
-
-                <app-key-value [label]="orderXVM.moneyValueKV.key">
-                    <p>
+@defer {
+    @if (vm(); as vm) {
+        <app-page-section *transloco="let t">
+            <app-frame>
+                <!-- Header that contains everything about the user -->
+                <app-user-header>
+                    <span
+                        class="h-8 w-8 rounded-full"
+                        [ngClass]="
+                            mapRoleToCSSStyle(vm.userHeaderXVM.user.role)
+                        "
+                    ></span>
+                    <h2>
                         {{
-                            t(orderXVM.moneyValueKV.valueKey, {
-                                count: orderXVM.moneyValueKV.value,
+                            t(vm.userHeaderXVM.titleKey, {
+                                name: vm.userHeaderXVM.user.name,
+                            })
+                        }}
+                    </h2>
+                    <p class="text-gray-600">
+                        {{
+                            t(vm.userHeaderXVM.roleDashboardKey, {
+                                role: vm.userHeaderXVM.user.role | titlecase,
                             })
                         }}
                     </p>
-                </app-key-value>
+                    <small class="text-gray-600">{{
+                        t(vm.userHeaderXVM.loginTextKey)
+                    }}</small>
+                    <time>{{
+                        t(vm.userHeaderXVM.dateKey, {
+                            date: vm.userHeaderXVM.user.lastLoginDate,
+                        })
+                    }}</time>
+                </app-user-header>
 
-                @if (isMyOrderXVM(orderXVM)) {
-                    <a
-                        class="block w-max"
-                        [ngClass]="orderXVM.action.textColor"
-                        [routerLink]="orderXVM.action.routerLink"
-                        >{{ t(orderXVM.action.textKey) }}</a
-                    >
-                }
-            </app-grid-item>
-        }
+                <router-outlet />
+            </app-frame>
+        </app-page-section>
     }
-</ng-template>
-
-<ng-template #pilot let-gridXVM="gridXVM">
-    @if (isPilotGridXVM(gridXVM)) {
-        @for (missionXVM of gridXVM.missionXVMs; track $index) {
-            <app-grid-item
-                class="grid grid-cols-subgrid xl:col-span-full"
-                *transloco="let t"
-            >
-                <app-key-value [label]="missionXVM.idKV.key">
-                    <p class="font-medium text-blue-800">
-                        {{ missionXVM.idKV.value }}
-                    </p>
-                </app-key-value>
-
-                <app-key-value [label]="missionXVM.fieldNameKV.key">
-                    <p>
-                        {{ missionXVM.fieldNameKV.value }}
-                    </p>
-                </app-key-value>
-
-                <app-key-value [label]="missionXVM.areaInHaKV.key">
-                    <p>
-                        {{ missionXVM.areaInHaKV.value }}
-                    </p>
-                </app-key-value>
-
-                @if (isPilotAssignedMissionXVM(missionXVM)) {
-                    <app-key-value [label]="missionXVM.scheduledDateKV.key">
-                        <time>
-                            {{
-                                t(missionXVM.scheduledDateKV.valueKey, {
-                                    date: missionXVM.scheduledDateKV.value,
-                                })
-                            }}
-                        </time>
-                    </app-key-value>
-                } @else {
-                    <app-key-value [label]="missionXVM.completionDateKV.key">
-                        <time>
-                            {{
-                                t(missionXVM.completionDateKV.valueKey, {
-                                    date: missionXVM.completionDateKV.value,
-                                })
-                            }}
-                        </time>
-                    </app-key-value>
-                }
-
-                <app-key-value [label]="missionXVM.badgeKV.key">
-                    <app-labeled-badge [color]="missionXVM.badgeKV.value.color">
-                        {{ t(missionXVM.badgeKV.value.textKey) }}
-                    </app-labeled-badge>
-                </app-key-value>
-
-                <a
-                    [routerLink]="missionXVM.action.routerLink"
-                    [ngClass]="missionXVM.action.textColor"
-                    >{{ t(missionXVM.action.textKey) }}</a
-                >
-            </app-grid-item>
-        }
-    }
-</ng-template>
-
-<ng-template #operations let-gridXVM="gridXVM" let-role="role">
-    @if (isOperationsGridXVM(gridXVM)) {
-        @for (missionXVM of gridXVM.missionXVMs; track $index) {
-            <app-grid-item
-                class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
-                *transloco="let t"
-            >
-                <app-key-value [label]="missionXVM.idKV.key">
-                    <p class="font-medium text-blue-800">
-                        {{ missionXVM.idKV.value }}
-                    </p>
-                </app-key-value>
-
-                <app-key-value [label]="missionXVM.clientKV.key">
-                    <p>{{ missionXVM.clientKV.value }}</p>
-                </app-key-value>
-
-                <app-key-value [label]="missionXVM.fieldNameKV.key">
-                    <p>
-                        {{ missionXVM.fieldNameKV.value }}
-                    </p>
-                </app-key-value>
-
-                @if (isWithPilotKV(missionXVM.pilotKV)) {
-                    <app-key-value [label]="missionXVM.pilotKV.key">
-                        <p>{{ missionXVM.pilotKV.value.name }}</p>
-                    </app-key-value>
-                }
-
-                @if (isWithoutPilotKV(missionXVM.pilotKV)) {
-                    <app-key-value
-                        [label]="missionXVM.pilotKV.key"
-                        [ngClass]="missionXVM.pilotKV.value.color"
-                    >
-                        <p>
-                            {{ missionXVM.pilotKV.value.textKey }}
-                        </p>
-                    </app-key-value>
-                }
-
-                @if (isOperationsActiveMissionTypeXVM(missionXVM)) {
-                    <app-key-value [label]="missionXVM.areaInHaKV.key">
-                        <p>{{ missionXVM.areaInHaKV.value }}</p>
-                    </app-key-value>
-                } @else {
-                    <app-key-value [label]="missionXVM.completionDateKV.key">
-                        <time>
-                            {{
-                                t(missionXVM.completionDateKV.valueKey, {
-                                    date: missionXVM.completionDateKV.value,
-                                })
-                            }}
-                        </time>
-                    </app-key-value>
-                }
-                <app-key-value [label]="missionXVM.badgeKV.key">
-                    <app-labeled-badge [color]="missionXVM.badgeKV.value.color">
-                        {{ t(missionXVM.badgeKV.value.textKey) }}
-                    </app-labeled-badge>
-                </app-key-value>
-
-                @if (isOperationsActiveMissionTypeXVM(missionXVM)) {
-                    <div class="flex flex-row gap-3">
-                        @for (action of missionXVM.actions; track $index) {
-                            <a
-                                [routerLink]="action.routerLink"
-                                [ngClass]="action.textColor"
-                                >{{ t(action.textKey) }}</a
-                            >
-                        }
-                    </div>
-                } @else {
-                    <a
-                        [routerLink]="missionXVM.action.routerLink"
-                        [ngClass]="missionXVM.action.textColor"
-                        >{{ t(missionXVM.action.textKey) }}</a
-                    >
-                }
-            </app-grid-item>
-        }
-    }
-</ng-template>
+}

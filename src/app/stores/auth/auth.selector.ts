@@ -7,3 +7,18 @@ export const selectAuthenticationError = createSelector(
     selectAuthState,
     (auth: AuthState): AuthenticationError | null => auth.error
 );
+
+export const selectUser = createSelector(
+    selectAuthState,
+    (auth: AuthState) => auth.user
+);
+
+export const selectUserRole = createSelector(
+    selectAuthState,
+    (auth: AuthState) => auth.user?.role
+);
+
+export const selectUserName = createSelector(
+    selectAuthState,
+    (auth: AuthState) => auth.user?.name
+);
