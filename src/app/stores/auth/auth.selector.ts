@@ -31,10 +31,16 @@ export const selectUserName = createSelector(
 
 export const selectUserRole = createSelector(
     selectAuthState,
-    (auth: AuthState) => auth.user?.role
+    (auth: AuthState) => {
+        const user = auth.user;
+        return user ? user.role : undefined;
+    }
 );
 
 export const selectUserName = createSelector(
     selectAuthState,
-    (auth: AuthState) => auth.user?.name
+    (auth: AuthState) => {
+        const user = auth.user;
+        return user ? user.name : undefined;
+    }
 );
