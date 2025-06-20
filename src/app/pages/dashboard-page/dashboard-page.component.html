@@ -1,41 +1,37 @@
-@defer {
-    @if (vm(); as vm) {
-        <app-page-section *transloco="let t">
-            <app-frame>
-                <!-- Header that contains everything about the user -->
-                <app-user-header>
-                    <span
-                        class="h-8 w-8 rounded-full"
-                        [ngClass]="
-                            mapRoleToCSSStyle(vm.userHeaderXVM.user.role)
-                        "
-                    ></span>
-                    <h2>
-                        {{
-                            t(vm.userHeaderXVM.titleKey, {
-                                name: vm.userHeaderXVM.user.name,
-                            })
-                        }}
-                    </h2>
-                    <p class="text-gray-600">
-                        {{
-                            t(vm.userHeaderXVM.roleDashboardKey, {
-                                role: vm.userHeaderXVM.user.role | titlecase,
-                            })
-                        }}
-                    </p>
-                    <small class="text-gray-600">{{
-                        t(vm.userHeaderXVM.loginTextKey)
-                    }}</small>
-                    <time>{{
-                        t(vm.userHeaderXVM.dateKey, {
-                            date: vm.userHeaderXVM.user.lastLoginDate,
+@if (vm(); as vm) {
+    <app-page-section *transloco="let t">
+        <app-frame>
+            <!-- Header that contains everything about the user -->
+            <app-user-header>
+                <span
+                    class="h-8 w-8 rounded-full"
+                    [ngClass]="mapRoleToCSSStyle(vm.userHeaderXVM.user.role)"
+                ></span>
+                <h2>
+                    {{
+                        t(vm.userHeaderXVM.titleKey, {
+                            name: vm.userHeaderXVM.user.name,
                         })
-                    }}</time>
-                </app-user-header>
+                    }}
+                </h2>
+                <p class="text-gray-600">
+                    {{
+                        t(vm.userHeaderXVM.roleDashboardKey, {
+                            role: vm.userHeaderXVM.user.role | titlecase,
+                        })
+                    }}
+                </p>
+                <small class="text-gray-600">{{
+                    t(vm.userHeaderXVM.loginTextKey)
+                }}</small>
+                <time>{{
+                    t(vm.userHeaderXVM.dateKey, {
+                        date: vm.userHeaderXVM.user.lastLoginDate,
+                    })
+                }}</time>
+            </app-user-header>
 
-                <router-outlet />
-            </app-frame>
-        </app-page-section>
-    }
+            <router-outlet />
+        </app-frame>
+    </app-page-section>
 }

@@ -7,7 +7,6 @@ import {
     GridXVM,
     OfficeDashboardPageVM,
 } from './office-dashboard-page.model';
-import { officeDashboardPageConfig as config } from './office-dashboard-page.mock';
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import {
     mapMissionPerformanceToTranslocoTextKey,
@@ -16,11 +15,13 @@ import {
     mapMissionStatusTypeToTranslocoTextKey,
 } from '@interfaces/with-base-dashboard-page.interface';
 import { SummaryService } from '@services/summary/summary.service';
+import { OFFICE_DASHBOARD_PAGE_CONFIG } from './office-dashboard-page.config';
 
 @Injectable({
     providedIn: 'root',
 })
 export class OfficeDashboardPageService {
+    private readonly config = inject(OFFICE_DASHBOARD_PAGE_CONFIG);
     private readonly missionService = inject(MissionService);
     private readonly summaryService = inject(SummaryService);
 
@@ -37,34 +38,35 @@ export class OfficeDashboardPageService {
                 missions.map((mission) => ({
                     ...mission,
                     idKV: {
-                        key: config.missionConfig.id.titleKey,
+                        key: this.config.missionConfig.id.titleKey,
                         value: mission.id,
                     },
                     clientKV: {
-                        key: config.missionConfig.client.titleKey,
+                        key: this.config.missionConfig.client.titleKey,
                         value: mission.client,
                     },
                     fieldNameKV: {
-                        key: config.missionConfig.fieldName.titleKey,
+                        key: this.config.missionConfig.fieldName.titleKey,
                         value: mission.fieldName,
                     },
                     pilotKV: {
-                        key: config.missionConfig.pilot.titleKey,
+                        key: this.config.missionConfig.pilot.titleKey,
                         value: mission.pilot
                             ? { name: mission.pilot }
                             : {
                                   textKey:
-                                      config.missionConfig.pilot
+                                      this.config.missionConfig.pilot
                                           .unassignedTextKey,
-                                  color: config.missionConfig.pilot.textColor,
+                                  color: this.config.missionConfig.pilot
+                                      .textColor,
                               },
                     },
                     areaInHaKV: {
-                        key: config.missionConfig.areaInHa.titleKey,
+                        key: this.config.missionConfig.areaInHa.titleKey,
                         value: mission.areaInHa,
                     },
                     badgeKV: {
-                        key: config.missionConfig.status.titleKey,
+                        key: this.config.missionConfig.status.titleKey,
                         value: {
                             textKey: mapMissionStatusTypeToTranslocoTextKey(
                                 mission.status
@@ -78,28 +80,30 @@ export class OfficeDashboardPageService {
                     actions: [
                         {
                             textKey:
-                                config.missionConfig.actions.manage.textKey,
+                                this.config.missionConfig.actions.manage
+                                    .textKey,
                             routerLink: `/${AppRouteSegment.LANDING}`,
                             textColor:
-                                config.missionConfig.actions.manage.textColor,
+                                this.config.missionConfig.actions.manage
+                                    .textColor,
                         },
                         mission.pilot
                             ? {
                                   textKey:
-                                      config.missionConfig.actions.reassign
+                                      this.config.missionConfig.actions.reassign
                                           .textKey,
                                   routerLink: `/${AppRouteSegment.LANDING}`,
                                   textColor:
-                                      config.missionConfig.actions.reassign
+                                      this.config.missionConfig.actions.reassign
                                           .textColor,
                               }
                             : {
                                   textKey:
-                                      config.missionConfig.actions.assign
+                                      this.config.missionConfig.actions.assign
                                           .textKey,
                                   routerLink: `/${AppRouteSegment.LANDING}`,
                                   textColor:
-                                      config.missionConfig.actions.assign
+                                      this.config.missionConfig.actions.assign
                                           .textColor,
                               },
                     ],
@@ -113,35 +117,37 @@ export class OfficeDashboardPageService {
                 missions.map((mission) => ({
                     ...mission,
                     idKV: {
-                        key: config.missionConfig.id.titleKey,
+                        key: this.config.missionConfig.id.titleKey,
                         value: mission.id,
                     },
                     clientKV: {
-                        key: config.missionConfig.client.titleKey,
+                        key: this.config.missionConfig.client.titleKey,
                         value: mission.client,
                     },
                     fieldNameKV: {
-                        key: config.missionConfig.fieldName.titleKey,
+                        key: this.config.missionConfig.fieldName.titleKey,
                         value: mission.fieldName,
                     },
                     pilotKV: {
-                        key: config.missionConfig.pilot.titleKey,
+                        key: this.config.missionConfig.pilot.titleKey,
                         value: mission.pilot
                             ? { name: mission.pilot }
                             : {
                                   textKey:
-                                      config.missionConfig.pilot
+                                      this.config.missionConfig.pilot
                                           .unassignedTextKey,
-                                  color: config.missionConfig.pilot.textColor,
+                                  color: this.config.missionConfig.pilot
+                                      .textColor,
                               },
                     },
                     completionDateKV: {
-                        key: config.missionConfig.completionDate.titleKey,
+                        key: this.config.missionConfig.completionDate.titleKey,
                         value: mission.completionDate,
-                        valueKey: config.missionConfig.completionDate.valueKey,
+                        valueKey:
+                            this.config.missionConfig.completionDate.valueKey,
                     },
                     badgeKV: {
-                        key: config.missionConfig.performance.titleKey,
+                        key: this.config.missionConfig.performance.titleKey,
                         value: {
                             textKey: mapMissionPerformanceToTranslocoTextKey(
                                 mission.performance
@@ -152,10 +158,11 @@ export class OfficeDashboardPageService {
                         },
                     },
                     navigationAnchor: {
-                        textKey: config.missionConfig.actions.report.textKey,
+                        textKey:
+                            this.config.missionConfig.actions.report.textKey,
                         routerLink: `/${AppRouteSegment.LANDING}`,
                         textColor:
-                            config.missionConfig.actions.report.textColor,
+                            this.config.missionConfig.actions.report.textColor,
                     },
                 }))
             )
@@ -168,11 +175,11 @@ export class OfficeDashboardPageService {
         map(([activeMissions, completedMissions]) =>
             [
                 {
-                    ...config.activeMissionsGridConfig,
+                    ...this.config.activeMissionsGridConfig,
                     missionXVMs: activeMissions,
                 },
                 {
-                    ...config.completedMissionsGridConfig,
+                    ...this.config.completedMissionsGridConfig,
                     missionXVMs: completedMissions,
                 },
             ].filter((section) => section.missionXVMs.length > 0)

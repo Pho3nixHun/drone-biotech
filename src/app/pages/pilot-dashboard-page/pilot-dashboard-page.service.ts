@@ -8,7 +8,6 @@ import {
     PilotDashboardPageVM,
 } from './pilot-dashboard-page.model';
 import { combineLatest, map, Observable, of, switchMap } from 'rxjs';
-import { pilotDashboardPageConfig as config } from './pilot-dashboard-page.mock';
 import {
     mapMissionPerformanceToTranslocoTextKey,
     mapMissionPerformanceTypeToCCSColors,
@@ -22,6 +21,7 @@ import {
     ActiveMission,
     CompletedMission,
 } from '@services/mission/mission.service.model';
+import { PILOT_DASHBOARD_PAGE_CONFIG } from './pilot-dashboard-page.config';
 
 @Injectable({
     providedIn: 'root',
@@ -31,6 +31,8 @@ export class PilotDashboardPageService {
     private readonly missionService = inject(MissionService);
     private readonly summaryService = inject(SummaryService);
     private readonly pilotName$ = this.store.select(selectUserName);
+
+    private readonly config = inject(PILOT_DASHBOARD_PAGE_CONFIG);
 
     public getVM = (): Observable<PilotDashboardPageVM | null> => this.vm$;
 
@@ -64,24 +66,25 @@ export class PilotDashboardPageService {
                 ? missions.map((mission) => ({
                       ...mission,
                       idKV: {
-                          key: config.missionConfig.id.titleKey,
+                          key: this.config.missionConfig.id.titleKey,
                           value: mission.id,
                       },
                       fieldNameKV: {
-                          key: config.missionConfig.fieldName.titleKey,
+                          key: this.config.missionConfig.fieldName.titleKey,
                           value: mission.fieldName,
                       },
                       areaInHaKV: {
-                          key: config.missionConfig.areaInHa.titleKey,
+                          key: this.config.missionConfig.areaInHa.titleKey,
                           value: mission.areaInHa,
                       },
                       scheduledDateKV: {
-                          key: config.missionConfig.scheduledDate.titleKey,
+                          key: this.config.missionConfig.scheduledDate.titleKey,
                           value: mission.scheduledDate,
-                          valueKey: config.missionConfig.scheduledDate.valueKey,
+                          valueKey:
+                              this.config.missionConfig.scheduledDate.valueKey,
                       },
                       badgeKV: {
-                          key: config.missionConfig.status.titleKey,
+                          key: this.config.missionConfig.status.titleKey,
                           value: {
                               textKey: mapMissionStatusTypeToTranslocoTextKey(
                                   mission.status
@@ -92,10 +95,12 @@ export class PilotDashboardPageService {
                           },
                       },
                       navigationAnchor: {
-                          textKey: config.missionConfig.actions.mission.textKey,
+                          textKey:
+                              this.config.missionConfig.actions.mission.textKey,
                           routerLink: `/${AppRouteSegment.LANDING}`,
                           textColor:
-                              config.missionConfig.actions.mission.textColor,
+                              this.config.missionConfig.actions.mission
+                                  .textColor,
                       },
                   }))
                 : null
@@ -110,25 +115,26 @@ export class PilotDashboardPageService {
                 ? missions.map((mission) => ({
                       ...mission,
                       idKV: {
-                          key: config.missionConfig.id.titleKey,
+                          key: this.config.missionConfig.id.titleKey,
                           value: mission.id,
                       },
                       fieldNameKV: {
-                          key: config.missionConfig.fieldName.titleKey,
+                          key: this.config.missionConfig.fieldName.titleKey,
                           value: mission.fieldName,
                       },
                       areaInHaKV: {
-                          key: config.missionConfig.areaInHa.titleKey,
+                          key: this.config.missionConfig.areaInHa.titleKey,
                           value: mission.areaInHa,
                       },
                       completionDateKV: {
-                          key: config.missionConfig.completionDate.titleKey,
+                          key: this.config.missionConfig.completionDate
+                              .titleKey,
                           value: mission.completionDate,
                           valueKey:
-                              config.missionConfig.completionDate.valueKey,
+                              this.config.missionConfig.completionDate.valueKey,
                       },
                       badgeKV: {
-                          key: config.missionConfig.performance.titleKey,
+                          key: this.config.missionConfig.performance.titleKey,
                           value: {
                               textKey: mapMissionPerformanceToTranslocoTextKey(
                                   mission.performance
@@ -139,10 +145,12 @@ export class PilotDashboardPageService {
                           },
                       },
                       navigationAnchor: {
-                          textKey: config.missionConfig.actions.report.textKey,
+                          textKey:
+                              this.config.missionConfig.actions.report.textKey,
                           routerLink: `/${AppRouteSegment.LANDING}`,
                           textColor:
-                              config.missionConfig.actions.report.textColor,
+                              this.config.missionConfig.actions.report
+                                  .textColor,
                       },
                   }))
                 : null
@@ -157,11 +165,11 @@ export class PilotDashboardPageService {
             assignedMissions && completedMissions
                 ? [
                       {
-                          ...config.assignedMissionsGridConfig,
+                          ...this.config.assignedMissionsGridConfig,
                           missionXVMs: assignedMissions,
                       },
                       {
-                          ...config.completedMissionsGridConfig,
+                          ...this.config.completedMissionsGridConfig,
                           missionXVMs: completedMissions,
                       },
                   ].filter((section) => section.missionXVMs.length > 0)

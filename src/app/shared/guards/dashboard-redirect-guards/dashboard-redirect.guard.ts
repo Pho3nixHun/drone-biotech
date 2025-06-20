@@ -45,8 +45,9 @@ export const redirectChildGuard: CanActivateChildFn = async (
     if (!routeConfig || !role) return false;
 
     const path = routeConfig.path;
-    if (role !== path)
+    if (role !== path) {
         await router.navigate([AppRouteSegment.DASHBOARD, routes[role]]);
+    }
 
     return true;
 };

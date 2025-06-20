@@ -5,15 +5,16 @@ import {
 import { map, Observable } from 'rxjs';
 import { inject, Injectable } from '@angular/core';
 import { DashboardPageVM } from './dashboard-page.model';
-import { dashboardPageConfig as config } from './dashboard-page.mock';
 import { Store } from '@ngrx/store';
 import { selectUser } from '@stores/auth/auth.selector';
+import { DASHBOARD_PAGE_CONFIG } from './dashboard-page.config';
 
 @Injectable({
     providedIn: 'root',
 })
 export class DashboardPageService {
     private readonly store = inject(Store);
+    private readonly config = inject(DASHBOARD_PAGE_CONFIG);
 
     public getVM$(): Observable<DashboardPageVM | null> {
         return this.vm$;
@@ -27,9 +28,9 @@ export class DashboardPageService {
         map((user) =>
             user
                 ? {
-                      ...config,
+                      ...this.config,
                       userHeaderXVM: {
-                          ...config.userHeaderVM,
+                          ...this.config.userHeaderVM,
                           user,
                       },
                   }

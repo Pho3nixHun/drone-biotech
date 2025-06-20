@@ -1,8 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { combineLatest, map, Observable } from 'rxjs';
+import { combineLatest, map, Observable, of, switchMap } from 'rxjs';
 import { OrderService } from '@services/order/order.service';
 import { SummaryService } from '@services/summary/summary.service';
-import { customerDashboardPageConfig as config } from './customer-dashboard-page.mock';
 import {
     CompanyOrderXVM,
     CustomerDashboardPageVM,
@@ -11,126 +10,160 @@ import {
     mapOrderStatusTypeToTranslocoTextKey,
     MyOrderXVM,
 } from './customer-dashboard-page.model';
+import { CUSTOMER_DASHBOARD_PAGE_CONFIG } from './customer-dashboard-page.config';
+import { Store } from '@ngrx/store';
+import { selectUserName } from '@stores/auth/auth.selector';
 
 @Injectable({
     providedIn: 'root',
 })
 export class CustomerDashboardPageService {
+    private readonly store = inject(Store);
     private readonly orderService = inject(OrderService);
     private readonly summaryService = inject(SummaryService);
+    private readonly config = inject(CUSTOMER_DASHBOARD_PAGE_CONFIG);
+    private readonly userName$ = this.store.select(selectUserName);
 
-    private readonly orders$ = this.orderService.getOrders();
+    private readonly myOrders$ = this.userName$.pipe(
+        switchMap((name) =>
+            name ? this.orderService.getOrdersByName(name) : of(null)
+        )
+    );
+    private readonly companyOrders$ = this.userName$.pipe(
+        switchMap((name) => this.orderService.getCompanyOrders(name))
+    );
     private readonly filteredSummaryXVMs$ =
         this.summaryService.getSummaries('customer');
 
-    public getVM = (): Observable<CustomerDashboardPageVM> => this.vm$;
+    public getVM = (): Observable<CustomerDashboardPageVM | null> => this.vm$;
 
-    private readonly myOrders$: Observable<MyOrderXVM[]> = this.orders$.pipe(
-        map((orders) =>
-            orders.map((order) => ({
-                ...order,
-                idKV: {
-                    key: config.ordersConfig.id.titleKey,
-                    value: order.id,
-                },
-
-                statusKV: {
-                    key: config.ordersConfig.status.titleKey,
-                    value: order.status,
-                },
-                totalAreaInHaKV: {
-                    key: config.ordersConfig.areaInHa.titleKey,
-                    value: order.totalAreaInHa,
-                },
-                moneyValueKV: {
-                    key: config.ordersConfig.moneyValue.titleKey,
-                    value: order.moneyValue,
-                    valueKey: config.ordersConfig.moneyValue.valueKey,
-                },
-                creationDateKV: {
-                    key: config.ordersConfig.creationDate.titleKey,
-                    value: order.creationDate,
-                    valueKey: config.ordersConfig.creationDate.valueKey,
-                },
-                badgeKV: {
-                    key: config.ordersConfig.status.titleKey,
-                    value: {
-                        textKey: mapOrderStatusTypeToTranslocoTextKey(
-                            order.status
-                        ),
-                        color: mapOrderStatusTypeToCCSColors(order.status),
-                    },
-                },
-                navigationAnchor: config.ordersConfig.action,
-            }))
-        )
-    );
-
-    private readonly companyOrders$: Observable<CompanyOrderXVM[]> =
-        this.orders$.pipe(
+    private readonly myOrderXVMs$: Observable<MyOrderXVM[] | null> =
+        this.myOrders$.pipe(
             map((orders) =>
-                orders.map((order) => ({
-                    ...order,
-                    idKV: {
-                        key: config.ordersConfig.id.titleKey,
-                        value: order.id,
-                    },
+                orders
+                    ? orders.map((order) => ({
+                          ...order,
+                          idKV: {
+                              key: this.config.ordersConfig.id.titleKey,
+                              value: order.id,
+                          },
 
-                    statusKV: {
-                        key: config.ordersConfig.status.titleKey,
-                        value: order.status,
-                    },
-                    totalAreaInHaKV: {
-                        key: config.ordersConfig.areaInHa.titleKey,
-                        value: order.totalAreaInHa,
-                    },
-                    moneyValueKV: {
-                        key: config.ordersConfig.moneyValue.titleKey,
-                        value: order.moneyValue,
-                        valueKey: config.ordersConfig.moneyValue.valueKey,
-                    },
-                    creationDateKV: {
-                        key: config.ordersConfig.creationDate.titleKey,
-                        value: order.creationDate,
-                        valueKey: config.ordersConfig.creationDate.valueKey,
-                    },
-                    badgeKV: {
-                        key: config.ordersConfig.status.titleKey,
-                        value: {
-                            textKey: mapOrderStatusTypeToTranslocoTextKey(
-                                order.status
-                            ),
-                            color: mapOrderStatusTypeToCCSColors(order.status),
-                        },
-                    },
-                    requesterKV: {
-                        key: config.ordersConfig.requester.titleKey,
-                        value: order.requester,
-                    },
-                }))
+                          statusKV: {
+                              key: this.config.ordersConfig.status.titleKey,
+                              value: order.status,
+                          },
+                          totalAreaInHaKV: {
+                              key: this.config.ordersConfig.areaInHa.titleKey,
+                              value: order.totalAreaInHa,
+                          },
+                          moneyValueKV: {
+                              key: this.config.ordersConfig.moneyValue.titleKey,
+                              value: order.moneyValue,
+                              valueKey:
+                                  this.config.ordersConfig.moneyValue.valueKey,
+                          },
+                          creationDateKV: {
+                              key: this.config.ordersConfig.creationDate
+                                  .titleKey,
+                              value: order.creationDate,
+                              valueKey:
+                                  this.config.ordersConfig.creationDate
+                                      .valueKey,
+                          },
+                          badgeKV: {
+                              key: this.config.ordersConfig.status.titleKey,
+                              value: {
+                                  textKey: mapOrderStatusTypeToTranslocoTextKey(
+                                      order.status
+                                  ),
+                                  color: mapOrderStatusTypeToCCSColors(
+                                      order.status
+                                  ),
+                              },
+                          },
+                          navigationAnchor: this.config.ordersConfig.action,
+                      }))
+                    : null
             )
         );
 
-    private readonly gridXVMs$: Observable<GridXVM[]> = combineLatest([
-        this.myOrders$,
-        this.companyOrders$,
+    private readonly companyOrderXVMs$: Observable<CompanyOrderXVM[] | null> =
+        this.companyOrders$.pipe(
+            map((orders) =>
+                orders
+                    ? orders.map((order) => ({
+                          ...order,
+                          idKV: {
+                              key: this.config.ordersConfig.id.titleKey,
+                              value: order.id,
+                          },
+
+                          statusKV: {
+                              key: this.config.ordersConfig.status.titleKey,
+                              value: order.status,
+                          },
+                          totalAreaInHaKV: {
+                              key: this.config.ordersConfig.areaInHa.titleKey,
+                              value: order.totalAreaInHa,
+                          },
+                          moneyValueKV: {
+                              key: this.config.ordersConfig.moneyValue.titleKey,
+                              value: order.moneyValue,
+                              valueKey:
+                                  this.config.ordersConfig.moneyValue.valueKey,
+                          },
+                          creationDateKV: {
+                              key: this.config.ordersConfig.creationDate
+                                  .titleKey,
+                              value: order.creationDate,
+                              valueKey:
+                                  this.config.ordersConfig.creationDate
+                                      .valueKey,
+                          },
+                          badgeKV: {
+                              key: this.config.ordersConfig.status.titleKey,
+                              value: {
+                                  textKey: mapOrderStatusTypeToTranslocoTextKey(
+                                      order.status
+                                  ),
+                                  color: mapOrderStatusTypeToCCSColors(
+                                      order.status
+                                  ),
+                              },
+                          },
+                          requesterKV: {
+                              key: this.config.ordersConfig.requester.titleKey,
+                              value: order.requester,
+                          },
+                      }))
+                    : null
+            )
+        );
+
+    private readonly gridXVMs$: Observable<GridXVM[] | null> = combineLatest([
+        this.myOrderXVMs$,
+        this.companyOrderXVMs$,
     ]).pipe(
         map(([myOrders, companyOrders]) =>
-            [
-                {
-                    ...config.myOrdersGridConfig,
-                    orderXVMs: myOrders,
-                },
-                {
-                    ...config.companyOrdersGridConfig,
-                    orderXVMs: companyOrders,
-                },
-            ].filter((section) => section.orderXVMs.length > 0)
+            myOrders && companyOrders
+                ? [
+                      {
+                          ...this.config.myOrdersGridConfig,
+                          orderXVMs: myOrders,
+                      },
+                      {
+                          ...this.config.companyOrdersGridConfig,
+                          orderXVMs: companyOrders,
+                      },
+                  ].filter((section) => section.orderXVMs.length > 0)
+                : null
         )
     );
 
-    private readonly vm$: Observable<CustomerDashboardPageVM> = combineLatest([
-        this.gridXVMs$,
-        this.filteredSummaryXVMs$,
-    ]).pipe(map(([gridXVMs, summaryXVMs]) => ({ gridXVMs, summaryXVMs })));
+    private readonly vm$: Observable<CustomerDashboardPageVM | null> =
+        combineLatest([this.gridXVMs$, this.filteredSummaryXVMs$]).pipe(
+            map(([gridXVMs, summaryXVMs]) =>
+                gridXVMs && summaryXVMs ? { gridXVMs, summaryXVMs } : null
+            )
+        );
 }
