@@ -1,13 +1,8 @@
-import {
-    mapSummaryColorTypeToCSSTextColor,
-    mapSummaryUnitTypeToTranslocoQuantityKey,
-} from '@interfaces/with-base-dashboard-page.interface';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslocoModule } from '@jsverse/transloco';
-import { hasValueKey } from '@interfaces/value-key.interface';
 import { CustomerDashboardPageService } from './customer-dashboard-page.service';
 import { GridSectionComponent } from '@components/grid-section/grid-section.component';
 import { GridSectionHeaderComponent } from '@components/grid-section/components/grid-section-header/grid-section-header.component';
@@ -15,9 +10,7 @@ import { GridComponent } from '@components/grid-section/components/grid/grid.com
 import { GridItemComponent } from '@components/grid-section/components/grid/components/grid-item-list/components/grid-item/grid-item.component';
 import { GridItemListComponent } from '@components/grid-section/components/grid/components/grid-item-list/grid-item-list.component';
 import { GridHeaderComponent } from '@components/grid-section/components/grid/components/grid-header/grid-header.component';
-import { SummaryItemListComponent } from '@components/summary-item-list/summary-item-list.component';
 import { LabeledBadgeComponent } from '@components/labeled-badge/labeled-badge.component';
-import { SummaryItemComponent } from '@components/summary-item/summary-item.component';
 import { KeyValueComponent } from '@components/key-value/key-value.component';
 import { DashboardSpacerComponent } from '@components/dashboard-spacer/dashboard-spacer.component';
 import {
@@ -38,8 +31,6 @@ import {
         GridItemComponent,
         KeyValueComponent,
         LabeledBadgeComponent,
-        SummaryItemListComponent,
-        SummaryItemComponent,
         GridItemListComponent,
         GridHeaderComponent,
         DashboardSpacerComponent,
@@ -54,10 +45,5 @@ export class CustomerDashboardPageComponent {
 
     protected readonly isCompanyOrderXVM = isCompanyOrderXVM;
     protected readonly isMyOrderXVM = isMyOrderXVM;
-    protected readonly mapSummaryColorTypeToCSSTextColor =
-        mapSummaryColorTypeToCSSTextColor;
-    protected readonly mapSummaryUnitTypeToTranslocoQuantityKey =
-        mapSummaryUnitTypeToTranslocoQuantityKey;
-    protected readonly hasValueKey = hasValueKey;
     protected readonly myOrdersGridXVM = myOrdersGridXVM;
 }

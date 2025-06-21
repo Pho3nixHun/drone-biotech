@@ -1,7 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { combineLatest, map, Observable, of, switchMap } from 'rxjs';
 import { OrderService } from '@services/order/order.service';
-import { SummaryService } from '@services/summary/summary.service';
 import {
     CompanyOrderXVM,
     CustomerDashboardPageVM,
@@ -20,7 +19,7 @@ import { selectUserName } from '@stores/auth/auth.selector';
 export class CustomerDashboardPageService {
     private readonly store = inject(Store);
     private readonly orderService = inject(OrderService);
-    private readonly summaryService = inject(SummaryService);
+
     private readonly config = inject(CUSTOMER_DASHBOARD_PAGE_CONFIG);
     private readonly userName$ = this.store.select(selectUserName);
 
@@ -32,8 +31,6 @@ export class CustomerDashboardPageService {
     private readonly companyOrders$ = this.userName$.pipe(
         switchMap((name) => this.orderService.getCompanyOrders(name))
     );
-    private readonly filteredSummaryXVMs$ =
-        this.summaryService.getSummaries('customer');
 
     public getVM = (): Observable<CustomerDashboardPageVM | null> => this.vm$;
 
@@ -161,9 +158,7 @@ export class CustomerDashboardPageService {
     );
 
     private readonly vm$: Observable<CustomerDashboardPageVM | null> =
-        combineLatest([this.gridXVMs$, this.filteredSummaryXVMs$]).pipe(
-            map(([gridXVMs, summaryXVMs]) =>
-                gridXVMs && summaryXVMs ? { gridXVMs, summaryXVMs } : null
-            )
+        this.gridXVMs$.pipe(
+            map((gridXVMs) => (gridXVMs ? { gridXVMs } : null))
         );
 }

@@ -1,14 +1,8 @@
 import {
-    Summary,
-    SummaryColorType,
-    SummaryUnitType,
-} from '@services/summary/summary.service.model';
-import {
     MissionPerformanceType,
     MissionStatusType,
 } from '@services/mission/mission.service.model';
 import { UserRole, User as AuthUser } from '@stores/auth/auth.model';
-import { ValueType, WithKey, WithoutKey } from './value-key.interface';
 import { GridVM } from '@components/grid-section/components/grid/grid.model';
 import { WithTitle } from './with-title.interface';
 
@@ -24,51 +18,14 @@ export interface User {
     lastLoginDate: Date;
 }
 
-export interface WithBaseDashboardPageVM {
-    summaryXVMs: SummaryXVM[];
-}
-
 export interface Badge {
     textKey: string;
     color: string;
 }
 
-export type SummaryXVM = {
-    quantity: Summary['unitType'] extends SummaryUnitType
-        ? ValueType<WithKey, number>
-        : ValueType<WithoutKey, number>;
-} & Omit<Summary, 'colorType' | 'unitType' | 'quantity' | 'allowedRole'> & {
-        color: string;
-    };
-
 export interface GridConfig extends GridVM, WithTitle {
     headerKeys: string[];
 }
-
-export const mapSummaryColorTypeToCSSTextColor = (
-    type: SummaryColorType
-): string => {
-    return (
-        {
-            blue: 'text-blue-600',
-            green: 'text-green-600',
-            red: 'text-red-600',
-            purple: 'text-purple-600',
-            yellow: 'text-yellow-600',
-        }[type] || ''
-    );
-};
-
-export const mapSummaryUnitTypeToTranslocoQuantityKey = (
-    type: SummaryUnitType
-): string => {
-    return {
-        hectare: 'DashboardPage.hectareQuantity',
-        money: 'DashboardPage.moneyQuantity',
-        rating: 'DashboardPage.ratingQuantity',
-        hour: 'DashboardPage.hourQuantity',
-    }[type];
-};
 
 export const mapMissionStatusTypeToCCSColors = (
     type: MissionStatusType

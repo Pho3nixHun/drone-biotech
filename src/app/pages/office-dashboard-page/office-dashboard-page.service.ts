@@ -14,7 +14,6 @@ import {
     mapMissionStatusTypeToCCSColors,
     mapMissionStatusTypeToTranslocoTextKey,
 } from '@interfaces/with-base-dashboard-page.interface';
-import { SummaryService } from '@services/summary/summary.service';
 import { OFFICE_DASHBOARD_PAGE_CONFIG } from './office-dashboard-page.config';
 
 @Injectable({
@@ -23,11 +22,9 @@ import { OFFICE_DASHBOARD_PAGE_CONFIG } from './office-dashboard-page.config';
 export class OfficeDashboardPageService {
     private readonly config = inject(OFFICE_DASHBOARD_PAGE_CONFIG);
     private readonly missionService = inject(MissionService);
-    private readonly summaryService = inject(SummaryService);
 
     public getVM = (): Observable<OfficeDashboardPageVM> => this.vm$;
 
-    private readonly summaryXVMs$ = this.summaryService.getSummaries('office');
     private readonly activeMissions$ = this.missionService.getActiveMissions();
     private readonly completedMissions$ =
         this.missionService.getCompletedMissions();
@@ -186,8 +183,6 @@ export class OfficeDashboardPageService {
         )
     );
 
-    private readonly vm$: Observable<OfficeDashboardPageVM> = combineLatest([
-        this.operationsGridXVM$,
-        this.summaryXVMs$,
-    ]).pipe(map(([gridXVMs, summaryXVMs]) => ({ gridXVMs, summaryXVMs })));
+    private readonly vm$: Observable<OfficeDashboardPageVM> =
+        this.operationsGridXVM$.pipe(map((gridXVMs) => ({ gridXVMs })));
 }

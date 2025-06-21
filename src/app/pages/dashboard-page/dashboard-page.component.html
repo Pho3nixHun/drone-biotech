@@ -31,6 +31,31 @@
                 }}</time>
             </app-user-header>
 
+            <app-summary-item-list>
+                @for (summary of vm.summaryXVMs; track $index) {
+                    <app-summary-item>
+                        <span class="text-2xl">{{ summary.emoji }}</span>
+                        <h4 class="text-gray-700 font-medium">
+                            {{ t(summary.titleKey) }}
+                        </h4>
+                        <p
+                            class="text-2xl font-semibold tracking-wider"
+                            [ngClass]="summary.color"
+                        >
+                            @if (hasValueKey(summary.quantity)) {
+                                {{
+                                    t(summary.quantity.valueKey, {
+                                        count: summary.quantity.value,
+                                    })
+                                }}
+                            } @else {
+                                {{ summary.quantity.value }}
+                            }
+                        </p>
+                    </app-summary-item>
+                }
+            </app-summary-item-list>
+
             <router-outlet />
         </app-frame>
     </app-page-section>

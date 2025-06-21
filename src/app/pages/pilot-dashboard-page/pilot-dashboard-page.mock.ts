@@ -4,7 +4,6 @@ import {
     ActiveMission,
     CompletedMission,
 } from '@services/mission/mission.service.model';
-import { Summary } from '@services/summary/summary.service.model';
 
 export const pilotDashboardPageConfig: PilotDashboardPageConfig = {
     missionConfig: {
@@ -143,25 +142,6 @@ export const pilotDashboardPageConfigMock: PilotDashboardPageConfig = {
         ],
     },
 };
-
-export const oneSummaryForPilot: Summary[] = [
-    {
-        allowedRole: 'pilot',
-        colorType: 'blue',
-        emoji: '&',
-        quantity: 12,
-        titleKey: 'title',
-        unitType: 'hectare',
-    },
-    {
-        allowedRole: 'office',
-        colorType: 'purple',
-        emoji: '@',
-        quantity: 4,
-        titleKey: 'title',
-        unitType: 'rating',
-    },
-];
 
 export const oneActiveMission: ActiveMission[] = [
     {

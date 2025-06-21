@@ -12,7 +12,6 @@ import {
 import {
     Badge,
     GridConfig,
-    WithBaseDashboardPageVM,
 } from '@interfaces/with-base-dashboard-page.interface';
 import {
     ActiveMission,
@@ -88,7 +87,7 @@ export interface OfficeDashboardPageConfig {
     completedMissionsGridConfig: CompletedMissionsGridConfig;
 }
 
-export interface OfficeDashboardPageVM extends WithBaseDashboardPageVM {
+export interface OfficeDashboardPageVM {
     gridXVMs: GridXVM[];
 }
 

@@ -1,6 +1,5 @@
 import { inject, Injectable } from '@angular/core';
 import { MissionService } from '@services/mission/mission.service';
-import { SummaryService } from '@services/summary/summary.service';
 import {
     AssignedMissionXVM,
     CompletedMissionXVM,
@@ -29,7 +28,6 @@ import { PILOT_DASHBOARD_PAGE_CONFIG } from './pilot-dashboard-page.config';
 export class PilotDashboardPageService {
     private readonly store = inject(Store);
     private readonly missionService = inject(MissionService);
-    private readonly summaryService = inject(SummaryService);
     private readonly pilotName$ = this.store.select(selectUserName);
 
     private readonly config = inject(PILOT_DASHBOARD_PAGE_CONFIG);
@@ -54,9 +52,6 @@ export class PilotDashboardPageService {
                 : of(null)
         )
     );
-
-    private readonly filteredSummaryXVMs$ =
-        this.summaryService.getSummaries('pilot');
 
     private readonly assignedMissionXVMs$: Observable<
         AssignedMissionXVM[] | null
@@ -178,9 +173,7 @@ export class PilotDashboardPageService {
     );
 
     private readonly vm$: Observable<PilotDashboardPageVM | null> =
-        combineLatest([this.gridXVMs$, this.filteredSummaryXVMs$]).pipe(
-            map(([gridXVMs, summaryXVMs]) =>
-                gridXVMs ? { gridXVMs, summaryXVMs } : null
-            )
+        this.gridXVMs$.pipe(
+            map((gridXVMs) => (gridXVMs ? { gridXVMs } : null))
         );
 }

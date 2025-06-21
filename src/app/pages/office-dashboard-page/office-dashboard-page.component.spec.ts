@@ -16,11 +16,6 @@ import {
     updateActiveMissions,
     updateCompletedMissions,
 } from '@services/mission/mission-mock.service';
-import {
-    provideSummaryMockService,
-    updateSummaries,
-} from '@services/summary/summary-mock.service';
-import { summaries } from '@services/summary/summary.mock';
 import { OfficeDashboardPageService } from './office-dashboard-page.service';
 
 describe('OfficeDashboardPageComponent', () => {
@@ -42,7 +37,6 @@ describe('OfficeDashboardPageComponent', () => {
             providers: [
                 OfficeDashboardPageService,
                 provideMissionMockService(),
-                provideSummaryMockService(),
                 provideRouter([]),
                 {
                     provide: OFFICE_DASHBOARD_PAGE_CONFIG,
@@ -57,7 +51,6 @@ describe('OfficeDashboardPageComponent', () => {
         // Arrange
         updateActiveMissions(oneActiveMission);
         updateCompletedMissions([]);
-        updateSummaries([]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -74,7 +67,6 @@ describe('OfficeDashboardPageComponent', () => {
         // Arrange
         updateActiveMissions(threeActiveMissions);
         updateCompletedMissions([]);
-        updateSummaries([]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -91,7 +83,6 @@ describe('OfficeDashboardPageComponent', () => {
         // Arrange
         updateActiveMissions([]);
         updateCompletedMissions(oneCompletedMission);
-        updateSummaries([]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -108,24 +99,6 @@ describe('OfficeDashboardPageComponent', () => {
         // Arrange
         updateActiveMissions([]);
         updateCompletedMissions(threeCompletedMissions);
-        updateSummaries([]);
-
-        fixture = TestBed.createComponent(OfficeDashboardPageComponent);
-        compiled = fixture.debugElement.nativeElement;
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should render the summaries', () => {
-        // Arrange
-        updateActiveMissions([]);
-        updateCompletedMissions([]);
-        updateSummaries(summaries);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;

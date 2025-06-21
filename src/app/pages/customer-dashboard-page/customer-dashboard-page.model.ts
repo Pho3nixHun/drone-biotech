@@ -15,7 +15,6 @@ import {
 import {
     Badge,
     GridConfig as Config,
-    WithBaseDashboardPageVM,
 } from '@interfaces/with-base-dashboard-page.interface';
 
 export interface OrdersConfig {
@@ -57,7 +56,7 @@ export interface CustomerDashboardPageConfig {
     companyOrdersGridConfig: CompanyOrdersGridConfig;
 }
 
-export interface CustomerDashboardPageVM extends WithBaseDashboardPageVM {
+export interface CustomerDashboardPageVM {
     gridXVMs: GridXVM[];
 }
 export const myOrdersGridXVM = (obj: GridXVM): obj is MyOrdersGridConfigXVM =>

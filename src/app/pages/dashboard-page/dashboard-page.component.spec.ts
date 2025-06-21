@@ -6,6 +6,11 @@ import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { selectUser } from '@stores/auth/auth.selector';
 import { DASHBOARD_PAGE_CONFIG } from './dashboard-page.config';
 import { dashboardPageConfigMock } from './dashboard-page.mock';
+import {
+    provideSummaryMockService,
+    updateSummaries,
+} from '@services/summary/summary-mock.service';
+import { summaries } from '@services/summary/summary.mock';
 
 describe('DashboardPageComponent', () => {
     let fixture: ComponentFixture<DashboardPageComponent>;
@@ -29,6 +34,7 @@ describe('DashboardPageComponent', () => {
                     provide: DASHBOARD_PAGE_CONFIG,
                     useValue: dashboardPageConfigMock,
                 },
+                provideSummaryMockService(),
                 provideRouter([]),
                 provideMockStore({
                     selectors: [{ selector: selectUser, value: null }],
@@ -54,7 +60,7 @@ describe('DashboardPageComponent', () => {
 
     // Snapshot testing
     it('should render the template correctly if there is a user', () => {
-        // There is no need to arrange
+        // Arrange
         mockStore.overrideSelector(selectUser, {
             uid: 'id',
             displayName: 'Cristiano Ronaldo',
@@ -63,6 +69,28 @@ describe('DashboardPageComponent', () => {
             photoURL: 'url',
             role: 'customer',
         });
+        updateSummaries([]);
+
+        // Act
+        mockStore.refreshState();
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the summaries', () => {
+        // Arrange
+        mockStore.overrideSelector(selectUser, {
+            uid: 'id',
+            displayName: 'Cristiano Ronaldo',
+            email: 'test@gmail.com',
+            name: 'Name',
+            photoURL: 'url',
+            role: 'customer',
+        });
+        updateSummaries(summaries);
 
         // Act
         mockStore.refreshState();

@@ -2,7 +2,6 @@ import {
     enMock,
     oneActiveMission,
     oneCompletedMission,
-    oneSummaryForPilot,
     pilotDashboardPageConfigMock,
     threeActiveMissions,
     threeCompletedMissions,
@@ -19,10 +18,6 @@ import {
     updateActiveMissions,
     updateCompletedMissions,
 } from '@services/mission/mission-mock.service';
-import {
-    provideSummaryMockService,
-    updateSummaries,
-} from '@services/summary/summary-mock.service';
 import { PILOT_DASHBOARD_PAGE_CONFIG } from './pilot-dashboard-page.config';
 
 describe('PilotDashboardPageComponent', () => {
@@ -49,7 +44,6 @@ describe('PilotDashboardPageComponent', () => {
                     useValue: pilotDashboardPageConfigMock,
                 },
                 provideMissionMockService(),
-                provideSummaryMockService(),
                 provideMockStore({
                     selectors: [{ selector: selectUserName, value: undefined }],
                 }),
@@ -91,7 +85,6 @@ describe('PilotDashboardPageComponent', () => {
         mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
         updateActiveMissions([]);
         updateCompletedMissions([]);
-        updateSummaries([]);
 
         // Act
         mockStore.refreshState();
@@ -107,7 +100,6 @@ describe('PilotDashboardPageComponent', () => {
         mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
         updateActiveMissions(oneActiveMission);
         updateCompletedMissions([]);
-        updateSummaries([]);
 
         // Act
         mockStore.refreshState();
@@ -123,7 +115,6 @@ describe('PilotDashboardPageComponent', () => {
         mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
         updateActiveMissions(threeActiveMissions);
         updateCompletedMissions([]);
-        updateSummaries([]);
 
         // Act
         mockStore.refreshState();
@@ -138,7 +129,6 @@ describe('PilotDashboardPageComponent', () => {
         mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
         updateActiveMissions([]);
         updateCompletedMissions(oneCompletedMission);
-        updateSummaries([]);
 
         // Act
         mockStore.refreshState();
@@ -154,23 +144,6 @@ describe('PilotDashboardPageComponent', () => {
         mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
         updateActiveMissions([]);
         updateCompletedMissions(threeCompletedMissions);
-        updateSummaries([]);
-
-        // Act
-        mockStore.refreshState();
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should render one summary if one summary is provided for pilot', () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
-        updateActiveMissions([]);
-        updateCompletedMissions([]);
-        updateSummaries(oneSummaryForPilot);
 
         // Act
         mockStore.refreshState();

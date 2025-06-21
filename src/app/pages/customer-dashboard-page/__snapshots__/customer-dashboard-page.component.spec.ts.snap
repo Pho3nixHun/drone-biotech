@@ -16,15 +16,8 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
 >
   <app-dashboard-spacer>
     <div
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-10"
     >
-      <app-summary-item-list>
-        <div
-          class="flex flex-row flex-wrap gap-5 w-full"
-        >
-          <!--container-->
-        </div>
-      </app-summary-item-list>
       <app-grid-section>
         <div
           class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
@@ -803,134 +796,6 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
 </div>
 `;
 
-exports[`CustomerDashboardPageComponent should render the summaries 1`] = `
-<div
-  id="root4"
-  ng-version="19.2.9"
->
-  <app-dashboard-spacer>
-    <div
-      class="flex flex-col gap-4"
-    >
-      <app-summary-item-list>
-        <div
-          class="flex flex-row flex-wrap gap-5 w-full"
-        >
-          <app-summary-item>
-            <div
-              class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
-            >
-              <span
-                class="text-2xl"
-              >
-                📋
-              </span>
-              <div>
-                <h4
-                  class="text-gray-700 font-medium"
-                >
-                   DashboardPage.summary.activeOrder.title 
-                </h4>
-                <p
-                  class="text-2xl font-semibold tracking-wider text-blue-600"
-                  ng-reflect-ng-class="text-blue-600"
-                >
-                  <!--container-->
-                   2 
-                  <!--container-->
-                </p>
-              </div>
-            </div>
-          </app-summary-item>
-          <app-summary-item>
-            <div
-              class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
-            >
-              <span
-                class="text-2xl"
-              >
-                🌾
-              </span>
-              <div>
-                <h4
-                  class="text-gray-700 font-medium"
-                >
-                   DashboardPage.summary.totalArea.title 
-                </h4>
-                <p
-                  class="text-2xl font-semibold tracking-wider text-green-600"
-                  ng-reflect-ng-class="text-green-600"
-                >
-                   DashboardPage.hectareQuantity 
-                  <!--container-->
-                  <!--container-->
-                </p>
-              </div>
-            </div>
-          </app-summary-item>
-          <app-summary-item>
-            <div
-              class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
-            >
-              <span
-                class="text-2xl"
-              >
-                💰
-              </span>
-              <div>
-                <h4
-                  class="text-gray-700 font-medium"
-                >
-                   DashboardPage.summary.spending.title 
-                </h4>
-                <p
-                  class="text-2xl font-semibold tracking-wider text-purple-600"
-                  ng-reflect-ng-class="text-purple-600"
-                >
-                   DashboardPage.moneyQuantity 
-                  <!--container-->
-                  <!--container-->
-                </p>
-              </div>
-            </div>
-          </app-summary-item>
-          <app-summary-item>
-            <div
-              class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
-            >
-              <span
-                class="text-2xl"
-              >
-                ⏳
-              </span>
-              <div>
-                <h4
-                  class="text-gray-700 font-medium"
-                >
-                   DashboardPage.summary.pending.title 
-                </h4>
-                <p
-                  class="text-2xl font-semibold tracking-wider text-yellow-600"
-                  ng-reflect-ng-class="text-yellow-600"
-                >
-                  <!--container-->
-                   3 
-                  <!--container-->
-                </p>
-              </div>
-            </div>
-          </app-summary-item>
-          <!--container-->
-        </div>
-      </app-summary-item-list>
-      <!--container-->
-    </div>
-  </app-dashboard-spacer>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
 exports[`CustomerDashboardPageComponent should render the template correctly if there is a user 1`] = `
 <div
   id="root1"
@@ -938,15 +803,8 @@ exports[`CustomerDashboardPageComponent should render the template correctly if 
 >
   <app-dashboard-spacer>
     <div
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-10"
     >
-      <app-summary-item-list>
-        <div
-          class="flex flex-row flex-wrap gap-5 w-full"
-        >
-          <!--container-->
-        </div>
-      </app-summary-item-list>
       <!--container-->
     </div>
   </app-dashboard-spacer>
@@ -962,15 +820,8 @@ exports[`CustomerDashboardPageComponent should render two orders 1`] = `
 >
   <app-dashboard-spacer>
     <div
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-10"
     >
-      <app-summary-item-list>
-        <div
-          class="flex flex-row flex-wrap gap-5 w-full"
-        >
-          <!--container-->
-        </div>
-      </app-summary-item-list>
       <app-grid-section>
         <div
           class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"

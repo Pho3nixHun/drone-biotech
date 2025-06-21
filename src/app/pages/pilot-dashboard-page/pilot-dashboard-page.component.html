@@ -1,32 +1,7 @@
 @if (vm(); as vm) {
     <app-dashboard-spacer *transloco="let t">
-        <app-summary-item-list>
-            @for (summary of vm.summaryXVMs; track $index) {
-                <app-summary-item>
-                    <span class="text-2xl">{{ summary.emoji }}</span>
-                    <h4 class="text-gray-700 font-medium">
-                        {{ t(summary.titleKey) }}
-                    </h4>
-                    <p
-                        class="text-2xl font-semibold tracking-wider"
-                        [ngClass]="summary.color"
-                    >
-                        @if (hasValueKey(summary.quantity)) {
-                            {{
-                                t(summary.quantity.valueKey, {
-                                    count: summary.quantity.value,
-                                })
-                            }}
-                        } @else {
-                            {{ summary.quantity.value }}
-                        }
-                    </p>
-                </app-summary-item>
-            }
-        </app-summary-item-list>
-
         @for (gridXVM of vm.gridXVMs; track $index) {
-            <app-grid-section>
+            <app-grid-section *transloco="let t">
                 <app-grid-section-header>
                     <h3 class="text-xl font-medium">
                         {{ t(gridXVM.titleKey) }}
