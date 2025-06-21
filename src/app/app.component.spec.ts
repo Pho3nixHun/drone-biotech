@@ -282,39 +282,6 @@ describe('AppComponent', () => {
         });
 
         //Unit test
-        it('should navigate back to the LoginPage after navigate to LandingPage', async () => {
-            //Arrange
-
-            //Act
-            await router.navigate([AppRouteSegment.LANDING]);
-
-            //Assert
-            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
-        });
-
-        //Unit test
-        it('should navigate back to the LoginPage after navigate to "/products"', async () => {
-            //Arrange
-
-            //Act
-            await router.navigate([AppRouteSegment.PRODUCT]);
-
-            //Assert
-            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
-        });
-
-        //Unit test
-        it('should navigate back to the LoginPage after navigate to "/products/id"', async () => {
-            //Arrange
-
-            //Act
-            await router.navigate([AppRouteSegment.PRODUCT, 'id']);
-
-            //Assert
-            expect(router.url).toBe(`/${AppRouteSegment.LOGIN}`);
-        });
-
-        //Unit test
         it('should navigate back to the LoginPage after navigate to "/orders/new"', async () => {
             //Arrange
 

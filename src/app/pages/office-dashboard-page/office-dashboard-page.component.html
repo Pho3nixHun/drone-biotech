@@ -1,0 +1,155 @@
+@if (vm(); as vm) {
+    <app-dashboard-spacer *transloco="let t">
+        @for (gridXVM of vm.gridXVMs; track $index) {
+            <app-grid-section>
+                <app-grid-section-header>
+                    <h3 class="text-xl font-medium">
+                        {{ t(gridXVM.titleKey) }}
+                    </h3>
+                    @if (isActiveMissionsGridXVM(gridXVM)) {
+                        <a
+                            class="btn btn-error"
+                            [routerLink]="gridXVM.navigationAnchor.routerLink"
+                            >{{ t(gridXVM.navigationAnchor.textKey) }}</a
+                        >
+                    }
+                </app-grid-section-header>
+                <app-grid [vm]="gridXVM">
+                    <app-grid-header
+                        class="grid grid-cols-subgrid col-span-full"
+                    >
+                        @for (header of gridXVM.headerKeys; track $index) {
+                            <h4
+                                class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                            >
+                                {{ t(header) }}
+                            </h4>
+                        }
+                    </app-grid-header>
+
+                    <app-grid-item-list
+                        class="grid grid-cols-subgrid col-span-full"
+                    >
+                        @for (missionXVM of gridXVM.missionXVMs; track $index) {
+                            <app-grid-item
+                                class="grid grid-cols-subgrid xl:col-span-full"
+                            >
+                                <app-key-value [label]="missionXVM.idKV.key">
+                                    <p class="font-medium text-blue-800">
+                                        {{ missionXVM.idKV.value }}
+                                    </p>
+                                </app-key-value>
+                                <app-key-value
+                                    [label]="missionXVM.clientKV.key"
+                                >
+                                    <p>{{ missionXVM.clientKV.value }}</p>
+                                </app-key-value>
+                                <app-key-value
+                                    [label]="missionXVM.fieldNameKV.key"
+                                >
+                                    <p>
+                                        {{ missionXVM.fieldNameKV.value }}
+                                    </p>
+                                </app-key-value>
+                                @if (isWithPilotKV(missionXVM.pilotKV)) {
+                                    <app-key-value
+                                        [label]="missionXVM.pilotKV.key"
+                                    >
+                                        <p>
+                                            {{ missionXVM.pilotKV.value.name }}
+                                        </p>
+                                    </app-key-value>
+                                }
+                                @if (isWithoutPilotKV(missionXVM.pilotKV)) {
+                                    <app-key-value
+                                        [label]="missionXVM.pilotKV.key"
+                                        [ngClass]="
+                                            missionXVM.pilotKV.value.color
+                                        "
+                                    >
+                                        <p>
+                                            {{
+                                                t(
+                                                    missionXVM.pilotKV.value
+                                                        .textKey
+                                                )
+                                            }}
+                                        </p>
+                                    </app-key-value>
+                                }
+                                @if (isActiveMissionXVM(missionXVM)) {
+                                    <app-key-value
+                                        [label]="missionXVM.areaInHaKV.key"
+                                    >
+                                        <p>{{ missionXVM.areaInHaKV.value }}</p>
+                                    </app-key-value>
+                                } @else {
+                                    <app-key-value
+                                        [label]="
+                                            missionXVM.completionDateKV.key
+                                        "
+                                    >
+                                        <time>
+                                            {{
+                                                t(
+                                                    missionXVM.completionDateKV
+                                                        .valueKey,
+                                                    {
+                                                        date: missionXVM
+                                                            .completionDateKV
+                                                            .value,
+                                                    }
+                                                )
+                                            }}
+                                        </time>
+                                    </app-key-value>
+                                }
+                                <app-key-value [label]="missionXVM.badgeKV.key">
+                                    <app-labeled-badge
+                                        [color]="missionXVM.badgeKV.value.color"
+                                    >
+                                        {{
+                                            t(missionXVM.badgeKV.value.textKey)
+                                        }}
+                                    </app-labeled-badge>
+                                </app-key-value>
+
+                                @if (isActiveMissionXVM(missionXVM)) {
+                                    <div class="flex flex-row gap-3">
+                                        @for (
+                                            action of missionXVM.actions;
+                                            track $index
+                                        ) {
+                                            <a
+                                                [routerLink]="action.routerLink"
+                                                [ngClass]="action.textColor"
+                                                >{{ t(action.textKey) }}</a
+                                            >
+                                        }
+                                    </div>
+                                } @else {
+                                    <a
+                                        [routerLink]="
+                                            missionXVM.navigationAnchor
+                                                .routerLink
+                                        "
+                                        [ngClass]="
+                                            missionXVM.navigationAnchor
+                                                .textColor
+                                        "
+                                        >{{
+                                            t(
+                                                missionXVM.navigationAnchor
+                                                    .textKey
+                                            )
+                                        }}</a
+                                    >
+                                }
+                            </app-grid-item>
+                        }
+                    </app-grid-item-list>
+                </app-grid>
+            </app-grid-section>
+        }
+    </app-dashboard-spacer>
+}

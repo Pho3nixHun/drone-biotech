@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardSpacerComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <div>
+        Should be projected
+      </div>
+    </div>
+  </app-dashboard-spacer>
+</div>
+`;
