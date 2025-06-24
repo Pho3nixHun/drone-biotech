@@ -1,0 +1,12 @@
+<div class="w-full flex flex-row space-x-3">
+    <ng-content select="img" />
+    <div
+        class="bg-gray-200 w-full flex flex-row justify-between p-3 rounded-lg"
+    >
+        <div>
+            <ng-content select="h3" />
+            <ng-content select="p" />
+        </div>
+        <ng-content select="time" />
+    </div>
+</div>

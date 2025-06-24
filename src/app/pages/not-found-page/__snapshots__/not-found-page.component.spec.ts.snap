@@ -9,7 +9,7 @@ exports[`NotFoundPageComponent should render the template 1`] = `
     class="flex flex-col items-center justify-center min-h-screen w-full flex-grow"
   >
     <section
-      class="mt-72 md:mt-25"
+      class="mt-80 md:mt-32 flex flex-col space-y-28"
     >
       <app-not-found-message>
         <!--container-->
