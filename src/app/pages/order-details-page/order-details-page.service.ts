@@ -43,7 +43,6 @@ export class OrderDetailsPageService {
                         value: {
                             key: this.config.headerConfig.createdDateValueKey,
                             params: { date: order.creationDate },
-
                         },
                     },
                     {
@@ -51,7 +50,6 @@ export class OrderDetailsPageService {
                         value: {
                             key: this.config.headerConfig.totalAreaValueKey,
                             params: { area: order.totalAreaInHa },
-
                         },
                     },
                 ],
