@@ -1,4 +1,3 @@
-import { FrameVM } from '@components/frame/frame-vm';
 import { HeroVM } from '@components/hero/hero-vm.model';
 import { PartnerLogoVM } from '@components/partner-list/components/partner-logo/partner-logo-vm.model';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
@@ -6,6 +5,7 @@ import { TestimonialItemVM } from '@components/testimonial-item/testimonial-item
 import { isWithId, WithId } from '@interfaces/with-id.interface';
 import { WithLink } from '@interfaces/with-link.interface';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
+import { WithTitle } from '@interfaces/with-title.interface';
 
 // We use `interface` here because it's semantically appropriate
 // for extending object structures and ensures clear intent for others.
@@ -35,6 +35,8 @@ export const isWithProductItemXVMs = (
 ): obj is WithProductItemXVMs => {
     return 'productItemXVMs' in obj;
 };
+
+type FrameVM = WithTitle;
 
 export interface ProductFrame extends FrameVM, WithId, WithProductItemXVMs {}
 

@@ -27,7 +27,8 @@
 </app-page-section>
 
 <ng-template #productFrame let-vm="frameVM">
-    <app-frame [id]="vm.id" [vm]="vm">
+    <app-frame [id]="vm.id">
+        <h2>{{ vm.titleKey | transloco }}</h2>
         <app-product-list>
             @for (item of vm.productItemXVMs; track $index) {
                 <app-product-item [vm]="item" [routerLink]="item.routerLink" />
@@ -37,7 +38,8 @@
 </ng-template>
 
 <ng-template #partnerFrame let-vm="frameVM">
-    <app-frame [id]="vm.id" [vm]="vm">
+    <app-frame [id]="vm.id">
+        <h2>{{ vm.titleKey | transloco }}</h2>
         @if (vm.partnerLogoXVMs; as partnerLogoXVMs) {
             <app-partner-list>
                 @for (logo of partnerLogoXVMs; track $index) {

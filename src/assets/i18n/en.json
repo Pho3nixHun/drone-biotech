@@ -106,5 +106,14 @@
     "OrdersNewPage.deleteDialog.title": "Are you sure?",
     "OrdersNewPage.deleteDialog.warningText": "Do you really want to delete these records? This process cannot be undone.",
     "OrdersNewPage.deleteDialog.submitButtonText": "Delete",
-    "OrdersNewPage.deleteDialog.cancelButtonText": "Cancel"
+    "OrdersNewPage.deleteDialog.cancelButtonText": "Cancel",
+
+    "OrderDetailsPage.header.idTitle": "Order #{id}",
+    "OrderDetailsPage.header.clientText": "Client:",
+    "OrderDetailsPage.header.createdDateText": "Created:",
+    "OrderDetailsPage.header.createdDateValue": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.header.totalAreaText": "Total area:",
+    "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
+    "OrderDetailsPage.header.addNewMissionButtonText": "Add new mission",
+    "OrderDetailsPage.header.status.active": "Active"
 }

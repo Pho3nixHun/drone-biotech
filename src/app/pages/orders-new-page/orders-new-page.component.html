@@ -1,6 +1,7 @@
 @if (vm(); as vm) {
     <app-page-section>
-        <app-frame [vm]="vm.frameXVM" *transloco="let t">
+        <app-frame *transloco="let t">
+            <h2>{{ t(vm.frameXVM.titleKey) }}</h2>
             <!-- Form areasDataFormGroup -->
             <form
                 [formGroup]="areasDataFormGroup"

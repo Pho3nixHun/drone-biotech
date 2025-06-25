@@ -1,0 +1,46 @@
+@if (vm(); as vm) {
+    <app-page-section *transloco="let t">
+        <app-frame>
+            <app-header>
+                <h2>
+                    {{
+                        t(vm.headerXVM.idTitleKey, {
+                            id: vm.headerXVM.id,
+                        })
+                    }}
+                </h2>
+
+                <app-status [vm]="vm.headerXVM.statusXVM">
+                    {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
+                </app-status>
+
+                <button class="btn btn-primary w-fit truncate">
+                    {{ t(vm.headerXVM.addNewMissionButtonTextKey) }}
+                </button>
+
+                <app-summary-list>
+                    @for (summary of vm.headerXVM.summaryXVMs; track $index) {
+                        <app-summary>
+                            <p class="text-gray-600">
+                                {{ t(summary.textKey) }}
+                            </p>
+
+                            <p class="font-medium">
+                                @if (isTranslateInput(summary.value)) {
+                                    {{
+                                        t(
+                                            summary.value.key,
+                                            summary.value.params
+                                        )
+                                    }}
+                                } @else {
+                                    {{ summary.value }}
+                                }
+                            </p>
+                        </app-summary>
+                    }
+                </app-summary-list>
+            </app-header>
+        </app-frame>
+    </app-page-section>
+}

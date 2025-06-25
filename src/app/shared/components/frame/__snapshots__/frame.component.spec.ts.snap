@@ -1,24 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrameComponent should render the template when the VM is provided 1`] = `
+exports[`FrameComponent should render the template 1`] = `
 <div
   id="root0"
   ng-version="19.2.9"
 >
-  <app-frame
-    ng-reflect-vm="[object Object]"
-  >
+  <app-frame>
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
     >
-      <h2>
-        Our Products
-      </h2>
       <div>
         Should be projected
       </div>
     </section>
-    <!--container-->
   </app-frame>
 </div>
 `;

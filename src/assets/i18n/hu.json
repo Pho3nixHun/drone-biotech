@@ -106,5 +106,14 @@
     "OrdersNewPage.deleteDialog.title": "Biztos vagy benne?",
     "OrdersNewPage.deleteDialog.warningText": "Valóban ki szeretnéd törölni ezeket az adatokat? Ez a művelet nem visszafordítható.",
     "OrdersNewPage.deleteDialog.submitButtonText": "Törlés",
-    "OrdersNewPage.deleteDialog.cancelButtonText": "Vissza"
+    "OrdersNewPage.deleteDialog.cancelButtonText": "Vissza",
+
+    "OrderDetailsPage.header.idTitle": "Megrendelés #{id}",
+    "OrderDetailsPage.header.clientText": "Ügyfél:",
+    "OrderDetailsPage.header.createdDateText": "Létrehozva:",
+    "OrderDetailsPage.header.createdDateValue": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.header.totalAreaText": "Teljes terület:",
+    "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
+    "OrderDetailsPage.header.addNewMissionButtonText": "Új küldetés hozzáadása",
+    "OrderDetailsPage.header.status.active": "Aktív"
 }
