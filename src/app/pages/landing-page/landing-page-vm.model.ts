@@ -36,7 +36,9 @@ export const isWithProductItemXVMs = (
     return 'productItemXVMs' in obj;
 };
 
-export interface ProductFrame extends WithTitle, WithId, WithProductItemXVMs {}
+type FrameVM = WithTitle;
+
+export interface ProductFrame extends FrameVM, WithId, WithProductItemXVMs {}
 
 export const isProductFrame = (frame: FrameXVM): frame is ProductFrame => {
     return isWithId(frame) && isWithProductItemXVMs(frame);

@@ -7,6 +7,8 @@ import { orders } from './order.service.mock';
     providedIn: 'root',
 })
 export class OrderService {
+    public getOrder = () => of(orders);
+
     public readonly getOrdersByName = (name: string): Observable<Order[]> =>
         of(orders).pipe(
             map((orders) => orders.filter((order) => order.requester === name))

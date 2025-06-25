@@ -1,13 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FrameComponent } from './frame.component';
+
+import { SummaryListComponent } from './summary-list.component';
+import { SummaryComponent } from './components/summary/summary.component';
 import { Component } from '@angular/core';
 
 @Component({
-    imports: [FrameComponent],
-    template: `<app-frame><div>Should be projected</div></app-frame>`,
+    imports: [SummaryListComponent, SummaryComponent],
+    template: `
+        <app-summary-list>
+            <app-summary />
+        </app-summary-list>
+    `,
 })
 class TestHostComponent {}
-describe('FrameComponent', () => {
+
+describe('SummaryListComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
 
@@ -15,6 +22,7 @@ describe('FrameComponent', () => {
         await TestBed.configureTestingModule({
             imports: [TestHostComponent],
         }).compileComponents();
+
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;
     });
@@ -22,10 +30,10 @@ describe('FrameComponent', () => {
     //Snapshot test
     it('should render the template', () => {
         //Arrange
+        /*No need for arrange*/
 
         //Act
         fixture.detectChanges();
-
         //Assert
         expect(compiled).toMatchSnapshot();
     });

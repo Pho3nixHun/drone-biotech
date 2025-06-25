@@ -108,6 +108,15 @@
     "OrdersNewPage.deleteDialog.submitButtonText": "Delete",
     "OrdersNewPage.deleteDialog.cancelButtonText": "Cancel",
 
+    "OrderDetailsPage.header.idTitle": "Order #{id}",
+    "OrderDetailsPage.header.clientText": "Client:",
+    "OrderDetailsPage.header.createdDateText": "Created:",
+    "OrderDetailsPage.header.createdDateValue": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.header.totalAreaText": "Total area:",
+    "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
+    "OrderDetailsPage.header.addNewMissionButtonText": "Add new mission",
+    "OrderDetailsPage.header.status.active": "Active",
+
     "DashboardPage.userHeader.title": "Welcome back, {name}",
     "DashboardPage.userHeader.roleDashboard": "{ role } dashboard",
     "DashboardPage.userHeader.loginText": "Last login",

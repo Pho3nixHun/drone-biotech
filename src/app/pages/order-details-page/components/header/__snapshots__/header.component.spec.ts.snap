@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-header>
+    <div
+      class="flex flex-col space-y-4"
+    >
+      <div
+        class="flex flex-row items-start justify-between"
+      >
+        <div>
+          <h2>
+            Title
+          </h2>
+        </div>
+        <div
+          class="flex flex-row space-x-3 items-center"
+        >
+          <app-status
+            ng-reflect-vm="[object Object]"
+          >
+            <p
+              class="font-medium rounded-full w-max px-3 py-1 flex items-center text-blue-500"
+              ng-reflect-ng-class="text-blue-500"
+            >
+              Status
+            </p>
+          </app-status>
+          <button>
+            Button
+          </button>
+        </div>
+      </div>
+      <app-summary-list>
+        <div
+          class="flex flex-col lg:flex-row justify-between"
+        />
+      </app-summary-list>
+    </div>
+  </app-header>
+</div>
+`;

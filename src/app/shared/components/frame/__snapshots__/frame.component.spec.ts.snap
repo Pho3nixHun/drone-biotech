@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrameComponent should render the template correctly 1`] = `
+exports[`FrameComponent should render the template 1`] = `
 <div
   id="root0"
   ng-version="19.2.9"
 >
+  <app-frame>
   <app-frame>
     <section
       class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"

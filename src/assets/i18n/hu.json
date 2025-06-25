@@ -108,6 +108,15 @@
     "OrdersNewPage.deleteDialog.submitButtonText": "Törlés",
     "OrdersNewPage.deleteDialog.cancelButtonText": "Vissza",
 
+    "OrderDetailsPage.header.idTitle": "Megrendelés #{id}",
+    "OrderDetailsPage.header.clientText": "Ügyfél:",
+    "OrderDetailsPage.header.createdDateText": "Létrehozva:",
+    "OrderDetailsPage.header.createdDateValue": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.header.totalAreaText": "Teljes terület:",
+    "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
+    "OrderDetailsPage.header.addNewMissionButtonText": "Új küldetés hozzáadása",
+    "OrderDetailsPage.header.status.active": "Aktív",
+
     "DashboardPage.userHeader.title": "Üdv újra, {name}",
     "DashboardPage.userHeader.roleDashboard": "{ role } irányítópult",
     "DashboardPage.userHeader.loginText": "Utolsó bejelentkezés",
