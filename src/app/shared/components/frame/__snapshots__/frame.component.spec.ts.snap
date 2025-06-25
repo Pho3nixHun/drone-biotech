@@ -25,9 +25,7 @@ exports[`FrameComponent should render the template when the vm is provided 1`] =
   id="root0"
   ng-version="19.2.9"
 >
-  <app-frame
-    ng-reflect-vm="[object Object]"
-  >
+  <app-frame>
     <section
       class="flex flex-col gap-y-10 py-10"
     >
@@ -39,7 +37,6 @@ exports[`FrameComponent should render the template when the vm is provided 1`] =
         Should be projected
       </div>
     </section>
-    <!--container-->
   </app-frame>
 </div>
 `;

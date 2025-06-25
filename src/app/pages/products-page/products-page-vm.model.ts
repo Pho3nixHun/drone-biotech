@@ -1,4 +1,5 @@
 import { WithTitle } from '@interfaces/with-title.interface';
+import { WithTitle } from '@interfaces/with-title.interface';
 import { ProductItemXVM } from '../landing-page/landing-page-vm.model';
 
 type FrameXVM = WithTitle;

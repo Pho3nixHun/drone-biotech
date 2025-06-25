@@ -49,7 +49,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -147,12 +146,10 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -406,7 +403,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -468,7 +464,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -566,12 +561,10 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -770,7 +763,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -832,7 +824,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -849,12 +840,10 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1108,7 +1097,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -1170,7 +1158,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1268,12 +1255,10 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1359,7 +1344,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -1441,7 +1425,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1539,12 +1522,10 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1798,7 +1779,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -1860,7 +1840,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1958,12 +1937,10 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2173,7 +2150,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -2235,7 +2211,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2279,12 +2254,10 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2538,7 +2511,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -2600,7 +2572,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2698,12 +2669,10 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2817,7 +2786,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -2879,7 +2847,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2977,7 +2944,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -3039,7 +3005,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3137,12 +3102,10 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3396,7 +3359,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -3458,7 +3420,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3610,12 +3571,10 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3869,7 +3828,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -3931,7 +3889,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4029,12 +3986,10 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4260,7 +4215,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -4322,7 +4276,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--container-->
       <app-frame
         id="0"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4420,12 +4373,10 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="1"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4679,12 +4630,10 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="2"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4782,12 +4731,10 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="3"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4885,12 +4832,10 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="4"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5144,7 +5089,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -5225,7 +5169,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5323,7 +5266,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -5385,7 +5327,6 @@ exports[`LandingPageComponent should render only product frames when only produc
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5483,7 +5424,6 @@ exports[`LandingPageComponent should render only product frames when only produc
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -5545,7 +5485,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5643,12 +5582,10 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5902,7 +5839,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->
@@ -5964,7 +5900,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -6062,12 +5997,10 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             </div>
           </app-product-list>
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -6321,7 +6254,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
           </swiper-container>
           <!--container-->
         </section>
-        <!--container-->
       </app-frame>
       <!--ng-container-->
       <!--container-->

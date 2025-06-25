@@ -89,6 +89,7 @@ export const appConfig: ApplicationConfig = {
         dashboardPageConfig,
         customerDashboardPageConfig,
         orderDetailsPageConfig,
+        orderDetailsPageConfig,
     ],
 };
 
