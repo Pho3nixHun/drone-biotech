@@ -5,16 +5,16 @@ exports[`NotFoundPageComponent should render the template 1`] = `
   id="root0"
   ng-version="19.2.9"
 >
-  <app-page-section
+  <app-page-layout
     class="flex flex-col items-center justify-center min-h-screen w-full flex-grow"
   >
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-not-found-message>
         <!--container-->
       </app-not-found-message>
     </section>
-  </app-page-section>
+  </app-page-layout>
 </div>
 `;

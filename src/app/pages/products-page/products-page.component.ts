@@ -3,8 +3,7 @@ import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
-import { PageSectionComponent } from '../../shared/components/page-section/page-section.component';
-import { TranslocoModule } from '@jsverse/transloco';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 
 /**
  * ProductsPageComponent
@@ -28,8 +27,7 @@ import { TranslocoModule } from '@jsverse/transloco';
         FrameComponent,
         ProductItemComponent,
         ProductListComponent,
-        PageSectionComponent,
-        TranslocoModule,
+        PageLayoutComponent,
     ],
     templateUrl: './products-page.component.html',
 })

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PageSectionComponent } from './page-section.component';
 import { Component } from '@angular/core';
+import { PageLayoutComponent } from './page-layout.component';
 
 @Component({
-    imports: [PageSectionComponent],
+    imports: [PageLayoutComponent],
     template: `
-        <app-page-section>
+        <app-page-layout>
             <p>Should be projected</p>
-        </app-page-section>
+        </app-page-layout>
     `,
 })
 class TestHostComponent {}
 
-describe('PageSectionComponent', () => {
+describe('PageLayoutComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
 

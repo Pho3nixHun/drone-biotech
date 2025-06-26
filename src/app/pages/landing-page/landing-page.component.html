@@ -1,4 +1,4 @@
-<app-page-section>
+<app-page-layout>
     @if (vm(); as vm) {
         @if (vm.heroXVM; as heroXVM) {
             <app-hero [vm]="heroXVM" *transloco="let t">
@@ -24,7 +24,7 @@
     } @else {
         Loading...
     }
-</app-page-section>
+</app-page-layout>
 
 <ng-template #productFrame let-vm="frameVM">
     <app-frame [id]="vm.id">

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageLayoutComponent should render the template when the VM is provided 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <p>
+        Should be projected
+      </p>
+    </section>
+  </app-page-layout>
+</div>
+`;
