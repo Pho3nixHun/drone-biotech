@@ -1,7 +1,6 @@
 @if (vm(); as vm) {
-    <app-page-section>
-        <app-frame *transloco="let t">
-            <h2>{{ t(vm.frameXVM.titleKey) }}</h2>
+    <app-page-layout>
+        <app-frame [vm]="vm.frameXVM" *transloco="let t">
             <!-- Form areasDataFormGroup -->
             <h2>{{ t(vm.frameXVM.titleKey) }}</h2>
             <form
@@ -97,5 +96,5 @@
                 </button>
             </form>
         </app-frame>
-    </app-page-section>
+    </app-page-layout>
 }
