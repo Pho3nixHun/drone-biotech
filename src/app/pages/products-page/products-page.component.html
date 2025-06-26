@@ -1,8 +1,7 @@
 @if (vm(); as vm) {
     <app-page-layout>
         @if (vm.productListFrame.productItemVMs) {
-            <app-frame>
-                <h2>{{ vm.productListFrame.titleKey | transloco }}</h2>
+            <app-frame [vm]="vm.productListFrame">
                 <app-product-list>
                     @for (
                         item of vm.productListFrame.productItemVMs;

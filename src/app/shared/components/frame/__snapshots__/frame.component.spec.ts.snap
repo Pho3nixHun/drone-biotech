@@ -22,7 +22,7 @@ exports[`FrameComponent should render the template when the vm is not provided 1
 
 exports[`FrameComponent should render the template when the vm is provided 1`] = `
 <div
-  id="root0"
+  id="root1"
   ng-version="19.2.9"
 >
   <app-frame>
@@ -37,6 +37,7 @@ exports[`FrameComponent should render the template when the vm is provided 1`] =
         Should be projected
       </div>
     </section>
+    <!--container-->
   </app-frame>
 </div>
 `;
