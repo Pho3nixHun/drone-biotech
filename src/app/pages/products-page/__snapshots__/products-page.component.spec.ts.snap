@@ -18,7 +18,9 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame>
+      <app-frame
+        ng-reflect-vm="[object Object]"
+      >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
@@ -109,6 +111,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
             </div>
           </app-product-list>
         </section>
+        <!--container-->
       </app-frame>
       <!--container-->
     </section>
@@ -127,7 +130,9 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame>
+      <app-frame
+        ng-reflect-vm="[object Object]"
+      >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
@@ -218,6 +223,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
             </div>
           </app-product-list>
         </section>
+        <!--container-->
       </app-frame>
       <!--container-->
     </section>
@@ -236,7 +242,9 @@ exports[`ProductsPageComponent should render the template when the VM is provide
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame>
+      <app-frame
+        ng-reflect-vm="[object Object]"
+      >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
@@ -327,6 +335,7 @@ exports[`ProductsPageComponent should render the template when the VM is provide
             </div>
           </app-product-list>
         </section>
+        <!--container-->
       </app-frame>
       <!--container-->
     </section>
