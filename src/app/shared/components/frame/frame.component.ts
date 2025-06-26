@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { TranslocoModule } from '@jsverse/transloco';
+import { FrameVM } from './frame.model';
 
 /**
  * FrameComponent
@@ -19,6 +21,9 @@ import { Component } from '@angular/core';
  */
 @Component({
     selector: 'app-frame',
+    imports: [TranslocoModule],
     templateUrl: './frame.component.html',
 })
-export class FrameComponent {}
+export class FrameComponent {
+    public vm = input<FrameVM | null>(null);
+}

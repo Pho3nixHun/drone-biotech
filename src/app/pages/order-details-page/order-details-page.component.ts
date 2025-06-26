@@ -1,7 +1,6 @@
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Component, inject } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
-import { PageSectionComponent } from '@components/page-section/page-section.component';
 import { FrameComponent } from '@components/frame/frame.component';
 import { StatusComponent } from '@components/status/status.component';
 import { SummaryListComponent } from '@components/summary-list/summary-list.component';
@@ -9,11 +8,12 @@ import { SummaryComponent } from '@components/summary-list/components/summary/su
 import { HeaderComponent } from './components/header/header.component';
 import { OrderDetailsPageService } from './order-details-page.service';
 import { isTranslateInput } from './order-details-page.model';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 
 @Component({
     selector: 'app-order-details-page',
     imports: [
-        PageSectionComponent,
+        PageLayoutComponent,
         FrameComponent,
         HeaderComponent,
         TranslocoModule,
