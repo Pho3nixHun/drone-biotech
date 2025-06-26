@@ -9,6 +9,7 @@ import { AreasDataFormControlComponent } from './components/areas-data-form-cont
 import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { ORDERS_NEW_PAGE_PROVIDERS } from './orders-new-page.config';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 
 /**
  * OrdersNewPageComponent
