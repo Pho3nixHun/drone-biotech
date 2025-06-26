@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SummaryListComponent should render the template 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-summary-list>
+    <div
+      class="flex flex-col lg:flex-row justify-between"
+    >
+      <app-summary>
+        <div
+          class="flex flex-row space-x-1"
+        />
+      </app-summary>
+    </div>
+  </app-summary-list>
+</div>
+`;

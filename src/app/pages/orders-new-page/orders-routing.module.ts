@@ -11,10 +11,10 @@ export const routes: Routes = [
             ),
     },
     {
-        path: '**',
+        path: OrdersRouteSegment.DETAILS,
         loadComponent: () =>
-            import('../not-found-page/not-found-page.component').then(
-                (m) => m.NotFoundPageComponent
+            import('../order-details-page/order-details-page.component').then(
+                (m) => m.OrderDetailsPageComponent
             ),
     },
 ];
