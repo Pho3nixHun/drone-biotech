@@ -15,13 +15,16 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
   ng-version="19.2.9"
 >
   <app-page-layout>
+  <app-page-layout>
     <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame
         ng-reflect-vm="[object Object]"
       >
         <section
+          class="flex flex-col gap-y-10 py-10"
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
@@ -116,7 +119,6 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
       <!--container-->
     </section>
   </app-page-layout>
-  <!--container-->
   <!--container-->
 </div>
 `;
@@ -127,13 +129,16 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
   ng-version="19.2.9"
 >
   <app-page-layout>
+  <app-page-layout>
     <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame
         ng-reflect-vm="[object Object]"
       >
         <section
+          class="flex flex-col gap-y-10 py-10"
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
@@ -228,7 +233,6 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
       <!--container-->
     </section>
   </app-page-layout>
-  <!--container-->
   <!--container-->
 </div>
 `;
@@ -239,13 +243,16 @@ exports[`ProductsPageComponent should render the template when the VM is provide
   ng-version="19.2.9"
 >
   <app-page-layout>
+  <app-page-layout>
     <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame
         ng-reflect-vm="[object Object]"
       >
         <section
+          class="flex flex-col gap-y-10 py-10"
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
@@ -340,7 +347,6 @@ exports[`ProductsPageComponent should render the template when the VM is provide
       <!--container-->
     </section>
   </app-page-layout>
-  <!--container-->
   <!--container-->
 </div>
 `;
