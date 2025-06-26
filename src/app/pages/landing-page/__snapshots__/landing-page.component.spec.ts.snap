@@ -5,9 +5,9 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
   id="root12"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -52,7 +52,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -154,7 +154,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -411,7 +411,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -422,9 +422,9 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
   id="root13"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -469,7 +469,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -571,7 +571,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -773,7 +773,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -784,9 +784,9 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
   id="root9"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -831,7 +831,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -852,7 +852,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -1109,7 +1109,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -1120,9 +1120,9 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
   id="root16"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -1167,7 +1167,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -1269,7 +1269,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -1358,7 +1358,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -1369,9 +1369,9 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
   id="root4"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -1415,7 +1415,7 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -1426,9 +1426,9 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
   id="root2"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <!--container-->
       <app-frame
@@ -1436,7 +1436,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -1538,7 +1538,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -1795,7 +1795,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -1806,9 +1806,9 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
   id="root14"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -1853,7 +1853,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -1955,7 +1955,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -2168,7 +2168,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -2179,9 +2179,9 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
   id="root10"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -2226,7 +2226,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -2274,7 +2274,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -2531,7 +2531,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -2542,9 +2542,9 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
   id="root17"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -2589,7 +2589,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -2691,7 +2691,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -2808,7 +2808,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -2819,9 +2819,9 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
   id="root5"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -2866,7 +2866,7 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -2967,7 +2967,7 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -2978,9 +2978,9 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
   id="root15"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -3025,7 +3025,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -3127,7 +3127,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -3384,7 +3384,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -3395,9 +3395,9 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
   id="root11"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -3442,7 +3442,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -3598,7 +3598,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -3855,7 +3855,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -3866,9 +3866,9 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
   id="root18"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -3913,7 +3913,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -4015,7 +4015,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -4244,7 +4244,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -4255,9 +4255,9 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
   id="root6"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -4302,7 +4302,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -4404,7 +4404,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -4662,7 +4662,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -4764,7 +4764,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -4866,7 +4866,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -5123,7 +5123,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -5134,15 +5134,15 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
   id="root0"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <!--container-->
        Loading... 
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -5153,9 +5153,9 @@ exports[`LandingPageComponent should render only partner frames when only partne
   id="root8"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -5200,7 +5200,7 @@ exports[`LandingPageComponent should render only partner frames when only partne
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -5301,7 +5301,7 @@ exports[`LandingPageComponent should render only partner frames when only partne
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -5312,9 +5312,9 @@ exports[`LandingPageComponent should render only product frames when only produc
   id="root7"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -5359,7 +5359,7 @@ exports[`LandingPageComponent should render only product frames when only produc
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -5460,7 +5460,7 @@ exports[`LandingPageComponent should render only product frames when only produc
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -5471,9 +5471,9 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
   id="root3"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -5518,7 +5518,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -5620,7 +5620,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -5877,7 +5877,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -5888,9 +5888,9 @@ exports[`LandingPageComponent should render the template when there is a VM prov
   id="root1"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-hero
         ng-reflect-vm="[object Object]"
@@ -5935,7 +5935,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             0frame
@@ -6037,7 +6037,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             1frame
@@ -6294,7 +6294,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <!--container-->
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>

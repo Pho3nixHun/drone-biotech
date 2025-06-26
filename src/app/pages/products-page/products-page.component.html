@@ -1,5 +1,5 @@
 @if (vm(); as vm) {
-    <app-page-section>
+    <app-page-layout>
         @if (vm.productListFrame.productItemVMs) {
             <app-frame [vm]="vm.productListFrame">
                 <app-product-list>
@@ -12,5 +12,5 @@
                 </app-product-list>
             </app-frame>
         }
-    </app-page-section>
+    </app-page-layout>
 }

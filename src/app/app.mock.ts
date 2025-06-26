@@ -140,11 +140,13 @@ export const appVMDefault: AppComponentVM = {
         },
         {
             textKey: 'AppComponent.navItems.1.title',
-            link: { href: `#${FrameID.PRODUCTS}` },
+            routerLink: AppRouteSegment.LANDING,
+            fragment: FrameID.PRODUCTS,
         },
         {
             textKey: 'AppComponent.navItems.2.title',
-            link: { href: `#${FrameID.PARTNERS}` },
+            routerLink: AppRouteSegment.LANDING,
+            fragment: FrameID.PARTNERS,
         },
         {
             textKey: 'AppComponent.navItems.3.title',

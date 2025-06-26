@@ -48,7 +48,7 @@ exports[`AppComponent when rendering the UI should not render <app-nav-item> whe
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -143,7 +143,7 @@ exports[`AppComponent when rendering the UI should not render the <app-header> w
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -247,7 +247,7 @@ exports[`AppComponent when rendering the UI should render <app-nav-item> and <a>
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -315,7 +315,7 @@ exports[`AppComponent when rendering the UI should render 1 <a> with routerLink 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -384,7 +384,7 @@ exports[`AppComponent when rendering the UI should render 1 <app-nav-item> when 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -484,7 +484,7 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -589,7 +589,7 @@ exports[`AppComponent when rendering the UI should render 5 <app-nav-item> in or
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -684,7 +684,7 @@ exports[`AppComponent when rendering the UI should render the <app-header> when 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -779,7 +779,7 @@ exports[`AppComponent when rendering the UI should render the template when the 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow"
+      class="flex-grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
