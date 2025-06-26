@@ -14,13 +14,13 @@ exports[`OrdersNewPageComponent should render the template when the VM is provid
   id="root1"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
 </div>
 `;

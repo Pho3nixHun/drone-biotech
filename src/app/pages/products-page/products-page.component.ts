@@ -3,7 +3,7 @@ import { FrameComponent } from '@components/frame/frame.component';
 import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
-import { PageSectionComponent } from '../../shared/components/page-section/page-section.component';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 
 /**
  * ProductsPageComponent
@@ -27,9 +27,9 @@ import { PageSectionComponent } from '../../shared/components/page-section/page-
         FrameComponent,
         ProductItemComponent,
         ProductListComponent,
-        PageSectionComponent,
+        PageLayoutComponent,
     ],
-    templateUrl: './products-page.component.html'
+    templateUrl: './products-page.component.html',
 })
 export class ProductsPageComponent {
     private readonly productsPageService = inject(ProductsPageService);

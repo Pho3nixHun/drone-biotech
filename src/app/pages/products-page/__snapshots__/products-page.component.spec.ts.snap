@@ -14,15 +14,15 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
   id="root2"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             title0
@@ -114,7 +114,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
       </app-frame>
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
 </div>
 `;
@@ -124,15 +124,15 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
   id="root3"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             title0
@@ -224,7 +224,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
       </app-frame>
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
 </div>
 `;
@@ -234,15 +234,15 @@ exports[`ProductsPageComponent should render the template when the VM is provide
   id="root1"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame
         ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
           <h2>
             title0
@@ -334,7 +334,7 @@ exports[`ProductsPageComponent should render the template when the VM is provide
       </app-frame>
       <!--container-->
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
 </div>
 `;

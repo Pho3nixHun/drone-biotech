@@ -5,7 +5,7 @@ import {
     importProvidersFrom,
     inject,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import {
     provideFirebaseApp,
     initializeApp,
@@ -36,7 +36,13 @@ const devMode = isDevMode();
 export const appConfig: ApplicationConfig = {
     providers: [
         provideZoneChangeDetection({ eventCoalescing: true }),
-        provideRouter(routes),
+        provideRouter(
+            routes,
+            withInMemoryScrolling({
+                anchorScrolling: 'enabled',
+                scrollPositionRestoration: 'enabled',
+            })
+        ),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideAuth(() => {
             const auth = getAuth(inject(FirebaseApp));

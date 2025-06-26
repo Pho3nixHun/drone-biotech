@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { PageSectionComponent } from '@components/page-section/page-section.component';
 import { NotFoundMessageComponent } from './components/not-found-message/not-found-message.component';
 import { notFoundPageVMDefault } from './not-found-page.mock';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 
 /**
  * NotFoundPageComponent
@@ -22,8 +22,8 @@ import { notFoundPageVMDefault } from './not-found-page.mock';
 
 @Component({
     selector: 'app-not-found-page',
-    imports: [PageSectionComponent, NotFoundMessageComponent],
-    templateUrl: './not-found-page.component.html'
+    imports: [NotFoundMessageComponent, PageLayoutComponent],
+    templateUrl: './not-found-page.component.html',
 })
 export class NotFoundPageComponent {
     protected readonly vm = notFoundPageVMDefault;

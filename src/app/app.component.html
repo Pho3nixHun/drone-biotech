@@ -29,7 +29,7 @@
                 </app-nav>
             </app-header>
         }
-        <div class="flex-grow"><router-outlet /></div>
+        <div class="flex-grow mt-72 md:mt-25"><router-outlet /></div>
     </div>
 
     <ng-template #withLink let-vm="navItemXVM">
@@ -44,8 +44,11 @@
     </ng-template>
 
     <ng-template #withRouterLink let-vm="navItemXVM">
-        <a [routerLink]="vm.routerLink" class="nav-item">{{
-            vm.textKey | transloco
-        }}</a>
+        <a
+            [routerLink]="vm.routerLink"
+            [fragment]="vm.fragment"
+            class="nav-item"
+            >{{ vm.textKey | transloco }}</a
+        >
     </ng-template>
 }
