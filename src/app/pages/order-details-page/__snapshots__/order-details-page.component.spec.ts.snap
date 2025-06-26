@@ -5,14 +5,15 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
   id="root0"
   ng-version="19.2.9"
 >
-  <app-page-section>
+  <app-page-layout>
     <section
-      class="mt-72 md:mt-25"
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-20 mx-5 sm:mx-20 lg:mx-40 duration-500 transition-all"
+          class="flex flex-col gap-y-10 py-10"
         >
+          <!--container-->
           <app-header>
             <div
               class="flex flex-col space-y-4"
@@ -109,9 +110,10 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
             </div>
           </app-header>
         </section>
+        <!--container-->
       </app-frame>
     </section>
-  </app-page-section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
