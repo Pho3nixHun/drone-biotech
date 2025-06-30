@@ -6,6 +6,8 @@ import { CUSTOMER_DASHBOARD_PAGE_CONFIG } from './customer-dashboard-page.config
 import {
     customerDashboardPageConfigMock,
     enMock,
+    mockOrdersFive,
+    mockOrdersTwo,
 } from './customer-dashboard-page.mock';
 import {
     provideOrderMockService,
@@ -13,7 +15,6 @@ import {
 } from '@services/order/order-mock.service';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { selectUserName } from '@stores/auth/auth.selector';
-import { mockOrdersFive, mockOrdersTwo } from '@services/order/order-mock';
 
 describe('CustomerDashboardPageComponent', () => {
     let fixture: ComponentFixture<CustomerDashboardPageComponent>;
