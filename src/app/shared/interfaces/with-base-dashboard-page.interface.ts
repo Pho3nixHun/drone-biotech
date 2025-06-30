@@ -78,6 +78,7 @@ export const mapMissionStatusTypeToCCSColors = (
             scheduled: 'bg-pink-200 text-pink-600',
             pending: 'bg-green-200 text-green-600',
             preparing: 'bg-yellow-200 text-yellow-600',
+            completed: 'bg-green-200 text-green-600',
         }[type] || ''
     );
 };
@@ -89,6 +90,7 @@ export const mapMissionStatusTypeToTranslocoTextKey = (
             scheduled: 'DashboardPage.scheduled',
             pending: 'DashboardPage.pending',
             preparing: 'DashboardPage.preparing',
+            completed: 'DashboardPage.completed',
         }[type] || ''
     );
 };

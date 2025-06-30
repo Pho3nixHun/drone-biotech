@@ -15,6 +15,7 @@ import {
 } from '@services/order/order-mock.service';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { selectUserName } from '@stores/auth/auth.selector';
+import { mockOrdersFive, mockOrdersTwo } from '@services/order/order-mock';
 
 describe('CustomerDashboardPageComponent', () => {
     let fixture: ComponentFixture<CustomerDashboardPageComponent>;
