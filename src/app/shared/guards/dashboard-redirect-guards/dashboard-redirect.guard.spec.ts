@@ -1,166 +1,75 @@
 import { TestBed } from '@angular/core/testing';
-import {
-    CanActivateChildFn,
-    CanActivateFn,
-    provideRouter,
-    Router,
-} from '@angular/router';
-import { redirectChildGuard, redirectGuard } from './dashboard-redirect.guard';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
+import { redirectGuard } from './dashboard-redirect.guard';
+import { provideMockStore, MockStore } from '@ngrx/store/testing';
+import { Router } from '@angular/router';
 import { selectUserRole } from '@stores/auth/auth.selector';
-import { selectURL } from '@stores/router/router.selectors';
 import { AppRouteSegment } from 'src/app/app-route-segment';
-import { Component } from '@angular/core';
-
-@Component({ selector: 'app-dummy' })
-class DummyComponent {}
+import { USER_ROLES } from '@stores/auth/auth.model';
 
 describe('redirectGuard', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mockRoute = {} as any;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mockState = {} as any;
     let mockStore: MockStore;
     let router: Router;
 
-    const executeGuard: CanActivateFn = (...guardParameters) =>
-        TestBed.runInInjectionContext(() => redirectGuard(...guardParameters));
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const createRouteSnapshot = (data: any = {}) =>
+        ({
+            firstChild: {
+                data,
+            },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        }) as any;
+
+    const executeGuard = (...params: Parameters<typeof redirectGuard>) =>
+        TestBed.runInInjectionContext(() => redirectGuard(...params));
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [provideMockStore()],
         });
+
         mockStore = TestBed.inject(MockStore);
         router = TestBed.inject(Router);
     });
 
-    it('should be created', () => {
-        expect(executeGuard).toBeTruthy();
-    });
+    it('should return redirect to notfound if allowedRole !== currentRole', async () => {
+        mockStore.overrideSelector(selectUserRole, USER_ROLES.CUSTOMER);
 
-    it('should return false if there is no role', async () => {
-        mockStore.overrideSelector(selectUserRole, undefined);
-        const result = await executeGuard(mockRoute, mockState);
-        expect(result).toBe(false);
-    });
+        const route = createRouteSnapshot({ allowedRole: USER_ROLES.PILOT });
 
-    // Unit testing
-    it('should navigate to the specified route', async () => {
-        // Arrange
-        const role = 'customer';
-        const routerSpy = jest.spyOn(router, 'navigate');
-        mockStore.overrideSelector(selectUserRole, role);
-        mockStore.overrideSelector(selectURL, `/${AppRouteSegment.DASHBOARD}`);
+        const result = await executeGuard(route, mockState);
 
-        // Act
-        await executeGuard(mockRoute, mockState);
-
-        // Assert
-
-        expect(routerSpy).toHaveBeenCalledWith([
-            AppRouteSegment.DASHBOARD,
-            role,
-        ]);
-    });
-
-    // Unit testing
-    it('should return true if there is a role', async () => {
-        // Arrange
-        const role = 'pilot';
-        mockStore.overrideSelector(selectUserRole, role);
-
-        // Act
-        const result = await executeGuard(mockRoute, mockState);
-
-        // Assert
-
-        expect(result).toBe(true);
-    });
-});
-
-describe('redirectChildGuard', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mockRoute = { routeConfig: { path: 'customer' } } as any;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mockState = {} as any;
-    let mockStore: MockStore;
-    let router: Router;
-
-    const executeGuard: CanActivateChildFn = (...guardParameters) =>
-        TestBed.runInInjectionContext(() =>
-            redirectChildGuard(...guardParameters)
+        expect(result).toEqual(
+            router.createUrlTree([AppRouteSegment.DASHBOARD, 'notfound'])
         );
+    });
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            providers: [
-                provideMockStore(),
-                provideRouter([
-                    { path: 'dashboard/pilot', component: DummyComponent },
-                ]),
-            ],
+    it('should return redirect to role dashboard if navigateToRoleDashboard and allowedRole match', async () => {
+        mockStore.overrideSelector(selectUserRole, USER_ROLES.PILOT);
+
+        const route = createRouteSnapshot({
+            allowedRole: USER_ROLES.PILOT,
+            navigateToRoleDashboard: true,
         });
-        mockStore = TestBed.inject(MockStore);
-        router = TestBed.inject(Router);
+
+        const result = await executeGuard(route, mockState);
+
+        expect(result).toEqual(
+            router.createUrlTree([AppRouteSegment.DASHBOARD, 'pilot'])
+        );
     });
 
-    it('should be created', () => {
-        expect(executeGuard).toBeTruthy();
-    });
+    it('should return true if allowedRole matches currentRole and no redirect is needed', async () => {
+        mockStore.overrideSelector(selectUserRole, USER_ROLES.OFFICE);
 
-    // Unit testing
-    it('should return false if there is no role or routeConfig', async () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserRole, undefined);
+        const route = createRouteSnapshot({
+            allowedRole: USER_ROLES.OFFICE,
+            navigateToRoleDashboard: false,
+        });
 
-        // Act
-        const result = await executeGuard(mockRoute, mockState);
+        const result = await executeGuard(route, mockState);
 
-        // Assert
-        expect(result).toBe(false);
-    });
-
-    // Unit testing
-    it('should return true if there is a role and routeConfig', async () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserRole, 'customer');
-
-        // Act
-        const result = await executeGuard(mockRoute, mockState);
-
-        // Assert
         expect(result).toBe(true);
-    });
-
-    // Unit testing
-    it('should not route to the specified location if the path and the role are equal', async () => {
-        // Arrange
-        const role = 'customer';
-        mockStore.overrideSelector(selectUserRole, role);
-        const routerSpy = jest.spyOn(router, 'navigate');
-
-        // Act
-        await executeGuard(mockRoute, mockState);
-
-        // Assert
-        expect(routerSpy).toHaveBeenCalledTimes(0);
-    });
-
-    // Unit testing
-    it('should route to the specified location if the path and the role are not equal', async () => {
-        // Arrange
-        const role = 'pilot';
-        const routerSpy = jest.spyOn(router, 'navigate');
-        mockStore.overrideSelector(selectUserRole, role);
-
-        // Act
-        await executeGuard(mockRoute, mockState);
-
-        // Assert
-
-        expect(routerSpy).toHaveBeenCalledWith([
-            AppRouteSegment.DASHBOARD,
-            role,
-        ]);
     });
 });
