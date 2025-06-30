@@ -127,15 +127,7 @@ export class OfficeDashboardPageService {
                     },
                     pilotKV: {
                         key: this.config.missionConfig.pilot.titleKey,
-                        value: mission.pilot
-                            ? { name: mission.pilot }
-                            : {
-                                  textKey:
-                                      this.config.missionConfig.pilot
-                                          .unassignedTextKey,
-                                  color: this.config.missionConfig.pilot
-                                      .textColor,
-                              },
+                        value: { name: mission.pilot },
                     },
                     completionDateKV: {
                         key: this.config.missionConfig.completionDate.titleKey,

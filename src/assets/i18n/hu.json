@@ -116,6 +116,8 @@
     "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
     "OrderDetailsPage.header.addNewMissionButtonText": "Új küldetés hozzáadása",
     "OrderDetailsPage.header.status.active": "Aktív",
+    "OrderDetailsPage.header.status.pending": "Várakozik",
+    "OrderDetailsPage.header.status.completed": "Teljesítve",
 
     "DashboardPage.userHeader.title": "Üdv újra, {name}",
     "DashboardPage.userHeader.roleDashboard": "{ role } irányítópult",

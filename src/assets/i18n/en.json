@@ -116,6 +116,8 @@
     "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
     "OrderDetailsPage.header.addNewMissionButtonText": "Add new mission",
     "OrderDetailsPage.header.status.active": "Active",
+    "OrderDetailsPage.header.status.pending": "Pending",
+    "OrderDetailsPage.header.status.completed": "Completed",
 
     "DashboardPage.userHeader.title": "Welcome back, {name}",
     "DashboardPage.userHeader.roleDashboard": "{ role } dashboard",

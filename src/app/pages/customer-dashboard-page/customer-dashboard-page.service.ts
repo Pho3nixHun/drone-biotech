@@ -130,7 +130,7 @@ export class CustomerDashboardPageService {
                           },
                           requesterKV: {
                               key: this.config.ordersConfig.requester.titleKey,
-                              value: order.requester,
+                              value: order.client.contact,
                           },
                       }))
                     : null

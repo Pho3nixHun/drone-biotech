@@ -1,8 +1,4 @@
 import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
-import {
     KeyValuePair,
     KVsFromVM,
     TitleWithoutValueKey,
@@ -10,12 +6,16 @@ import {
     WithoutKey,
 } from '@interfaces/value-key.interface';
 import {
+    NavigationAnchor,
+    WithNavigationAnchor,
+} from '@interfaces/navigation-anchor.interface';
+import {
     Badge,
     GridConfig,
 } from '@interfaces/with-base-dashboard-page.interface';
 import {
-    ActiveMission,
-    CompletedMission,
+    ActiveMissionX,
+    CompletedMissionX,
 } from '@services/mission/mission.service.model';
 
 export interface MissionConfig {
@@ -44,12 +44,12 @@ interface MissionVM {
 }
 
 type ActiveMissionVM = Omit<
-    ActiveMission,
+    ActiveMissionX,
     'status' | 'scheduledDate' | 'pilot'
 > &
     MissionVM;
 type CompletedMissionVM = Omit<
-    CompletedMission,
+    CompletedMissionX,
     'areaInHa' | 'pilot' | 'performance'
 > &
     MissionVM;

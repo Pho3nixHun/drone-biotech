@@ -3,32 +3,72 @@ import { MissionService } from './mission.service';
 import { map, Observable, of } from 'rxjs';
 import {
     ActiveMission,
+    ActiveMissionX,
     CompletedMission,
-    isActiveMission,
-    isCompletedMission,
+    CompletedMissionX,
+    isActiveMissionX,
+    isCompletedMissionX,
+    MissionX,
 } from './mission.service.model';
+import { Order } from '@services/order/order.service.model';
 
 @Injectable({
     providedIn: 'root',
 })
 export class MissionMockService {
-    public getActiveMissions = (): Observable<ActiveMission[]> =>
-        of(activeMissions()).pipe(
-            map((missions) => missions.filter(isActiveMission))
+    public getMissions = (): Observable<MissionX[]> =>
+        of(orders()).pipe(
+            map((orders) =>
+                orders.flatMap((order) =>
+                    order.missions.map((mission) => ({
+                        ...mission,
+                        client: order.client.client,
+                    }))
+                )
+            )
         );
 
-    public getCompletedMissions = (): Observable<CompletedMission[]> =>
-        of(completedMissions()).pipe(
-            map((missions) => missions.filter(isCompletedMission))
+    public getActiveMissions = (): Observable<ActiveMissionX[]> =>
+        of(orders()).pipe(
+            map((orders) =>
+                orders
+                    .flatMap((order) =>
+                        order.missions.map((mission) => ({
+                            ...mission,
+                            client: order.client.client,
+                        }))
+                    )
+                    .filter(isActiveMissionX)
+            )
+        );
+
+    public getCompletedMissions = (): Observable<CompletedMissionX[]> =>
+        of(orders()).pipe(
+            map((orders) =>
+                orders
+                    .flatMap((order) =>
+                        order.missions.map((mission) => ({
+                            ...mission,
+                            client: order.client.client,
+                        }))
+                    )
+                    .filter(isCompletedMissionX)
+            )
         );
 
     public getActiveMissionsByPilot = (
         pilot: string
     ): Observable<ActiveMission[]> =>
-        of(activeMissions()).pipe(
-            map((missions) =>
-                missions
-                    .filter(isActiveMission)
+        of(orders()).pipe(
+            map((orders) =>
+                orders
+                    .flatMap((order) =>
+                        order.missions.map((mission) => ({
+                            ...mission,
+                            client: order.client.client,
+                        }))
+                    )
+                    .filter(isActiveMissionX)
                     .filter((mission) => mission.pilot === pilot)
             )
         );
@@ -36,25 +76,26 @@ export class MissionMockService {
     public getCompletedMissionsByPilot = (
         pilot: string
     ): Observable<CompletedMission[]> =>
-        of(completedMissions()).pipe(
-            map((missions) =>
-                missions
-                    .filter(isCompletedMission)
+        of(orders()).pipe(
+            map((orders) =>
+                orders
+                    .flatMap((order) =>
+                        order.missions.map((mission) => ({
+                            ...mission,
+                            client: order.client.client,
+                        }))
+                    )
+                    .filter(isCompletedMissionX)
                     .filter((mission) => mission.pilot === pilot)
             )
         );
 }
 
-const activeMissions = signal<ActiveMission[]>([]);
-const completedMissions = signal<CompletedMission[]>([]);
+const orders = signal<Order[]>([]);
 
 export const provideMissionMockService = () => ({
     provide: MissionService,
     useClass: MissionMockService,
 });
 
-export const updateActiveMissions = (obj: ActiveMission[]) =>
-    activeMissions.set(obj);
-
-export const updateCompletedMissions = (obj: CompletedMission[]) =>
-    completedMissions.set(obj);
+export const updateMissions = (obj: Order[]) => orders.set(obj);

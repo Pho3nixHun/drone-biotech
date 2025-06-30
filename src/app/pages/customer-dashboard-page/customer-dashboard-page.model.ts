@@ -1,8 +1,4 @@
-import {
-    CompanyOrder,
-    MyOrder,
-    OrderStatusType,
-} from '@services/order/order.service.model';
+import { Order, OrderStatus } from '@services/order/order.service.model';
 import {
     NavigationAnchor,
     WithNavigationAnchor,
@@ -16,6 +12,17 @@ import {
     Badge,
     GridConfig as Config,
 } from '@interfaces/with-base-dashboard-page.interface';
+
+export type MyOrder = Pick<
+    Order,
+    'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
+>;
+export type CompanyOrder = Pick<
+    Order,
+    'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
+> & { requester: Order['client']['contact'] };
+
+export type DashboardOrder = MyOrder | CompanyOrder;
 
 export interface OrdersConfig {
     id: TitleWithoutValueKey;
@@ -67,9 +74,7 @@ export const isMyOrderXVM = (obj: OrderXVM): obj is MyOrderXVM =>
 export const isCompanyOrderXVM = (obj: OrderXVM): obj is CompanyOrderXVM =>
     'requesterKV' in obj;
 
-export const mapOrderStatusTypeToCCSColors = (
-    type: OrderStatusType
-): string => {
+export const mapOrderStatusTypeToCCSColors = (type: OrderStatus): string => {
     return (
         {
             pending: 'bg-pink-200 text-pink-600',
@@ -80,7 +85,7 @@ export const mapOrderStatusTypeToCCSColors = (
 };
 
 export const mapOrderStatusTypeToTranslocoTextKey = (
-    type: OrderStatusType
+    type: OrderStatus
 ): string => {
     return (
         {

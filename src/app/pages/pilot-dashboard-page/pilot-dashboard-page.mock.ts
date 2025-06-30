@@ -1,9 +1,6 @@
 import { GridColsLength } from '@components/grid-section/components/grid/grid.model';
 import { PilotDashboardPageConfig } from './pilot-dashboard-page.model';
-import {
-    ActiveMission,
-    CompletedMission,
-} from '@services/mission/mission.service.model';
+import { Order } from '@services/order/order.service.model';
 
 export const pilotDashboardPageConfig: PilotDashboardPageConfig = {
     missionConfig: {
@@ -143,121 +140,194 @@ export const pilotDashboardPageConfigMock: PilotDashboardPageConfig = {
     },
 };
 
-export const oneActiveMission: ActiveMission[] = [
-    {
-        id: '1',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        scheduledDate: new Date(),
-        status: 'pending',
+export const oneActiveMission: Order = {
+    id: 'B-78901',
+    status: 'active',
+    client: {
+        client: 'Westbrook Agricultural Holdings',
+        contact: 'Sarah Johnson',
+        email: 's.johnson@westbrook-ag.com',
+        phone: '(555) 789-1234',
+        address: '450 Farm Road, Westbrook County',
     },
-    {
-        id: '2',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Wayne Rooney',
-        scheduledDate: new Date(),
-        status: 'pending',
+    summary: {
+        treatment: 'Seasonal Pest Control',
+        averageDose: 2.5,
+        totalSupply: 868.75,
+        orderValue: 34750.0,
     },
-];
+    creationDate: new Date('2025-03-28'),
+    totalAreaInHa: 347.5,
+    moneyValue: 34750,
+    missions: [
+        {
+            id: '1',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            scheduledDate: new Date(),
+            status: 'pending',
+        },
+        {
+            id: '2',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Wayne Rooney',
+            scheduledDate: new Date(),
+            status: 'pending',
+        },
+    ],
+    messages: [],
+};
 
-export const threeActiveMissions: ActiveMission[] = [
-    {
-        id: '1',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        scheduledDate: new Date(),
-        status: 'pending',
+export const threeActiveMissions: Order = {
+    id: 'B-78901',
+    status: 'active',
+    client: {
+        client: 'Westbrook Agricultural Holdings',
+        contact: 'Sarah Johnson',
+        email: 's.johnson@westbrook-ag.com',
+        phone: '(555) 789-1234',
+        address: '450 Farm Road, Westbrook County',
     },
-    {
-        id: '2',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Wayne Rooney',
-        scheduledDate: new Date(),
-        status: 'pending',
+    summary: {
+        treatment: 'Seasonal Pest Control',
+        averageDose: 2.5,
+        totalSupply: 868.75,
+        orderValue: 34750.0,
     },
-    {
-        id: '3',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        scheduledDate: new Date(),
-        status: 'pending',
-    },
-    {
-        id: '4',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        scheduledDate: new Date(),
-        status: 'pending',
-    },
-];
+    creationDate: new Date('2025-03-28'),
+    totalAreaInHa: 347.5,
+    moneyValue: 34750,
+    missions: [
+        {
+            id: '1',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            scheduledDate: new Date(),
+            status: 'pending',
+        },
+        {
+            id: '2',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Wayne Rooney',
+            scheduledDate: new Date(),
+            status: 'pending',
+        },
+        {
+            id: '3',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            scheduledDate: new Date(),
+            status: 'pending',
+        },
+        {
+            id: '4',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            scheduledDate: new Date(),
+            status: 'pending',
+        },
+    ],
+    messages: [],
+};
 
-export const oneCompletedMission: CompletedMission[] = [
-    {
-        id: '5',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        completionDate: new Date(),
-        performance: 'excellent',
+export const oneCompletedMission: Order = {
+    id: 'B-78901',
+    status: 'active',
+    client: {
+        client: 'Westbrook Agricultural Holdings',
+        contact: 'Sarah Johnson',
+        email: 's.johnson@westbrook-ag.com',
+        phone: '(555) 789-1234',
+        address: '450 Farm Road, Westbrook County',
     },
-    {
-        id: '6',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Wayne Rooney',
-        completionDate: new Date(),
-        performance: 'excellent',
+    summary: {
+        treatment: 'Seasonal Pest Control',
+        averageDose: 2.5,
+        totalSupply: 868.75,
+        orderValue: 34750.0,
     },
-];
-export const threeCompletedMissions: CompletedMission[] = [
-    {
-        id: '5',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        completionDate: new Date(),
-        performance: 'excellent',
+    creationDate: new Date('2025-03-28'),
+    totalAreaInHa: 347.5,
+    moneyValue: 34750,
+    missions: [
+        {
+            id: '5',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            completionDate: new Date(),
+            performance: 'excellent',
+        },
+        {
+            id: '6',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Wayne Rooney',
+            completionDate: new Date(),
+            performance: 'excellent',
+        },
+    ],
+    messages: [],
+};
+
+export const threeCompletedMissions: Order = {
+    id: 'B-78901',
+    status: 'active',
+    client: {
+        client: 'Westbrook Agricultural Holdings',
+        contact: 'Sarah Johnson',
+        email: 's.johnson@westbrook-ag.com',
+        phone: '(555) 789-1234',
+        address: '450 Farm Road, Westbrook County',
     },
-    {
-        id: '6',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Wayne Rooney',
-        completionDate: new Date(),
-        performance: 'excellent',
+    summary: {
+        treatment: 'Seasonal Pest Control',
+        averageDose: 2.5,
+        totalSupply: 868.75,
+        orderValue: 34750.0,
     },
-    {
-        id: '7',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        completionDate: new Date(),
-        performance: 'excellent',
-    },
-    {
-        id: '8',
-        areaInHa: 10,
-        client: 'client',
-        fieldName: 'field',
-        pilot: 'Alex Rodriguez',
-        completionDate: new Date(),
-        performance: 'excellent',
-    },
-];
+    creationDate: new Date('2025-03-28'),
+    totalAreaInHa: 347.5,
+    moneyValue: 34750,
+    missions: [
+        {
+            id: '5',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            completionDate: new Date(),
+            performance: 'excellent',
+        },
+        {
+            id: '6',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Wayne Rooney',
+            completionDate: new Date(),
+            performance: 'excellent',
+        },
+        {
+            id: '7',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            completionDate: new Date(),
+            performance: 'excellent',
+        },
+        {
+            id: '8',
+            areaInHa: 10,
+            fieldName: 'field',
+            pilot: 'Alex Rodriguez',
+            completionDate: new Date(),
+            performance: 'excellent',
+        },
+    ],
+    messages: [],
+};

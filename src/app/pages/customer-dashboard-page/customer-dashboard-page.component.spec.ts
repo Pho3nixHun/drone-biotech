@@ -6,8 +6,6 @@ import { CUSTOMER_DASHBOARD_PAGE_CONFIG } from './customer-dashboard-page.config
 import {
     customerDashboardPageConfigMock,
     enMock,
-    fiveOrders,
-    twoOrders,
 } from './customer-dashboard-page.mock';
 import {
     provideOrderMockService,
@@ -15,6 +13,7 @@ import {
 } from '@services/order/order-mock.service';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { selectUserName } from '@stores/auth/auth.selector';
+import { mockOrdersFive, mockOrdersTwo } from '@services/order/order-mock';
 
 describe('CustomerDashboardPageComponent', () => {
     let fixture: ComponentFixture<CustomerDashboardPageComponent>;
@@ -87,7 +86,7 @@ describe('CustomerDashboardPageComponent', () => {
     it('should render two orders', () => {
         // Arrange
         mockStore.overrideSelector(selectUserName, 'Raul');
-        updateOrders(twoOrders);
+        updateOrders(mockOrdersTwo);
 
         fixture = TestBed.createComponent(CustomerDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -103,7 +102,7 @@ describe('CustomerDashboardPageComponent', () => {
     it('should render five orders', () => {
         // Arrange
         mockStore.overrideSelector(selectUserName, 'Raul');
-        updateOrders(fiveOrders);
+        updateOrders(mockOrdersFive);
 
         fixture = TestBed.createComponent(CustomerDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;

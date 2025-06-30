@@ -1,7 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
-import { Order } from './order.service.model';
 import { OrderService } from './order.service';
+import { Order } from './order.service.model';
 
 @Injectable({
     providedIn: 'root',
@@ -9,14 +9,18 @@ import { OrderService } from './order.service';
 export class OrderMockService {
     public readonly getOrdersByName = (name: string): Observable<Order[]> =>
         of(orders()).pipe(
-            map((orders) => orders.filter((order) => order.requester === name))
+            map((orders) =>
+                orders.filter((order) => order.client.contact === name)
+            )
         );
 
     public readonly getCompanyOrders = (
         name: string | undefined
     ): Observable<Order[]> =>
         of(orders()).pipe(
-            map((orders) => orders.filter((order) => order.requester !== name))
+            map((orders) =>
+                orders.filter((order) => order.client.contact !== name)
+            )
         );
 }
 

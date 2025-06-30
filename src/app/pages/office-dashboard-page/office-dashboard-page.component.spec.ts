@@ -13,8 +13,7 @@ import {
 } from './office-dashboard-page.mock';
 import {
     provideMissionMockService,
-    updateActiveMissions,
-    updateCompletedMissions,
+    updateMissions,
 } from '@services/mission/mission-mock.service';
 import { OfficeDashboardPageService } from './office-dashboard-page.service';
 
@@ -49,8 +48,7 @@ describe('OfficeDashboardPageComponent', () => {
     // Snapshot testing
     it('should render one active mission if one active mission is provided', () => {
         // Arrange
-        updateActiveMissions(oneActiveMission);
-        updateCompletedMissions([]);
+        updateMissions([oneActiveMission]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -65,8 +63,7 @@ describe('OfficeDashboardPageComponent', () => {
     // Snapshot testing
     it('should render three active missions', () => {
         // Arrange
-        updateActiveMissions(threeActiveMissions);
-        updateCompletedMissions([]);
+        updateMissions([threeActiveMissions]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -81,8 +78,7 @@ describe('OfficeDashboardPageComponent', () => {
     // Snapshot testing
     it('should render one completed mission', () => {
         // Arrange
-        updateActiveMissions([]);
-        updateCompletedMissions(oneCompletedMission);
+        updateMissions([oneCompletedMission]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
@@ -97,8 +93,7 @@ describe('OfficeDashboardPageComponent', () => {
     // Snapshot testing
     it('should render three completed missions', () => {
         // Arrange
-        updateActiveMissions([]);
-        updateCompletedMissions(threeCompletedMissions);
+        updateMissions([threeCompletedMissions]);
 
         fixture = TestBed.createComponent(OfficeDashboardPageComponent);
         compiled = fixture.debugElement.nativeElement;
