@@ -7,9 +7,6 @@ interface WithProductItemXVMs {
     productItemVMs: ProductItemXVM[] | null;
 }
 
-interface ProductListFrame extends WithProductItemXVMs {
-    titleKey: string;
-}
 interface ProductListFrame extends FrameXVM, WithProductItemXVMs {}
 
 export interface ProductsPageVM {

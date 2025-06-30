@@ -26,6 +26,7 @@ export class OrderDetailsPageService {
                 creationDate: order.creationDate,
                 client: order.client,
                 totalAreaInHa: order.totalAreaInHa,
+
                 statusXVM: {
                     styles: mapOrderStatusToStatusToCSSStyles(order.status),
                     statusTextKey: mapOrderStatusToTranslocoTextKey(
@@ -42,6 +43,7 @@ export class OrderDetailsPageService {
                         value: {
                             key: this.config.headerConfig.createdDateValueKey,
                             params: { date: order.creationDate },
+
                         },
                     },
                     {
@@ -49,6 +51,7 @@ export class OrderDetailsPageService {
                         value: {
                             key: this.config.headerConfig.totalAreaValueKey,
                             params: { area: order.totalAreaInHa },
+
                         },
                     },
                 ],

@@ -1,6 +1,7 @@
 import { Mission } from '@services/mission/mission.service.model';
 
 export type OrderStatus = 'active' | 'pending' | 'completed';
+ 
 export interface Order {
     id: string;
     status: OrderStatus;
@@ -13,10 +14,23 @@ export interface Order {
     moneyValue: number;
 }
 
+
+export type OrderStatus = 'active';
+
+type MissionStatus = 'scheduled' | 'preparing' | 'completed';
+
 interface Message {
     sender: string;
     sendingDate: Date;
     message: string;
+}
+
+export interface Mission {
+    id: string;
+    fieldName: string;
+    areaInHa: number;
+    scheduledDate: Date;
+    status: MissionStatus;
 }
 
 interface Summary {

@@ -43,6 +43,7 @@ export const isTranslateInput = (obj: Value): obj is TranslateInput =>
 interface HeaderXVM
     extends HeaderConfig,
         Pick<Order, 'id' | 'creationDate' | 'client' | 'totalAreaInHa'> {
+
     statusXVM: StatusXVM;
     summaryXVMs: SummaryXVM[];
 }
@@ -54,6 +55,7 @@ export const mapOrderStatusToStatusToCSSStyles = (
         active: 'bg-green-200 text-green-800',
         pending: 'bg-red-200 text-red-800',
         completed: 'bg-orange-200 text-orange-800',
+
     })[status] ?? '';
 
 export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
@@ -61,4 +63,5 @@ export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
         active: 'OrderDetailsPage.header.status.active',
         pending: 'OrderDetailsPage.header.status.pending',
         completed: 'OrderDetailsPage.header.status.completed',
+
     })[status] ?? '';
