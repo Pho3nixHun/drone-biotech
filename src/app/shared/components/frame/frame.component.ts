@@ -23,7 +23,6 @@ import { FrameVM } from './frame.model';
     selector: 'app-frame',
     imports: [TranslocoModule],
     templateUrl: './frame.component.html',
-    imports: [],
 })
 export class FrameComponent {
     public vm = input<FrameVM | null>(null);
