@@ -1,0 +1,1100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerDashboardPageComponent should not render anything if there is no user 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <!--container-->
+</div>
+`;
+
+exports[`CustomerDashboardPageComponent should render five orders 1`] = `
+<div
+  id="root3"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 completed 
+              </h3>
+              <!--container-->
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="grid gap-4 col-span-full grid-cols-6"
+              ng-reflect-ng-class="grid-cols-6"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     i 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     request 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     ti 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     area 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     stat 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     mon 
+                  </h4>
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78901 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Sarah Johnson 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             347.5 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-yellow-200 text-yellow-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                            >
+                               DashboardPage.active 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78902 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Sarah Johnson 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             125.8 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-green-200 text-green-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                            >
+                               DashboardPage.completed 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78903 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Mike Thompson 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             89.2 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-pink-200 text-pink-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-pink-200 text-pink-600"
+                            >
+                               DashboardPage.pending 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78904 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Lisa Martinez 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             234.7 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-yellow-200 text-yellow-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                            >
+                               DashboardPage.active 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78905 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Lisa Martinez 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             234.7 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-yellow-200 text-yellow-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                            >
+                               DashboardPage.active 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`CustomerDashboardPageComponent should render the template correctly if there is a user 1`] = `
+<div
+  id="root1"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`CustomerDashboardPageComponent should render two orders 1`] = `
+<div
+  id="root2"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 completed 
+              </h3>
+              <!--container-->
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              class="grid gap-4 col-span-full grid-cols-6"
+              ng-reflect-ng-class="grid-cols-6"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     i 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     request 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     ti 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     area 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     stat 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     mon 
+                  </h4>
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78901 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Sarah Johnson 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             347.5 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-yellow-200 text-yellow-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                            >
+                               DashboardPage.active 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="i"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             i 
+                          </p>
+                          <!--container-->
+                          <p
+                            class="font-medium text-blue-800"
+                          >
+                             B-78902 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="request"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             request 
+                          </p>
+                          <!--container-->
+                          <p>
+                             Sarah Johnson 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="ti"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             ti 
+                          </p>
+                          <!--container-->
+                          <time>
+                            val
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area 
+                          </p>
+                          <!--container-->
+                          <div>
+                             125.8 
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            ng-reflect-color="bg-green-200 text-green-600"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                            >
+                               DashboardPage.completed 
+                            </div>
+                          </app-labeled-badge>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="mon"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             mon 
+                          </p>
+                          <!--container-->
+                          <p>
+                             val 
+                          </p>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;

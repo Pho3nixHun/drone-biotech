@@ -1,0 +1,62 @@
+@if (vm(); as vm) {
+    <app-page-layout *transloco="let t">
+        <app-frame>
+            <!-- Header that contains everything about the user -->
+            <app-user-header>
+                <span
+                    class="h-8 w-8 rounded-full"
+                    [ngClass]="mapRoleToCSSStyle(vm.userHeaderXVM.user.role)"
+                ></span>
+                <h2>
+                    {{
+                        t(vm.userHeaderXVM.titleKey, {
+                            name: vm.userHeaderXVM.user.name,
+                        })
+                    }}
+                </h2>
+                <p class="text-gray-600">
+                    {{
+                        t(vm.userHeaderXVM.roleDashboardKey, {
+                            role: vm.userHeaderXVM.user.role | titlecase,
+                        })
+                    }}
+                </p>
+                <small class="text-gray-600">{{
+                    t(vm.userHeaderXVM.loginTextKey)
+                }}</small>
+                <time>{{
+                    t(vm.userHeaderXVM.dateKey, {
+                        date: vm.userHeaderXVM.user.lastLoginDate,
+                    })
+                }}</time>
+            </app-user-header>
+
+            <app-summary-item-list>
+                @for (summary of vm.summaryXVMs; track $index) {
+                    <app-summary-item>
+                        <span class="text-2xl">{{ summary.emoji }}</span>
+                        <h4 class="text-gray-700 font-medium">
+                            {{ t(summary.titleKey) }}
+                        </h4>
+                        <p
+                            class="text-2xl font-semibold tracking-wider"
+                            [ngClass]="summary.color"
+                        >
+                            @if (hasValueKey(summary.quantity)) {
+                                {{
+                                    t(summary.quantity.valueKey, {
+                                        count: summary.quantity.value,
+                                    })
+                                }}
+                            } @else {
+                                {{ summary.quantity.value }}
+                            }
+                        </p>
+                    </app-summary-item>
+                }
+            </app-summary-item-list>
+
+            <router-outlet />
+        </app-frame>
+    </app-page-layout>
+}

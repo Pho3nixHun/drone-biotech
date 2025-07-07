@@ -30,6 +30,10 @@ import { CustomRouterStateSerializer } from './stores/router/router-state-serial
 import { environment } from 'src/environments/environment';
 import { TranslocoModule } from '@modules/transloco/transloco.module';
 import { mapFormControlConfig } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.config';
+import { pilotDashboardPageConfig } from './pages/pilot-dashboard-page/pilot-dashboard-page.config';
+import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.config';
+import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';
+import { officeDashboardPageConfig } from './pages/office-dashboard-page/office-dashboard-page.config';
 import { orderDetailsPageConfig } from './pages/order-details-page/order-details-page.config';
 
 const devMode = isDevMode();
@@ -63,6 +67,10 @@ export const appConfig: ApplicationConfig = {
         ...(devMode ? [provideStoreDevtools()] : []),
         provideAnimationsAsync(),
         mapFormControlConfig,
+        pilotDashboardPageConfig,
+        officeDashboardPageConfig,
+        dashboardPageConfig,
+        customerDashboardPageConfig,
         orderDetailsPageConfig,
     ],
 };

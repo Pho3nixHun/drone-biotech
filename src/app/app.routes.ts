@@ -6,7 +6,6 @@ import { guestOnlyGuard } from '@guards/guest-only/guest-only.guard';
 export const routes: Routes = [
     {
         path: AppRouteSegment.LANDING,
-        canActivate: [authenticatedUserGuard],
         loadComponent: () =>
             import('./pages/landing-page/landing-page.component').then(
                 (m) => m.LandingPageComponent
@@ -24,7 +23,6 @@ export const routes: Routes = [
     },
     {
         path: AppRouteSegment.PRODUCT,
-        canActivate: [authenticatedUserGuard],
         loadChildren: () =>
             import('./pages/products-page/products-routing.module').then(
                 (m) => m.ProductsRoutingModule
@@ -41,8 +39,16 @@ export const routes: Routes = [
         data: { headerCanBeShown: true },
     },
     {
-        path: '**',
+        path: AppRouteSegment.DASHBOARD,
         canActivate: [authenticatedUserGuard],
+        loadChildren: () =>
+            import('./pages/dashboard-page/dashboard-page-routing.module').then(
+                (m) => m.DashboardPageRoutingModule
+            ),
+        data: { headerCanBeShown: true },
+    },
+    {
+        path: '**',
         loadComponent: () =>
             import('./pages/not-found-page/not-found-page.component').then(
                 (m) => m.NotFoundPageComponent

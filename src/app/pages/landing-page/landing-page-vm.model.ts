@@ -44,10 +44,10 @@ export const isProductFrame = (frame: FrameXVM): frame is ProductFrame => {
     return isWithId(frame) && isWithProductItemXVMs(frame);
 };
 
-export interface PartnerFrame extends FrameVM, WithId, WithPartnerLogos {}
-export interface TestimonialFrame extends FrameVM, WithId, WithTestimonials {}
+export interface PartnerFrame extends WithTitle, WithId, WithPartnerLogos {}
+export interface TestimonialFrame extends WithTitle, WithId, WithTestimonials {}
 export interface PartnerAndTestimonialFrame
-    extends FrameVM,
+    extends WithTitle,
         WithId,
         WithPartnerLogos,
         WithTestimonials {}

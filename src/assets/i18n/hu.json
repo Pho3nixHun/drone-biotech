@@ -115,5 +115,82 @@
     "OrderDetailsPage.header.totalAreaText": "Teljes terület:",
     "OrderDetailsPage.header.totalAreaValue": "{area, number, :: .00} ha",
     "OrderDetailsPage.header.addNewMissionButtonText": "Új küldetés hozzáadása",
-    "OrderDetailsPage.header.status.active": "Aktív"
+    "OrderDetailsPage.header.status.active": "Aktív",
+    "OrderDetailsPage.header.status.pending": "Várakozik",
+    "OrderDetailsPage.header.status.completed": "Teljesítve",
+
+    "DashboardPage.userHeader.title": "Üdv újra, {name}",
+    "DashboardPage.userHeader.roleDashboard": "{ role } irányítópult",
+    "DashboardPage.userHeader.loginText": "Utolsó bejelentkezés",
+    "DashboardPage.userHeader.dateValue": "{ date, date, long } { date, time, short }",
+
+    "DashboardPage.hectareQuantity": "{ count } ha",
+    "DashboardPage.hourQuantity": "{ count }ó",
+    "DashboardPage.ratingQuantity": "{ count }/5",
+    "DashboardPage.moneyQuantity": "{ count }Ft",
+
+    "DashboardPage.preparing": "Előkészítés alatt",
+    "DashboardPage.scheduled": "Ütemezve",
+    "DashboardPage.pending": "Folyamatban",
+    "DashboardPage.excellent": "Kiváló",
+    "DashboardPage.good": "Jó",
+    "DashboardPage.completed": "Befejezve",
+    "DashboardPage.active": "Aktív",
+    "DashboardPage.dateValue": "{ date, date, long } { date, time, short }",
+
+    "DashboardPage.id.title": "Azonosító",
+    "DashboardPage.client.title": "Ügyfél",
+    "DashboardPage.fieldName.title": "Terület neve",
+
+    "DashboardPage.pilot.title": "Pilóta",
+    "DashboardPage.pilot.unassignedText": "Nincs hozzárendelve",
+
+    "DashboardPage.areaInHa.title": "Terület (ha)",
+    "DashboardPage.status.title": "Állapot",
+    "DashboardPage.requester.title": "Megrendelő",
+    "DashboardPage.performance.title": "Teljesítmény",
+    "DashboardPage.actions.title": "Műveletek",
+
+    "DashboardPage.moneyValue.title": "Érték",
+    "DashboardPage.moneyValue.value": "{count}Ft",
+
+    "DashboardPage.creationDate.title": "Létrehozás dátuma",
+    "DashboardPage.creationDate.dateValue": "{ date, date, long } { date, time, short }",
+
+    "DashboardPage.scheduledDate.title": "Ütemezés dátuma",
+    "DashboardPage.scheduledDate.dateValue": "{ date, date, long } { date, time, short }",
+
+    "DashboardPage.completionDate.title": "Befejezés dátuma",
+    "DashboardPage.completionDate.dateValue": "{ date, date, long } { date, time, short }",
+
+    "DashboardPage.customer.myOrders.title": "Saját rendelések",
+    "DashboardPage.customer.companyOrders.title": "Céges rendelések",
+    "DashboardPage.customer.myOrders.anchor.text": "Új rendelés",
+    "DashboardPage.customer.action.details.text": "Részletek megtekintése",
+
+    "DashboardPage.pilot.assignedMissions.title": "Hozzárendelt küldetéseim",
+    "DashboardPage.pilot.completedMissions.title": "Teljesített küldetéseim",
+    "DashboardPage.pilot.action.mission.text": "Küldetés megtekintése",
+    "DashboardPage.pilot.action.report.text": "Jelentés megtekintése",
+
+    "DashboardPage.office.activeMissions.title": "Aktív küldetések",
+    "DashboardPage.office.activeMissions.anchor.text": "Pilóta hozzárendelése",
+    "DashboardPage.office.recentCompletedMissions.title": "Legutóbbi befejezett küldetések",
+    "DashboardPage.office.action.report.text": "Jelentés megtekintése",
+    "DashboardPage.office.action.assign.text": "Hozzárendelés",
+    "DashboardPage.office.action.manage.text": "Kezelés",
+    "DashboardPage.office.action.reassign.text": "Átrendelés",
+
+    "DashboardPage.summary.activeOrder.title": "Aktív rendelések",
+    "DashboardPage.summary.totalArea.title": "Teljes terület",
+    "DashboardPage.summary.spending.title": "Havi költés",
+    "DashboardPage.summary.pending.title": "Függő küldetések",
+    "DashboardPage.summary.assignedMissions": "Hozzárendelt küldetések",
+    "DashboardPage.summary.completed": "Befejezve ebben a hónapban",
+    "DashboardPage.summary.flight.title": "Repült órák",
+    "DashboardPage.summary.performance.title": "Teljesítményértékelés",
+    "DashboardPage.summary.activeMission.title": "Aktív küldetések",
+    "DashboardPage.summary.availablePilots.title": "Elérhető pilóták",
+    "DashboardPage.summary.unassigned.title": "Hozzá nem rendelt küldetések",
+    "DashboardPage.summary.revenue.title": "Mai bevétel"
 }
