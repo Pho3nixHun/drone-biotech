@@ -1,8 +1,7 @@
-import { WithTitle } from '@interfaces/with-title.interface';
-import { WithTitle } from '@interfaces/with-title.interface';
 import { ProductItemXVM } from '../landing-page/landing-page-vm.model';
+import { FrameVM } from '@components/frame/frame.model';
 
-type FrameXVM = WithTitle;
+type FrameXVM = FrameVM;
 
 interface WithProductItemXVMs {
     productItemVMs: ProductItemXVM[] | null;

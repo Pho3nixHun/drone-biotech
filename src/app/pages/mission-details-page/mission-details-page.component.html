@@ -1,5 +1,5 @@
 @if (vm(); as vm) {
-    <app-page-section *transloco="let t">
+    <app-page-layout *transloco="let t">
         <app-frame>
             <!-- Frame title -->
             <h2>
@@ -111,14 +111,6 @@
                 </app-mission-grid-item>
             </div>
 
-            <!-- Progress update form control -->
-            <app-mission-grid-item [vm]="vm.progressGridItemVM">
-                <app-progress-update-form-control
-                    [vm]="vm.progressGridItemVM.formControlVM"
-                    [formControl]="progressLogItemControl"
-                />
-            </app-mission-grid-item>
-
             <!-- Message -->
             <app-mission-grid-item [vm]="vm.messagesGridItemVM">
                 <!-- Message item list -->
@@ -165,5 +157,5 @@
                 </div>
             </app-mission-grid-item>
         </app-frame>
-    </app-page-section>
+    </app-page-layout>
 }

@@ -1,5 +1,4 @@
 import {
-    Summary,
     SummaryColorType,
     SummaryUnitType,
 } from '@services/summary/summary.service.model';
@@ -8,7 +7,6 @@ import {
     MissionStatusType,
 } from '@services/mission/mission.service.model';
 import { UserRole, User as AuthUser } from '@stores/auth/auth.model';
-import { ValueType, WithKey, WithoutKey } from './value-key.interface';
 import { GridVM } from '@components/grid-section/components/grid/grid.model';
 import { WithTitle } from './with-title.interface';
 
@@ -17,29 +15,16 @@ export const mapAuthUserToDashboardUser = (user: AuthUser): User => ({
     role: user.role,
     lastLoginDate: new Date(),
 });
-
 export interface User {
     role: UserRole;
     name: string;
     lastLoginDate: Date;
 }
 
-export interface WithBaseDashboardPageVM {
-    summaryXVMs: SummaryXVM[];
-}
-
 export interface Badge {
     textKey: string;
     color: string;
 }
-
-export type SummaryXVM = {
-    quantity: Summary['unitType'] extends SummaryUnitType
-        ? ValueType<WithKey, number>
-        : ValueType<WithoutKey, number>;
-} & Omit<Summary, 'colorType' | 'unitType' | 'quantity' | 'allowedRole'> & {
-        color: string;
-    };
 
 export interface GridConfig extends GridVM, WithTitle {
     headerKeys: string[];

@@ -165,6 +165,7 @@ export const officeDashboardPageConfigMock: OfficeDashboardPageConfig = {
 export const oneActiveMission: Order = {
     id: 'B-78901',
     status: 'active',
+    moneyValue: 2100,
     client: {
         client: 'Westbrook Agricultural Holdings',
         contact: 'Sarah Johnson',
@@ -178,9 +179,8 @@ export const oneActiveMission: Order = {
         totalSupply: 868.75,
         orderValue: 34750.0,
     },
-    creationDate: new Date('2025-03-28'),
-    totalAreaInHa: 347.5,
-    moneyValue: 34750,
+    createdDate: new Date('2025-03-28'),
+    totalArea: 347.5,
     missions: [
         {
             id: '1',
@@ -205,6 +205,7 @@ export const oneActiveMission: Order = {
 export const threeActiveMissions: Order = {
     id: 'B-78901',
     status: 'active',
+    moneyValue: 2100,
     client: {
         client: 'Westbrook Agricultural Holdings',
         contact: 'Sarah Johnson',
@@ -218,9 +219,8 @@ export const threeActiveMissions: Order = {
         totalSupply: 868.75,
         orderValue: 34750.0,
     },
-    creationDate: new Date('2025-03-28'),
-    totalAreaInHa: 347.5,
-    moneyValue: 34750,
+    createdDate: new Date('2025-03-28'),
+    totalArea: 347.5,
     missions: [
         {
             id: '1',
@@ -261,6 +261,7 @@ export const threeActiveMissions: Order = {
 export const oneCompletedMission: Order = {
     id: 'B-78901',
     status: 'active',
+    moneyValue: 2100,
     client: {
         client: 'Westbrook Agricultural Holdings',
         contact: 'Sarah Johnson',
@@ -274,9 +275,8 @@ export const oneCompletedMission: Order = {
         totalSupply: 868.75,
         orderValue: 34750.0,
     },
-    creationDate: new Date('2025-03-28'),
-    totalAreaInHa: 347.5,
-    moneyValue: 34750,
+    createdDate: new Date('2025-03-28'),
+    totalArea: 347.5,
     missions: [
         {
             id: '5',
@@ -301,6 +301,7 @@ export const oneCompletedMission: Order = {
 export const threeCompletedMissions: Order = {
     id: 'B-78901',
     status: 'active',
+    moneyValue: 2100,
     client: {
         client: 'Westbrook Agricultural Holdings',
         contact: 'Sarah Johnson',
@@ -314,9 +315,8 @@ export const threeCompletedMissions: Order = {
         totalSupply: 868.75,
         orderValue: 34750.0,
     },
-    creationDate: new Date('2025-03-28'),
-    totalAreaInHa: 347.5,
-    moneyValue: 34750,
+    createdDate: new Date('2025-03-28'),
+    totalArea: 347.5,
     missions: [
         {
             id: '5',

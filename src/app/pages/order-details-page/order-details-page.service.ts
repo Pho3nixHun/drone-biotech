@@ -23,10 +23,9 @@ export class OrderDetailsPageService {
             headerXVM: {
                 ...this.config.headerConfig,
                 id: order.id,
-                creationDate: order.creationDate,
+                createdDate: order.createdDate,
                 client: order.client,
-                totalAreaInHa: order.totalAreaInHa,
-
+                totalArea: order.totalArea,
                 statusXVM: {
                     styles: mapOrderStatusToStatusToCSSStyles(order.status),
                     statusTextKey: mapOrderStatusToTranslocoTextKey(
@@ -42,14 +41,14 @@ export class OrderDetailsPageService {
                         textKey: this.config.headerConfig.createdDateTextKey,
                         value: {
                             key: this.config.headerConfig.createdDateValueKey,
-                            params: { date: order.creationDate },
+                            params: { date: order.totalArea },
                         },
                     },
                     {
                         textKey: this.config.headerConfig.totalAreaTextKey,
                         value: {
                             key: this.config.headerConfig.totalAreaValueKey,
-                            params: { area: order.totalAreaInHa },
+                            params: { area: order.totalArea },
                         },
                     },
                 ],

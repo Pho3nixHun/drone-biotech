@@ -29,11 +29,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
 import { TranslocoModule } from '@modules/transloco/transloco.module';
-import {
-    GOOGLE_MAPS_LOADER_CONFIG,
-    HEAD_OFFICE_LOCATION,
-    provideGoogleMapsLibraries,
-} from './shared/providers/google-maps-provider';
 import { pilotDashboardPageConfig } from './pages/pilot-dashboard-page/pilot-dashboard-page.config';
 import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.config';
 import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';

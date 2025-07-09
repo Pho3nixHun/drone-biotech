@@ -10,6 +10,7 @@ export interface Order {
     totalArea: number;
     missions: Mission[];
     messages: Message[];
+    moneyValue: number;
 }
 
 interface Message {

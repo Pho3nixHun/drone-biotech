@@ -10,7 +10,6 @@ import {
 import {
     Badge,
     GridConfig as Config,
-    WithBaseDashboardPageVM,
 } from '@interfaces/with-base-dashboard-page.interface';
 import {
     AssignedMission,
@@ -61,7 +60,7 @@ type CompletedMissionsGridXVM = CompletedMissionsGrid & {
 
 export type GridXVM = AssignedMissionsGridXVM | CompletedMissionsGridXVM;
 
-export interface PilotDashboardPageVM extends WithBaseDashboardPageVM {
+export interface PilotDashboardPageVM {
     gridXVMs: GridXVM[];
 }
 

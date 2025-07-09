@@ -6,7 +6,6 @@ import {
 } from './mission-details-page.model';
 import { missionDetailsPageDefaultVM } from './mission-details-page.mock';
 import { noop } from 'rxjs';
-import { ProgressLogItemVM } from './components/progress-update-form-control/components/progress-frame/components/progress-log-item-list/components/progress-log-item/progress-log-item.model';
 
 @Injectable({
     providedIn: 'root',
@@ -18,9 +17,6 @@ export class MissionDetailsPageServiceMock {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     public sendMessage = (item: MessageItemXVM) => noop;
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public addLogItem = (item: ProgressLogItemVM) => noop;
 }
 
 export const provideMockMissionDetailsPageService = () => ({

@@ -88,19 +88,4 @@ describe('MissionDetailsPageComponent', () => {
         //Assert
         expect(serviceSpy).toHaveBeenCalled();
     });
-
-    // Unit test
-    it('should add log item', async () => {
-        //Arrange
-        const serviceSpy = jest.spyOn(component['pageService'], 'addLogItem');
-        //Act
-        component['progressLogItemControl'].setValue({
-            date: new Date(1),
-            description: 'desc',
-            statusType: 'abort',
-        });
-
-        //Assert
-        expect(serviceSpy).toHaveBeenCalled();
-    });
 });

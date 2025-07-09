@@ -15,11 +15,11 @@ import {
 
 export type MyOrder = Pick<
     Order,
-    'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
+    'id' | 'moneyValue' | 'createdDate' | 'status' | 'totalArea'
 >;
 export type CompanyOrder = Pick<
     Order,
-    'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
+    'id' | 'moneyValue' | 'createdDate' | 'status' | 'totalArea'
 > & { requester: Order['client']['contact'] };
 
 export type DashboardOrder = MyOrder | CompanyOrder;

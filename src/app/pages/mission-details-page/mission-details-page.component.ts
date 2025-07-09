@@ -1,42 +1,36 @@
+import { MatIconModule } from '@angular/material/icon';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslocoModule } from '@jsverse/transloco';
-import { filter, firstValueFrom, tap } from 'rxjs';
-import { PageSectionComponent } from '@components/page-section/page-section.component';
+import { selectUser } from '@stores/auth/auth.selector';
+import { Store } from '@ngrx/store';
+import { firstValueFrom } from 'rxjs';
+import { isString } from '@utils/is-string.typeguard';
+import { emptyStringValidator } from '@utils/empty-string.validator';
 import { FrameComponent } from '@components/frame/frame.component';
-import { MissionDetailsPageService } from './mission-details-page.service';
+import { MessageItemListComponent } from '@components/message-item-list/message-item-list.component';
+import { MessageItemComponent } from '@components/message-item/message-item.component';
+import { DetailsItemListComponent } from '@components/details-item-list/details-item-list.component';
+import { DetailsItemComponent } from '@components/details-item/details-item.component';
+import { SupplyItemListComponent } from '@components/supply-item-list/supply-item-list.component';
+import { SupplyItemComponent } from '@components/supply-item/supply-item.component';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { MissionGridItemComponent } from './components/mission-grid-item/mission-grid-item.component';
-import { ProgressUpdateFormControlComponent } from './components/progress-update-form-control/progress-update-form-control.component';
-import { MessageItemListComponent } from '../../shared/components/message-item-list/message-item-list.component';
-import { MessageItemComponent } from '../../shared/components/message-item/message-item.component';
-import { RouterModule } from '@angular/router';
+import { MissionDetailsPageService } from './mission-details-page.service';
+import { MISSION_DETAILS_PAGE_PROVIDERS } from './mission-details-page.config';
+import { MissionHeaderComponent } from './components/mission-header/mission-header.component';
+import { MissionStatusComponent } from './components/mission-header/components/mission-status/mission-status.component';
+import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
 import {
     MapControl,
     mapDetailsItemTypeToCSSStyle,
 } from './mission-details-page.model';
-import { MISSION_DETAILS_PAGE_PROVIDERS } from './mission-details-page.config';
-import { emptyStringValidator } from '@utils/empty-string.validator';
-import { MissionHeaderComponent } from './components/mission-header/mission-header.component';
-import { MatIconModule } from '@angular/material/icon';
-import { DetailsItemListComponent } from '../../shared/components/details-item-list/details-item-list.component';
-import { isString } from '@utils/is-string.typeguard';
-import { MissionStatusComponent } from './components/mission-header/components/mission-status/mission-status.component';
 import {
     mapMissionStatusTypeToCSSStyle,
     mapMissionStatusTypeToTranslocoKey,
 } from './components/mission-header/components/mission-status/mission-status.model';
-import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
-import { DetailsItemComponent } from '../../shared/components/details-item/details-item.component';
-import {
-    isProgressLogItemVM,
-    ProgressLogItemVM,
-} from './components/progress-update-form-control/components/progress-frame/components/progress-log-item-list/components/progress-log-item/progress-log-item.model';
-import { SupplyItemListComponent } from '../../shared/components/supply-item-list/supply-item-list.component';
-import { SupplyItemComponent } from '../../shared/components/supply-item/supply-item.component';
-import { Store } from '@ngrx/store';
-import { selectUser } from '@stores/auth/auth.selector';
 
 /**
  * MissionDetailsPageComponent
@@ -57,14 +51,12 @@ import { selectUser } from '@stores/auth/auth.selector';
 @Component({
     selector: 'app-mission-details-page',
     imports: [
-        PageSectionComponent,
         FrameComponent,
         MissionStatusComponent,
         TranslocoModule,
         ReactiveFormsModule,
         MissionGridItemComponent,
         NgClass,
-        ProgressUpdateFormControlComponent,
         MessageItemListComponent,
         MessageItemComponent,
         RouterModule,
@@ -75,6 +67,7 @@ import { selectUser } from '@stores/auth/auth.selector';
         DetailsItemComponent,
         SupplyItemListComponent,
         SupplyItemComponent,
+        PageLayoutComponent,
     ],
     providers: [MISSION_DETAILS_PAGE_PROVIDERS],
     templateUrl: './mission-details-page.component.html',
@@ -118,16 +111,6 @@ export class MissionDetailsPageComponent {
         });
         this.messageControl.reset();
     }
-
-    protected readonly progressLogItemControl =
-        this.fb.control<ProgressLogItemVM | null>(null);
-
-    private readonly sendLogItemSignal = toSignal(
-        this.progressLogItemControl.valueChanges.pipe(
-            filter(isProgressLogItemVM),
-            tap((item) => this.pageService.addLogItem(item))
-        )
-    );
 
     protected readonly mapMissionStatusTypeToCSSStyle =
         mapMissionStatusTypeToCSSStyle;

@@ -42,7 +42,7 @@ export const isTranslateInput = (obj: Value): obj is TranslateInput =>
 
 interface HeaderXVM
     extends HeaderConfig,
-        Pick<Order, 'id' | 'creationDate' | 'client' | 'totalAreaInHa'> {
+        Pick<Order, 'id' | 'createdDate' | 'client' | 'totalArea'> {
     statusXVM: StatusXVM;
     summaryXVMs: SummaryXVM[];
 }

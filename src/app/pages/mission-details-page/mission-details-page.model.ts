@@ -1,15 +1,10 @@
-import { FrameVM } from '@components/frame/frame-vm';
-import { ProgressUpdateFormControlVM } from './components/progress-update-form-control/progress-update-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 import { WithLink } from '@interfaces/with-link.interface';
 import { MissionGridItemVM } from './components/mission-grid-item/mission-grid-item.model';
 import { WithTextNode } from '@interfaces/with-text-node.interface';
 import { WithBackgroundImageSrc } from '@interfaces/with-background-image-src.interface';
-import { Type } from '@angular/core';
-import { FormDialogVM } from './components/progress-update-form-control/components/form-dialog/form-dialog.model';
-import { FormDialogComponent } from './components/progress-update-form-control/components/form-dialog/form-dialog.component';
 import { MissionStatusType } from './components/mission-header/components/mission-status/mission-status.model';
-import { ProgressLogItemVM } from './components/progress-update-form-control/components/progress-frame/components/progress-log-item-list/components/progress-log-item/progress-log-item.model';
+import { FrameVM } from '@components/frame/frame.model';
 
 interface ButtonVM extends WithLink, WithTextNode {}
 
@@ -21,7 +16,6 @@ export interface MissionDetailsPageVM extends FrameVM {
     navigateButtonVM: ButtonVM;
     detailsGridItemVM: DetailsGridItemVM;
     suppliesGridItemVM: SuppliesGridItemVM;
-    progressGridItemVM: ProgressGridItemVM;
     messagesGridItemVM: MessagesGridItemVM;
     createdDateValueKey: string;
 }
@@ -71,10 +65,6 @@ interface SuppliesGridItemVM extends MissionGridItemVM {
     supplyItemXVMs: SupplyItemXVM[];
 }
 
-interface ProgressGridItemVM extends MissionGridItemVM {
-    formControlVM: ProgressUpdateFormControlVM;
-}
-
 export interface MessageItemXVM extends WithBackgroundImageSrc {
     altText: string;
     name: string;
@@ -88,19 +78,25 @@ interface MessagesGridItemVM extends MissionGridItemVM {
     submitButtonTextKey: string;
 }
 
-interface ComponentWithVM<C, VM> {
-    component: Type<C>;
-    vm: VM;
-}
-export type DialogType = ComponentWithVM<FormDialogComponent, FormDialogVM>;
+export const mapDetailsItemTypeToCSSStyle = (type: DetailsItemType): string => {
+    return (
+        {
+            area: 'bg-blue-200',
+            comment: 'bg-yellow-200',
+            date: 'bg-purple-200',
+            distance: 'bg-red-200',
+            dose: 'bg-green-200',
+        }[type] || ''
+    );
+};
 
+/*
 export interface ProgressItemVM {
     roles: Role[];
     availableAt: MissionStatusType[];
     disabled: boolean;
     matIconName: 'keyboard_arrow_right';
     type: ProgressItemType;
-    actionType: DialogType | ProgressLogItemVM;
 }
 
 export type ProgressItemType =
@@ -171,15 +167,4 @@ export const mapProgressItemTypeToTranslocoKey = (
         }[status] || ''
     );
 };
-
-export const mapDetailsItemTypeToCSSStyle = (type: DetailsItemType): string => {
-    return (
-        {
-            area: 'bg-blue-200',
-            comment: 'bg-yellow-200',
-            date: 'bg-purple-200',
-            distance: 'bg-red-200',
-            dose: 'bg-green-200',
-        }[type] || ''
-    );
-};
+*/

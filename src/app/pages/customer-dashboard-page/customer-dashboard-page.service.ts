@@ -49,9 +49,9 @@ export class CustomerDashboardPageService {
                               key: this.config.ordersConfig.status.titleKey,
                               value: order.status,
                           },
-                          totalAreaInHaKV: {
+                          totalAreaKV: {
                               key: this.config.ordersConfig.areaInHa.titleKey,
-                              value: order.totalAreaInHa,
+                              value: order.totalArea,
                           },
                           moneyValueKV: {
                               key: this.config.ordersConfig.moneyValue.titleKey,
@@ -59,10 +59,10 @@ export class CustomerDashboardPageService {
                               valueKey:
                                   this.config.ordersConfig.moneyValue.valueKey,
                           },
-                          creationDateKV: {
+                          createdDateKV: {
                               key: this.config.ordersConfig.creationDate
                                   .titleKey,
-                              value: order.creationDate,
+                              value: order.createdDate,
                               valueKey:
                                   this.config.ordersConfig.creationDate
                                       .valueKey,
@@ -99,9 +99,9 @@ export class CustomerDashboardPageService {
                               key: this.config.ordersConfig.status.titleKey,
                               value: order.status,
                           },
-                          totalAreaInHaKV: {
+                          totalAreaKV: {
                               key: this.config.ordersConfig.areaInHa.titleKey,
-                              value: order.totalAreaInHa,
+                              value: order.totalArea,
                           },
                           moneyValueKV: {
                               key: this.config.ordersConfig.moneyValue.titleKey,
@@ -109,10 +109,10 @@ export class CustomerDashboardPageService {
                               valueKey:
                                   this.config.ordersConfig.moneyValue.valueKey,
                           },
-                          creationDateKV: {
+                          createdDateKV: {
                               key: this.config.ordersConfig.creationDate
                                   .titleKey,
-                              value: order.creationDate,
+                              value: order.createdDate,
                               valueKey:
                                   this.config.ordersConfig.creationDate
                                       .valueKey,

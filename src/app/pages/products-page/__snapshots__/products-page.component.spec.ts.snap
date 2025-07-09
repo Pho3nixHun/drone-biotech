@@ -22,10 +22,10 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
         <section
           class="flex flex-col gap-y-10 py-10"
         >
+          <!--container-->
           <h2>
             title0
           </h2>
-          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -109,11 +109,11 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
             </div>
           </app-product-list>
         </section>
+        <!--container-->
       </app-frame>
       <!--container-->
     </section>
   </app-page-layout>
-  <!--container-->
   <!--container-->
 </div>
 `;
@@ -131,10 +131,10 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
         <section
           class="flex flex-col gap-y-10 py-10"
         >
+          <!--container-->
           <h2>
             title0
           </h2>
-          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -218,11 +218,11 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
             </div>
           </app-product-list>
         </section>
+        <!--container-->
       </app-frame>
       <!--container-->
     </section>
   </app-page-layout>
-  <!--container-->
   <!--container-->
 </div>
 `;
@@ -240,10 +240,10 @@ exports[`ProductsPageComponent should render the template when the VM is provide
         <section
           class="flex flex-col gap-y-10 py-10"
         >
+          <!--container-->
           <h2>
             title0
           </h2>
-          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -327,11 +327,11 @@ exports[`ProductsPageComponent should render the template when the VM is provide
             </div>
           </app-product-list>
         </section>
+        <!--container-->
       </app-frame>
       <!--container-->
     </section>
   </app-page-layout>
-  <!--container-->
   <!--container-->
 </div>
 `;
