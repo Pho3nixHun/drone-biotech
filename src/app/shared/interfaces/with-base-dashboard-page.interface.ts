@@ -1,4 +1,8 @@
 import {
+    SummaryColorType,
+    SummaryUnitType,
+} from '@services/summary/summary.service.model';
+import {
     MissionPerformanceType,
     MissionStatusType,
 } from '@services/mission/mission.service.model';
@@ -11,7 +15,6 @@ export const mapAuthUserToDashboardUser = (user: AuthUser): User => ({
     role: user.role,
     lastLoginDate: new Date(),
 });
-
 export interface User {
     role: UserRole;
     name: string;
@@ -26,6 +29,31 @@ export interface Badge {
 export interface GridConfig extends GridVM, WithTitle {
     headerKeys: string[];
 }
+
+export const mapSummaryColorTypeToCSSTextColor = (
+    type: SummaryColorType
+): string => {
+    return (
+        {
+            blue: 'text-blue-600',
+            green: 'text-green-600',
+            red: 'text-red-600',
+            purple: 'text-purple-600',
+            yellow: 'text-yellow-600',
+        }[type] || ''
+    );
+};
+
+export const mapSummaryUnitTypeToTranslocoQuantityKey = (
+    type: SummaryUnitType
+): string => {
+    return {
+        hectare: 'DashboardPage.hectareQuantity',
+        money: 'DashboardPage.moneyQuantity',
+        rating: 'DashboardPage.ratingQuantity',
+        hour: 'DashboardPage.hourQuantity',
+    }[type];
+};
 
 export const mapMissionStatusTypeToCCSColors = (
     type: MissionStatusType

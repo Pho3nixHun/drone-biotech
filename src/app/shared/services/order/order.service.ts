@@ -3,7 +3,6 @@ import { map, Observable, of } from 'rxjs';
 import { Order } from './order.service.model';
 import { orders } from './order-mock';
 
-
 @Injectable({
     providedIn: 'root',
 })

@@ -4,6 +4,7 @@ import { ProductItemComponent } from '@components/product-item/product-item.comp
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * ProductsPageComponent
@@ -28,6 +29,7 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
         ProductItemComponent,
         ProductListComponent,
         PageLayoutComponent,
+        TranslocoModule,
     ],
     templateUrl: './products-page.component.html',
 })

@@ -58,7 +58,7 @@ export const customerDashboardPageConfig: CustomerDashboardPageConfig = {
 };
 
 export const enMock = {
-    creationDate: { title: 'ti', value: 'val' },
+    createdDate: { title: 'ti', value: 'val' },
     areaInHa: { title: 'area' },
     id: { title: 'i' },
     status: { title: 'stat' },
@@ -92,8 +92,8 @@ export const customerDashboardPageConfigMock: CustomerDashboardPageConfig = {
         id: { titleKey: enMock.id.title },
         status: { titleKey: enMock.status.title },
         creationDate: {
-            titleKey: enMock.creationDate.title,
-            valueKey: enMock.creationDate.value,
+            titleKey: enMock.createdDate.title,
+            valueKey: enMock.createdDate.value,
         },
         requester: { titleKey: enMock.requester.title },
         action: {
@@ -108,7 +108,7 @@ export const customerDashboardPageConfigMock: CustomerDashboardPageConfig = {
         gridColsLength: GridColsLength.SIX,
         headerKeys: [
             enMock.id.title,
-            enMock.creationDate.title,
+            enMock.createdDate.title,
             enMock.areaInHa.title,
             enMock.status.title,
             enMock.money.title,
@@ -121,7 +121,7 @@ export const customerDashboardPageConfigMock: CustomerDashboardPageConfig = {
         headerKeys: [
             enMock.id.title,
             enMock.requester.title,
-            enMock.creationDate.title,
+            enMock.createdDate.title,
             enMock.areaInHa.title,
             enMock.status.title,
             enMock.money.title,
@@ -146,8 +146,8 @@ export const mockOrdersTwo: Order[] = [
             totalSupply: 868.75,
             orderValue: 34750.0,
         },
-        creationDate: new Date('2025-03-28'),
-        totalAreaInHa: 347.5,
+        createdDate: new Date('2025-03-28'),
+        totalArea: 347.5,
         moneyValue: 34750,
         missions: [
             {
@@ -248,8 +248,8 @@ export const mockOrdersTwo: Order[] = [
             totalSupply: 868.75,
             orderValue: 34750.0,
         },
-        creationDate: new Date('2025-02-15'),
-        totalAreaInHa: 125.8,
+        createdDate: new Date('2025-02-15'),
+        totalArea: 125.8,
         moneyValue: 12580,
         missions: [
             {
@@ -303,8 +303,8 @@ export const mockOrdersFive: Order[] = [
             totalSupply: 868.75,
             orderValue: 34750.0,
         },
-        creationDate: new Date('2025-03-28'),
-        totalAreaInHa: 347.5,
+        createdDate: new Date('2025-03-28'),
+        totalArea: 347.5,
         moneyValue: 34750,
         missions: [
             {
@@ -405,8 +405,8 @@ export const mockOrdersFive: Order[] = [
             totalSupply: 868.75,
             orderValue: 34750.0,
         },
-        creationDate: new Date('2025-02-15'),
-        totalAreaInHa: 125.8,
+        createdDate: new Date('2025-02-15'),
+        totalArea: 125.8,
         moneyValue: 12580,
         missions: [
             {
@@ -443,8 +443,8 @@ export const mockOrdersFive: Order[] = [
     },
     {
         id: 'B-78903',
-        creationDate: new Date('2025-04-05'),
-        totalAreaInHa: 89.2,
+        createdDate: new Date('2025-04-05'),
+        totalArea: 89.2,
         status: 'pending',
         moneyValue: 8920,
         client: {
@@ -487,8 +487,8 @@ export const mockOrdersFive: Order[] = [
     },
     {
         id: 'B-78904',
-        creationDate: new Date('2025-04-08'),
-        totalAreaInHa: 234.7,
+        createdDate: new Date('2025-04-08'),
+        totalArea: 234.7,
         status: 'active',
         moneyValue: 23470,
         client: {
@@ -531,8 +531,8 @@ export const mockOrdersFive: Order[] = [
     },
     {
         id: 'B-78905',
-        creationDate: new Date('2025-04-08'),
-        totalAreaInHa: 234.7,
+        createdDate: new Date('2025-04-08'),
+        totalArea: 234.7,
         status: 'active',
         moneyValue: 23470,
         client: {

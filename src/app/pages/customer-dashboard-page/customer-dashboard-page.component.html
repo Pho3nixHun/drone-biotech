@@ -51,20 +51,20 @@
                                 }
 
                                 <app-key-value
-                                    [label]="orderXVM.creationDateKV.key"
+                                    [label]="orderXVM.createdDateKV.key"
                                 >
                                     <time>{{
-                                        t(orderXVM.creationDateKV.valueKey, {
-                                            date: orderXVM.creationDateKV.value,
+                                        t(orderXVM.createdDateKV.valueKey, {
+                                            date: orderXVM.createdDateKV.value,
                                         })
                                     }}</time>
                                 </app-key-value>
 
                                 <app-key-value
-                                    [label]="orderXVM.totalAreaInHaKV.key"
+                                    [label]="orderXVM.totalAreaKV.key"
                                 >
                                     <div>
-                                        {{ orderXVM.totalAreaInHaKV.value }}
+                                        {{ orderXVM.totalAreaKV.value }}
                                     </div>
                                 </app-key-value>
 

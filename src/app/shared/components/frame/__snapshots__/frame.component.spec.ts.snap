@@ -7,7 +7,7 @@ exports[`FrameComponent should render the template when the vm is not provided 1
 >
   <app-frame>
     <section
-      class="flex flex-col gap-y-10 py-10"
+      class="flex flex-col gap-y-5"
     >
       <!--container-->
       <div>
@@ -28,7 +28,7 @@ exports[`FrameComponent should render the template when the vm is provided 1`] =
     ng-reflect-vm="[object Object]"
   >
     <section
-      class="flex flex-col gap-y-10 py-10"
+      class="flex flex-col gap-y-5"
     >
       <h2>
         Our Products

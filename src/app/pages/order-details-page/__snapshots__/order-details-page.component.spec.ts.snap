@@ -11,7 +11,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
           <!--container-->
           <app-header>

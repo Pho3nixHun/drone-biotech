@@ -6,8 +6,8 @@ export interface Order {
     status: OrderStatus;
     client: Client;
     summary: Summary;
-    creationDate: Date;
-    totalAreaInHa: number;
+    createdDate: Date;
+    totalArea: number;
     missions: Mission[];
     messages: Message[];
     moneyValue: number;
@@ -33,4 +33,3 @@ interface Client {
     phone: string;
     address: string;
 }
-

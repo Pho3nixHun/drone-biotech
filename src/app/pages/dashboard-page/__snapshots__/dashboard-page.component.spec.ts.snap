@@ -20,7 +20,7 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
           <!--container-->
           <app-user-header>
@@ -195,7 +195,7 @@ exports[`DashboardPageComponent should render the template correctly if there is
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
           <!--container-->
           <app-user-header>

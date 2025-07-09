@@ -17,9 +17,9 @@ export const orders: Order[] = [
             totalSupply: 868.75,
             orderValue: 34750.0,
         },
-        creationDate: new Date('2025-03-28'),
-        totalAreaInHa: 347.5,
-        moneyValue: 34750,
+        moneyValue: 2100,
+        createdDate: new Date('2025-03-28'),
+        totalArea: 347.5,
         missions: [
             {
                 id: 'A-12345',
@@ -106,6 +106,7 @@ export const orders: Order[] = [
     {
         id: 'B-78902',
         status: 'completed',
+        moneyValue: 2100,
         client: {
             client: 'Westbrook Agricultural Holdings',
             contact: 'Sarah Johnson',
@@ -119,9 +120,8 @@ export const orders: Order[] = [
             totalSupply: 868.75,
             orderValue: 34750.0,
         },
-        creationDate: new Date('2025-02-15'),
-        totalAreaInHa: 125.8,
-        moneyValue: 12580,
+        createdDate: new Date('2025-02-15'),
+        totalArea: 125.8,
         missions: [
             {
                 id: 'A-12220',
@@ -157,10 +157,10 @@ export const orders: Order[] = [
     },
     {
         id: 'B-78903',
-        creationDate: new Date('2025-04-05'),
-        totalAreaInHa: 89.2,
+        createdDate: new Date('2025-04-05'),
+        moneyValue: 2100,
+        totalArea: 89.2,
         status: 'pending',
-        moneyValue: 8920,
         client: {
             client: 'Sunrise Agriculture',
             contact: 'Mike Thompson',
@@ -201,10 +201,10 @@ export const orders: Order[] = [
     },
     {
         id: 'B-78904',
-        creationDate: new Date('2025-04-08'),
-        totalAreaInHa: 234.7,
+        createdDate: new Date('2025-04-08'),
+        totalArea: 234.7,
+        moneyValue: 2100,
         status: 'active',
-        moneyValue: 23470,
         client: {
             client: 'Martinez Orchards',
             contact: 'Lisa Martinez',
