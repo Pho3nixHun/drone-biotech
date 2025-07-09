@@ -45,10 +45,14 @@
                     {{ t(vm.navigateButtonVM.textKey) }}
                 </a>
             </app-mission-header>
+        </app-frame>
 
-            <!-- Map to visualize target area, entry point -->
+        <!-- Map to visualize target area, entry point -->
+        <app-frame>
             <app-map-form-control [formControl]="mapControl" />
+        </app-frame>
 
+        <app-frame>
             <div class="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
                 <!-- Mission details -->
                 <app-mission-grid-item
@@ -110,8 +114,10 @@
                     </app-supply-item-list>
                 </app-mission-grid-item>
             </div>
+        </app-frame>
 
-            <!-- Message -->
+        <!-- Message -->
+        <app-frame>
             <app-mission-grid-item [vm]="vm.messagesGridItemVM">
                 <!-- Message item list -->
                 <app-message-item-list>

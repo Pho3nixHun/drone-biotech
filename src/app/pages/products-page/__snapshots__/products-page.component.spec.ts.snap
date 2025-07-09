@@ -20,7 +20,7 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
           <!--container-->
           <h2>
@@ -129,7 +129,7 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
           <!--container-->
           <h2>
@@ -238,7 +238,7 @@ exports[`ProductsPageComponent should render the template when the VM is provide
     >
       <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
           <!--container-->
           <h2>

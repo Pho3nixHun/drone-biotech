@@ -49,14 +49,15 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -151,14 +152,15 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -466,14 +468,15 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -568,14 +571,15 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -828,14 +832,15 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -849,14 +854,15 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -1164,14 +1170,15 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -1266,14 +1273,15 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -1433,14 +1441,15 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -1535,14 +1544,15 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -1850,14 +1860,15 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -1952,14 +1963,15 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -2223,14 +2235,15 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -2271,14 +2284,15 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -2586,14 +2600,15 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -2688,14 +2703,15 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -2863,14 +2879,15 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -3022,14 +3039,15 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -3124,14 +3142,15 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -3439,14 +3458,15 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -3595,14 +3615,15 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -3910,14 +3931,15 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -4012,14 +4034,15 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -4299,14 +4322,15 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--container-->
       <app-frame
         id="0"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -4401,14 +4425,15 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="1"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -4659,14 +4684,15 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="2"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -4761,14 +4787,15 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="3"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -4863,14 +4890,15 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="4"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -5197,14 +5225,15 @@ exports[`LandingPageComponent should render only partner frames when only partne
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -5356,14 +5385,15 @@ exports[`LandingPageComponent should render only product frames when only produc
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -5515,14 +5545,15 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -5617,14 +5648,15 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -5932,14 +5964,15 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <!--container-->
       <app-frame
         id="products"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             0frame
           </h2>
+          <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -6034,14 +6067,15 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <!--ng-container-->
       <app-frame
         id="partners"
+        ng-reflect-vm="[object Object]"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-5"
         >
-          <!--container-->
           <h2>
             1frame
           </h2>
+          <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"

@@ -13,7 +13,6 @@ import {
 import {
     DetailsItemXVM,
     MessageItemXVM,
-    MissionData,
     MissionDetailsPageVM,
     Role,
 } from './mission-details-page.model';
@@ -36,7 +35,6 @@ export class MissionDetailsPageService {
     }
 
     private readonly computedVM = computed<MissionDetailsPageVM>(() => {
-        const data = this.areaDataSignal();
         const messageItemXVMs = this.messagesSignal();
         const role = this.roleSignal();
         const status = this.statusSignal();
@@ -49,15 +47,8 @@ export class MissionDetailsPageService {
                 detailsItemXVMs: this.missionDetailItemXVMs(),
             },
             missionDataXVM: {
-                applicationDate:
-                    data?.applicationDate ?? vm.missionDataXVM.applicationDate,
-                createdDate: vm.missionDataXVM.createdDate,
+                ...vm.missionDataXVM,
                 missionStatusType: status,
-                dosePerHa: data?.dosePerHa ?? vm.missionDataXVM.dosePerHa,
-                entryPoint: data?.entryPoint ?? vm.missionDataXVM.entryPoint,
-                targetArea: data?.targetArea ?? vm.missionDataXVM.targetArea,
-                comment: data?.comment ?? vm.missionDataXVM.comment,
-                missionName: data?.missionName ?? vm.missionDataXVM.missionName,
             },
             navigateButtonVM: {
                 ...vm.navigateButtonVM,
@@ -78,7 +69,6 @@ export class MissionDetailsPageService {
         vm.missionDataXVM.missionStatusType
     );
     private readonly roleSignal = signal<Role>(vm.role);
-    private readonly areaDataSignal = signal<MissionData | null>(null);
     private readonly messagesSignal = signal<MessageItemXVM[]>(
         vm.messagesGridItemVM.messageItemXVMs
     );
@@ -102,10 +92,14 @@ export class MissionDetailsPageService {
             getAreaOfPolygon(vm.missionDataXVM.targetArea) /
             SQUARE_METRES_TO_HECTARE;
 
+        const distanceInKm = this.distanceInKmFromOffice.hasValue()
+            ? this.distanceInKmFromOffice.value()
+            : 0;
+
         return {
             targetAreaSizeInHa,
             totalDose: targetAreaSizeInHa * vm.missionDataXVM.dosePerHa,
-            distanceInKm: this.distanceInKmFromOffice.value(),
+            distanceInKm,
             applicationDate: vm.missionDataXVM.applicationDate,
         };
     });
