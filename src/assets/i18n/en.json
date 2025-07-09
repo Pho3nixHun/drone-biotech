@@ -11,47 +11,38 @@
     "LandingPage.testimonials.4.roleAndCompany": "Marketing Director, Another Company",
     "LandingPage.testimonials.5.message": "A truly outstanding experience, 5 stars!",
     "LandingPage.testimonials.5.roleAndCompany": "Product Manager, Some Company",
-
     "LandingPage.products.0.title": "Controller",
     "LandingPage.products.0.description": "The sleek sports car roared to life, its engine purring with power as it sped down the highway.",
     "LandingPage.products.1.title": "RTU",
     "LandingPage.products.1.description": "After hours on the road, they finally reached the scenic overlook, the cars tires crunching on the gravel.",
     "LandingPage.products.2.title": "Cloud and Mobile",
     "LandingPage.products.2.description": "The classic car show attracted enthusiasts from all over, each vehicle polished to perfection under the bright sun.",
-
     "LandingPage.frames.0.title": "Our Products",
     "LandingPage.frames.1.title": "Partners",
-
     "LandingPage.hero.title": "The future of irrigation is now",
     "LandingPage.hero.description": "IRRIOT is a completely wireless precision irrigation automation system",
     "LandingPage.hero.primaryButtonLabel": "Contact Us",
     "LandingPage.hero.secondaryButtonTitleLabel": "Learn More",
-
     "LandingPage.partners.0.altText": "Butterfly",
     "LandingPage.partners.1.altText": "Butterfly",
     "LandingPage.partners.2.altText": "Butterfly",
     "LandingPage.partners.3.altText": "Butterfly",
     "LandingPage.partners.4.altText": "Butterfly",
-
     "AppComponent.navItems.0.title": "Home",
     "AppComponent.navItems.1.title": "Products",
     "AppComponent.navItems.2.title": "Partners",
     "AppComponent.navItems.3.title": "Order",
-
     "NotFoundPage.message.description": "Sorry, we couldn't find this page. But don't worry, you can find plenty of other things on our homepage.",
     "NotFoundPage.message.buttonText": "Go home",
-
     "LoginPage.loginForm.title": "Welcome to Phoenix!",
     "LoginPage.loginForm.description": "Phoenix is ...",
     "LoginPage.loginForm.buttonTitle": "Login",
     "LoginPage.loginForm.passwordPlaceholder": "Password",
     "LoginPage.loginForm.emailLabel": "Email",
     "LoginPage.loginForm.passwordLabel": "Password",
-
     "LoginPage.error.invalid": "Invalid credentials. Please check your email and password and try again.",
     "LoginPage.error.many": "Too many attempts. Please try again later.",
     "LoginPage.error.unknown": "Oppps, something wrong happened.",
-
     "OrdersNewPage.title": "Place new order",
     "OrdersNewPage.submitButtonText": "Submit",
     "OrdersNewPage.emailLabel": "Email",
@@ -60,7 +51,6 @@
     "OrdersNewPage.phoneNumberLabel": "Phone number",
     "OrdersNewPage.internalOrderNumberLabel": "Internal order number",
     "OrdersNewPage.areasDataLabel": "Field management",
-
     "OrdersNewPage.areasDataFormControl.actionsHeader": "Actions",
     "OrdersNewPage.areasDataFormControl.targetAreaSizeHeader": "Area",
     "OrdersNewPage.areasDataFormControl.entryPointHeader": "Entry point",
@@ -73,13 +63,11 @@
     "OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader": "Total area",
     "OrdersNewPage.areasDataFormControl.missionHeader": "Mission",
     "OrdersNewPage.areasDataFormControl.commentHeader": "Comment",
-
     "OrdersNewPage.areasDataFormControl.applicationDateValue": "{ applicationDate, date, long } { applicationDate, time, short }",
     "OrdersNewPage.areasDataFormControl.targetAreaSizeValue": "{count, number, :: .00} ha",
     "OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeValue": "{count, number, :: .00} km",
     "OrdersNewPage.areasDataFormControl.doseValue": "{count, plural, one {1 unit/ha} other {# units/ha}}",
     "OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue": "{count, number, :: .00} pieces",
-
     "OrdersNewPage.areasDataDialog.title.edit": "Edit the area",
     "OrdersNewPage.areasDataDialog.title.add": "Add a new area",
     "OrdersNewPage.areasDataDialog.cancelButtonText": "Cancel",
@@ -90,24 +78,19 @@
     "OrdersNewPage.areasDataDialog.targetAreaLabelKey": "Target area",
     "OrdersNewPage.areasDataDialog.missionNameLabel": "Mission name",
     "OrdersNewPage.areasDataDialog.commentLabel": "Comment",
-
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel": "Coordinates",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Add target area",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText": "Edit area",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Delete target area",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey": "{value, number, :: .00} ha",
-
     "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue": "{value, number, :: .0} km",
     "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder": "Search in the map",
-
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText": "Add entry point",
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText": "Delete entry point",
-
     "OrdersNewPage.deleteDialog.title": "Are you sure?",
     "OrdersNewPage.deleteDialog.warningText": "Do you really want to delete these records? This process cannot be undone.",
     "OrdersNewPage.deleteDialog.submitButtonText": "Delete",
     "OrdersNewPage.deleteDialog.cancelButtonText": "Cancel",
-
     "OrderDetailsPage.header.idTitle": "Order #{id}",
     "OrderDetailsPage.header.clientText": "Client:",
     "OrderDetailsPage.header.createdDateText": "Created:",
@@ -118,17 +101,14 @@
     "OrderDetailsPage.header.status.active": "Active",
     "OrderDetailsPage.header.status.pending": "Pending",
     "OrderDetailsPage.header.status.completed": "Completed",
-
     "DashboardPage.userHeader.title": "Welcome back, {name}",
     "DashboardPage.userHeader.roleDashboard": "{ role } dashboard",
     "DashboardPage.userHeader.loginText": "Last login",
     "DashboardPage.userHeader.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.hectareQuantity": "{ count } ha",
     "DashboardPage.hourQuantity": "{ count }h",
     "DashboardPage.ratingQuantity": "{ count }/5",
     "DashboardPage.moneyQuantity": "{ count }HUF",
-
     "DashboardPage.preparing": "Preparing",
     "DashboardPage.scheduled": "Scheduled",
     "DashboardPage.pending": "Pending",
@@ -137,42 +117,32 @@
     "DashboardPage.completed": "Completed",
     "DashboardPage.active": "Active",
     "DashboardPage.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.id.title": "Id",
     "DashboardPage.client.title": "Client",
     "DashboardPage.fieldName.title": "Field name",
-
     "DashboardPage.pilot.title": "Pilot",
     "DashboardPage.pilot.unassignedText": "Unassigned",
-
     "DashboardPage.areaInHa.title": "Area (ha)",
     "DashboardPage.status.title": "Status",
     "DashboardPage.requester.title": "Requester",
     "DashboardPage.performance.title": "Performance",
     "DashboardPage.actions.title": "Actions",
-
     "DashboardPage.moneyValue.title": "Value",
     "DashboardPage.moneyValue.value": "{count}HUF",
-
     "DashboardPage.creationDate.title": "Creation date",
     "DashboardPage.creationDate.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.scheduledDate.title": "Scheduled date",
     "DashboardPage.scheduledDate.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.completionDate.title": "Completion date",
     "DashboardPage.completionDate.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.customer.myOrders.title": "My orders",
     "DashboardPage.customer.companyOrders.title": "Company orders",
     "DashboardPage.customer.myOrders.anchor.text": "New order",
     "DashboardPage.customer.action.details.text": "View details",
-
     "DashboardPage.pilot.assignedMissions.title": "My assigned missions",
     "DashboardPage.pilot.completedMissions.title": "My completed missions",
     "DashboardPage.pilot.action.mission.text": "View mission",
     "DashboardPage.pilot.action.report.text": "View report",
-
     "DashboardPage.office.activeMissions.title": "Active missions",
     "DashboardPage.office.activeMissions.anchor.text": "Assign pilot",
     "DashboardPage.office.recentCompletedMissions.title": "Recent completed missions",
@@ -180,7 +150,6 @@
     "DashboardPage.office.action.assign.text": "Assign",
     "DashboardPage.office.action.manage.text": "Manage",
     "DashboardPage.office.action.reassign.text": "Reassign",
-
     "DashboardPage.summary.activeOrder.title": "Active orders",
     "DashboardPage.summary.totalArea.title": "Total area",
     "DashboardPage.summary.spending.title": "This month spend",
@@ -192,5 +161,20 @@
     "DashboardPage.summary.activeMission.title": "Active missions",
     "DashboardPage.summary.availablePilots.title": "Available pilots",
     "DashboardPage.summary.unassigned.title": "Unassigned missions",
-    "DashboardPage.summary.revenue.title": "Today revenue"
+    "DashboardPage.summary.revenue.title": "Today revenue",
+    "OrderDetailsPage.details.title": "Order details",
+    "OrderDetailsPage.details.summary.title": "Order summary",
+    "OrderDetailsPage.details.averageDoseValue": "{dose} liters/hectare",
+    "OrderDetailsPage.details.averageDoseLabel": "Average dose:",
+    "OrderDetailsPage.details.orderValueValue": "{price}ft",
+    "OrderDetailsPage.details.orderValueLabel": "Order label:",
+    "OrderDetailsPage.details.totalSupplyValue": "{amount} liters",
+    "OrderDetailsPage.details.totalSupplyLabel": "Total supply:",
+    "OrderDetailsPage.details.treatmentLabel": "Treatment:",
+    "OrderDetailsPage.details.client.title": "Client information",
+    "OrderDetailsPage.details.addressLabel": "Address:",
+    "OrderDetailsPage.details.contactLabel": "Contact:",
+    "OrderDetailsPage.details.emailLabel": "Email:",
+    "OrderDetailsPage.details.phoneLabel": "Phone:"
+}
 }
