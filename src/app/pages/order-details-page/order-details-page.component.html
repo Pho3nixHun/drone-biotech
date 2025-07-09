@@ -1,46 +1,94 @@
 @if (vm(); as vm) {
     <app-page-layout *transloco="let t">
-        <app-frame>
-            <app-header>
-                <h2>
-                    {{
-                        t(vm.headerXVM.idTitleKey, {
-                            id: vm.headerXVM.id,
-                        })
-                    }}
-                </h2>
+        <app-header>
+            <h2>
+                {{
+                    t(vm.headerXVM.idTitleKey, {
+                        id: vm.headerXVM.id,
+                    })
+                }}
+            </h2>
 
-                <app-status [vm]="vm.headerXVM.statusXVM">
-                    {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
-                </app-status>
+            <app-status [vm]="vm.headerXVM.statusXVM">
+                {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
+            </app-status>
 
-                <button class="btn btn-primary w-fit truncate">
-                    {{ t(vm.headerXVM.addNewMissionButtonTextKey) }}
-                </button>
+            <button class="btn btn-primary w-fit truncate">
+                {{ t(vm.headerXVM.addNewMissionButtonTextKey) }}
+            </button>
 
-                <app-summary-list>
-                    @for (summary of vm.headerXVM.summaryXVMs; track $index) {
-                        <app-summary>
-                            <p class="text-gray-600">
-                                {{ t(summary.textKey) }}
-                            </p>
+            <app-summary-list>
+                @for (summary of vm.headerXVM.summaryXVMs; track $index) {
+                    <app-summary>
+                        <p class="text-gray-600">
+                            {{ t(summary.textKey) }}
+                        </p>
 
-                            <p class="font-medium">
-                                @if (isTranslateInput(summary.value)) {
-                                    {{
-                                        t(
-                                            summary.value.key,
-                                            summary.value.params
-                                        )
-                                    }}
-                                } @else {
-                                    {{ summary.value }}
-                                }
-                            </p>
-                        </app-summary>
-                    }
-                </app-summary-list>
-            </app-header>
-        </app-frame>
+                        <p class="font-medium">
+                            @if (isTranslateInput(summary.value)) {
+                                {{ t(summary.value.key, summary.value.params) }}
+                            } @else {
+                                {{ summary.value }}
+                            }
+                        </p>
+                    </app-summary>
+                }
+            </app-summary-list>
+        </app-header>
+
+        @for (sectionCardXVM of vm.sectionCardXVMs; track $index) {
+            @switch (sectionCardXVM.type) {
+                @case ('orderDetails') {
+                    <ng-container
+                        [ngTemplateOutlet]="orderDetails"
+                        [ngTemplateOutletContext]="{ sectionCardXVM }"
+                    >
+                    </ng-container>
+                }
+            }
+        }
     </app-page-layout>
 }
+
+<ng-template #orderDetails let-vm="sectionCardXVM">
+    <app-section-card [vm]="vm" *transloco="let t">
+        <div class="flex lg:flex-row flex-col space-y-8 lg:space-y-0">
+            @for (infoPanelXVM of vm.infoPanelXVMs; track $index) {
+                <app-info-panel class="lg:w-1/2 w-full">
+                    <h4 class="font-medium">
+                        {{ t(infoPanelXVM.titleKey) }}
+                    </h4>
+                    <app-info-item-list>
+                        @for (
+                            infoItemXVM of infoPanelXVM.infoListXVM
+                                .infoItemXVMs;
+                            track $index
+                        ) {
+                            <app-info-item>
+                                <dt class="text-gray-600 w-32">
+                                    {{ t(infoItemXVM.labelKey) }}
+                                </dt>
+                                <dd>
+                                    <strong class="font-medium">
+                                        @if (
+                                            isTranslateInput(infoItemXVM.value)
+                                        ) {
+                                            {{
+                                                t(
+                                                    infoItemXVM.value.key,
+                                                    infoItemXVM.value.params
+                                                )
+                                            }}
+                                        } @else {
+                                            {{ infoItemXVM.value }}
+                                        }
+                                    </strong>
+                                </dd>
+                            </app-info-item>
+                        }
+                    </app-info-item-list>
+                </app-info-panel>
+            }
+        </div>
+    </app-section-card>
+</ng-template>

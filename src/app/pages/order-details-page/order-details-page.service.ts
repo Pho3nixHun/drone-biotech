@@ -23,10 +23,6 @@ export class OrderDetailsPageService {
             headerXVM: {
                 ...this.config.headerConfig,
                 id: order.id,
-                creationDate: order.creationDate,
-                client: order.client,
-                totalAreaInHa: order.totalAreaInHa,
-
                 statusXVM: {
                     styles: mapOrderStatusToStatusToCSSStyles(order.status),
                     statusTextKey: mapOrderStatusToTranslocoTextKey(
@@ -43,7 +39,6 @@ export class OrderDetailsPageService {
                         value: {
                             key: this.config.headerConfig.createdDateValueKey,
                             params: { date: order.creationDate },
-
                         },
                     },
                     {
@@ -51,11 +46,137 @@ export class OrderDetailsPageService {
                         value: {
                             key: this.config.headerConfig.totalAreaValueKey,
                             params: { area: order.totalAreaInHa },
-
                         },
                     },
                 ],
             },
+            sectionCardXVMs: [
+                {
+                    type: 'orderDetails',
+                    titleKey:
+                        this.config.sectionCardConfigs
+                            .orderDetailsSectionCardConfig.titleKey,
+                    infoPanelXVMs: [
+                        {
+                            titleKey:
+                                this.config.sectionCardConfigs
+                                    .orderDetailsSectionCardConfig
+                                    .infoPanelConfig.clientInfoPanel.titleKey,
+                            infoListXVM: {
+                                infoItemXVMs: [
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .contactLabelKey,
+                                        value: order.client.contact,
+                                    },
+
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .emailLabelKey,
+                                        value: order.client.email,
+                                    },
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .phoneLabelKey,
+                                        value: order.client.phone,
+                                    },
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .addressLabelKey,
+                                        value: order.client.address,
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            titleKey:
+                                this.config.sectionCardConfigs
+                                    .orderDetailsSectionCardConfig
+                                    .infoPanelConfig.summaryInfoPanel.titleKey,
+                            infoListXVM: {
+                                infoItemXVMs: [
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .treatmentLabelKey,
+                                        value: order.summary.treatment,
+                                    },
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .averageDoseLabelKey,
+                                        value: {
+                                            key: this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .averageDoseValueKey,
+                                            params: {
+                                                dose: order.summary.averageDose,
+                                            },
+                                        },
+                                    },
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .totalSupplyLabelKey,
+                                        value: {
+                                            key: this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .totalSupplyValueKey,
+                                            params: {
+                                                amount: order.summary
+                                                    .totalSupply,
+                                            },
+                                        },
+                                    },
+                                    {
+                                        labelKey:
+                                            this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .orderValueLabelKey,
+                                        value: {
+                                            key: this.config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .orderValueValueKey,
+                                            params: {
+                                                price: order.summary.orderValue,
+                                            },
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    ],
+                },
+            ],
         }))
     );
 }

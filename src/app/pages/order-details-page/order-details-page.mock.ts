@@ -11,6 +11,37 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         addNewMissionButtonTextKey:
             'OrderDetailsPage.header.addNewMissionButtonText',
     },
+    sectionCardConfigs: {
+        orderDetailsSectionCardConfig: {
+            titleKey: 'OrderDetailsPage.details.title',
+            infoPanelConfig: {
+                clientInfoPanel: {
+                    titleKey: 'OrderDetailsPage.details.client.title',
+                    addressLabelKey: 'OrderDetailsPage.details.addressLabel',
+                    contactLabelKey: 'OrderDetailsPage.details.contactLabel',
+                    emailLabelKey: 'OrderDetailsPage.details.emailLabel',
+                    phoneLabelKey: 'OrderDetailsPage.details.phoneLabel',
+                },
+                summaryInfoPanel: {
+                    averageDoseLabelKey:
+                        'OrderDetailsPage.details.averageDoseLabel',
+                    averageDoseValueKey:
+                        'OrderDetailsPage.details.averageDoseValue',
+                    orderValueLabelKey:
+                        'OrderDetailsPage.details.orderValueLabel',
+                    orderValueValueKey:
+                        'OrderDetailsPage.details.orderValueValue',
+                    titleKey: 'OrderDetailsPage.details.summary.title',
+                    totalSupplyLabelKey:
+                        'OrderDetailsPage.details.totalSupplyLabel',
+                    totalSupplyValueKey:
+                        'OrderDetailsPage.details.totalSupplyValue',
+                    treatmentLabelKey:
+                        'OrderDetailsPage.details.treatmentLabel',
+                },
+            },
+        },
+    },
 };
 
 export const enMock = {
@@ -23,6 +54,30 @@ export const enMock = {
         totalAreaValue: 'totalAreaV',
         addNewMissionButtonText: 'addNewMissionButton',
     },
+    sectionCardConfigs: {
+        orderDetailsSectionCardConfig: {
+            titleKey: 'title',
+            infoPanelConfig: {
+                clientInfoPanel: {
+                    titleKey: 'title',
+                    addressLabelKey: 'address',
+                    contactLabelKey: 'contact',
+                    emailLabelKey: 'email',
+                    phoneLabelKey: 'phone',
+                },
+                summaryInfoPanel: {
+                    averageDoseLabelKey: 'dose',
+                    averageDoseValueKey: 'avg',
+                    orderValueLabelKey: 'orderL',
+                    orderValueValueKey: 'orderV',
+                    titleKey: 'title',
+                    totalSupplyLabelKey: 'supplyL',
+                    totalSupplyValueKey: 'supplyV',
+                    treatmentLabelKey: 'treatment',
+                },
+            },
+        },
+    },
 };
 
 export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
@@ -34,5 +89,29 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
         totalAreaTextKey: enMock.headerConfig.totalAreaText,
         totalAreaValueKey: enMock.headerConfig.totalAreaValue,
         addNewMissionButtonTextKey: enMock.headerConfig.addNewMissionButtonText,
+    },
+    sectionCardConfigs: {
+        orderDetailsSectionCardConfig: {
+            titleKey: 'OrderDetailsPage.details.title',
+            infoPanelConfig: {
+                clientInfoPanel: {
+                    titleKey: 'title',
+                    addressLabelKey: 'addressLabel',
+                    contactLabelKey: 'contactLabel',
+                    emailLabelKey: 'emailLabel',
+                    phoneLabelKey: 'phoneLabel',
+                },
+                summaryInfoPanel: {
+                    averageDoseLabelKey: 'averageDoseLabel',
+                    averageDoseValueKey: 'averageDoseValue',
+                    orderValueLabelKey: 'orderValueLabel',
+                    orderValueValueKey: 'orderValueValue',
+                    titleKey: 'summary.title',
+                    totalSupplyLabelKey: 'totalSupplyLabel',
+                    totalSupplyValueKey: 'totalSupplyValue',
+                    treatmentLabelKey: 'treatmentLabel',
+                },
+            },
+        },
     },
 };
