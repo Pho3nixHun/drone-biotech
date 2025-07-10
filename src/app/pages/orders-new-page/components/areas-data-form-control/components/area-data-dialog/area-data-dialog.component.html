@@ -1,7 +1,7 @@
 @if (vm(); as vm) {
-    <app-base-dialog
+    <app-dialog-layout
         class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block overflow-auto"
-        (cancelOnClick)="resetFormWithCloseDialog()"
+        (close)="resetFormWithCloseDialog()"
         [vm]="vm"
         *transloco="let t"
     >
@@ -68,5 +68,5 @@
         <button (click)="resetFormWithCloseDialog()" class="btn btn-error">
             {{ t(vm.cancelButtonTextKey) }}
         </button>
-    </app-base-dialog>
+    </app-dialog-layout>
 }

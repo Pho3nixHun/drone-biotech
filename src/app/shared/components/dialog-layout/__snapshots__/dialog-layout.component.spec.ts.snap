@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseDialogComponent should render the template when the VM is provided, translate and project the content correctly 1`] = `
+exports[`DialogLayoutComponent should render the template when the VM is provided, translate and project the content correctly 1`] = `
 <div
   id="root0"
   ng-version="19.2.9"
 >
-  <app-base-dialog
+  <app-dialog-layout
     ng-reflect-vm="[object Object]"
   >
     <section
@@ -47,6 +47,6 @@ exports[`BaseDialogComponent should render the template when the VM is provided,
       </div>
     </section>
     <!--container-->
-  </app-base-dialog>
+  </app-dialog-layout>
 </div>
 `;

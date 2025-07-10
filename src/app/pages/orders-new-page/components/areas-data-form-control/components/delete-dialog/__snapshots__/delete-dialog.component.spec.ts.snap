@@ -5,7 +5,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
   id="root1"
   ng-version="19.2.9"
 >
-  <app-base-dialog
+  <app-dialog-layout
     class="w-80 md:w-96 block"
     ng-reflect-vm="[object Object]"
   >
@@ -57,7 +57,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
       </div>
     </section>
     <!--container-->
-  </app-base-dialog>
+  </app-dialog-layout>
   <!--container-->
   <!--container-->
 </div>

@@ -1,10 +1,10 @@
 import { isObject } from '@utils/is-object.typeguard';
-import { DialogReasonBase } from '@services/dialog/dialog.service';
-import { BaseDialogVM } from '@components/base-dialog/base-dialog.model';
+import { DialogReason } from '@services/dialog/dialog.service';
+import { DialogLayoutVM } from '@components/dialog-layout/dialog-layout.model';
 import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 
-export interface AreaDataDialogVM extends BaseDialogVM {
+export interface AreaDataDialogVM extends DialogLayoutVM {
     type: 'areaDataDialogVM';
     missionNameLabelKey: string;
     dosePerHqLabelKey: string;
@@ -29,13 +29,13 @@ export interface AreaData {
     applicationDate: Date;
 }
 
-export interface AreaDataDialogResultWithAreaData extends DialogReasonBase {
+export interface AreaDataDialogResultWithAreaData extends DialogReason {
     reasonType: 'submit';
     type: 'areaDataDialogResultWithAreaData';
     areaData: AreaData;
 }
 
-export interface AreaDataDialogResultWithoutAreaData extends DialogReasonBase {
+export interface AreaDataDialogResultWithoutAreaData extends DialogReason {
     reasonType: 'cancel';
 }
 
