@@ -8,11 +8,38 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         createdDateValueKey: 'OrderDetailsPage.header.createdDateValue',
         totalAreaTextKey: 'OrderDetailsPage.header.totalAreaText',
         totalAreaValueKey: 'OrderDetailsPage.header.totalAreaValue',
-        addNewMissionButtonTextKey:
-            'OrderDetailsPage.header.addNewMissionButtonText',
+        addMissionButtonXVM: {
+            isVisible: true,
+            textKey: 'OrderDetailsPage.header.addNewMissionButtonText',
+        },
     },
     sectionCardConfigs: {
+        orderActionsSectionCardConfig: {
+            type: 'orderActions',
+            titleKey: 'OrderDetailsPage.orderActions.title',
+            completionTemplateButtonXVM: {
+                textKey: 'OrderDetailsPage.orderActions.completion.text',
+                link: {
+                    href: 'assets/lepke.jpg',
+                },
+            },
+            closeOrderButtonXVM: {
+                textKey: 'OrderDetailsPage.orderActions.close.text',
+                isDisabled: false,
+                confirmationDialogVM: {
+                    type: 'confirmationDialogVM',
+                    titleKey:
+                        'OrderDetailsPage.orderActions.close.dialog.title',
+                    confirmTextKey: 'Are you sure you want to close the order?',
+                    cancelButtonTextKey:
+                        'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
+                    confirmButtonTextKey:
+                        'OrderDetailsPage.orderActions.close.dialog.confirmButtonText',
+                },
+            },
+        },
         orderDetailsSectionCardConfig: {
+            type: 'orderDetails',
             titleKey: 'OrderDetailsPage.details.title',
             infoPanelConfig: {
                 clientInfoPanel: {
@@ -45,71 +72,90 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
 };
 
 export const enMock = {
-    headerConfig: {
-        idTitle: 'id',
-        clientText: 'client',
-        createdDateText: 'createdDate',
-        createdDateValue: 'createdDateV',
-        totalAreaText: 'totalArea',
-        totalAreaValue: 'totalAreaV',
-        addNewMissionButtonText: 'addNewMissionButton',
+    idTitle: 'id',
+    clientText: 'client',
+    createdDateText: 'createdDate',
+    createdDateValue: 'createdDateV',
+    totalAreaText: 'totalArea',
+    totalAreaValue: 'totalAreaV',
+    addNewMissionButtonText: 'addNewMissionButton',
+
+    orderActions: {
+        title: 'tit',
+        completionButtonText: 'Proof of completion template',
+        closeButtonText: 'Close order',
     },
-    sectionCardConfigs: {
-        orderDetailsSectionCardConfig: {
-            titleKey: 'title',
-            infoPanelConfig: {
-                clientInfoPanel: {
-                    titleKey: 'title',
-                    addressLabelKey: 'address',
-                    contactLabelKey: 'contact',
-                    emailLabelKey: 'email',
-                    phoneLabelKey: 'phone',
-                },
-                summaryInfoPanel: {
-                    averageDoseLabelKey: 'dose',
-                    averageDoseValueKey: 'avg',
-                    orderValueLabelKey: 'orderL',
-                    orderValueValueKey: 'orderV',
-                    titleKey: 'title',
-                    totalSupplyLabelKey: 'supplyL',
-                    totalSupplyValueKey: 'supplyV',
-                    treatmentLabelKey: 'treatment',
-                },
-            },
-        },
+    orderDetails: {
+        title: 'title',
+        addressLabel: 'address',
+        contactLabel: 'contact',
+        emailLabel: 'email',
+        phoneLabel: 'phone',
+        averageDoseLabel: 'dose',
+        averageDoseValue: 'avg',
+        orderValueLabel: 'orderL',
+        orderValueValue: 'orderV',
+        totalSupplyLabel: 'supplyL',
+        totalSupplyValue: 'supplyV',
+        treatmentLabel: 'treatment',
     },
 };
 
 export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
     headerConfig: {
-        idTitleKey: enMock.headerConfig.idTitle,
-        clientTextKey: enMock.headerConfig.clientText,
-        createdDateTextKey: enMock.headerConfig.createdDateText,
-        createdDateValueKey: enMock.headerConfig.createdDateValue,
-        totalAreaTextKey: enMock.headerConfig.totalAreaText,
-        totalAreaValueKey: enMock.headerConfig.totalAreaValue,
-        addNewMissionButtonTextKey: enMock.headerConfig.addNewMissionButtonText,
+        idTitleKey: enMock.idTitle,
+        clientTextKey: enMock.clientText,
+        createdDateTextKey: enMock.createdDateText,
+        createdDateValueKey: enMock.createdDateValue,
+        totalAreaTextKey: enMock.totalAreaText,
+        totalAreaValueKey: enMock.totalAreaValue,
+        addMissionButtonXVM: {
+            isVisible: true,
+            textKey: enMock.addNewMissionButtonText,
+        },
     },
     sectionCardConfigs: {
+        orderActionsSectionCardConfig: {
+            type: 'orderActions',
+            titleKey: enMock.orderActions.title,
+            completionTemplateButtonXVM: {
+                textKey: enMock.orderActions.completionButtonText,
+                link: {
+                    href: 'assets/lepke.jpg',
+                },
+            },
+            closeOrderButtonXVM: {
+                textKey: enMock.orderActions.closeButtonText,
+                isDisabled: false,
+                confirmationDialogVM: {
+                    type: 'confirmationDialogVM',
+                    titleKey: '',
+                    confirmTextKey: '',
+                    cancelButtonTextKey: '',
+                    confirmButtonTextKey: '',
+                },
+            },
+        },
         orderDetailsSectionCardConfig: {
-            titleKey: 'OrderDetailsPage.details.title',
+            type: 'orderDetails',
+            titleKey: enMock.orderDetails.title,
             infoPanelConfig: {
                 clientInfoPanel: {
-                    titleKey: 'title',
-                    addressLabelKey: 'addressLabel',
-                    contactLabelKey: 'contactLabel',
-                    emailLabelKey: 'emailLabel',
-                    phoneLabelKey: 'phoneLabel',
+                    titleKey: enMock.orderDetails.title,
+                    addressLabelKey: enMock.orderDetails.addressLabel,
+                    contactLabelKey: enMock.orderDetails.contactLabel,
+                    emailLabelKey: enMock.orderDetails.emailLabel,
+                    phoneLabelKey: enMock.orderDetails.phoneLabel,
                 },
                 summaryInfoPanel: {
-                    averageDoseLabelKey: 'averageDoseLabel',
-                    averageDoseValueKey: 'averageDoseValue',
-                    orderValueLabelKey: 'orderValueLabel',
-                    orderValueValueKey: 'orderValueValue',
-                    titleKey: 'summary.title',
-                    totalSupplyLabelKey: 'totalSupplyLabel',
-                    totalSupplyValueKey: 'totalSupplyValue',
-                    treatmentLabelKey: 'treatmentLabel',
+                    averageDoseLabelKey: enMock.orderDetails.averageDoseLabel,
+                    averageDoseValueKey: enMock.orderDetails.averageDoseValue,
+                    orderValueLabelKey: enMock.orderDetails.orderValueLabel,
+                    orderValueValueKey: enMock.orderDetails.orderValueValue,
+                    titleKey: enMock.orderDetails.title,
+                    totalSupplyLabelKey: enMock.orderDetails.totalSupplyLabel,
+                    totalSupplyValueKey: enMock.orderDetails.totalSupplyValue,
+                    treatmentLabelKey: enMock.orderDetails.treatmentLabel,
                 },
             },
         },

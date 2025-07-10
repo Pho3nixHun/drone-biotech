@@ -3,6 +3,7 @@ import { OrderDetailsPageComponent } from './order-details-page.component';
 import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
 import { enMock, orderDetailsPageMockConfig } from './order-details-page.mock';
 import { getTranslocoModule } from 'transloco-testing.module';
+import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
 
 describe('OrderDetailsPageComponent', () => {
     let fixture: ComponentFixture<OrderDetailsPageComponent>;
@@ -25,6 +26,7 @@ describe('OrderDetailsPageComponent', () => {
                     provide: ORDER_DETAILS_PAGE_CONFIG,
                     useValue: orderDetailsPageMockConfig,
                 },
+                provideMockDialogService(),
             ],
         }).compileComponents();
 
