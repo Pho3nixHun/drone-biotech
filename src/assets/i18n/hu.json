@@ -11,47 +11,38 @@
     "LandingPage.testimonials.4.roleAndCompany": "Marketing igazgató, Egy Másik Cég",
     "LandingPage.testimonials.5.message": "Valóban kivételes élmény, 5 csillag!",
     "LandingPage.testimonials.5.roleAndCompany": "Termékmenedzser, Valamilyen Cég",
-
     "LandingPage.products.0.title": "Vezérlő",
     "LandingPage.products.0.description": "A karcsú sportautó életre kelt, motorja erőteljesen duruzsolt, miközben száguldott az autópályán.",
     "LandingPage.products.1.title": "RTU",
     "LandingPage.products.1.description": "Órák után végre elérték a festői kilátót, az autók kerekei ropogtak a kavicson.",
     "LandingPage.products.2.title": "Felhő és Mobil",
     "LandingPage.products.2.description": "A klasszikus autókiállítás mindenhol vonzotta az autórajongókat, minden jármű tökéletesen csillogott a ragyogó napfényben.",
-
     "LandingPage.frames.0.title": "Termékeink",
     "LandingPage.frames.1.title": "Partnereink",
-
     "LandingPage.hero.title": "Az öntözés jövője itt van",
     "LandingPage.hero.description": "Az IRRIOT egy teljesen vezeték nélküli precíziós öntözés automatizálási rendszer",
     "LandingPage.hero.primaryButtonLabel": "Kapcsolatfelvétel",
     "LandingPage.hero.secondaryButtonTitleLabel": "Tudj meg többet",
-
     "LandingPage.partners.0.altText": "Pillangó",
     "LandingPage.partners.1.altText": "Pillangó",
     "LandingPage.partners.2.altText": "Pillangó",
     "LandingPage.partners.3.altText": "Pillangó",
     "LandingPage.partners.4.altText": "Pillangó",
-
     "AppComponent.navItems.0.title": "Kezdőlap",
     "AppComponent.navItems.1.title": "Termékeink",
     "AppComponent.navItems.2.title": "Partnereink",
     "AppComponent.navItems.3.title": "Rendelés",
-
     "NotFoundPage.message.description": "Elnézést kérünk, nem találjuk ezt az oldalt. De ne aggódjon, rengeteg más dolgot találhat a kezdőlapunkon.",
     "NotFoundPage.message.buttonText": "Vissza",
-
     "LoginPage.loginForm.title": "Üdv a Phoenix-nél!",
     "LoginPage.loginForm.description": "Phoenix ...",
     "LoginPage.loginForm.buttonTitle": "Belépés",
     "LoginPage.loginForm.passwordPlaceholder": "Jelszó",
     "LoginPage.loginForm.emailLabel": "Email",
     "LoginPage.loginForm.passwordLabel": "Jelszó",
-
     "LoginPage.error.invalid": "Érvénytelen hitelesítő adatok. Kérlek, ellenőrizd az e-mail címed és jelszavad, majd próbáld újra.",
     "LoginPage.error.many": "Túl sok próbálkozás. Kérlek, próbáld meg később.",
     "LoginPage.error.unknown": "Hoppá, valami hiba történt.",
-
     "OrdersNewPage.title": "Új rendelés leadása",
     "OrdersNewPage.submitButtonText": "Elfogadás",
     "OrdersNewPage.emailLabel": "Email",
@@ -60,7 +51,6 @@
     "OrdersNewPage.phoneNumberLabel": "Telefonszám",
     "OrdersNewPage.internalOrderNumberLabel": "Belső megrendelésszám ",
     "OrdersNewPage.areasDataLabel": "Területmenedzsment",
-
     "OrdersNewPage.areasDataFormControl.actionsHeader": "Műveletek",
     "OrdersNewPage.areasDataFormControl.targetAreaSizeHeader": "Terület ",
     "OrdersNewPage.areasDataFormControl.entryPointHeader": "Behajtás helye",
@@ -73,13 +63,11 @@
     "OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader": "Összterület",
     "OrdersNewPage.areasDataFormControl.missionHeader": "Misszió",
     "OrdersNewPage.areasDataFormControl.commentHeader": "Megjegyzés",
-
     "OrdersNewPage.areasDataFormControl.applicationDateValue": "{ applicationDate, date, long } { applicationDate, time, short }",
     "OrdersNewPage.areasDataFormControl.targetAreaSizeValue": "{count, number, :: .00} ha",
     "OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeValue": "{count, number, :: .00} km",
     "OrdersNewPage.areasDataFormControl.doseValue": "{count, number} egység/ha",
     "OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue": "{count, number, :: .00} egység",
-
     "OrdersNewPage.areasDataDialog.title.edit": "Terület szerkesztése",
     "OrdersNewPage.areasDataDialog.title.add": "Terület hozzáadása",
     "OrdersNewPage.areasDataDialog.cancelButtonText": "Vissza",
@@ -90,24 +78,19 @@
     "OrdersNewPage.areasDataDialog.targetAreaLabelKey": "Terület",
     "OrdersNewPage.areasDataDialog.missionNameLabel": "Misszió neve",
     "OrdersNewPage.areasDataDialog.commentLabel": "Megjegyzés",
-
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel": "Koordináták",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText": "Terület hozzáadása",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText": "Terület szerkesztése",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText": "Terület törlése",
     "OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey": "{value, number, :: .00} ha",
-
     "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue": "{value, number, :: .0} km",
     "OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder": "Keresés a térképen",
-
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText": "Behajtási hely hozzáadása",
     "OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText": "Behajtás helyének törlése",
-
     "OrdersNewPage.deleteDialog.title": "Biztos vagy benne?",
     "OrdersNewPage.deleteDialog.warningText": "Valóban ki szeretnéd törölni ezeket az adatokat? Ez a művelet nem visszafordítható.",
     "OrdersNewPage.deleteDialog.submitButtonText": "Törlés",
     "OrdersNewPage.deleteDialog.cancelButtonText": "Vissza",
-
     "OrderDetailsPage.header.idTitle": "Megrendelés #{id}",
     "OrderDetailsPage.header.clientText": "Ügyfél:",
     "OrderDetailsPage.header.createdDateText": "Létrehozva:",
@@ -118,17 +101,14 @@
     "OrderDetailsPage.header.status.active": "Aktív",
     "OrderDetailsPage.header.status.pending": "Várakozik",
     "OrderDetailsPage.header.status.completed": "Teljesítve",
-
     "DashboardPage.userHeader.title": "Üdv újra, {name}",
     "DashboardPage.userHeader.roleDashboard": "{ role } irányítópult",
     "DashboardPage.userHeader.loginText": "Utolsó bejelentkezés",
     "DashboardPage.userHeader.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.hectareQuantity": "{ count } ha",
     "DashboardPage.hourQuantity": "{ count }ó",
     "DashboardPage.ratingQuantity": "{ count }/5",
     "DashboardPage.moneyQuantity": "{ count }Ft",
-
     "DashboardPage.preparing": "Előkészítés alatt",
     "DashboardPage.scheduled": "Ütemezve",
     "DashboardPage.pending": "Folyamatban",
@@ -137,42 +117,32 @@
     "DashboardPage.completed": "Befejezve",
     "DashboardPage.active": "Aktív",
     "DashboardPage.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.id.title": "Azonosító",
     "DashboardPage.client.title": "Ügyfél",
     "DashboardPage.fieldName.title": "Terület neve",
-
     "DashboardPage.pilot.title": "Pilóta",
     "DashboardPage.pilot.unassignedText": "Nincs hozzárendelve",
-
     "DashboardPage.areaInHa.title": "Terület (ha)",
     "DashboardPage.status.title": "Állapot",
     "DashboardPage.requester.title": "Megrendelő",
     "DashboardPage.performance.title": "Teljesítmény",
     "DashboardPage.actions.title": "Műveletek",
-
     "DashboardPage.moneyValue.title": "Érték",
     "DashboardPage.moneyValue.value": "{count}Ft",
-
     "DashboardPage.creationDate.title": "Létrehozás dátuma",
     "DashboardPage.creationDate.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.scheduledDate.title": "Ütemezés dátuma",
     "DashboardPage.scheduledDate.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.completionDate.title": "Befejezés dátuma",
     "DashboardPage.completionDate.dateValue": "{ date, date, long } { date, time, short }",
-
     "DashboardPage.customer.myOrders.title": "Saját rendelések",
     "DashboardPage.customer.companyOrders.title": "Céges rendelések",
     "DashboardPage.customer.myOrders.anchor.text": "Új rendelés",
     "DashboardPage.customer.action.details.text": "Részletek megtekintése",
-
     "DashboardPage.pilot.assignedMissions.title": "Hozzárendelt küldetéseim",
     "DashboardPage.pilot.completedMissions.title": "Teljesített küldetéseim",
     "DashboardPage.pilot.action.mission.text": "Küldetés megtekintése",
     "DashboardPage.pilot.action.report.text": "Jelentés megtekintése",
-
     "DashboardPage.office.activeMissions.title": "Aktív küldetések",
     "DashboardPage.office.activeMissions.anchor.text": "Pilóta hozzárendelése",
     "DashboardPage.office.recentCompletedMissions.title": "Legutóbbi befejezett küldetések",
@@ -180,7 +150,6 @@
     "DashboardPage.office.action.assign.text": "Hozzárendelés",
     "DashboardPage.office.action.manage.text": "Kezelés",
     "DashboardPage.office.action.reassign.text": "Átrendelés",
-
     "DashboardPage.summary.activeOrder.title": "Aktív rendelések",
     "DashboardPage.summary.totalArea.title": "Teljes terület",
     "DashboardPage.summary.spending.title": "Havi költés",
@@ -192,5 +161,19 @@
     "DashboardPage.summary.activeMission.title": "Aktív küldetések",
     "DashboardPage.summary.availablePilots.title": "Elérhető pilóták",
     "DashboardPage.summary.unassigned.title": "Hozzá nem rendelt küldetések",
-    "DashboardPage.summary.revenue.title": "Mai bevétel"
+    "DashboardPage.summary.revenue.title": "Mai bevétel",
+    "OrderDetailsPage.details.title": "Rendelés részletei",
+    "OrderDetailsPage.details.summary.title": "Rendelés összegzése",
+    "OrderDetailsPage.details.averageDoseValue": "{dose} liter/hektár",
+    "OrderDetailsPage.details.averageDoseLabel": "Átlagos dózis:",
+    "OrderDetailsPage.details.orderValueValue": "{price} Ft",
+    "OrderDetailsPage.details.orderValueLabel": "Rendelés összege:",
+    "OrderDetailsPage.details.totalSupplyValue": "{amount} liter",
+    "OrderDetailsPage.details.totalSupplyLabel": "Teljes mennyiség:",
+    "OrderDetailsPage.details.treatmentLabel": "Kezelés:",
+    "OrderDetailsPage.details.client.title": "Ügyfél adatai",
+    "OrderDetailsPage.details.addressLabel": "Cím:",
+    "OrderDetailsPage.details.contactLabel": "Kapcsolattartó:",
+    "OrderDetailsPage.details.emailLabel": "Email:",
+    "OrderDetailsPage.details.phoneLabel": "Telefonszám:"
 }

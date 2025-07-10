@@ -9,111 +9,316 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame>
-        <section
-          class="flex flex-col gap-y-10 py-10"
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
         >
-          <!--container-->
-          <app-header>
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
             <div
-              class="flex flex-col space-y-4"
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                ng-reflect-vm="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
+                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                >
+                   OrderDetailsPage.header.status.active 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     client 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    <!--container-->
+                     Westbrook Agricultural Holdings 
+                    <!--container-->
+                  </p>
+                </div>
+              </app-summary>
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     createdDate 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                     createdDateV 
+                    <!--container-->
+                    <!--container-->
+                  </p>
+                </div>
+              </app-summary>
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     totalArea 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                     totalAreaV 
+                    <!--container-->
+                    <!--container-->
+                  </p>
+                </div>
+              </app-summary>
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-bold"
+          >
+            OrderDetailsPage.details.title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <app-info-panel
+              class="lg:w-1/2 w-full"
             >
               <div
-                class="flex flex-row items-start justify-between"
+                class="flex flex-col space-y-4"
               >
-                <div>
-                  <h2>
-                     id 
-                  </h2>
-                </div>
-                <div
-                  class="flex flex-row space-x-3 items-center"
-                >
-                  <app-status
-                    ng-reflect-vm="[object Object]"
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
                   >
-                    <p
-                      class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                      ng-reflect-ng-class="bg-green-200 text-green-800"
-                    >
-                       OrderDetailsPage.header.status.active 
-                    </p>
-                  </app-status>
-                  <button
-                    class="btn btn-primary w-fit truncate"
-                  >
-                     addNewMissionButton 
-                  </button>
-                </div>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
+                      >
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           contactLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                            <!--container-->
+                             Sarah Johnson 
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
+                      >
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           emailLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                            <!--container-->
+                             s.johnson@westbrook-ag.com 
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
+                      >
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           phoneLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                            <!--container-->
+                             (555) 789-1234 
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
+                      >
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           addressLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                            <!--container-->
+                             450 Farm Road, Westbrook County 
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
               </div>
-              <app-summary-list>
-                <div
-                  class="flex flex-col lg:flex-row justify-between"
-                >
-                  <app-summary>
-                    <div
-                      class="flex flex-row space-x-1"
-                    >
-                      <p
-                        class="text-gray-600"
+            </app-info-panel>
+            <app-info-panel
+              class="lg:w-1/2 w-full"
+            >
+              <div
+                class="flex flex-col space-y-4"
+              >
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
+                  >
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
                       >
-                         client 
-                      </p>
-                      <p
-                        class="font-medium"
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           treatmentLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                            <!--container-->
+                             Seasonal Pest Control 
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
                       >
-                        <!--container-->
-                         Westbrook Agricultural Holdings 
-                        <!--container-->
-                      </p>
-                    </div>
-                  </app-summary>
-                  <app-summary>
-                    <div
-                      class="flex flex-row space-x-1"
-                    >
-                      <p
-                        class="text-gray-600"
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           averageDoseLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                             averageDoseValue 
+                            <!--container-->
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
                       >
-                         createdDate 
-                      </p>
-                      <p
-                        class="font-medium"
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           totalSupplyLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                             totalSupplyValue 
+                            <!--container-->
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
                       >
-                         createdDateV 
-                        <!--container-->
-                        <!--container-->
-                      </p>
-                    </div>
-                  </app-summary>
-                  <app-summary>
-                    <div
-                      class="flex flex-row space-x-1"
-                    >
-                      <p
-                        class="text-gray-600"
-                      >
-                         totalArea 
-                      </p>
-                      <p
-                        class="font-medium"
-                      >
-                         totalAreaV 
-                        <!--container-->
-                        <!--container-->
-                      </p>
-                    </div>
-                  </app-summary>
-                  <!--container-->
-                </div>
-              </app-summary-list>
-            </div>
-          </app-header>
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           orderValueLabel 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                             orderValueValue 
+                            <!--container-->
+                            <!--container-->
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
+              </div>
+            </app-info-panel>
+            <!--container-->
+          </div>
         </section>
-        <!--container-->
-      </app-frame>
+      </app-section-card>
+      <!--container-->
+      <!--ng-container-->
+      <!--container-->
+      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>

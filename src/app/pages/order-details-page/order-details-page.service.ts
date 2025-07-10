@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { OrderService } from '@services/order/order.service';
-import { map, Observable } from 'rxjs';
+import { combineLatest, map, Observable, of } from 'rxjs';
 import {
     mapOrderStatusToStatusToCSSStyles,
     mapOrderStatusToTranslocoTextKey,
@@ -17,16 +17,15 @@ export class OrderDetailsPageService {
     private readonly order$ = this.orderService.getOrder();
     public getVM = () => this.vm$;
 
-    private readonly vm$: Observable<OrderDetailsPageVM> = this.order$.pipe(
-        map((order) => ({
-            ...this.config,
+    private readonly vm$: Observable<OrderDetailsPageVM> = combineLatest([
+        this.order$,
+        of(this.config),
+    ]).pipe(
+        map(([order, config]) => ({
+            ...config,
             headerXVM: {
-                ...this.config.headerConfig,
+                ...config.headerConfig,
                 id: order.id,
-                creationDate: order.creationDate,
-                client: order.client,
-                totalAreaInHa: order.totalAreaInHa,
-
                 statusXVM: {
                     styles: mapOrderStatusToStatusToCSSStyles(order.status),
                     statusTextKey: mapOrderStatusToTranslocoTextKey(
@@ -35,27 +34,152 @@ export class OrderDetailsPageService {
                 },
                 summaryXVMs: [
                     {
-                        textKey: this.config.headerConfig.clientTextKey,
+                        textKey: config.headerConfig.clientTextKey,
                         value: order.client.client,
                     },
                     {
-                        textKey: this.config.headerConfig.createdDateTextKey,
+                        textKey: config.headerConfig.createdDateTextKey,
                         value: {
-                            key: this.config.headerConfig.createdDateValueKey,
+                            key: config.headerConfig.createdDateValueKey,
                             params: { date: order.creationDate },
-
                         },
                     },
                     {
-                        textKey: this.config.headerConfig.totalAreaTextKey,
+                        textKey: config.headerConfig.totalAreaTextKey,
                         value: {
-                            key: this.config.headerConfig.totalAreaValueKey,
+                            key: config.headerConfig.totalAreaValueKey,
                             params: { area: order.totalAreaInHa },
-
                         },
                     },
                 ],
             },
+            sectionCardXVMs: [
+                {
+                    type: 'orderDetails',
+                    titleKey:
+                        config.sectionCardConfigs.orderDetailsSectionCardConfig
+                            .titleKey,
+                    infoPanelXVMs: [
+                        {
+                            titleKey:
+                                config.sectionCardConfigs
+                                    .orderDetailsSectionCardConfig
+                                    .infoPanelConfig.clientInfoPanel.titleKey,
+                            infoListXVM: {
+                                infoItemXVMs: [
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .contactLabelKey,
+                                        value: order.client.contact,
+                                    },
+
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .emailLabelKey,
+                                        value: order.client.email,
+                                    },
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .phoneLabelKey,
+                                        value: order.client.phone,
+                                    },
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig.clientInfoPanel
+                                                .addressLabelKey,
+                                        value: order.client.address,
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            titleKey:
+                                config.sectionCardConfigs
+                                    .orderDetailsSectionCardConfig
+                                    .infoPanelConfig.summaryInfoPanel.titleKey,
+                            infoListXVM: {
+                                infoItemXVMs: [
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .treatmentLabelKey,
+                                        value: order.summary.treatment,
+                                    },
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .averageDoseLabelKey,
+                                        value: {
+                                            key: config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .averageDoseValueKey,
+                                            params: {
+                                                dose: order.summary.averageDose,
+                                            },
+                                        },
+                                    },
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .totalSupplyLabelKey,
+                                        value: {
+                                            key: config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .totalSupplyValueKey,
+                                            params: {
+                                                amount: order.summary
+                                                    .totalSupply,
+                                            },
+                                        },
+                                    },
+                                    {
+                                        labelKey:
+                                            config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .orderValueLabelKey,
+                                        value: {
+                                            key: config.sectionCardConfigs
+                                                .orderDetailsSectionCardConfig
+                                                .infoPanelConfig
+                                                .summaryInfoPanel
+                                                .orderValueValueKey,
+                                            params: {
+                                                price: order.summary.orderValue,
+                                            },
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    ],
+                },
+            ],
         }))
     );
 }

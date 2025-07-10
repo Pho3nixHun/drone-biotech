@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoPanelComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-info-panel>
+    <div
+      class="flex flex-col space-y-4"
+    >
+      <app-info-item-list>
+        <dl
+          class="text-sm flex flex-col space-y-2"
+        >
+          <app-info-item>
+            <div
+              class="flex flex-row"
+            />
+          </app-info-item>
+        </dl>
+      </app-info-item-list>
+    </div>
+  </app-info-panel>
+</div>
+`;

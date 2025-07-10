@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoItemComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-info-item>
+    <div
+      class="flex flex-row"
+    >
+      <dd>
+        value
+      </dd>
+    </div>
+  </app-info-item>
+</div>
+`;
