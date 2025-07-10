@@ -175,5 +175,12 @@
     "OrderDetailsPage.details.addressLabel": "Cím:",
     "OrderDetailsPage.details.contactLabel": "Kapcsolattartó:",
     "OrderDetailsPage.details.emailLabel": "Email:",
-    "OrderDetailsPage.details.phoneLabel": "Telefonszám:"
+    "OrderDetailsPage.details.phoneLabel": "Telefonszám:",
+    "OrderDetailsPage.orderActions.title": "Rendelési műveletek",
+    "OrderDetailsPage.orderActions.completion.text": "Teljesítési igazolás sablon",
+    "OrderDetailsPage.orderActions.close.text": "Rendelés lezárása",
+    "OrderDetailsPage.orderActions.close.dialog.title": "Megerősítés",
+    "OrderDetailsPage.orderActions.close.dialog.confirmText": "Biztosan le szeretné zárni a rendelést?",
+    "OrderDetailsPage.orderActions.close.dialog.cancelButtonText": "Mégse",
+    "OrderDetailsPage.orderActions.close.dialog.confirmButtonText": "Megerősít"
 }
