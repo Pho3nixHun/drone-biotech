@@ -22,7 +22,7 @@ export class OrderDetailsPageService {
         of(this.config),
     ]).pipe(
         map(([order, config]) => ({
-            ...this.config,
+            ...config,
             headerXVM: {
                 ...config.headerConfig,
                 id: order.id,
