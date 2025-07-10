@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { OrderService } from '@services/order/order.service';
-import { map, Observable } from 'rxjs';
+import { combineLatest, map, Observable, of } from 'rxjs';
 import {
     mapOrderStatusToStatusToCSSStyles,
     mapOrderStatusToTranslocoTextKey,
@@ -17,11 +17,14 @@ export class OrderDetailsPageService {
     private readonly order$ = this.orderService.getOrder();
     public getVM = () => this.vm$;
 
-    private readonly vm$: Observable<OrderDetailsPageVM> = this.order$.pipe(
-        map((order) => ({
+    private readonly vm$: Observable<OrderDetailsPageVM> = combineLatest([
+        this.order$,
+        of(this.config),
+    ]).pipe(
+        map(([order, config]) => ({
             ...this.config,
             headerXVM: {
-                ...this.config.headerConfig,
+                ...config.headerConfig,
                 id: order.id,
                 statusXVM: {
                     styles: mapOrderStatusToStatusToCSSStyles(order.status),
@@ -31,20 +34,20 @@ export class OrderDetailsPageService {
                 },
                 summaryXVMs: [
                     {
-                        textKey: this.config.headerConfig.clientTextKey,
+                        textKey: config.headerConfig.clientTextKey,
                         value: order.client.client,
                     },
                     {
-                        textKey: this.config.headerConfig.createdDateTextKey,
+                        textKey: config.headerConfig.createdDateTextKey,
                         value: {
-                            key: this.config.headerConfig.createdDateValueKey,
+                            key: config.headerConfig.createdDateValueKey,
                             params: { date: order.creationDate },
                         },
                     },
                     {
-                        textKey: this.config.headerConfig.totalAreaTextKey,
+                        textKey: config.headerConfig.totalAreaTextKey,
                         value: {
-                            key: this.config.headerConfig.totalAreaValueKey,
+                            key: config.headerConfig.totalAreaValueKey,
                             params: { area: order.totalAreaInHa },
                         },
                     },
@@ -54,19 +57,19 @@ export class OrderDetailsPageService {
                 {
                     type: 'orderDetails',
                     titleKey:
-                        this.config.sectionCardConfigs
-                            .orderDetailsSectionCardConfig.titleKey,
+                        config.sectionCardConfigs.orderDetailsSectionCardConfig
+                            .titleKey,
                     infoPanelXVMs: [
                         {
                             titleKey:
-                                this.config.sectionCardConfigs
+                                config.sectionCardConfigs
                                     .orderDetailsSectionCardConfig
                                     .infoPanelConfig.clientInfoPanel.titleKey,
                             infoListXVM: {
                                 infoItemXVMs: [
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig.clientInfoPanel
                                                 .contactLabelKey,
@@ -75,7 +78,7 @@ export class OrderDetailsPageService {
 
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig.clientInfoPanel
                                                 .emailLabelKey,
@@ -83,7 +86,7 @@ export class OrderDetailsPageService {
                                     },
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig.clientInfoPanel
                                                 .phoneLabelKey,
@@ -91,7 +94,7 @@ export class OrderDetailsPageService {
                                     },
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig.clientInfoPanel
                                                 .addressLabelKey,
@@ -102,14 +105,14 @@ export class OrderDetailsPageService {
                         },
                         {
                             titleKey:
-                                this.config.sectionCardConfigs
+                                config.sectionCardConfigs
                                     .orderDetailsSectionCardConfig
                                     .infoPanelConfig.summaryInfoPanel.titleKey,
                             infoListXVM: {
                                 infoItemXVMs: [
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
@@ -118,13 +121,13 @@ export class OrderDetailsPageService {
                                     },
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
                                                 .averageDoseLabelKey,
                                         value: {
-                                            key: this.config.sectionCardConfigs
+                                            key: config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
@@ -136,13 +139,13 @@ export class OrderDetailsPageService {
                                     },
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
                                                 .totalSupplyLabelKey,
                                         value: {
-                                            key: this.config.sectionCardConfigs
+                                            key: config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
@@ -155,13 +158,13 @@ export class OrderDetailsPageService {
                                     },
                                     {
                                         labelKey:
-                                            this.config.sectionCardConfigs
+                                            config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
                                                 .orderValueLabelKey,
                                         value: {
-                                            key: this.config.sectionCardConfigs
+                                            key: config.sectionCardConfigs
                                                 .orderDetailsSectionCardConfig
                                                 .infoPanelConfig
                                                 .summaryInfoPanel
