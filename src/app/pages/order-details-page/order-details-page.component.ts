@@ -48,6 +48,7 @@ import {
         AvatarComponent,
         NgOptimizedImage,
         NgClass,
+        AvatarComponent,
     ],
     templateUrl: './order-details-page.component.html',
 })
