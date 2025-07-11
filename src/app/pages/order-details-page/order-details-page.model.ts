@@ -12,6 +12,7 @@ import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmati
 import { WithVisibility } from '@interfaces/with-visibility.interface';
 import { WithDisabled } from '@interfaces/with-disabled.interface';
 import { WithLink } from '@interfaces/with-link.interface';
+import { AvatarVM } from '@components/avatar/avatar.model';
 
 interface InfoItemXVM {
     labelKey: string;
@@ -24,7 +25,10 @@ interface InfoPanelXVM extends WithTitle {
     infoListXVM: InfoListXVM;
 }
 
-type SectionCardXVM = OrderDetailsSectionCardXVM | OrderActionsSectionCardXVM;
+type SectionCardXVM =
+    | OrderDetailsSectionCardXVM
+    | OrderActionsSectionCardXVM
+    | MessagesSectionCardXVM;
 
 interface CompletionTemplateButtonXVM extends WithTextNode, WithLink {}
 
@@ -39,6 +43,33 @@ interface OrderActionsSectionCardXVM extends SectionCardVM {
     type: 'orderActions';
     completionTemplateButtonXVM: CompletionTemplateButtonXVM;
     closeOrderButtonXVM: CloseOrderButtonXVM;
+}
+
+interface AvatarXVM extends AvatarVM {
+    initial: string;
+}
+type Role = 'customer' | 'office' | 'pilot';
+
+export interface Message {
+    role: Role;
+    sendingDate: Date;
+    senderName: string;
+    message: string;
+}
+export interface MessageItemXVM
+    extends Pick<Message, 'message' | 'sendingDate'> {
+    sender: string;
+    sendingDateValueKey: string;
+    avatarXVM: AvatarXVM;
+}
+
+interface MessageItemListXVM {
+    messageItemXVMs: MessageItemXVM[];
+}
+interface MessagesSectionCardXVM extends SectionCardVM {
+    type: 'messages';
+    messageItemListXVM: MessageItemListXVM;
+    buttonTextKey: string;
 }
 interface StatusXVM extends StatusVM {
     statusTextKey: string;
@@ -98,9 +129,16 @@ interface OrderDetailsSectionCardConfig {
         };
     };
 }
+
+interface MessagesSectionCardConfig {
+    titleKey: string;
+    buttonTextKey: string;
+    dateValueKey: string;
+}
 interface SectionCardConfigs {
     orderDetailsSectionCardConfig: OrderDetailsSectionCardConfig;
     orderActionsSectionCardConfig: OrderActionsSectionCardXVM;
+    messagesSectionCardConfig: MessagesSectionCardConfig;
 }
 
 interface TranslateInput {
@@ -130,6 +168,13 @@ export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
         pending: 'OrderDetailsPage.header.status.pending',
         completed: 'OrderDetailsPage.header.status.completed',
     })[status] ?? '';
+
+export const mapRoleTranslocoTextKey = (role: Role): string =>
+    ({
+        customer: 'OrderDetailsPage.role.customer',
+        office: 'OrderDetailsPage.role.office',
+        pilot: 'OrderDetailsPage.role.pilot',
+    })[role] ?? '';
 
 export const mapHeaderXVM = (
     config: OrderDetailsPageConfig,

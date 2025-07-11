@@ -13,7 +13,10 @@ export interface Order {
     moneyValue: number;
 }
 
+type Role = 'customer' | 'office' | 'pilot';
+
 interface Message {
+    role: Role;
     sender: string;
     sendingDate: Date;
     message: string;
@@ -33,4 +36,3 @@ interface Client {
     phone: string;
     address: string;
 }
-
