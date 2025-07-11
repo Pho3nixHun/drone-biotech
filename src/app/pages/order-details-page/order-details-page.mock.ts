@@ -14,6 +14,11 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         },
     },
     sectionCardConfigs: {
+        messagesSectionCardConfig: {
+            buttonTextKey: 'OrderDetailsPage.messages.buttonText',
+            titleKey: 'OrderDetailsPage.messages.title',
+            dateValueKey: 'OrderDetailsPage.messages.dateValue',
+        },
         orderActionsSectionCardConfig: {
             type: 'orderActions',
             titleKey: 'OrderDetailsPage.orderActions.title',
@@ -99,6 +104,11 @@ export const enMock = {
         totalSupplyValue: 'supplyV',
         treatmentLabel: 'treatment',
     },
+    messages: {
+        title: 'title',
+        dateValue: 'date',
+        buttonText: 'button',
+    },
 };
 
 export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
@@ -115,6 +125,11 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
         },
     },
     sectionCardConfigs: {
+        messagesSectionCardConfig: {
+            buttonTextKey: enMock.messages.buttonText,
+            titleKey: enMock.messages.title,
+            dateValueKey: enMock.messages.dateValue,
+        },
         orderActionsSectionCardConfig: {
             type: 'orderActions',
             titleKey: enMock.orderActions.title,
