@@ -1,29 +1,28 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BaseDialogComponent } from './base-dialog.component';
+import { DialogLayoutComponent } from './dialog-layout.component';
 import { Component, input } from '@angular/core';
-import { BaseDialogVM } from './base-dialog.model';
+import { DialogLayoutVM } from './dialog-layout.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { By } from '@angular/platform-browser';
 
 const en = { title: 'value' };
 
 @Component({
-    imports: [BaseDialogComponent],
+    imports: [DialogLayoutComponent],
     template: `
-        <app-base-dialog [vm]="vm()">
+        <app-dialog-layout [vm]="vm()">
             <button>Should be projected</button>
             <div>Should be projected</div>
-        </app-base-dialog>
+        </app-dialog-layout>
     `,
 })
 class TestHostComponent {
-    public vm = input.required<BaseDialogVM>();
+    public vm = input.required<DialogLayoutVM>();
 }
-describe('BaseDialogComponent', () => {
+describe('DialogLayoutComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
-    const vm: BaseDialogVM = {
+    const vm: DialogLayoutVM = {
         titleKey: en.title,
     };
 
@@ -62,8 +61,8 @@ describe('BaseDialogComponent', () => {
         fixture.componentRef.setInput('vm', vm);
 
         const baseDialogEmitterRef = fixture.debugElement.query(
-            By.directive(BaseDialogComponent)
-        ).componentInstance.cancelOnClick;
+            By.directive(DialogLayoutComponent)
+        ).componentInstance.close;
 
         jest.spyOn(baseDialogEmitterRef, 'emit');
 

@@ -1,0 +1,16 @@
+@if (vm(); as vm) {
+    <app-dialog-layout
+        *transloco="let t"
+        class="w-80 md:w-96 block"
+        (close)="onCancelClick()"
+        [vm]="vm"
+    >
+        <p>{{ t(vm.confirmTextKey) }}</p>
+        <button (click)="onConfirmClick()" class="btn btn-primary">
+            {{ t(vm.confirmButtonTextKey) }}
+        </button>
+        <button (click)="onCancelClick()" class="btn btn-secondary">
+            {{ t(vm.cancelButtonTextKey) }}
+        </button>
+    </app-dialog-layout>
+}

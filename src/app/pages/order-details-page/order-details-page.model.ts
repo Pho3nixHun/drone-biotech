@@ -1,19 +1,17 @@
 import { StatusVM } from '@components/status/status.model';
 import { HashMap } from '@jsverse/transloco';
 import { isObject } from '@utils/is-object.typeguard';
-import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
+import {
+    Order,
+    OrderStatus as OrderStatusFromService,
+} from '@services/order/order.service.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
-
-interface HeaderConfig {
-    idTitleKey: string;
-    clientTextKey: string;
-    createdDateTextKey: string;
-    createdDateValueKey: string;
-    totalAreaTextKey: string;
-    totalAreaValueKey: string;
-    addNewMissionButtonTextKey: string;
-}
+import { WithTextNode } from '@interfaces/with-text-node.interface';
+import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
+import { WithVisibility } from '@interfaces/with-visibility.interface';
+import { WithDisabled } from '@interfaces/with-disabled.interface';
+import { WithLink } from '@interfaces/with-link.interface';
 
 interface InfoItemXVM {
     labelKey: string;
@@ -25,19 +23,60 @@ interface InfoListXVM {
 interface InfoPanelXVM extends WithTitle {
     infoListXVM: InfoListXVM;
 }
+
+type SectionCardXVM = OrderDetailsSectionCardXVM | OrderActionsSectionCardXVM;
+
+interface CompletionTemplateButtonXVM extends WithTextNode, WithLink {}
+
+interface CloseOrderButtonXVM extends WithTextNode, WithDisabled {
+    confirmationDialogVM: ConfirmationDialogVM;
+}
 interface OrderDetailsSectionCardXVM extends SectionCardVM {
     type: 'orderDetails';
     infoPanelXVMs: InfoPanelXVM[];
 }
+interface OrderActionsSectionCardXVM extends SectionCardVM {
+    type: 'orderActions';
+    completionTemplateButtonXVM: CompletionTemplateButtonXVM;
+    closeOrderButtonXVM: CloseOrderButtonXVM;
+}
+interface StatusXVM extends StatusVM {
+    statusTextKey: string;
+}
 
-type SectionCardXVM = OrderDetailsSectionCardXVM;
-
+interface SummaryXVM {
+    textKey: string;
+    value: Value;
+}
+export interface HeaderXVM extends HeaderConfig {
+    id: string;
+    statusXVM: StatusXVM;
+    summaryXVMs: SummaryXVM[];
+}
 export interface OrderDetailsPageVM {
     headerXVM: HeaderXVM;
     sectionCardXVMs: SectionCardXVM[];
 }
 
+interface AddMissionButtonXVM extends WithVisibility, WithTextNode {}
+
+interface HeaderConfig {
+    idTitleKey: string;
+    clientTextKey: string;
+    createdDateTextKey: string;
+    createdDateValueKey: string;
+    totalAreaTextKey: string;
+    totalAreaValueKey: string;
+    addMissionButtonXVM: AddMissionButtonXVM;
+}
+
+export interface OrderDetailsPageConfig {
+    headerConfig: HeaderConfig;
+    sectionCardConfigs: SectionCardConfigs;
+}
+
 interface OrderDetailsSectionCardConfig {
+    type: 'orderDetails';
     titleKey: string;
     infoPanelConfig: {
         clientInfoPanel: {
@@ -59,16 +98,9 @@ interface OrderDetailsSectionCardConfig {
         };
     };
 }
-export interface OrderDetailsPageConfig {
-    headerConfig: HeaderConfig;
-    sectionCardConfigs: SectionCardConfigs;
-}
 interface SectionCardConfigs {
     orderDetailsSectionCardConfig: OrderDetailsSectionCardConfig;
-}
-
-interface StatusXVM extends StatusVM {
-    statusTextKey: string;
+    orderActionsSectionCardConfig: OrderActionsSectionCardXVM;
 }
 
 interface TranslateInput {
@@ -78,20 +110,10 @@ interface TranslateInput {
 
 type Value = string | number | Date | TranslateInput;
 
+export type OrderStatus = OrderStatusFromService;
+
 export const isTranslateInput = (obj: Value): obj is TranslateInput =>
     isObject(obj) && 'params' in obj && 'key' in obj;
-
-interface SummaryXVM {
-    textKey: string;
-    value: Value;
-}
-interface HeaderXVM extends HeaderConfig {
-    id: string;
-    statusXVM: StatusXVM;
-    summaryXVMs: SummaryXVM[];
-}
-
-type OrderStatus = OrderStatusFromService;
 
 export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
@@ -108,3 +130,155 @@ export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
         pending: 'OrderDetailsPage.header.status.pending',
         completed: 'OrderDetailsPage.header.status.completed',
     })[status] ?? '';
+
+export const mapHeaderXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order,
+    status: OrderStatus,
+    addMissionButtonVisibility: boolean
+): HeaderXVM => ({
+    ...config.headerConfig,
+    addMissionButtonXVM: {
+        isVisible: addMissionButtonVisibility,
+        textKey: config.headerConfig.addMissionButtonXVM.textKey,
+    },
+    id: order.id,
+    statusXVM: {
+        styles: mapOrderStatusToStatusToCSSStyles(status),
+        statusTextKey: mapOrderStatusToTranslocoTextKey(status),
+    },
+    summaryXVMs: [
+        {
+            textKey: config.headerConfig.clientTextKey,
+            value: order.client.client,
+        },
+        {
+            textKey: config.headerConfig.createdDateTextKey,
+            value: {
+                key: config.headerConfig.createdDateValueKey,
+                params: { date: order.creationDate },
+            },
+        },
+        {
+            textKey: config.headerConfig.totalAreaTextKey,
+            value: {
+                key: config.headerConfig.totalAreaValueKey,
+                params: { area: order.totalAreaInHa },
+            },
+        },
+    ],
+});
+
+export const mapOrderActionsSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    closeOrderButtonIsDisabled: boolean
+): OrderActionsSectionCardXVM => ({
+    ...config.sectionCardConfigs.orderActionsSectionCardConfig,
+    closeOrderButtonXVM: {
+        ...config.sectionCardConfigs.orderActionsSectionCardConfig
+            .closeOrderButtonXVM,
+        isDisabled: closeOrderButtonIsDisabled,
+    },
+});
+
+export const mapOrderDetailsSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order
+) => ({
+    ...config.sectionCardConfigs.orderDetailsSectionCardConfig,
+    infoPanelXVMs: [
+        {
+            ...config.sectionCardConfigs.orderDetailsSectionCardConfig
+                .infoPanelConfig.clientInfoPanel,
+            infoListXVM: {
+                infoItemXVMs: [
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.contactLabelKey,
+                        value: order.client.contact,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.emailLabelKey,
+                        value: order.client.email,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.phoneLabelKey,
+                        value: order.client.phone,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.addressLabelKey,
+                        value: order.client.address,
+                    },
+                ],
+            },
+        },
+        {
+            ...config.sectionCardConfigs.orderDetailsSectionCardConfig
+                .infoPanelConfig.summaryInfoPanel,
+            infoListXVM: {
+                infoItemXVMs: [
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.treatmentLabelKey,
+                        value: order.summary.treatment,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.averageDoseLabelKey,
+                        value: {
+                            key: config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.averageDoseValueKey,
+                            params: {
+                                dose: order.summary.averageDose,
+                            },
+                        },
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.totalSupplyLabelKey,
+                        value: {
+                            key: config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.totalSupplyValueKey,
+                            params: {
+                                amount: order.summary.totalSupply,
+                            },
+                        },
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.orderValueLabelKey,
+                        value: {
+                            key: config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.orderValueValueKey,
+                            params: {
+                                price: order.summary.orderValue,
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    ],
+});

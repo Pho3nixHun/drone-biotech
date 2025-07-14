@@ -1,7 +1,7 @@
 @if (vm(); as vm) {
-    <app-base-dialog
+    <app-dialog-layout
         class="w-80 md:w-96 block"
-        (cancelOnClick)="cancelClick()"
+        (close)="cancelClick()"
         [vm]="vm"
         *transloco="let t"
     >
@@ -14,5 +14,5 @@
         <button (click)="deleteClick()" class="btn btn-error">
             {{ t(vm.submitButtonTextKey) }}
         </button>
-    </app-base-dialog>
+    </app-dialog-layout>
 }

@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeleteDialogComponent when the vm is correct should render the content 1`] = `
+exports[`DialogLayoutComponent should render the template when the VM is provided, translate and project the content correctly 1`] = `
 <div
-  id="root1"
+  id="root0"
   ng-version="19.2.9"
 >
   <app-dialog-layout
-    class="w-80 md:w-96 block"
     ng-reflect-vm="[object Object]"
   >
     <section
@@ -18,7 +17,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
         <h3
           class="text-3xl"
         >
-           tit 
+           value 
         </h3>
         <button>
           <mat-icon
@@ -35,39 +34,19 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
       <div
         class="space-y-4"
       >
-        <h3
-          class="text-lg"
-        >
-           warning 
-        </h3>
+        <div>
+          Should be projected
+        </div>
       </div>
       <div
         class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
       >
-        <button
-          class="btn btn-secondary"
-        >
-           cancel 
-        </button>
-        <button
-          class="btn btn-error"
-        >
-           submit 
+        <button>
+          Should be projected
         </button>
       </div>
     </section>
     <!--container-->
   </app-dialog-layout>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`DeleteDialogComponent when the vm is not correct should not render the content if not DeleteDialogVM is provided 1`] = `
-<div
-  id="root0"
-  ng-version="19.2.9"
->
-  <!--container-->
 </div>
 `;

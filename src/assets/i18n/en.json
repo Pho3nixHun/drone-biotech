@@ -175,5 +175,12 @@
     "OrderDetailsPage.details.addressLabel": "Address:",
     "OrderDetailsPage.details.contactLabel": "Contact:",
     "OrderDetailsPage.details.emailLabel": "Email:",
-    "OrderDetailsPage.details.phoneLabel": "Phone:"
+    "OrderDetailsPage.details.phoneLabel": "Phone:",
+    "OrderDetailsPage.orderActions.title": "Order actions",
+    "OrderDetailsPage.orderActions.completion.text": "Proof of completion template",
+    "OrderDetailsPage.orderActions.close.text": "Close order",
+    "OrderDetailsPage.orderActions.close.dialog.title": "Confirm",
+    "OrderDetailsPage.orderActions.close.dialog.confirmText": "Are you sure you want to close the order?",
+    "OrderDetailsPage.orderActions.close.dialog.cancelButtonText": "Cancel",
+    "OrderDetailsPage.orderActions.close.dialog.confirmButtonText": "Confirm"
 }

@@ -1,10 +1,10 @@
 import { Component, input, output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslocoModule } from '@jsverse/transloco';
-import { BaseDialogVM } from './base-dialog.model';
+import { DialogLayoutVM } from './dialog-layout.model';
 
 /**
- * BaseDialogComponent
+ * DialogLayoutComponent
  *
  * Type: Presentational
  *
@@ -20,14 +20,14 @@ import { BaseDialogVM } from './base-dialog.model';
  * To provide a flexible and reusable dialog layout.
  */
 @Component({
-    selector: 'app-base-dialog',
+    selector: 'app-dialog-layout',
     imports: [MatIconModule, TranslocoModule],
-    templateUrl: './base-dialog.component.html'
+    templateUrl: './dialog-layout.component.html',
 })
-export class BaseDialogComponent {
-    public vm = input.required<BaseDialogVM>();
-    public readonly cancelOnClick = output<void>();
+export class DialogLayoutComponent {
+    public vm = input.required<DialogLayoutVM>();
+    public readonly close = output<void>();
     public onClick() {
-        this.cancelOnClick.emit();
+        this.close.emit();
     }
 }

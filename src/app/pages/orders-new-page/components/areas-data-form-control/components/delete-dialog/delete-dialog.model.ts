@@ -1,4 +1,4 @@
-import { DialogReasonBase } from '@services/dialog/dialog.service';
+import { DialogReason } from '@services/dialog/dialog.service';
 import { isObject } from '@utils/is-object.typeguard';
 
 export interface DeleteDialogVM {
@@ -9,7 +9,7 @@ export interface DeleteDialogVM {
     cancelButtonTextKey: string;
 }
 
-export interface DeleteDialogReason extends DialogReasonBase {
+export interface DeleteDialogReason extends DialogReason {
     type: 'deleteDialogReason';
 }
 

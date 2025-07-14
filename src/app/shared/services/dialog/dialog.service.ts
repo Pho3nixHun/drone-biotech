@@ -11,7 +11,7 @@ import { Store } from '@ngrx/store';
 import { Observable, Subject, map, merge, skip } from 'rxjs';
 import { selectURL } from 'src/app/stores/router/router.selectors';
 
-export interface DialogReasonBase {
+export interface DialogReason {
     reasonType: 'submit' | 'cancel';
 }
 export class DialogRef<T = unknown> {

@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseDialogComponent should render the template when the VM is provided, translate and project the content correctly 1`] = `
+exports[`ConfirmationDialogComponent should not render the template if not the correct vm is provided 1`] = `
 <div
   id="root0"
   ng-version="19.2.9"
 >
-  <app-base-dialog
+  <!--container-->
+</div>
+`;
+
+exports[`ConfirmationDialogComponent should render the template if the correct vm is provided 1`] = `
+<div
+  id="root1"
+  ng-version="19.2.9"
+>
+  <app-dialog-layout
+    class="w-80 md:w-96 block"
     ng-reflect-vm="[object Object]"
   >
     <section
@@ -17,7 +27,7 @@ exports[`BaseDialogComponent should render the template when the VM is provided,
         <h3
           class="text-3xl"
         >
-           value 
+           tit 
         </h3>
         <button>
           <mat-icon
@@ -34,19 +44,28 @@ exports[`BaseDialogComponent should render the template when the VM is provided,
       <div
         class="space-y-4"
       >
-        <div>
-          Should be projected
-        </div>
+        <p>
+          confirm
+        </p>
       </div>
       <div
         class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
       >
-        <button>
-          Should be projected
+        <button
+          class="btn btn-primary"
+        >
+           confirmButton 
+        </button>
+        <button
+          class="btn btn-secondary"
+        >
+           cancelButton 
         </button>
       </div>
     </section>
     <!--container-->
-  </app-base-dialog>
+  </app-dialog-layout>
+  <!--container-->
+  <!--container-->
 </div>
 `;

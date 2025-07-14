@@ -3,7 +3,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
-import { BaseDialogComponent } from '@components/base-dialog/base-dialog.component';
+import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.component';
 import {
     AreaDataDialogResultWithAreaData,
     AreaDataDialogResultWithoutAreaData,
@@ -21,7 +21,7 @@ import { isNullish } from '@utils/is-nullish.typeguard';
         NgClass,
         ReactiveFormsModule,
         TranslocoModule,
-        BaseDialogComponent,
+        DialogLayoutComponent,
         MapFormControlComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
