@@ -1,7 +1,10 @@
 import { StatusVM } from '@components/status/status.model';
 import { HashMap } from '@jsverse/transloco';
 import { isObject } from '@utils/is-object.typeguard';
-import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
+import {
+    Order,
+    OrderStatus as OrderStatusFromService,
+} from '@services/order/order.service.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
 import { WithTextNode } from '@interfaces/with-text-node.interface';
@@ -45,7 +48,7 @@ interface SummaryXVM {
     textKey: string;
     value: Value;
 }
-interface HeaderXVM extends HeaderConfig {
+export interface HeaderXVM extends HeaderConfig {
     id: string;
     statusXVM: StatusXVM;
     summaryXVMs: SummaryXVM[];
@@ -127,3 +130,155 @@ export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
         pending: 'OrderDetailsPage.header.status.pending',
         completed: 'OrderDetailsPage.header.status.completed',
     })[status] ?? '';
+
+export const mapHeaderXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order,
+    status: OrderStatus,
+    addMissionButtonVisibility: boolean
+): HeaderXVM => ({
+    ...config.headerConfig,
+    addMissionButtonXVM: {
+        isVisible: addMissionButtonVisibility,
+        textKey: config.headerConfig.addMissionButtonXVM.textKey,
+    },
+    id: order.id,
+    statusXVM: {
+        styles: mapOrderStatusToStatusToCSSStyles(status),
+        statusTextKey: mapOrderStatusToTranslocoTextKey(status),
+    },
+    summaryXVMs: [
+        {
+            textKey: config.headerConfig.clientTextKey,
+            value: order.client.client,
+        },
+        {
+            textKey: config.headerConfig.createdDateTextKey,
+            value: {
+                key: config.headerConfig.createdDateValueKey,
+                params: { date: order.creationDate },
+            },
+        },
+        {
+            textKey: config.headerConfig.totalAreaTextKey,
+            value: {
+                key: config.headerConfig.totalAreaValueKey,
+                params: { area: order.totalAreaInHa },
+            },
+        },
+    ],
+});
+
+export const mapOrderActionsSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    closeOrderButtonIsDisabled: boolean
+): OrderActionsSectionCardXVM => ({
+    ...config.sectionCardConfigs.orderActionsSectionCardConfig,
+    closeOrderButtonXVM: {
+        ...config.sectionCardConfigs.orderActionsSectionCardConfig
+            .closeOrderButtonXVM,
+        isDisabled: closeOrderButtonIsDisabled,
+    },
+});
+
+export const mapOrderDetailsSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order
+) => ({
+    ...config.sectionCardConfigs.orderDetailsSectionCardConfig,
+    infoPanelXVMs: [
+        {
+            ...config.sectionCardConfigs.orderDetailsSectionCardConfig
+                .infoPanelConfig.clientInfoPanel,
+            infoListXVM: {
+                infoItemXVMs: [
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.contactLabelKey,
+                        value: order.client.contact,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.emailLabelKey,
+                        value: order.client.email,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.phoneLabelKey,
+                        value: order.client.phone,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .clientInfoPanel.addressLabelKey,
+                        value: order.client.address,
+                    },
+                ],
+            },
+        },
+        {
+            ...config.sectionCardConfigs.orderDetailsSectionCardConfig
+                .infoPanelConfig.summaryInfoPanel,
+            infoListXVM: {
+                infoItemXVMs: [
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.treatmentLabelKey,
+                        value: order.summary.treatment,
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.averageDoseLabelKey,
+                        value: {
+                            key: config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.averageDoseValueKey,
+                            params: {
+                                dose: order.summary.averageDose,
+                            },
+                        },
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.totalSupplyLabelKey,
+                        value: {
+                            key: config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.totalSupplyValueKey,
+                            params: {
+                                amount: order.summary.totalSupply,
+                            },
+                        },
+                    },
+                    {
+                        labelKey:
+                            config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.orderValueLabelKey,
+                        value: {
+                            key: config.sectionCardConfigs
+                                .orderDetailsSectionCardConfig.infoPanelConfig
+                                .summaryInfoPanel.orderValueValueKey,
+                            params: {
+                                price: order.summary.orderValue,
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    ],
+});

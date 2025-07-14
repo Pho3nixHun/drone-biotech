@@ -14,7 +14,10 @@ import { InfoPanelComponent } from '@components/info-panel/info-panel.component'
 import { InfoItemListComponent } from '@components/info-panel/components/info-item-list/info-item-list.component';
 import { InfoItemComponent } from '@components/info-panel/components/info-item-list/components/info-item/info-item.component';
 import { ConfirmationDialogComponent } from '@components/confirmation-dialog/confirmation-dialog.component';
-import { ConfirmationDialogReason } from '@components/confirmation-dialog/confirmation-dialog.model';
+import {
+    ConfirmationDialogReason,
+    ConfirmationDialogVM,
+} from '@components/confirmation-dialog/confirmation-dialog.model';
 import { OrderDetailsPageService } from './order-details-page.service';
 import { isTranslateInput } from './order-details-page.model';
 
@@ -42,7 +45,7 @@ export class OrderDetailsPageComponent {
 
     protected readonly vm = toSignal(this.orderDetailsPageService.getVM());
 
-    protected async openConfirmationDialog(vm: unknown) {
+    protected async openConfirmationDialog(vm: ConfirmationDialogVM) {
         const reason: ConfirmationDialogReason = await firstValueFrom(
             this.dialogService.create(vm, ConfirmationDialogComponent).result$
         );
