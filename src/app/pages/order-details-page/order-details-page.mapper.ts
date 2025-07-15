@@ -1,12 +1,15 @@
+import { mapAvatarXVM } from '@components/avatar/avatar.model';
 import {
     HeaderXVM,
+    MessageItemXVM,
+    MessagesSectionCardXVM,
     OrderActionsSectionCardXVM,
     OrderDetailsPageConfig,
     OrderDetailsSectionCardXVM,
     OrderStatus,
     Role,
 } from './order-details-page.model';
-import { Order } from '@services/order/order.service.model';
+import { Message, Order } from '@services/order/order.service.model';
 
 export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
@@ -205,4 +208,36 @@ export const mapOrderDetailsSectionCardXVM = (
             },
         },
     ],
+});
+
+export const mapMessagesSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    messages: Message[]
+): MessagesSectionCardXVM => ({
+    type: 'messages',
+    buttonTextKey:
+        config.sectionCardConfigs.messagesSectionCardConfig.buttonTextKey,
+    titleKey: config.sectionCardConfigs.messagesSectionCardConfig.titleKey,
+    messageItemListXVM: {
+        messageItemXVMs: messages
+            .map((message) => mapMessageToMessageItemXVM(config, message))
+            .sort(
+                (a, b) =>
+                    b.sendingDate.getSeconds() - a.sendingDate.getSeconds()
+            ),
+    },
+});
+
+const mapMessageToMessageItemXVM = (
+    config: OrderDetailsPageConfig,
+    message: Message
+): MessageItemXVM => ({
+    ...message,
+    avatarXVM: mapAvatarXVM(message.sender),
+    roleTextKey: mapRoleTranslocoTextKey(message.sender.role),
+    senderName: message.sender.name,
+    senderValueKey:
+        config.sectionCardConfigs.messagesSectionCardConfig.senderValueKey,
+    sendingDateValueKey:
+        config.sectionCardConfigs.messagesSectionCardConfig.dateValueKey,
 });

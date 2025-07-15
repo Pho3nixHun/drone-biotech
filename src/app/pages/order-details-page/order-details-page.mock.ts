@@ -18,6 +18,7 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
             buttonTextKey: 'OrderDetailsPage.messages.buttonText',
             titleKey: 'OrderDetailsPage.messages.title',
             dateValueKey: 'OrderDetailsPage.messages.dateValue',
+            senderValueKey: 'OrderDetailsPage.messages.senderValue',
         },
         orderActionsSectionCardConfig: {
             type: 'orderActions',
@@ -109,6 +110,7 @@ export const enMock = {
         title: 'title',
         dateValue: 'date',
         buttonText: 'button',
+        senderValue: 'send',
     },
 };
 
@@ -130,6 +132,7 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
             buttonTextKey: enMock.messages.buttonText,
             titleKey: enMock.messages.title,
             dateValueKey: enMock.messages.dateValue,
+            senderValueKey: enMock.messages.senderValue,
         },
         orderActionsSectionCardConfig: {
             type: 'orderActions',

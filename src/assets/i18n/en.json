@@ -188,5 +188,6 @@
     "OrderDetailsPage.role.pilot": "Pilot",
     "OrderDetailsPage.messages.title": "Order messages",
     "OrderDetailsPage.messages.dateValue": "{ date, date, long } { date, time, short }",
-    "OrderDetailsPage.messages.buttonText": "Send"
+    "OrderDetailsPage.messages.buttonText": "Send",
+    "OrderDetailsPage.messages.senderValue": "{role} - {name}"
 }

@@ -20,10 +20,8 @@ import {
     mapHeaderXVM,
     mapOrderDetailsSectionCardXVM,
     mapOrderActionsSectionCardXVM,
-    mapRoleTranslocoTextKey,
+    mapMessagesSectionCardXVM,
 } from './order-details-page.mapper';
-import { mapAvatarXVM } from '@components/avatar/avatar.model';
-import { TranslocoService } from '@jsverse/transloco';
 
 @Injectable({
     providedIn: 'root',
@@ -31,7 +29,6 @@ import { TranslocoService } from '@jsverse/transloco';
 export class OrderDetailsPageService {
     private readonly config = inject(ORDER_DETAILS_PAGE_CONFIG);
     private readonly orderService = inject(OrderService);
-    private readonly translocoService = inject(TranslocoService);
 
     private readonly order$ = this.orderService.getOrder();
     private readonly statusSubject = new Subject<OrderStatus>();
@@ -104,32 +101,7 @@ export class OrderDetailsPageService {
                         config,
                         closeOrderButtonIsDisabled
                     ),
-                    {
-                        type: 'messages',
-                        buttonTextKey:
-                            config.sectionCardConfigs.messagesSectionCardConfig
-                                .buttonTextKey,
-                        titleKey:
-                            config.sectionCardConfigs.messagesSectionCardConfig
-                                .titleKey,
-                        messageItemListXVM: {
-                            messageItemXVMs: messages
-                                .map((message) => ({
-                                    ...message,
-                                    avatarXVM: mapAvatarXVM(message.sender),
-                                    sender: `${this.translocoService.translate(mapRoleTranslocoTextKey(message.sender.role))} - ${message.sender.name}`,
-                                    sendingDateValueKey:
-                                        config.sectionCardConfigs
-                                            .messagesSectionCardConfig
-                                            .dateValueKey,
-                                }))
-                                .sort(
-                                    (a, b) =>
-                                        b.sendingDate.getSeconds() -
-                                        a.sendingDate.getSeconds()
-                                ),
-                        },
-                    },
+                    mapMessagesSectionCardXVM(config, messages),
                 ],
             })
         )

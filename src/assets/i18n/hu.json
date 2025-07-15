@@ -188,5 +188,6 @@
     "OrderDetailsPage.role.pilot": "Pilóta",
     "OrderDetailsPage.messages.title": "Rendelés üzenetei",
     "OrderDetailsPage.messages.dateValue": "{ date, date, long } { date, time, short }",
-    "OrderDetailsPage.messages.buttonText": "Küldés"
+    "OrderDetailsPage.messages.buttonText": "Küldés",
+    "OrderDetailsPage.messages.senderValue": "{role} - {name}"
 }

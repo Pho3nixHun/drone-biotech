@@ -26,7 +26,9 @@ export interface Message {
 }
 export interface MessageItemXVM
     extends Pick<Message, 'message' | 'sendingDate'> {
-    sender: string;
+    senderName: string;
+    roleTextKey: string;
+    senderValueKey: string;
     sendingDateValueKey: string;
     avatarXVM: AvatarXVM;
 }
@@ -139,6 +141,7 @@ export interface OrderDetailsPageConfig {
             titleKey: string;
             buttonTextKey: string;
             dateValueKey: string;
+            senderValueKey: string;
         };
         orderActionsSectionCardConfig: OrderActionsSectionCardXVM;
     };

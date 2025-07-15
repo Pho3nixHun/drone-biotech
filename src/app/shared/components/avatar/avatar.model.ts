@@ -1,6 +1,8 @@
 import { WithImage } from '@interfaces/with-image.interface';
 import { User } from 'src/app/pages/order-details-page/order-details-page.model';
 
+const MAX_INITIALS = 3;
+
 interface AvatarXVMWithInitials {
     type: 'withInitials';
     initials: string;
@@ -19,7 +21,7 @@ export const mapAvatarXVM = (user: User): AvatarXVM => {
         .map((word) => word[0])
         .join('')
         .toUpperCase()
-        .slice(0, 3);
+        .slice(0, MAX_INITIALS);
 
     return user.photoUrl
         ? {

@@ -75,7 +75,7 @@ export const orders: Order[] = [
                 sender: {
                     role: 'customer',
                     name: 'Sarah Johnson',
-                    photoUrl: 'assets/user.png',
+                    photoUrl: 'assets/farming.jpg',
                 },
                 sendingDate: new Date('2025-04-05T09:15:00'),
                 message:
@@ -95,7 +95,7 @@ export const orders: Order[] = [
                 sender: {
                     role: 'customer',
                     name: 'Sarah Johnson',
-                    photoUrl: 'assets/user.png',
+                    photoUrl: 'assets/farming.jpg',
                 },
                 sendingDate: new Date('2025-04-05T13:45:00'),
                 message:
@@ -115,7 +115,7 @@ export const orders: Order[] = [
                 sender: {
                     role: 'customer',
                     name: 'Sarah Johnson',
-                    photoUrl: 'assets/user.png',
+                    photoUrl: 'assets/farming.jpg',
                 },
                 sendingDate: new Date('2025-04-06T09:00:00'),
                 message:
@@ -165,7 +165,7 @@ export const orders: Order[] = [
                 sender: {
                     role: 'customer',
                     name: 'Sarah Johnson',
-                    photoUrl: 'assets/user.png',
+                    photoUrl: 'assets/farming.jpg',
                 },
                 sendingDate: new Date('2025-02-25T10:00:00'),
                 message:
@@ -175,7 +175,7 @@ export const orders: Order[] = [
                 sender: {
                     role: 'customer',
                     name: 'Sarah Johnson',
-                    photoUrl: 'assets/user.png',
+                    photoUrl: 'assets/farming.jpg',
                 },
                 sendingDate: new Date('2025-02-25T12:15:00'),
                 message:

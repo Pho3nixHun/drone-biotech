@@ -389,9 +389,9 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                         loading="lazy"
                         ng-img="true"
                         ng-reflect-fill=""
-                        ng-reflect-ng-src="assets/user.png"
+                        ng-reflect-ng-src="assets/farming.jpg"
                         sizes="auto, 100vw"
-                        src="assets/user.png"
+                        src="assets/farming.jpg"
                         style="position: absolute; width: 100%; height: 100%; inset: 0;"
                       />
                     </div>
@@ -408,7 +408,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                     <h3
                       class="font-medium"
                     >
-                      OrderDetailsPage.role.customer - Sarah Johnson
+                       send 
                     </h3>
                     <p
                       class="text-gray-700"
@@ -444,7 +444,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                     <h3
                       class="font-medium"
                     >
-                      OrderDetailsPage.role.office - Operations Manager
+                       send 
                     </h3>
                     <p
                       class="text-gray-700"
@@ -473,9 +473,9 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                         loading="lazy"
                         ng-img="true"
                         ng-reflect-fill=""
-                        ng-reflect-ng-src="assets/user.png"
+                        ng-reflect-ng-src="assets/farming.jpg"
                         sizes="auto, 100vw"
-                        src="assets/user.png"
+                        src="assets/farming.jpg"
                         style="position: absolute; width: 100%; height: 100%; inset: 0;"
                       />
                     </div>
@@ -492,7 +492,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                     <h3
                       class="font-medium"
                     >
-                      OrderDetailsPage.role.customer - Sarah Johnson
+                       send 
                     </h3>
                     <p
                       class="text-gray-700"
@@ -528,7 +528,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                     <h3
                       class="font-medium"
                     >
-                      OrderDetailsPage.role.office - Operations Manager
+                       send 
                     </h3>
                     <p
                       class="text-gray-700"
@@ -557,9 +557,9 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                         loading="lazy"
                         ng-img="true"
                         ng-reflect-fill=""
-                        ng-reflect-ng-src="assets/user.png"
+                        ng-reflect-ng-src="assets/farming.jpg"
                         sizes="auto, 100vw"
-                        src="assets/user.png"
+                        src="assets/farming.jpg"
                         style="position: absolute; width: 100%; height: 100%; inset: 0;"
                       />
                     </div>
@@ -576,7 +576,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                     <h3
                       class="font-medium"
                     >
-                      OrderDetailsPage.role.customer - Sarah Johnson
+                       send 
                     </h3>
                     <p
                       class="text-gray-700"
