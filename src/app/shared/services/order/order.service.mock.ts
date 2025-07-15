@@ -72,36 +72,51 @@ export const orders: Order[] = [
         ],
         messages: [
             {
-                role: 'customer',
-                sender: 'Sarah Johnson',
+                sender: {
+                    role: 'customer',
+                    name: 'Sarah Johnson',
+                    photoUrl: 'assets/user.png',
+                },
                 sendingDate: new Date('2025-04-05T09:15:00'),
                 message:
                     'Please update me on the status of the East Meadow mission. Do we need to prepare access to any additional areas?',
             },
             {
-                role: 'office',
-                sender: 'Operations Manager',
+                sender: {
+                    role: 'office',
+                    name: 'Operations Manager',
+                    photoUrl: null,
+                },
                 sendingDate: new Date('2025-04-05T11:30:00'),
                 message:
                     "East Meadow mission is scheduled for April 10th. All preparations are on track. We'll need the eastern gate unlocked for equipment access. The West Orchard and Central Vineyard missions were completed successfully.",
             },
             {
-                role: 'customer',
-                sender: 'Sarah Johnson',
+                sender: {
+                    role: 'customer',
+                    name: 'Sarah Johnson',
+                    photoUrl: 'assets/user.png',
+                },
                 sendingDate: new Date('2025-04-05T13:45:00'),
                 message:
                     "Thank you for the update. I've arranged for the eastern gate to be unlocked on the 10th. Please share the completion reports for the West Orchard and Central Vineyard missions when available.",
             },
             {
-                role: 'office',
-                sender: 'Operations Manager',
+                sender: {
+                    role: 'office',
+                    name: 'Operations Manager',
+                    photoUrl: null,
+                },
                 sendingDate: new Date('2025-04-06T08:20:00'),
                 message:
                     'Noted. Reports are being finalized and will be shared by tomorrow. Also, confirming Upper Hill mission planned for April 12—please ensure road access is cleared.',
             },
             {
-                role: 'customer',
-                sender: 'Sarah Johnson',
+                sender: {
+                    role: 'customer',
+                    name: 'Sarah Johnson',
+                    photoUrl: 'assets/user.png',
+                },
                 sendingDate: new Date('2025-04-06T09:00:00'),
                 message:
                     'Understood. Road access to Upper Hill will be cleared by April 11th. Please notify if weather conditions affect scheduling.',
@@ -147,15 +162,21 @@ export const orders: Order[] = [
         ],
         messages: [
             {
-                role: 'customer',
-                sender: 'Sarah Johnson',
+                sender: {
+                    role: 'customer',
+                    name: 'Sarah Johnson',
+                    photoUrl: 'assets/user.png',
+                },
                 sendingDate: new Date('2025-02-25T10:00:00'),
                 message:
                     'Thanks for the timely completion. Please confirm that all equipment was sanitized post-application.',
             },
             {
-                role: 'office',
-                sender: 'Operations Manager',
+                sender: {
+                    role: 'customer',
+                    name: 'Sarah Johnson',
+                    photoUrl: 'assets/user.png',
+                },
                 sendingDate: new Date('2025-02-25T12:15:00'),
                 message:
                     'Yes, all equipment was cleaned and sanitized following protocol. Certificates have been emailed.',
@@ -193,15 +214,21 @@ export const orders: Order[] = [
         ],
         messages: [
             {
-                role: 'customer',
-                sender: 'Mike Thompson',
+                sender: {
+                    role: 'customer',
+                    name: 'Mike Thompson',
+                    photoUrl: null,
+                },
                 sendingDate: new Date('2025-04-06T08:30:00'),
                 message:
                     'Can you confirm if Golden Ridge is suitable for drone application or do we need ground support?',
             },
             {
-                role: 'office',
-                sender: 'Operations Manager',
+                sender: {
+                    role: 'office',
+                    name: 'Operations Manager',
+                    photoUrl: null,
+                },
                 sendingDate: new Date('2025-04-06T09:10:00'),
                 message:
                     'Initial assessment indicates drone application is feasible. We’ll conduct a final site review by April 10.',
@@ -239,15 +266,21 @@ export const orders: Order[] = [
         ],
         messages: [
             {
-                role: 'customer',
-                sender: 'Lisa Martinez',
+                sender: {
+                    name: 'Lisa Martinez',
+                    role: 'customer',
+                    photoUrl: null,
+                },
                 sendingDate: new Date('2025-04-09T07:40:00'),
                 message:
                     'We’ve had recent rainfall in Block A. Will that delay the Cherry Hill mission?',
             },
             {
-                role: 'office',
-                sender: 'Operations Manager',
+                sender: {
+                    role: 'office',
+                    name: 'Operations Manager',
+                    photoUrl: null,
+                },
                 sendingDate: new Date('2025-04-09T08:20:00'),
                 message:
                     'Weather is being monitored. If drying conditions persist, we expect no delay. Final decision will be made April 13.',

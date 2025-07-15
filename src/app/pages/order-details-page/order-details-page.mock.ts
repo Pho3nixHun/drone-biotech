@@ -35,7 +35,8 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
                     type: 'confirmationDialogVM',
                     titleKey:
                         'OrderDetailsPage.orderActions.close.dialog.title',
-                    confirmTextKey: 'Are you sure you want to close the order?',
+                    confirmTextKey:
+                        'OrderDetailsPage.orderActions.close.dialog.confirmText',
                     cancelButtonTextKey:
                         'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
                     confirmButtonTextKey:

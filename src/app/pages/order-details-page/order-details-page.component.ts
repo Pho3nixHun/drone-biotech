@@ -1,7 +1,7 @@
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Component, inject } from '@angular/core';
-import { NgClass, NgTemplateOutlet } from '@angular/common';
+import { NgClass, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { firstValueFrom } from 'rxjs';
 import { Store } from '@ngrx/store';
@@ -22,7 +22,6 @@ import { MessageItemListComponent } from '@components/message-item-list/message-
 import { MessageItemComponent } from '@components/message-item/message-item.component';
 import { emptyStringValidator } from '@utils/empty-string.validator';
 import { OrderDetailsPageService } from './order-details-page.service';
-import { isTranslateInput } from './order-details-page.model';
 import {
     ConfirmationDialogReason,
     ConfirmationDialogVM,
@@ -47,6 +46,8 @@ import {
         ReactiveFormsModule,
         NgClass,
         AvatarComponent,
+        NgOptimizedImage,
+        NgClass,
     ],
     templateUrl: './order-details-page.component.html',
 })
@@ -77,8 +78,11 @@ export class OrderDetailsPageComponent {
         this.orderDetailsPageService.sendMessage({
             sendingDate: new Date(),
             message,
-            role: 'customer',
-            senderName: sender.name,
+            sender: {
+                role: sender.role,
+                name: sender.displayName,
+                photoUrl: sender.photoURL,
+            },
         });
 
         this.messageFormControl.reset();
@@ -92,6 +96,4 @@ export class OrderDetailsPageComponent {
         if (reason.reasonType === 'submit')
             return this.orderDetailsPageService.closeOrder();
     }
-
-    protected readonly isTranslateInput = isTranslateInput;
 }

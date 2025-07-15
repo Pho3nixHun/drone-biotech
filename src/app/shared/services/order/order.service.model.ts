@@ -15,9 +15,14 @@ export interface Order {
 
 type Role = 'customer' | 'office' | 'pilot';
 
-interface Message {
+export interface User {
+    name: string;
     role: Role;
-    sender: string;
+    photoUrl: string | null;
+}
+
+export interface Message {
+    sender: User;
     sendingDate: Date;
     message: string;
 }

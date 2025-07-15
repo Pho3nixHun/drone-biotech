@@ -25,6 +25,6 @@ export const selectUserName = createSelector(
     selectAuthState,
     (auth: AuthState) => {
         const user = auth.user;
-        return user ? user.name : undefined;
+        return user ? user.displayName : undefined;
     }
 );

@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { redirectGuard } from '@guards/dashboard-redirect-guards/dashboard-redirect.guard';
-import { USER_ROLES } from '@stores/auth/auth.model';
 import { DashboardPageRouteSegment } from './dashboard-page-route-segment';
 import { NgModule } from '@angular/core';
+import { UserRole } from '@stores/auth/auth.model';
 
 export const routes: Routes = [
     {
@@ -19,7 +19,7 @@ export const routes: Routes = [
             {
                 path: DashboardPageRouteSegment.CUSTOMER,
                 data: {
-                    allowedRole: USER_ROLES.CUSTOMER,
+                    allowedRole: UserRole.CUSTOMER,
                 },
                 loadComponent: () =>
                     import(
@@ -29,7 +29,7 @@ export const routes: Routes = [
             {
                 path: DashboardPageRouteSegment.OFFICE,
                 data: {
-                    allowedRole: USER_ROLES.OFFICE,
+                    allowedRole: UserRole.OFFICE,
                 },
                 loadComponent: () =>
                     import(
@@ -39,7 +39,7 @@ export const routes: Routes = [
             {
                 path: DashboardPageRouteSegment.PILOT,
                 data: {
-                    allowedRole: USER_ROLES.PILOT,
+                    allowedRole: UserRole.PILOT,
                 },
                 loadComponent: () =>
                     import(

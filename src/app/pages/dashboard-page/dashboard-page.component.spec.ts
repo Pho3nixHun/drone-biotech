@@ -11,6 +11,7 @@ import {
     updateSummaries,
 } from '@services/summary/summary-mock.service';
 import { summaries } from '@services/summary/summary.mock';
+import { UserRole } from '@stores/auth/auth.model';
 
 describe('DashboardPageComponent', () => {
     let fixture: ComponentFixture<DashboardPageComponent>;
@@ -67,7 +68,7 @@ describe('DashboardPageComponent', () => {
             email: 'test@gmail.com',
             name: 'Name',
             photoURL: 'url',
-            role: 'customer',
+            role: UserRole.CUSTOMER,
         });
         updateSummaries([]);
 
@@ -88,7 +89,7 @@ describe('DashboardPageComponent', () => {
             email: 'test@gmail.com',
             name: 'Name',
             photoURL: 'url',
-            role: 'customer',
+            role: UserRole.CUSTOMER,
         });
         updateSummaries(summaries);
 

@@ -7,7 +7,7 @@ import { GridVM } from '@components/grid-section/components/grid/grid.model';
 import { WithTitle } from './with-title.interface';
 
 export const mapAuthUserToDashboardUser = (user: AuthUser): User => ({
-    name: user.name,
+    name: user.displayName,
     role: user.role,
     lastLoginDate: new Date(),
 });

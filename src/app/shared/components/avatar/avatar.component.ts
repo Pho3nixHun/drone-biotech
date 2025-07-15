@@ -1,12 +1,8 @@
-import { Component, input } from '@angular/core';
-import { AvatarVM } from './avatar.model';
-import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-avatar',
-    imports: [NgClass],
+    imports: [],
     templateUrl: './avatar.component.html',
 })
-export class AvatarComponent {
-    public vm = input.required<AvatarVM>();
-}
+export class AvatarComponent {}

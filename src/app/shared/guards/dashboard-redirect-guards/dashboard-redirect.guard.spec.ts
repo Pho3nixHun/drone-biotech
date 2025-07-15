@@ -4,7 +4,7 @@ import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { Router } from '@angular/router';
 import { selectUserRole } from '@stores/auth/auth.selector';
 import { AppRouteSegment } from 'src/app/app-route-segment';
-import { USER_ROLES } from '@stores/auth/auth.model';
+import { UserRole } from '@stores/auth/auth.model';
 
 describe('redirectGuard', () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,9 +34,9 @@ describe('redirectGuard', () => {
     });
 
     it('should return redirect to notfound if allowedRole !== currentRole', async () => {
-        mockStore.overrideSelector(selectUserRole, USER_ROLES.CUSTOMER);
+        mockStore.overrideSelector(selectUserRole, UserRole.CUSTOMER);
 
-        const route = createRouteSnapshot({ allowedRole: USER_ROLES.PILOT });
+        const route = createRouteSnapshot({ allowedRole: UserRole.PILOT });
 
         const result = await executeGuard(route, mockState);
 
@@ -46,10 +46,10 @@ describe('redirectGuard', () => {
     });
 
     it('should return redirect to role dashboard if navigateToRoleDashboard and allowedRole match', async () => {
-        mockStore.overrideSelector(selectUserRole, USER_ROLES.PILOT);
+        mockStore.overrideSelector(selectUserRole, UserRole.PILOT);
 
         const route = createRouteSnapshot({
-            allowedRole: USER_ROLES.PILOT,
+            allowedRole: UserRole.PILOT,
             navigateToRoleDashboard: true,
         });
 
@@ -61,10 +61,10 @@ describe('redirectGuard', () => {
     });
 
     it('should return true if allowedRole matches currentRole and no redirect is needed', async () => {
-        mockStore.overrideSelector(selectUserRole, USER_ROLES.OFFICE);
+        mockStore.overrideSelector(selectUserRole, UserRole.OFFICE);
 
         const route = createRouteSnapshot({
-            allowedRole: USER_ROLES.OFFICE,
+            allowedRole: UserRole.OFFICE,
             navigateToRoleDashboard: false,
         });
 

@@ -9,12 +9,9 @@ exports[`MessageItemComponent should project the content and render the template
     <div
       class="w-full flex flex-row space-x-3"
     >
-      <app-avatar
-        ng-reflect-vm="[object Object]"
-      >
+      <app-avatar>
         <div
-          class="w-8 h-8 rounded-full flex justify-center items-center text-blue-300"
-          ng-reflect-ng-class="text-blue-300"
+          class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
         />
       </app-avatar>
       <div

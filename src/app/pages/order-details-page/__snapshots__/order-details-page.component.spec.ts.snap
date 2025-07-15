@@ -319,6 +319,41 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
       <!--container-->
       <!--container-->
       <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <!--ng-container-->
+      <!--container-->
+      <!--container-->
+      <!--container-->
       <!--container-->
       <app-section-card
         ng-reflect-vm="[object Object]"
@@ -339,16 +374,29 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                 <div
                   class="w-full flex flex-row space-x-3"
                 >
+                  <!--container-->
                   <app-avatar
-                    ng-reflect-vm="[object Object]"
+                    class="text-white *:bg-black"
                   >
                     <div
-                      class="w-8 h-8 rounded-full flex justify-center items-center bg-green-100 text-green-400"
-                      ng-reflect-ng-class="bg-green-100 text-green-400"
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
                     >
-                      S
+                      <img
+                        alt="SJ"
+                        class="object-contain rounded-full"
+                        fetchpriority="auto"
+                        fill=""
+                        loading="lazy"
+                        ng-img="true"
+                        ng-reflect-fill=""
+                        ng-reflect-ng-src="assets/user.png"
+                        sizes="auto, 100vw"
+                        src="assets/user.png"
+                        style="position: absolute; width: 100%; height: 100%; inset: 0;"
+                      />
                     </div>
                   </app-avatar>
+                  <!--container-->
                   <div
                     class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
                   >
@@ -375,15 +423,16 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                   class="w-full flex flex-row space-x-3"
                 >
                   <app-avatar
-                    ng-reflect-vm="[object Object]"
+                    class="*:bg-green-200 text-green-500"
                   >
                     <div
-                      class="w-8 h-8 rounded-full flex justify-center items-center bg-blue-100 text-blue-400"
-                      ng-reflect-ng-class="bg-blue-100 text-blue-400"
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
                     >
-                      O
+                       OM 
                     </div>
                   </app-avatar>
+                  <!--container-->
+                  <!--container-->
                   <div
                     class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
                   >
@@ -409,16 +458,29 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                 <div
                   class="w-full flex flex-row space-x-3"
                 >
+                  <!--container-->
                   <app-avatar
-                    ng-reflect-vm="[object Object]"
+                    class="text-white *:bg-black"
                   >
                     <div
-                      class="w-8 h-8 rounded-full flex justify-center items-center bg-green-100 text-green-400"
-                      ng-reflect-ng-class="bg-green-100 text-green-400"
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
                     >
-                      S
+                      <img
+                        alt="SJ"
+                        class="object-contain rounded-full"
+                        fetchpriority="auto"
+                        fill=""
+                        loading="lazy"
+                        ng-img="true"
+                        ng-reflect-fill=""
+                        ng-reflect-ng-src="assets/user.png"
+                        sizes="auto, 100vw"
+                        src="assets/user.png"
+                        style="position: absolute; width: 100%; height: 100%; inset: 0;"
+                      />
                     </div>
                   </app-avatar>
+                  <!--container-->
                   <div
                     class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
                   >
@@ -445,15 +507,16 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                   class="w-full flex flex-row space-x-3"
                 >
                   <app-avatar
-                    ng-reflect-vm="[object Object]"
+                    class="*:bg-green-200 text-green-500"
                   >
                     <div
-                      class="w-8 h-8 rounded-full flex justify-center items-center bg-blue-100 text-blue-400"
-                      ng-reflect-ng-class="bg-blue-100 text-blue-400"
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
                     >
-                      O
+                       OM 
                     </div>
                   </app-avatar>
+                  <!--container-->
+                  <!--container-->
                   <div
                     class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
                   >
@@ -479,16 +542,29 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                 <div
                   class="w-full flex flex-row space-x-3"
                 >
+                  <!--container-->
                   <app-avatar
-                    ng-reflect-vm="[object Object]"
+                    class="text-white *:bg-black"
                   >
                     <div
-                      class="w-8 h-8 rounded-full flex justify-center items-center bg-green-100 text-green-400"
-                      ng-reflect-ng-class="bg-green-100 text-green-400"
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
                     >
-                      S
+                      <img
+                        alt="SJ"
+                        class="object-contain rounded-full"
+                        fetchpriority="auto"
+                        fill=""
+                        loading="lazy"
+                        ng-img="true"
+                        ng-reflect-fill=""
+                        ng-reflect-ng-src="assets/user.png"
+                        sizes="auto, 100vw"
+                        src="assets/user.png"
+                        style="position: absolute; width: 100%; height: 100%; inset: 0;"
+                      />
                     </div>
                   </app-avatar>
+                  <!--container-->
                   <div
                     class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
                   >
@@ -533,41 +609,6 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
       </app-section-card>
       <!--container-->
       <!--ng-container-->
-      <!--container-->
-      <!--container-->
-      <app-section-card
-        ng-reflect-vm="[object Object]"
-      >
-        <section
-          class="shadow p-4 flex flex-col space-y-4"
-        >
-          <h3
-            class="text-xl font-medium"
-          >
-            tit
-          </h3>
-          <div
-            class="flex flex-row space-x-4"
-          >
-            <a
-              class="btn btn-success"
-              download=""
-              href="assets/lepke.jpg"
-            >
-               Proof of completion template 
-            </a>
-            <button
-              class="btn btn-error"
-              ng-reflect-ng-class="btn-error"
-            >
-               Close order 
-            </button>
-          </div>
-        </section>
-      </app-section-card>
-      <!--container-->
-      <!--ng-container-->
-      <!--container-->
       <!--container-->
       <!--container-->
     </section>

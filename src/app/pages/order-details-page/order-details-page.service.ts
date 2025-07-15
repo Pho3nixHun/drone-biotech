@@ -1,3 +1,5 @@
+import { OrderService } from '@services/order/order.service';
+import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
 import { inject, Injectable } from '@angular/core';
 import {
     combineLatest,
@@ -9,32 +11,28 @@ import {
     scan,
     Subject,
 } from 'rxjs';
-import { OrderService } from '@services/order/order.service';
-import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
 import {
-    mapHeaderXVM,
-    mapOrderActionsSectionCardXVM,
-    mapOrderDetailsSectionCardXVM,
-    mapRoleTranslocoTextKey,
     Message,
-    MessageItemXVM,
     OrderDetailsPageVM,
     OrderStatus,
 } from './order-details-page.model';
-import { Store } from '@ngrx/store';
-import { selectUserName } from '@stores/auth/auth.selector';
+import {
+    mapHeaderXVM,
+    mapOrderDetailsSectionCardXVM,
+    mapOrderActionsSectionCardXVM,
+    mapRoleTranslocoTextKey,
+} from './order-details-page.mapper';
+import { mapAvatarXVM } from '@components/avatar/avatar.model';
 import { TranslocoService } from '@jsverse/transloco';
 
 @Injectable({
     providedIn: 'root',
 })
 export class OrderDetailsPageService {
-    private readonly store = inject(Store);
     private readonly config = inject(ORDER_DETAILS_PAGE_CONFIG);
     private readonly orderService = inject(OrderService);
     private readonly translocoService = inject(TranslocoService);
 
-    private readonly userName$ = this.store.select(selectUserName);
     private readonly order$ = this.orderService.getOrder();
     private readonly statusSubject = new Subject<OrderStatus>();
     private readonly messagesSubject = new Subject<Message>();
@@ -82,7 +80,6 @@ export class OrderDetailsPageService {
         this.addMissionButtonVisibility$,
         this.closeOrderButtonIsDisabled$,
         this.messages$,
-        this.userName$,
         of(this.config),
     ]).pipe(
         map(
@@ -92,7 +89,6 @@ export class OrderDetailsPageService {
                 addMissionButtonVisibility,
                 closeOrderButtonIsDisabled,
                 messages,
-                userName,
                 config,
             ]) => ({
                 ...config,
@@ -118,19 +114,10 @@ export class OrderDetailsPageService {
                                 .titleKey,
                         messageItemListXVM: {
                             messageItemXVMs: messages
-                                .map<MessageItemXVM>((message) => ({
+                                .map((message) => ({
                                     ...message,
-                                    avatarXVM: {
-                                        cssStyles:
-                                            userName &&
-                                            message.senderName.includes(
-                                                userName
-                                            )
-                                                ? 'bg-green-100 text-green-400'
-                                                : 'bg-blue-100 text-blue-400',
-                                        initial: message.senderName.charAt(0),
-                                    },
-                                    sender: `${this.translocoService.translate(mapRoleTranslocoTextKey(message.role))} - ${message.senderName}`,
+                                    avatarXVM: mapAvatarXVM(message.sender),
+                                    sender: `${this.translocoService.translate(mapRoleTranslocoTextKey(message.sender.role))} - ${message.sender.name}`,
                                     sendingDateValueKey:
                                         config.sectionCardConfigs
                                             .messagesSectionCardConfig
