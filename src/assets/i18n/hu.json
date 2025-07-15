@@ -182,5 +182,12 @@
     "OrderDetailsPage.orderActions.close.dialog.title": "Megerősítés",
     "OrderDetailsPage.orderActions.close.dialog.confirmText": "Biztosan le szeretné zárni a rendelést?",
     "OrderDetailsPage.orderActions.close.dialog.cancelButtonText": "Mégse",
-    "OrderDetailsPage.orderActions.close.dialog.confirmButtonText": "Megerősít"
+    "OrderDetailsPage.orderActions.close.dialog.confirmButtonText": "Megerősít",
+    "OrderDetailsPage.role.customer": "Ügyfél",
+    "OrderDetailsPage.role.office": "Iroda",
+    "OrderDetailsPage.role.pilot": "Pilóta",
+    "OrderDetailsPage.messages.title": "Rendelés üzenetei",
+    "OrderDetailsPage.messages.dateValue": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.messages.buttonText": "Küldés",
+    "OrderDetailsPage.messages.senderValue": "{role} - {name}"
 }

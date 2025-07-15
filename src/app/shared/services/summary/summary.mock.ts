@@ -1,8 +1,9 @@
+import { UserRole } from '@stores/auth/auth.model';
 import { Summary } from './summary.service.model';
 
 export const summaries: Summary[] = [
     {
-        allowedRole: 'customer',
+        allowedRole: UserRole.CUSTOMER,
         titleKey: 'DashboardPage.summary.activeOrder.title',
         emoji: '📋',
         quantity: 2,
@@ -10,7 +11,7 @@ export const summaries: Summary[] = [
         colorType: 'blue',
     },
     {
-        allowedRole: 'customer',
+        allowedRole: UserRole.CUSTOMER,
         titleKey: 'DashboardPage.summary.totalArea.title',
         emoji: '🌾',
         quantity: 145,
@@ -18,7 +19,7 @@ export const summaries: Summary[] = [
         colorType: 'green',
     },
     {
-        allowedRole: 'customer',
+        allowedRole: UserRole.CUSTOMER,
         titleKey: 'DashboardPage.summary.spending.title',
         emoji: '💰',
         quantity: 126000,
@@ -26,7 +27,7 @@ export const summaries: Summary[] = [
         colorType: 'purple',
     },
     {
-        allowedRole: 'customer',
+        allowedRole: UserRole.CUSTOMER,
         titleKey: 'DashboardPage.summary.pending.title',
         emoji: '⏳',
         quantity: 3,
@@ -34,7 +35,7 @@ export const summaries: Summary[] = [
         colorType: 'yellow',
     },
     {
-        allowedRole: 'pilot',
+        allowedRole: UserRole.PILOT,
         titleKey: 'DashboardPage.summary.assignedMissions',
         emoji: '🎯',
         quantity: 2,
@@ -42,7 +43,7 @@ export const summaries: Summary[] = [
         colorType: 'blue',
     },
     {
-        allowedRole: 'pilot',
+        allowedRole: UserRole.PILOT,
         titleKey: 'DashboardPage.summary.completed',
         emoji: '✅',
         quantity: 8,
@@ -50,7 +51,7 @@ export const summaries: Summary[] = [
         colorType: 'green',
     },
     {
-        allowedRole: 'pilot',
+        allowedRole: UserRole.PILOT,
         titleKey: 'DashboardPage.summary.flight.title',
         emoji: '🚁',
         quantity: 47.5,
@@ -58,7 +59,7 @@ export const summaries: Summary[] = [
         colorType: 'purple',
     },
     {
-        allowedRole: 'pilot',
+        allowedRole: UserRole.PILOT,
         titleKey: 'DashboardPage.summary.performance.title',
         emoji: '⭐',
         quantity: 4.8,
@@ -66,7 +67,7 @@ export const summaries: Summary[] = [
         colorType: 'yellow',
     },
     {
-        allowedRole: 'office',
+        allowedRole: UserRole.OFFICE,
         titleKey: 'DashboardPage.summary.activeMission.title',
         emoji: '🎮',
         quantity: 12,
@@ -74,7 +75,7 @@ export const summaries: Summary[] = [
         colorType: 'blue',
     },
     {
-        allowedRole: 'office',
+        allowedRole: UserRole.OFFICE,
         titleKey: 'DashboardPage.summary.availablePilots.title',
         emoji: '👨‍✈️',
         quantity: 5,
@@ -82,7 +83,7 @@ export const summaries: Summary[] = [
         colorType: 'green',
     },
     {
-        allowedRole: 'office',
+        allowedRole: UserRole.OFFICE,
         titleKey: 'DashboardPage.summary.unassigned.title',
         emoji: '⚠️',
         quantity: 3,
@@ -90,7 +91,7 @@ export const summaries: Summary[] = [
         colorType: 'red',
     },
     {
-        allowedRole: 'office',
+        allowedRole: UserRole.OFFICE,
         titleKey: 'DashboardPage.summary.revenue.title',
         emoji: '💼',
         quantity: 12450,

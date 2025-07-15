@@ -14,6 +14,12 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         },
     },
     sectionCardConfigs: {
+        messagesSectionCardConfig: {
+            buttonTextKey: 'OrderDetailsPage.messages.buttonText',
+            titleKey: 'OrderDetailsPage.messages.title',
+            dateValueKey: 'OrderDetailsPage.messages.dateValue',
+            senderValueKey: 'OrderDetailsPage.messages.senderValue',
+        },
         orderActionsSectionCardConfig: {
             type: 'orderActions',
             titleKey: 'OrderDetailsPage.orderActions.title',
@@ -30,7 +36,8 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
                     type: 'confirmationDialogVM',
                     titleKey:
                         'OrderDetailsPage.orderActions.close.dialog.title',
-                    confirmTextKey: 'Are you sure you want to close the order?',
+                    confirmTextKey:
+                        'OrderDetailsPage.orderActions.close.dialog.confirmText',
                     cancelButtonTextKey:
                         'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
                     confirmButtonTextKey:
@@ -99,6 +106,12 @@ export const enMock = {
         totalSupplyValue: 'supplyV',
         treatmentLabel: 'treatment',
     },
+    messages: {
+        title: 'title',
+        dateValue: 'date',
+        buttonText: 'button',
+        senderValue: 'send',
+    },
 };
 
 export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
@@ -115,6 +128,12 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
         },
     },
     sectionCardConfigs: {
+        messagesSectionCardConfig: {
+            buttonTextKey: enMock.messages.buttonText,
+            titleKey: enMock.messages.title,
+            dateValueKey: enMock.messages.dateValue,
+            senderValueKey: enMock.messages.senderValue,
+        },
         orderActionsSectionCardConfig: {
             type: 'orderActions',
             titleKey: enMock.orderActions.title,

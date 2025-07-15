@@ -1,13 +1,12 @@
 import { AuthError, User as FirebaseUser } from '@angular/fire/auth';
-import { AuthenticationError, User } from './auth.model';
+import { AuthenticationError, User, UserRole } from './auth.model';
 
 export const mapFirebaseUser = (user: FirebaseUser): User => ({
     uid: user.uid,
     photoURL: user.photoURL,
     email: user.email,
-    displayName: user.displayName,
-    role: 'pilot',
-    name: 'Alex Rodriguez',
+    displayName: user.displayName ?? 'Sarah Johnson',
+    role: UserRole.CUSTOMER, // Hard coded yet,
 });
 
 export const mapFirebaseError = (error: AuthError): AuthenticationError => {

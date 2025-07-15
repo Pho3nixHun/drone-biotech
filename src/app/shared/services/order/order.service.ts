@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
 import { Order } from './order.service.model';
-import { orders } from './order-mock';
-
+import { orders } from './order.service.mock';
 
 @Injectable({
     providedIn: 'root',

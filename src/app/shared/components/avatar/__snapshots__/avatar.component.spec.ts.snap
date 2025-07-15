@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarComponent should render the template when the vm is provided and project the content 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-avatar>
+    <div
+      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+    >
+      C
+    </div>
+  </app-avatar>
+</div>
+`;

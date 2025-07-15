@@ -1,14 +1,27 @@
-import { inject, Injectable } from '@angular/core';
-import { combineLatest, concat, map, Observable, of, Subject } from 'rxjs';
 import { OrderService } from '@services/order/order.service';
 import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
+import { inject, Injectable } from '@angular/core';
 import {
-    mapHeaderXVM,
-    mapOrderActionsSectionCardXVM,
-    mapOrderDetailsSectionCardXVM,
+    combineLatest,
+    concat,
+    map,
+    merge,
+    Observable,
+    of,
+    scan,
+    Subject,
+} from 'rxjs';
+import {
+    Message,
     OrderDetailsPageVM,
     OrderStatus,
 } from './order-details-page.model';
+import {
+    mapHeaderXVM,
+    mapOrderDetailsSectionCardXVM,
+    mapOrderActionsSectionCardXVM,
+    mapMessagesSectionCardXVM,
+} from './order-details-page.mapper';
 
 @Injectable({
     providedIn: 'root',
@@ -16,8 +29,10 @@ import {
 export class OrderDetailsPageService {
     private readonly config = inject(ORDER_DETAILS_PAGE_CONFIG);
     private readonly orderService = inject(OrderService);
+
     private readonly order$ = this.orderService.getOrder();
     private readonly statusSubject = new Subject<OrderStatus>();
+    private readonly messagesSubject = new Subject<Message>();
 
     private readonly status$ = concat(
         this.order$.pipe(map((order) => order.status)),
@@ -32,6 +47,18 @@ export class OrderDetailsPageService {
         map((status) => status === 'completed')
     );
 
+    private readonly messages$: Observable<Message[]> = merge(
+        this.order$.pipe(
+            map((order) =>
+                order.messages.map((message) => ({
+                    ...message,
+                    senderName: message.sender,
+                }))
+            )
+        ),
+        this.messagesSubject.pipe(map((message) => [message]))
+    ).pipe(scan((acc, curr) => [...acc, ...curr]));
+
     public getVM() {
         return this.vm$;
     }
@@ -40,11 +67,16 @@ export class OrderDetailsPageService {
         this.statusSubject.next('completed');
     }
 
+    public sendMessage(message: Message) {
+        this.messagesSubject.next(message);
+    }
+
     private readonly vm$: Observable<OrderDetailsPageVM> = combineLatest([
         this.order$,
         this.status$,
         this.addMissionButtonVisibility$,
         this.closeOrderButtonIsDisabled$,
+        this.messages$,
         of(this.config),
     ]).pipe(
         map(
@@ -53,6 +85,7 @@ export class OrderDetailsPageService {
                 status,
                 addMissionButtonVisibility,
                 closeOrderButtonIsDisabled,
+                messages,
                 config,
             ]) => ({
                 ...config,
@@ -68,6 +101,7 @@ export class OrderDetailsPageService {
                         config,
                         closeOrderButtonIsDisabled
                     ),
+                    mapMessagesSectionCardXVM(config, messages),
                 ],
             })
         )

@@ -12,7 +12,7 @@ exports[`SectionCardComponent should render the template when the vm is provided
       class="shadow p-4 flex flex-col space-y-4"
     >
       <h3
-        class="text-xl font-bold"
+        class="text-xl font-medium"
       >
         tit
       </h3>

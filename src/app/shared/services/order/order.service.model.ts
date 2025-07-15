@@ -13,8 +13,16 @@ export interface Order {
     moneyValue: number;
 }
 
-interface Message {
-    sender: string;
+type Role = 'customer' | 'office' | 'pilot';
+
+export interface User {
+    name: string;
+    role: Role;
+    photoUrl: string | null;
+}
+
+export interface Message {
+    sender: User;
     sendingDate: Date;
     message: string;
 }
@@ -33,4 +41,3 @@ interface Client {
     phone: string;
     address: string;
 }
-
