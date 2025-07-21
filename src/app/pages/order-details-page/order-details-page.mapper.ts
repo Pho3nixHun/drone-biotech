@@ -7,9 +7,12 @@ import {
     OrderDetailsPageConfig,
     OrderDetailsSectionCardXVM,
     OrderStatus,
+    OverviewSectionCardXVM,
     Role,
+    TargetArea,
 } from './order-details-page.model';
 import { Message, Order } from '@services/order/order.service.model';
+import { isActiveMission } from '@services/mission/mission.service.model';
 
 export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
@@ -214,7 +217,7 @@ export const mapMessagesSectionCardXVM = (
     config: OrderDetailsPageConfig,
     messages: Message[]
 ): MessagesSectionCardXVM => ({
-    type: 'messages',
+    type: 'orderMessages',
     buttonTextKey:
         config.sectionCardConfigs.messagesSectionCardConfig.buttonTextKey,
     titleKey: config.sectionCardConfigs.messagesSectionCardConfig.titleKey,
@@ -240,4 +243,39 @@ const mapMessageToMessageItemXVM = (
         config.sectionCardConfigs.messagesSectionCardConfig.senderValueKey,
     sendingDateValueKey:
         config.sectionCardConfigs.messagesSectionCardConfig.dateValueKey,
+});
+
+export const mapMissionsToTargetArea = (order: Order): TargetArea[] =>
+    order.missions.map((missions) => ({
+        coordinates: missions.coordinates,
+        type: isActiveMission(missions) ? 'active' : 'completed',
+    }));
+
+export const mapOrderOverviewSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order
+): OverviewSectionCardXVM => ({
+    type: 'overview',
+    titleKey: config.sectionCardConfigs.orderOverviewSectionCardConfig.titleKey,
+    mapFormControlXVM: {
+        targetAreas: mapMissionsToTargetArea(order),
+        totalMissionsLabelKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .totalMissionsLabelKey,
+        totalMissionsValueKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .totalMissionsValueKey,
+        completedMissionsLabelKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .completedMissionsLabelKey,
+        completedMissionsValueKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .completedMissionsValueKey,
+        remainingMissionsLabelKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .remainingMissionsLabelKey,
+        remainingMissionsValueKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .remainingMissionsValueKey,
+    },
 });

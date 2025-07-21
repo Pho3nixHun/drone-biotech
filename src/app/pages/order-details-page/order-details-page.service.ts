@@ -18,9 +18,10 @@ import {
 } from './order-details-page.model';
 import {
     mapHeaderXVM,
-    mapOrderDetailsSectionCardXVM,
-    mapOrderActionsSectionCardXVM,
     mapMessagesSectionCardXVM,
+    mapOrderActionsSectionCardXVM,
+    mapOrderDetailsSectionCardXVM,
+    mapOrderOverviewSectionCardXVM,
 } from './order-details-page.mapper';
 
 @Injectable({
@@ -31,6 +32,7 @@ export class OrderDetailsPageService {
     private readonly orderService = inject(OrderService);
 
     private readonly order$ = this.orderService.getOrder();
+
     private readonly statusSubject = new Subject<OrderStatus>();
     private readonly messagesSubject = new Subject<Message>();
 
@@ -94,6 +96,10 @@ export class OrderDetailsPageService {
                     order,
                     status,
                     addMissionButtonVisibility
+                ),
+                overviewSectionCardXVM: mapOrderOverviewSectionCardXVM(
+                    config,
+                    order
                 ),
                 sectionCardXVMs: [
                     mapOrderDetailsSectionCardXVM(config, order),
