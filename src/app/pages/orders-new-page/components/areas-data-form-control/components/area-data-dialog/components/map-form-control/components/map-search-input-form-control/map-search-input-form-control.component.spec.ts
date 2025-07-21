@@ -4,7 +4,6 @@ import {
     TestBed,
     tick,
 } from '@angular/core/testing';
-import { provideMockMapOptions } from '../../map-form-control.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { Component, DebugElement, inject, input, signal } from '@angular/core';
 import { MapSearchInputFormControlVM } from './map-search-input-form-control.model';
@@ -15,6 +14,7 @@ import { Place } from '@services/auto-complete/auto-complete.model';
 import { By } from '@angular/platform-browser';
 import { provideAutoCompleteServiceMock } from '@services/auto-complete/auto-complete.service.mock';
 import { Coordinates } from '@stores/location/location.model';
+import { provideMockMapOptions } from 'src/app/shared/providers/google-maps-provider';
 
 const en = {
     placeholder: 'place',
