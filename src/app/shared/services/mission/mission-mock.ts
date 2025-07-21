@@ -28,6 +28,12 @@ export const orders: Order[] = [
                 areaInHa: 45.8,
                 scheduledDate: new Date('2025-04-05'),
                 status: 'scheduled',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12346',
@@ -36,6 +42,12 @@ export const orders: Order[] = [
                 areaInHa: 78.3,
                 scheduledDate: new Date('2025-04-07'),
                 status: 'preparing',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12347',
@@ -44,6 +56,12 @@ export const orders: Order[] = [
                 areaInHa: 102.4,
                 scheduledDate: new Date('2025-04-10'),
                 status: 'scheduled',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12348',
@@ -52,6 +70,12 @@ export const orders: Order[] = [
                 areaInHa: 56.2,
                 completionDate: new Date('2025-04-02'),
                 performance: 'good',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12349',
@@ -60,6 +84,12 @@ export const orders: Order[] = [
                 areaInHa: 64.8,
                 completionDate: new Date('2025-03-30'),
                 performance: 'excellent',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12350',
@@ -68,6 +98,12 @@ export const orders: Order[] = [
                 areaInHa: 25.0,
                 scheduledDate: new Date('2025-04-12'),
                 status: 'pending',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -150,6 +186,12 @@ export const orders: Order[] = [
                 areaInHa: 60.3,
                 completionDate: new Date('2025-02-20'),
                 performance: 'excellent',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12221',
@@ -158,6 +200,12 @@ export const orders: Order[] = [
                 areaInHa: 65.5,
                 completionDate: new Date('2025-02-22'),
                 performance: 'good',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -210,6 +258,12 @@ export const orders: Order[] = [
                 areaInHa: 48.5,
                 scheduledDate: new Date('2025-04-15'),
                 status: 'pending',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -262,6 +316,12 @@ export const orders: Order[] = [
                 areaInHa: 112.0,
                 scheduledDate: new Date('2025-04-15'),
                 status: 'preparing',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -317,6 +377,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 45.8,
                 scheduledDate: new Date('2025-04-05'),
                 status: 'scheduled',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12346',
@@ -325,6 +391,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 78.3,
                 scheduledDate: new Date('2025-04-07'),
                 status: 'preparing',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12347',
@@ -333,6 +405,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 102.4,
                 scheduledDate: new Date('2025-04-10'),
                 status: 'scheduled',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12348',
@@ -341,6 +419,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 56.2,
                 completionDate: new Date('2025-04-02'),
                 performance: 'good',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12349',
@@ -349,6 +433,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 64.8,
                 completionDate: new Date('2025-03-30'),
                 performance: 'excellent',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12350',
@@ -357,6 +447,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 25.0,
                 scheduledDate: new Date('2025-04-12'),
                 status: 'pending',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -439,6 +535,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 60.3,
                 completionDate: new Date('2025-02-20'),
                 performance: 'excellent',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12221',
@@ -447,6 +549,12 @@ export const mockOrdersTwo: Order[] = [
                 areaInHa: 65.5,
                 completionDate: new Date('2025-02-22'),
                 performance: 'good',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
