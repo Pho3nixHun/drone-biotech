@@ -1,14 +1,21 @@
+import { AvatarXVM } from '@components/avatar/avatar.model';
+import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { StatusVM } from '@components/status/status.model';
-import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
 import { WithTextNode } from '@interfaces/with-text-node.interface';
-import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { WithVisibility } from '@interfaces/with-visibility.interface';
 import { WithDisabled } from '@interfaces/with-disabled.interface';
-import { WithLink } from '@interfaces/with-link.interface';
-import { AvatarXVM } from '@components/avatar/avatar.model';
 import { Value } from '@interfaces/with-value';
+import { WithLink } from '@interfaces/with-link.interface';
+import { Coordinates } from '@stores/location/location.model';
+import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
+import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
+
+export interface TargetArea {
+    type: 'completed' | 'active';
+    coordinates: Coordinates[];
+}
 
 export type OrderStatus = OrderStatusFromService;
 
@@ -19,11 +26,13 @@ export interface User {
     name: string;
     photoUrl: string | null;
 }
+
 export interface Message {
     sender: User;
     sendingDate: Date;
     message: string;
 }
+
 export interface MessageItemXVM
     extends Pick<Message, 'message' | 'sendingDate'> {
     senderName: string;
@@ -38,7 +47,7 @@ interface MessageItemListXVM {
 }
 
 export interface MessagesSectionCardXVM extends SectionCardVM {
-    type: 'messages';
+    type: 'orderMessages';
     messageItemListXVM: MessageItemListXVM;
     buttonTextKey: string;
 }
@@ -100,7 +109,17 @@ type SectionCardXVM =
 
 export interface OrderDetailsPageVM {
     headerXVM: HeaderXVM;
+    overviewSectionCardXVM: OverviewSectionCardXVM;
     sectionCardXVMs: SectionCardXVM[];
+}
+
+interface MapFormControlXVM extends MapFormControlVM {
+    targetAreas: TargetArea[];
+}
+export interface OverviewSectionCardXVM extends SectionCardVM {
+    type: 'overview';
+    titleKey: string;
+    mapFormControlXVM: MapFormControlXVM;
 }
 
 export interface OrderDetailsPageConfig {
@@ -114,6 +133,15 @@ export interface OrderDetailsPageConfig {
         addMissionButtonXVM: AddMissionButtonXVM;
     };
     sectionCardConfigs: {
+        orderOverviewSectionCardConfig: {
+            titleKey: string;
+            totalMissionsLabelKey: string;
+            totalMissionsValueKey: string;
+            completedMissionsLabelKey: string;
+            completedMissionsValueKey: string;
+            remainingMissionsLabelKey: string;
+            remainingMissionsValueKey: string;
+        };
         orderDetailsSectionCardConfig: {
             type: 'orderDetails';
             titleKey: string;
