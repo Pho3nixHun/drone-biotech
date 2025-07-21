@@ -39,19 +39,17 @@ export const mapRoleTranslocoTextKey = (role: Role): string =>
 
 export const mapHeaderXVM = (
     config: OrderDetailsPageConfig,
-    order: Order,
-    status: OrderStatus,
-    addMissionButtonVisibility: boolean
+    order: Order
 ): HeaderXVM => ({
     ...config.headerConfig,
     addMissionButtonXVM: {
-        isVisible: addMissionButtonVisibility,
+        isVisible: order.status !== 'completed',
         textKey: config.headerConfig.addMissionButtonXVM.textKey,
     },
     id: order.id,
     statusXVM: {
-        styles: mapOrderStatusToStatusToCSSStyles(status),
-        statusTextKey: mapOrderStatusToTranslocoTextKey(status),
+        styles: mapOrderStatusToStatusToCSSStyles(order.status),
+        statusTextKey: mapOrderStatusToTranslocoTextKey(order.status),
     },
     summaryListXVM: {
         summaryXVMs: [
@@ -82,13 +80,13 @@ export const mapHeaderXVM = (
 
 export const mapOrderActionsSectionCardXVM = (
     config: OrderDetailsPageConfig,
-    closeOrderButtonIsDisabled: boolean
+    order: Order
 ): OrderActionsSectionCardXVM => ({
     ...config.sectionCardConfigs.orderActionsSectionCardConfig,
     closeOrderButtonXVM: {
         ...config.sectionCardConfigs.orderActionsSectionCardConfig
             .closeOrderButtonXVM,
-        isDisabled: closeOrderButtonIsDisabled,
+        isDisabled: order.status === 'completed',
     },
 });
 
