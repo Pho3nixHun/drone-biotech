@@ -189,5 +189,12 @@
     "OrderDetailsPage.messages.title": "Order messages",
     "OrderDetailsPage.messages.dateValue": "{ date, date, long } { date, time, short }",
     "OrderDetailsPage.messages.buttonText": "Send",
-    "OrderDetailsPage.messages.senderValue": "{role} - {name}"
+    "OrderDetailsPage.messages.senderValue": "{role} - {name}",
+    "OrderDetailsPage.overview.totalMissionsValue": "{count, plural, one {1 mission} other {# missions}}",
+    "OrderDetailsPage.overview.completedMissionsValue": "{count, plural, one {1 mission} other {# missions}}",
+    "OrderDetailsPage.overview.remainingMissionsValue": "{count, plural, one {1 mission} other {# missions}}",
+    "OrderDetailsPage.overview.title": "Order overview",
+    "OrderDetailsPage.overview.totalMissionsLabel": "Total missions",
+    "OrderDetailsPage.overview.completedMissionsLabel": "Completed missions",
+    "OrderDetailsPage.overview.remainingMissionsLabel": "Remaining missions"
 }
