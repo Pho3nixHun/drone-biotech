@@ -189,5 +189,12 @@
     "OrderDetailsPage.messages.title": "Rendelés üzenetei",
     "OrderDetailsPage.messages.dateValue": "{ date, date, long } { date, time, short }",
     "OrderDetailsPage.messages.buttonText": "Küldés",
-    "OrderDetailsPage.messages.senderValue": "{role} - {name}"
+    "OrderDetailsPage.messages.senderValue": "{role} - {name}",
+    "OrderDetailsPage.overview.totalMissionsValue": "{count} küldetés",
+    "OrderDetailsPage.overview.completedMissionsValue": "{count} küldetés",
+    "OrderDetailsPage.overview.remainingMissionsValue": "{count} küldetés",
+    "OrderDetailsPage.overview.title": "Rendelés áttekintése",
+    "OrderDetailsPage.overview.totalMissionsLabel": "Küldetések összesen",
+    "OrderDetailsPage.overview.completedMissionsLabel": "Teljesített küldetések",
+    "OrderDetailsPage.overview.remainingMissionsLabel": "Hátralévő küldetések"
 }
