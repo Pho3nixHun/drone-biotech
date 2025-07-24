@@ -1,11 +1,11 @@
-import { WithTitle } from '@interfaces/with-title.interface';
 import { AreasDataFormControlVM } from './components/areas-data-form-control/areas-data-form-control.model';
+import { FrameVM } from '@components/frame/frame.model';
 
 export interface OrdersNewPageVM {
     frameXVM: FrameXVM;
 }
 
-export interface OrdersNewFrame extends WithTitle {
+export interface OrdersNewFrame extends FrameVM {
     areasDataFormControlVM: AreasDataFormControlVM;
     submitButtonTextKey: string;
     internalOrderNumberLabelKey: string;
@@ -13,7 +13,6 @@ export interface OrdersNewFrame extends WithTitle {
     phoneNumberLabelKey: string;
     emailLabelKey: string;
     endCustomerLabelKey: string;
-    areasDataLabelKey: string;
 }
 
 type FrameXVM = OrdersNewFrame;

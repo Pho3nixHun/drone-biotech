@@ -1,9 +1,9 @@
-import { computed, inject, Injectable, Signal } from '@angular/core';
-import { OrdersNewPageVM } from './orders-new-page-vm.model';
-import { ordersNewPageVMDefault } from './orders-new-page.mock';
 import { Store } from '@ngrx/store';
+import { inject, Injectable } from '@angular/core';
+import { combineLatest, map, Observable, of } from 'rxjs';
+import { OrdersNewPageVM } from './orders-new-page.model';
+import { ordersNewPageVMDefault } from './orders-new-page.mock';
 import { selectActualPosition } from 'src/app/stores/location/location.selectors';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { LocationActions } from 'src/app/stores/location/location.actions';
 
 @Injectable({
@@ -16,42 +16,40 @@ export class OrdersNewPageService {
     );
     private readonly actualPosition$ = this.store.select(selectActualPosition);
 
-    private readonly actualPositionSignal = toSignal(this.actualPosition$);
-
-    private readonly vm = computed<OrdersNewPageVM>(() => {
-        const actualPosition = this.actualPositionSignal() ?? null;
-        return {
-            ...ordersNewPageVMDefault,
+    private readonly vm: Observable<OrdersNewPageVM> = combineLatest([
+        of(ordersNewPageVMDefault),
+        this.actualPosition$,
+    ]).pipe(
+        map(([vm, position]) => ({
+            ...vm,
             frameXVM: {
-                ...ordersNewPageVMDefault.frameXVM,
+                ...vm.frameXVM,
                 areasDataFormControlVM: {
-                    ...ordersNewPageVMDefault.frameXVM.areasDataFormControlVM,
+                    ...vm.frameXVM.areasDataFormControlVM,
                     addAreaDataDialogVM: {
-                        ...ordersNewPageVMDefault.frameXVM
-                            .areasDataFormControlVM.addAreaDataDialogVM,
+                        ...vm.frameXVM.areasDataFormControlVM
+                            .addAreaDataDialogVM,
                         mapFormControlVM: {
-                            ...ordersNewPageVMDefault.frameXVM
-                                .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapFormControlVM,
-                            defaultCenter: actualPosition,
+                            ...vm.frameXVM.areasDataFormControlVM
+                                .addAreaDataDialogVM.mapFormControlVM,
+                            defaultCenter: position,
                         },
                     },
                     editAreaDataDialogVM: {
-                        ...ordersNewPageVMDefault.frameXVM
-                            .areasDataFormControlVM.addAreaDataDialogVM,
+                        ...vm.frameXVM.areasDataFormControlVM
+                            .addAreaDataDialogVM,
                         mapFormControlVM: {
-                            ...ordersNewPageVMDefault.frameXVM
-                                .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapFormControlVM,
-                            defaultCenter: actualPosition,
+                            ...vm.frameXVM.areasDataFormControlVM
+                                .addAreaDataDialogVM.mapFormControlVM,
+                            defaultCenter: position,
                         },
                     },
                 },
             },
-        };
-    });
+        }))
+    );
 
-    public getVM(): Signal<OrdersNewPageVM> {
+    public getVM(): Observable<OrdersNewPageVM> {
         return this.vm;
     }
 }

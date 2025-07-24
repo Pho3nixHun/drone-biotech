@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardItemContentComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-card-item-content>
+    <div
+      class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+    >
+      <app-key-value
+        ng-reflect-label="label"
+      >
+        <div
+          class="duration-500 h-full flex flex-col justify-center"
+        >
+          <p
+            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+          >
+             label 
+          </p>
+          <!--container-->
+          Should be projected
+        </div>
+        <!--container-->
+      </app-key-value>
+    </div>
+  </app-card-item-content>
+</div>
+`;

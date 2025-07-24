@@ -23,9 +23,9 @@ import {
 } from './map-point-select-form-control.service.mock';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import { provideMockMapOptions } from '../../map-form-control.model';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Coordinates } from '@stores/location/location.model';
+import { provideMockMapOptions } from 'src/app/shared/providers/google-maps-provider';
 
 const enMock = { addButtonText: 'addButton', deleteButtonText: 'deleteButton' };
 
