@@ -1,160 +1,228 @@
-@let vModel = vm();
+@let vM = vm();
 
-<div *transloco="let t">
-    <div class="flex flex-row justify-between pr-3 xl:pr-2">
-        <ng-content select="label" />
+<section *transloco="let t" class="flex flex-col space-y-4">
+    <app-section-header>
+        <h3 class="form-label">{{ t(vM.sectionHeaderXVM.titleKey) }}</h3>
         <button
             mat-icon-button
-            class="bg-emerald-400 hover:bg-emerald-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
+            class="btn btn-circle btn-success"
             (click)="addAreaData()"
         >
-            <mat-icon>add</mat-icon>
+            <mat-icon>{{ vM.sectionHeaderXVM.addButtonMatIcon }}</mat-icon>
         </button>
-    </div>
-    @if (xAreaData$() | async; as xAreaData) {
-        <app-card-group>
-            <div class="flex items-center">
-                {{ t(vModel.missionHeaderKey) }}
-            </div>
-            <div class="flex items-center">
-                {{ t(vModel.targetAreaSizeHeaderKey) }}
-            </div>
-            <div class="flex items-center">
-                {{ t(vModel.entryPointHeaderKey) }}
-            </div>
-            <div class="flex items-center">{{ t(vModel.doseHeaderKey) }}</div>
-            <div class="flex items-center">
-                {{ t(vModel.applicationDateHeaderKey) }}
-            </div>
-            <div class="flex items-center">
-                {{ t(vModel.trichogrammaRequirementHeaderKey) }}
-            </div>
-            <div class="flex items-center">
-                {{ t(vModel.distanceFromHeadOfficeHeaderKey) }}
-            </div>
-            <div class="flex items-center">
-                {{ t(vModel.commentHeaderKey) }}
-            </div>
-            <div class="flex items-center">
-                {{ t(vModel.actionsHeaderKey) }}
-            </div>
+    </app-section-header>
 
-            @for (area of xAreaData; track $index) {
-                <app-card-item
-                    class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
-                >
-                    <app-key-value [label]="vModel.missionHeaderKey">
-                        {{ area.missionName }}
-                    </app-key-value>
-                    <app-key-value [label]="vModel.targetAreaSizeHeaderKey">
-                        {{
-                            t(vModel.targetAreaSizeValueKey, {
-                                count: area.targetAreaSize,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vModel.entryPointHeaderKey">
-                        {{ area.entryPointAddress }}
-                        {{
-                            t(vModel.entryPointValueKey, {
-                                count: area.entryPointAddress,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vModel.doseHeaderKey">
-                        {{
-                            t(vModel.doseValueKey, {
-                                count: area.dosePerHq,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vModel.applicationDateHeaderKey">
-                        {{
-                            t(vModel.applicationDateValueKey, {
-                                applicationDate: area.applicationDate,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value
-                        [label]="vModel.trichogrammaRequirementHeaderKey"
-                    >
-                        {{
-                            t(vModel.trichogrammaRequirementValueKey, {
-                                count: area.trichogrammaRequirement,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value
-                        [label]="vModel.distanceFromHeadOfficeHeaderKey"
-                    >
-                        {{
-                            t(vModel.distanceFromHeadOfficeValueKey, {
-                                count: area.distanceFromHeadOffice,
-                            })
-                        }}
-                    </app-key-value>
-                    <app-key-value [label]="vModel.commentHeaderKey">
-                        {{ area.comment }}
-                    </app-key-value>
-                    <button
-                        mat-icon-button
-                        class="bg-blue-400 hover:bg-blue-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
-                        (click)="editAreaData(area.id)"
-                    >
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                    <button
-                        mat-icon-button
-                        class="bg-red-400 hover:bg-red-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
-                        (click)="deleteAreaData(area.id)"
-                    >
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </app-card-item>
+    @if (areaXData(); as areaXData) {
+        <app-card-group
+            class="grid grid-cols-[1fr_1fr_1.5fr_1fr_1fr_1fr_1fr_1fr_1fr]"
+        >
+            <app-card-group-header class="grid grid-cols-subgrid col-span-full">
+                @for (
+                    header of vM.cardGroupXVM.cardGroupHeaderXVM;
+                    track $index
+                ) {
+                    <div>
+                        {{ t(header) }}
+                    </div>
+                }
+            </app-card-group-header>
+
+            <app-card-item-list class="grid grid-cols-subgrid col-span-full">
+                @for (area of areaXData; track $index) {
+                    <app-card-item class="grid grid-cols-subgrid col-span-full">
+                        @let cardItemXVM =
+                            vM.cardGroupXVM.cardItemListXVM.cardItemXVM;
+                        <app-card-item-content
+                            class="xl:grid xl:grid-cols-subgrid xl:col-span-8"
+                        >
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM
+                                        .missionLabelKey
+                                "
+                            >
+                                {{ area.missionName }}
+                            </app-key-value>
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM
+                                        .targetAreaSizeLabelKey
+                                "
+                            >
+                                {{
+                                    t(
+                                        cardItemXVM.cardItemContentXVM
+                                            .targetAreaSizeValueKey,
+                                        {
+                                            count: area.targetAreaSize,
+                                        }
+                                    )
+                                }}
+                            </app-key-value>
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM
+                                        .entryPointLabelKey
+                                "
+                            >
+                                {{ area.entryPointAddress }}
+                            </app-key-value>
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM.doseLabelKey
+                                "
+                            >
+                                {{
+                                    t(
+                                        cardItemXVM.cardItemContentXVM
+                                            .doseValueKey,
+                                        {
+                                            count: area.dosePerHq,
+                                        }
+                                    )
+                                }}
+                            </app-key-value>
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM.dateLabelKey
+                                "
+                            >
+                                {{
+                                    t(
+                                        cardItemXVM.cardItemContentXVM
+                                            .applicationDateValueKey,
+                                        {
+                                            applicationDate:
+                                                area.applicationDate,
+                                        }
+                                    )
+                                }}
+                            </app-key-value>
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM
+                                        .trichogrammaRequirementLabelKey
+                                "
+                            >
+                                {{
+                                    t(
+                                        cardItemXVM.cardItemContentXVM
+                                            .trichogrammaRequirementValueKey,
+                                        {
+                                            count: area.trichogrammaRequirement,
+                                        }
+                                    )
+                                }}
+                            </app-key-value>
+                            <app-key-value
+                                [label]="
+                                    cardItemXVM.cardItemContentXVM
+                                        .distanceLabelKey
+                                "
+                            >
+                                {{
+                                    t(
+                                        cardItemXVM.cardItemContentXVM
+                                            .distanceFromHeadOfficeValueKey,
+                                        {
+                                            count: area.distanceFromHeadOffice,
+                                        }
+                                    )
+                                }}
+                            </app-key-value>
+                            @if (area.comment.length > 0) {
+                                <app-key-value
+                                    [label]="
+                                        cardItemXVM.cardItemContentXVM
+                                            .commentLabelKey
+                                    "
+                                >
+                                    {{ area.comment }}
+                                </app-key-value>
+                            }
+                        </app-card-item-content>
+                        <app-card-item-action-list
+                            class="grid grid-cols-1 col-span-1"
+                        >
+                            <button
+                                mat-icon-button
+                                class="btn btn-circle btn-primary"
+                                (click)="editAreaData(area.id)"
+                            >
+                                <mat-icon>{{
+                                    cardItemXVM.cardItemActionListXVM
+                                        .editButtonMatIcon
+                                }}</mat-icon>
+                            </button>
+                            <button
+                                mat-icon-button
+                                class="btn btn-circle btn-warning"
+                                (click)="deleteAreaData(area.id)"
+                            >
+                                <mat-icon>{{
+                                    cardItemXVM.cardItemActionListXVM
+                                        .deleteButtonMatIcon
+                                }}</mat-icon>
+                            </button>
+                        </app-card-item-action-list>
+                    </app-card-item>
+                }
+            </app-card-item-list>
+
+            @if (totalAreaXData(); as data) {
+                <app-card-group-summary class="grid col-span-full">
+                    @let cardGroupSummaryXVM =
+                        vM.cardGroupXVM.cardGroupSummaryXVM;
+                    <app-card-group-summary-header class="grid grid-cols-3">
+                        @for (
+                            header of cardGroupSummaryXVM.cardGroupSummaryHeaderXVM;
+                            track $index
+                        ) {
+                            <div>
+                                {{ t(header) }}
+                            </div>
+                        }
+                    </app-card-group-summary-header>
+                    <app-card-group-summary-content class="grid grid-cols-3">
+                        <div>
+                            {{
+                                t(
+                                    cardGroupSummaryXVM
+                                        .cardGroupSummaryContentXVM
+                                        .totalTargetAreaSizeValueKey,
+                                    {
+                                        count: data.totalTargetAreaSize,
+                                    }
+                                )
+                            }}
+                        </div>
+                        <div>
+                            {{
+                                t(
+                                    cardGroupSummaryXVM
+                                        .cardGroupSummaryContentXVM
+                                        .totalTrichogrammaRequirementValueKey,
+                                    {
+                                        count: data.totalTrichogrammaRequirement,
+                                    }
+                                )
+                            }}
+                        </div>
+                        <div>
+                            {{
+                                t(
+                                    cardGroupSummaryXVM
+                                        .cardGroupSummaryContentXVM
+                                        .totalDistanceFromHeadOfficeValueKey,
+                                    {
+                                        count: data.totalDistanceFromHeadOffice,
+                                    }
+                                )
+                            }}
+                        </div>
+                    </app-card-group-summary-content>
+                </app-card-group-summary>
             }
         </app-card-group>
-        @let data = totalAreaXData$() | async;
-        @if (data) {
-            <div class="grid grid-cols-3 gap-1">
-                <div
-                    class="grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
-                >
-                    <div>
-                        {{ t(vModel.totalTargetAreaSizeHeaderKey) }}
-                    </div>
-                    <div>
-                        {{ t(vModel.totalTrichogrammaRequirementHeaderKey) }}
-                    </div>
-                    <div>
-                        {{ t(vModel.totalDistanceFromHeadOfficeHeaderKey) }}
-                    </div>
-                </div>
-                <div
-                    class="grid grid-cols-subgrid col-span-full p-3 bg-gray-100 border border-gray-300"
-                >
-                    <div>
-                        {{
-                            t(vModel.targetAreaSizeValueKey, {
-                                count: data.totalTargetAreaSize,
-                            })
-                        }}
-                    </div>
-                    <div>
-                        {{
-                            t(vModel.trichogrammaRequirementValueKey, {
-                                count: data.totalTrichogrammaRequirement,
-                            })
-                        }}
-                    </div>
-                    <div>
-                        {{
-                            t(vModel.distanceFromHeadOfficeValueKey, {
-                                count: data.totalDistanceFromHeadOffice,
-                            })
-                        }}
-                    </div>
-                </div>
-            </div>
-        }
     }
-</div>
+</section>
