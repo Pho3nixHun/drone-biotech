@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardGroupComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-card-group>
+    <div
+      class="grid grid-cols-subgrid col-span-full gap-3"
+    >
+      <app-card-group-header>
+        <header
+          class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+        />
+      </app-card-group-header>
+      <app-card-item-list>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-subgrid col-span-full"
+        />
+      </app-card-item-list>
+      <app-card-group-summary>
+        <div
+          class="flex flex-col space-y-3"
+        />
+      </app-card-group-summary>
+    </div>
+  </app-card-group>
+</div>
+`;

@@ -1,30 +1,27 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardGroupComponent } from './card-group.component';
+import { CardGroupSummaryComponent } from './card-group-summary.component';
 import { Component } from '@angular/core';
-import { CardItemListComponent } from './components/card-item-list/card-item-list.component';
-import { CardGroupSummaryComponent } from './components/card-group-summary/card-group-summary.component';
-import { CardGroupHeaderComponent } from './components/card-group-header/card-group-header.component';
+import { CardGroupSummaryHeaderComponent } from './components/card-group-summary-header/card-group-summary-header.component';
+import { CardGroupSummaryContentComponent } from './components/card-group-summary-content/card-group-summary-content.component';
 
 @Component({
     imports: [
-        CardGroupHeaderComponent,
-        CardGroupComponent,
-        CardItemListComponent,
         CardGroupSummaryComponent,
+        CardGroupSummaryHeaderComponent,
+        CardGroupSummaryContentComponent,
     ],
     template: `
-        <app-card-group>
-            <app-card-group-header></app-card-group-header>
-            <app-card-item-list></app-card-item-list>
-            <app-card-group-summary></app-card-group-summary>
+        <app-card-group-summary>
+            <app-card-group-summary-header></app-card-group-summary-header>
+            <app-card-group-summary-content></app-card-group-summary-content>
             <div>Should not be projected</div>
-        </app-card-group>
+        </app-card-group-summary>
     `,
 })
 class TestHostComponent {}
 
-describe('CardGroupComponent', () => {
+describe('CardGroupSummaryComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
 
