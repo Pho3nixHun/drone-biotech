@@ -29,7 +29,9 @@
 
             <app-card-item-list class="grid grid-cols-subgrid col-span-full">
                 @for (area of areaXData; track $index) {
-                    <app-card-item class="grid grid-cols-subgrid col-span-full">
+                    <app-card-item
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                    >
                         @let cardItemXVM =
                             vM.cardGroupXVM.cardItemListXVM.cardItemXVM;
                         <app-card-item-content
