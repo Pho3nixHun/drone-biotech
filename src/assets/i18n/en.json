@@ -207,5 +207,19 @@
     "OrderDetailsPage.overview.title": "Order overview",
     "OrderDetailsPage.overview.totalMissionsLabel": "Total missions",
     "OrderDetailsPage.overview.completedMissionsLabel": "Completed missions",
-    "OrderDetailsPage.overview.remainingMissionsLabel": "Remaining missions"
+    "OrderDetailsPage.overview.remainingMissionsLabel": "Remaining missions",
+    "OrderDetailsPage.missions.header.id": "Mission id",
+    "OrderDetailsPage.missions.header.fieldName": "Field name",
+    "OrderDetailsPage.missions.header.area": "Area (ha)",
+    "OrderDetailsPage.missions.header.date": "Scheduled date",
+    "OrderDetailsPage.missions.header.status": "Status",
+    "OrderDetailsPage.missions.header.actions": "Actions",
+    "OrderDetailsPage.missions.card.label.id": "Mission id",
+    "OrderDetailsPage.missions.card.label.fieldName": "Field name",
+    "OrderDetailsPage.missions.card.label.area": "Area (ha)",
+    "OrderDetailsPage.missions.card.label.date": "Scheduled date",
+    "OrderDetailsPage.missions.card.label.status": "Status",
+    "OrderDetailsPage.missions.card.label.actions": "Actions",
+    "OrderDetailsPage.missions.card.value.date": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.missions.title": "Missions"
 }
