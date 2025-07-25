@@ -207,5 +207,19 @@
     "OrderDetailsPage.overview.title": "Rendelés áttekintése",
     "OrderDetailsPage.overview.totalMissionsLabel": "Küldetések összesen",
     "OrderDetailsPage.overview.completedMissionsLabel": "Teljesített küldetések",
-    "OrderDetailsPage.overview.remainingMissionsLabel": "Hátralévő küldetések"
+    "OrderDetailsPage.overview.remainingMissionsLabel": "Hátralévő küldetések",
+    "OrderDetailsPage.missions.header.id": "Küldetés azonosító",
+    "OrderDetailsPage.missions.header.fieldName": "Földterület neve",
+    "OrderDetailsPage.missions.header.area": "Terület (ha)",
+    "OrderDetailsPage.missions.header.date": "Ütemezett dátum",
+    "OrderDetailsPage.missions.header.status": "Állapot",
+    "OrderDetailsPage.missions.header.actions": "Műveletek",
+    "OrderDetailsPage.missions.card.label.id": "Küldetés azonosító",
+    "OrderDetailsPage.missions.card.label.fieldName": "Földterület neve",
+    "OrderDetailsPage.missions.card.label.area": "Terület (ha)",
+    "OrderDetailsPage.missions.card.label.date": "Ütemezett dátum",
+    "OrderDetailsPage.missions.card.label.status": "Állapot",
+    "OrderDetailsPage.missions.card.label.actions": "Műveletek",
+    "OrderDetailsPage.missions.card.value.date": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.missions.title": "Küldetések"
 }
