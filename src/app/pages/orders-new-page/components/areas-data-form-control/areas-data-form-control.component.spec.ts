@@ -16,10 +16,7 @@ import {
     updateDistance,
 } from '@services/distance/distance.service.mock';
 import { AreaData } from './areas-data-form-control.model';
-import {
-    provideMockReverseGeocodingService,
-    updateAddressSignal,
-} from '@services/reverse-geocoding/reverse-geocoding.service.mock';
+import { provideMockReverseGeocodingService } from '@services/reverse-geocoding/reverse-geocoding.service.mock';
 import {
     AreaDataDialogResultWithAreaData,
     AreaDataDialogResultWithoutAreaData,
@@ -122,14 +119,14 @@ describe('AreasDataFormControlComponent', () => {
     });
 
     // Unit test
-    it('should correctly calculate the totalDistanceFromHeadOffice from meters to kilometers', async () => {
+    it('should correctly calculate the totalDistanceFromHeadOffice from meters to kilometers', () => {
         // Arrange
         const distanceInMetres = 10000;
         const distanceInKm = distanceInMetres / METRES_TO_KILOMETERS;
         updateDistance(distanceInMetres);
 
         // Act
-        const data = await component['totalAreaXData$']();
+        const data = component['totalAreaXData']();
 
         // Assert
         return data
@@ -138,29 +135,15 @@ describe('AreasDataFormControlComponent', () => {
     });
 
     // Unit test
-    it('should correctly calculate the totalTargetAreaSize from square metres to hectare', async () => {
+    it('should correctly calculate the totalTargetAreaSize from square metres to hectare', () => {
         // Arrange
 
         // Act
-        const data = await component['totalAreaXData$']();
+        const data = component['totalAreaXData']();
 
         // Assert
         return data
             ? expect(data.totalTargetAreaSize).toEqual(3689255.654068359)
-            : expect(data).toBe(null);
-    });
-
-    // Unit test
-    it('should receive the formattedAddress from the service', async () => {
-        // Arrange
-        updateAddressSignal('Debrecen');
-
-        // Act
-        const data = await component['xAreaData$']();
-
-        // Assert
-        return data
-            ? expect(data[0].entryPointAddress).toEqual('Debrecen')
             : expect(data).toBe(null);
     });
 

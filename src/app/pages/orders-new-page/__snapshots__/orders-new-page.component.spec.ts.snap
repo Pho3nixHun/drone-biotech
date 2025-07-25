@@ -1,17 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OrdersNewPageComponent should not render the template when the VM is not provided 1`] = `
-<div
-  id="root0"
-  ng-version="19.2.9"
->
-  <!--container-->
-</div>
-`;
-
 exports[`OrdersNewPageComponent should render the template when the VM is provided 1`] = `
 <div
-  id="root1"
+  id="root0"
   ng-version="19.2.9"
 >
   <app-page-layout>

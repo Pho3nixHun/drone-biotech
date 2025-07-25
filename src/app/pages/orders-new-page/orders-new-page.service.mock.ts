@@ -1,20 +1,20 @@
-import { Injectable, Signal, signal } from '@angular/core';
-import { OrdersNewPageVM } from './orders-new-page-vm.model';
+import { Injectable } from '@angular/core';
+import { OrdersNewPageVM } from './orders-new-page.model';
 import { OrdersNewPageService } from './orders-new-page.service';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root',
 })
 export class OrdersNewPageMockService {
-    public getVM(): Signal<OrdersNewPageVM | undefined> {
-        return vmSignal;
+    public getVM(): Observable<OrdersNewPageVM> {
+        return vm$;
     }
 }
 
-export const updateVMSignal = (vm: OrdersNewPageVM | undefined) =>
-    vmSignal.set(vm);
+const vm$ = new Subject<OrdersNewPageVM>();
 
-const vmSignal = signal<OrdersNewPageVM | undefined>(undefined);
+export const updateVMSignal = (vm: OrdersNewPageVM) => vm$.next(vm);
 
 export const provideOrdersNewPageMockService = () => ({
     provide: OrdersNewPageService,

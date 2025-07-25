@@ -1,6 +1,6 @@
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { NgClass, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { firstValueFrom } from 'rxjs';
@@ -22,6 +22,17 @@ import { MessageItemListComponent } from '@components/message-item-list/message-
 import { MessageItemComponent } from '@components/message-item/message-item.component';
 import { emptyStringValidator } from '@utils/empty-string.validator';
 import { OrderDetailsPageService } from './order-details-page.service';
+import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
+import { TargetArea } from './order-details-page.model';
+import { CardGroupComponent } from '@components/card-group/card-group.component';
+import { CardGroupHeaderComponent } from '@components/card-group/components/card-group-header/card-group-header.component';
+import { CardItemListComponent } from '@components/card-group/components/card-item-list/card-item-list.component';
+import { CardItemComponent } from '@components/card-group/components/card-item-list/components/card-item/card-item.component';
+import { CardItemContentComponent } from '@components/card-group/components/card-item-list/components/card-item/components/card-item-content/card-item-content.component';
+import { KeyValueComponent } from '@components/key-value/key-value.component';
+import { CardItemActionListComponent } from '@components/card-group/components/card-item-list/components/card-item/components/card-item-action-list/card-item-action-list.component';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 import {
     ConfirmationDialogReason,
     ConfirmationDialogVM,
@@ -48,6 +59,16 @@ import {
         AvatarComponent,
         NgOptimizedImage,
         NgClass,
+        MapFormControlComponent,
+        CardGroupComponent,
+        CardGroupHeaderComponent,
+        CardItemListComponent,
+        CardItemComponent,
+        CardItemContentComponent,
+        KeyValueComponent,
+        CardItemActionListComponent,
+        RouterModule,
+        MatIconModule,
     ],
     templateUrl: './order-details-page.component.html',
 })
@@ -63,6 +84,18 @@ export class OrderDetailsPageComponent {
         Validators.required,
         emptyStringValidator(),
     ]);
+
+    protected readonly targetAreasControl = this.fb.control<
+        TargetArea[] | null
+    >(null);
+
+    private readonly setTargetAresControlEffect = effect(() => {
+        const vm = this.vm();
+        if (!vm) return;
+        this.targetAreasControl.setValue(
+            vm.overviewSectionCardXVM.mapFormControlXVM.targetAreas
+        );
+    });
 
     protected async onSendMessageClick() {
         if (this.messageFormControl.invalid) return;

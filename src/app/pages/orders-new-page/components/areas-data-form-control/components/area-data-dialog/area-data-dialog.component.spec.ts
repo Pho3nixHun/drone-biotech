@@ -10,14 +10,16 @@ import {
     provideMockDialogRef,
     updateDialogDataSignal,
 } from 'src/app/shared/providers/dialog-provider';
-import { provideMockPolygonOptions } from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
 import {
     enMock,
     mockVMWithAreaData,
     mockVMWithoutAreaData,
 } from './area-data-dialog.component.mock';
-import { provideMockMapOptions } from './components/map-form-control/map-form-control.model';
 import { provideMockStore } from '@ngrx/store/testing';
+import {
+    provideMockMapOptions,
+    provideMockPolygonOptions,
+} from 'src/app/shared/providers/google-maps-provider';
 
 describe('AreaDataDialogComponent', () => {
     let fixture: ComponentFixture<AreaDataDialogComponent>;

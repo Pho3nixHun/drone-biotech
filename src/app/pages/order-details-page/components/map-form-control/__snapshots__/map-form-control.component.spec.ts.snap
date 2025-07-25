@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapFormControlComponent should render the template correctly if there are no stats about the targetAreas 1`] = `
+<div
+  id="root5"
+  ng-version="19.2.9"
+>
+  <app-map-form-control
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      appmapinitializer=""
+      class="mb-4"
+      ng-reflect-map-options="[object Object]"
+      ng-reflect-signal="[Signal: null]"
+      style="height: 500px;"
+    />
+    <app-area-form-control
+      class="ng-untouched ng-pristine ng-valid"
+      ng-reflect-form="[object Object]"
+      ng-reflect-map="[object Object]"
+    />
+    <!--container-->
+    <!--container-->
+  </app-map-form-control>
+</div>
+`;
+
+exports[`MapFormControlComponent should render the template correctly if there are stats about the targetAreas 1`] = `
+<div
+  id="root4"
+  ng-version="19.2.9"
+>
+  <app-map-form-control
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      appmapinitializer=""
+      class="mb-4"
+      ng-reflect-map-options="[object Object]"
+      ng-reflect-signal="[Signal: null]"
+      style="height: 500px;"
+    />
+    <app-area-form-control
+      class="ng-untouched ng-pristine ng-valid"
+      ng-reflect-form="[object Object]"
+      ng-reflect-map="[object Object]"
+    />
+    <!--container-->
+    <app-info-item-list
+      class="*:flex-row *:space-y-0 *:justify-between"
+    >
+      <dl
+        class="text-sm flex flex-col space-y-2"
+      >
+        <app-info-item
+          class="*:flex-col"
+        >
+          <div
+            class="flex flex-row"
+          >
+            <dt
+              class="text-gray-700"
+            >
+              total
+            </dt>
+            <dd
+              class="font-semibold"
+            >
+               totalM 
+            </dd>
+          </div>
+        </app-info-item>
+        <app-info-item
+          class="*:flex-col"
+        >
+          <div
+            class="flex flex-row"
+          >
+            <dt
+              class="text-gray-700"
+            >
+              completed
+            </dt>
+            <dd
+              class="font-semibold"
+            >
+               completedM 
+            </dd>
+          </div>
+        </app-info-item>
+        <app-info-item
+          class="*:flex-col"
+        >
+          <div
+            class="flex flex-row"
+          >
+            <dt
+              class="text-gray-700"
+            >
+              remainingM
+            </dt>
+            <dd
+              class="font-semibold"
+            >
+               remaining 
+            </dd>
+          </div>
+        </app-info-item>
+      </dl>
+    </app-info-item-list>
+    <!--container-->
+    <!--container-->
+  </app-map-form-control>
+</div>
+`;

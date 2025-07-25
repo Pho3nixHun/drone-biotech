@@ -2,21 +2,19 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapFormControlComponent } from './map-form-control.component';
 import { Component, DebugElement, inject, input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import {
-    MapFormControlVM,
-    provideMockMapOptions,
-} from './map-form-control.model';
+import { MapFormControlVM } from './map-form-control.model';
 import { By } from '@angular/platform-browser';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
 import { getTranslocoModule } from 'transloco-testing.module';
-import {
-    provideMockInfoWindowOptions,
-    provideMockPolygonOptions,
-} from './components/map-area-select-form-control/map-area-select-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 import { provideMockEntryPointMarkerOptions } from './components/map-point-select-form-control/map-point-select-form-control.model';
 import { MapAreaSelectFormControlMockService } from './components/map-area-select-form-control/map-area-select-form-control.service.mock';
 import { MapAreaSelectFormControlService } from './components/map-area-select-form-control/map-area-select-form-control.service';
+import {
+    provideMockMapOptions,
+    provideMockPolygonOptions,
+    provideMockInfoWindowOptions,
+} from 'src/app/shared/providers/google-maps-provider';
 
 const headOffice = { lat: 25, lng: 25 };
 

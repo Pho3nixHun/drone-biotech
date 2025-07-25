@@ -1,15 +1,24 @@
 import { mapAvatarXVM } from '@components/avatar/avatar.model';
 import {
+    CardItemXVM,
     HeaderXVM,
     MessageItemXVM,
     MessagesSectionCardXVM,
+    MissionsSectionCardXVM,
     OrderActionsSectionCardXVM,
     OrderDetailsPageConfig,
     OrderDetailsSectionCardXVM,
     OrderStatus,
+    OverviewSectionCardXVM,
     Role,
+    TargetArea,
 } from './order-details-page.model';
 import { Message, Order } from '@services/order/order.service.model';
+import {
+    isActiveMission,
+    Mission,
+} from '@services/mission/mission.service.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
@@ -36,19 +45,17 @@ export const mapRoleTranslocoTextKey = (role: Role): string =>
 
 export const mapHeaderXVM = (
     config: OrderDetailsPageConfig,
-    order: Order,
-    status: OrderStatus,
-    addMissionButtonVisibility: boolean
+    order: Order
 ): HeaderXVM => ({
     ...config.headerConfig,
     addMissionButtonXVM: {
-        isVisible: addMissionButtonVisibility,
+        isVisible: order.status !== 'completed',
         textKey: config.headerConfig.addMissionButtonXVM.textKey,
     },
     id: order.id,
     statusXVM: {
-        styles: mapOrderStatusToStatusToCSSStyles(status),
-        statusTextKey: mapOrderStatusToTranslocoTextKey(status),
+        styles: mapOrderStatusToStatusToCSSStyles(order.status),
+        statusTextKey: mapOrderStatusToTranslocoTextKey(order.status),
     },
     summaryListXVM: {
         summaryXVMs: [
@@ -79,13 +86,13 @@ export const mapHeaderXVM = (
 
 export const mapOrderActionsSectionCardXVM = (
     config: OrderDetailsPageConfig,
-    closeOrderButtonIsDisabled: boolean
+    order: Order
 ): OrderActionsSectionCardXVM => ({
     ...config.sectionCardConfigs.orderActionsSectionCardConfig,
     closeOrderButtonXVM: {
         ...config.sectionCardConfigs.orderActionsSectionCardConfig
             .closeOrderButtonXVM,
-        isDisabled: closeOrderButtonIsDisabled,
+        isDisabled: order.status === 'completed',
     },
 });
 
@@ -214,7 +221,7 @@ export const mapMessagesSectionCardXVM = (
     config: OrderDetailsPageConfig,
     messages: Message[]
 ): MessagesSectionCardXVM => ({
-    type: 'messages',
+    type: 'orderMessages',
     buttonTextKey:
         config.sectionCardConfigs.messagesSectionCardConfig.buttonTextKey,
     titleKey: config.sectionCardConfigs.messagesSectionCardConfig.titleKey,
@@ -240,4 +247,116 @@ const mapMessageToMessageItemXVM = (
         config.sectionCardConfigs.messagesSectionCardConfig.senderValueKey,
     sendingDateValueKey:
         config.sectionCardConfigs.messagesSectionCardConfig.dateValueKey,
+});
+
+export const mapMissionsToTargetArea = (order: Order): TargetArea[] =>
+    order.missions.map((missions) => ({
+        coordinates: missions.coordinates,
+        type: isActiveMission(missions) ? 'active' : 'completed',
+    }));
+
+export const mapOrderOverviewSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order
+): OverviewSectionCardXVM => ({
+    type: 'overview',
+    titleKey: config.sectionCardConfigs.orderOverviewSectionCardConfig.titleKey,
+    mapFormControlXVM: {
+        targetAreas: mapMissionsToTargetArea(order),
+        totalMissionsLabelKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .totalMissionsLabelKey,
+        totalMissionsValueKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .totalMissionsValueKey,
+        completedMissionsLabelKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .completedMissionsLabelKey,
+        completedMissionsValueKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .completedMissionsValueKey,
+        remainingMissionsLabelKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .remainingMissionsLabelKey,
+        remainingMissionsValueKey:
+            config.sectionCardConfigs.orderOverviewSectionCardConfig
+                .remainingMissionsValueKey,
+    },
+});
+
+export const mapOrderMissionsSectionCardXVM = (
+    config: OrderDetailsPageConfig,
+    order: Order
+): MissionsSectionCardXVM => ({
+    type: 'orderMissions',
+    titleKey: config.sectionCardConfigs.orderMissionsSectionCardConfig.titleKey,
+    cardGroupXVM: {
+        cardGroupHeaderXVM: [
+            config.sectionCardConfigs.orderMissionsSectionCardConfig
+                .cardGroupHeader.idHeaderKey,
+            config.sectionCardConfigs.orderMissionsSectionCardConfig
+                .cardGroupHeader.fieldNameHeaderKey,
+            config.sectionCardConfigs.orderMissionsSectionCardConfig
+                .cardGroupHeader.areaHeaderKey,
+            config.sectionCardConfigs.orderMissionsSectionCardConfig
+                .cardGroupHeader.dateHeaderKey,
+            config.sectionCardConfigs.orderMissionsSectionCardConfig
+                .cardGroupHeader.statusHeaderKey,
+            config.sectionCardConfigs.orderMissionsSectionCardConfig
+                .cardGroupHeader.actionsHeaderKey,
+        ],
+        cardItemListXVM: {
+            cardItemXVMs: order.missions.map<CardItemXVM>((mission) =>
+                mapMissionToCardItemXVM(config, mission)
+            ),
+        },
+    },
+});
+
+export const mapMissionToCardItemXVM = (
+    config: OrderDetailsPageConfig,
+    mission: Mission
+): CardItemXVM => ({
+    cardItemContentXVM: {
+        keyValueXVMs: [
+            {
+                label: config.sectionCardConfigs.orderMissionsSectionCardConfig
+                    .cardItem.idLabelKey,
+                value: { type: 'withoutValueKey', value: mission.id },
+            },
+            {
+                label: config.sectionCardConfigs.orderMissionsSectionCardConfig
+                    .cardItem.fieldNameLabelKey,
+                value: { type: 'withoutValueKey', value: mission.fieldName },
+            },
+            {
+                label: config.sectionCardConfigs.orderMissionsSectionCardConfig
+                    .cardItem.areaLabelKey,
+                value: { type: 'withoutValueKey', value: mission.areaInHa },
+            },
+            {
+                label: config.sectionCardConfigs.orderMissionsSectionCardConfig
+                    .cardItem.dateLabelKey,
+                value: {
+                    type: 'withValueKey',
+                    key: config.sectionCardConfigs
+                        .orderMissionsSectionCardConfig.cardItem.dateValueKey,
+                    params: { date: new Date() },
+                },
+            },
+            {
+                label: config.sectionCardConfigs.orderMissionsSectionCardConfig
+                    .cardItem.statusLabelKey,
+                value: { type: 'withoutValueKey', value: '' },
+            },
+        ],
+    },
+    cardItemActionListXVM: {
+        actionXVMs: [
+            {
+                matIcon: MatIcon.ARROW_OUTWARD,
+                routerLink: '',
+            },
+        ],
+    },
 });
