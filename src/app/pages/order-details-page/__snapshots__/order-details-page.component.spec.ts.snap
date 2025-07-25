@@ -4369,5 +4369,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
   </app-page-layout>
   <!--container-->
   <!--container-->
+  <!--container-->
 </div>
 `;
