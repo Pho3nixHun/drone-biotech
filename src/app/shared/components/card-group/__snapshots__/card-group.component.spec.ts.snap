@@ -16,7 +16,7 @@ exports[`CardGroupComponent should project the content and render the template c
       </app-card-group-header>
       <app-card-item-list>
         <div
-          class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-subgrid col-span-full"
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
         />
       </app-card-item-list>
       <app-card-group-summary>
