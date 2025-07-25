@@ -3,14 +3,15 @@ import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
 import { inject, Injectable } from '@angular/core';
 import { combineLatest, map, Observable, of } from 'rxjs';
 import { Message, OrderDetailsPageVM } from './order-details-page.model';
+import { closedOrder } from '@services/order/order.service.mock';
 import {
     mapHeaderXVM,
     mapMessagesSectionCardXVM,
     mapOrderActionsSectionCardXVM,
     mapOrderDetailsSectionCardXVM,
+    mapOrderMissionsSectionCardXVM,
     mapOrderOverviewSectionCardXVM,
 } from './order-details-page.mapper';
-import { closedOrder } from '@services/order/order.service.mock';
 
 @Injectable({
     providedIn: 'root',
@@ -49,8 +50,9 @@ export class OrderDetailsPageService {
             ),
             sectionCardXVMs: [
                 mapOrderDetailsSectionCardXVM(config, order),
-                mapOrderActionsSectionCardXVM(config, order),
+                mapOrderMissionsSectionCardXVM(config, order),
                 mapMessagesSectionCardXVM(config, order.messages),
+                mapOrderActionsSectionCardXVM(config, order),
             ],
         }))
     );

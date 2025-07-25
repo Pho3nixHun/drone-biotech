@@ -24,6 +24,15 @@ import { emptyStringValidator } from '@utils/empty-string.validator';
 import { OrderDetailsPageService } from './order-details-page.service';
 import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
 import { TargetArea } from './order-details-page.model';
+import { CardGroupComponent } from '@components/card-group/card-group.component';
+import { CardGroupHeaderComponent } from '@components/card-group/components/card-group-header/card-group-header.component';
+import { CardItemListComponent } from '@components/card-group/components/card-item-list/card-item-list.component';
+import { CardItemComponent } from '@components/card-group/components/card-item-list/components/card-item/card-item.component';
+import { CardItemContentComponent } from '@components/card-group/components/card-item-list/components/card-item/components/card-item-content/card-item-content.component';
+import { KeyValueComponent } from '@components/key-value/key-value.component';
+import { CardItemActionListComponent } from '@components/card-group/components/card-item-list/components/card-item/components/card-item-action-list/card-item-action-list.component';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 import {
     ConfirmationDialogReason,
     ConfirmationDialogVM,
@@ -51,6 +60,15 @@ import {
         NgOptimizedImage,
         NgClass,
         MapFormControlComponent,
+        CardGroupComponent,
+        CardGroupHeaderComponent,
+        CardItemListComponent,
+        CardItemComponent,
+        CardItemContentComponent,
+        KeyValueComponent,
+        CardItemActionListComponent,
+        RouterModule,
+        MatIconModule,
     ],
     templateUrl: './order-details-page.component.html',
 })

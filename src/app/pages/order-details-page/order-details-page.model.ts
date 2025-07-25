@@ -11,6 +11,8 @@ import { WithLink } from '@interfaces/with-link.interface';
 import { Coordinates } from '@stores/location/location.model';
 import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
 import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
 export interface TargetArea {
     type: 'completed' | 'active';
@@ -81,6 +83,41 @@ export interface OrderActionsSectionCardXVM extends SectionCardVM {
     closeOrderButtonXVM: CloseOrderButtonXVM;
 }
 
+type CardGroupHeaderXVM = string[];
+
+export interface CardItemXVM {
+    cardItemContentXVM: CardItemContentXVM;
+    cardItemActionListXVM: CardItemActionListXVM;
+}
+
+interface CardItemActionListXVM {
+    actionXVMs: ActionXVM[];
+}
+
+type ActionXVM = { matIcon: MatIcon } & WithRouterLink;
+
+interface CardItemContentXVM {
+    keyValueXVMs: KeyValueXVM[];
+}
+
+interface KeyValueXVM {
+    label: string;
+    value: Value;
+}
+
+interface CardItemListXVM {
+    cardItemXVMs: CardItemXVM[];
+}
+interface CardGroupXVM {
+    cardGroupHeaderXVM: CardGroupHeaderXVM;
+    cardItemListXVM: CardItemListXVM;
+}
+
+export interface MissionsSectionCardXVM extends SectionCardVM {
+    type: 'orderMissions';
+    cardGroupXVM: CardGroupXVM;
+}
+
 interface StatusXVM extends StatusVM {
     statusTextKey: string;
 }
@@ -105,7 +142,8 @@ export interface HeaderXVM {
 type SectionCardXVM =
     | OrderDetailsSectionCardXVM
     | OrderActionsSectionCardXVM
-    | MessagesSectionCardXVM;
+    | MessagesSectionCardXVM
+    | MissionsSectionCardXVM;
 
 export interface OrderDetailsPageVM {
     headerXVM: HeaderXVM;
@@ -133,6 +171,26 @@ export interface OrderDetailsPageConfig {
         addMissionButtonXVM: AddMissionButtonXVM;
     };
     sectionCardConfigs: {
+        orderMissionsSectionCardConfig: {
+            titleKey: string;
+            cardGroupHeader: {
+                idHeaderKey: string;
+                fieldNameHeaderKey: string;
+                areaHeaderKey: string;
+                dateHeaderKey: string;
+                statusHeaderKey: string;
+                actionsHeaderKey: string;
+            };
+            cardItem: {
+                dateValueKey: string;
+                idLabelKey: string;
+                fieldNameLabelKey: string;
+                areaLabelKey: string;
+                dateLabelKey: string;
+                statusLabelKey: string;
+                actionsLabelKey: string;
+            };
+        };
         orderOverviewSectionCardConfig: {
             titleKey: string;
             totalMissionsLabelKey: string;
