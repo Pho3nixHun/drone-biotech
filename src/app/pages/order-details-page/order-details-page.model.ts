@@ -1,4 +1,3 @@
-import { AvatarXVM } from '@components/avatar/avatar.model';
 import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
@@ -10,6 +9,7 @@ import { WithLink } from '@interfaces/with-link.interface';
 import { Coordinates } from '@stores/location/location.model';
 import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
 import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
+import { MessageItemListXVM } from '@components/message-item-list/message-item-list.model';
 
 export interface TargetArea {
     type: 'completed' | 'active';
@@ -30,19 +30,6 @@ export interface Message {
     sender: User;
     sendingDate: Date;
     message: string;
-}
-
-export interface MessageItemXVM
-    extends Pick<Message, 'message' | 'sendingDate'> {
-    senderName: string;
-    roleTextKey: string;
-    senderValueKey: string;
-    sendingDateValueKey: string;
-    avatarXVM: AvatarXVM;
-}
-
-interface MessageItemListXVM {
-    messageItemXVMs: MessageItemXVM[];
 }
 
 export interface MessagesSectionCardXVM extends SectionCardVM {

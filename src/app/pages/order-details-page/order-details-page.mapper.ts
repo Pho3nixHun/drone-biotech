@@ -1,7 +1,6 @@
 import { mapAvatarXVM } from '@components/avatar/avatar.model';
 import {
     HeaderXVM,
-    MessageItemXVM,
     MessagesSectionCardXVM,
     OrderActionsSectionCardXVM,
     OrderDetailsPageConfig,
@@ -13,6 +12,7 @@ import {
 } from './order-details-page.model';
 import { Message, Order } from '@services/order/order.service.model';
 import { isActiveMission } from '@services/mission/mission.service.model';
+import { MessageItemXVM } from '@components/message-item/message-item.model';
 
 export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
@@ -229,7 +229,7 @@ export const mapMessagesSectionCardXVM = (
     },
 });
 
-const mapMessageToMessageItemXVM = (
+export const mapMessageToMessageItemXVM = (
     config: OrderDetailsPageConfig,
     message: Message
 ): MessageItemXVM => ({
