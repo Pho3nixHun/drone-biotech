@@ -1,5 +1,36 @@
 @if (vm(); as vm) {
-    <app-page-layout>
+    <app-page-layout *transloco="let t">
+        <h1>
+            {{
+                t(vm.pageLayoutXVM.titleKey, {
+                    name: vm.pageLayoutXVM.missionName,
+                })
+            }}
+        </h1>
+        <app-header
+            ><app-status [ngClass]="vm.headerXVM.statusXVM.style">{{
+                t(vm.headerXVM.statusXVM.textKey)
+            }}</app-status>
+            <p class="text-gray-600">
+                {{
+                    t(vm.headerXVM.creationDateLabelKey, {
+                        date: t(vm.headerXVM.creationDateValueKey, {
+                            date: vm.headerXVM.creationDate,
+                        }),
+                    })
+                }}
+            </p>
+
+            @let buttonXVM = vm.headerXVM.openInMapsButtonXVM;
+            <a
+                class="btn btn-primary"
+                [href]="buttonXVM.link.href"
+                [target]="buttonXVM.link.target"
+                [rel]="buttonXVM.link.rel"
+                >{{ t(buttonXVM.textKey) }}</a
+            ></app-header
+        >
+
         <app-map-form-control [formControl]="mapControl" />
     </app-page-layout>
 }

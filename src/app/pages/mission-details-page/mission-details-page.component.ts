@@ -6,6 +6,10 @@ import { Component, effect, inject } from '@angular/core';
 import { MapControl } from './mission-details-page.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { missionDetailsPageConfig } from './mission-details-page.config';
+import { HeaderComponent } from './components/header/header.component';
+import { StatusComponent } from '@components/status/status.component';
+import { TranslocoModule } from '@jsverse/transloco';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -13,6 +17,10 @@ import { missionDetailsPageConfig } from './mission-details-page.config';
         PageLayoutComponent,
         MapFormControlComponent,
         ReactiveFormsModule,
+        HeaderComponent,
+        StatusComponent,
+        TranslocoModule,
+        NgClass,
     ],
     providers: [missionDetailsPageConfig],
     templateUrl: './mission-details-page.component.html',
