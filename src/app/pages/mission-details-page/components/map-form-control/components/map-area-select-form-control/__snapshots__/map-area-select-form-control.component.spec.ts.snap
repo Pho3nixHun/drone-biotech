@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapAreaSelectFormControlComponent should render the template when the VM is provided 1`] = `
+<app-map-area-select-form-control
+  class="ng-untouched ng-pristine ng-valid"
+  ng-reflect-form="[object Object]"
+  ng-reflect-map-ref="[object Object]"
+/>
+`;
