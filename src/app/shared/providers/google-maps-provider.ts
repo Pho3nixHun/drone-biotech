@@ -2,6 +2,16 @@ import { inject, InjectionToken, provideAppInitializer } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { TranslocoService } from '@jsverse/transloco';
 
+export const ENTRY_POINT_MARKER_OPTIONS =
+    new InjectionToken<google.maps.marker.AdvancedMarkerElementOptions>(
+        'Injection Token for entry point marker options'
+    );
+
+export const provideMockEntryPointMarkerOptions = () => ({
+    provide: ENTRY_POINT_MARKER_OPTIONS,
+    useValue: {},
+});
+
 export const POLYGON_OPTIONS = new InjectionToken<google.maps.PolygonOptions>(
     'Injection Token for Polygon options'
 );
