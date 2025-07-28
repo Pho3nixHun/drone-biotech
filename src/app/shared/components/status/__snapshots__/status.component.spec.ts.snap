@@ -5,12 +5,9 @@ exports[`StatusComponent should render the template 1`] = `
   id="root0"
   ng-version="19.2.9"
 >
-  <app-status
-    ng-reflect-vm="[object Object]"
-  >
+  <app-status>
     <p
-      class="font-medium rounded-full w-max px-3 py-1 flex items-center text-blue-500"
-      ng-reflect-ng-class="text-blue-500"
+      class="font-medium rounded-full w-max px-3 py-1 flex items-center"
     >
       Status
     </p>
