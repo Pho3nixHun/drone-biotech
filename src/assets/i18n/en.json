@@ -196,5 +196,10 @@
     "OrderDetailsPage.overview.title": "Order overview",
     "OrderDetailsPage.overview.totalMissionsLabel": "Total missions",
     "OrderDetailsPage.overview.completedMissionsLabel": "Completed missions",
-    "OrderDetailsPage.overview.remainingMissionsLabel": "Remaining missions"
+    "OrderDetailsPage.overview.remainingMissionsLabel": "Remaining missions",
+    "MissionDetailsPage.header.creationDateLabel": "Created: {date}",
+    "MissionDetailsPage.header.creationDateValue": "{ date, date, long } { date, time, short }",
+    "MissionDetailsPage.header.openInMapsButton.text": "Open in Google Maps",
+    "MissionDetailsPage.header.status.text": "Active",
+    "MissionDetailsPage.pageLayout.title": "Mission {name} details"
 }
