@@ -201,5 +201,12 @@
     "MissionDetailsPage.header.creationDateValue": "{ date, date, long } { date, time, short }",
     "MissionDetailsPage.header.openInMapsButton.text": "Megnyitás a Google Térképen",
     "MissionDetailsPage.header.status.text": "Aktív",
-    "MissionDetailsPage.pageLayout.title": "Küldetés {name} részletei"
+    "MissionDetailsPage.pageLayout.title": "Küldetés {name} részletei",
+    "MissionDetailsPage.messages.sendingDateValue": "{ date, date, long } { date, time, short }",
+    "MissionDetailsPage.messages.senderValue": "{role} - {name}",
+    "MissionDetailsPage.messages.role.customer": "Ügyfél",
+    "MissionDetailsPage.messages.role.pilot": "Pilóta",
+    "MissionDetailsPage.messages.role.office": "Iroda",
+    "MissionDetailsPage.messages.title": "Üzenetek",
+    "MissionDetailsPage.messages.sendMessageButtonText": "Küldés"
 }

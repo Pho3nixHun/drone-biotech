@@ -201,5 +201,12 @@
     "MissionDetailsPage.header.creationDateValue": "{ date, date, long } { date, time, short }",
     "MissionDetailsPage.header.openInMapsButton.text": "Open in Google Maps",
     "MissionDetailsPage.header.status.text": "Active",
-    "MissionDetailsPage.pageLayout.title": "Mission {name} details"
+    "MissionDetailsPage.pageLayout.title": "Mission {name} details",
+    "MissionDetailsPage.messages.sendingDateValue": "{ date, date, long } { date, time, short }",
+    "MissionDetailsPage.messages.senderValue": "{role} - {name}",
+    "MissionDetailsPage.messages.role.customer": "Customer",
+    "MissionDetailsPage.messages.role.pilot": "Pilot",
+    "MissionDetailsPage.messages.role.office": "Office",
+    "MissionDetailsPage.messages.title": "Messages",
+    "MissionDetailsPage.messages.sendMessageButtonText": "Send"
 }
