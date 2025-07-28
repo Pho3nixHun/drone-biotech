@@ -1,10 +1,10 @@
 import { WithRouterLink } from './with-router-link.interface';
 
-export interface NavigationAnchor extends WithRouterLink {
+export interface Anchor extends WithRouterLink {
     textKey: string;
-    textColor: string;
+    textColor?: string;
 }
 
-export interface WithNavigationAnchor {
-    navigationAnchor: NavigationAnchor;
+export interface WithAnchor {
+    anchor: Anchor;
 }

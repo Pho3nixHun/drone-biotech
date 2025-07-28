@@ -1,0 +1,52 @@
+@let vM = vm();
+
+<div
+    appMapInitializer
+    [signal]="mapSignal"
+    [mapOptions]="mapOptions"
+    style="height: 500px"
+    class="mb-4"
+></div>
+
+@if (mapSignal(); as map) {
+    <app-area-form-control
+        [map]="map"
+        [formControl]="mapFormGroup.controls.targetAreas"
+    />
+}
+
+@if (missionStats(); as stats) {
+    <app-info-item-list
+        class="*:flex-row *:space-y-0 *:justify-between"
+        *transloco="let t"
+    >
+        <app-info-item class="*:flex-col">
+            <dt class="text-gray-700">{{ t(vM.totalMissionsLabelKey) }}</dt>
+            <dd class="font-semibold">
+                {{
+                    t(vM.totalMissionsValueKey, { count: stats.totalMissions })
+                }}
+            </dd>
+        </app-info-item>
+        <app-info-item class="*:flex-col">
+            <dt class="text-gray-700">{{ t(vM.completedMissionsLabelKey) }}</dt>
+            <dd class="font-semibold">
+                {{
+                    t(vM.completedMissionsValueKey, {
+                        count: stats.completedMissions,
+                    })
+                }}
+            </dd>
+        </app-info-item>
+        <app-info-item class="*:flex-col">
+            <dt class="text-gray-700">{{ t(vM.remainingMissionsLabelKey) }}</dt>
+            <dd class="font-semibold">
+                {{
+                    t(vM.remainingMissionsValueKey, {
+                        count: stats.remainingMissions,
+                    })
+                }}
+            </dd>
+        </app-info-item>
+    </app-info-item-list>
+}

@@ -1,8 +1,5 @@
 import { Order, OrderStatus } from '@services/order/order.service.model';
-import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
+import { Anchor, WithAnchor } from '@interfaces/navigation-anchor.interface';
 import {
     KVsFromVM,
     TitleWithValueKey,
@@ -31,7 +28,7 @@ export interface OrdersConfig {
     status: TitleWithoutValueKey;
     moneyValue: TitleWithValueKey;
     requester: TitleWithoutValueKey;
-    action: NavigationAnchor;
+    action: Anchor;
 }
 
 interface OrderVM {
@@ -41,13 +38,13 @@ interface OrderVM {
 type MyOrderVM = MyOrder & OrderVM;
 type CompanyOrderVM = CompanyOrder & OrderVM;
 
-export type MyOrderXVM = KVsFromVM<MyOrderVM> & WithNavigationAnchor;
+export type MyOrderXVM = KVsFromVM<MyOrderVM> & WithAnchor;
 export type CompanyOrderXVM = KVsFromVM<CompanyOrderVM>;
 
 export type OrderXVM = MyOrderXVM | CompanyOrderXVM;
 
 type MyOrdersGridConfig = Config & {
-    navigationAnchor: Omit<NavigationAnchor, 'textColor'>;
+    navigationAnchor: Omit<Anchor, 'textColor'>;
 };
 type CompanyOrdersGridConfig = Config;
 

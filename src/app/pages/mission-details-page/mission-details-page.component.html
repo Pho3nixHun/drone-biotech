@@ -1,0 +1,106 @@
+@if (vm(); as vm) {
+    <app-page-layout *transloco="let t">
+        <h1>
+            {{
+                t(vm.pageLayoutXVM.titleKey, {
+                    name: vm.pageLayoutXVM.missionName,
+                })
+            }}
+        </h1>
+        <app-header
+            ><app-status [ngClass]="vm.headerXVM.statusXVM.style">{{
+                t(vm.headerXVM.statusXVM.textKey)
+            }}</app-status>
+            <p class="text-gray-600">
+                {{
+                    t(vm.headerXVM.creationDateLabelKey, {
+                        date: t(vm.headerXVM.creationDateValueKey, {
+                            date: vm.headerXVM.creationDate,
+                        }),
+                    })
+                }}
+            </p>
+
+            @let buttonXVM = vm.headerXVM.openInMapsButtonXVM;
+            <a
+                class="btn btn-primary"
+                [href]="buttonXVM.link.href"
+                [target]="buttonXVM.link.target"
+                [rel]="buttonXVM.link.rel"
+                >{{ t(buttonXVM.textKey) }}</a
+            ></app-header
+        >
+
+        <app-map-form-control [formControl]="mapControl" />
+
+        <app-section-card [vm]="vm.messagesSectionCardXVM">
+            <app-message-item-list>
+                @for (
+                    messageItemXVM of vm.messagesSectionCardXVM
+                        .messageItemListXVM.messageItemXVMs;
+                    track $index
+                ) {
+                    <app-message-item>
+                        @switch (messageItemXVM.avatarXVM.type) {
+                            @case ('withInitials') {
+                                <app-avatar
+                                    [class]="messageItemXVM.avatarXVM.colors"
+                                >
+                                    {{ messageItemXVM.avatarXVM.initials }}
+                                </app-avatar>
+                            }
+
+                            @case ('withImage') {
+                                <app-avatar class="text-white *:bg-black">
+                                    <img
+                                        [ngSrc]="
+                                            messageItemXVM.avatarXVM.imageSrc
+                                        "
+                                        [alt]="
+                                            messageItemXVM.avatarXVM.altTextKey
+                                        "
+                                        class="object-contain rounded-full"
+                                        fill
+                                    />
+                                </app-avatar>
+                            }
+                        }
+                        <h3 class="font-medium">
+                            {{
+                                t(messageItemXVM.senderValueKey, {
+                                    role: t(messageItemXVM.roleTextKey),
+                                    name: messageItemXVM.senderName,
+                                })
+                            }}
+                        </h3>
+                        <p class="text-gray-700">
+                            {{ messageItemXVM.message }}
+                        </p>
+                        <time class="text-gray-600 text-sm">{{
+                            t(messageItemXVM.sendingDateValueKey, {
+                                date: messageItemXVM.sendingDate,
+                            })
+                        }}</time>
+                    </app-message-item>
+                }
+            </app-message-item-list>
+            <div class="w-full flex flex-row">
+                <input
+                    type="text"
+                    [formControl]="messageControl"
+                    class="w-full border border-gray-300"
+                />
+                <button
+                    (click)="sendMessage()"
+                    [disabled]="messageControl.invalid"
+                    [ngClass]="
+                        messageControl.valid ? 'btn-primary' : 'btn-disabled'
+                    "
+                    class="btn btn-square rounded-none"
+                >
+                    {{ t(vm.messagesSectionCardXVM.sendMessageButtonTextKey) }}
+                </button>
+            </div>
+        </app-section-card>
+    </app-page-layout>
+}
