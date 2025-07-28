@@ -18,9 +18,9 @@ export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
 ): string =>
     ({
-        active: 'bg-green-200 text-green-800',
-        pending: 'bg-red-200 text-red-800',
-        completed: 'bg-orange-200 text-orange-800',
+        active: '*:bg-green-200 *:text-green-800',
+        pending: '*:bg-red-200 *:text-red-800',
+        completed: '*:bg-orange-200 *:text-orange-800',
     })[status] ?? '';
 
 export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>

@@ -9,7 +9,7 @@
                 }}
             </h2>
 
-            <app-status [vm]="vm.headerXVM.statusXVM">
+            <app-status [ngClass]="vm.headerXVM.statusXVM.styles">
                 {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
             </app-status>
 

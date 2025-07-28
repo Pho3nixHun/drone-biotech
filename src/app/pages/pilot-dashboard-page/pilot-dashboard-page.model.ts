@@ -1,7 +1,4 @@
-import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
+import { Anchor, WithAnchor } from '@interfaces/navigation-anchor.interface';
 import {
     KVsFromVM,
     TitleWithoutValueKey,
@@ -27,7 +24,7 @@ interface MissionConfig {
     requester: TitleWithoutValueKey;
     pilot: TitleWithoutValueKey;
     client: TitleWithoutValueKey;
-    actions: { mission: NavigationAnchor; report: NavigationAnchor };
+    actions: { mission: Anchor; report: Anchor };
 }
 
 interface MissionVM {
@@ -45,10 +42,8 @@ type CompletedMissionVM = Omit<
 > &
     MissionVM;
 
-export type AssignedMissionXVM = KVsFromVM<AssignedMissionVM> &
-    WithNavigationAnchor;
-export type CompletedMissionXVM = KVsFromVM<CompletedMissionVM> &
-    WithNavigationAnchor;
+export type AssignedMissionXVM = KVsFromVM<AssignedMissionVM> & WithAnchor;
+export type CompletedMissionXVM = KVsFromVM<CompletedMissionVM> & WithAnchor;
 type MissionXVM = AssignedMissionXVM | CompletedMissionXVM;
 
 type AssignedMissionsGrid = Config;
