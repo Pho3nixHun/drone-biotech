@@ -14,6 +14,21 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         },
     },
     sectionCardConfigs: {
+        orderOverviewSectionCardConfig: {
+            titleKey: 'OrderDetailsPage.overview.title',
+            totalMissionsLabelKey:
+                'OrderDetailsPage.overview.totalMissionsLabel',
+            totalMissionsValueKey:
+                'OrderDetailsPage.overview.totalMissionsValue',
+            completedMissionsLabelKey:
+                'OrderDetailsPage.overview.completedMissionsLabel',
+            completedMissionsValueKey:
+                'OrderDetailsPage.overview.completedMissionsValue',
+            remainingMissionsLabelKey:
+                'OrderDetailsPage.overview.remainingMissionsLabel',
+            remainingMissionsValueKey:
+                'OrderDetailsPage.overview.remainingMissionsValue',
+        },
         messagesSectionCardConfig: {
             buttonTextKey: 'OrderDetailsPage.messages.buttonText',
             titleKey: 'OrderDetailsPage.messages.title',
@@ -112,6 +127,15 @@ export const enMock = {
         buttonText: 'button',
         senderValue: 'send',
     },
+    map: {
+        title: 'tit',
+        compLabel: 'comp',
+        compVal: 'compV',
+        totalLabel: 'total',
+        totalVal: 'totalV',
+        remainingVal: 'remainingV',
+        remainingLabel: 'remaining',
+    },
 };
 
 export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
@@ -128,6 +152,15 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
         },
     },
     sectionCardConfigs: {
+        orderOverviewSectionCardConfig: {
+            titleKey: enMock.map.title,
+            completedMissionsLabelKey: enMock.map.compLabel,
+            completedMissionsValueKey: enMock.map.compVal,
+            remainingMissionsLabelKey: enMock.map.remainingLabel,
+            remainingMissionsValueKey: enMock.map.remainingVal,
+            totalMissionsLabelKey: enMock.map.totalLabel,
+            totalMissionsValueKey: enMock.map.totalVal,
+        },
         messagesSectionCardConfig: {
             buttonTextKey: enMock.messages.buttonText,
             titleKey: enMock.messages.title,

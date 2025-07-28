@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
 import {
-    provideMockInfoWindowOptions,
     provideMockPolygonOptions,
-} from './map-area-select-form-control.model';
+    provideMockInfoWindowOptions,
+} from 'src/app/shared/providers/google-maps-provider';
 
 describe('MapPointSelectFormControlService', () => {
     let service: MapAreaSelectFormControlService;

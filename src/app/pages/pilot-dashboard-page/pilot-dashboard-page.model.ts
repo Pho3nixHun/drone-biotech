@@ -34,11 +34,14 @@ interface MissionVM {
     badge: Badge;
 }
 
-type AssignedMissionVM = Omit<AssignedMission, 'client' | 'pilot' | 'status'> &
+type AssignedMissionVM = Omit<
+    AssignedMission,
+    'client' | 'pilot' | 'status' | 'coordinates'
+> &
     MissionVM;
 type CompletedMissionVM = Omit<
     CompletedMission,
-    'client' | 'pilot' | 'performance'
+    'client' | 'pilot' | 'performance' | 'coordinates'
 > &
     MissionVM;
 

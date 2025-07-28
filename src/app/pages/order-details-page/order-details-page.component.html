@@ -41,6 +41,13 @@
             </app-summary-list>
         </app-header>
 
+        <app-section-card [vm]="vm.overviewSectionCardXVM">
+            <app-map-form-control
+                [formControl]="targetAreasControl"
+                [vm]="vm.overviewSectionCardXVM.mapFormControlXVM"
+            />
+        </app-section-card>
+
         @for (sectionCardXVM of vm.sectionCardXVMs; track $index) {
             @switch (sectionCardXVM.type) {
                 @case ('orderDetails') {
@@ -57,7 +64,7 @@
                     >
                     </ng-container>
                 }
-                @case ('messages') {
+                @case ('orderMessages') {
                     <ng-container
                         [ngTemplateOutlet]="messages"
                         [ngTemplateOutletContext]="{ sectionCardXVM }"
