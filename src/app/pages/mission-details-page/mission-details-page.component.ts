@@ -9,7 +9,15 @@ import { missionDetailsPageConfig } from './mission-details-page.config';
 import { HeaderComponent } from './components/header/header.component';
 import { StatusComponent } from '@components/status/status.component';
 import { TranslocoModule } from '@jsverse/transloco';
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
+import { MessageItemListComponent } from '@components/message-item-list/message-item-list.component';
+import { MessageItemComponent } from '@components/message-item/message-item.component';
+import { AvatarComponent } from '@components/avatar/avatar.component';
+import { emptyStringValidator } from '@utils/empty-string.validator';
+import { firstValueFrom } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { selectUser } from '@stores/auth/auth.selector';
+import { SectionCardComponent } from '@components/section-card/section-card.component';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -21,15 +29,22 @@ import { NgClass } from '@angular/common';
         StatusComponent,
         TranslocoModule,
         NgClass,
+        MessageItemListComponent,
+        MessageItemComponent,
+        AvatarComponent,
+        NgOptimizedImage,
+        SectionCardComponent,
     ],
     providers: [missionDetailsPageConfig],
     templateUrl: './mission-details-page.component.html',
 })
 export class MissionDetailsPageComponent {
+    private readonly store = inject(Store);
     private readonly fb = inject(FormBuilder);
     private readonly missionDetailsPageService = inject(
         MissionDetailsPageService
     );
+    private readonly currentUser = this.store.select(selectUser);
 
     protected readonly vm = toSignal(this.missionDetailsPageService.getVM());
 
@@ -46,4 +61,29 @@ export class MissionDetailsPageComponent {
         if (!vm) return;
         this.mapControl.setValue(vm.mapFormControlXVM.mapControl);
     });
+
+    protected readonly messageControl = this.fb.control<string>('', [
+        Validators.required,
+        emptyStringValidator(),
+    ]);
+
+    protected async sendMessage() {
+        if (this.messageControl.invalid) return;
+
+        const message = this.messageControl.value;
+        if (!message) return;
+
+        const user = await firstValueFrom(this.currentUser);
+        if (!user) return;
+
+        this.missionDetailsPageService.sendMessage({
+            backgroundImageSrc: user.photoURL,
+            altText: user.displayName,
+            date: new Date(),
+            name: user.displayName,
+            message,
+        });
+
+        this.messageControl.reset();
+    }
 }

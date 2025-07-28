@@ -11,5 +11,8 @@ export class MissionDetailsPageService {
         return this.vm;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
+    public sendMessage = (message: unknown) => {};
+
     private readonly vm = of(missionDetailsPageDefaultVM);
 }
