@@ -146,7 +146,7 @@ export class OfficeDashboardPageService {
                             ),
                         },
                     },
-                    navigationAnchor: {
+                    anchor: {
                         textKey:
                             this.config.missionConfig.actions.report.textKey,
                         routerLink: `/${AppRouteSegment.LANDING}`,

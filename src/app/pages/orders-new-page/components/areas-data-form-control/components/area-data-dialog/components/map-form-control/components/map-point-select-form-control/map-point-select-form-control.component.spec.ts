@@ -1,9 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapPointSelectFormControlComponent } from './map-point-select-form-control.component';
-import {
-    MapPointSelectFormControlVM,
-    provideMockEntryPointMarkerOptions,
-} from './map-point-select-form-control.model';
+import { MapPointSelectFormControlVM } from './map-point-select-form-control.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import {
     Component,
@@ -23,9 +20,12 @@ import {
 } from './map-point-select-form-control.service.mock';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import { provideMockMapOptions } from '../../map-form-control.model';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Coordinates } from '@stores/location/location.model';
+import {
+    provideMockEntryPointMarkerOptions,
+    provideMockMapOptions,
+} from 'src/app/shared/providers/google-maps-provider';
 
 const enMock = { addButtonText: 'addButton', deleteButtonText: 'deleteButton' };
 

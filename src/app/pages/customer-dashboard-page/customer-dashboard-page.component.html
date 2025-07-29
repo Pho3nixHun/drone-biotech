@@ -90,19 +90,14 @@
                                 </app-key-value>
 
                                 @if (
-                                    isMyOrderXVM(orderXVM) &&
-                                    orderXVM.navigationAnchor
+                                    isMyOrderXVM(orderXVM) && orderXVM.anchor
                                 ) {
                                     <a
-                                        [ngClass]="
-                                            orderXVM.navigationAnchor.textColor
-                                        "
+                                        [ngClass]="orderXVM.anchor.textColor"
                                         [routerLink]="
-                                            orderXVM.navigationAnchor.routerLink
+                                            orderXVM.anchor.routerLink
                                         "
-                                        >{{
-                                            t(orderXVM.navigationAnchor.textKey)
-                                        }}</a
+                                        >{{ t(orderXVM.anchor.textKey) }}</a
                                     >
                                 }
                             </app-grid-item>

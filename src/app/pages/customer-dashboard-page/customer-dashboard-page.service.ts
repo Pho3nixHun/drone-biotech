@@ -78,7 +78,7 @@ export class CustomerDashboardPageService {
                                   ),
                               },
                           },
-                          navigationAnchor: this.config.ordersConfig.action,
+                          anchor: this.config.ordersConfig.action,
                       }))
                     : null
             )

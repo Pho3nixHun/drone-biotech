@@ -89,7 +89,7 @@ export class PilotDashboardPageService {
                               ),
                           },
                       },
-                      navigationAnchor: {
+                      anchor: {
                           textKey:
                               this.config.missionConfig.actions.mission.textKey,
                           routerLink: `/${AppRouteSegment.LANDING}`,
@@ -139,7 +139,7 @@ export class PilotDashboardPageService {
                               ),
                           },
                       },
-                      navigationAnchor: {
+                      anchor: {
                           textKey:
                               this.config.missionConfig.actions.report.textKey,
                           routerLink: `/${AppRouteSegment.LANDING}`,

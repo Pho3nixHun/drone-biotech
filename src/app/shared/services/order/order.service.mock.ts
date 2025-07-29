@@ -1,5 +1,164 @@
 import { Order } from './order.service.model';
 
+export const closedOrder: Order = {
+    id: 'B-78901',
+    status: 'completed',
+    client: {
+        client: 'Westbrook Agricultural Holdings',
+        contact: 'Sarah Johnson',
+        email: 's.johnson@westbrook-ag.com',
+        phone: '(555) 789-1234',
+        address: '450 Farm Road, Westbrook County',
+    },
+    summary: {
+        treatment: 'Seasonal Pest Control',
+        averageDose: 2.5,
+        totalSupply: 868.75,
+        orderValue: 34750.0,
+    },
+    creationDate: new Date('2025-03-28'),
+    totalAreaInHa: 347.5,
+    moneyValue: 34750,
+    missions: [
+        {
+            id: 'A-12345',
+            pilot: null,
+            fieldName: 'North Field',
+            areaInHa: 45.8,
+            scheduledDate: new Date('2025-04-05'),
+            status: 'scheduled',
+            coordinates: [
+                { lat: 47.277, lng: 21.2345 },
+                { lat: 47.276, lng: 21.2345 },
+                { lat: 47.276, lng: 21.233 },
+                { lat: 47.277, lng: 21.233 },
+            ],
+        },
+        {
+            id: 'A-12346',
+            pilot: 'Alex Rodriguez',
+            fieldName: 'South Field',
+            areaInHa: 78.3,
+            scheduledDate: new Date('2025-04-07'),
+            status: 'preparing',
+            coordinates: [
+                { lat: 47.277, lng: 21.231 },
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+            ],
+        },
+        {
+            id: 'A-12347',
+            pilot: null,
+            fieldName: 'East Meadow',
+            areaInHa: 102.4,
+            scheduledDate: new Date('2025-04-10'),
+            status: 'scheduled',
+            coordinates: [
+                { lat: 47.273, lng: 21.239 },
+                { lat: 47.274, lng: 21.239 },
+                { lat: 47.274, lng: 21.2405 },
+                { lat: 47.273, lng: 21.2405 },
+            ],
+        },
+        {
+            id: 'A-12348',
+            pilot: 'Alex Rodriguez',
+            fieldName: 'West Orchard',
+            areaInHa: 56.2,
+            completionDate: new Date('2025-04-02'),
+            performance: 'good',
+            coordinates: [
+                { lat: 47.275, lng: 21.2385 },
+                { lat: 47.274, lng: 21.2385 },
+                { lat: 47.274, lng: 21.237 },
+                { lat: 47.275, lng: 21.237 },
+            ],
+        },
+        {
+            id: 'A-12349',
+            pilot: 'Alex Rodriguez',
+            fieldName: 'Central Vineyard',
+            areaInHa: 64.8,
+            completionDate: new Date('2025-03-30'),
+            performance: 'excellent',
+            coordinates: [
+                { lat: 47.275, lng: 21.2365 },
+                { lat: 47.275, lng: 21.235 },
+                { lat: 47.276, lng: 21.235 },
+                { lat: 47.276, lng: 21.2365 },
+            ],
+        },
+        {
+            id: 'A-12350',
+            pilot: 'Alex Rodriguez',
+            fieldName: 'Upper Hill',
+            areaInHa: 25.0,
+            scheduledDate: new Date('2025-04-12'),
+            status: 'pending',
+            coordinates: [
+                { lat: 47.273, lng: 21.2425 },
+                { lat: 47.272, lng: 21.2425 },
+                { lat: 47.272, lng: 21.241 },
+                { lat: 47.273, lng: 21.241 },
+            ],
+        },
+    ],
+    messages: [
+        {
+            sender: {
+                role: 'customer',
+                name: 'Sarah Johnson',
+                photoUrl: 'assets/farming.jpg',
+            },
+            sendingDate: new Date('2025-04-05T09:15:00'),
+            message:
+                'Please update me on the status of the East Meadow mission. Do we need to prepare access to any additional areas?',
+        },
+        {
+            sender: {
+                role: 'office',
+                name: 'Operations Manager',
+                photoUrl: null,
+            },
+            sendingDate: new Date('2025-04-05T11:30:00'),
+            message:
+                "East Meadow mission is scheduled for April 10th. All preparations are on track. We'll need the eastern gate unlocked for equipment access. The West Orchard and Central Vineyard missions were completed successfully.",
+        },
+        {
+            sender: {
+                role: 'customer',
+                name: 'Sarah Johnson',
+                photoUrl: 'assets/farming.jpg',
+            },
+            sendingDate: new Date('2025-04-05T13:45:00'),
+            message:
+                "Thank you for the update. I've arranged for the eastern gate to be unlocked on the 10th. Please share the completion reports for the West Orchard and Central Vineyard missions when available.",
+        },
+        {
+            sender: {
+                role: 'office',
+                name: 'Operations Manager',
+                photoUrl: null,
+            },
+            sendingDate: new Date('2025-04-06T08:20:00'),
+            message:
+                'Noted. Reports are being finalized and will be shared by tomorrow. Also, confirming Upper Hill mission planned for April 12—please ensure road access is cleared.',
+        },
+        {
+            sender: {
+                role: 'customer',
+                name: 'Sarah Johnson',
+                photoUrl: 'assets/farming.jpg',
+            },
+            sendingDate: new Date('2025-04-06T09:00:00'),
+            message:
+                'Understood. Road access to Upper Hill will be cleared by April 11th. Please notify if weather conditions affect scheduling.',
+        },
+    ],
+};
+
 export const orders: Order[] = [
     {
         id: 'B-78901',
@@ -28,6 +187,12 @@ export const orders: Order[] = [
                 areaInHa: 45.8,
                 scheduledDate: new Date('2025-04-05'),
                 status: 'scheduled',
+                coordinates: [
+                    { lat: 47.277, lng: 21.2345 },
+                    { lat: 47.276, lng: 21.2345 },
+                    { lat: 47.276, lng: 21.233 },
+                    { lat: 47.277, lng: 21.233 },
+                ],
             },
             {
                 id: 'A-12346',
@@ -36,6 +201,12 @@ export const orders: Order[] = [
                 areaInHa: 78.3,
                 scheduledDate: new Date('2025-04-07'),
                 status: 'preparing',
+                coordinates: [
+                    { lat: 47.277, lng: 21.231 },
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                ],
             },
             {
                 id: 'A-12347',
@@ -44,6 +215,12 @@ export const orders: Order[] = [
                 areaInHa: 102.4,
                 scheduledDate: new Date('2025-04-10'),
                 status: 'scheduled',
+                coordinates: [
+                    { lat: 47.273, lng: 21.239 },
+                    { lat: 47.274, lng: 21.239 },
+                    { lat: 47.274, lng: 21.2405 },
+                    { lat: 47.273, lng: 21.2405 },
+                ],
             },
             {
                 id: 'A-12348',
@@ -52,6 +229,12 @@ export const orders: Order[] = [
                 areaInHa: 56.2,
                 completionDate: new Date('2025-04-02'),
                 performance: 'good',
+                coordinates: [
+                    { lat: 47.275, lng: 21.2385 },
+                    { lat: 47.274, lng: 21.2385 },
+                    { lat: 47.274, lng: 21.237 },
+                    { lat: 47.275, lng: 21.237 },
+                ],
             },
             {
                 id: 'A-12349',
@@ -60,6 +243,12 @@ export const orders: Order[] = [
                 areaInHa: 64.8,
                 completionDate: new Date('2025-03-30'),
                 performance: 'excellent',
+                coordinates: [
+                    { lat: 47.275, lng: 21.2365 },
+                    { lat: 47.275, lng: 21.235 },
+                    { lat: 47.276, lng: 21.235 },
+                    { lat: 47.276, lng: 21.2365 },
+                ],
             },
             {
                 id: 'A-12350',
@@ -68,8 +257,15 @@ export const orders: Order[] = [
                 areaInHa: 25.0,
                 scheduledDate: new Date('2025-04-12'),
                 status: 'pending',
+                coordinates: [
+                    { lat: 47.273, lng: 21.2425 },
+                    { lat: 47.272, lng: 21.2425 },
+                    { lat: 47.272, lng: 21.241 },
+                    { lat: 47.273, lng: 21.241 },
+                ],
             },
         ],
+
         messages: [
             {
                 sender: {
@@ -150,6 +346,12 @@ export const orders: Order[] = [
                 areaInHa: 60.3,
                 completionDate: new Date('2025-02-20'),
                 performance: 'excellent',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
             {
                 id: 'A-12221',
@@ -158,6 +360,12 @@ export const orders: Order[] = [
                 areaInHa: 65.5,
                 completionDate: new Date('2025-02-22'),
                 performance: 'good',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -210,6 +418,12 @@ export const orders: Order[] = [
                 areaInHa: 48.5,
                 scheduledDate: new Date('2025-04-15'),
                 status: 'pending',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [
@@ -262,6 +476,12 @@ export const orders: Order[] = [
                 areaInHa: 112.0,
                 scheduledDate: new Date('2025-04-15'),
                 status: 'preparing',
+                coordinates: [
+                    { lat: 47.278, lng: 21.231 },
+                    { lat: 47.278, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.2325 },
+                    { lat: 47.277, lng: 21.231 },
+                ],
             },
         ],
         messages: [

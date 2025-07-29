@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapFormControlComponent should render the template correctly 1`] = `
+<app-map-form-control
+  class="ng-untouched ng-pristine ng-valid"
+  ng-reflect-form="[object Object]"
+>
+  <div
+    appmapinitializer=""
+    ng-reflect-map-options="[object Object]"
+    ng-reflect-signal="[Signal: null]"
+    style="height: 500px;"
+  />
+  <app-map-area-select-form-control
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-map-ref="[object Object]"
+  />
+  <app-map-point-select-form-control
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-map-ref="[object Object]"
+  />
+</app-map-form-control>
+`;

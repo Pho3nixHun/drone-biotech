@@ -189,6 +189,12 @@ export const oneActiveMission: Order = {
             pilot: 'Alex Rodriguez',
             scheduledDate: new Date(),
             status: 'pending',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '2',
@@ -197,6 +203,12 @@ export const oneActiveMission: Order = {
             pilot: 'Wayne Rooney',
             scheduledDate: new Date(),
             status: 'pending',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
     ],
     messages: [],
@@ -229,6 +241,12 @@ export const threeActiveMissions: Order = {
             pilot: 'Alex Rodriguez',
             scheduledDate: new Date(),
             status: 'pending',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '2',
@@ -237,6 +255,12 @@ export const threeActiveMissions: Order = {
             pilot: 'Wayne Rooney',
             scheduledDate: new Date(),
             status: 'pending',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '3',
@@ -245,6 +269,12 @@ export const threeActiveMissions: Order = {
             pilot: 'Alex Rodriguez',
             scheduledDate: new Date(),
             status: 'pending',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '4',
@@ -253,6 +283,12 @@ export const threeActiveMissions: Order = {
             pilot: 'Alex Rodriguez',
             scheduledDate: new Date(),
             status: 'pending',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
     ],
     messages: [],
@@ -285,6 +321,12 @@ export const oneCompletedMission: Order = {
             pilot: 'Alex Rodriguez',
             completionDate: new Date(),
             performance: 'excellent',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '6',
@@ -293,6 +335,12 @@ export const oneCompletedMission: Order = {
             pilot: 'Wayne Rooney',
             completionDate: new Date(),
             performance: 'excellent',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
     ],
     messages: [],
@@ -325,6 +373,12 @@ export const threeCompletedMissions: Order = {
             pilot: 'Alex Rodriguez',
             completionDate: new Date(),
             performance: 'excellent',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '6',
@@ -333,6 +387,12 @@ export const threeCompletedMissions: Order = {
             pilot: 'Wayne Rooney',
             completionDate: new Date(),
             performance: 'excellent',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '7',
@@ -341,6 +401,12 @@ export const threeCompletedMissions: Order = {
             pilot: 'Alex Rodriguez',
             completionDate: new Date(),
             performance: 'excellent',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
         {
             id: '8',
@@ -349,6 +415,12 @@ export const threeCompletedMissions: Order = {
             pilot: 'Alex Rodriguez',
             completionDate: new Date(),
             performance: 'excellent',
+            coordinates: [
+                { lat: 47.278, lng: 21.231 },
+                { lat: 47.278, lng: 21.2325 },
+                { lat: 47.277, lng: 21.2325 },
+                { lat: 47.277, lng: 21.231 },
+            ],
         },
     ],
     messages: [],
