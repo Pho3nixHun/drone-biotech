@@ -11,7 +11,7 @@ html {
 
 @layer base {
     h1 {
-        @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;
+        @apply text-left font-black text-2xl text-black sm:text-3xl lg:text-4xl md:w-2/3 w-full transition-all;
     }
 
     h2 {
