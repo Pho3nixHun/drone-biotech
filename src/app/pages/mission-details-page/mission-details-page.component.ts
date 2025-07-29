@@ -18,6 +18,9 @@ import { firstValueFrom } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectUser } from '@stores/auth/auth.selector';
 import { SectionCardComponent } from '@components/section-card/section-card.component';
+import { DetailsItemListComponent } from '@components/details-item-list/details-item-list.component';
+import { DetailsItemComponent } from '@components/details-item-list/components/details-item/details-item.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -34,6 +37,9 @@ import { SectionCardComponent } from '@components/section-card/section-card.comp
         AvatarComponent,
         NgOptimizedImage,
         SectionCardComponent,
+        DetailsItemListComponent,
+        DetailsItemComponent,
+        MatIconModule,
     ],
     providers: [missionDetailsPageConfig],
     templateUrl: './mission-details-page.component.html',

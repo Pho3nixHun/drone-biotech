@@ -1,5 +1,9 @@
 import { Rel } from '@interfaces/with-link.interface';
-import { MissionDetailsPageVM } from './mission-details-page.model';
+import {
+    AvatarBackgroundColor,
+    MissionDetailsPageVM,
+} from './mission-details-page.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 import { CSSStyles } from '@components/avatar/avatar.model';
 
 export const missionDetailsPageDefaultVM: MissionDetailsPageVM = {
@@ -33,6 +37,76 @@ export const missionDetailsPageDefaultVM: MissionDetailsPageVM = {
                 { lat: 47.24273203607437, lng: 21.17827083349036 },
             ],
             entryPoint: { lat: 47.237, lng: 21.17827083349036 },
+        },
+    },
+    detailsSectionCardXVM: {
+        titleKey: 'MissionDetailsPage.details.title',
+        detailsItemListXVM: {
+            detailsItemXVMs: [
+                {
+                    avatarXVM: {
+                        backgroundColor: AvatarBackgroundColor.DATE,
+                        matIconName: MatIcon.CALENDAR_MONTH,
+                    },
+                    labelKey: 'MissionDetailsPage.details.item.dateLabel',
+                    value: {
+                        type: 'withValueKey',
+                        key: 'MissionDetailsPage.details.item.dateValue',
+                        params: { date: new Date() },
+                    },
+                },
+                {
+                    avatarXVM: {
+                        backgroundColor: AvatarBackgroundColor.AREA,
+                        matIconName: MatIcon.CROP_FREE,
+                    },
+                    labelKey:
+                        'MissionDetailsPage.details.item.targetAreaSizeInHaLabel',
+                    value: {
+                        type: 'withValueKey',
+                        key: 'MissionDetailsPage.details.item.targetAreaSizeInHaValue',
+                        params: {
+                            size: 21,
+                        },
+                    },
+                },
+                {
+                    avatarXVM: {
+                        backgroundColor: AvatarBackgroundColor.DOSE,
+                        matIconName: MatIcon.WATER_DROP,
+                    },
+                    labelKey: 'MissionDetailsPage.details.item.totalDoseLabel',
+                    value: {
+                        type: 'withValueKey',
+                        key: 'MissionDetailsPage.details.item.totalDoseValue',
+                        params: { count: 30 },
+                    },
+                },
+                {
+                    avatarXVM: {
+                        backgroundColor: AvatarBackgroundColor.DISTANCE,
+                        matIconName: MatIcon.LOCATION_ON,
+                    },
+                    labelKey:
+                        'MissionDetailsPage.details.item.distanceFromSiteLabel',
+                    value: {
+                        type: 'withValueKey',
+                        key: 'MissionDetailsPage.details.item.distanceFromSiteValue',
+                        params: { distance: 27.3 },
+                    },
+                },
+                {
+                    avatarXVM: {
+                        backgroundColor: AvatarBackgroundColor.COMMENT,
+                        matIconName: MatIcon.CHAT,
+                    },
+                    labelKey: 'MissionDetailsPage.details.item.commentLabel',
+                    value: {
+                        type: 'withoutValueKey',
+                        value: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt necessitatibus provident vel tempora fugit error, iusto sequi praesentium similique tempore amet, eaque perferendis voluptates incidunt ex inventore quidem eius fugiat.',
+                    },
+                },
+            ],
         },
     },
     messagesSectionCardXVM: {

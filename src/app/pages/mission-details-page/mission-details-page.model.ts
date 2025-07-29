@@ -4,6 +4,8 @@ import { WithTitle } from '@interfaces/with-title.interface';
 import { Coordinates } from '@stores/location/location.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { MessageItemListXVM } from '@components/message-item-list/message-item-list.model';
+import { Value } from '@interfaces/with-value';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 interface ButtonXVM extends WithTextNode, WithLink {}
 
@@ -36,9 +38,37 @@ interface MessagesSectionCardXVM extends SectionCardVM {
     messageItemListXVM: MessageItemListXVM;
 }
 
+export enum AvatarBackgroundColor {
+    AREA = '*:bg-blue-200',
+    COMMENT = '*:bg-yellow-200',
+    DATE = '*:bg-purple-200',
+    DISTANCE = '*:bg-red-200',
+    DOSE = '*:bg-green-200',
+}
+
+interface AvatarXVM {
+    backgroundColor: AvatarBackgroundColor;
+    matIconName: MatIcon;
+}
+
+interface DetailsItemXVM {
+    avatarXVM: AvatarXVM;
+    labelKey: string;
+    value: Value;
+}
+
+interface DetailsItemListXVM {
+    detailsItemXVMs: DetailsItemXVM[];
+}
+
+interface DetailsSectionCardXVM extends SectionCardVM {
+    detailsItemListXVM: DetailsItemListXVM;
+}
+
 export interface MissionDetailsPageVM {
     pageLayoutXVM: PageLayoutXVM;
     headerXVM: HeaderXVM;
     mapFormControlXVM: MapFormControlXVM;
     messagesSectionCardXVM: MessagesSectionCardXVM;
+    detailsSectionCardXVM: DetailsSectionCardXVM;
 }

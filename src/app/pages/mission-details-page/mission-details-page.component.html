@@ -33,6 +33,45 @@
 
         <app-map-form-control [formControl]="mapControl" />
 
+        <app-section-card
+            [vm]="vm.detailsSectionCardXVM"
+            class="w-full lg:w-1/2"
+        >
+            <app-details-item-list>
+                @for (
+                    detailsItemXVM of vm.detailsSectionCardXVM
+                        .detailsItemListXVM.detailsItemXVMs;
+                    track $index
+                ) {
+                    <app-details-item>
+                        <app-avatar
+                            [ngClass]="detailsItemXVM.avatarXVM.backgroundColor"
+                        >
+                            <mat-icon>{{
+                                detailsItemXVM.avatarXVM.matIconName
+                            }}</mat-icon>
+                        </app-avatar>
+
+                        <h4 class="text-sm text-gray-600">
+                            {{ t(detailsItemXVM.labelKey) }}
+                        </h4>
+                        <p>
+                            @if (detailsItemXVM.value.type === 'withValueKey') {
+                                {{
+                                    t(
+                                        detailsItemXVM.value.key,
+                                        detailsItemXVM.value.params
+                                    )
+                                }}
+                            } @else {
+                                {{ detailsItemXVM.value.value }}
+                            }
+                        </p>
+                    </app-details-item>
+                }
+            </app-details-item-list>
+        </app-section-card>
+
         <app-section-card [vm]="vm.messagesSectionCardXVM">
             <app-message-item-list>
                 @for (
