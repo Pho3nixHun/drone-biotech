@@ -1,8 +1,8 @@
-import { Rel } from '@interfaces/with-link.interface';
 import {
     AvatarBackgroundColor,
     MissionDetailsPageVM,
 } from './mission-details-page.model';
+import { Rel } from '@interfaces/with-link.interface';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 import { CSSStyles } from '@components/avatar/avatar.model';
 
@@ -37,6 +37,47 @@ export const missionDetailsPageDefaultVM: MissionDetailsPageVM = {
                 { lat: 47.24273203607437, lng: 21.17827083349036 },
             ],
             entryPoint: { lat: 47.237, lng: 21.17827083349036 },
+        },
+    },
+    suppliesSectionCardXVM: {
+        titleKey: 'MissionDetailsPage.supplies.title',
+        infoPanelXVM: {
+            infoItemListXVM: {
+                infoItemXVMs: [
+                    {
+                        name: 'Herbicide solution A',
+                        value: {
+                            type: 'withValueKey',
+                            key: 'MissionDetailsPage.supplies.item.litre.value',
+                            params: { litre: 114.5 },
+                        },
+                    },
+                    {
+                        name: 'Battery packs',
+                        value: {
+                            type: 'withValueKey',
+                            key: 'MissionDetailsPage.supplies.item.unit.value',
+                            params: { unit: 4 },
+                        },
+                    },
+                    {
+                        name: 'Spray nozzles',
+                        value: {
+                            type: 'withValueKey',
+                            key: 'MissionDetailsPage.supplies.item.unit.value',
+                            params: { unit: 8 },
+                        },
+                    },
+                    {
+                        name: 'Calibration kit',
+                        value: {
+                            type: 'withValueKey',
+                            key: 'MissionDetailsPage.supplies.item.unit.value',
+                            params: { unit: 1 },
+                        },
+                    },
+                ],
+            },
         },
     },
     detailsSectionCardXVM: {

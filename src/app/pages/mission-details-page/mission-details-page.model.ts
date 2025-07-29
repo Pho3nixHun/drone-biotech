@@ -65,10 +65,28 @@ interface DetailsSectionCardXVM extends SectionCardVM {
     detailsItemListXVM: DetailsItemListXVM;
 }
 
+interface InfoItemXVM {
+    name: string;
+    value: Value;
+}
+
+interface InfoItemListXVM {
+    infoItemXVMs: InfoItemXVM[];
+}
+
+interface InfoPanelXVM {
+    infoItemListXVM: InfoItemListXVM;
+}
+
+interface SuppliesSectionCardXVM extends SectionCardVM {
+    infoPanelXVM: InfoPanelXVM;
+}
+
 export interface MissionDetailsPageVM {
     pageLayoutXVM: PageLayoutXVM;
     headerXVM: HeaderXVM;
     mapFormControlXVM: MapFormControlXVM;
     messagesSectionCardXVM: MessagesSectionCardXVM;
     detailsSectionCardXVM: DetailsSectionCardXVM;
+    suppliesSectionCardXVM: SuppliesSectionCardXVM;
 }
