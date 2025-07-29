@@ -218,5 +218,8 @@
     "MissionDetailsPage.details.item.distanceFromSiteLabel": "Távolság a helyszíntől",
     "MissionDetailsPage.details.item.distanceFromSiteValue": "{distance} km",
     "MissionDetailsPage.details.item.commentLabel": "Megjegyzés",
-    "MissionDetailsPage.details.title": "Küldetés részletei"
+    "MissionDetailsPage.details.title": "Küldetés részletei",
+    "MissionDetailsPage.supplies.item.unit.value": "{unit} egység",
+    "MissionDetailsPage.supplies.item.litre.value": "{litre} liter",
+    "MissionDetailsPage.supplies.title": "Szükséges felszerelések"
 }

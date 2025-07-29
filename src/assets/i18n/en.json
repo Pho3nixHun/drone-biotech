@@ -218,5 +218,8 @@
     "MissionDetailsPage.details.item.distanceFromSiteLabel": "Distance from site",
     "MissionDetailsPage.details.item.distanceFromSiteValue": "{distance} km",
     "MissionDetailsPage.details.item.commentLabel": "Comment",
-    "MissionDetailsPage.details.title": "Mission details"
+    "MissionDetailsPage.details.title": "Mission details",
+    "MissionDetailsPage.supplies.item.unit.value": "{unit} units",
+    "MissionDetailsPage.supplies.item.litre.value": "{litre} litres",
+    "MissionDetailsPage.supplies.title": "Required supplies"
 }
