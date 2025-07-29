@@ -208,5 +208,15 @@
     "MissionDetailsPage.messages.role.pilot": "Pilot",
     "MissionDetailsPage.messages.role.office": "Office",
     "MissionDetailsPage.messages.title": "Messages",
-    "MissionDetailsPage.messages.sendMessageButtonText": "Send"
+    "MissionDetailsPage.messages.sendMessageButtonText": "Send",
+    "MissionDetailsPage.details.item.dateLabel": "Scheduled date",
+    "MissionDetailsPage.details.item.dateValue": "{ date, date, long } { date, time, short }",
+    "MissionDetailsPage.details.item.targetAreaSizeInHaLabel": "Target area size",
+    "MissionDetailsPage.details.item.targetAreaSizeInHaValue": "{size} hectares",
+    "MissionDetailsPage.details.item.totalDoseLabel": "Total dose",
+    "MissionDetailsPage.details.item.totalDoseValue": "{count} liters",
+    "MissionDetailsPage.details.item.distanceFromSiteLabel": "Distance from site",
+    "MissionDetailsPage.details.item.distanceFromSiteValue": "{distance} km",
+    "MissionDetailsPage.details.item.commentLabel": "Comment",
+    "MissionDetailsPage.details.title": "Mission details"
 }

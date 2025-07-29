@@ -208,5 +208,15 @@
     "MissionDetailsPage.messages.role.pilot": "Pilóta",
     "MissionDetailsPage.messages.role.office": "Iroda",
     "MissionDetailsPage.messages.title": "Üzenetek",
-    "MissionDetailsPage.messages.sendMessageButtonText": "Küldés"
+    "MissionDetailsPage.messages.sendMessageButtonText": "Küldés",
+    "MissionDetailsPage.details.item.dateLabel": "Ütemezett dátum",
+    "MissionDetailsPage.details.item.dateValue": "{ date, date, long } { date, time, short }",
+    "MissionDetailsPage.details.item.targetAreaSizeInHaLabel": "Célterület mérete",
+    "MissionDetailsPage.details.item.targetAreaSizeInHaValue": "{size} hektár",
+    "MissionDetailsPage.details.item.totalDoseLabel": "Teljes dózis",
+    "MissionDetailsPage.details.item.totalDoseValue": "{count} liter",
+    "MissionDetailsPage.details.item.distanceFromSiteLabel": "Távolság a helyszíntől",
+    "MissionDetailsPage.details.item.distanceFromSiteValue": "{distance} km",
+    "MissionDetailsPage.details.item.commentLabel": "Megjegyzés",
+    "MissionDetailsPage.details.title": "Küldetés részletei"
 }
