@@ -7,16 +7,17 @@ import { MapInitializerDirective } from './map-initializer.directive';
     template: `
         <div
             appMapInitializer
-            [signal]="mapSignal"
+            [mapSignal]="mapSignal"
             [mapOptions]="mapOptions"
+            [mapCenter]="mapCenter"
         ></div>
     `,
 })
 class TestHostComponent {
     mapSignal = signal<google.maps.Map | null>(null);
+    mapCenter = { center: { lat: 1, lng: 1 } };
     mapOptions: google.maps.MapOptions = {
         zoom: 5,
-        center: { lat: 1, lng: 1 },
     };
 }
 
@@ -44,5 +45,6 @@ describe('MapInitializerDirective', () => {
         const map = component.mapSignal();
         expect(map).toBeTruthy();
         expect(map?.setOptions).toHaveBeenCalledWith(component.mapOptions);
+        expect(map?.setCenter).toHaveBeenCalledWith(component.mapCenter);
     });
 });
