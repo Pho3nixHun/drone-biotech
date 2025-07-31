@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StatusComponent } from './status.component';
 import { Component } from '@angular/core';
-import { StatusVM } from './status.model';
+import { StatusVM, StatusXVMStyle } from './status.model';
 
 @Component({
     imports: [StatusComponent],
@@ -10,7 +10,7 @@ import { StatusVM } from './status.model';
 })
 class TestHostComponent {
     vm: StatusVM = {
-        styles: 'text-blue-500',
+        styles: StatusXVMStyle.ACTIVE,
     };
 }
 

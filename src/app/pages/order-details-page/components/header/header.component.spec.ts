@@ -4,7 +4,7 @@ import { HeaderComponent } from './header.component';
 import { Component } from '@angular/core';
 import { StatusComponent } from '@components/status/status.component';
 import { SummaryListComponent } from '@components/summary-list/summary-list.component';
-import { StatusVM } from '@components/status/status.model';
+import { StatusVM, StatusXVMStyle } from '@components/status/status.model';
 
 @Component({
     imports: [HeaderComponent, StatusComponent, SummaryListComponent],
@@ -18,7 +18,7 @@ import { StatusVM } from '@components/status/status.model';
 })
 class TestHostComponent {
     vm: StatusVM = {
-        styles: 'text-blue-500',
+        styles: StatusXVMStyle.ACTIVE,
     };
 }
 

@@ -10,4 +10,4 @@ interface WithoutValueKey {
     value: string | number | Date;
 }
 
-export type Value = WithValueKey | WithoutValueKey;
+export type ValueVM = WithValueKey | WithoutValueKey;

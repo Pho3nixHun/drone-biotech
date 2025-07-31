@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValueComponent should render the template correctly if the vm contains valueKey 1`] = `
+<div
+  id="root1"
+  ng-version="19.2.9"
+>
+  <div>
+      
+    <!--container-->
+    <!--container-->
+  </div>
+  <!--container-->
+</div>
+`;
+
+exports[`ValueComponent should render the template correctly if the vm does not contain valueKey 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <div>
+    <!--container-->
+     12 
+    <!--container-->
+  </div>
+  <!--container-->
+</div>
+`;

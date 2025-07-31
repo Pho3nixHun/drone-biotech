@@ -9,8 +9,8 @@ exports[`StatusComponent should render the template 1`] = `
     ng-reflect-vm="[object Object]"
   >
     <p
-      class="font-medium rounded-full w-max px-3 py-1 flex items-center text-blue-500"
-      ng-reflect-ng-class="text-blue-500"
+      class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
+      ng-reflect-ng-class="bg-green-200 text-green-800"
     >
       Status
     </p>
