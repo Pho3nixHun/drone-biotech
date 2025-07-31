@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoogleMapComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-google-map
+    ng-reflect-map-signal="[Signal: null]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      appmapinitializer=""
+      ng-reflect-map-center="[object Object]"
+      ng-reflect-map-options="[object Object]"
+      ng-reflect-map-signal="[Model Signal: [Signal: null]]"
+      style="height: 500px;"
+    />
+  </app-google-map>
+</div>
+`;

@@ -1,5 +1,5 @@
 import { Directive, effect, input, WritableSignal } from '@angular/core';
-import { TargetAreaXVM } from 'src/app/pages/order-details-page/components/google-map/google-map.model';
+import { TargetAreaXVM } from 'src/app/pages/order-details-page/order-details-page.model';
 
 @Directive({
     selector: '[appDrawTargetAreas]',
