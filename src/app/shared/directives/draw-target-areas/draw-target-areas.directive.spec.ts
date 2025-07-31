@@ -2,7 +2,7 @@ import { DrawTargetAreasDirective } from './draw-target-areas.directive';
 import { Component, input, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { TargetAreaXVM } from 'src/app/pages/order-details-page/components/google-map/google-map.model';
+import { TargetAreaXVM } from 'src/app/pages/order-details-page/order-details-page.model';
 
 @Component({
     imports: [DrawTargetAreasDirective],
