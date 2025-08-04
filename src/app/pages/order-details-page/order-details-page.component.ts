@@ -1,7 +1,11 @@
+import {
+    ConfirmationDialogReason,
+    ConfirmationDialogVM,
+} from '@components/confirmation-dialog/confirmation-dialog.model';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Component, effect, inject } from '@angular/core';
-import { NgClass, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
+import { Component, inject, signal } from '@angular/core';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { firstValueFrom } from 'rxjs';
 import { Store } from '@ngrx/store';
@@ -22,12 +26,11 @@ import { MessageItemListComponent } from '@components/message-item-list/message-
 import { MessageItemComponent } from '@components/message-item/message-item.component';
 import { emptyStringValidator } from '@utils/empty-string.validator';
 import { OrderDetailsPageService } from './order-details-page.service';
-import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
-import { TargetArea } from './order-details-page.model';
-import {
-    ConfirmationDialogReason,
-    ConfirmationDialogVM,
-} from '@components/confirmation-dialog/confirmation-dialog.model';
+import { GoogleMapComponent } from '@components/google-map/google-map.component';
+import { DrawTargetAreasDirective } from '@components/google-map/directives/draw-target-areas/draw-target-areas.directive';
+import { ValueComponent } from '@components/value/value.component';
+import { Status } from './order-details-page.model';
+import { Avatar } from '@components/avatar/avatar.model';
 
 @Component({
     selector: 'app-order-details-page',
@@ -44,47 +47,37 @@ import {
         InfoPanelComponent,
         InfoItemListComponent,
         InfoItemComponent,
-        NgTemplateOutlet,
         ReactiveFormsModule,
         NgClass,
         AvatarComponent,
         NgOptimizedImage,
-        NgClass,
-        MapFormControlComponent,
+        GoogleMapComponent,
+        DrawTargetAreasDirective,
+        ValueComponent,
     ],
     templateUrl: './order-details-page.component.html',
 })
 export class OrderDetailsPageComponent {
+    private readonly store = inject(Store);
     private readonly fb = inject(FormBuilder);
     private readonly dialogService = inject(DialogService);
     private readonly orderDetailsPageService = inject(OrderDetailsPageService);
-    private readonly store = inject(Store);
 
     protected readonly vm = toSignal(this.orderDetailsPageService.getVM());
+
+    protected readonly drawnPolygons = signal<google.maps.Polygon[] | null>(
+        null
+    );
 
     protected readonly messageFormControl = this.fb.control('', [
         Validators.required,
         emptyStringValidator(),
     ]);
 
-    protected readonly targetAreasControl = this.fb.control<
-        TargetArea[] | null
-    >(null);
-
-    private readonly setTargetAresControlEffect = effect(() => {
-        const vm = this.vm();
-        if (!vm) return;
-        this.targetAreasControl.setValue(
-            vm.overviewSectionCardXVM.mapFormControlXVM.targetAreas
-        );
-    });
-
     protected async onSendMessageClick() {
-        if (this.messageFormControl.invalid) return;
-
         const message = this.messageFormControl.value;
 
-        if (!message) return;
+        if (this.messageFormControl.invalid || !message) return;
 
         const sender = await firstValueFrom(this.store.select(selectUser));
 
@@ -108,7 +101,10 @@ export class OrderDetailsPageComponent {
             this.dialogService.create(vm, ConfirmationDialogComponent).result$
         );
 
-        if (reason.reasonType === 'submit')
-            return this.orderDetailsPageService.closeOrder();
+        if (reason.reasonType === 'cancel') return;
+        return this.orderDetailsPageService.closeOrder();
     }
+
+    protected readonly Status = Status;
+    protected readonly Avatar = Avatar;
 }

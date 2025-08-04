@@ -1,13 +1,4372 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
+exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in an info panel in the details section 1`] = `
 <div
-  id="root0"
+  id="root21"
   ng-version="19.2.9"
 >
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in the overview 1`] = `
+<div
+  id="root15"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
   <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 info panel is provided in the details section 1`] = `
+<div
+  id="root18"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 message item is provided 1`] = `
+<div
+  id="root23"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 summary is provided in the header 1`] = `
+<div
+  id="root12"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 info item is provided in an info panel in the details section 1`] = `
+<div
+  id="root22"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <app-info-panel
+              class="lg:w-1/2 w-full"
+            >
+              <div
+                class="flex flex-col space-y-4"
+              >
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
+                  >
+                    <app-info-item>
+                      <div
+                        class="flex flex-row"
+                      >
+                        <dt
+                          class="text-gray-600 w-32"
+                        >
+                           tit1 
+                        </dt>
+                        <dd>
+                          <strong
+                            class="font-medium"
+                          >
+                            <app-value
+                              ng-reflect-vm="[object Object]"
+                            >
+                              <div>
+                                <!--container-->
+                                 1 
+                                <!--container-->
+                              </div>
+                              <!--container-->
+                            </app-value>
+                          </strong>
+                        </dd>
+                      </div>
+                    </app-info-item>
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
+              </div>
+            </app-info-panel>
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 info item is provided in the overview 1`] = `
+<div
+  id="root16"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <app-info-item
+                class="*:flex-col"
+              >
+                <div
+                  class="flex flex-row"
+                >
+                  <dt
+                    class="text-gray-700"
+                  >
+                     info1 
+                  </dt>
+                  <dd
+                    class="font-semibold"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </dd>
+                </div>
+              </app-info-item>
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 info panel is provided in the details section 1`] = `
+<div
+  id="root19"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <app-info-panel
+              class="lg:w-1/2 w-full"
+            >
+              <div
+                class="flex flex-col space-y-4"
+              >
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
+                  >
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
+              </div>
+            </app-info-panel>
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 message item is provided 1`] = `
+<div
+  id="root24"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <app-message-item>
+                <div
+                  class="w-full flex flex-row space-x-3"
+                >
+                  <app-avatar
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
+                  >
+                    <div
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+                    >
+                       SJ 
+                    </div>
+                  </app-avatar>
+                  <!--container-->
+                  <!--container-->
+                  <div
+                    class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
+                  >
+                    <time
+                      class="text-gray-600 text-sm"
+                    >
+                      
+                    </time>
+                    <h3
+                      class="font-medium"
+                    >
+                        
+                    </h3>
+                    <p
+                      class="text-gray-700"
+                    >
+                       Please update me on the status of the East Meadow mission. Do we need to prepare access to any additional areas? 
+                    </p>
+                  </div>
+                </div>
+              </app-message-item>
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 summary is provided in the header 1`] = `
+<div
+  id="root13"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     sum1 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         val 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+              </app-summary>
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 info item is provided in the overview 1`] = `
+<div
+  id="root17"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <app-info-item
+                class="*:flex-col"
+              >
+                <div
+                  class="flex flex-row"
+                >
+                  <dt
+                    class="text-gray-700"
+                  >
+                     info1 
+                  </dt>
+                  <dd
+                    class="font-semibold"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </dd>
+                </div>
+              </app-info-item>
+              <app-info-item
+                class="*:flex-col"
+              >
+                <div
+                  class="flex flex-row"
+                >
+                  <dt
+                    class="text-gray-700"
+                  >
+                     info2 
+                  </dt>
+                  <dd
+                    class="font-semibold"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         2 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </dd>
+                </div>
+              </app-info-item>
+              <app-info-item
+                class="*:flex-col"
+              >
+                <div
+                  class="flex flex-row"
+                >
+                  <dt
+                    class="text-gray-700"
+                  >
+                     info3 
+                  </dt>
+                  <dd
+                    class="font-semibold"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         3 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </dd>
+                </div>
+              </app-info-item>
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 info panel is provided in the details section 1`] = `
+<div
+  id="root20"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <app-info-panel
+              class="lg:w-1/2 w-full"
+            >
+              <div
+                class="flex flex-col space-y-4"
+              >
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
+                  >
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
+              </div>
+            </app-info-panel>
+            <app-info-panel
+              class="lg:w-1/2 w-full"
+            >
+              <div
+                class="flex flex-col space-y-4"
+              >
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
+                  >
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
+              </div>
+            </app-info-panel>
+            <app-info-panel
+              class="lg:w-1/2 w-full"
+            >
+              <div
+                class="flex flex-col space-y-4"
+              >
+                <app-info-item-list>
+                  <dl
+                    class="text-sm flex flex-col space-y-2"
+                  >
+                    <!--container-->
+                  </dl>
+                </app-info-item-list>
+              </div>
+            </app-info-panel>
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 summary is provided in the header 1`] = `
+<div
+  id="root14"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     sum1 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         val 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+              </app-summary>
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     sum2 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         val 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+              </app-summary>
+              <app-summary>
+                <div
+                  class="flex flex-row space-x-1"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                     sum3 
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         val 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+              </app-summary>
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 5 message item is provided 1`] = `
+<div
+  id="root25"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <app-message-item>
+                <div
+                  class="w-full flex flex-row space-x-3"
+                >
+                  <app-avatar
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
+                  >
+                    <div
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+                    >
+                       SJ 
+                    </div>
+                  </app-avatar>
+                  <!--container-->
+                  <!--container-->
+                  <div
+                    class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
+                  >
+                    <time
+                      class="text-gray-600 text-sm"
+                    >
+                      
+                    </time>
+                    <h3
+                      class="font-medium"
+                    >
+                        
+                    </h3>
+                    <p
+                      class="text-gray-700"
+                    >
+                       Please update me on the status of the East Meadow mission. Do we need to prepare access to any additional areas? 
+                    </p>
+                  </div>
+                </div>
+              </app-message-item>
+              <app-message-item>
+                <div
+                  class="w-full flex flex-row space-x-3"
+                >
+                  <!--container-->
+                  <app-avatar
+                    class="text-white *:bg-black"
+                  >
+                    <div
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+                    >
+                      <img
+                        alt="OW"
+                        class="object-contain rounded-full"
+                        fetchpriority="auto"
+                        fill=""
+                        loading="lazy"
+                        ng-img="true"
+                        ng-reflect-fill=""
+                        ng-reflect-ng-src="assets/farming.jpg"
+                        sizes="auto, 100vw"
+                        src="assets/farming.jpg"
+                        style="position: absolute; width: 100%; height: 100%; inset: 0;"
+                      />
+                    </div>
+                  </app-avatar>
+                  <!--container-->
+                  <div
+                    class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
+                  >
+                    <time
+                      class="text-gray-600 text-sm"
+                    >
+                      
+                    </time>
+                    <h3
+                      class="font-medium"
+                    >
+                        
+                    </h3>
+                    <p
+                      class="text-gray-700"
+                    >
+                       East Meadow mission is scheduled for April 10th. All preparations are on track. We'll need the eastern gate unlocked for equipment access. The West Orchard and Central Vineyard missions were completed successfully. 
+                    </p>
+                  </div>
+                </div>
+              </app-message-item>
+              <app-message-item>
+                <div
+                  class="w-full flex flex-row space-x-3"
+                >
+                  <app-avatar
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
+                  >
+                    <div
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+                    >
+                       SJ 
+                    </div>
+                  </app-avatar>
+                  <!--container-->
+                  <!--container-->
+                  <div
+                    class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
+                  >
+                    <time
+                      class="text-gray-600 text-sm"
+                    >
+                      
+                    </time>
+                    <h3
+                      class="font-medium"
+                    >
+                        
+                    </h3>
+                    <p
+                      class="text-gray-700"
+                    >
+                       Thank you for the update. I've arranged for the eastern gate to be unlocked on the 10th. Please share the completion reports for the West Orchard and Central Vineyard missions when available. 
+                    </p>
+                  </div>
+                </div>
+              </app-message-item>
+              <app-message-item>
+                <div
+                  class="w-full flex flex-row space-x-3"
+                >
+                  <!--container-->
+                  <app-avatar
+                    class="text-white *:bg-black"
+                  >
+                    <div
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+                    >
+                      <img
+                        alt="OW"
+                        class="object-contain rounded-full"
+                        fetchpriority="auto"
+                        fill=""
+                        loading="lazy"
+                        ng-img="true"
+                        ng-reflect-fill=""
+                        ng-reflect-ng-src="assets/farming.jpg"
+                        sizes="auto, 100vw"
+                        src="assets/farming.jpg"
+                        style="position: absolute; width: 100%; height: 100%; inset: 0;"
+                      />
+                    </div>
+                  </app-avatar>
+                  <!--container-->
+                  <div
+                    class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
+                  >
+                    <time
+                      class="text-gray-600 text-sm"
+                    >
+                      
+                    </time>
+                    <h3
+                      class="font-medium"
+                    >
+                        
+                    </h3>
+                    <p
+                      class="text-gray-700"
+                    >
+                       Understood. Road access to Upper Hill will be cleared by April 11th. Please notify if weather conditions affect scheduling. 
+                    </p>
+                  </div>
+                </div>
+              </app-message-item>
+              <app-message-item>
+                <div
+                  class="w-full flex flex-row space-x-3"
+                >
+                  <app-avatar
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
+                  >
+                    <div
+                      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+                    >
+                       SJ 
+                    </div>
+                  </app-avatar>
+                  <!--container-->
+                  <!--container-->
+                  <div
+                    class="bg-slate-100 w-full flex flex-col space-y-1 justify-between p-3 rounded-lg"
+                  >
+                    <time
+                      class="text-gray-600 text-sm"
+                    >
+                      
+                    </time>
+                    <h3
+                      class="font-medium"
+                    >
+                        
+                    </h3>
+                    <p
+                      class="text-gray-700"
+                    >
+                       Noted. Reports are being finalized and will be shared by tomorrow. Also, confirming Upper Hill mission planned for April 12—please ensure road access is cleared. 
+                    </p>
+                  </div>
+                </div>
+              </app-message-item>
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the button is not visible in the header 1`] = `
+<div
+  id="root10"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the button is not visible in the header 2`] = `
+<div
+  id="root11"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the button is visible in the header 1`] = `
+<div
+  id="root9"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the close order button is disabled 1`] = `
+<div
+  id="root26"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the close order button is enabled 1`] = `
+<div
+  id="root27"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the messageFormControl is invalid so the button will be disabled 1`] = `
+<div
+  id="root8"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if the messageFormControl is valid so the button will be enabled 1`] = `
+<div
+  id="root7"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-valid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-primary"
+              ng-reflect-ng-class="btn-primary"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>

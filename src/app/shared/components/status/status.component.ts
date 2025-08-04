@@ -1,12 +1,8 @@
-import { Component, input } from '@angular/core';
-import { StatusVM } from './status.model';
-import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-status',
-    imports: [NgClass],
+    imports: [],
     templateUrl: './status.component.html',
 })
-export class StatusComponent {
-    public vm = input.required<StatusVM>();
-}
+export class StatusComponent {}
