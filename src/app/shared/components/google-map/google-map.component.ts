@@ -1,4 +1,4 @@
-import { Component, input, model } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { MapInitializerDirective } from '@directives/map-initializer/map-initializer.directive';
 import { GoogleMapVM } from './google-map.model';
 
@@ -9,5 +9,5 @@ import { GoogleMapVM } from './google-map.model';
 })
 export class GoogleMapComponent {
     public readonly vm = input.required<GoogleMapVM>();
-    public readonly mapSignal = model.required<google.maps.Map | null>();
+    public readonly mapSignal = signal<google.maps.Map | null>(null);
 }
