@@ -30,6 +30,7 @@
             "@utils/*": ["src/app/shared/utils/*"],
             "@guards/*": ["src/app/shared/guards/*"],
             "@services/*": ["src/app/shared/services/*"],
+            "@providers/*": ["src/app/shared/providers/*"],
             "@stores/*": ["src/app/stores/*"]
         }
     },
