@@ -1,26 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GoogleMapComponent } from './google-map.component';
-import { Component, signal } from '@angular/core';
-import { GoogleMapHeight, GoogleMapVM } from './google-map.model';
+import { Component } from '@angular/core';
+import { GoogleMapVM } from './google-map.model';
+import { By } from '@angular/platform-browser';
 
 @Component({
     imports: [GoogleMapComponent],
-    template: ` <app-google-map [vm]="vm" [mapSignal]="mapSignal" /> `,
+    template: ` <app-google-map [vm]="vm" /> `,
 })
 class TestHostComponent {
     vm: GoogleMapVM = {
         center: { lat: 1, lng: 1 },
-        height: GoogleMapHeight.FIVE_HUNDRED_PX,
         mapOptions: {},
     };
-
-    mapSignal = signal<google.maps.Map | null>(null);
 }
 
 describe('GoogleMapComponent', () => {
-    let component: TestHostComponent;
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
+    let component: GoogleMapComponent;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
@@ -28,7 +26,9 @@ describe('GoogleMapComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);
-        component = fixture.componentInstance;
+        component = fixture.debugElement.query(
+            By.directive(GoogleMapComponent)
+        ).componentInstance;
         compiled = fixture.debugElement.nativeElement;
     });
 
@@ -44,7 +44,7 @@ describe('GoogleMapComponent', () => {
     });
 
     // Unit testing
-    it('should propagate back the initialized map', () => {
+    it('should set the mapSignal with a map', () => {
         // There is no need to arrange
 
         // Act
