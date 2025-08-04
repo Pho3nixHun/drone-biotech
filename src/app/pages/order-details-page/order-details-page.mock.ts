@@ -1,7 +1,5 @@
-import { StatusXVMStyle } from '@components/status/status.model';
-import { GoogleMapHeight } from '../../shared/components/google-map/google-map.model';
-import { OrderDetailsPageVM } from './order-details-page.model';
-import { AvatarXVMColors } from '@components/avatar/avatar.model';
+import { OrderDetailsPageVM, Status } from './order-details-page.model';
+import { Avatar } from '@components/avatar/avatar.model';
 
 export const orderDetailsPageVM: OrderDetailsPageVM = {
     headerXVM: {
@@ -12,7 +10,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: 'OrderDetailsPage.header.status.active',
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [
@@ -184,7 +182,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             ],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -302,7 +299,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: 'OrderDetailsPage.role.customer',
@@ -330,7 +327,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: 'OrderDetailsPage.role.customer',
@@ -358,7 +355,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: 'OrderDetailsPage.role.customer',
@@ -421,7 +418,7 @@ export const mockVMDefault: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -459,7 +456,6 @@ export const mockVMDefault: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -489,7 +485,7 @@ export const mockVMWithoutTargetAreas: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -527,7 +523,6 @@ export const mockVMWithoutTargetAreas: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -557,7 +552,7 @@ export const mockVMWithTargetAreas: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -595,7 +590,6 @@ export const mockVMWithTargetAreas: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -630,7 +624,7 @@ export const mockVMWithEnabledCloseOrderButton: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -668,7 +662,6 @@ export const mockVMWithEnabledCloseOrderButton: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -698,7 +691,7 @@ export const mockVMWithDisabledCloseOrderButton: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -736,7 +729,6 @@ export const mockVMWithDisabledCloseOrderButton: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -766,7 +758,7 @@ export const mockVMWithVisibleAddMissionButton: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -804,7 +796,6 @@ export const mockVMWithVisibleAddMissionButton: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -835,7 +826,7 @@ export const mockVMWithNotVisibleAddMissionButton: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -873,7 +864,6 @@ export const mockVMWithNotVisibleAddMissionButton: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -904,7 +894,7 @@ export const mockVMWithoutSummaryInHeader: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -942,7 +932,6 @@ export const mockVMWithoutSummaryInHeader: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -973,7 +962,7 @@ export const mockVMWithOneSummaryInHeader: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [
@@ -1019,7 +1008,6 @@ export const mockVMWithOneSummaryInHeader: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1050,7 +1038,7 @@ export const mockVMWithThreeSummaryInHeader: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [
@@ -1110,7 +1098,6 @@ export const mockVMWithThreeSummaryInHeader: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1141,7 +1128,7 @@ export const mockVMWithoutInfoItemInOverview: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1179,7 +1166,6 @@ export const mockVMWithoutInfoItemInOverview: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1209,7 +1195,7 @@ export const mockVMWithOneInfoItemInOverview: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1252,7 +1238,6 @@ export const mockVMWithOneInfoItemInOverview: OrderDetailsPageVM = {
             ],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1282,7 +1267,7 @@ export const mockVMWithThreeInfoItemInOverview: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1333,7 +1318,6 @@ export const mockVMWithThreeInfoItemInOverview: OrderDetailsPageVM = {
             ],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1364,7 +1348,7 @@ export const mockVMWithoutInfoPanelInDetails: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1402,7 +1386,6 @@ export const mockVMWithoutInfoPanelInDetails: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1432,7 +1415,7 @@ export const mockVMWithOneInfoPanelInDetails: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1477,7 +1460,6 @@ export const mockVMWithOneInfoPanelInDetails: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1507,7 +1489,7 @@ export const mockVMWithThreeInfoPanelInDetails: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1564,7 +1546,6 @@ export const mockVMWithThreeInfoPanelInDetails: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1594,7 +1575,7 @@ export const mockVMWithoutInfoItemInDetails: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1632,7 +1613,6 @@ export const mockVMWithoutInfoItemInDetails: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1662,7 +1642,7 @@ export const mockVMWithOneInfoItemInDetails: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1715,7 +1695,6 @@ export const mockVMWithOneInfoItemInDetails: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1745,7 +1724,7 @@ export const mockVMWithThreeInfoItemInDetails: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1812,7 +1791,6 @@ export const mockVMWithThreeInfoItemInDetails: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1843,7 +1821,7 @@ export const mockVMWithoutMessageItem: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1881,7 +1859,6 @@ export const mockVMWithoutMessageItem: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1911,7 +1888,7 @@ export const mockVMWithOneMessageItem: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -1949,7 +1926,6 @@ export const mockVMWithOneMessageItem: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -1970,7 +1946,7 @@ export const mockVMWithOneMessageItem: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: '',
@@ -1994,7 +1970,7 @@ export const mockVMWithFiveMessageItem: OrderDetailsPageVM = {
         },
         statusXVM: {
             statusTextKey: enMock.statusText,
-            styles: StatusXVMStyle.ACTIVE,
+            status: Status.ACTIVE,
         },
         summaryListXVM: {
             summaryXVMs: [],
@@ -2032,7 +2008,6 @@ export const mockVMWithFiveMessageItem: OrderDetailsPageVM = {
             missionInfoItemXVMs: [],
         },
         googleMapXVM: {
-            height: GoogleMapHeight.FIVE_HUNDRED_PX,
             center: { lat: 47.277, lng: 21.2345 },
             mapOptions: {
                 mapTypeId: 'roadmap',
@@ -2053,7 +2028,7 @@ export const mockVMWithFiveMessageItem: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: '',
@@ -2081,7 +2056,7 @@ export const mockVMWithFiveMessageItem: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: '',
@@ -2109,7 +2084,7 @@ export const mockVMWithFiveMessageItem: OrderDetailsPageVM = {
                 {
                     avatarXVM: {
                         type: 'withInitials',
-                        colors: AvatarXVMColors.BLUE,
+                        status: Avatar.BLUE,
                         initials: 'SJ',
                     },
                     roleTextKey: '',

@@ -165,16 +165,7 @@ describe('OrderDetailsPageComponent', () => {
         // Assert
         expect(spy).toHaveBeenCalled();
     });
-    // Unit testing
-    it('should set the mapSignal as a map', () => {
-        // Arrange
 
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(component['mapSignal']).toBeTruthy();
-    });
     // Unit testing
     it('should not set the drawnPolygons if there are no target areas', () => {
         // Arrange

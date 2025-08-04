@@ -3,7 +3,7 @@ import { WithImage } from '@interfaces/with-image.interface';
 interface AvatarXVMWithInitials {
     type: 'withInitials';
     initials: string;
-    colors: AvatarXVMColors;
+    status: Avatar;
 }
 
 interface AvatarXVMWithImage extends WithImage {
@@ -12,10 +12,10 @@ interface AvatarXVMWithImage extends WithImage {
 
 export type AvatarXVM = AvatarXVMWithInitials | AvatarXVMWithImage;
 
-export enum AvatarXVMColors {
-    RED = 'text-red-500 *:bg-red-200',
-    GREEN = 'text-green-500 *:bg-green-200',
-    BLUE = 'text-blue-500 *:bg-blue-200',
-    YELLOW = 'text-yellow-500 *:bg-yellow-200',
-    PURPLE = 'text-purple-500 *:bg-purple-200',
+export enum Avatar {
+    RED,
+    GREEN,
+    BLUE,
+    YELLOW,
+    PURPLE,
 }
