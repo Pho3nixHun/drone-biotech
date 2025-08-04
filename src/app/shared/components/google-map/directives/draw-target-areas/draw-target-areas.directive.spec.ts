@@ -2,17 +2,25 @@ import { DrawTargetAreasDirective } from './draw-target-areas.directive';
 import { Component, input, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { GoogleMapComponent } from '@components/google-map/google-map.component';
 import { TargetAreaXVM } from 'src/app/pages/order-details-page/order-details-page.model';
 
 @Component({
-    imports: [DrawTargetAreasDirective],
+    imports: [DrawTargetAreasDirective, GoogleMapComponent],
     template: `
-        <div
+        <app-google-map
+            class="h-96"
             appDrawTargetAreas
-            [mapRef]="mapRef"
             [targetAreas]="targetAreas()"
             [drawnPolygons]="drawnPolygons"
-        ></div>
+            [vm]="{
+                mapOptions: {},
+                center: {
+                    lat: 1,
+                    lng: 1,
+                },
+            }"
+        />
     `,
 })
 class TestHostComponent {
@@ -28,15 +36,19 @@ class TestHostComponent {
 }
 
 describe('DrawTargetAreasDirective', () => {
-    let fixture: ComponentFixture<TestHostComponent>;
     let component: TestHostComponent;
+    let fixture: ComponentFixture<TestHostComponent>;
+    let directive: DrawTargetAreasDirective;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [TestHostComponent],
         });
         fixture = TestBed.createComponent(TestHostComponent);
-        component = fixture.componentInstance;
+        component = fixture.debugElement.componentInstance;
+        directive = fixture.debugElement
+            .query(By.directive(GoogleMapComponent))
+            .injector.get(DrawTargetAreasDirective);
     });
 
     // Unit testing
@@ -47,13 +59,8 @@ describe('DrawTargetAreasDirective', () => {
         // Act
         fixture.detectChanges();
 
-        const directive = fixture.debugElement.query(
-            By.directive(DrawTargetAreasDirective)
-        ).componentInstance;
-
         // Assert
-        expect(directive.targetAreas).toStrictEqual(component.targetAreas);
-        expect(directive.mapRef).toStrictEqual(component.mapRef);
+        expect(directive.targetAreas()).toStrictEqual(component.targetAreas());
     });
 
     // Unit testing
@@ -74,12 +81,8 @@ describe('DrawTargetAreasDirective', () => {
         // Act
         fixture.detectChanges();
 
-        const directive = fixture.debugElement.query(
-            By.directive(DrawTargetAreasDirective)
-        ).componentInstance;
-
         // Assert
-        expect(directive.drawnPolygons()).toBeTruthy();
+        expect(directive.drawnPolygons()()).toBeTruthy();
     });
 
     // Unit testing
@@ -90,11 +93,7 @@ describe('DrawTargetAreasDirective', () => {
         // Act
         fixture.detectChanges();
 
-        const directive = fixture.debugElement.query(
-            By.directive(DrawTargetAreasDirective)
-        ).componentInstance;
-
         // Assert
-        expect(directive.drawnPolygons()).toBeFalsy();
+        expect(directive.drawnPolygons()()).toBeFalsy();
     });
 });

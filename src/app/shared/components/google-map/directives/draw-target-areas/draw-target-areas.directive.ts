@@ -1,17 +1,28 @@
-import { Directive, effect, input, WritableSignal } from '@angular/core';
+import {
+    Directive,
+    effect,
+    inject,
+    input,
+    WritableSignal,
+} from '@angular/core';
+import { GoogleMapComponent } from '@components/google-map/google-map.component';
 import { TargetAreaXVM } from 'src/app/pages/order-details-page/order-details-page.model';
 
 @Directive({
     selector: '[appDrawTargetAreas]',
 })
 export class DrawTargetAreasDirective {
-    public readonly mapRef = input.required<google.maps.Map | null>();
+    private readonly hostComponent = inject(GoogleMapComponent, {
+        optional: true,
+        host: true,
+    });
     public readonly targetAreas = input.required<TargetAreaXVM[] | null>();
     public readonly drawnPolygons =
         input.required<WritableSignal<google.maps.Polygon[] | null>>();
 
     private readonly drawTargetAreasEffect = effect(() => {
-        const map = this.mapRef();
+        if (!this.hostComponent) return;
+        const map = this.hostComponent.mapSignal();
         const targetAreas = this.targetAreas();
 
         if (!map || !targetAreas) return this.drawnPolygons().set(null);
