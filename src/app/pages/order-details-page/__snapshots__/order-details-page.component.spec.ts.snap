@@ -2,7 +2,7 @@
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in an info panel in the details section 1`] = `
 <div
-  id="root22"
+  id="root21"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -25,11 +25,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -64,9 +64,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -74,8 +73,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -186,7 +185,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in the overview 1`] = `
 <div
-  id="root16"
+  id="root15"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -209,11 +208,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -248,9 +247,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -258,8 +256,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -370,7 +368,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info panel is provided in the details section 1`] = `
 <div
-  id="root19"
+  id="root18"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -393,11 +391,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -432,9 +430,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -442,8 +439,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -554,7 +551,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 message item is provided 1`] = `
 <div
-  id="root24"
+  id="root23"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -577,11 +574,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -616,9 +613,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -626,8 +622,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -738,7 +734,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 summary is provided in the header 1`] = `
 <div
-  id="root13"
+  id="root12"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -761,11 +757,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -795,9 +791,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -805,8 +800,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -917,7 +912,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 info item is provided in an info panel in the details section 1`] = `
 <div
-  id="root23"
+  id="root22"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -940,11 +935,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -979,9 +974,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -989,8 +983,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -1143,7 +1137,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 info item is provided in the overview 1`] = `
 <div
-  id="root17"
+  id="root16"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1166,11 +1160,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -1205,9 +1199,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1215,8 +1208,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -1354,7 +1347,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 info panel is provided in the details section 1`] = `
 <div
-  id="root20"
+  id="root19"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1377,11 +1370,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -1416,9 +1409,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1426,8 +1418,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -1553,7 +1545,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 message item is provided 1`] = `
 <div
-  id="root25"
+  id="root24"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1576,11 +1568,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -1615,9 +1607,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1625,8 +1616,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -1680,7 +1671,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
                   class="w-full flex flex-row space-x-3"
                 >
                   <app-avatar
-                    class="*:bg-blue-200 text-blue-500"
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
                   >
                     <div
                       class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
@@ -1773,7 +1765,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 summary is provided in the header 1`] = `
 <div
-  id="root14"
+  id="root13"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1796,11 +1788,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -1855,9 +1847,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1865,8 +1856,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -1977,7 +1968,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 info item is provided in the overview 1`] = `
 <div
-  id="root18"
+  id="root17"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2000,11 +1991,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -2039,9 +2030,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2049,8 +2039,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -2242,7 +2232,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 info panel is provided in the details section 1`] = `
 <div
-  id="root21"
+  id="root20"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2265,11 +2255,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -2304,9 +2294,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2314,8 +2303,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -2471,7 +2460,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 summary is provided in the header 1`] = `
 <div
-  id="root15"
+  id="root14"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2494,11 +2483,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -2603,9 +2592,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2613,8 +2601,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -2725,7 +2713,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
 
 exports[`OrderDetailsPageComponent should render the template correctly if 5 message item is provided 1`] = `
 <div
-  id="root26"
+  id="root25"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2748,11 +2736,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -2787,9 +2775,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2797,8 +2784,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -2852,7 +2839,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
                   class="w-full flex flex-row space-x-3"
                 >
                   <app-avatar
-                    class="*:bg-blue-200 text-blue-500"
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
                   >
                     <div
                       class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
@@ -2936,7 +2924,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
                   class="w-full flex flex-row space-x-3"
                 >
                   <app-avatar
-                    class="*:bg-blue-200 text-blue-500"
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
                   >
                     <div
                       class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
@@ -3020,7 +3009,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
                   class="w-full flex flex-row space-x-3"
                 >
                   <app-avatar
-                    class="*:bg-blue-200 text-blue-500"
+                    class="text-blue-500 *:bg-blue-200"
+                    ng-reflect-ng-class="[object Object]"
                   >
                     <div
                       class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
@@ -3113,7 +3103,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
 
 exports[`OrderDetailsPageComponent should render the template correctly if the button is not visible in the header 1`] = `
 <div
-  id="root11"
+  id="root10"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3136,11 +3126,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -3170,9 +3160,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3180,8 +3169,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -3292,7 +3281,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
 
 exports[`OrderDetailsPageComponent should render the template correctly if the button is not visible in the header 2`] = `
 <div
-  id="root12"
+  id="root11"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3315,11 +3304,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -3349,9 +3338,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3359,8 +3347,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -3471,7 +3459,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
 
 exports[`OrderDetailsPageComponent should render the template correctly if the button is visible in the header 1`] = `
 <div
-  id="root10"
+  id="root9"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3494,11 +3482,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -3533,9 +3521,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3543,8 +3530,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -3655,7 +3642,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
 
 exports[`OrderDetailsPageComponent should render the template correctly if the close order button is disabled 1`] = `
 <div
-  id="root27"
+  id="root26"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3678,11 +3665,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -3717,9 +3704,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3727,8 +3713,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -3840,7 +3826,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
 
 exports[`OrderDetailsPageComponent should render the template correctly if the close order button is enabled 1`] = `
 <div
-  id="root28"
+  id="root27"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3863,11 +3849,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -3902,9 +3888,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3912,8 +3897,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -4024,7 +4009,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
 
 exports[`OrderDetailsPageComponent should render the template correctly if the messageFormControl is invalid so the button will be disabled 1`] = `
 <div
-  id="root9"
+  id="root8"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -4047,11 +4032,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -4086,9 +4071,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -4096,8 +4080,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list
@@ -4208,7 +4192,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
 
 exports[`OrderDetailsPageComponent should render the template correctly if the messageFormControl is valid so the button will be enabled 1`] = `
 <div
-  id="root8"
+  id="root7"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -4231,11 +4215,11 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
               class="flex flex-row space-x-3 items-center"
             >
               <app-status
-                ng-reflect-vm="[object Object]"
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
               >
                 <p
-                  class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
                 >
                    status 
                 </p>
@@ -4270,9 +4254,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
           </h3>
           <app-google-map
             appdrawtargetareas=""
+            class="h-96"
             ng-reflect-drawn-polygons="[Signal: null]"
-            ng-reflect-map-ref="[object Object]"
-            ng-reflect-map-signal="[object Object]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -4280,8 +4263,8 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
               appmapinitializer=""
               ng-reflect-map-center="[object Object]"
               ng-reflect-map-options="[object Object]"
-              ng-reflect-map-signal="[Model Signal: null]"
-              style="height: 500px;"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
             />
           </app-google-map>
           <app-info-item-list

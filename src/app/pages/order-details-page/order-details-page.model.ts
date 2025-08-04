@@ -1,6 +1,5 @@
 import { AvatarXVM } from '@components/avatar/avatar.model';
 import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
-import { StatusVM } from '@components/status/status.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
 import { WithTextNode } from '@interfaces/with-text-node.interface';
@@ -57,7 +56,13 @@ export interface ActionsSectionCardXVM extends SectionCardVM {
     closeOrderButtonXVM: CloseOrderButtonXVM;
 }
 
-interface StatusXVM extends StatusVM {
+export enum Status {
+    ACTIVE,
+    PENDING,
+    COMPLETED,
+}
+interface StatusXVM {
+    status: Status;
     statusTextKey: string;
 }
 interface SummaryXVM {

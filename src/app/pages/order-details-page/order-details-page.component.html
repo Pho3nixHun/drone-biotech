@@ -9,7 +9,16 @@
                 }}
             </h2>
 
-            <app-status [vm]="vm.headerXVM.statusXVM">
+            <app-status
+                [ngClass]="{
+                    'bg-green-200 text-green-800':
+                        vm.headerXVM.statusXVM.status === Status.ACTIVE,
+                    'bg-red-200 text-red-800':
+                        vm.headerXVM.statusXVM.status === Status.PENDING,
+                    'bg-orange-200 text-orange-800':
+                        vm.headerXVM.statusXVM.status === Status.COMPLETED,
+                }"
+            >
                 {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
             </app-status>
 
@@ -39,13 +48,12 @@
 
         <app-section-card [vm]="vm.overviewSectionCardXVM">
             <app-google-map
+                class="h-96"
                 appDrawTargetAreas
                 [drawnPolygons]="drawnPolygons"
-                [mapRef]="mapSignal()"
                 [targetAreas]="
                     vm.overviewSectionCardXVM.googleMapXVM.targetAreaXVMs
                 "
-                [(mapSignal)]="mapSignal"
                 [vm]="vm.overviewSectionCardXVM.googleMapXVM"
             />
             <app-info-item-list
@@ -115,7 +123,23 @@
                         @switch (messageItemXVM.avatarXVM.type) {
                             @case ('withInitials') {
                                 <app-avatar
-                                    [class]="messageItemXVM.avatarXVM.colors"
+                                    [ngClass]="{
+                                        'text-red-500 *:bg-red-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.RED,
+                                        'text-green-500 *:bg-green-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.GREEN,
+                                        'text-blue-500 *:bg-blue-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.BLUE,
+                                        'text-yellow-500 *:bg-yellow-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.YELLOW,
+                                        'text-purple-500 *:bg-purple-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.PURPLE,
+                                    }"
                                 >
                                     {{ messageItemXVM.avatarXVM.initials }}
                                 </app-avatar>

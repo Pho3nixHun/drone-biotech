@@ -27,8 +27,10 @@ import { MessageItemComponent } from '@components/message-item/message-item.comp
 import { emptyStringValidator } from '@utils/empty-string.validator';
 import { OrderDetailsPageService } from './order-details-page.service';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
-import { DrawTargetAreasDirective } from '@directives/draw-target-areas/draw-target-areas.directive';
+import { DrawTargetAreasDirective } from '@components/google-map/directives/draw-target-areas/draw-target-areas.directive';
 import { ValueComponent } from '@components/value/value.component';
+import { Status } from './order-details-page.model';
+import { Avatar } from '@components/avatar/avatar.model';
 
 @Component({
     selector: 'app-order-details-page',
@@ -62,8 +64,6 @@ export class OrderDetailsPageComponent {
     private readonly orderDetailsPageService = inject(OrderDetailsPageService);
 
     protected readonly vm = toSignal(this.orderDetailsPageService.getVM());
-
-    protected readonly mapSignal = signal<google.maps.Map | null>(null);
 
     protected readonly drawnPolygons = signal<google.maps.Polygon[] | null>(
         null
@@ -104,4 +104,7 @@ export class OrderDetailsPageComponent {
         if (reason.reasonType === 'cancel') return;
         return this.orderDetailsPageService.closeOrder();
     }
+
+    protected readonly Status = Status;
+    protected readonly Avatar = Avatar;
 }

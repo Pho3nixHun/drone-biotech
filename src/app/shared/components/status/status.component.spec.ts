@@ -2,17 +2,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StatusComponent } from './status.component';
 import { Component } from '@angular/core';
-import { StatusVM, StatusXVMStyle } from './status.model';
 
 @Component({
     imports: [StatusComponent],
-    template: ` <app-status [vm]="vm">Status</app-status> `,
+    template: ` <app-status>Status</app-status> `,
 })
-class TestHostComponent {
-    vm: StatusVM = {
-        styles: StatusXVMStyle.ACTIVE,
-    };
-}
+class TestHostComponent {}
 
 describe('StatusComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;

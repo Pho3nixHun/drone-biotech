@@ -4,23 +4,18 @@ import { HeaderComponent } from './header.component';
 import { Component } from '@angular/core';
 import { StatusComponent } from '@components/status/status.component';
 import { SummaryListComponent } from '@components/summary-list/summary-list.component';
-import { StatusVM, StatusXVMStyle } from '@components/status/status.model';
 
 @Component({
     imports: [HeaderComponent, StatusComponent, SummaryListComponent],
     template: `
         <app-header
             ><h2>Title</h2>
-            <app-status [vm]="vm">Status</app-status><button>Button</button
+            <app-status>Status</app-status><button>Button</button
             ><app-summary-list></app-summary-list
         ></app-header>
     `,
 })
-class TestHostComponent {
-    vm: StatusVM = {
-        styles: StatusXVMStyle.ACTIVE,
-    };
-}
+class TestHostComponent {}
 
 describe('HeaderComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
