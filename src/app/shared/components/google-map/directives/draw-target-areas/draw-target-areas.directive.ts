@@ -6,7 +6,7 @@ import {
     WritableSignal,
 } from '@angular/core';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
-import { TargetAreaXVM } from 'src/app/pages/order-details-page/order-details-page.model';
+import { TargetAreaXVM } from './draw-target-areas.model';
 
 @Directive({
     selector: '[appDrawTargetAreas]',
