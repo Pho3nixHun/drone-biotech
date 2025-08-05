@@ -1,5 +1,700 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OrderDetailsPageComponent should render the template correctly if 0 action is provided in a card item 1`] = `
+<div
+  id="root37"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 card group header item is provided in the missions 1`] = `
+<div
+  id="root28"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 card item is provided in the missions 1`] = `
+<div
+  id="root31"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in an info panel in the details section 1`] = `
 <div
   id="root21"
@@ -105,6 +800,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -300,6 +1035,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -471,6 +1246,295 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 0 keyvalue is provided in a card item 1`] = `
+<div
+  id="root34"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -666,6 +1730,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -832,6 +1936,783 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 action is provided in a card item 1`] = `
+<div
+  id="root38"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <a
+                            class="btn btn-circle btn-primary"
+                            href=""
+                          >
+                            <mat-icon
+                              aria-hidden="true"
+                              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                              data-mat-icon-type="font"
+                              role="img"
+                            >
+                              add
+                            </mat-icon>
+                          </a>
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 card group header item is provided in the missions 1`] = `
+<div
+  id="root29"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <div>
+                    1header
+                  </div>
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 card item is provided in the missions 1`] = `
+<div
+  id="root32"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -1069,6 +2950,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -1279,6 +3200,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -1477,6 +3438,322 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 1 keyvalue is provided in a card item 1`] = `
+<div
+  id="root35"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <app-key-value
+                            class="text-blue-500"
+                            ng-reflect-label="label1"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="duration-500 h-full flex flex-col justify-center"
+                            >
+                              <p
+                                class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                              >
+                                 label1 
+                              </p>
+                              <!--container-->
+                              <app-value
+                                ng-reflect-vm="[object Object]"
+                              >
+                                <div>
+                                  <!--container-->
+                                    
+                                  <!--container-->
+                                </div>
+                                <!--container-->
+                              </app-value>
+                            </div>
+                            <!--container-->
+                          </app-key-value>
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -1648,6 +3925,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -1888,6 +4205,867 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 action is provided in a card item 1`] = `
+<div
+  id="root39"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <a
+                            class="btn btn-circle btn-primary"
+                            href=""
+                          >
+                            <mat-icon
+                              aria-hidden="true"
+                              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                              data-mat-icon-type="font"
+                              role="img"
+                            >
+                              add
+                            </mat-icon>
+                          </a>
+                          <a
+                            class="btn btn-circle btn-primary"
+                            href=""
+                          >
+                            <mat-icon
+                              aria-hidden="true"
+                              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                              data-mat-icon-type="font"
+                              role="img"
+                            >
+                              add
+                            </mat-icon>
+                          </a>
+                          <a
+                            class="btn btn-circle btn-primary"
+                            href=""
+                          >
+                            <mat-icon
+                              aria-hidden="true"
+                              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                              data-mat-icon-type="font"
+                              role="img"
+                            >
+                              add
+                            </mat-icon>
+                          </a>
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 card group header item is provided in the missions 1`] = `
+<div
+  id="root30"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <div>
+                    1header
+                  </div>
+                  <div>
+                    2header
+                  </div>
+                  <div>
+                    3header
+                  </div>
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 card item is provided in the missions 1`] = `
+<div
+  id="root33"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -2164,6 +5342,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -2380,6 +5598,374 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
             </app-info-panel>
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <app-message-item-list>
+            <div
+              class="h-80 flex flex-col space-y-4 overflow-y-auto"
+            >
+              <!--container-->
+            </div>
+          </app-message-item-list>
+          <div
+            class="w-full flex flex-row"
+          >
+            <input
+              class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
+              ng-reflect-form="[object Object]"
+              type="text"
+            />
+            <button
+              class="btn rounded-none btn-disabled"
+              disabled=""
+              ng-reflect-ng-class="btn-disabled"
+            >
+               button 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <div
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              class="btn btn-success"
+              download=""
+              href="assets/lepke.jpg"
+            >
+               Proof of completion template 
+            </a>
+            <button
+              class="btn btn-error"
+              ng-reflect-ng-class="btn-error"
+            >
+               Close order 
+            </button>
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`OrderDetailsPageComponent should render the template correctly if 3 keyvalue is provided in a card item 1`] = `
+<div
+  id="root36"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-header>
+        <div
+          class="flex flex-col space-y-4"
+        >
+          <div
+            class="flex flex-row items-start justify-between"
+          >
+            <div>
+              <h2>
+                 id 
+              </h2>
+            </div>
+            <div
+              class="flex flex-row space-x-3 items-center"
+            >
+              <app-status
+                class="bg-green-200 text-green-800"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <p
+                  class="font-medium rounded-full w-max px-3 py-1 flex items-center"
+                >
+                   status 
+                </p>
+              </app-status>
+              <button
+                class="btn btn-primary w-fit truncate"
+              >
+                 addNewMissionButton 
+              </button>
+              <!--container-->
+            </div>
+          </div>
+          <app-summary-list>
+            <div
+              class="flex flex-col lg:flex-row justify-between"
+            >
+              <!--container-->
+            </div>
+          </app-summary-list>
+        </div>
+      </app-header>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-google-map
+            appdrawtargetareas=""
+            class="h-96"
+            ng-reflect-drawn-polygons="[Signal: null]"
+            ng-reflect-target-areas=""
+            ng-reflect-vm="[object Object]"
+          >
+            <div
+              appmapinitializer=""
+              ng-reflect-map-center="[object Object]"
+              ng-reflect-map-options="[object Object]"
+              ng-reflect-map-signal="[Signal: null]"
+              style="height: 100%;"
+            />
+          </app-google-map>
+          <app-info-item-list
+            class="*:flex-row *:space-y-0 *:justify-between"
+          >
+            <dl
+              class="text-sm flex flex-col space-y-2"
+            >
+              <!--container-->
+            </dl>
+          </app-info-item-list>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            title
+          </h3>
+          <div
+            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+          >
+            <!--container-->
+          </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <app-card-item
+                    class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <app-card-item-content
+                        class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                      >
+                        <div
+                          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                          <app-key-value
+                            class="text-blue-500"
+                            ng-reflect-label="label1"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="duration-500 h-full flex flex-col justify-center"
+                            >
+                              <p
+                                class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                              >
+                                 label1 
+                              </p>
+                              <!--container-->
+                              <app-value
+                                ng-reflect-vm="[object Object]"
+                              >
+                                <div>
+                                  <!--container-->
+                                    
+                                  <!--container-->
+                                </div>
+                                <!--container-->
+                              </app-value>
+                            </div>
+                            <!--container-->
+                          </app-key-value>
+                          <app-key-value
+                            ng-reflect-label="label2"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="duration-500 h-full flex flex-col justify-center"
+                            >
+                              <p
+                                class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                              >
+                                 label2 
+                              </p>
+                              <!--container-->
+                              <app-value
+                                ng-reflect-vm="[object Object]"
+                              >
+                                <div>
+                                  <!--container-->
+                                    
+                                  <!--container-->
+                                </div>
+                                <!--container-->
+                              </app-value>
+                            </div>
+                            <!--container-->
+                          </app-key-value>
+                          <app-key-value
+                            ng-reflect-label="label3"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="duration-500 h-full flex flex-col justify-center"
+                            >
+                              <p
+                                class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                              >
+                                 label3 
+                              </p>
+                              <!--container-->
+                              <app-value
+                                ng-reflect-vm="[object Object]"
+                              >
+                                <div>
+                                  <!--container-->
+                                    
+                                  <!--container-->
+                                </div>
+                                <!--container-->
+                              </app-value>
+                            </div>
+                            <!--container-->
+                          </app-key-value>
+                          <!--container-->
+                        </div>
+                      </app-card-item-content>
+                      <app-card-item-action-list
+                        class="grid grid-cols-1 col-span-1"
+                      >
+                        <div
+                          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+                        >
+                          <!--container-->
+                        </div>
+                      </app-card-item-action-list>
+                    </div>
+                  </app-card-item>
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -2645,6 +6231,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -2816,6 +6442,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -3213,6 +6879,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -3379,6 +7085,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -3574,6 +7320,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -3745,6 +7531,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->
@@ -3941,6 +7767,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -4124,6 +7990,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
           <h3
             class="text-xl font-medium"
           >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
             title
           </h3>
           <app-message-item-list>
@@ -4295,6 +8201,46 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
           >
             <!--container-->
           </div>
+        </section>
+      </app-section-card>
+      <!--container-->
+      <app-section-card
+        ng-reflect-vm="[object Object]"
+      >
+        <section
+          class="shadow p-4 flex flex-col space-y-4"
+        >
+          <h3
+            class="text-xl font-medium"
+          >
+            tit
+          </h3>
+          <app-card-group
+            class="grid grid-cols-6"
+          >
+            <div
+              class="grid grid-cols-subgrid col-span-full gap-3"
+            >
+              <app-card-group-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <header
+                  class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 tracking-wider *:flex *:items-center p-3"
+                >
+                  <!--container-->
+                </header>
+              </app-card-group-header>
+              <app-card-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-subgrid col-span-full gap-3"
+                >
+                  <!--container-->
+                </div>
+              </app-card-item-list>
+            </div>
+          </app-card-group>
         </section>
       </app-section-card>
       <!--container-->

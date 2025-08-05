@@ -9,6 +9,8 @@ import { WithLink } from '@interfaces/with-link.interface';
 import { GoogleMapVM } from '@components/google-map/google-map.model';
 import { ValueVM } from '@components/value/value.model';
 import { Coordinates } from '@stores/location/location.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
 export interface MessageItemXVM {
     senderName: string;
@@ -81,6 +83,40 @@ export interface HeaderXVM {
     summaryListXVM: SummaryListXVM;
     addMissionButtonXVM: AddMissionButtonXVM;
 }
+type CardGroupHeaderXVM = string[];
+
+export interface CardItemXVM {
+    cardItemContentXVM: CardItemContentXVM;
+    cardItemActionListXVM: CardItemActionListXVM;
+}
+
+interface CardItemActionListXVM {
+    actionXVMs: ActionXVM[];
+}
+
+type ActionXVM = { matIcon: MatIcon } & WithRouterLink;
+
+interface CardItemContentXVM {
+    keyValueXVMs: KeyValueXVM[];
+}
+
+interface KeyValueXVM {
+    label: string;
+    value: ValueVM;
+}
+
+interface CardItemListXVM {
+    cardItemXVMs: CardItemXVM[];
+}
+interface CardGroupXVM {
+    cardGroupHeaderXVM: CardGroupHeaderXVM;
+    cardItemListXVM: CardItemListXVM;
+}
+
+export interface MissionsSectionCardXVM extends SectionCardVM {
+    cardGroupXVM: CardGroupXVM;
+}
+
 interface MissionInfoItemXVM {
     labelKey: string;
     valueVM: ValueVM;
@@ -109,4 +145,5 @@ export interface OrderDetailsPageVM {
     actionsSectionCardXVM: ActionsSectionCardXVM;
     messagesSectionCardXVM: MessagesSectionCardXVM;
     detailsSectionCardXVM: DetailsSectionCardXVM;
+    missionsSectionCardXVM: MissionsSectionCardXVM;
 }

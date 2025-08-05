@@ -112,6 +112,71 @@
             </div>
         </app-section-card>
 
+        <app-section-card [vm]="vm.missionsSectionCardXVM" *transloco="let t">
+            <app-card-group class="grid grid-cols-6">
+                <app-card-group-header
+                    class="grid grid-cols-subgrid col-span-full"
+                >
+                    @for (
+                        header of vm.missionsSectionCardXVM.cardGroupXVM
+                            .cardGroupHeaderXVM;
+                        track $index
+                    ) {
+                        <div>{{ t(header) }}</div>
+                    }
+                </app-card-group-header>
+                <app-card-item-list
+                    class="grid grid-cols-subgrid col-span-full"
+                >
+                    @for (
+                        cardItemXVM of vm.missionsSectionCardXVM.cardGroupXVM
+                            .cardItemListXVM.cardItemXVMs;
+                        track $index
+                    ) {
+                        <app-card-item
+                            class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                            <app-card-item-content
+                                class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                            >
+                                @for (
+                                    keyValueXVM of cardItemXVM
+                                        .cardItemContentXVM.keyValueXVMs;
+                                    track $index;
+                                    let first = $first
+                                ) {
+                                    <app-key-value
+                                        [label]="keyValueXVM.label"
+                                        [ngClass]="{ 'text-blue-500': first }"
+                                    >
+                                        <app-value [vm]="keyValueXVM.value" />
+                                    </app-key-value>
+                                }
+                            </app-card-item-content>
+                            <app-card-item-action-list
+                                class="grid grid-cols-1 col-span-1"
+                            >
+                                @for (
+                                    actionXVM of cardItemXVM
+                                        .cardItemActionListXVM.actionXVMs;
+                                    track $index
+                                ) {
+                                    <a
+                                        [href]="actionXVM.routerLink"
+                                        class="btn btn-circle btn-primary"
+                                    >
+                                        <mat-icon>{{
+                                            actionXVM.matIcon
+                                        }}</mat-icon>
+                                    </a>
+                                }
+                            </app-card-item-action-list>
+                        </app-card-item>
+                    }
+                </app-card-item-list>
+            </app-card-group>
+        </app-section-card>
+
         <app-section-card [vm]="vm.messagesSectionCardXVM" *transloco="let t">
             <app-message-item-list>
                 @for (

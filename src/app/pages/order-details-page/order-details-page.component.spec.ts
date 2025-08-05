@@ -7,20 +7,32 @@ import {
     mockVMWithEnabledCloseOrderButton,
     mockVMWithFiveMessageItem,
     mockVMWithNotVisibleAddMissionButton,
+    mockVMWithOneActionInCardItem,
+    mockVMWithOneCardGroupHeader,
+    mockVMWithOneCardItem,
     mockVMWithOneInfoItemInDetails,
     mockVMWithOneInfoItemInOverview,
     mockVMWithOneInfoPanelInDetails,
+    mockVMWithOneKeyValueInCardItem,
     mockVMWithOneMessageItem,
     mockVMWithOneSummaryInHeader,
+    mockVMWithoutActionInCardItem,
+    mockVMWithoutCardGroupHeader,
+    mockVMWithoutCardItem,
     mockVMWithoutInfoItemInDetails,
     mockVMWithoutInfoItemInOverview,
     mockVMWithoutInfoPanelInDetails,
+    mockVMWithoutKeyValueInCardItem,
     mockVMWithoutMessageItem,
     mockVMWithoutSummaryInHeader,
     mockVMWithoutTargetAreas,
     mockVMWithTargetAreas,
+    mockVMWithThreeActionInCardItem,
+    mockVMWithThreeCardGroupHeader,
+    mockVMWithThreeCardItem,
     mockVMWithThreeInfoItemInOverview,
     mockVMWithThreeInfoPanelInDetails,
+    mockVMWithThreeKeyValueInCardItem,
     mockVMWithThreeSummaryInHeader,
     mockVMWithVisibleAddMissionButton,
 } from './order-details-page.mock';
@@ -419,6 +431,138 @@ describe('OrderDetailsPageComponent', () => {
     it('should render the template correctly if the close order button is enabled', () => {
         // Arrange
         updateVMSubject(mockVMWithEnabledCloseOrderButton);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 0 card group header item is provided in the missions', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutCardGroupHeader);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 1 card group header item is provided in the missions', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneCardGroupHeader);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 3 card group header item is provided in the missions', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeCardGroupHeader);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 0 card item is provided in the missions', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 1 card item is provided in the missions', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 3 card item is provided in the missions', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 0 keyvalue is provided in a card item', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutKeyValueInCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 1 keyvalue is provided in a card item', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneKeyValueInCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 3 keyvalue is provided in a card item', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeKeyValueInCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 0 action is provided in a card item', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutActionInCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 1 action is provided in a card item', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneActionInCardItem);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the template correctly if 3 action is provided in a card item', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeActionInCardItem);
 
         // Act
         fixture.detectChanges();
