@@ -11,6 +11,7 @@ import { ValueVM } from '@components/value/value.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
 import { TargetAreaXVM } from '@components/google-map/directives/draw-target-areas/draw-target-areas.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 export interface MessageItemXVM {
     senderName: string;
@@ -121,9 +122,11 @@ interface MissionInfoItemXVM {
     labelKey: string;
     valueVM: ValueVM;
 }
+
 interface MissionInfoItemListXVM {
     missionInfoItemXVMs: MissionInfoItemXVM[];
 }
+
 
 export interface GoogleMapXVM extends GoogleMapVM {
     targetAreaXVMs: TargetAreaXVM[] | null;

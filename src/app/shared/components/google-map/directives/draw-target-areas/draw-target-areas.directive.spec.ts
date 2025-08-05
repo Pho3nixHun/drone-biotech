@@ -5,6 +5,7 @@ import { By } from '@angular/platform-browser';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
 import { TargetAreaXVM } from './draw-target-areas.model';
 
+
 @Component({
     imports: [DrawTargetAreasDirective, GoogleMapComponent],
     template: `
