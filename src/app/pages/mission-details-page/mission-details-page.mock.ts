@@ -1,15 +1,99 @@
 import { MissionDetailsPageVM } from './mission-details-page.model';
 
-export const missionDetailsPageDefaultVM: MissionDetailsPageVM = {
-    mapFormControlXVM: {
-        mapControl: {
-            targetArea: [
-                { lat: 47.23773203607438, lng: 21.17827083349036 },
-                { lat: 47.23773203607438, lng: 21.188270833490357 },
-                { lat: 47.24273203607437, lng: 21.188270833490357 },
-                { lat: 47.24273203607437, lng: 21.17827083349036 },
-            ],
-            entryPoint: { lat: 47.237, lng: 21.17827083349036 },
+export const missionDetailsPageVM: MissionDetailsPageVM = {
+    googleMapXVM: {
+        center: { lat: 47.277, lng: 21.2343 },
+        mapOptions: {
+            mapTypeId: 'roadmap',
+            disableDoubleClickZoom: true,
+            clickableIcons: false,
+            mapId: 'DEMO_MAP_ID',
+            zoom: 14,
+            streetViewControl: false,
         },
+        entryPointXVMs: [
+            {
+                options: {},
+                position: { lat: 47.277, lng: 21.2343 },
+            },
+        ],
+        targetAreaXVMs: [
+            {
+                options: {
+                    clickable: false,
+                    draggable: false,
+                    editable: false,
+                    fillOpacity: 0.5,
+                    strokeColor: 'green',
+                    fillColor: 'green',
+                },
+                coordinates: [
+                    { lat: 47.277, lng: 21.2345 },
+                    { lat: 47.276, lng: 21.2345 },
+                    { lat: 47.276, lng: 21.233 },
+                    { lat: 47.277, lng: 21.233 },
+                ],
+            },
+        ],
+    },
+};
+export const mockVMWithoutTargetAreas: MissionDetailsPageVM = {
+    googleMapXVM: {
+        center: { lat: 47.277, lng: 21.2343 },
+        mapOptions: {
+            mapTypeId: 'roadmap',
+            disableDoubleClickZoom: true,
+            clickableIcons: false,
+            mapId: 'DEMO_MAP_ID',
+            zoom: 14,
+            streetViewControl: false,
+        },
+        entryPointXVMs: null,
+        targetAreaXVMs: null,
+    },
+};
+export const mockVMWithTargetAreas: MissionDetailsPageVM = {
+    googleMapXVM: {
+        center: { lat: 47.277, lng: 21.2343 },
+        mapOptions: {
+            mapTypeId: 'roadmap',
+            disableDoubleClickZoom: true,
+            clickableIcons: false,
+            mapId: 'DEMO_MAP_ID',
+            zoom: 14,
+            streetViewControl: false,
+        },
+        entryPointXVMs: null,
+        targetAreaXVMs: [{ options: {}, coordinates: [] }],
+    },
+};
+export const mockVMWithoutEntryPoints: MissionDetailsPageVM = {
+    googleMapXVM: {
+        center: { lat: 47.277, lng: 21.2343 },
+        mapOptions: {
+            mapTypeId: 'roadmap',
+            disableDoubleClickZoom: true,
+            clickableIcons: false,
+            mapId: 'DEMO_MAP_ID',
+            zoom: 14,
+            streetViewControl: false,
+        },
+        entryPointXVMs: null,
+        targetAreaXVMs: null,
+    },
+};
+export const mockVMWithEntryPoints: MissionDetailsPageVM = {
+    googleMapXVM: {
+        center: { lat: 47.277, lng: 21.2343 },
+        mapOptions: {
+            mapTypeId: 'roadmap',
+            disableDoubleClickZoom: true,
+            clickableIcons: false,
+            mapId: 'DEMO_MAP_ID',
+            zoom: 14,
+            streetViewControl: false,
+        },
+        entryPointXVMs: [{ options: {}, position: { lat: 1, lng: 1 } }],
+        targetAreaXVMs: null,
     },
 };

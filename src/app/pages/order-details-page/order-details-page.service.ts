@@ -1,5 +1,4 @@
-import { OrderService } from '@services/order/order.service';
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, noop, Observable } from 'rxjs';
 import { OrderDetailsPageVM } from './order-details-page.model';
 import { orderDetailsPageVM } from './order-details-page.mock';
@@ -9,8 +8,6 @@ import { Message } from './order-details-page.service.model';
     providedIn: 'root',
 })
 export class OrderDetailsPageService {
-    private readonly orderService = inject(OrderService);
-
     public getVM() {
         return this.vm$;
     }

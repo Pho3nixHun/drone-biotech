@@ -1,5 +1,14 @@
 @if (vm(); as vm) {
     <app-page-layout>
-        <app-map-form-control [formControl]="mapControl" />
+        <app-google-map
+            [vm]="vm.googleMapXVM"
+            appDrawTargetAreas
+            [drawnPolygons]="drawnPolygons"
+            [targetAreas]="vm.googleMapXVM.targetAreaXVMs"
+            appDrawEntryPoints
+            [entryPoints]="vm.googleMapXVM.entryPointXVMs"
+            [drawnEntryPoints]="drawnEntryPoints"
+            class="h-96"
+        />
     </app-page-layout>
 }

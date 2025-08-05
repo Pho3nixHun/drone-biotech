@@ -1,19 +1,12 @@
-import { Coordinates } from '@stores/location/location.model';
+import { EntryPointXVM } from '@components/google-map/directives/draw-entry-points/draw-entry-points.model';
+import { TargetAreaXVM } from '@components/google-map/directives/draw-target-areas/draw-target-areas.model';
+import { GoogleMapVM } from '@components/google-map/google-map.model';
 
 export interface MissionDetailsPageVM {
-    mapFormControlXVM: MapFormControlXVM;
+    googleMapXVM: GoogleMapXVM;
 }
 
-interface MapFormControlXVM {
-    mapControl: MapControl;
-}
-
-export interface Mission {
-    targetArea: Coordinates[];
-    entryPoint: Coordinates;
-}
-
-export interface MapControl {
-    targetArea: Coordinates[] | null;
-    entryPoint: Coordinates | null;
+interface GoogleMapXVM extends GoogleMapVM {
+    targetAreaXVMs: TargetAreaXVM[] | null;
+    entryPointXVMs: EntryPointXVM[] | null;
 }

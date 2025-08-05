@@ -1,41 +1,33 @@
-import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
-import { MapFormControlComponent } from './components/map-form-control/map-form-control.component';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MissionDetailsPageService } from './mission-details-page.service';
-import { Component, effect, inject } from '@angular/core';
-import { MapControl } from './mission-details-page.model';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { missionDetailsPageConfig } from './mission-details-page.config';
+import { Component, inject, signal } from '@angular/core';
+import { MissionDetailsPageService } from './mission-details-page.service';
+import { GoogleMapComponent } from '@components/google-map/google-map.component';
+import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { DrawEntryPointsDirective } from '@components/google-map/directives/draw-entry-points/draw-entry-points.directive';
+import { DrawTargetAreasDirective } from '@components/google-map/directives/draw-target-areas/draw-target-areas.directive';
 
 @Component({
     selector: 'app-mission-details-page',
     imports: [
         PageLayoutComponent,
-        MapFormControlComponent,
-        ReactiveFormsModule,
+        GoogleMapComponent,
+        DrawTargetAreasDirective,
+        DrawEntryPointsDirective,
     ],
-    providers: [missionDetailsPageConfig],
+    providers: [],
     templateUrl: './mission-details-page.component.html',
 })
 export class MissionDetailsPageComponent {
-    private readonly fb = inject(FormBuilder);
     private readonly missionDetailsPageService = inject(
         MissionDetailsPageService
     );
 
     protected readonly vm = toSignal(this.missionDetailsPageService.getVM());
 
-    protected readonly mapControl = this.fb.control<MapControl>(
-        {
-            entryPoint: null,
-            targetArea: null,
-        },
-        Validators.required
+    protected readonly drawnPolygons = signal<google.maps.Polygon[] | null>(
+        null
     );
-
-    private readonly setMapControlEffect = effect(() => {
-        const vm = this.vm();
-        if (!vm) return;
-        this.mapControl.setValue(vm.mapFormControlXVM.mapControl);
-    });
+    protected readonly drawnEntryPoints = signal<
+        google.maps.marker.AdvancedMarkerElement[] | null
+    >(null);
 }
