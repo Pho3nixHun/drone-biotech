@@ -14,7 +14,7 @@
                         >
                     }
                 </app-grid-section-header>
-                <app-grid [vm]="gridXVM">
+                <app-grid>
                     <app-grid-header
                         class="grid grid-cols-subgrid col-span-full"
                     >
@@ -105,9 +105,7 @@
                                     </app-key-value>
                                 }
                                 <app-key-value [label]="missionXVM.badgeKV.key">
-                                    <app-labeled-badge
-                                        [color]="missionXVM.badgeKV.value.color"
-                                    >
+                                    <app-labeled-badge>
                                         {{
                                             t(missionXVM.badgeKV.value.textKey)
                                         }}

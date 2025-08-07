@@ -1,7 +1,7 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { CustomerDashboardPageConfig } from './customer-dashboard-page.model';
-import { GridColsLength } from '@components/grid-section/components/grid/grid.model';
 import { Order } from '@services/order/order.service.model';
+import { GridColsLength } from '../office-dashboard-page/office-dashboard-page.model';
 
 export const customerDashboardPageConfig: CustomerDashboardPageConfig = {
     ordersConfig: {

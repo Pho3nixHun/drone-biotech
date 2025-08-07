@@ -14,7 +14,7 @@
                         </a>
                     }
                 </app-grid-section-header>
-                <app-grid [vm]="gridXVM">
+                <app-grid>
                     <app-grid-header
                         class="grid grid-cols-subgrid col-span-full"
                     >
@@ -69,9 +69,7 @@
                                 </app-key-value>
 
                                 <app-key-value [label]="orderXVM.badgeKV.key">
-                                    <app-labeled-badge
-                                        [color]="orderXVM.badgeKV.value.color"
-                                    >
+                                    <app-labeled-badge>
                                         {{ t(orderXVM.badgeKV.value.textKey) }}
                                     </app-labeled-badge>
                                 </app-key-value>

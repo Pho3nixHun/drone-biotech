@@ -30,12 +30,9 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -201,11 +198,9 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -352,11 +347,9 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -429,12 +422,9 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -600,11 +590,9 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.excellent 
                             </div>
@@ -738,11 +726,9 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.excellent 
                             </div>
@@ -807,12 +793,9 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -978,11 +961,9 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -1129,11 +1110,9 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -1280,11 +1259,9 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -1431,11 +1408,9 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -1508,12 +1483,9 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -1679,11 +1651,9 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.excellent 
                             </div>
@@ -1817,11 +1787,9 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.excellent 
                             </div>
@@ -1955,11 +1923,9 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.excellent 
                             </div>
@@ -2093,11 +2059,9 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.excellent 
                             </div>

@@ -1,18 +1,29 @@
 import { Order, OrderStatus } from '@services/order/order.service.model';
 import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
-import {
     KVsFromVM,
     TitleWithValueKey,
     TitleWithoutValueKey,
 } from '@interfaces/value-key.interface';
-import {
-    Badge,
-    GridConfig as Config,
-} from '@interfaces/with-base-dashboard-page.interface';
+import { WithTitle } from '@interfaces/with-title.interface';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
+export interface NavigationAnchor extends WithRouterLink {
+    textKey: string;
+    textColor?: string;
+}
+
+export interface WithNavigationAnchor {
+    navigationAnchor: NavigationAnchor;
+}
+
+export interface GridVM {
+    gridColsLength: GridColsLength;
+}
+
+export enum GridColsLength {
+    SIX = 'grid-cols-6',
+    SEVEN = 'grid-cols-7',
+}
 export type MyOrder = Pick<
     Order,
     'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
@@ -24,6 +35,10 @@ export type CompanyOrder = Pick<
 
 export type DashboardOrder = MyOrder | CompanyOrder;
 
+export interface Config extends GridVM, WithTitle {
+    headerKeys: string[];
+}
+
 export interface OrdersConfig {
     id: TitleWithoutValueKey;
     creationDate: TitleWithValueKey;
@@ -33,9 +48,12 @@ export interface OrdersConfig {
     requester: TitleWithoutValueKey;
     action: NavigationAnchor;
 }
-
+export interface BadgeXVM {
+    textKey: string;
+    color: string;
+}
 interface OrderVM {
-    badge: Badge;
+    badge: BadgeXVM;
 }
 
 type MyOrderVM = MyOrder & OrderVM;

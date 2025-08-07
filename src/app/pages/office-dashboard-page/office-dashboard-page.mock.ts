@@ -1,5 +1,7 @@
-import { GridColsLength } from '@components/grid-section/components/grid/grid.model';
-import { OfficeDashboardPageConfig } from './office-dashboard-page.model';
+import {
+    GridColsLength,
+    OfficeDashboardPageConfig,
+} from './office-dashboard-page.model';
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { Order } from '@services/order/order.service.model';
 

@@ -34,12 +34,9 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -179,11 +176,9 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-yellow-200 text-yellow-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.active 
                             </div>
@@ -306,11 +301,9 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.completed 
                             </div>
@@ -433,11 +426,9 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-pink-200 text-pink-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-pink-200 text-pink-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.pending 
                             </div>
@@ -560,11 +551,9 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-yellow-200 text-yellow-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.active 
                             </div>
@@ -687,11 +676,9 @@ exports[`CustomerDashboardPageComponent should render five orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-yellow-200 text-yellow-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.active 
                             </div>
@@ -778,12 +765,9 @@ exports[`CustomerDashboardPageComponent should render two orders 1`] = `
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -923,11 +907,9 @@ exports[`CustomerDashboardPageComponent should render two orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-yellow-200 text-yellow-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-yellow-200 text-yellow-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.active 
                             </div>
@@ -1050,11 +1032,9 @@ exports[`CustomerDashboardPageComponent should render two orders 1`] = `
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
                                DashboardPage.completed 
                             </div>

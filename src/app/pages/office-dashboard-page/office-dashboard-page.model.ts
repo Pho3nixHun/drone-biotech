@@ -6,18 +6,24 @@ import {
     WithoutKey,
 } from '@interfaces/value-key.interface';
 import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
-import {
-    Badge,
-    GridConfig,
-} from '@interfaces/with-base-dashboard-page.interface';
-import {
     ActiveMissionX,
     CompletedMissionX,
 } from '@services/mission/mission.service.model';
+import { WithTitle } from '@interfaces/with-title.interface';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
+export interface GridVM {
+    gridColsLength: GridColsLength;
+}
+
+export enum GridColsLength {
+    SIX = 'grid-cols-6',
+    SEVEN = 'grid-cols-7',
+}
+
+export interface GridConfig extends GridVM, WithTitle {
+    headerKeys: string[];
+}
 export interface MissionConfig {
     id: TitleWithoutValueKey;
     client: TitleWithoutValueKey;
@@ -38,8 +44,21 @@ export interface MissionConfig {
     };
 }
 
+export interface NavigationAnchor extends WithRouterLink {
+    textKey: string;
+    textColor: string;
+}
+
+export interface WithNavigationAnchor {
+    navigationAnchor: NavigationAnchor;
+}
+
+export interface BadgeXVM {
+    textKey: string;
+    color: string;
+}
 interface MissionVM {
-    badge: Badge;
+    badge: BadgeXVM;
     pilot: PilotXVM;
 }
 
