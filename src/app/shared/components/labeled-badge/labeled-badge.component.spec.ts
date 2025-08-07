@@ -5,7 +5,7 @@ import { LabeledBadgeComponent } from './labeled-badge.component';
 @Component({
     imports: [LabeledBadgeComponent],
     template: `
-        <app-labeled-badge [color]="'text-blue-500'">
+        <app-labeled-badge>
             <p>Should be projected</p>
         </app-labeled-badge>
     `,
