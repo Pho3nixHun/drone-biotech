@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PilotDashboardPageComponent should not render the grids if there is no mission for the pilot 1`] = `
+exports[`PilotDashboardPageComponent should not render the template when the vm is not provided 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 0 gridXVM if 0 is provided in the vm 1`] = `
 <div
   id="root2"
   ng-version="19.2.9"
@@ -17,224 +26,7 @@ exports[`PilotDashboardPageComponent should not render the grids if there is no 
 </div>
 `;
 
-exports[`PilotDashboardPageComponent should not render the template when there is no user 1`] = `
-<div
-  id="root0"
-  ng-version="19.2.9"
->
-  <!--container-->
-</div>
-`;
-
-exports[`PilotDashboardPageComponent should render one active mission if one active mission is provided for the pilot 1`] = `
-<div
-  id="root3"
-  ng-version="19.2.9"
->
-  <app-dashboard-spacer>
-    <div
-      class="flex flex-col gap-10"
-    >
-      <app-grid-section>
-        <div
-          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
-        >
-          <app-grid-section-header>
-            <div
-              class="flex flex-row justify-between"
-            >
-              <h3
-                class="text-xl font-medium"
-              >
-                 assigned 
-              </h3>
-            </div>
-          </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
-            <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
-            >
-              <app-grid-header
-                class="grid grid-cols-subgrid col-span-full"
-              >
-                <div
-                  class="xl:grid grid-cols-subgrid col-span-full hidden"
-                >
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     i 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     field 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     area 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     scheti 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     stat 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     act 
-                  </h4>
-                  <!--container-->
-                </div>
-              </app-grid-header>
-              <app-grid-item-list
-                class="grid grid-cols-subgrid col-span-full"
-              >
-                <div
-                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
-                >
-                  <app-grid-item
-                    class="grid grid-cols-subgrid xl:col-span-full"
-                  >
-                    <div
-                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
-                    >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             i 
-                          </p>
-                          <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
-                          >
-                             1 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             field 
-                          </p>
-                          <!--container-->
-                          <p>
-                             field 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             area 
-                          </p>
-                          <!--container-->
-                          <p>
-                             10 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             scheti 
-                          </p>
-                          <!--container-->
-                          <time>
-                             scheti 
-                          </time>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <!--container-->
-                      <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             stat 
-                          </p>
-                          <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
-                            <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
-                            >
-                               DashboardPage.pending 
-                            </div>
-                          </app-labeled-badge>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        missionText
-                      </a>
-                    </div>
-                  </app-grid-item>
-                  <!--container-->
-                </div>
-              </app-grid-item-list>
-            </div>
-          </app-grid>
-        </div>
-      </app-grid-section>
-      <!--container-->
-      <!--container-->
-    </div>
-  </app-dashboard-spacer>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`PilotDashboardPageComponent should render one completed mission if one completed mission is provided for the pilot 1`] = `
+exports[`PilotDashboardPageComponent should render 0 header key in the grid if 0 is provided in the vm 1`] = `
 <div
   id="root5"
   ng-version="19.2.9"
@@ -254,16 +46,15 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
               <h3
                 class="text-xl font-medium"
               >
-                 completed 
+                 tit1 
               </h3>
             </div>
           </app-grid-section-header>
           <app-grid
-            ng-reflect-vm="[object Object]"
+            class="*:grid-cols-6"
           >
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -271,36 +62,6 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                 <div
                   class="xl:grid grid-cols-subgrid col-span-full hidden"
                 >
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     i 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     field 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     area 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     ti 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     per 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     act 
-                  </h4>
                   <!--container-->
                 </div>
               </app-grid-header>
@@ -310,122 +71,6 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                 <div
                   class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
                 >
-                  <app-grid-item
-                    class="grid grid-cols-subgrid xl:col-span-full"
-                  >
-                    <div
-                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
-                    >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             i 
-                          </p>
-                          <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
-                          >
-                             5 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             field 
-                          </p>
-                          <!--container-->
-                          <p>
-                             field 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             area 
-                          </p>
-                          <!--container-->
-                          <p>
-                             10 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             ti 
-                          </p>
-                          <!--container-->
-                          <time>
-                             val 
-                          </time>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             per 
-                          </p>
-                          <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
-                            <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
-                            >
-                               DashboardPage.excellent 
-                            </div>
-                          </app-labeled-badge>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        reportText
-                      </a>
-                    </div>
-                  </app-grid-item>
                   <!--container-->
                 </div>
               </app-grid-item-list>
@@ -442,26 +87,9 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
 </div>
 `;
 
-exports[`PilotDashboardPageComponent should render the template when there is a user provided 1`] = `
+exports[`PilotDashboardPageComponent should render 0 mission if 0 is provided in the vm 1`] = `
 <div
-  id="root1"
-  ng-version="19.2.9"
->
-  <app-dashboard-spacer>
-    <div
-      class="flex flex-col gap-10"
-    >
-      <!--container-->
-    </div>
-  </app-dashboard-spacer>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`PilotDashboardPageComponent should render three active missions if three missions are provided for the pilot 1`] = `
-<div
-  id="root4"
+  id="root8"
   ng-version="19.2.9"
 >
   <app-dashboard-spacer>
@@ -479,16 +107,15 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
               <h3
                 class="text-xl font-medium"
               >
-                 assigned 
+                 tit1 
               </h3>
             </div>
           </app-grid-section-header>
           <app-grid
-            ng-reflect-vm="[object Object]"
+            class="*:grid-cols-6"
           >
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -496,36 +123,67 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                 <div
                   class="xl:grid grid-cols-subgrid col-span-full hidden"
                 >
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     i 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     field 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     area 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     scheti 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     stat 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     act 
-                  </h4>
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 1 assigned mission with preparing status if 1 is provided in the vm 1`] = `
+<div
+  id="root12"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
                   <!--container-->
                 </div>
               </app-grid-header>
@@ -542,7 +200,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
                       <app-key-value
-                        ng-reflect-label="i"
+                        ng-reflect-label="id1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -550,19 +208,24 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             i 
+                             id1 
                           </p>
                           <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
+                          <app-value
+                            ng-reflect-vm="[object Object]"
                           >
-                             1 
-                          </p>
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <app-key-value
-                        ng-reflect-label="field"
+                        ng-reflect-label="field1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -570,17 +233,24 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             field 
+                             field1 
                           </p>
                           <!--container-->
-                          <p>
-                             field 
-                          </p>
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <app-key-value
-                        ng-reflect-label="area"
+                        ng-reflect-label="area1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -588,17 +258,24 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             area 
+                             area1 
                           </p>
                           <!--container-->
-                          <p>
-                             10 
-                          </p>
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <app-key-value
-                        ng-reflect-label="scheti"
+                        ng-reflect-label="sched1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -606,19 +283,24 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             scheti 
+                             sched1 
                           </p>
                           <!--container-->
-                          <time>
-                             scheti 
-                          </time>
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <!--container-->
-                      <!--container-->
                       <app-key-value
-                        ng-reflect-label="stat"
+                        ng-reflect-label="stat1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -626,231 +308,37 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             stat 
+                             stat1 
                           </p>
                           <!--container-->
                           <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
+                            class="hidden xl:block *:bg-blue-200 text-blue-700"
+                            ng-reflect-ng-class="[object Object]"
                           >
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
-                               DashboardPage.pending 
+                              text1
                             </div>
                           </app-labeled-badge>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        missionText
-                      </a>
-                    </div>
-                  </app-grid-item>
-                  <app-grid-item
-                    class="grid grid-cols-subgrid xl:col-span-full"
-                  >
-                    <div
-                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
-                    >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
                           >
-                             i 
-                          </p>
-                          <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
-                          >
-                             3 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             field 
-                          </p>
-                          <!--container-->
-                          <p>
-                             field 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             area 
-                          </p>
-                          <!--container-->
-                          <p>
-                             10 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             scheti 
-                          </p>
-                          <!--container-->
-                          <time>
-                             scheti 
-                          </time>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <!--container-->
-                      <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             stat 
-                          </p>
-                          <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
-                            <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
-                            >
-                               DashboardPage.pending 
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
                             </div>
-                          </app-labeled-badge>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        missionText
-                      </a>
-                    </div>
-                  </app-grid-item>
-                  <app-grid-item
-                    class="grid grid-cols-subgrid xl:col-span-full"
-                  >
-                    <div
-                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
-                    >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             i 
-                          </p>
-                          <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
-                          >
-                             4 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             field 
-                          </p>
-                          <!--container-->
-                          <p>
-                             field 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             area 
-                          </p>
-                          <!--container-->
-                          <p>
-                             10 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             scheti 
-                          </p>
-                          <!--container-->
-                          <time>
-                             scheti 
-                          </time>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <!--container-->
                       <!--container-->
                       <app-key-value
-                        ng-reflect-label="stat"
+                        ng-reflect-label="lab1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -858,29 +346,17 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             stat 
+                             lab1 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
+                          <a
+                            class="text-blue-700"
                           >
-                            <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
-                            >
-                               DashboardPage.pending 
-                            </div>
-                          </app-labeled-badge>
+                            anchor1
+                          </a>
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        missionText
-                      </a>
                     </div>
                   </app-grid-item>
                   <!--container-->
@@ -899,7 +375,753 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
 </div>
 `;
 
-exports[`PilotDashboardPageComponent should render three completed missions if three completed missions are provided for the pilot 1`] = `
+exports[`PilotDashboardPageComponent should render 1 assigned mission with scheduled status if 1 is provided in the vm 1`] = `
+<div
+  id="root11"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="id1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             id1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="field1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             field1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="sched1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             sched1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat1 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            class="hidden xl:block *:bg-yellow-200 text-yellow-700"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit"
+                            >
+                              text1
+                            </div>
+                          </app-labeled-badge>
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="lab1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             lab1 
+                          </p>
+                          <!--container-->
+                          <a
+                            class="text-blue-700"
+                          >
+                            anchor1
+                          </a>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 1 completed mission with excellent performance if 1 is provided in the vm 1`] = `
+<div
+  id="root13"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="id1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             id1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="field1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             field1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="complet"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             complet 
+                          </p>
+                          <!--container-->
+                          <time>
+                            <app-value
+                              ng-reflect-vm="[object Object]"
+                            >
+                              <div>
+                                <!--container-->
+                                 1 
+                                <!--container-->
+                              </div>
+                              <!--container-->
+                            </app-value>
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat1 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            class="hidden xl:block *:bg-green-200 text-green-700"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit"
+                            >
+                              text1
+                            </div>
+                          </app-labeled-badge>
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="lab1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             lab1 
+                          </p>
+                          <!--container-->
+                          <a
+                            class="text-blue-700"
+                          >
+                            anchor1
+                          </a>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 1 completed mission with good performance if 1 is provided in the vm 1`] = `
+<div
+  id="root14"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="id1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             id1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="field1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             field1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="complet"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             complet 
+                          </p>
+                          <!--container-->
+                          <time>
+                            <app-value
+                              ng-reflect-vm="[object Object]"
+                            >
+                              <div>
+                                <!--container-->
+                                 1 
+                                <!--container-->
+                              </div>
+                              <!--container-->
+                            </app-value>
+                          </time>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat1 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            class="hidden xl:block *:bg-green-200 text-green-700"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit"
+                            >
+                              text1
+                            </div>
+                          </app-labeled-badge>
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="lab1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             lab1 
+                          </p>
+                          <!--container-->
+                          <a
+                            class="text-blue-700"
+                          >
+                            anchor1
+                          </a>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 1 gridXVM if 1 is provided in the vm 1`] = `
+<div
+  id="root3"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 1 header key in the grid if 1 is provided in the vm 1`] = `
 <div
   id="root6"
   ng-version="19.2.9"
@@ -919,16 +1141,15 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
               <h3
                 class="text-xl font-medium"
               >
-                 completed 
+                 tit1 
               </h3>
             </div>
           </app-grid-section-header>
           <app-grid
-            ng-reflect-vm="[object Object]"
+            class="*:grid-cols-6"
           >
             <div
-              class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
+              class="grid gap-4 col-span-full"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -939,33 +1160,69 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                   <h4
                     class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
                   >
-                     i 
+                     1 
                   </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     field 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     area 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     ti 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     per 
-                  </h4>
-                  <h4
-                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
-                  >
-                     act 
-                  </h4>
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 1 mission if 1 is provided in the vm 1`] = `
+<div
+  id="root9"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
                   <!--container-->
                 </div>
               </app-grid-header>
@@ -982,7 +1239,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
                       <app-key-value
-                        ng-reflect-label="i"
+                        ng-reflect-label="id1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -990,19 +1247,24 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             i 
+                             id1 
                           </p>
                           <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
+                          <app-value
+                            ng-reflect-vm="[object Object]"
                           >
-                             5 
-                          </p>
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <app-key-value
-                        ng-reflect-label="field"
+                        ng-reflect-label="field1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -1010,17 +1272,24 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             field 
+                             field1 
                           </p>
                           <!--container-->
-                          <p>
-                             field 
-                          </p>
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <app-key-value
-                        ng-reflect-label="area"
+                        ng-reflect-label="area1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -1028,18 +1297,24 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             area 
+                             area1 
                           </p>
                           <!--container-->
-                          <p>
-                             10 
-                          </p>
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <!--container-->
                       <app-key-value
-                        ng-reflect-label="ti"
+                        ng-reflect-label="sched1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -1047,18 +1322,24 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             ti 
+                             sched1 
                           </p>
                           <!--container-->
-                          <time>
-                             val 
-                          </time>
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <!--container-->
                       <app-key-value
-                        ng-reflect-label="per"
+                        ng-reflect-label="stat1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -1066,231 +1347,37 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             per 
+                             stat1 
                           </p>
                           <!--container-->
                           <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
+                            class="hidden xl:block *:bg-blue-200 text-blue-700"
+                            ng-reflect-ng-class="[object Object]"
                           >
                             <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
+                              class="h-fit py-2 px-4 rounded-full w-fit"
                             >
-                               DashboardPage.excellent 
+                              text1
                             </div>
                           </app-labeled-badge>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        reportText
-                      </a>
-                    </div>
-                  </app-grid-item>
-                  <app-grid-item
-                    class="grid grid-cols-subgrid xl:col-span-full"
-                  >
-                    <div
-                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
-                    >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
                           >
-                             i 
-                          </p>
-                          <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
-                          >
-                             7 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             field 
-                          </p>
-                          <!--container-->
-                          <p>
-                             field 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             area 
-                          </p>
-                          <!--container-->
-                          <p>
-                             10 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             ti 
-                          </p>
-                          <!--container-->
-                          <time>
-                             val 
-                          </time>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             per 
-                          </p>
-                          <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
-                            <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
-                            >
-                               DashboardPage.excellent 
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
                             </div>
-                          </app-labeled-badge>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        reportText
-                      </a>
-                    </div>
-                  </app-grid-item>
-                  <app-grid-item
-                    class="grid grid-cols-subgrid xl:col-span-full"
-                  >
-                    <div
-                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
-                    >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             i 
-                          </p>
-                          <!--container-->
-                          <p
-                            class="font-medium text-blue-800"
-                          >
-                             8 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             field 
-                          </p>
-                          <!--container-->
-                          <p>
-                             field 
-                          </p>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             area 
-                          </p>
-                          <!--container-->
-                          <p>
-                             10 
-                          </p>
+                            <!--container-->
+                          </app-value>
                         </div>
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
-                        <div
-                          class="duration-500 h-full flex flex-col justify-center"
-                        >
-                          <p
-                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
-                          >
-                             ti 
-                          </p>
-                          <!--container-->
-                          <time>
-                             val 
-                          </time>
-                        </div>
-                        <!--container-->
-                      </app-key-value>
                       <!--container-->
                       <app-key-value
-                        ng-reflect-label="per"
+                        ng-reflect-label="lab1"
                       >
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
@@ -1298,29 +1385,17 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                           <p
                             class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
                           >
-                             per 
+                             lab1 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
+                          <a
+                            class="text-blue-700"
                           >
-                            <div
-                              class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
-                            >
-                               DashboardPage.excellent 
-                            </div>
-                          </app-labeled-badge>
+                            anchor1
+                          </a>
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <a
-                        class="text-blue-500"
-                        href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
-                      >
-                        reportText
-                      </a>
                     </div>
                   </app-grid-item>
                   <!--container-->
@@ -1331,6 +1406,807 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
         </div>
       </app-grid-section>
       <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 3 gridXVM if 3 is provided in the vm 1`] = `
+<div
+  id="root4"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit2 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit3 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 3 header key in the grid if 3 is provided in the vm 1`] = `
+<div
+  id="root7"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     1 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     2 
+                  </h4>
+                  <h4
+                    class="uppercase xl:flex items-center text-gray-500 text-sm font-medium"
+                  >
+                     3 
+                  </h4>
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render 3 mission if 3 is provided in the vm 1`] = `
+<div
+  id="root10"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
+      <app-grid-section>
+        <div
+          class="bg-slate-100 p-5 rounded-lg flex flex-col space-y-4"
+        >
+          <app-grid-section-header>
+            <div
+              class="flex flex-row justify-between"
+            >
+              <h3
+                class="text-xl font-medium"
+              >
+                 tit1 
+              </h3>
+            </div>
+          </app-grid-section-header>
+          <app-grid
+            class="*:grid-cols-6"
+          >
+            <div
+              class="grid gap-4 col-span-full"
+            >
+              <app-grid-header
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="xl:grid grid-cols-subgrid col-span-full hidden"
+                >
+                  <!--container-->
+                </div>
+              </app-grid-header>
+              <app-grid-item-list
+                class="grid grid-cols-subgrid col-span-full"
+              >
+                <div
+                  class="grid xl:grid-cols-subgrid grid-cols-1 md:grid-cols-2 col-span-full gap-4"
+                >
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="id1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             id1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="field1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             field1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="sched1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             sched1 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat1 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            class="hidden xl:block *:bg-blue-200 text-blue-700"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit"
+                            >
+                              text1
+                            </div>
+                          </app-labeled-badge>
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="lab1"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             lab1 
+                          </p>
+                          <!--container-->
+                          <a
+                            class="text-blue-700"
+                          >
+                            anchor1
+                          </a>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                    </div>
+                  </app-grid-item>
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="id2"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             id2 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="field2"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             field2 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area2"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area2 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="sched2"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             sched2 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat2"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat2 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            class="hidden xl:block *:bg-blue-200 text-blue-700"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit"
+                            >
+                              text2
+                            </div>
+                          </app-labeled-badge>
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="lab2"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             lab2 
+                          </p>
+                          <!--container-->
+                          <a
+                            class="text-blue-700"
+                          >
+                            anchor2
+                          </a>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                    </div>
+                  </app-grid-item>
+                  <app-grid-item
+                    class="grid grid-cols-subgrid xl:col-span-full"
+                  >
+                    <div
+                      class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
+                    >
+                      <app-key-value
+                        ng-reflect-label="id3"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             id3 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="field3"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             field3 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="area3"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             area3 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="sched3"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             sched3 
+                          </p>
+                          <!--container-->
+                          <app-value
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <app-key-value
+                        ng-reflect-label="stat3"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             stat3 
+                          </p>
+                          <!--container-->
+                          <app-labeled-badge
+                            class="hidden xl:block *:bg-blue-200 text-blue-700"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                            <div
+                              class="h-fit py-2 px-4 rounded-full w-fit"
+                            >
+                              text3
+                            </div>
+                          </app-labeled-badge>
+                          <app-value
+                            class="block xl:hidden"
+                            ng-reflect-vm="[object Object]"
+                          >
+                            <div>
+                              <!--container-->
+                               1 
+                              <!--container-->
+                            </div>
+                            <!--container-->
+                          </app-value>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                      <!--container-->
+                      <!--container-->
+                      <app-key-value
+                        ng-reflect-label="lab3"
+                      >
+                        <div
+                          class="duration-500 h-full flex flex-col justify-center"
+                        >
+                          <p
+                            class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                          >
+                             lab3 
+                          </p>
+                          <!--container-->
+                          <a
+                            class="text-blue-700"
+                          >
+                            anchor3
+                          </a>
+                        </div>
+                        <!--container-->
+                      </app-key-value>
+                    </div>
+                  </app-grid-item>
+                  <!--container-->
+                </div>
+              </app-grid-item-list>
+            </div>
+          </app-grid>
+        </div>
+      </app-grid-section>
+      <!--container-->
+      <!--container-->
+    </div>
+  </app-dashboard-spacer>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`PilotDashboardPageComponent should render the template when the vm is provided 1`] = `
+<div
+  id="root1"
+  ng-version="19.2.9"
+>
+  <app-dashboard-spacer>
+    <div
+      class="flex flex-col gap-10"
+    >
       <!--container-->
     </div>
   </app-dashboard-spacer>

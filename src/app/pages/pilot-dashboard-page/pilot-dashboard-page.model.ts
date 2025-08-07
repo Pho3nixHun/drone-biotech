@@ -1,78 +1,58 @@
-import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
-import {
-    KVsFromVM,
-    TitleWithoutValueKey,
-    TitleWithValueKey,
-} from '@interfaces/value-key.interface';
-import {
-    Badge,
-    GridConfig as Config,
-} from '@interfaces/with-base-dashboard-page.interface';
-import {
-    AssignedMission,
-    CompletedMission,
-} from '@services/mission/mission.service.model';
+import { ValueVM } from '@components/value/value.model';
+import { WithAnchor } from '@interfaces/with-anchor.interface';
+import { WithLabel } from '@interfaces/with-label.interface';
+import { WithTextNode } from '@interfaces/with-text-node.interface';
+import { WithTitle } from '@interfaces/with-title.interface';
 
-interface MissionConfig {
-    id: TitleWithoutValueKey;
-    fieldName: TitleWithoutValueKey;
-    areaInHa: TitleWithoutValueKey;
-    scheduledDate: TitleWithValueKey;
-    status: TitleWithoutValueKey;
-    completionDate: TitleWithValueKey;
-    performance: TitleWithoutValueKey;
-    requester: TitleWithoutValueKey;
-    pilot: TitleWithoutValueKey;
-    client: TitleWithoutValueKey;
-    actions: { mission: NavigationAnchor; report: NavigationAnchor };
+export enum Status {
+    SCHEDULED,
+    PREPARING,
+}
+export enum Performance {
+    EXCELLENT,
+    GOOD,
+}
+export interface BadgeXVM extends WithTextNode {
+    textKey: string;
+}
+interface StatusKeyValueXVM extends KeyValueXVM {
+    badgeXVM: BadgeXVM & { status: Status };
+}
+interface PerformanceKeyValueXVM extends KeyValueXVM {
+    badgeXVM: BadgeXVM & { performance: Performance };
 }
 
-interface MissionVM {
-    badge: Badge;
+interface KeyValueXVM extends WithLabel {
+    valueVM: ValueVM;
 }
 
-type AssignedMissionVM = Omit<
-    AssignedMission,
-    'client' | 'pilot' | 'status' | 'coordinates'
-> &
-    MissionVM;
-type CompletedMissionVM = Omit<
-    CompletedMission,
-    'client' | 'pilot' | 'performance' | 'coordinates'
-> &
-    MissionVM;
+interface AnchorXVM extends WithLabel, WithAnchor {}
 
-export type AssignedMissionXVM = KVsFromVM<AssignedMissionVM> &
-    WithNavigationAnchor;
-export type CompletedMissionXVM = KVsFromVM<CompletedMissionVM> &
-    WithNavigationAnchor;
+interface MissionBaseXVM {
+    id: KeyValueXVM;
+    fieldName: KeyValueXVM;
+    areaInHa: KeyValueXVM;
+    anchorXVM: AnchorXVM;
+}
+
+export interface AssignedMissionXVM extends MissionBaseXVM {
+    type: 'assigned';
+    scheduledDate: KeyValueXVM;
+    status: StatusKeyValueXVM;
+}
+export interface CompletedMissionXVM extends MissionBaseXVM {
+    type: 'completed';
+    completionDate: KeyValueXVM;
+    performance: PerformanceKeyValueXVM;
+}
+
 type MissionXVM = AssignedMissionXVM | CompletedMissionXVM;
 
-type AssignedMissionsGrid = Config;
-type CompletedMissionsGrid = Config;
-
-type AssignedMissionsGridXVM = AssignedMissionsGrid & {
+export interface GridXVM extends WithTitle {
+    headerKeys: string[];
     missionXVMs: MissionXVM[];
-};
-type CompletedMissionsGridXVM = CompletedMissionsGrid & {
-    missionXVMs: MissionXVM[];
-};
-
-export type GridXVM = AssignedMissionsGridXVM | CompletedMissionsGridXVM;
+}
 
 export interface PilotDashboardPageVM {
     gridXVMs: GridXVM[];
 }
-
-export interface PilotDashboardPageConfig {
-    missionConfig: MissionConfig;
-    assignedMissionsGridConfig: AssignedMissionsGrid;
-    completedMissionsGridConfig: CompletedMissionsGrid;
-}
-
-export const isAssignedMissionXVM = (
-    obj: MissionXVM
-): obj is AssignedMissionXVM => 'scheduledDateKV' in obj;

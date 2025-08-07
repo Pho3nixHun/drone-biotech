@@ -7,7 +7,7 @@
                         {{ t(gridXVM.titleKey) }}
                     </h3>
                 </app-grid-section-header>
-                <app-grid [vm]="gridXVM">
+                <app-grid class="*:grid-cols-6">
                     <app-grid-header
                         class="grid grid-cols-subgrid col-span-full"
                     >
@@ -26,89 +26,132 @@
                             <app-grid-item
                                 class="grid grid-cols-subgrid xl:col-span-full"
                             >
-                                <app-key-value [label]="missionXVM.idKV.key">
-                                    <p class="font-medium text-blue-800">
-                                        {{ missionXVM.idKV.value }}
-                                    </p>
+                                <app-key-value [label]="missionXVM.id.labelKey">
+                                    <app-value [vm]="missionXVM.id.valueVM" />
                                 </app-key-value>
 
                                 <app-key-value
-                                    [label]="missionXVM.fieldNameKV.key"
+                                    [label]="missionXVM.fieldName.labelKey"
                                 >
-                                    <p>
-                                        {{ missionXVM.fieldNameKV.value }}
-                                    </p>
+                                    <app-value
+                                        [vm]="missionXVM.fieldName.valueVM"
+                                    />
                                 </app-key-value>
 
                                 <app-key-value
-                                    [label]="missionXVM.areaInHaKV.key"
+                                    [label]="missionXVM.areaInHa.labelKey"
                                 >
-                                    <p>
-                                        {{ missionXVM.areaInHaKV.value }}
-                                    </p>
+                                    <app-value
+                                        [vm]="missionXVM.areaInHa.valueVM"
+                                    />
                                 </app-key-value>
 
-                                @if (isAssignedMissionXVM(missionXVM)) {
-                                    <app-key-value
-                                        [label]="missionXVM.scheduledDateKV.key"
-                                    >
-                                        <time>
-                                            {{
-                                                t(
-                                                    missionXVM.scheduledDateKV
-                                                        .valueKey,
-                                                    {
-                                                        date: missionXVM
-                                                            .scheduledDateKV
-                                                            .value,
-                                                    }
-                                                )
-                                            }}
-                                        </time>
-                                    </app-key-value>
-                                } @else {
-                                    <app-key-value
-                                        [label]="
-                                            missionXVM.completionDateKV.key
-                                        "
-                                    >
-                                        <time>
-                                            {{
-                                                t(
-                                                    missionXVM.completionDateKV
-                                                        .valueKey,
-                                                    {
-                                                        date: missionXVM
-                                                            .completionDateKV
-                                                            .value,
-                                                    }
-                                                )
-                                            }}
-                                        </time>
-                                    </app-key-value>
+                                @switch (missionXVM.type) {
+                                    @case ('assigned') {
+                                        <app-key-value
+                                            [label]="
+                                                missionXVM.scheduledDate
+                                                    .labelKey
+                                            "
+                                        >
+                                            <app-value
+                                                [vm]="
+                                                    missionXVM.scheduledDate
+                                                        .valueVM
+                                                "
+                                            />
+                                        </app-key-value>
+
+                                        <app-key-value
+                                            [label]="missionXVM.status.labelKey"
+                                            ><app-labeled-badge
+                                                [ngClass]="{
+                                                    '*:bg-blue-200 text-blue-700':
+                                                        missionXVM.status
+                                                            .badgeXVM.status ===
+                                                        Status.PREPARING,
+                                                    '*:bg-yellow-200 text-yellow-700':
+                                                        missionXVM.status
+                                                            .badgeXVM.status ===
+                                                        Status.SCHEDULED,
+                                                }"
+                                                class="hidden xl:block"
+                                                >{{
+                                                    t(
+                                                        missionXVM.status
+                                                            .badgeXVM.textKey
+                                                    )
+                                                }}</app-labeled-badge
+                                            >
+                                            <app-value
+                                                class="block xl:hidden"
+                                                [vm]="missionXVM.status.valueVM"
+                                            />
+                                        </app-key-value>
+                                    }
+                                    @case ('completed') {
+                                        <app-key-value
+                                            [label]="
+                                                missionXVM.completionDate
+                                                    .labelKey
+                                            "
+                                        >
+                                            <time>
+                                                <app-value
+                                                    [vm]="
+                                                        missionXVM
+                                                            .completionDate
+                                                            .valueVM
+                                                    "
+                                                />
+                                            </time>
+                                        </app-key-value>
+
+                                        <app-key-value
+                                            [label]="
+                                                missionXVM.performance.labelKey
+                                            "
+                                        >
+                                            <app-labeled-badge
+                                                class="hidden xl:block"
+                                                [ngClass]="{
+                                                    '*:bg-green-200 text-green-700':
+                                                        missionXVM.performance
+                                                            .badgeXVM
+                                                            .performance ===
+                                                            Performance.EXCELLENT ||
+                                                        Performance.GOOD,
+                                                }"
+                                                >{{
+                                                    t(
+                                                        missionXVM.performance
+                                                            .badgeXVM.textKey
+                                                    )
+                                                }}</app-labeled-badge
+                                            >
+                                            <app-value
+                                                class="block xl:hidden"
+                                                [vm]="
+                                                    missionXVM.performance
+                                                        .valueVM
+                                                "
+                                            />
+                                        </app-key-value>
+                                    }
                                 }
-
-                                <app-key-value [label]="missionXVM.badgeKV.key">
-                                    <app-labeled-badge
-                                        [color]="missionXVM.badgeKV.value.color"
-                                    >
-                                        {{
-                                            t(missionXVM.badgeKV.value.textKey)
-                                        }}
-                                    </app-labeled-badge>
-                                </app-key-value>
-
-                                <a
-                                    [routerLink]="
-                                        missionXVM.navigationAnchor.routerLink
-                                    "
-                                    [ngClass]="
-                                        missionXVM.navigationAnchor.textColor
-                                    "
-                                    >{{
-                                        t(missionXVM.navigationAnchor.textKey)
-                                    }}</a
+                                <app-key-value
+                                    [label]="missionXVM.anchorXVM.labelKey"
                                 >
+                                    <a
+                                        class="text-blue-700"
+                                        [routerLink]="
+                                            missionXVM.anchorXVM.routerLink
+                                        "
+                                        >{{
+                                            t(missionXVM.anchorXVM.textKey)
+                                        }}</a
+                                    >
+                                </app-key-value>
                             </app-grid-item>
                         }
                     </app-grid-item-list>

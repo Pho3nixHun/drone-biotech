@@ -10,10 +10,11 @@ import { GridComponent } from '@components/grid-section/components/grid/grid.com
 import { GridItemListComponent } from '@components/grid-section/components/grid/components/grid-item-list/grid-item-list.component';
 import { GridItemComponent } from '@components/grid-section/components/grid/components/grid-item-list/components/grid-item/grid-item.component';
 import { KeyValueComponent } from '@components/key-value/key-value.component';
-import { LabeledBadgeComponent } from '@components/labeled-badge/labeled-badge.component';
 import { PilotDashboardPageService } from './pilot-dashboard-page.service';
-import { isAssignedMissionXVM } from './pilot-dashboard-page.model';
 import { DashboardSpacerComponent } from '@components/dashboard-spacer/dashboard-spacer.component';
+import { ValueComponent } from '@components/value/value.component';
+import { LabeledBadgeComponent } from '@components/labeled-badge/labeled-badge.component';
+import { Status, Performance } from './pilot-dashboard-page.model';
 
 @Component({
     selector: 'app-pilot-dashboard-page',
@@ -25,11 +26,12 @@ import { DashboardSpacerComponent } from '@components/dashboard-spacer/dashboard
         GridItemListComponent,
         GridItemComponent,
         KeyValueComponent,
-        LabeledBadgeComponent,
         NgClass,
         TranslocoModule,
         RouterModule,
         DashboardSpacerComponent,
+        ValueComponent,
+        LabeledBadgeComponent,
     ],
     templateUrl: './pilot-dashboard-page.component.html',
 })
@@ -39,5 +41,6 @@ export class PilotDashboardPageComponent {
     );
 
     protected readonly vm = toSignal(this.pilotDashboardPageService.getVM());
-    protected readonly isAssignedMissionXVM = isAssignedMissionXVM;
+    protected readonly Status = Status;
+    protected readonly Performance = Performance;
 }

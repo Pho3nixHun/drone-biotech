@@ -1,27 +1,31 @@
-import {
-    enMock,
-    oneActiveMission,
-    oneCompletedMission,
-    pilotDashboardPageConfigMock,
-    threeActiveMissions,
-    threeCompletedMissions,
-} from './pilot-dashboard-page.mock';
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PilotDashboardPageComponent } from './pilot-dashboard-page.component';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { selectUserName } from '@stores/auth/auth.selector';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { provideRouter } from '@angular/router';
 import {
-    provideMissionMockService,
-    updateMissions,
-} from '@services/mission/mission-mock.service';
-import { PILOT_DASHBOARD_PAGE_CONFIG } from './pilot-dashboard-page.config';
+    providePilotDashboardPageMockService,
+    updateVMSubject,
+} from './pilot-dashboard-page-mock.service';
+import {
+    enMock,
+    mockVM,
+    mockVMWithOneExcellentCompletedMissionXVM,
+    mockVMWithOneGoodCompletedMissionXVM,
+    mockVMWithOneGridXVM,
+    mockVMWithOneHeaderKeyInGridXVM,
+    mockVMWithOneMissionXVM,
+    mockVMWithOnePreparingAssignedMissionXVM,
+    mockVMWithOneScheduledAssignedMissionXVM,
+    mockVMWithoutGridXVM,
+    mockVMWithoutHeaderKeysInGridXVM,
+    mockVMWithoutMissionXVM,
+    mockVMWithThreeGridXVM,
+    mockVMWithThreeHeaderKeysInGridXVM,
+    mockVMWithThreeMissionXVM,
+} from './pilot-dashboard-page.mock';
 
 describe('PilotDashboardPageComponent', () => {
     let fixture: ComponentFixture<PilotDashboardPageComponent>;
-    let mockStore: MockStore;
     let compiled: HTMLElement;
 
     beforeEach(async () => {
@@ -38,25 +42,17 @@ describe('PilotDashboardPageComponent', () => {
             ],
             providers: [
                 provideRouter([]),
-                {
-                    provide: PILOT_DASHBOARD_PAGE_CONFIG,
-                    useValue: pilotDashboardPageConfigMock,
-                },
-                provideMissionMockService(),
-                provideMockStore({
-                    selectors: [{ selector: selectUserName, value: undefined }],
-                }),
+                providePilotDashboardPageMockService(),
             ],
         }).compileComponents();
         fixture = TestBed.createComponent(PilotDashboardPageComponent);
-        mockStore = TestBed.inject(MockStore);
         compiled = fixture.debugElement.nativeElement;
     });
 
     // Snapshot testing
-    it('should not render the template when there is no user', () => {
+    it('should not render the template when the vm is not provided', () => {
         // Arrange
-        mockStore.overrideSelector(selectUserName, undefined);
+        updateVMSubject(undefined);
 
         // Act
         fixture.detectChanges();
@@ -64,83 +60,155 @@ describe('PilotDashboardPageComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-
     // Snapshot testing
-    it('should render the template when there is a user provided', () => {
+    it('should render the template when the vm is provided', () => {
         // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
+        updateVMSubject(mockVM);
 
         // Act
-        mockStore.refreshState();
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should not render the grids if there is no mission for the pilot', () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
-        updateMissions([]);
-
-        // Act
-        mockStore.refreshState();
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should render one active mission if one active mission is provided for the pilot', () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
-        updateMissions([oneActiveMission]);
-
-        // Act
-        mockStore.refreshState();
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should render three active missions if three missions are provided for the pilot', () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
-        updateMissions([threeActiveMissions]);
-
-        // Act
-        mockStore.refreshState();
         fixture.detectChanges();
 
         // Assert
         expect(compiled).toMatchSnapshot();
     });
     // Snapshot testing
-    it('should render one completed mission if one completed mission is provided for the pilot', () => {
+    it('should render 0 gridXVM if 0 is provided in the vm', () => {
         // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
-        updateMissions([oneCompletedMission]);
+        updateVMSubject(mockVMWithoutGridXVM);
 
         // Act
-        mockStore.refreshState();
         fixture.detectChanges();
 
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-
     // Snapshot testing
-    it('should render three completed missions if three completed missions are provided for the pilot', () => {
+    it('should render 1 gridXVM if 1 is provided in the vm', () => {
         // Arrange
-        mockStore.overrideSelector(selectUserName, 'Alex Rodriguez');
-        updateMissions([threeCompletedMissions]);
+        updateVMSubject(mockVMWithOneGridXVM);
 
         // Act
-        mockStore.refreshState();
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 3 gridXVM if 3 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 0 header key in the grid if 0 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutHeaderKeysInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 header key in the grid if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneHeaderKeyInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 3 header key in the grid if 3 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeHeaderKeysInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 0 mission if 0 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutMissionXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 mission if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneMissionXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 3 mission if 3 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeMissionXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 assigned mission with scheduled status if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneScheduledAssignedMissionXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 assigned mission with preparing status if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOnePreparingAssignedMissionXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 completed mission with excellent performance if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneExcellentCompletedMissionXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 completed mission with good performance if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneGoodCompletedMissionXVM);
+
+        // Act
         fixture.detectChanges();
 
         // Assert
