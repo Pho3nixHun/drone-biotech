@@ -1,12 +1,7 @@
-import { Component, input } from '@angular/core';
-import { GridVM } from './grid.model';
-import { NgClass } from '@angular/common';
-
+import { Component } from '@angular/core';
 @Component({
     selector: 'app-grid',
-    imports: [NgClass],
+    imports: [],
     templateUrl: './grid.component.html',
 })
-export class GridComponent {
-    public vm = input.required<GridVM>();
-}
+export class GridComponent {}

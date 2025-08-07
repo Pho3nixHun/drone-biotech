@@ -5,11 +5,9 @@ exports[`LabeledBadgeComponent should render the template correctly 1`] = `
   id="root0"
   ng-version="19.2.9"
 >
-  <app-labeled-badge
-    ng-reflect-color="text-blue-500"
-  >
+  <app-labeled-badge>
     <div
-      class="h-fit py-2 px-4 rounded-full w-fit text-blue-500"
+      class="h-fit py-2 px-4 rounded-full w-fit"
     >
       <p>
         Should be projected

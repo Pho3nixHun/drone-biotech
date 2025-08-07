@@ -5,12 +5,9 @@ exports[`GridComponent should render the template correctly 1`] = `
   id="root0"
   ng-version="19.2.9"
 >
-  <app-grid
-    ng-reflect-vm="[object Object]"
-  >
+  <app-grid>
     <div
-      class="grid gap-4 col-span-full grid-cols-6"
-      ng-reflect-ng-class="grid-cols-6"
+      class="grid gap-4 col-span-full"
     />
   </app-grid>
 </div>

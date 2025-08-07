@@ -1,21 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GridComponent } from './grid.component';
 import { Component } from '@angular/core';
-import { GridColsLength, GridVM } from './grid.model';
 
 @Component({
     imports: [GridComponent],
     template: `
-        <app-grid [vm]="gridVM">
+        <app-grid>
             <p>Should be projected</p>
         </app-grid>
     `,
 })
-class TestHostComponent {
-    protected gridVM: GridVM = {
-        gridColsLength: GridColsLength.SIX,
-    };
-}
+class TestHostComponent {}
 
 describe('GridComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;

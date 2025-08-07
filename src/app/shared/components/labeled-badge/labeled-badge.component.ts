@@ -1,10 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-labeled-badge',
     imports: [],
     templateUrl: './labeled-badge.component.html',
 })
-export class LabeledBadgeComponent {
-    public color = input.required<string>();
-}
+export class LabeledBadgeComponent {}

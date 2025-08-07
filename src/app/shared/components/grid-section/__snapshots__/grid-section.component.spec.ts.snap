@@ -14,12 +14,9 @@ exports[`GridSectionComponent should render the template correctly 1`] = `
           class="flex flex-row justify-between"
         />
       </app-grid-section-header>
-      <app-grid
-        ng-reflect-vm="[object Object]"
-      >
+      <app-grid>
         <div
-          class="grid gap-4 col-span-full grid-cols-6"
-          ng-reflect-ng-class="grid-cols-6"
+          class="grid gap-4 col-span-full"
         />
       </app-grid>
     </div>
