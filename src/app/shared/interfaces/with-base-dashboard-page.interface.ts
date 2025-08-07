@@ -3,8 +3,6 @@ import {
     MissionStatusType,
 } from '@services/mission/mission.service.model';
 import { UserRole, User as AuthUser } from '@stores/auth/auth.model';
-import { GridVM } from '@components/grid-section/components/grid/grid.model';
-import { WithTitle } from './with-title.interface';
 
 export const mapAuthUserToDashboardUser = (user: AuthUser): User => ({
     name: user.displayName,
@@ -16,15 +14,6 @@ export interface User {
     role: UserRole;
     name: string;
     lastLoginDate: Date;
-}
-
-export interface Badge {
-    textKey: string;
-    color: string;
-}
-
-export interface GridConfig extends GridVM, WithTitle {
-    headerKeys: string[];
 }
 
 export const mapMissionStatusTypeToCCSColors = (
