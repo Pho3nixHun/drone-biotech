@@ -1,5 +1,6 @@
 import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
 import {
+    ENTRY_POINT_MARKER_OPTIONS,
     GOOGLE_MAPS_LOADER_CONFIG,
     INFO_WINDOW_OPTIONS,
     MAP_OPTIONS,
@@ -7,7 +8,6 @@ import {
     provideGoogleMapsLibraries,
 } from 'src/app/shared/providers/google-maps-provider';
 import { environment } from 'src/environments/environment';
-import { ENTRY_POINT_MARKER_OPTIONS } from './components/map-point-select-form-control/map-point-select-form-control.model';
 import { ConfigProvider } from '@interfaces/config-provider';
 
 export const mapFormControlConfig: ConfigProvider[] = [

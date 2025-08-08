@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AreaDataDialogComponent } from './area-data-dialog.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { provideMockEntryPointMarkerOptions } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
 import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
 import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
@@ -17,6 +16,7 @@ import {
 } from './area-data-dialog.component.mock';
 import { provideMockStore } from '@ngrx/store/testing';
 import {
+    provideMockEntryPointMarkerOptions,
     provideMockMapOptions,
     provideMockPolygonOptions,
 } from 'src/app/shared/providers/google-maps-provider';

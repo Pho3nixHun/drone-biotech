@@ -17,6 +17,13 @@ export const routes: Routes = [
                 (m) => m.OrderDetailsPageComponent
             ),
     },
+    {
+        path: `:id/${OrdersRouteSegment.MISSIONS}`,
+        loadChildren: () =>
+            import(
+                '../mission-details-page/mission-details-page-routing.module'
+            ).then((m) => m.MissionDetailsPageRoutingModule),
+    },
 ];
 
 @NgModule({
