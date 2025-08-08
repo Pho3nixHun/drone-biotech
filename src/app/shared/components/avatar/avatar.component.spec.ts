@@ -4,9 +4,7 @@ import { AvatarComponent } from './avatar.component';
 
 @Component({
     imports: [AvatarComponent],
-    template: `<app-avatar [vm]="{ cssStyles: 'text-blue-400' }"
-        >C</app-avatar
-    >`,
+    template: `<app-avatar>C</app-avatar>`,
 })
 class TestHostComponent {}
 describe('AvatarComponent', () => {

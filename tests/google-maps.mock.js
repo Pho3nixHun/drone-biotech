@@ -5,7 +5,7 @@ global.google = {
         Map: jest.fn(() => ({
             setCenter: jest.fn(),
             setZoom: jest.fn(),
-            setOptions: jest.fn()
+            setOptions: jest.fn(),
         })),
         drawing: {
             DrawingManager: jest.fn(() => ({
@@ -14,6 +14,9 @@ global.google = {
         },
         event: {
             addListener: jest.fn(),
+        },
+        marker: {
+            AdvancedMarkerElement: jest.fn(() => ({})),
         },
         Polygon: jest.fn(() => ({
             getPath: jest.fn(),

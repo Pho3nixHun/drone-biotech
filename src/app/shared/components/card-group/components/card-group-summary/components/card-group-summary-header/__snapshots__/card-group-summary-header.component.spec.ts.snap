@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardGroupSummaryHeaderComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-card-group-summary-header>
+    <div
+      class="grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
+    >
+      <div>
+        Should be projected
+      </div>
+    </div>
+  </app-card-group-summary-header>
+</div>
+`;

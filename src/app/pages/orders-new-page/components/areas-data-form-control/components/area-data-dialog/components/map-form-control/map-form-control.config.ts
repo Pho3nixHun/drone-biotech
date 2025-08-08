@@ -1,18 +1,16 @@
-import { EnvironmentProviders, Provider } from '@angular/core';
 import { HEAD_OFFICE_LOCATION } from '@services/distance/distance.model';
 import {
+    ENTRY_POINT_MARKER_OPTIONS,
     GOOGLE_MAPS_LOADER_CONFIG,
+    INFO_WINDOW_OPTIONS,
+    MAP_OPTIONS,
+    POLYGON_OPTIONS,
     provideGoogleMapsLibraries,
 } from 'src/app/shared/providers/google-maps-provider';
 import { environment } from 'src/environments/environment';
-import {
-    POLYGON_OPTIONS,
-    INFO_WINDOW_OPTIONS,
-} from './components/map-area-select-form-control/map-area-select-form-control.model';
-import { ENTRY_POINT_MARKER_OPTIONS } from './components/map-point-select-form-control/map-point-select-form-control.model';
-import { MAP_OPTIONS } from './map-form-control.model';
+import { ConfigProvider } from '@interfaces/config-provider';
 
-export const mapFormControlConfig: (Provider | EnvironmentProviders)[] = [
+export const mapFormControlConfig: ConfigProvider[] = [
     provideGoogleMapsLibraries(),
     {
         provide: POLYGON_OPTIONS,

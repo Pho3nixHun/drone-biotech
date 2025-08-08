@@ -8,6 +8,19 @@ import {
     signal,
 } from '@angular/core';
 import {
+    combineLatest,
+    defaultIfEmpty,
+    filter,
+    firstValueFrom,
+    forkJoin,
+    lastValueFrom,
+    map,
+    noop,
+    Observable,
+    of,
+    switchMap,
+} from 'rxjs';
+import {
     AreasDataFormControlVM,
     AreaXData,
     TotalAreaXData,
@@ -17,10 +30,13 @@ import {
     AreaDataDialogVM,
     isAreaDataDialogResultWithAreaData,
 } from './components/area-data-dialog/area-data-dialog.model';
+import {
+    METRES_TO_KILOMETERS,
+    SQUARE_METRES_TO_HECTARE,
+} from '@stores/location/location.model';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DialogService } from '@services/dialog/dialog.service';
 import { AreaDataDialogComponent } from './components/area-data-dialog/area-data-dialog.component';
-import { filter, lastValueFrom, map } from 'rxjs';
 import { DistanceService } from '@services/distance/distance.service';
 import { getAreaOfPolygon } from 'geolib';
 import { TranslocoModule } from '@jsverse/transloco';
@@ -28,17 +44,18 @@ import { ReverseGeocodingService } from '@services/reverse-geocoding/reverse-geo
 import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
 import { isDeleteDialogResult } from './components/delete-dialog/delete-dialog.model';
 import { CardGroupComponent } from '@components/card-group/card-group.component';
-import { CardItemComponent } from '@components/card-item/card-item.component';
+import { CardItemComponent } from '@components/card-group/components/card-item-list/components/card-item/card-item.component';
 import { KeyValueComponent } from '@components/key-value/key-value.component';
 import { MatIconModule } from '@angular/material/icon';
-import { AsyncPipe } from '@angular/common';
-import {
-    METRES_TO_KILOMETERS,
-    SQUARE_METRES_TO_HECTARE,
-} from '@stores/location/location.model';
-
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-const noop = () => {};
+import { rxResource, toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { CardGroupHeaderComponent } from '@components/card-group/components/card-group-header/card-group-header.component';
+import { CardItemListComponent } from '@components/card-group/components/card-item-list/card-item-list.component';
+import { SectionHeaderComponent } from 'src/app/pages/orders-new-page/components/areas-data-form-control/components/section-header/section-header.component';
+import { CardGroupSummaryComponent } from '@components/card-group/components/card-group-summary/card-group-summary.component';
+import { CardGroupSummaryHeaderComponent } from '@components/card-group/components/card-group-summary/components/card-group-summary-header/card-group-summary-header.component';
+import { CardGroupSummaryContentComponent } from '@components/card-group/components/card-group-summary/components/card-group-summary-content/card-group-summary-content.component';
+import { CardItemContentComponent } from '@components/card-group/components/card-item-list/components/card-item/components/card-item-content/card-item-content.component';
+import { CardItemActionListComponent } from '@components/card-group/components/card-item-list/components/card-item/components/card-item-action-list/card-item-action-list.component';
 
 @Component({
     selector: 'app-areas-data-form-control',
@@ -48,7 +65,14 @@ const noop = () => {};
         CardItemComponent,
         KeyValueComponent,
         MatIconModule,
-        AsyncPipe,
+        CardGroupHeaderComponent,
+        CardItemListComponent,
+        SectionHeaderComponent,
+        CardGroupSummaryComponent,
+        CardGroupSummaryHeaderComponent,
+        CardGroupSummaryContentComponent,
+        CardItemContentComponent,
+        CardItemActionListComponent,
     ],
     providers: [
         {
@@ -121,15 +145,15 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
     }
 
     protected async deleteAreaData(id: string) {
-        const response = await lastValueFrom(
+        const response = await firstValueFrom(
             this.dialogService
                 .create(this.vm().deleteDialogVM, DeleteDialogComponent)
                 .result$.pipe(
                     filter((data) => isDeleteDialogResult(data)),
-                    map((data) => data.reasonType)
+                    map((data) => data.reasonType),
+                    defaultIfEmpty(null)
                 )
         );
-
         if (response === 'submit') {
             this.areaData.set(
                 this.areaData().reduce<AreaData[]>(
@@ -140,57 +164,88 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         }
     }
 
-    protected xAreaData$ = computed<Promise<AreaXData[] | null>>(async () => {
-        const areaData = this.areaData();
-        return areaData.length === 0
-            ? null
-            : await Promise.all(
-                  areaData.map(async (data) => {
-                      const targetAreaSize =
-                          getAreaOfPolygon(data.targetArea) /
-                          SQUARE_METRES_TO_HECTARE;
-                      return {
-                          ...data,
-                          targetAreaSize,
-                          entryPointAddress:
-                              await this.reverseGeocodingService.getAddressByCoordinates(
-                                  data.entryPoint
-                              ),
-                          trichogrammaRequirement:
-                              targetAreaSize * data.dosePerHq,
-                          distanceFromHeadOffice:
-                              (await lastValueFrom(
-                                  this.distanceService.getDistance(
-                                      data.entryPoint
-                                  )
-                              )) / METRES_TO_KILOMETERS,
-                      };
-                  })
-              );
+    protected readonly areaXData$: Observable<AreaXData[] | null> =
+        toObservable(this.areaData).pipe(
+            switchMap((data) => {
+                if (!data || data.length === 0) return of(null);
+
+                return forkJoin(
+                    data.map((area) =>
+                        combineLatest([
+                            this.reverseGeocodingService.getAddressByCoordinates(
+                                area.entryPoint
+                            ),
+                            this.distanceService
+                                .getDistance(area.entryPoint)
+                                .pipe(
+                                    map(
+                                        (distance) =>
+                                            distance / METRES_TO_KILOMETERS
+                                    )
+                                ),
+                        ]).pipe(
+                            map(
+                                ([
+                                    entryPointAddress,
+                                    distanceFromHeadOffice,
+                                ]) => {
+                                    const targetAreaSize =
+                                        getAreaOfPolygon(area.targetArea) /
+                                        SQUARE_METRES_TO_HECTARE;
+                                    return {
+                                        ...area,
+                                        entryPointAddress,
+                                        targetAreaSize,
+                                        distanceFromHeadOffice,
+                                        trichogrammaRequirement:
+                                            targetAreaSize * area.dosePerHq,
+                                    };
+                                }
+                            )
+                        )
+                    )
+                );
+            })
+        );
+
+    protected readonly areaXData = toSignal(this.areaXData$);
+
+    private readonly totalDistanceFromHeadOffice = rxResource({
+        request: () => this.areaXData(),
+        loader: ({ request }) => {
+            if (!request) return of(null);
+
+            return this.distanceService
+                .getShortestDistanceWithWaypoints(
+                    request.map((item) => item.entryPoint)
+                )
+                .pipe(map((distance) => distance / METRES_TO_KILOMETERS));
+        },
     });
 
-    protected totalAreaXData$ = computed<Promise<TotalAreaXData | null>>(
-        async () => {
-            const xAreaData = await this.xAreaData$();
-            if (!xAreaData || xAreaData.length === 0) return null;
-            return {
-                totalDistanceFromHeadOffice:
-                    (await lastValueFrom(
-                        this.distanceService.getShortestDistanceWithWaypoints(
-                            xAreaData.map((item) => item.entryPoint)
-                        )
-                    )) / METRES_TO_KILOMETERS,
-                totalTargetAreaSize: xAreaData.reduce(
-                    (acc, curr) => acc + curr.targetAreaSize,
-                    0
-                ),
-                totalTrichogrammaRequirement: xAreaData.reduce(
-                    (acc, curr) => acc + curr.trichogrammaRequirement,
-                    0
-                ),
-            };
-        }
-    );
+    protected readonly totalAreaXData = computed<TotalAreaXData | null>(() => {
+        const areaXData = this.areaXData();
+        const totalDistanceFromHeadOffice =
+            this.totalDistanceFromHeadOffice.value();
+        if (
+            !areaXData ||
+            areaXData.length === 0 ||
+            !totalDistanceFromHeadOffice
+        )
+            return null;
+
+        return {
+            totalDistanceFromHeadOffice,
+            totalTargetAreaSize: areaXData.reduce(
+                (acc, curr) => acc + curr.targetAreaSize,
+                0
+            ),
+            totalTrichogrammaRequirement: areaXData.reduce(
+                (acc, curr) => acc + curr.trichogrammaRequirement,
+                0
+            ),
+        };
+    });
 
     private readonly areaDataEffect = effect(() =>
         this.onChange(this.areaData())

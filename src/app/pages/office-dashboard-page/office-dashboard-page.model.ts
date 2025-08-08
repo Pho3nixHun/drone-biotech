@@ -45,12 +45,12 @@ interface MissionVM {
 
 type ActiveMissionVM = Omit<
     ActiveMissionX,
-    'status' | 'scheduledDate' | 'pilot'
+    'status' | 'scheduledDate' | 'pilot' | 'coordinates'
 > &
     MissionVM;
 type CompletedMissionVM = Omit<
     CompletedMissionX,
-    'areaInHa' | 'pilot' | 'performance'
+    'areaInHa' | 'pilot' | 'performance' | 'coordinates'
 > &
     MissionVM;
 

@@ -1,0 +1,12 @@
+@if (vm(); as vm) {
+    <app-page-layout>
+        <app-google-map
+            [vm]="vm.googleMapXVM"
+            appDrawTargetAreas
+            [targetAreas]="vm.googleMapXVM.targetAreaXVMs"
+            appDrawEntryPoints
+            [entryPoints]="vm.googleMapXVM.entryPointXVMs"
+            class="h-96"
+        />
+    </app-page-layout>
+}

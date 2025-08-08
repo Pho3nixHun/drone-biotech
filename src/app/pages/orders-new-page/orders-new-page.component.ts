@@ -8,6 +8,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { AreasDataFormControlComponent } from './components/areas-data-form-control/areas-data-form-control.component';
 import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 /**
  * OrdersNewPageComponent
@@ -40,11 +41,11 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
     templateUrl: './orders-new-page.component.html',
 })
 export class OrdersNewPageComponent {
-    private readonly ordersService = inject(OrdersNewPageService);
     private readonly fb = inject(FormBuilder);
-    protected readonly vm = this.ordersService.getVM();
+    private readonly ordersService = inject(OrdersNewPageService);
+    protected readonly vm = toSignal(this.ordersService.getVM());
 
-    public areasDataFormGroup = this.fb.group({
+    protected readonly areasDataFormGroup = this.fb.group({
         internalOrderNumber: this.fb.control<string>('', Validators.required),
         contact: this.fb.group({
             name: this.fb.control<string>('', Validators.required),

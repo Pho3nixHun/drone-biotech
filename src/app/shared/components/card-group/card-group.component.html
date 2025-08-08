@@ -1,10 +1,5 @@
-<div
-    class="grid xl:grid-cols-[1fr_1fr_1.5fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-4 xl:gap-y-1 md:grid-cols-2 text-left duration-500 transition-all rounded-md py-3"
->
-    <div
-        class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
-    >
-        <ng-content select="div" />
-    </div>
-    <ng-content select="app-card-item" />
+<div class="grid grid-cols-subgrid col-span-full gap-3">
+    <ng-content
+        select="[app-card-group-header, app-card-item-list, app-card-group-summary]"
+    />
 </div>

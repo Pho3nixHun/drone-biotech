@@ -1,0 +1,8 @@
+@let vM = vm();
+<div *transloco="let t">
+    @if (vM.type === 'withValueKey') {
+        {{ t(vM.key, vM.params) }}
+    } @else {
+        {{ vM.value }}
+    }
+</div>
