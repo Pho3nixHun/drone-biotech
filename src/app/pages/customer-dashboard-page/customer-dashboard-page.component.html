@@ -6,15 +6,15 @@
                     <h3 class="text-xl font-medium">
                         {{ t(gridXVM.titleKey) }}
                     </h3>
-                    @if (myOrdersGridXVM(gridXVM)) {
+                    @if (gridXVM.anchor) {
                         <a
-                            [routerLink]="gridXVM.navigationAnchor.routerLink"
+                            [routerLink]="gridXVM.anchor.routerLink"
                             class="btn btn-primary"
-                            >{{ t(gridXVM.navigationAnchor.textKey) }}
+                            >{{ t(gridXVM.anchor.textKey) }}
                         </a>
                     }
                 </app-grid-section-header>
-                <app-grid>
+                <app-grid class="*:grid-cols-6">
                     <app-grid-header
                         class="grid grid-cols-subgrid col-span-full"
                     >
@@ -34,74 +34,82 @@
                                 class="grid grid-cols-subgrid xl:col-span-full"
                                 *transloco="let t"
                             >
-                                <app-key-value [label]="orderXVM.idKV.key">
-                                    <p class="font-medium text-blue-800">
-                                        {{ orderXVM.idKV.value }}
-                                    </p>
+                                <app-key-value [label]="orderXVM.id.labelKey">
+                                    <app-value [vm]="orderXVM.id.valueVM" />
                                 </app-key-value>
 
-                                @if (isCompanyOrderXVM(orderXVM)) {
+                                @if (orderXVM.type === 'companyOrder') {
                                     <app-key-value
-                                        [label]="orderXVM.requesterKV.key"
+                                        [label]="orderXVM.requester.labelKey"
                                     >
-                                        <p>
-                                            {{ orderXVM.requesterKV.value }}
-                                        </p>
+                                        <app-value
+                                            [vm]="orderXVM.requester.valueVM"
+                                        />
                                     </app-key-value>
                                 }
 
                                 <app-key-value
-                                    [label]="orderXVM.creationDateKV.key"
+                                    [label]="orderXVM.creationDate.labelKey"
                                 >
-                                    <time>{{
-                                        t(orderXVM.creationDateKV.valueKey, {
-                                            date: orderXVM.creationDateKV.value,
-                                        })
-                                    }}</time>
+                                    <app-value
+                                        [vm]="orderXVM.creationDate.valueVM"
+                                    />
                                 </app-key-value>
 
                                 <app-key-value
-                                    [label]="orderXVM.totalAreaInHaKV.key"
+                                    [label]="orderXVM.totalAreaInHa.labelKey"
                                 >
-                                    <div>
-                                        {{ orderXVM.totalAreaInHaKV.value }}
-                                    </div>
-                                </app-key-value>
-
-                                <app-key-value [label]="orderXVM.badgeKV.key">
-                                    <app-labeled-badge>
-                                        {{ t(orderXVM.badgeKV.value.textKey) }}
-                                    </app-labeled-badge>
+                                    <app-value
+                                        [vm]="orderXVM.totalAreaInHa.valueVM"
+                                    />
                                 </app-key-value>
 
                                 <app-key-value
-                                    [label]="orderXVM.moneyValueKV.key"
-                                >
-                                    <p>
-                                        {{
-                                            t(orderXVM.moneyValueKV.valueKey, {
-                                                count: orderXVM.moneyValueKV
-                                                    .value,
-                                            })
-                                        }}
-                                    </p>
-                                </app-key-value>
-
-                                @if (
-                                    isMyOrderXVM(orderXVM) &&
-                                    orderXVM.navigationAnchor
-                                ) {
-                                    <a
-                                        [ngClass]="
-                                            orderXVM.navigationAnchor.textColor
-                                        "
-                                        [routerLink]="
-                                            orderXVM.navigationAnchor.routerLink
-                                        "
+                                    [label]="orderXVM.status.labelKey"
+                                    ><app-labeled-badge
+                                        class="xl:block hidden"
+                                        [ngClass]="{
+                                            '*:bg-yellow-200 text-yellow-600':
+                                                orderXVM.status.badgeXVM
+                                                    .status === Status.ACTIVE,
+                                            '*:bg-green-200 text-green-600':
+                                                orderXVM.status.badgeXVM
+                                                    .status ===
+                                                Status.COMPLETED,
+                                            '*:bg-red-200 text-red-600':
+                                                orderXVM.status.badgeXVM
+                                                    .status === Status.PENDING,
+                                        }"
                                         >{{
-                                            t(orderXVM.navigationAnchor.textKey)
-                                        }}</a
+                                            t(orderXVM.status.badgeXVM.textKey)
+                                        }}</app-labeled-badge
                                     >
+                                    <app-value
+                                        class="block xl:hidden"
+                                        [vm]="orderXVM.status.valueVM"
+                                    />
+                                </app-key-value>
+
+                                <app-key-value
+                                    [label]="orderXVM.price.labelKey"
+                                >
+                                    <app-value [vm]="orderXVM.price.valueVM" />
+                                </app-key-value>
+
+                                @if (orderXVM.type === 'myOrder') {
+                                    <app-key-value
+                                        [label]="orderXVM.anchorXVM.labelKey"
+                                        class="text-blue-700"
+                                    >
+                                        <a
+                                            [routerLink]="
+                                                orderXVM.anchorXVM.routerLink
+                                            "
+                                            >{{
+                                                t(orderXVM.anchorXVM.textKey)
+                                            }}</a
+                                        >
+                                    </app-key-value>
                                 }
                             </app-grid-item>
                         }

@@ -1,770 +1,844 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
-import { CustomerDashboardPageConfig } from './customer-dashboard-page.model';
-import { Order } from '@services/order/order.service.model';
-import { GridColsLength } from '../office-dashboard-page/office-dashboard-page.model';
+import {
+    CustomerDashboardPageVM,
+    Status,
+} from './customer-dashboard-page.model';
+import { OrdersRouteSegment } from '../orders-new-page/orders-route-segment';
 
-export const customerDashboardPageConfig: CustomerDashboardPageConfig = {
-    ordersConfig: {
-        id: { titleKey: 'DashboardPage.id.title' },
-        creationDate: {
-            titleKey: 'DashboardPage.creationDate.title',
-            valueKey: 'DashboardPage.creationDate.dateValue',
+export const customerDashboardPageVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: 'CustomerDashboardPage.myOrders.title',
+            anchor: {
+                routerLink: `/${AppRouteSegment.ORDERS}/${OrdersRouteSegment.NEW}`,
+                textKey: 'CustomerDashboardPage.myOrders.anchor.text',
+            },
+
+            headerKeys: [
+                'CustomerDashboardPage.id.header',
+                'CustomerDashboardPage.creationDate.header',
+                'CustomerDashboardPage.totalAreaInHa.header',
+                'CustomerDashboardPage.status.header',
+                'CustomerDashboardPage.price.header',
+                'CustomerDashboardPage.actions.header',
+            ],
+            orderXVMs: [
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: 'CustomerDashboardPage.id.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 'B-78901',
+                        },
+                    },
+                    creationDate: {
+                        labelKey: 'CustomerDashboardPage.creationDate.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.creationDate.value',
+                            params: { date: new Date() },
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: 'CustomerDashboardPage.totalAreaInHa.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 105.4,
+                        },
+                    },
+
+                    status: {
+                        labelKey: 'CustomerDashboardPage.status.label',
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: 'CustomerDashboardPage.status.active.text',
+                        },
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.status.active.text',
+                            params: {},
+                        },
+                    },
+                    price: {
+                        labelKey: 'CustomerDashboardPage.price.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.price.value',
+                            params: {
+                                price: 123000,
+                            },
+                        },
+                    },
+
+                    anchorXVM: {
+                        labelKey: 'PilotDashboardPage.actions.label',
+                        textKey: 'PilotDashboardPage.actions.mission.text',
+                    },
+                },
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: 'CustomerDashboardPage.id.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 'B-78902',
+                        },
+                    },
+                    creationDate: {
+                        labelKey: 'CustomerDashboardPage.creationDate.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.creationDate.value',
+                            params: { date: new Date() },
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: 'CustomerDashboardPage.totalAreaInHa.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 86,
+                        },
+                    },
+
+                    status: {
+                        labelKey: 'CustomerDashboardPage.status.label',
+                        badgeXVM: {
+                            status: Status.COMPLETED,
+                            textKey:
+                                'CustomerDashboardPage.status.completed.text',
+                        },
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.status.completed.text',
+                            params: {},
+                        },
+                    },
+                    price: {
+                        labelKey: 'CustomerDashboardPage.price.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.price.value',
+                            params: {
+                                price: 353000,
+                            },
+                        },
+                    },
+
+                    anchorXVM: {
+                        labelKey: 'PilotDashboardPage.actions.label',
+                        textKey: 'PilotDashboardPage.actions.mission.text',
+                    },
+                },
+            ],
         },
-        areaInHa: {
-            titleKey: 'DashboardPage.areaInHa.title',
+        {
+            titleKey: 'CustomerDashboardPage.companyOrders.title',
+            headerKeys: [
+                'CustomerDashboardPage.id.header',
+                'CustomerDashboardPage.requester.header',
+                'CustomerDashboardPage.creationDate.header',
+                'CustomerDashboardPage.totalAreaInHa.header',
+                'CustomerDashboardPage.status.header',
+                'CustomerDashboardPage.price.header',
+            ],
+            orderXVMs: [
+                {
+                    type: 'companyOrder',
+                    id: {
+                        labelKey: 'CustomerDashboardPage.id.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 'B-78903',
+                        },
+                    },
+                    creationDate: {
+                        labelKey: 'CustomerDashboardPage.creationDate.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.creationDate.value',
+                            params: { date: new Date() },
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: 'CustomerDashboardPage.totalAreaInHa.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 9.4,
+                        },
+                    },
+
+                    status: {
+                        labelKey: 'CustomerDashboardPage.status.label',
+                        badgeXVM: {
+                            status: Status.PENDING,
+                            textKey:
+                                'CustomerDashboardPage.status.pending.text',
+                        },
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.status.pending.text',
+                            params: {},
+                        },
+                    },
+                    price: {
+                        labelKey: 'CustomerDashboardPage.price.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.price.value',
+                            params: {
+                                price: 43000,
+                            },
+                        },
+                    },
+                    requester: {
+                        labelKey: 'CustomerDashboardPage.requester.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 'Lisa Martinez',
+                        },
+                    },
+                },
+                {
+                    type: 'companyOrder',
+                    id: {
+                        labelKey: 'CustomerDashboardPage.id.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 'B-78904',
+                        },
+                    },
+                    creationDate: {
+                        labelKey: 'CustomerDashboardPage.creationDate.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.creationDate.value',
+                            params: { date: new Date() },
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: 'CustomerDashboardPage.totalAreaInHa.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 320.1,
+                        },
+                    },
+
+                    status: {
+                        labelKey: 'CustomerDashboardPage.status.label',
+                        badgeXVM: {
+                            status: Status.COMPLETED,
+                            textKey:
+                                'CustomerDashboardPage.status.completed.text',
+                        },
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.status.completed.text',
+                            params: {},
+                        },
+                    },
+                    price: {
+                        labelKey: 'CustomerDashboardPage.price.label',
+                        valueVM: {
+                            type: 'withValueKey',
+                            key: 'CustomerDashboardPage.price.value',
+                            params: {
+                                price: 1300000,
+                            },
+                        },
+                    },
+                    requester: {
+                        labelKey: 'CustomerDashboardPage.requester.label',
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 'Mike Thompson',
+                        },
+                    },
+                },
+            ],
         },
-        status: { titleKey: 'DashboardPage.status.title' },
-        moneyValue: {
-            titleKey: 'DashboardPage.moneyValue.title',
-            valueKey: 'DashboardPage.moneyValue.value',
-        },
-        requester: {
-            titleKey: 'DashboardPage.requester.title',
-        },
-        action: {
-            textKey: 'DashboardPage.customer.action.details.text',
-            textColor: 'text-blue-500',
-            routerLink: [AppRouteSegment.ORDERS],
-        },
-    },
-    myOrdersGridConfig: {
-        titleKey: 'DashboardPage.customer.myOrders.title',
-        gridColsLength: GridColsLength.SIX,
-        headerKeys: [
-            'DashboardPage.id.title',
-            'DashboardPage.creationDate.title',
-            'DashboardPage.areaInHa.title',
-            'DashboardPage.status.title',
-            'DashboardPage.moneyValue.title',
-            'DashboardPage.actions.title',
-        ],
-        navigationAnchor: {
-            textKey: 'DashboardPage.customer.myOrders.anchor.text',
-            routerLink: [AppRouteSegment.LANDING],
-        },
-    },
-    companyOrdersGridConfig: {
-        titleKey: 'DashboardPage.customer.companyOrders.title',
-        gridColsLength: GridColsLength.SIX,
-        headerKeys: [
-            'DashboardPage.id.title',
-            'DashboardPage.requester.title',
-            'DashboardPage.creationDate.title',
-            'DashboardPage.areaInHa.title',
-            'DashboardPage.status.title',
-            'DashboardPage.moneyValue.title',
-        ],
-    },
+    ],
 };
-
 export const enMock = {
-    creationDate: { title: 'ti', value: 'val' },
-    areaInHa: { title: 'area' },
-    id: { title: 'i' },
-    status: { title: 'stat' },
-    action: {
-        details: {
-            text: 'act',
+    grid1: {
+        anchor: {
+            text: 't',
         },
-        title: 'action',
+        title: 'tit1',
+        header: {
+            key1: '1',
+            key2: '2',
+            key3: '3',
+        },
+        mission1: {
+            requester: {
+                label: 'requester1',
+            },
+            id: {
+                label: 'id1',
+            },
+            totalAreaInHa: {
+                label: 'area1',
+            },
+            anchor: {
+                text: 'anchor1',
+                label: 'lab1',
+            },
+            creation: {
+                label: 'sched1',
+            },
+            completion: {
+                label: 'complet',
+            },
+            status: {
+                label: 'stat1',
+                text: 'text1',
+            },
+            price: {
+                label: 'stat1',
+            },
+        },
+        mission2: {
+            id: {
+                label: 'id2',
+            },
+            totalAreaInHa: {
+                label: 'area2',
+            },
+            anchor: {
+                text: 'anchor2',
+                label: 'lab2',
+            },
+            creation: {
+                label: 'sched2',
+            },
+            status: {
+                label: 'stat2',
+                text: 'text2',
+            },
+            price: {
+                label: 'price2',
+            },
+        },
+        mission3: {
+            creation: { label: 'creation3' },
+            totalAreaInHa: {
+                label: 'area3',
+            },
+            price: {
+                label: 'price3',
+            },
+            id: {
+                label: 'id3',
+            },
+            areaInHa: {
+                label: 'area3',
+            },
+            anchor: {
+                text: 'anchor3',
+                label: 'lab3',
+            },
+            fieldName: {
+                label: 'field3',
+            },
+            completion: {
+                label: 'sched3',
+            },
+            status: {
+                label: 'stat3',
+                text: 'text3',
+            },
+        },
     },
-    money: {
-        title: 'mon',
-        value: 'val',
+    grid2: {
+        title: 'tit2',
     },
-    requester: { title: 'request' },
-    myOrders: {
-        title: 'assigned',
-        anchor: { text: 'anchor' },
-    },
-    companyOrders: {
-        title: 'completed',
+    grid3: {
+        title: 'tit3',
     },
 };
 
-export const customerDashboardPageConfigMock: CustomerDashboardPageConfig = {
-    ordersConfig: {
-        moneyValue: {
-            titleKey: enMock.money.title,
-            valueKey: enMock.money.value,
-        },
-        areaInHa: { titleKey: enMock.areaInHa.title },
-        id: { titleKey: enMock.id.title },
-        status: { titleKey: enMock.status.title },
-        creationDate: {
-            titleKey: enMock.creationDate.title,
-            valueKey: enMock.creationDate.value,
-        },
-        requester: { titleKey: enMock.requester.title },
-        action: {
-            textKey: enMock.action.details.text,
-            textColor: 'text-blue-500',
-            routerLink: '',
-        },
-    },
-    myOrdersGridConfig: {
-        navigationAnchor: { textKey: enMock.myOrders.anchor.text },
-        titleKey: enMock.myOrders.title,
-        gridColsLength: GridColsLength.SIX,
-        headerKeys: [
-            enMock.id.title,
-            enMock.creationDate.title,
-            enMock.areaInHa.title,
-            enMock.status.title,
-            enMock.money.title,
-            enMock.action.title,
-        ],
-    },
-    companyOrdersGridConfig: {
-        titleKey: enMock.companyOrders.title,
-        gridColsLength: GridColsLength.SIX,
-        headerKeys: [
-            enMock.id.title,
-            enMock.requester.title,
-            enMock.creationDate.title,
-            enMock.areaInHa.title,
-            enMock.status.title,
-            enMock.money.title,
-        ],
-    },
+export const mockVM: CustomerDashboardPageVM = {
+    gridXVMs: [],
 };
+export const mockVMWithoutGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [],
+};
+export const mockVMWithOneGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithAnchorInGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            anchor: { textKey: enMock.grid1.anchor.text },
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithoutAnchorInGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithThreeGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+        {
+            titleKey: enMock.grid2.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+        {
+            titleKey: enMock.grid3.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithoutHeaderKeysInGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithOneHeaderKeyInGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [enMock.grid1.header.key1],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithThreeHeaderKeysInGridXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [
+                enMock.grid1.header.key1,
+                enMock.grid1.header.key2,
+                enMock.grid1.header.key3,
+            ],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithoutOrderXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [],
+        },
+    ],
+};
+export const mockVMWithOneOrderXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission1.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission1.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission1.anchor.text,
+                        labelKey: enMock.grid1.mission1.anchor.label,
+                    },
 
-export const mockOrdersTwo: Order[] = [
-    {
-        id: 'B-78901',
-        status: 'active',
-        client: {
-            client: 'Westbrook Agricultural Holdings',
-            contact: 'Sarah Johnson',
-            email: 's.johnson@westbrook-ag.com',
-            phone: '(555) 789-1234',
-            address: '450 Farm Road, Westbrook County',
+                    creationDate: {
+                        labelKey: enMock.grid1.mission1.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission1.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission1.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission1.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+            ],
         },
-        summary: {
-            treatment: 'Seasonal Pest Control',
-            averageDose: 2.5,
-            totalSupply: 868.75,
-            orderValue: 34750.0,
-        },
-        creationDate: new Date('2025-03-28'),
-        totalAreaInHa: 347.5,
-        moneyValue: 34750,
-        missions: [
-            {
-                id: 'A-12345',
-                pilot: null,
-                fieldName: 'North Field',
-                areaInHa: 45.8,
-                scheduledDate: new Date('2025-04-05'),
-                status: 'scheduled',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12346',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'South Field',
-                areaInHa: 78.3,
-                scheduledDate: new Date('2025-04-07'),
-                status: 'preparing',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12347',
-                pilot: null,
-                fieldName: 'East Meadow',
-                areaInHa: 102.4,
-                scheduledDate: new Date('2025-04-10'),
-                status: 'scheduled',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12348',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'West Orchard',
-                areaInHa: 56.2,
-                completionDate: new Date('2025-04-02'),
-                performance: 'good',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12349',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Central Vineyard',
-                areaInHa: 64.8,
-                completionDate: new Date('2025-03-30'),
-                performance: 'excellent',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12350',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Upper Hill',
-                areaInHa: 25.0,
-                scheduledDate: new Date('2025-04-12'),
-                status: 'pending',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-05T09:15:00'),
-                message:
-                    'Please update me on the status of the East Meadow mission. Do we need to prepare access to any additional areas?',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-05T11:30:00'),
-                message:
-                    "East Meadow mission is scheduled for April 10th. All preparations are on track. We'll need the eastern gate unlocked for equipment access. The West Orchard and Central Vineyard missions were completed successfully.",
-            },
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-05T13:45:00'),
-                message:
-                    "Thank you for the update. I've arranged for the eastern gate to be unlocked on the 10th. Please share the completion reports for the West Orchard and Central Vineyard missions when available.",
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-06T08:20:00'),
-                message:
-                    'Noted. Reports are being finalized and will be shared by tomorrow. Also, confirming Upper Hill mission planned for April 12—please ensure road access is cleared.',
-            },
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-06T09:00:00'),
-                message:
-                    'Understood. Road access to Upper Hill will be cleared by April 11th. Please notify if weather conditions affect scheduling.',
-            },
-        ],
-    },
-    {
-        id: 'B-78902',
-        status: 'completed',
-        client: {
-            client: 'Westbrook Agricultural Holdings',
-            contact: 'Sarah Johnson',
-            email: 's.johnson@westbrook-ag.com',
-            phone: '(555) 789-1234',
-            address: '450 Farm Road, Westbrook County',
-        },
-        summary: {
-            treatment: 'Seasonal Pest Control',
-            averageDose: 2.5,
-            totalSupply: 868.75,
-            orderValue: 34750.0,
-        },
-        creationDate: new Date('2025-02-15'),
-        totalAreaInHa: 125.8,
-        moneyValue: 12580,
-        missions: [
-            {
-                id: 'A-12220',
-                pilot: 'John D.',
-                fieldName: 'North Slope',
-                areaInHa: 60.3,
-                completionDate: new Date('2025-02-20'),
-                performance: 'excellent',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12221',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Southern Range',
-                areaInHa: 65.5,
-                completionDate: new Date('2025-02-22'),
-                performance: 'good',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-02-25T10:00:00'),
-                message:
-                    'Thanks for the timely completion. Please confirm that all equipment was sanitized post-application.',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-02-25T12:15:00'),
-                message:
-                    'Yes, all equipment was cleaned and sanitized following protocol. Certificates have been emailed.',
-            },
-        ],
-    },
-];
+    ],
+};
+export const mockVMWithThreeOrderXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission1.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission1.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission1.anchor.text,
+                        labelKey: enMock.grid1.mission1.anchor.label,
+                    },
 
-export const mockOrdersFive: Order[] = [
-    {
-        id: 'B-78901',
-        status: 'active',
-        client: {
-            client: 'Westbrook Agricultural Holdings',
-            contact: 'Sarah Johnson',
-            email: 's.johnson@westbrook-ag.com',
-            phone: '(555) 789-1234',
-            address: '450 Farm Road, Westbrook County',
+                    creationDate: {
+                        labelKey: enMock.grid1.mission1.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission1.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission1.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission1.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission3.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission3.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission3.anchor.text,
+                        labelKey: enMock.grid1.mission3.anchor.label,
+                    },
+
+                    creationDate: {
+                        labelKey: enMock.grid1.mission3.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission3.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission3.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission3.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission2.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission2.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission2.anchor.text,
+                        labelKey: enMock.grid1.mission2.anchor.label,
+                    },
+
+                    creationDate: {
+                        labelKey: enMock.grid1.mission2.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission2.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission2.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission2.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+            ],
         },
-        summary: {
-            treatment: 'Seasonal Pest Control',
-            averageDose: 2.5,
-            totalSupply: 868.75,
-            orderValue: 34750.0,
+    ],
+};
+export const mockVMWithOneMyOrderXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission1.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission1.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission1.anchor.text,
+                        labelKey: enMock.grid1.mission1.anchor.label,
+                    },
+
+                    creationDate: {
+                        labelKey: enMock.grid1.mission1.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission1.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission1.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission1.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+            ],
         },
-        creationDate: new Date('2025-03-28'),
-        totalAreaInHa: 347.5,
-        moneyValue: 34750,
-        missions: [
-            {
-                id: 'A-12345',
-                pilot: null,
-                fieldName: 'North Field',
-                areaInHa: 45.8,
-                scheduledDate: new Date('2025-04-05'),
-                status: 'scheduled',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12346',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'South Field',
-                areaInHa: 78.3,
-                scheduledDate: new Date('2025-04-07'),
-                status: 'preparing',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12347',
-                pilot: null,
-                fieldName: 'East Meadow',
-                areaInHa: 102.4,
-                scheduledDate: new Date('2025-04-10'),
-                status: 'scheduled',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12348',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'West Orchard',
-                areaInHa: 56.2,
-                completionDate: new Date('2025-04-02'),
-                performance: 'good',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12349',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Central Vineyard',
-                areaInHa: 64.8,
-                completionDate: new Date('2025-03-30'),
-                performance: 'excellent',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12350',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Upper Hill',
-                areaInHa: 25.0,
-                scheduledDate: new Date('2025-04-12'),
-                status: 'pending',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
+    ],
+};
+export const mockVMWithOneCompanyOrderXVM: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [
+                {
+                    type: 'companyOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission1.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission1.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    requester: {
+                        labelKey: enMock.grid1.mission1.requester.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    creationDate: {
+                        labelKey: enMock.grid1.mission1.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission1.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission1.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission1.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
                 },
-                sendingDate: new Date('2025-04-05T09:15:00'),
-                message:
-                    'Please update me on the status of the East Meadow mission. Do we need to prepare access to any additional areas?',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-05T11:30:00'),
-                message:
-                    "East Meadow mission is scheduled for April 10th. All preparations are on track. We'll need the eastern gate unlocked for equipment access. The West Orchard and Central Vineyard missions were completed successfully.",
-            },
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-05T13:45:00'),
-                message:
-                    "Thank you for the update. I've arranged for the eastern gate to be unlocked on the 10th. Please share the completion reports for the West Orchard and Central Vineyard missions when available.",
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-06T08:20:00'),
-                message:
-                    'Noted. Reports are being finalized and will be shared by tomorrow. Also, confirming Upper Hill mission planned for April 12—please ensure road access is cleared.',
-            },
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-06T09:00:00'),
-                message:
-                    'Understood. Road access to Upper Hill will be cleared by April 11th. Please notify if weather conditions affect scheduling.',
-            },
-        ],
-    },
-    {
-        id: 'B-78902',
-        status: 'completed',
-        client: {
-            client: 'Westbrook Agricultural Holdings',
-            contact: 'Sarah Johnson',
-            email: 's.johnson@westbrook-ag.com',
-            phone: '(555) 789-1234',
-            address: '450 Farm Road, Westbrook County',
+            ],
         },
-        summary: {
-            treatment: 'Seasonal Pest Control',
-            averageDose: 2.5,
-            totalSupply: 868.75,
-            orderValue: 34750.0,
+    ],
+};
+export const mockVMWithOrderXVMsWithAllStatusTypes: CustomerDashboardPageVM = {
+    gridXVMs: [
+        {
+            titleKey: enMock.grid1.title,
+            headerKeys: [],
+            orderXVMs: [
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission1.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission1.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission1.anchor.text,
+                        labelKey: enMock.grid1.mission1.anchor.label,
+                    },
+
+                    creationDate: {
+                        labelKey: enMock.grid1.mission1.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission1.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission1.status.label,
+                        badgeXVM: {
+                            status: Status.ACTIVE,
+                            textKey: enMock.grid1.mission1.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission3.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission3.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission3.anchor.text,
+                        labelKey: enMock.grid1.mission3.anchor.label,
+                    },
+
+                    creationDate: {
+                        labelKey: enMock.grid1.mission3.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission3.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission3.status.label,
+                        badgeXVM: {
+                            status: Status.COMPLETED,
+                            textKey: enMock.grid1.mission3.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+                {
+                    type: 'myOrder',
+                    id: {
+                        labelKey: enMock.grid1.mission2.id.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    totalAreaInHa: {
+                        labelKey: enMock.grid1.mission2.totalAreaInHa.label,
+                        valueVM: {
+                            type: 'withoutValueKey',
+                            value: 1,
+                        },
+                    },
+                    anchorXVM: {
+                        textKey: enMock.grid1.mission2.anchor.text,
+                        labelKey: enMock.grid1.mission2.anchor.label,
+                    },
+
+                    creationDate: {
+                        labelKey: enMock.grid1.mission2.creation.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    price: {
+                        labelKey: enMock.grid1.mission2.price.label,
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                    status: {
+                        labelKey: enMock.grid1.mission2.status.label,
+                        badgeXVM: {
+                            status: Status.PENDING,
+                            textKey: enMock.grid1.mission2.status.text,
+                        },
+                        valueVM: { type: 'withoutValueKey', value: 1 },
+                    },
+                },
+            ],
         },
-        creationDate: new Date('2025-02-15'),
-        totalAreaInHa: 125.8,
-        moneyValue: 12580,
-        missions: [
-            {
-                id: 'A-12220',
-                pilot: 'John D.',
-                fieldName: 'North Slope',
-                areaInHa: 60.3,
-                completionDate: new Date('2025-02-20'),
-                performance: 'excellent',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-            {
-                id: 'A-12221',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Southern Range',
-                areaInHa: 65.5,
-                completionDate: new Date('2025-02-22'),
-                performance: 'good',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Sarah Johnson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-02-25T10:00:00'),
-                message:
-                    'Thanks for the timely completion. Please confirm that all equipment was sanitized post-application.',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-02-25T12:15:00'),
-                message:
-                    'Yes, all equipment was cleaned and sanitized following protocol. Certificates have been emailed.',
-            },
-        ],
-    },
-    {
-        id: 'B-78903',
-        creationDate: new Date('2025-04-05'),
-        totalAreaInHa: 89.2,
-        status: 'pending',
-        moneyValue: 8920,
-        client: {
-            client: 'Sunrise Agriculture',
-            contact: 'Mike Thompson',
-            email: 'mike.thompson@sunagri.org',
-            phone: '(555) 234-5678',
-            address: '88 Sunrise Road, Golden Valley',
-        },
-        summary: {
-            treatment: 'Soil Fertilization',
-            averageDose: 2.0,
-            totalSupply: 178.4,
-            orderValue: 8920.0,
-        },
-        missions: [
-            {
-                id: 'A-12400',
-                pilot: null,
-                fieldName: 'Golden Ridge',
-                areaInHa: 48.5,
-                scheduledDate: new Date('2025-04-15'),
-                status: 'pending',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Mike Thompson',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-06T08:30:00'),
-                message:
-                    'Can you confirm if Golden Ridge is suitable for drone application or do we need ground support?',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-06T09:10:00'),
-                message:
-                    'Initial assessment indicates drone application is feasible. We’ll conduct a final site review by April 10.',
-            },
-        ],
-    },
-    {
-        id: 'B-78904',
-        creationDate: new Date('2025-04-08'),
-        totalAreaInHa: 234.7,
-        status: 'active',
-        moneyValue: 23470,
-        client: {
-            client: 'Martinez Orchards',
-            contact: 'Lisa Martinez',
-            email: 'lisa.m@martinezorchards.com',
-            phone: '(555) 678-9012',
-            address: '210 Orchard Lane, Berryville',
-        },
-        summary: {
-            treatment: 'Fruit Tree Nutrient Boost',
-            averageDose: 1.5,
-            totalSupply: 352.05,
-            orderValue: 23470.0,
-        },
-        missions: [
-            {
-                id: 'A-12501',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Cherry Hill Block A',
-                areaInHa: 112.0,
-                scheduledDate: new Date('2025-04-15'),
-                status: 'preparing',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Lisa Martinez',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-09T07:40:00'),
-                message:
-                    'We’ve had recent rainfall in Block A. Will that delay the Cherry Hill mission?',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-09T08:20:00'),
-                message:
-                    'Weather is being monitored. If drying conditions persist, we expect no delay. Final decision will be made April 13.',
-            },
-        ],
-    },
-    {
-        id: 'B-78905',
-        creationDate: new Date('2025-04-08'),
-        totalAreaInHa: 234.7,
-        status: 'active',
-        moneyValue: 23470,
-        client: {
-            client: 'Martinez Orchards',
-            contact: 'Lisa Martinez',
-            email: 'lisa.m@martinezorchards.com',
-            phone: '(555) 678-9012',
-            address: '210 Orchard Lane, Berryville',
-        },
-        summary: {
-            treatment: 'Fruit Tree Nutrient Boost',
-            averageDose: 1.5,
-            totalSupply: 352.05,
-            orderValue: 23470.0,
-        },
-        missions: [
-            {
-                id: 'A-12501',
-                pilot: 'Alex Rodriguez',
-                fieldName: 'Cherry Hill Block A',
-                areaInHa: 112.0,
-                scheduledDate: new Date('2025-04-15'),
-                status: 'preparing',
-                coordinates: [
-                    { lat: 47.278, lng: 21.231 },
-                    { lat: 47.278, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.2325 },
-                    { lat: 47.277, lng: 21.231 },
-                ],
-            },
-        ],
-        messages: [
-            {
-                sender: {
-                    name: 'Lisa Martinez',
-                    role: 'customer',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-09T07:40:00'),
-                message:
-                    'We’ve had recent rainfall in Block A. Will that delay the Cherry Hill mission?',
-            },
-            {
-                sender: {
-                    name: 'Operations Manager',
-                    role: 'office',
-                    photoUrl: null,
-                },
-                sendingDate: new Date('2025-04-09T08:20:00'),
-                message:
-                    'Weather is being monitored. If drying conditions persist, we expect no delay. Final decision will be made April 13.',
-            },
-        ],
-    },
-];
+    ],
+};

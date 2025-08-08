@@ -2,24 +2,32 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CustomerDashboardPageComponent } from './customer-dashboard-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { provideRouter } from '@angular/router';
-import { CUSTOMER_DASHBOARD_PAGE_CONFIG } from './customer-dashboard-page.config';
 import {
-    customerDashboardPageConfigMock,
     enMock,
-    mockOrdersFive,
-    mockOrdersTwo,
+    mockVM,
+    mockVMWithAnchorInGridXVM,
+    mockVMWithOneCompanyOrderXVM,
+    mockVMWithOneGridXVM,
+    mockVMWithOneHeaderKeyInGridXVM,
+    mockVMWithOneMyOrderXVM,
+    mockVMWithOneOrderXVM,
+    mockVMWithOrderXVMsWithAllStatusTypes,
+    mockVMWithoutAnchorInGridXVM,
+    mockVMWithoutGridXVM,
+    mockVMWithoutHeaderKeysInGridXVM,
+    mockVMWithoutOrderXVM,
+    mockVMWithThreeGridXVM,
+    mockVMWithThreeHeaderKeysInGridXVM,
+    mockVMWithThreeOrderXVM,
 } from './customer-dashboard-page.mock';
 import {
-    provideOrderMockService,
-    updateOrders,
-} from '@services/order/order-mock.service';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { selectUserName } from '@stores/auth/auth.selector';
+    provideCustomerDashboardPageMockService,
+    updateVMSubject,
+} from './customer-dashboard-page-mock.service';
 
 describe('CustomerDashboardPageComponent', () => {
     let fixture: ComponentFixture<CustomerDashboardPageComponent>;
     let compiled: HTMLElement;
-    let mockStore: MockStore;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
@@ -35,62 +43,17 @@ describe('CustomerDashboardPageComponent', () => {
             ],
             providers: [
                 provideRouter([]),
-                provideOrderMockService(),
-                {
-                    provide: CUSTOMER_DASHBOARD_PAGE_CONFIG,
-                    useValue: customerDashboardPageConfigMock,
-                },
-                provideMockStore({
-                    selectors: [{ selector: selectUserName, value: undefined }],
-                }),
+                provideCustomerDashboardPageMockService(),
             ],
         }).compileComponents();
-
-        mockStore = TestBed.inject(MockStore);
+        fixture = TestBed.createComponent(CustomerDashboardPageComponent);
+        compiled = fixture.debugElement.nativeElement;
     });
 
     // Snapshot testing
-    it('should not render anything if there is no user', () => {
+    it('should not render the template when the vm is not provided', () => {
         // Arrange
-        mockStore.overrideSelector(selectUserName, undefined);
-        updateOrders([]);
-
-        fixture = TestBed.createComponent(CustomerDashboardPageComponent);
-        compiled = fixture.debugElement.nativeElement;
-
-        // Act
-
-        mockStore.refreshState();
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render the template correctly if there is a user', () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserName, 'Raul');
-        updateOrders([]);
-
-        fixture = TestBed.createComponent(CustomerDashboardPageComponent);
-        compiled = fixture.debugElement.nativeElement;
-
-        // Act
-
-        mockStore.refreshState();
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render two orders', () => {
-        // Arrange
-        mockStore.overrideSelector(selectUserName, 'Raul');
-        updateOrders(mockOrdersTwo);
-
-        fixture = TestBed.createComponent(CustomerDashboardPageComponent);
-        compiled = fixture.debugElement.nativeElement;
+        updateVMSubject(undefined);
 
         // Act
         fixture.detectChanges();
@@ -98,15 +61,164 @@ describe('CustomerDashboardPageComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-
     // Snapshot testing
-    it('should render five orders', () => {
+    it('should render the template when the vm is provided', () => {
         // Arrange
-        mockStore.overrideSelector(selectUserName, 'Raul');
-        updateOrders(mockOrdersFive);
+        updateVMSubject(mockVM);
 
-        fixture = TestBed.createComponent(CustomerDashboardPageComponent);
-        compiled = fixture.debugElement.nativeElement;
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render the anchor in the grid if it is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithAnchorInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should not render the anchor in the grid if it is not provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutAnchorInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 0 gridXVM if 0 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 gridXVM if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 3 gridXVM if 3 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 0 header key in the grid if 0 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutHeaderKeysInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 header key in the grid if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneHeaderKeyInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 3 header key in the grid if 3 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeHeaderKeysInGridXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 0 order if 0 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithoutOrderXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 order if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneOrderXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 3 order if 3 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithThreeOrderXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 myOrder if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneMyOrderXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render 1 companyOrder if 1 is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOneCompanyOrderXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render orders with all the status types if all of them is provided in the vm', () => {
+        // Arrange
+        updateVMSubject(mockVMWithOrderXVMsWithAllStatusTypes);
 
         // Act
         fixture.detectChanges();

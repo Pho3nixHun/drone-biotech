@@ -1,115 +1,50 @@
-import { Order, OrderStatus } from '@services/order/order.service.model';
-import {
-    KVsFromVM,
-    TitleWithValueKey,
-    TitleWithoutValueKey,
-} from '@interfaces/value-key.interface';
 import { WithTitle } from '@interfaces/with-title.interface';
-import { WithRouterLink } from '@interfaces/with-router-link.interface';
+import { WithLabel } from '@interfaces/with-label.interface';
+import { ValueVM } from '@components/value/value.model';
+import { Anchor, WithAnchor } from '@interfaces/with-anchor.interface';
+import { WithTextNode } from '@interfaces/with-text-node.interface';
 
-export interface NavigationAnchor extends WithRouterLink {
-    textKey: string;
-    textColor?: string;
+interface KeyValueXVM extends WithLabel {
+    valueVM: ValueVM;
 }
 
-export interface WithNavigationAnchor {
-    navigationAnchor: NavigationAnchor;
+export enum Status {
+    ACTIVE,
+    COMPLETED,
+    PENDING,
 }
 
-export interface GridVM {
-    gridColsLength: GridColsLength;
+export interface BadgeXVM extends WithTextNode {
+    status: Status;
+}
+interface StatusXVM extends KeyValueXVM {
+    badgeXVM: BadgeXVM;
 }
 
-export enum GridColsLength {
-    SIX = 'grid-cols-6',
-    SEVEN = 'grid-cols-7',
+export interface BaseOrderXVM {
+    id: KeyValueXVM;
+    creationDate: KeyValueXVM;
+    totalAreaInHa: KeyValueXVM;
+    price: KeyValueXVM;
+    status: StatusXVM;
 }
-export type MyOrder = Pick<
-    Order,
-    'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
->;
-export type CompanyOrder = Pick<
-    Order,
-    'id' | 'moneyValue' | 'creationDate' | 'status' | 'totalAreaInHa'
-> & { requester: Order['client']['contact'] };
-
-export type DashboardOrder = MyOrder | CompanyOrder;
-
-export interface Config extends GridVM, WithTitle {
-    headerKeys: string[];
+interface AnchorXVM extends WithLabel, Anchor {}
+export interface MyOrderXVM extends BaseOrderXVM {
+    type: 'myOrder';
+    anchorXVM: AnchorXVM;
 }
-
-export interface OrdersConfig {
-    id: TitleWithoutValueKey;
-    creationDate: TitleWithValueKey;
-    areaInHa: TitleWithoutValueKey;
-    status: TitleWithoutValueKey;
-    moneyValue: TitleWithValueKey;
-    requester: TitleWithoutValueKey;
-    action: NavigationAnchor;
+export interface CompanyOrderXVM extends BaseOrderXVM {
+    type: 'companyOrder';
+    requester: KeyValueXVM;
 }
-export interface BadgeXVM {
-    textKey: string;
-    color: string;
-}
-interface OrderVM {
-    badge: BadgeXVM;
-}
-
-type MyOrderVM = MyOrder & OrderVM;
-type CompanyOrderVM = CompanyOrder & OrderVM;
-
-export type MyOrderXVM = KVsFromVM<MyOrderVM> & WithNavigationAnchor;
-export type CompanyOrderXVM = KVsFromVM<CompanyOrderVM>;
 
 export type OrderXVM = MyOrderXVM | CompanyOrderXVM;
 
-type MyOrdersGridConfig = Config & {
-    navigationAnchor: Omit<NavigationAnchor, 'textColor'>;
-};
-type CompanyOrdersGridConfig = Config;
-
-type MyOrdersGridConfigXVM = MyOrdersGridConfig & { orderXVMs: OrderXVM[] };
-type CompanyOrdersGridConfigXVM = CompanyOrdersGridConfig & {
+export interface GridXVM extends WithTitle, Partial<WithAnchor> {
+    headerKeys: string[];
     orderXVMs: OrderXVM[];
-};
-export type GridXVM = MyOrdersGridConfigXVM | CompanyOrdersGridConfigXVM;
-
-export interface CustomerDashboardPageConfig {
-    ordersConfig: OrdersConfig;
-    myOrdersGridConfig: MyOrdersGridConfig;
-    companyOrdersGridConfig: CompanyOrdersGridConfig;
 }
 
 export interface CustomerDashboardPageVM {
     gridXVMs: GridXVM[];
 }
-export const myOrdersGridXVM = (obj: GridXVM): obj is MyOrdersGridConfigXVM =>
-    'navigationAnchor' in obj;
-
-export const isMyOrderXVM = (obj: OrderXVM): obj is MyOrderXVM =>
-    !('requesterKV' in obj);
-export const isCompanyOrderXVM = (obj: OrderXVM): obj is CompanyOrderXVM =>
-    'requesterKV' in obj;
-
-export const mapOrderStatusTypeToCCSColors = (type: OrderStatus): string => {
-    return (
-        {
-            pending: 'bg-pink-200 text-pink-600',
-            completed: 'bg-green-200 text-green-600',
-            active: 'bg-yellow-200 text-yellow-600',
-        }[type] || ''
-    );
-};
-
-export const mapOrderStatusTypeToTranslocoTextKey = (
-    type: OrderStatus
-): string => {
-    return (
-        {
-            pending: 'DashboardPage.pending',
-            completed: 'DashboardPage.completed',
-            active: 'DashboardPage.active',
-        }[type] || ''
-    );
-};
