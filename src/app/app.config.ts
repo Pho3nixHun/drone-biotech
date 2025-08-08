@@ -31,7 +31,6 @@ import { environment } from 'src/environments/environment';
 import { TranslocoModule } from '@modules/transloco/transloco.module';
 import { mapFormControlConfig } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.config';
 import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.config';
-import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';
 import { officeDashboardPageConfig } from './pages/office-dashboard-page/office-dashboard-page.config';
 import { orderDetailsPageConfig } from './pages/order-details-page/order-details-page.config';
 
@@ -68,7 +67,6 @@ export const appConfig: ApplicationConfig = {
         mapFormControlConfig,
         officeDashboardPageConfig,
         dashboardPageConfig,
-        customerDashboardPageConfig,
         orderDetailsPageConfig,
     ],
 };
