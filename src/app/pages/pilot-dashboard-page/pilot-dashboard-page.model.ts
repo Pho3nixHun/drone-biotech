@@ -1,5 +1,5 @@
 import { ValueVM } from '@components/value/value.model';
-import { WithAnchor } from '@interfaces/with-anchor.interface';
+import { Anchor } from '@interfaces/with-anchor.interface';
 import { WithLabel } from '@interfaces/with-label.interface';
 import { WithTextNode } from '@interfaces/with-text-node.interface';
 import { WithTitle } from '@interfaces/with-title.interface';
@@ -26,7 +26,7 @@ interface KeyValueXVM extends WithLabel {
     valueVM: ValueVM;
 }
 
-interface AnchorXVM extends WithLabel, WithAnchor {}
+interface AnchorXVM extends WithLabel, Anchor {}
 
 interface MissionBaseXVM {
     id: KeyValueXVM;
