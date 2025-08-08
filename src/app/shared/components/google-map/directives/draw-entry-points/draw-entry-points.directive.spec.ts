@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
@@ -12,7 +12,6 @@ import { EntryPointXVM } from './draw-entry-points.model';
             class="h-96"
             appDrawEntryPoints
             [entryPoints]="entryPoints()"
-            [drawnEntryPoints]="drawnEntryPoints"
             [vm]="{
                 mapOptions: {},
                 center: {
@@ -25,9 +24,7 @@ import { EntryPointXVM } from './draw-entry-points.model';
 })
 class TestHostComponent {
     entryPoints = input.required<EntryPointXVM[] | null>();
-    drawnEntryPoints = signal<
-        google.maps.marker.AdvancedMarkerElement[] | null
-    >(null);
+
     mapRef: google.maps.Map = new google.maps.Map(
         document.createElement('div'),
         {
@@ -63,34 +60,5 @@ describe('DrawEntryPointsDirective', () => {
 
         // Assert
         expect(directive.entryPoints()).toStrictEqual(component.entryPoints());
-    });
-
-    // Unit testing
-    it('should create the markers if there are entry points', () => {
-        // Arrange
-        fixture.componentRef.setInput('entryPoints', [
-            {
-                options: {},
-                coordinates: { lat: 2, lng: 2 },
-            },
-        ]);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(directive.drawnEntryPoints()()).toBeTruthy();
-    });
-
-    // Unit testing
-    it('should not create markers if there are no entry points', () => {
-        // Arrange
-        fixture.componentRef.setInput('entryPoints', null);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(directive.drawnEntryPoints()()).toBeFalsy();
     });
 });

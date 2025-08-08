@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { missionDetailsPageVM } from './mission-details-page.mock';
 import { MissionDetailsPageVM } from './mission-details-page.model';
 
@@ -12,9 +12,5 @@ export class MissionDetailsPageService {
     }
 
     private readonly vm$: Observable<MissionDetailsPageVM> =
-        vmSubject.asObservable();
+        of(missionDetailsPageVM);
 }
-
-const vmSubject = new BehaviorSubject(missionDetailsPageVM);
-
-export const updateVMSubject = (vm: MissionDetailsPageVM) => vmSubject.next(vm);

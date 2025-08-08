@@ -25,8 +25,6 @@ import {
     mockVMWithoutKeyValueInCardItem,
     mockVMWithoutMessageItem,
     mockVMWithoutSummaryInHeader,
-    mockVMWithoutTargetAreas,
-    mockVMWithTargetAreas,
     mockVMWithThreeActionInCardItem,
     mockVMWithThreeCardGroupHeader,
     mockVMWithThreeCardItem,
@@ -178,28 +176,6 @@ describe('OrderDetailsPageComponent', () => {
         expect(spy).toHaveBeenCalled();
     });
 
-    // Unit testing
-    it('should not set the drawnPolygons if there are no target areas', () => {
-        // Arrange
-        updateVMSubject(mockVMWithoutTargetAreas);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(component['drawnPolygons']()).toBeFalsy();
-    });
-    // Unit testing
-    it('should set the drawnPolygons if there are target areas', () => {
-        // Arrange
-        updateVMSubject(mockVMWithTargetAreas);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(component['drawnPolygons']()).toBeTruthy();
-    });
     // Snapshot testing
     it('should render the template correctly if the messageFormControl is valid so the button will be enabled', () => {
         // Arrange

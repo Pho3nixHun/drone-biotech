@@ -1,10 +1,4 @@
-import {
-    Directive,
-    effect,
-    inject,
-    input,
-    WritableSignal,
-} from '@angular/core';
+import { Directive, effect, inject, input } from '@angular/core';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
 import { EntryPointXVM } from './draw-entry-points.model';
 
@@ -18,19 +12,14 @@ export class DrawEntryPointsDirective {
     });
     public readonly entryPoints = input.required<EntryPointXVM[] | null>();
 
-    public readonly drawnEntryPoints =
-        input.required<
-            WritableSignal<google.maps.marker.AdvancedMarkerElement[] | null>
-        >();
-
     private readonly drawEntryPointsEffect = effect(() => {
         if (!this.hostComponent) return;
         const map = this.hostComponent.mapSignal();
         const entryPoints = this.entryPoints();
 
-        if (!map || !entryPoints) return this.drawnEntryPoints().set(null);
+        if (!map || !entryPoints) return;
 
-        const points = entryPoints.map(
+        return entryPoints.map(
             (point) =>
                 new google.maps.marker.AdvancedMarkerElement({
                     map,
@@ -38,6 +27,5 @@ export class DrawEntryPointsDirective {
                     position: point.position,
                 })
         );
-        this.drawnEntryPoints().set(points);
     });
 }

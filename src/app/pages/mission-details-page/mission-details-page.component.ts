@@ -1,5 +1,5 @@
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MissionDetailsPageService } from './mission-details-page.service';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
@@ -23,11 +23,4 @@ export class MissionDetailsPageComponent {
     );
 
     protected readonly vm = toSignal(this.missionDetailsPageService.getVM());
-
-    protected readonly drawnPolygons = signal<google.maps.Polygon[] | null>(
-        null
-    );
-    protected readonly drawnEntryPoints = signal<
-        google.maps.marker.AdvancedMarkerElement[] | null
-    >(null);
 }

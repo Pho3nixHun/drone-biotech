@@ -2,7 +2,7 @@
 
 exports[`MissionDetailsPageComponent should render the template correctly 1`] = `
 <div
-  id="root4"
+  id="root0"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -13,8 +13,6 @@ exports[`MissionDetailsPageComponent should render the template correctly 1`] = 
         appdrawentrypoints=""
         appdrawtargetareas=""
         class="h-96"
-        ng-reflect-drawn-entry-points="[Signal: null]"
-        ng-reflect-drawn-polygons="[Signal: null]"
         ng-reflect-entry-points="[object Object]"
         ng-reflect-target-areas="[object Object]"
         ng-reflect-vm="[object Object]"

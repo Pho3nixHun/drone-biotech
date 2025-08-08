@@ -13,7 +13,6 @@ import { TargetAreaXVM } from './draw-target-areas.model';
             class="h-96"
             appDrawTargetAreas
             [targetAreas]="targetAreas()"
-            [drawnPolygons]="drawnPolygons"
             [vm]="{
                 mapOptions: {},
                 center: {
@@ -62,39 +61,5 @@ describe('DrawTargetAreasDirective', () => {
 
         // Assert
         expect(directive.targetAreas()).toStrictEqual(component.targetAreas());
-    });
-
-    // Unit testing
-    it('should create the polygons if there are target areas', () => {
-        // Arrange
-        fixture.componentRef.setInput('targetAreas', [
-            {
-                options: {},
-                coordinates: [
-                    { lat: 1, lng: 1 },
-                    { lat: 4, lng: 1 },
-                    { lat: 1, lng: 3 },
-                    { lat: 2, lng: 2 },
-                ],
-            },
-        ]);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(directive.drawnPolygons()()).toBeTruthy();
-    });
-
-    // Unit testing
-    it('should not create polygons if there are no target areas', () => {
-        // Arrange
-        fixture.componentRef.setInput('targetAreas', null);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(directive.drawnPolygons()()).toBeFalsy();
     });
 });
