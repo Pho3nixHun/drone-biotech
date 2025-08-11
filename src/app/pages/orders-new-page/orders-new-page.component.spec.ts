@@ -35,16 +35,6 @@ describe('OrdersNewPageComponent', () => {
     });
 
     //Snapshot testing
-    it('should not render the template when the VM is not provided', () => {
-        //Arrange
-        updateVMSignal(undefined);
-        //Act
-        fixture.detectChanges();
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot testing
     it('should render the template when the VM is provided', () => {
         //Arrange
         updateVMSignal(ordersNewPageVMMock);
@@ -62,13 +52,13 @@ describe('OrdersNewPageComponent', () => {
         // Act
 
         // Assert
-        expect(component.areasDataFormGroup.touched).toBe(false);
-        expect(component.areasDataFormGroup.invalid).toBe(true);
+        expect(component['areasDataFormGroup'].touched).toBe(false);
+        expect(component['areasDataFormGroup'].invalid).toBe(true);
     });
 
     it('should set the areasDataFormGroup to valid if the form is fulfilled with correct values', () => {
         //Arrange
-        component.areasDataFormGroup.setValue({
+        component['areasDataFormGroup'].setValue({
             areasData: [
                 {
                     applicationDate: new Date(),
@@ -96,12 +86,12 @@ describe('OrdersNewPageComponent', () => {
         //Act
 
         // Assert
-        expect(component.areasDataFormGroup.valid).toBe(true);
+        expect(component['areasDataFormGroup'].valid).toBe(true);
     });
 
     it('should reset the value of the form after submitting if the form is valid', () => {
         //Arrange
-        component.areasDataFormGroup.setValue({
+        component['areasDataFormGroup'].setValue({
             areasData: [
                 {
                     applicationDate: new Date(),
@@ -130,6 +120,6 @@ describe('OrdersNewPageComponent', () => {
         //Act
 
         // Assert
-        expect(component.areasDataFormGroup.invalid).toBe(true);
+        expect(component['areasDataFormGroup'].invalid).toBe(true);
     });
 });

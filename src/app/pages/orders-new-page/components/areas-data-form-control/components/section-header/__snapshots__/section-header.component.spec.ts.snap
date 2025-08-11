@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionHeaderComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-section-header>
+    <div
+      class="flex flex-row justify-between pr-3 xl:pr-2"
+    >
+      <h3>
+        Should be projected
+      </h3>
+      <button>
+        Should be projected
+      </button>
+    </div>
+  </app-section-header>
+</div>
+`;

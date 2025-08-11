@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardItemComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-card-item>
+    <div
+      class="flex flex-row justify-between xl:grid xl:grid-cols-subgrid xl:col-span-full p-3 bg-gray-100 hover:bg-gray-200 border border-gray-300"
+    >
+      <app-card-item-content>
+        <div
+          class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+        />
+      </app-card-item-content>
+      <app-card-item-action-list>
+        <div
+          class="flex flex-col xl:items-center xl:flex-row space-y-3 xl:space-y-0 xl:space-x-3"
+        />
+      </app-card-item-action-list>
+    </div>
+  </app-card-item>
+</div>
+`;

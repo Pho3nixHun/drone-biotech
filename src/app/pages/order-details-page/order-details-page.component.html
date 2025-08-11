@@ -9,7 +9,16 @@
                 }}
             </h2>
 
-            <app-status [vm]="vm.headerXVM.statusXVM">
+            <app-status
+                [ngClass]="{
+                    'bg-green-200 text-green-800':
+                        vm.headerXVM.statusXVM.status === Status.ACTIVE,
+                    'bg-red-200 text-red-800':
+                        vm.headerXVM.statusXVM.status === Status.PENDING,
+                    'bg-orange-200 text-orange-800':
+                        vm.headerXVM.statusXVM.status === Status.COMPLETED,
+                }"
+            >
                 {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
             </app-status>
 
@@ -21,193 +30,280 @@
 
             <app-summary-list>
                 @for (
-                    summary of vm.headerXVM.summaryListXVM.summaryXVMs;
+                    summaryXVM of vm.headerXVM.summaryListXVM.summaryXVMs;
                     track $index
                 ) {
                     <app-summary>
                         <p class="text-gray-600">
-                            {{ t(summary.textKey) }}
+                            {{ t(summaryXVM.textKey) }}
                         </p>
 
                         <p class="font-medium">
-                            @if (summary.value.type === 'withValueKey') {
-                                {{ t(summary.value.key, summary.value.params) }}
-                            } @else {
-                                {{ summary.value.value }}
-                            }
+                            <app-value [vm]="summaryXVM.valueVM" />
                         </p>
                     </app-summary>
                 }
             </app-summary-list>
         </app-header>
 
-        @for (sectionCardXVM of vm.sectionCardXVMs; track $index) {
-            @switch (sectionCardXVM.type) {
-                @case ('orderDetails') {
-                    <ng-container
-                        [ngTemplateOutlet]="orderDetails"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
+        <app-section-card [vm]="vm.overviewSectionCardXVM">
+            <app-google-map
+                class="h-96"
+                [vm]="vm.overviewSectionCardXVM.googleMapXVM"
+                [appDrawTargetAreas]="
+                    vm.overviewSectionCardXVM.googleMapXVM.targetAreaXVMs
+                "
+            />
+            <app-info-item-list
+                class="*:flex-row *:space-y-0 *:justify-between"
+                *transloco="let t"
+            >
+                @for (
+                    missionInfoItemXVM of vm.overviewSectionCardXVM
+                        .missionInfoItemListXVM.missionInfoItemXVMs;
+                    track $index
+                ) {
+                    <app-info-item class="*:flex-col">
+                        <dt class="text-gray-700">
+                            {{ t(missionInfoItemXVM.labelKey) }}
+                        </dt>
+                        <dd class="font-semibold">
+                            <app-value [vm]="missionInfoItemXVM.valueVM" />
+                        </dd>
+                    </app-info-item>
                 }
-                @case ('orderActions') {
-                    <ng-container
-                        [ngTemplateOutlet]="orderActions"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
+            </app-info-item-list>
+        </app-section-card>
+
+        <app-section-card [vm]="vm.detailsSectionCardXVM" *transloco="let t">
+            <div class="flex lg:flex-row flex-col space-y-8 lg:space-y-0">
+                @for (
+                    infoPanelXVM of vm.detailsSectionCardXVM.infoPanelXVMs;
+                    track $index
+                ) {
+                    <app-info-panel class="lg:w-1/2 w-full">
+                        <h4 class="font-medium">
+                            {{ t(infoPanelXVM.titleKey) }}
+                        </h4>
+                        <app-info-item-list>
+                            @for (
+                                infoItemXVM of infoPanelXVM.infoListXVM
+                                    .infoItemXVMs;
+                                track $index
+                            ) {
+                                <app-info-item>
+                                    <dt class="text-gray-600 w-32">
+                                        {{ t(infoItemXVM.labelKey) }}
+                                    </dt>
+                                    <dd>
+                                        <strong class="font-medium">
+                                            <app-value
+                                                [vm]="infoItemXVM.valueVM"
+                                            />
+                                        </strong>
+                                    </dd>
+                                </app-info-item>
+                            }
+                        </app-info-item-list>
+                    </app-info-panel>
                 }
-                @case ('messages') {
-                    <ng-container
-                        [ngTemplateOutlet]="messages"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
+            </div>
+        </app-section-card>
+
+        <app-section-card [vm]="vm.missionsSectionCardXVM" *transloco="let t">
+            <app-card-group class="grid grid-cols-6">
+                <app-card-group-header
+                    class="grid grid-cols-subgrid col-span-full"
+                >
+                    @for (
+                        header of vm.missionsSectionCardXVM.cardGroupXVM
+                            .cardGroupHeaderXVM;
+                        track $index
+                    ) {
+                        <div>{{ t(header) }}</div>
+                    }
+                </app-card-group-header>
+                <app-card-item-list
+                    class="grid grid-cols-subgrid col-span-full"
+                >
+                    @for (
+                        cardItemXVM of vm.missionsSectionCardXVM.cardGroupXVM
+                            .cardItemListXVM.cardItemXVMs;
+                        track $index
+                    ) {
+                        <app-card-item
+                            class="xl:grid xl:grid-cols-subgrid xl:col-span-full"
+                        >
+                            <app-card-item-content
+                                class="xl:grid xl:grid-cols-subgrid xl:col-span-5"
+                            >
+                                @for (
+                                    keyValueXVM of cardItemXVM
+                                        .cardItemContentXVM.keyValueXVMs;
+                                    track $index;
+                                    let first = $first
+                                ) {
+                                    <app-key-value
+                                        [label]="keyValueXVM.label"
+                                        [ngClass]="{ 'text-blue-500': first }"
+                                    >
+                                        <app-value [vm]="keyValueXVM.value" />
+                                    </app-key-value>
+                                }
+                            </app-card-item-content>
+                            <app-card-item-action-list
+                                class="grid grid-cols-1 col-span-1"
+                            >
+                                @for (
+                                    actionXVM of cardItemXVM
+                                        .cardItemActionListXVM.actionXVMs;
+                                    track $index
+                                ) {
+                                    <a
+                                        [href]="actionXVM.routerLink"
+                                        class="btn btn-circle btn-primary"
+                                    >
+                                        <mat-icon>{{
+                                            actionXVM.matIcon
+                                        }}</mat-icon>
+                                    </a>
+                                }
+                            </app-card-item-action-list>
+                        </app-card-item>
+                    }
+                </app-card-item-list>
+            </app-card-group>
+        </app-section-card>
+
+        <app-section-card [vm]="vm.messagesSectionCardXVM" *transloco="let t">
+            <app-message-item-list>
+                @for (
+                    messageItemXVM of vm.messagesSectionCardXVM
+                        .messageItemListXVM.messageItemXVMs;
+                    track $index
+                ) {
+                    <app-message-item>
+                        @switch (messageItemXVM.avatarXVM.type) {
+                            @case ('withInitials') {
+                                <app-avatar
+                                    [ngClass]="{
+                                        'text-red-500 *:bg-red-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.RED,
+                                        'text-green-500 *:bg-green-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.GREEN,
+                                        'text-blue-500 *:bg-blue-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.BLUE,
+                                        'text-yellow-500 *:bg-yellow-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.YELLOW,
+                                        'text-purple-500 *:bg-purple-200':
+                                            messageItemXVM.avatarXVM.status ===
+                                            Avatar.PURPLE,
+                                    }"
+                                >
+                                    {{ messageItemXVM.avatarXVM.initials }}
+                                </app-avatar>
+                            }
+
+                            @case ('withImage') {
+                                <app-avatar class="text-white *:bg-black">
+                                    <img
+                                        [ngSrc]="
+                                            messageItemXVM.avatarXVM.imageSrc
+                                        "
+                                        [alt]="
+                                            messageItemXVM.avatarXVM.altTextKey
+                                        "
+                                        class="object-contain rounded-full"
+                                        fill
+                                    />
+                                </app-avatar>
+                            }
+                        }
+                        <h3 class="font-medium">
+                            {{
+                                t(messageItemXVM.senderValueKey, {
+                                    role: t(messageItemXVM.roleTextKey),
+                                    name: messageItemXVM.senderName,
+                                })
+                            }}
+                        </h3>
+                        <p class="text-gray-700">
+                            {{ messageItemXVM.message }}
+                        </p>
+                        <time class="text-gray-600 text-sm">{{
+                            t(messageItemXVM.sendingDateValueKey, {
+                                date: messageItemXVM.sendingDate,
+                            })
+                        }}</time>
+                    </app-message-item>
                 }
-            }
-        }
+            </app-message-item-list>
+            <div class="w-full flex flex-row">
+                <input
+                    type="text"
+                    [formControl]="messageFormControl"
+                    class="px-2 w-full border border-gray-300"
+                />
+                <button
+                    (click)="onSendMessageClick()"
+                    [disabled]="messageFormControl.invalid"
+                    [ngClass]="
+                        messageFormControl.valid
+                            ? 'btn-primary'
+                            : 'btn-disabled'
+                    "
+                    class="btn rounded-none"
+                >
+                    {{ t(vm.messagesSectionCardXVM.buttonTextKey) }}
+                </button>
+            </div>
+        </app-section-card>
+
+        <app-section-card [vm]="vm.actionsSectionCardXVM" *transloco="let t">
+            <div
+                class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+            >
+                <a
+                    class="btn btn-success"
+                    [href]="
+                        vm.actionsSectionCardXVM.completionTemplateButtonXVM
+                            .link.href
+                    "
+                    download
+                >
+                    {{
+                        t(
+                            vm.actionsSectionCardXVM.completionTemplateButtonXVM
+                                .textKey
+                        )
+                    }}
+                </a>
+                <button
+                    class="btn"
+                    [disabled]="
+                        vm.actionsSectionCardXVM.closeOrderButtonXVM.isDisabled
+                    "
+                    [ngClass]="
+                        vm.actionsSectionCardXVM.closeOrderButtonXVM.isDisabled
+                            ? 'btn-disabled'
+                            : 'btn-error'
+                    "
+                    (click)="
+                        openConfirmationDialog(
+                            vm.actionsSectionCardXVM.closeOrderButtonXVM
+                                .confirmationDialogVM
+                        )
+                    "
+                >
+                    {{
+                        t(vm.actionsSectionCardXVM.closeOrderButtonXVM.textKey)
+                    }}
+                </button>
+            </div>
+        </app-section-card>
     </app-page-layout>
 }
-
-<ng-template #messages let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <app-message-item-list>
-            @for (
-                messageItemXVM of vm.messageItemListXVM.messageItemXVMs;
-                track $index
-            ) {
-                <app-message-item>
-                    @switch (messageItemXVM.avatarXVM.type) {
-                        @case ('withInitials') {
-                            <app-avatar
-                                [class]="messageItemXVM.avatarXVM.colors"
-                            >
-                                {{ messageItemXVM.avatarXVM.initials }}
-                            </app-avatar>
-                        }
-
-                        @case ('withImage') {
-                            <app-avatar class="text-white *:bg-black">
-                                <img
-                                    [ngSrc]="messageItemXVM.avatarXVM.imageSrc"
-                                    [alt]="messageItemXVM.avatarXVM.altTextKey"
-                                    class="object-contain rounded-full"
-                                    fill
-                                />
-                            </app-avatar>
-                        }
-                    }
-                    <h3 class="font-medium">
-                        {{
-                            t(messageItemXVM.senderValueKey, {
-                                role: t(messageItemXVM.roleTextKey),
-                                name: messageItemXVM.senderName,
-                            })
-                        }}
-                    </h3>
-                    <p class="text-gray-700">
-                        {{ messageItemXVM.message }}
-                    </p>
-                    <time class="text-gray-600 text-sm">{{
-                        t(messageItemXVM.sendingDateValueKey, {
-                            date: messageItemXVM.sendingDate,
-                        })
-                    }}</time>
-                </app-message-item>
-            }
-        </app-message-item-list>
-        <div class="w-full flex flex-row">
-            <input
-                type="text"
-                [formControl]="messageFormControl"
-                class="px-2 w-full border border-gray-300"
-            />
-            <button
-                (click)="onSendMessageClick()"
-                [disabled]="messageFormControl.invalid"
-                [ngClass]="
-                    messageFormControl.valid ? 'btn-primary' : 'btn-disabled'
-                "
-                class="btn rounded-none"
-            >
-                {{ t(vm.buttonTextKey) }}
-            </button>
-        </div>
-    </app-section-card>
-</ng-template>
-
-<ng-template #orderActions let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <div
-            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
-        >
-            <a
-                class="btn btn-success"
-                [href]="vm.completionTemplateButtonXVM.link.href"
-                download
-            >
-                {{ t(vm.completionTemplateButtonXVM.textKey) }}
-            </a>
-            <button
-                class="btn"
-                [disabled]="vm.closeOrderButtonXVM.isDisabled"
-                [ngClass]="
-                    vm.closeOrderButtonXVM.isDisabled
-                        ? 'btn-disabled'
-                        : 'btn-error'
-                "
-                (click)="
-                    openConfirmationDialog(
-                        vm.closeOrderButtonXVM.confirmationDialogVM
-                    )
-                "
-            >
-                {{ t(vm.closeOrderButtonXVM.textKey) }}
-            </button>
-        </div>
-    </app-section-card>
-</ng-template>
-
-<ng-template #orderDetails let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <div class="flex lg:flex-row flex-col space-y-8 lg:space-y-0">
-            @for (infoPanelXVM of vm.infoPanelXVMs; track $index) {
-                <app-info-panel class="lg:w-1/2 w-full">
-                    <h4 class="font-medium">
-                        {{ t(infoPanelXVM.titleKey) }}
-                    </h4>
-                    <app-info-item-list>
-                        @for (
-                            infoItemXVM of infoPanelXVM.infoListXVM
-                                .infoItemXVMs;
-                            track $index
-                        ) {
-                            <app-info-item>
-                                <dt class="text-gray-600 w-32">
-                                    {{ t(infoItemXVM.labelKey) }}
-                                </dt>
-                                <dd>
-                                    <strong class="font-medium">
-                                        @if (
-                                            infoItemXVM.value.type ===
-                                            'withValueKey'
-                                        ) {
-                                            {{
-                                                t(
-                                                    infoItemXVM.value.key,
-                                                    infoItemXVM.value.params
-                                                )
-                                            }}
-                                        } @else {
-                                            {{ infoItemXVM.value.value }}
-                                        }
-                                    </strong>
-                                </dd>
-                            </app-info-item>
-                        }
-                    </app-info-item-list>
-                </app-info-panel>
-            }
-        </div>
-    </app-section-card>
-</ng-template>
