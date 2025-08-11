@@ -3,7 +3,7 @@ import { HashMap } from '@jsverse/transloco';
 interface WithValueKey {
     type: 'withValueKey';
     key: string;
-    params: HashMap;
+    params?: HashMap;
 }
 interface WithoutValueKey {
     type: 'withoutValueKey';

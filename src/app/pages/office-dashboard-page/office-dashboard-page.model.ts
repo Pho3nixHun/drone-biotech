@@ -1,133 +1,64 @@
-import {
-    KeyValuePair,
-    KVsFromVM,
-    TitleWithoutValueKey,
-    TitleWithValueKey,
-    WithoutKey,
-} from '@interfaces/value-key.interface';
-import {
-    ActiveMissionX,
-    CompletedMissionX,
-} from '@services/mission/mission.service.model';
+import { ValueVM } from '@components/value/value.model';
+import { Anchor, WithAnchor } from '@interfaces/with-anchor.interface';
+import { WithLabel } from '@interfaces/with-label.interface';
+import { WithTextNode } from '@interfaces/with-text-node.interface';
 import { WithTitle } from '@interfaces/with-title.interface';
-import { WithRouterLink } from '@interfaces/with-router-link.interface';
 
-export interface GridVM {
-    gridColsLength: GridColsLength;
+interface AnchorXVM extends Anchor {
+    type: 'manage' | 'reassign' | 'assign' | 'report';
 }
 
-export enum GridColsLength {
-    SIX = 'grid-cols-6',
-    SEVEN = 'grid-cols-7',
+type Status = 'scheduled' | 'preparing' | 'pending';
+type Performance = 'good' | 'excellent';
+interface LabeledBadgeXVM<T> extends WithTextNode {
+    type: T;
+}
+interface ActionsKeyValueXVM extends WithLabel {
+    anchorXVMs: AnchorXVM[];
+}
+interface KeyValueXVMWithBadge<T> extends KeyValueXVM {
+    labeledBadgeXVM: LabeledBadgeXVM<T>;
 }
 
-export interface GridConfig extends GridVM, WithTitle {
-    headerKeys: string[];
-}
-export interface MissionConfig {
-    id: TitleWithoutValueKey;
-    client: TitleWithoutValueKey;
-    fieldName: TitleWithoutValueKey;
-    pilot: TitleWithoutValueKey & {
-        textColor: string;
-        unassignedTextKey: string;
-    };
-    areaInHa: TitleWithoutValueKey;
-    status: TitleWithoutValueKey;
-    completionDate: TitleWithValueKey;
-    performance: TitleWithoutValueKey;
-    actions: {
-        assign: NavigationAnchor;
-        manage: NavigationAnchor;
-        reassign: NavigationAnchor;
-        report: NavigationAnchor;
-    };
+interface KeyValueXVM extends WithLabel {
+    valueVM: ValueVM;
 }
 
-export interface NavigationAnchor extends WithRouterLink {
-    textKey: string;
-    textColor: string;
+interface PilotKeyValueXVM extends KeyValueXVM {
+    type: 'assigned' | 'unassigned';
 }
 
-export interface WithNavigationAnchor {
-    navigationAnchor: NavigationAnchor;
+interface BaseMissionXVM {
+    id: KeyValueXVM;
+    client: KeyValueXVM;
+    fieldName: KeyValueXVM;
+    pilot: PilotKeyValueXVM;
+    actions: ActionsKeyValueXVM;
 }
 
-export interface BadgeXVM {
-    textKey: string;
-    color: string;
+interface ActiveMissionXVM extends BaseMissionXVM {
+    type: 'activeMission';
+    areaInHa: KeyValueXVM;
+    status: KeyValueXVMWithBadge<Status>;
 }
-interface MissionVM {
-    badge: BadgeXVM;
-    pilot: PilotXVM;
+interface CompletedMissionXVM extends BaseMissionXVM {
+    type: 'completedMission';
+    completionDate: KeyValueXVM;
+    performance: KeyValueXVMWithBadge<Performance>;
 }
-
-type ActiveMissionVM = Omit<
-    ActiveMissionX,
-    'status' | 'scheduledDate' | 'pilot' | 'coordinates'
-> &
-    MissionVM;
-type CompletedMissionVM = Omit<
-    CompletedMissionX,
-    'areaInHa' | 'pilot' | 'performance' | 'coordinates'
-> &
-    MissionVM;
-
-export type ActiveMissionXVM = KVsFromVM<ActiveMissionVM> & {
-    actions: NavigationAnchor[];
-};
-
-export type CompletedMissionXVM = KVsFromVM<CompletedMissionVM> &
-    WithNavigationAnchor;
 
 type MissionXVM = ActiveMissionXVM | CompletedMissionXVM;
 
-type ActiveMissionsGridConfig = GridConfig & {
-    navigationAnchor: Omit<NavigationAnchor, 'textColor'>;
-};
-type CompletedMissionsGridConfig = GridConfig;
+type GridItemXVM = MissionXVM;
 
-type ActiveMissionsGridXVM = ActiveMissionsGridConfig & {
-    missionXVMs: MissionXVM[];
-};
-type CompletedMissionsGridXVM = CompletedMissionsGridConfig & {
-    missionXVMs: MissionXVM[];
-};
-
-export type GridXVM = ActiveMissionsGridXVM | CompletedMissionsGridXVM;
-
-export const isActiveMissionsGridXVM = (
-    obj: GridXVM
-): obj is ActiveMissionsGridXVM => 'navigationAnchor' in obj;
-
-export interface OfficeDashboardPageConfig {
-    missionConfig: MissionConfig;
-    activeMissionsGridConfig: ActiveMissionsGridConfig;
-    completedMissionsGridConfig: CompletedMissionsGridConfig;
+interface GridItemListXVM {
+    gridItemXVMs: GridItemXVM[];
+}
+export interface GridXVM extends WithTitle, Partial<WithAnchor> {
+    headerKeys: string[];
+    gridItemListXVM: GridItemListXVM;
 }
 
 export interface OfficeDashboardPageVM {
     gridXVMs: GridXVM[];
 }
-
-interface WithPilot {
-    name: string;
-}
-interface WithoutPilot {
-    textKey: string;
-    color: string;
-}
-
-type PilotXVM = WithPilot | WithoutPilot;
-
-export const isActiveMissionXVM = (obj: MissionXVM): obj is ActiveMissionXVM =>
-    'areaInHaKV' in obj;
-
-export const isWithoutPilotKV = (
-    obj: KeyValuePair<WithoutKey, PilotXVM>
-): obj is KeyValuePair<WithoutKey, WithoutPilot> =>
-    'textKey' in obj.value && 'color' in obj.value;
-
-export const isWithPilotKV = (
-    obj: KeyValuePair<WithoutKey, PilotXVM>
-): obj is KeyValuePair<WithoutKey, WithPilot> => 'name' in obj.value;
