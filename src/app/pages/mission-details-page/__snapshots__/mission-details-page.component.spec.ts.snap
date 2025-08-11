@@ -10,8 +10,6 @@ exports[`MissionDetailsPageComponent should render the template correctly 1`] = 
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <app-google-map
-        appdrawentrypoints=""
-        appdrawtargetareas=""
         class="h-96"
         ng-reflect-entry-points="[object Object]"
         ng-reflect-target-areas="[object Object]"

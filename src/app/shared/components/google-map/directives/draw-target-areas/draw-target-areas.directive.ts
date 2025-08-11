@@ -6,11 +6,13 @@ import { TargetAreaXVM } from './draw-target-areas.model';
     selector: '[appDrawTargetAreas]',
 })
 export class DrawTargetAreasDirective {
+    public readonly targetAreas = input.required<TargetAreaXVM[] | null>({
+        alias: 'appDrawTargetAreas',
+    });
     private readonly hostComponent = inject(GoogleMapComponent, {
         optional: true,
         host: true,
     });
-    public readonly targetAreas = input.required<TargetAreaXVM[] | null>();
 
     private readonly drawnTargetAreasEffect = effect(() => {
         if (!this.hostComponent) return;

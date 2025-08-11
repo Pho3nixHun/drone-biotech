@@ -10,8 +10,7 @@ import { EntryPointXVM } from './draw-entry-points.model';
     template: `
         <app-google-map
             class="h-96"
-            appDrawEntryPoints
-            [entryPoints]="entryPoints()"
+            [appDrawEntryPoints]="entryPoints()"
             [vm]="{
                 mapOptions: {},
                 center: {

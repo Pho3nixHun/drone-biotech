@@ -6,11 +6,13 @@ import { EntryPointXVM } from './draw-entry-points.model';
     selector: '[appDrawEntryPoints]',
 })
 export class DrawEntryPointsDirective {
+    public readonly entryPoints = input.required<EntryPointXVM[] | null>({
+        alias: 'appDrawEntryPoints',
+    });
     private readonly hostComponent = inject(GoogleMapComponent, {
         optional: true,
         host: true,
     });
-    public readonly entryPoints = input.required<EntryPointXVM[] | null>();
 
     private readonly drawEntryPointsEffect = effect(() => {
         if (!this.hostComponent) return;

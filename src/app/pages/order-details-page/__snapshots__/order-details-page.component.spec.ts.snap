@@ -63,7 +63,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 act
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -311,7 +310,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -533,7 +531,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -755,7 +752,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -977,7 +973,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -1199,7 +1194,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -1421,7 +1415,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 key
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -1669,7 +1662,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -1886,7 +1878,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -2108,7 +2099,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 act
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -2369,7 +2359,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -2594,7 +2583,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -2842,7 +2830,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -3106,7 +3093,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -3355,7 +3341,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -3592,7 +3577,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 key
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -3867,7 +3851,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -4146,7 +4129,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -4368,7 +4350,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 act
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -4655,7 +4636,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -4886,7 +4866,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -5186,7 +5165,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -5489,7 +5467,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -5756,7 +5733,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 key
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -6153,7 +6129,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -6375,7 +6350,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -6799,7 +6773,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -7016,7 +6989,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -7238,7 +7210,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -7460,7 +7431,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -7683,7 +7653,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -7905,7 +7874,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
@@ -8127,7 +8095,6 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
