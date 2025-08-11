@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DashboardPageComponent should not render the template if there is no user 1`] = `
+exports[`DashboardPageComponent should not render the template if there is no vm 1`] = `
 <div
   id="root0"
   ng-version="19.2.9"
@@ -9,7 +9,7 @@ exports[`DashboardPageComponent should not render the template if there is no us
 </div>
 `;
 
-exports[`DashboardPageComponent should render the summaries 1`] = `
+exports[`DashboardPageComponent should render the template correctly if the user is customer 1`] = `
 <div
   id="root2"
   ng-version="19.2.9"
@@ -28,8 +28,8 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
               class="flex flex-row items-center space-x-3"
             >
               <span
-                class="h-8 w-8 rounded-full bg-blue-600"
-                ng-reflect-ng-class="bg-blue-600"
+                class="h-8 w-8 rounded-full bg-blue-700"
+                ng-reflect-ng-class="[object Object]"
               />
               <div
                 class="w-full flex flex-row justify-between space-x-10"
@@ -38,12 +38,30 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                   class="flex flex-col"
                 >
                   <h2>
-                     tit 
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
                   </h2>
                   <p
                     class="text-gray-600"
                   >
-                     role 
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
                   </p>
                 </div>
                 <div
@@ -52,10 +70,313 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                   <small
                     class="text-gray-600"
                   >
-                    login
+                    lastText
                   </small>
                   <time>
-                    dat
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <router-outlet />
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DashboardPageComponent should render the template correctly if the user is pilot 1`] = `
+<div
+  id="root4"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <!--container-->
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-green-700"
+                ng-reflect-ng-class="[object Object]"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    lastText
+                  </small>
+                  <time>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <router-outlet />
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DashboardPageComponent should render the template correctly if the user is somebody from the office 1`] = `
+<div
+  id="root3"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <!--container-->
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-red-700"
+                ng-reflect-ng-class="[object Object]"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    lastText
+                  </small>
+                  <time>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <router-outlet />
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DashboardPageComponent should render the template correctly if there are 3 summaries 1`] = `
+<div
+  id="root7"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <!--container-->
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-red-700"
+                ng-reflect-ng-class="[object Object]"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    lastText
+                  </small>
+                  <time>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
                   </time>
                 </div>
               </div>
@@ -72,22 +393,26 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                   <span
                     class="text-2xl"
                   >
-                    📋
+                    *
                   </span>
                   <div>
                     <h4
                       class="text-gray-700 font-medium"
                     >
-                       DashboardPage.summary.activeOrder.title 
+                       sum1 
                     </h4>
-                    <p
-                      class="text-2xl font-semibold tracking-wider text-blue-600"
-                      ng-reflect-ng-class="text-blue-600"
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-blue-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
                     >
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
                       <!--container-->
-                       2 
-                      <!--container-->
-                    </p>
+                    </app-value>
                   </div>
                 </div>
               </app-summary-item>
@@ -98,22 +423,26 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                   <span
                     class="text-2xl"
                   >
-                    🌾
+                    *
                   </span>
                   <div>
                     <h4
                       class="text-gray-700 font-medium"
                     >
-                       DashboardPage.summary.totalArea.title 
+                       sum2 
                     </h4>
-                    <p
-                      class="text-2xl font-semibold tracking-wider text-green-600"
-                      ng-reflect-ng-class="text-green-600"
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-blue-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
                     >
-                       DashboardPage.hectareQuantity 
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
                       <!--container-->
-                      <!--container-->
-                    </p>
+                    </app-value>
                   </div>
                 </div>
               </app-summary-item>
@@ -124,48 +453,26 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                   <span
                     class="text-2xl"
                   >
-                    💰
+                    *
                   </span>
                   <div>
                     <h4
                       class="text-gray-700 font-medium"
                     >
-                       DashboardPage.summary.spending.title 
+                       sum3 
                     </h4>
-                    <p
-                      class="text-2xl font-semibold tracking-wider text-purple-600"
-                      ng-reflect-ng-class="text-purple-600"
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-blue-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
                     >
-                       DashboardPage.moneyQuantity 
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
                       <!--container-->
-                      <!--container-->
-                    </p>
-                  </div>
-                </div>
-              </app-summary-item>
-              <app-summary-item>
-                <div
-                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
-                >
-                  <span
-                    class="text-2xl"
-                  >
-                    ⏳
-                  </span>
-                  <div>
-                    <h4
-                      class="text-gray-700 font-medium"
-                    >
-                       DashboardPage.summary.pending.title 
-                    </h4>
-                    <p
-                      class="text-2xl font-semibold tracking-wider text-yellow-600"
-                      ng-reflect-ng-class="text-yellow-600"
-                    >
-                      <!--container-->
-                       3 
-                      <!--container-->
-                    </p>
+                    </app-value>
                   </div>
                 </div>
               </app-summary-item>
@@ -184,7 +491,413 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
 </div>
 `;
 
-exports[`DashboardPageComponent should render the template correctly if there is a user 1`] = `
+exports[`DashboardPageComponent should render the template correctly if there are different types of summaries 1`] = `
+<div
+  id="root8"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <!--container-->
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-red-700"
+                ng-reflect-ng-class="[object Object]"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    lastText
+                  </small>
+                  <time>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum1 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-blue-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum2 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-green-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         2 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum3 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-purple-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         3 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum4 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-purple-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         4 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum5 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-blue-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         5 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum6 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-green-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         6 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <router-outlet />
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DashboardPageComponent should render the template correctly if there is 1 summary 1`] = `
+<div
+  id="root6"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <!--container-->
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-red-700"
+                ng-reflect-ng-class="[object Object]"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    lastText
+                  </small>
+                  <time>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <app-summary-item>
+                <div
+                  class="bg-slate-100 min-h-28 w-full rounded-lg flex items-center space-x-5 p-5 hover:shadow hover:-translate-y-1 duration-100 h-full"
+                >
+                  <span
+                    class="text-2xl"
+                  >
+                    *
+                  </span>
+                  <div>
+                    <h4
+                      class="text-gray-700 font-medium"
+                    >
+                       sum1 
+                    </h4>
+                    <app-value
+                      class="text-2xl font-semibold tracking-wider text-blue-700"
+                      ng-reflect-ng-class="[object Object]"
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         1 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </div>
+                </div>
+              </app-summary-item>
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <router-outlet />
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DashboardPageComponent should render the template correctly if there is a vm provided 1`] = `
 <div
   id="root1"
   ng-version="19.2.9"
@@ -203,8 +916,8 @@ exports[`DashboardPageComponent should render the template correctly if there is
               class="flex flex-row items-center space-x-3"
             >
               <span
-                class="h-8 w-8 rounded-full bg-blue-600"
-                ng-reflect-ng-class="bg-blue-600"
+                class="h-8 w-8 rounded-full bg-blue-700"
+                ng-reflect-ng-class="[object Object]"
               />
               <div
                 class="w-full flex flex-row justify-between space-x-10"
@@ -213,12 +926,30 @@ exports[`DashboardPageComponent should render the template correctly if there is
                   class="flex flex-col"
                 >
                   <h2>
-                     tit 
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
                   </h2>
                   <p
                     class="text-gray-600"
                   >
-                     role 
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
                   </p>
                 </div>
                 <div
@@ -227,10 +958,117 @@ exports[`DashboardPageComponent should render the template correctly if there is
                   <small
                     class="text-gray-600"
                   >
-                    login
+                    lastText
                   </small>
                   <time>
-                    dat
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </time>
+                </div>
+              </div>
+            </header>
+          </app-user-header>
+          <app-summary-item-list>
+            <div
+              class="flex flex-row flex-wrap gap-5 w-full"
+            >
+              <!--container-->
+            </div>
+          </app-summary-item-list>
+          <router-outlet />
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`DashboardPageComponent should render the template correctly if there is no summary 1`] = `
+<div
+  id="root5"
+  ng-version="19.2.9"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <app-frame>
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <!--container-->
+          <app-user-header>
+            <header
+              class="flex flex-row items-center space-x-3"
+            >
+              <span
+                class="h-8 w-8 rounded-full bg-red-700"
+                ng-reflect-ng-class="[object Object]"
+              />
+              <div
+                class="w-full flex flex-row justify-between space-x-10"
+              >
+                <div
+                  class="flex flex-col"
+                >
+                  <h2>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         title 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </h2>
+                  <p
+                    class="text-gray-600"
+                  >
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         role 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-end"
+                >
+                  <small
+                    class="text-gray-600"
+                  >
+                    lastText
+                  </small>
+                  <time>
+                    <app-value
+                      ng-reflect-vm="[object Object]"
+                    >
+                      <div>
+                        <!--container-->
+                         last 
+                        <!--container-->
+                      </div>
+                      <!--container-->
+                    </app-value>
                   </time>
                 </div>
               </div>
