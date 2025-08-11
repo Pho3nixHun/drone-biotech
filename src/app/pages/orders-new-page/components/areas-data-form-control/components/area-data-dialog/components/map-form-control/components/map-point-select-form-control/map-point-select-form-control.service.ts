@@ -1,8 +1,8 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { ENTRY_POINT_MARKER_OPTIONS } from './map-point-select-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { Observable, switchMap } from 'rxjs';
+import { ENTRY_POINT_MARKER_OPTIONS } from 'src/app/shared/providers/google-maps-provider';
 
 @Injectable({
     providedIn: 'any',

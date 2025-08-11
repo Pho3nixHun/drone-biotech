@@ -7,13 +7,13 @@ import { By } from '@angular/platform-browser';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { Coordinates } from '@stores/location/location.model';
-import { provideMockEntryPointMarkerOptions } from './components/map-point-select-form-control/map-point-select-form-control.model';
 import { MapAreaSelectFormControlMockService } from './components/map-area-select-form-control/map-area-select-form-control.service.mock';
 import { MapAreaSelectFormControlService } from './components/map-area-select-form-control/map-area-select-form-control.service';
 import {
     provideMockMapOptions,
     provideMockPolygonOptions,
     provideMockInfoWindowOptions,
+    provideMockEntryPointMarkerOptions,
 } from 'src/app/shared/providers/google-maps-provider';
 
 const headOffice = { lat: 25, lng: 25 };

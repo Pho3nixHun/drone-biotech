@@ -1,16 +1,16 @@
-import { DrawTargetAreasDirective } from './draw-target-areas.directive';
-import { Component, input, signal } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { GoogleMapComponent } from '@components/google-map/google-map.component';
-import { TargetAreaXVM } from './draw-target-areas.model';
+import { DrawEntryPointsDirective } from './draw-entry-points.directive';
+import { EntryPointXVM } from './draw-entry-points.model';
 
 @Component({
-    imports: [DrawTargetAreasDirective, GoogleMapComponent],
+    imports: [DrawEntryPointsDirective, GoogleMapComponent],
     template: `
         <app-google-map
             class="h-96"
-            [appDrawTargetAreas]="targetAreas()"
+            [appDrawEntryPoints]="entryPoints()"
             [vm]="{
                 mapOptions: {},
                 center: {
@@ -22,8 +22,8 @@ import { TargetAreaXVM } from './draw-target-areas.model';
     `,
 })
 class TestHostComponent {
-    targetAreas = input.required<TargetAreaXVM[] | null>();
-    drawnPolygons = signal<google.maps.Polygon[] | null>(null);
+    entryPoints = input.required<EntryPointXVM[] | null>();
+
     mapRef: google.maps.Map = new google.maps.Map(
         document.createElement('div'),
         {
@@ -33,10 +33,10 @@ class TestHostComponent {
     );
 }
 
-describe('DrawTargetAreasDirective', () => {
+describe('DrawEntryPointsDirective', () => {
     let component: TestHostComponent;
     let fixture: ComponentFixture<TestHostComponent>;
-    let directive: DrawTargetAreasDirective;
+    let directive: DrawEntryPointsDirective;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -46,18 +46,18 @@ describe('DrawTargetAreasDirective', () => {
         component = fixture.debugElement.componentInstance;
         directive = fixture.debugElement
             .query(By.directive(GoogleMapComponent))
-            .injector.get(DrawTargetAreasDirective);
+            .injector.get(DrawEntryPointsDirective);
     });
 
     // Unit testing
     it('should create the directive and set the inputs', () => {
         // Arrange
-        fixture.componentRef.setInput('targetAreas', null);
+        fixture.componentRef.setInput('entryPoints', null);
 
         // Act
         fixture.detectChanges();
 
         // Assert
-        expect(directive.targetAreas()).toStrictEqual(component.targetAreas());
+        expect(directive.entryPoints()).toStrictEqual(component.entryPoints());
     });
 });

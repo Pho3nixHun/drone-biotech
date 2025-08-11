@@ -4,7 +4,7 @@ import {
 } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { firstValueFrom } from 'rxjs';
@@ -82,10 +82,6 @@ export class OrderDetailsPageComponent {
     private readonly orderDetailsPageService = inject(OrderDetailsPageService);
 
     protected readonly vm = toSignal(this.orderDetailsPageService.getVM());
-
-    protected readonly drawnPolygons = signal<google.maps.Polygon[] | null>(
-        null
-    );
 
     protected readonly messageFormControl = this.fb.control('', [
         Validators.required,

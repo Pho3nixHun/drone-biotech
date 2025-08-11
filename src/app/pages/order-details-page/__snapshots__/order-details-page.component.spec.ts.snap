@@ -2,7 +2,7 @@
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 action is provided in a card item 1`] = `
 <div
-  id="root37"
+  id="root35"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -63,9 +63,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 act
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -251,7 +249,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 act
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 card group header item is provided in the missions 1`] = `
 <div
-  id="root28"
+  id="root26"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -312,9 +310,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -474,7 +470,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 car
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 card item is provided in the missions 1`] = `
 <div
-  id="root31"
+  id="root29"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -535,9 +531,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -697,7 +691,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 car
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in an info panel in the details section 1`] = `
 <div
-  id="root21"
+  id="root19"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -758,9 +752,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -920,7 +912,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info item is provided in the overview 1`] = `
 <div
-  id="root15"
+  id="root13"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -981,9 +973,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1143,7 +1133,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 info panel is provided in the details section 1`] = `
 <div
-  id="root18"
+  id="root16"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1204,9 +1194,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1366,7 +1354,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 keyvalue is provided in a card item 1`] = `
 <div
-  id="root34"
+  id="root32"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1427,9 +1415,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 key
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1615,7 +1601,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 key
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 message item is provided 1`] = `
 <div
-  id="root23"
+  id="root21"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1676,9 +1662,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -1838,7 +1822,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 mes
 
 exports[`OrderDetailsPageComponent should render the template correctly if 0 summary is provided in the header 1`] = `
 <div
-  id="root12"
+  id="root10"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -1894,9 +1878,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2056,7 +2038,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 0 sum
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 action is provided in a card item 1`] = `
 <div
-  id="root38"
+  id="root36"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2117,9 +2099,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 act
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2318,7 +2298,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 act
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 card group header item is provided in the missions 1`] = `
 <div
-  id="root29"
+  id="root27"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2379,9 +2359,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2544,7 +2522,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 car
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 card item is provided in the missions 1`] = `
 <div
-  id="root32"
+  id="root30"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2605,9 +2583,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -2793,7 +2769,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 car
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 info item is provided in an info panel in the details section 1`] = `
 <div
-  id="root22"
+  id="root20"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -2854,9 +2830,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3058,7 +3032,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 info item is provided in the overview 1`] = `
 <div
-  id="root16"
+  id="root14"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3119,9 +3093,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3308,7 +3280,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 info panel is provided in the details section 1`] = `
 <div
-  id="root19"
+  id="root17"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3369,9 +3341,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3546,7 +3516,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 keyvalue is provided in a card item 1`] = `
 <div
-  id="root35"
+  id="root33"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3607,9 +3577,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 key
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -3822,7 +3790,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 key
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 message item is provided 1`] = `
 <div
-  id="root24"
+  id="root22"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -3883,9 +3851,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -4082,7 +4048,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 mes
 
 exports[`OrderDetailsPageComponent should render the template correctly if 1 summary is provided in the header 1`] = `
 <div
-  id="root13"
+  id="root11"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -4163,9 +4129,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -4325,7 +4289,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 1 sum
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 action is provided in a card item 1`] = `
 <div
-  id="root39"
+  id="root37"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -4386,9 +4350,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 act
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -4613,7 +4575,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 act
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 card group header item is provided in the missions 1`] = `
 <div
-  id="root30"
+  id="root28"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -4674,9 +4636,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -4845,7 +4805,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 car
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 card item is provided in the missions 1`] = `
 <div
-  id="root33"
+  id="root31"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -4906,9 +4866,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 car
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -5146,7 +5104,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 car
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 info item is provided in the overview 1`] = `
 <div
-  id="root17"
+  id="root15"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -5207,9 +5165,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -5450,7 +5406,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 info panel is provided in the details section 1`] = `
 <div
-  id="root20"
+  id="root18"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -5511,9 +5467,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -5718,7 +5672,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 inf
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 keyvalue is provided in a card item 1`] = `
 <div
-  id="root36"
+  id="root34"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -5779,9 +5733,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 key
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -6046,7 +5998,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 key
 
 exports[`OrderDetailsPageComponent should render the template correctly if 3 summary is provided in the header 1`] = `
 <div
-  id="root14"
+  id="root12"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -6177,9 +6129,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -6339,7 +6289,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 3 sum
 
 exports[`OrderDetailsPageComponent should render the template correctly if 5 message item is provided 1`] = `
 <div
-  id="root25"
+  id="root23"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -6400,9 +6350,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -6769,7 +6717,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if 5 mes
 
 exports[`OrderDetailsPageComponent should render the template correctly if the button is not visible in the header 1`] = `
 <div
-  id="root10"
+  id="root8"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -6825,9 +6773,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -6987,7 +6933,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
 
 exports[`OrderDetailsPageComponent should render the template correctly if the button is not visible in the header 2`] = `
 <div
-  id="root11"
+  id="root9"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -7043,9 +6989,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -7205,7 +7149,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
 
 exports[`OrderDetailsPageComponent should render the template correctly if the button is visible in the header 1`] = `
 <div
-  id="root9"
+  id="root7"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -7266,9 +7210,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -7428,7 +7370,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the b
 
 exports[`OrderDetailsPageComponent should render the template correctly if the close order button is disabled 1`] = `
 <div
-  id="root26"
+  id="root24"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -7489,9 +7431,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -7652,7 +7592,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
 
 exports[`OrderDetailsPageComponent should render the template correctly if the close order button is enabled 1`] = `
 <div
-  id="root27"
+  id="root25"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -7713,9 +7653,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -7875,7 +7813,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the c
 
 exports[`OrderDetailsPageComponent should render the template correctly if the messageFormControl is invalid so the button will be disabled 1`] = `
 <div
-  id="root8"
+  id="root6"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -7936,9 +7874,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >
@@ -8098,7 +8034,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
 
 exports[`OrderDetailsPageComponent should render the template correctly if the messageFormControl is valid so the button will be enabled 1`] = `
 <div
-  id="root7"
+  id="root5"
   ng-version="19.2.9"
 >
   <app-page-layout>
@@ -8159,9 +8095,7 @@ exports[`OrderDetailsPageComponent should render the template correctly if the m
             tit
           </h3>
           <app-google-map
-            appdrawtargetareas=""
             class="h-96"
-            ng-reflect-drawn-polygons="[Signal: null]"
             ng-reflect-target-areas=""
             ng-reflect-vm="[object Object]"
           >

@@ -49,12 +49,10 @@
         <app-section-card [vm]="vm.overviewSectionCardXVM">
             <app-google-map
                 class="h-96"
-                appDrawTargetAreas
-                [drawnPolygons]="drawnPolygons"
-                [targetAreas]="
+                [vm]="vm.overviewSectionCardXVM.googleMapXVM"
+                [appDrawTargetAreas]="
                     vm.overviewSectionCardXVM.googleMapXVM.targetAreaXVMs
                 "
-                [vm]="vm.overviewSectionCardXVM.googleMapXVM"
             />
             <app-info-item-list
                 class="*:flex-row *:space-y-0 *:justify-between"

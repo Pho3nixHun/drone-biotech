@@ -8,9 +8,9 @@ import { WithDisabled } from '@interfaces/with-disabled.interface';
 import { WithLink } from '@interfaces/with-link.interface';
 import { GoogleMapVM } from '@components/google-map/google-map.model';
 import { ValueVM } from '@components/value/value.model';
-import { Coordinates } from '@stores/location/location.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
+import { TargetAreaXVM } from '@components/google-map/directives/draw-target-areas/draw-target-areas.model';
 
 export interface MessageItemXVM {
     senderName: string;
@@ -121,14 +121,11 @@ interface MissionInfoItemXVM {
     labelKey: string;
     valueVM: ValueVM;
 }
+
 interface MissionInfoItemListXVM {
     missionInfoItemXVMs: MissionInfoItemXVM[];
 }
 
-export interface TargetAreaXVM {
-    options: google.maps.PolygonOptions;
-    coordinates: Coordinates[];
-}
 
 export interface GoogleMapXVM extends GoogleMapVM {
     targetAreaXVMs: TargetAreaXVM[] | null;
