@@ -24,6 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { InfoPanelComponent } from '@components/info-panel/info-panel.component';
 import { InfoItemListComponent } from '@components/info-panel/components/info-item-list/info-item-list.component';
 import { InfoItemComponent } from '@components/info-panel/components/info-item-list/components/info-item/info-item.component';
+import { ProgressFormControlComponent } from './components/progress-form-control/progress-form-control.component';
+import { LogItem } from './components/progress-form-control/progress-form-control.model';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -46,6 +48,7 @@ import { InfoItemComponent } from '@components/info-panel/components/info-item-l
         InfoPanelComponent,
         InfoItemListComponent,
         InfoItemComponent,
+        ProgressFormControlComponent,
     ],
     providers: [missionDetailsPageConfig],
     templateUrl: './mission-details-page.component.html',
@@ -59,6 +62,18 @@ export class MissionDetailsPageComponent {
     private readonly currentUser = this.store.select(selectUser);
 
     protected readonly vm = toSignal(this.missionDetailsPageService.getVM());
+
+    protected readonly logItemsControl = this.fb.control<LogItem[] | null>(
+        null
+    );
+
+    private readonly setLogItemsControl = effect(() => {
+        const vm = this.vm();
+        if (!vm) return;
+        this.logItemsControl.setValue(
+            vm.progressSectionCardXVM.progressFormControlVM.logItems
+        );
+    });
 
     protected readonly mapControl = this.fb.control<MapControl>(
         {

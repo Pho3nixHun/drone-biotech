@@ -1,0 +1,1266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressFormControlComponent should not render the log items section if an empty array is provided 1`] = `
+<div
+  id="root10"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should not render the log items section if there is no log item provided 1`] = `
+<div
+  id="root9"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render 0 progress group if the 0 progress group is provided 1`] = `
+<div
+  id="root1"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render 0 progress item if 0 progress item is provided 1`] = `
+<div
+  id="root5"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render 1 progress group if the 1 progress group is provided 1`] = `
+<div
+  id="root2"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render 1 progress item if 1 progress item is provided 1`] = `
+<div
+  id="root6"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-gray-200 text-gray-600"
+                            disabled=""
+                            ng-reflect-ng-class="bg-gray-200 text-gray-600"
+                          >
+                             button1 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render 3 progress group if the 3 progress group is provided 1`] = `
+<div
+  id="root3"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   2 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab2
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   3 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab3
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render 3 progress item if 3 progress item is provided 1`] = `
+<div
+  id="root7"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-gray-200 text-gray-600"
+                            disabled=""
+                            ng-reflect-ng-class="bg-gray-200 text-gray-600"
+                          >
+                             button1 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-gray-200 text-gray-600"
+                            disabled=""
+                            ng-reflect-ng-class="bg-gray-200 text-gray-600"
+                          >
+                             button2 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-gray-200 text-gray-600"
+                            disabled=""
+                            ng-reflect-ng-class="bg-gray-200 text-gray-600"
+                          >
+                             button3 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render all different log items state 1`] = `
+<div
+  id="root13"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            log
+          </h3>
+          <app-log-item-list>
+            <div
+              class="flex flex-col gap-y-4"
+            >
+              <app-log-item
+                class="border-l-4 border-orange-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.customerCancel.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something4 
+                  </p>
+                </div>
+              </app-log-item>
+              <app-log-item
+                class="border-l-4 border-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.assign.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something3 
+                  </p>
+                </div>
+              </app-log-item>
+              <app-log-item
+                class="border-l-4 border-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.arrive.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something2 
+                  </p>
+                </div>
+              </app-log-item>
+              <app-log-item
+                class="border-l-4 border-red-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.reject.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something1 
+                  </p>
+                </div>
+              </app-log-item>
+              <!--container-->
+            </div>
+          </app-log-item-list>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render all different progress groups if provided 1`] = `
+<div
+  id="root4"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-green-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   2 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab2
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   3 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab3
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render progress items with all different states 1`] = `
+<div
+  id="root8"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <app-progress-group>
+            <div
+              class="flex flex-row space-x-2"
+            >
+              <app-step-indicator
+                class="text-white *:bg-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex rounded-full items-center justify-center w-8 h-8"
+                >
+                   1 
+                </div>
+              </app-step-indicator>
+              <div
+                class="w-full flex flex-col gap-y-3"
+              >
+                <strong>
+                  lab1
+                </strong>
+                <div>
+                  <app-progress-item-list>
+                    <ul
+                      class="flex flex-col gap-y-2"
+                    >
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-gray-200 text-gray-600"
+                            disabled=""
+                            ng-reflect-ng-class="bg-gray-200 text-gray-600"
+                          >
+                             button1 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-blue-200 text-blue-600"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                             button2 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-green-200 text-green-600"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                             button3 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-orange-200 text-orange-600"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                             button4 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <app-progress-item>
+                        <li>
+                          <button
+                            class="rounded-md flex flex-row justify-between items-center w-full p-2 bg-red-200 text-red-600"
+                            ng-reflect-ng-class="[object Object]"
+                          >
+                             button5 
+                            <span
+                              class="flex items-center"
+                            >
+                              <mat-icon
+                                aria-hidden="true"
+                                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                data-mat-icon-type="font"
+                                role="img"
+                              >
+                                calendar_month
+                              </mat-icon>
+                            </span>
+                          </button>
+                        </li>
+                      </app-progress-item>
+                      <!--container-->
+                    </ul>
+                  </app-progress-item-list>
+                </div>
+              </div>
+            </div>
+          </app-progress-group>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render the log items section with one log item 1`] = `
+<div
+  id="root11"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            log
+          </h3>
+          <app-log-item-list>
+            <div
+              class="flex flex-col gap-y-4"
+            >
+              <app-log-item
+                class="border-l-4 border-red-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.abort.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something 
+                  </p>
+                </div>
+              </app-log-item>
+              <!--container-->
+            </div>
+          </app-log-item-list>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render the log items section with three log items 1`] = `
+<div
+  id="root12"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            log
+          </h3>
+          <app-log-item-list>
+            <div
+              class="flex flex-col gap-y-4"
+            >
+              <app-log-item
+                class="border-l-4 border-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.assign.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something3 
+                  </p>
+                </div>
+              </app-log-item>
+              <app-log-item
+                class="border-l-4 border-blue-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.accept.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something2 
+                  </p>
+                </div>
+              </app-log-item>
+              <app-log-item
+                class="border-l-4 border-red-400"
+                ng-reflect-ng-class="[object Object]"
+              >
+                <div
+                  class="flex flex-col px-2 gap-y-2"
+                >
+                  <div
+                    class="flex flex-row justify-between"
+                  >
+                    <strong>
+                      MissionDetailsPage.logs.progress.abort.title
+                    </strong>
+                    <time
+                      class="text-gray-600"
+                    >
+                      
+                    </time>
+                  </div>
+                  <p
+                    class="text-gray-600"
+                  >
+                     something1 
+                  </p>
+                </div>
+              </app-log-item>
+              <!--container-->
+            </div>
+          </app-log-item-list>
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;
+
+exports[`ProgressFormControlComponent should render the template correctly if the vm is provided 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-progress-form-control
+    class="ng-untouched ng-dirty ng-valid"
+    ng-reflect-form="[object Object]"
+    ng-reflect-vm="[object Object]"
+  >
+    <div
+      class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10"
+    >
+      <app-section-card
+        class="w-full lg:w-1/2"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+        >
+          <h3>
+            update
+          </h3>
+          <!--container-->
+        </section>
+      </app-section-card>
+      <!--container-->
+    </div>
+    <!--container-->
+  </app-progress-form-control>
+</div>
+`;

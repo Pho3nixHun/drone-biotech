@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepIndicatorComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-step-indicator>
+    <div
+      class="flex rounded-full items-center justify-center w-8 h-8"
+    >
+      <div />
+    </div>
+  </app-step-indicator>
+</div>
+`;

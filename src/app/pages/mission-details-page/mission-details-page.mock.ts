@@ -39,6 +39,145 @@ export const missionDetailsPageDefaultVM: MissionDetailsPageVM = {
             entryPoint: { lat: 47.237, lng: 21.17827083349036 },
         },
     },
+    progressSectionCardXVM: {
+        titleKey: 'MissionDetailsPage.progressSectionCard.title',
+
+        progressFormControlVM: {
+            creationDateValueKey:
+                'MissionDetailsPage.logs.item.creationDateValue',
+            logItems: [
+                {
+                    type: 'arrive',
+                    creationDate: new Date(),
+                    text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, natus optio maxime similique provident atque dolorum ipsum sed repellat inventore cumque eos. Iure assumenda incidunt pariatur, vel repellendus rerum! Dicta.',
+                },
+                {
+                    type: 'arrive',
+                    creationDate: new Date(),
+                    text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, natus optio maxime similique provident atque dolorum ipsum sed repellat inventore cumque eos. Iure assumenda incidunt pariatur, vel repellendus rerum! Dicta.',
+                },
+            ],
+            logsSectionCardXVM: {
+                titleKey: 'MissionDetailsPage.logsSectionCard.title',
+            },
+            updateSectionCardXVM: {
+                titleKey: 'MissionDetailsPage.updateSectionCard.title',
+                progressGroupXVMs: [
+                    {
+                        stepIndicatorXVM: {
+                            color: 'green',
+                        },
+                        labelKey: 'MissionDetailsPage.logs.preparation.label',
+                        progressItemListXVM: {
+                            progressItemXVMs: [
+                                {
+                                    type: 'customerCancel',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.customerCancel.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+
+                                {
+                                    type: 'assign',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.assign.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'accept',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.accept.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'reject',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.reject.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'travel',
+                                    disabled: true,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.travel.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'arrive',
+                                    disabled: true,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.arrive.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                            ],
+                        },
+                    },
+
+                    {
+                        labelKey: 'MissionDetailsPage.logs.execution.label',
+                        stepIndicatorXVM: {
+                            color: 'green',
+                        },
+                        progressItemListXVM: {
+                            progressItemXVMs: [
+                                {
+                                    type: 'start',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.start.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'progress',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.progress.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'abort',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.abort.buttonText',
+                                    color: 'green',
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                                {
+                                    type: 'complete',
+                                    disabled: false,
+                                    buttonTextKey:
+                                        'MissionDetailsPage.logs.update.complete.buttonText',
+                                    color: 'green',
+
+                                    matIconName: MatIcon.KEYBOARD_ARROW_RIGHT,
+                                },
+                            ],
+                        },
+                    },
+                ],
+            },
+        },
+    },
     suppliesSectionCardXVM: {
         titleKey: 'MissionDetailsPage.supplies.title',
         infoPanelXVM: {

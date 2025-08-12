@@ -1,0 +1,9 @@
+<div class="flex flex-row space-x-2">
+    <ng-content select="app-step-indicator" />
+    <div class="w-full flex flex-col gap-y-3">
+        <ng-content select="strong" />
+        <div>
+            <ng-content select="app-progress-item-list" />
+        </div>
+    </div>
+</div>

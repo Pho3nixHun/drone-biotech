@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogItemListComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-log-item-list>
+    <div
+      class="flex flex-col gap-y-4"
+    >
+      <app-log-item>
+        <div
+          class="flex flex-col px-2 gap-y-2"
+        >
+          <div
+            class="flex flex-row justify-between"
+          />
+        </div>
+      </app-log-item>
+    </div>
+  </app-log-item-list>
+</div>
+`;

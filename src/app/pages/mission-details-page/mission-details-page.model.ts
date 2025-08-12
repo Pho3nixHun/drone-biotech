@@ -6,6 +6,7 @@ import { SectionCardVM } from '@components/section-card/section-card.model';
 import { MessageItemListXVM } from '@components/message-item-list/message-item-list.model';
 import { Value } from '@interfaces/with-value';
 import { MatIcon } from '@interfaces/mat-icon.enum';
+import { ProgressFormControlVM } from './components/progress-form-control/progress-form-control.model';
 
 interface ButtonXVM extends WithTextNode, WithLink {}
 
@@ -82,6 +83,10 @@ interface SuppliesSectionCardXVM extends SectionCardVM {
     infoPanelXVM: InfoPanelXVM;
 }
 
+interface ProgressSectionCardXVM extends SectionCardVM {
+    progressFormControlVM: ProgressFormControlVM;
+}
+
 export interface MissionDetailsPageVM {
     pageLayoutXVM: PageLayoutXVM;
     headerXVM: HeaderXVM;
@@ -89,4 +94,5 @@ export interface MissionDetailsPageVM {
     messagesSectionCardXVM: MessagesSectionCardXVM;
     detailsSectionCardXVM: DetailsSectionCardXVM;
     suppliesSectionCardXVM: SuppliesSectionCardXVM;
+    progressSectionCardXVM: ProgressSectionCardXVM;
 }
