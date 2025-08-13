@@ -130,19 +130,10 @@
                                 } @else {
                                     <a
                                         [routerLink]="
-                                            missionXVM.navigationAnchor
-                                                .routerLink
+                                            missionXVM.anchor.routerLink
                                         "
-                                        [ngClass]="
-                                            missionXVM.navigationAnchor
-                                                .textColor
-                                        "
-                                        >{{
-                                            t(
-                                                missionXVM.navigationAnchor
-                                                    .textKey
-                                            )
-                                        }}</a
+                                        [ngClass]="missionXVM.anchor.textColor"
+                                        >{{ t(missionXVM.anchor.textKey) }}</a
                                     >
                                 }
                             </app-grid-item>

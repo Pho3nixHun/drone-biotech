@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionCardComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-section-card>
+    <section
+      class="w-full flex flex-col gap-y-4 p-4 bg-slate-100"
+    >
+      <app-progress-group>
+        <div
+          class="flex flex-row space-x-2"
+        >
+          <div
+            class="w-full flex flex-col gap-y-3"
+          >
+            <div />
+          </div>
+        </div>
+      </app-progress-group>
+      <app-log-item-list>
+        <div
+          class="flex flex-col gap-y-4"
+        />
+      </app-log-item-list>
+    </section>
+  </app-section-card>
+</div>
+`;

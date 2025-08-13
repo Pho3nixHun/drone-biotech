@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsItemComponent should project the content and render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-details-item>
+    <div
+      class="flex flex-row space-x-4"
+    >
+      <div>
+        <app-avatar>
+          Should be projected
+        </app-avatar>
+      </div>
+      <div>
+        <h4>
+          Should be projected
+        </h4>
+        <p>
+          Should be projected
+        </p>
+      </div>
+    </div>
+  </app-details-item>
+</div>
+`;

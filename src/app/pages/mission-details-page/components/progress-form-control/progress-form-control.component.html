@@ -1,0 +1,92 @@
+@let vM = vm();
+<div class="flex lg:flex-row flex-col gap-y-10 lg:gap-x-10" *transloco="let t">
+    <app-section-card class="w-full lg:w-1/2">
+        <h3>{{ t(vM.updateSectionCardXVM.titleKey) }}</h3>
+        @for (
+            progressGroupXVM of vM.updateSectionCardXVM.progressGroupXVMs;
+            track $index
+        ) {
+            <app-progress-group>
+                <app-step-indicator
+                    class="text-white"
+                    [ngClass]="{
+                        '*:bg-blue-400':
+                            progressGroupXVM.stepIndicatorXVM.color === 'blue',
+                        '*:bg-green-400':
+                            progressGroupXVM.stepIndicatorXVM.color === 'green',
+                    }"
+                >
+                    {{ $index + 1 }}
+                </app-step-indicator>
+                <strong>{{ t(progressGroupXVM.labelKey) }}</strong>
+                <app-progress-item-list>
+                    @for (
+                        progressItemXVM of progressGroupXVM.progressItemListXVM
+                            .progressItemXVMs;
+                        track $index
+                    ) {
+                        <app-progress-item>
+                            <button
+                                class="rounded-md flex flex-row justify-between items-center w-full p-2"
+                                [disabled]="progressItemXVM.disabled"
+                                [ngClass]="
+                                    progressItemXVM.disabled
+                                        ? 'bg-gray-200 text-gray-600'
+                                        : {
+                                              'bg-green-200 text-green-600':
+                                                  progressItemXVM.color ===
+                                                  'green',
+                                              'bg-orange-200 text-orange-600':
+                                                  progressItemXVM.color ===
+                                                  'orange',
+                                              'bg-blue-200 text-blue-600':
+                                                  progressItemXVM.color ===
+                                                  'blue',
+                                              'bg-red-200 text-red-600':
+                                                  progressItemXVM.color ===
+                                                  'red',
+                                          }
+                                "
+                            >
+                                {{ t(progressItemXVM.buttonTextKey) }}
+                                <span class="flex items-center"
+                                    ><mat-icon>{{
+                                        progressItemXVM.matIconName
+                                    }}</mat-icon></span
+                                >
+                            </button>
+                        </app-progress-item>
+                    }
+                </app-progress-item-list>
+            </app-progress-group>
+        }
+    </app-section-card>
+    @if (logItemXVMs(); as logItemXVMs) {
+        <app-section-card class="w-full lg:w-1/2">
+            <h3>{{ t(vM.logsSectionCardXVM.titleKey) }}</h3>
+            <app-log-item-list>
+                @for (logItemXVM of logItemXVMs; track $index) {
+                    <app-log-item
+                        class="border-l-4"
+                        [ngClass]="{
+                            'border-green-400': logItemXVM.color === 'green',
+                            'border-blue-400': logItemXVM.color === 'blue',
+                            'border-red-400': logItemXVM.color === 'red',
+                            'border-orange-400': logItemXVM.color === 'orange',
+                        }"
+                    >
+                        <strong>{{ t(logItemXVM.titleKey) }}</strong>
+                        <p class="text-gray-600">
+                            {{ logItemXVM.text }}
+                        </p>
+                        <time class="text-gray-600">{{
+                            t(logItemXVM.creationDateValueKey, {
+                                date: logItemXVM.creationDate,
+                            })
+                        }}</time>
+                    </app-log-item>
+                }
+            </app-log-item-list>
+        </app-section-card>
+    }
+</div>

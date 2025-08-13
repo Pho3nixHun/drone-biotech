@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressGroupComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-progress-item-group>
+    <app-progress-item-list>
+      <ul
+        class="flex flex-col gap-y-2"
+      />
+    </app-progress-item-list>
+  </app-progress-item-group>
+</div>
+`;

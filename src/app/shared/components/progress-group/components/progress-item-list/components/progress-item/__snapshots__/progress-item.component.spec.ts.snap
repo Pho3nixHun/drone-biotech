@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressItemComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="19.2.9"
+>
+  <app-progress-item>
+    <li>
+      <button>
+        A
+      </button>
+    </li>
+  </app-progress-item>
+</div>
+`;

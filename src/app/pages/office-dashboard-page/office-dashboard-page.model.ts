@@ -5,10 +5,7 @@ import {
     TitleWithValueKey,
     WithoutKey,
 } from '@interfaces/value-key.interface';
-import {
-    NavigationAnchor,
-    WithNavigationAnchor,
-} from '@interfaces/navigation-anchor.interface';
+import { Anchor, WithAnchor } from '@interfaces/navigation-anchor.interface';
 import {
     Badge,
     GridConfig,
@@ -31,10 +28,10 @@ export interface MissionConfig {
     completionDate: TitleWithValueKey;
     performance: TitleWithoutValueKey;
     actions: {
-        assign: NavigationAnchor;
-        manage: NavigationAnchor;
-        reassign: NavigationAnchor;
-        report: NavigationAnchor;
+        assign: Anchor;
+        manage: Anchor;
+        reassign: Anchor;
+        report: Anchor;
     };
 }
 
@@ -45,26 +42,25 @@ interface MissionVM {
 
 type ActiveMissionVM = Omit<
     ActiveMissionX,
-    'status' | 'scheduledDate' | 'pilot'
+    'status' | 'scheduledDate' | 'pilot' | 'coordinates'
 > &
     MissionVM;
 type CompletedMissionVM = Omit<
     CompletedMissionX,
-    'areaInHa' | 'pilot' | 'performance'
+    'areaInHa' | 'pilot' | 'performance' | 'coordinates'
 > &
     MissionVM;
 
 export type ActiveMissionXVM = KVsFromVM<ActiveMissionVM> & {
-    actions: NavigationAnchor[];
+    actions: Anchor[];
 };
 
-export type CompletedMissionXVM = KVsFromVM<CompletedMissionVM> &
-    WithNavigationAnchor;
+export type CompletedMissionXVM = KVsFromVM<CompletedMissionVM> & WithAnchor;
 
 type MissionXVM = ActiveMissionXVM | CompletedMissionXVM;
 
 type ActiveMissionsGridConfig = GridConfig & {
-    navigationAnchor: Omit<NavigationAnchor, 'textColor'>;
+    navigationAnchor: Omit<Anchor, 'textColor'>;
 };
 type CompletedMissionsGridConfig = GridConfig;
 

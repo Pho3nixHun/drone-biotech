@@ -1,7 +1,10 @@
+import { Coordinates } from '@stores/location/location.model';
+
 interface MissionBase {
     id: string;
     fieldName: string;
     areaInHa: number;
+    coordinates: Coordinates[];
 }
 
 export type AssignedMission = MissionBase & {
@@ -33,6 +36,11 @@ export type CompletedMissionX = CompletedMission & {
 export type MissionX = ActiveMissionX | CompletedMissionX;
 
 export type Mission = ActiveMission | CompletedMission;
+
+export const isActiveMission = (
+    mission: Mission
+): mission is CompletedMission =>
+    'status' in mission && 'scheduledDate' in mission;
 
 export const isActiveMissionX = (
     mission: MissionX
