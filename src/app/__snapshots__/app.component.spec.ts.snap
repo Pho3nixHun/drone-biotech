@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AppComponent when rendering the UI should not render <app-nav-item> when there is no item provided 1`] = `
 <div
   id="root4"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -14,8 +14,6 @@ exports[`AppComponent when rendering the UI should not render <app-nav-item> whe
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -63,7 +61,7 @@ exports[`AppComponent when rendering the UI should not render <app-nav-item> whe
 exports[`AppComponent when rendering the UI should not render the <app-header> when the headerCanBeShown$ value is false 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -74,8 +72,6 @@ exports[`AppComponent when rendering the UI should not render the <app-header> w
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -91,7 +87,6 @@ exports[`AppComponent when rendering the UI should not render the <app-header> w
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               0title
             </a>
@@ -158,7 +153,7 @@ exports[`AppComponent when rendering the UI should not render the <app-header> w
 exports[`AppComponent when rendering the UI should not render the template when the VM is not provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>
@@ -167,7 +162,7 @@ exports[`AppComponent when rendering the UI should not render the template when 
 exports[`AppComponent when rendering the UI should render <app-nav-item> and <a> with routerLink in order when both of them are provided 1`] = `
 <div
   id="root9"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -178,8 +173,6 @@ exports[`AppComponent when rendering the UI should render <app-nav-item> and <a>
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -195,7 +188,6 @@ exports[`AppComponent when rendering the UI should render <app-nav-item> and <a>
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               0title
             </a>
@@ -262,7 +254,7 @@ exports[`AppComponent when rendering the UI should render <app-nav-item> and <a>
 exports[`AppComponent when rendering the UI should render 1 <a> with routerLink when 1 item is provided 1`] = `
 <div
   id="root7"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -273,8 +265,6 @@ exports[`AppComponent when rendering the UI should render 1 <a> with routerLink 
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -290,7 +280,6 @@ exports[`AppComponent when rendering the UI should render 1 <a> with routerLink 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               0title
             </a>
@@ -330,7 +319,7 @@ exports[`AppComponent when rendering the UI should render 1 <a> with routerLink 
 exports[`AppComponent when rendering the UI should render 1 <app-nav-item> when 1 item is provided 1`] = `
 <div
   id="root5"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -341,8 +330,6 @@ exports[`AppComponent when rendering the UI should render 1 <app-nav-item> when 
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -399,7 +386,7 @@ exports[`AppComponent when rendering the UI should render 1 <app-nav-item> when 
 exports[`AppComponent when rendering the UI should render 5 <a> with routerLink in order when 5 items are provided 1`] = `
 <div
   id="root8"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -410,8 +397,6 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -427,7 +412,6 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               0title
             </a>
@@ -435,7 +419,6 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               1title
             </a>
@@ -443,7 +426,6 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               2title
             </a>
@@ -451,7 +433,6 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               3title
             </a>
@@ -459,7 +440,6 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               4title
             </a>
@@ -499,7 +479,7 @@ exports[`AppComponent when rendering the UI should render 5 <a> with routerLink 
 exports[`AppComponent when rendering the UI should render 5 <app-nav-item> in order when 5 items are provided 1`] = `
 <div
   id="root6"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -510,8 +490,6 @@ exports[`AppComponent when rendering the UI should render 5 <app-nav-item> in or
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -604,7 +582,7 @@ exports[`AppComponent when rendering the UI should render 5 <app-nav-item> in or
 exports[`AppComponent when rendering the UI should render the <app-header> when the headerCanBeShown$ value is true 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -615,8 +593,6 @@ exports[`AppComponent when rendering the UI should render the <app-header> when 
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -632,7 +608,6 @@ exports[`AppComponent when rendering the UI should render the <app-header> when 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               0title
             </a>
@@ -699,7 +674,7 @@ exports[`AppComponent when rendering the UI should render the <app-header> when 
 exports[`AppComponent when rendering the UI should render the template when the VM is provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <div
     class="min-h-screen flex flex-col"
@@ -710,8 +685,6 @@ exports[`AppComponent when rendering the UI should render the template when the 
       >
         <app-logo
           class="cursor-pointer"
-          ng-reflect-router-link=""
-          ng-reflect-vm="[object Object]"
           tabindex="0"
         >
           <img
@@ -727,7 +700,6 @@ exports[`AppComponent when rendering the UI should render the template when the 
             <a
               class="nav-item"
               href="/"
-              ng-reflect-router-link=""
             >
               0title
             </a>

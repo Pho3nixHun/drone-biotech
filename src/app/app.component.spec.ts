@@ -31,7 +31,10 @@ import {
     updateGuestOnlyGuard,
 } from '@guards/guest-only/guest-only.guard.mock';
 import { OrdersRouteSegment } from './pages/orders-new-page/orders-route-segment';
-
+jest.mock('@angular/fire/auth', () => ({
+    Auth: jest.fn(),
+    onAuthStateChanged: jest.fn(),
+}));
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
     let component: AppComponent;

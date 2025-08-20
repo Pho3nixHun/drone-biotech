@@ -1,13 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DeleteDialogComponent when the vm is correct should render the content 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dialog-layout
     class="w-80 md:w-96 block"
-    ng-reflect-vm="[object Object]"
   >
     <section
       class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
@@ -66,7 +65,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
 exports[`DeleteDialogComponent when the vm is not correct should not render the content if not DeleteDialogVM is provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>

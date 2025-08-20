@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LogoComponent should render the template when the VM is provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <img
     alt="logo"

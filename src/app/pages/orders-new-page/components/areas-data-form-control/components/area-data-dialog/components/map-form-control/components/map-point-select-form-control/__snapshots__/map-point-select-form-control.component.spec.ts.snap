@@ -1,25 +1,20 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MapPointSelectFormControlComponent should render the template when the VM is provided 1`] = `
 <app-map-point-select-form-control
   class="ng-untouched ng-dirty ng-valid"
-  ng-reflect-form="[object Object]"
-  ng-reflect-map-ref="[object Object]"
-  ng-reflect-vm="[object Object]"
 >
   <div
     class="flex flex-col space-y-4 bg-white"
   >
     <button
       class="btn btn-primary"
-      ng-reflect-ng-class="btn-primary"
     >
        addButton 
     </button>
     <button
       class="btn btn-disabled"
       disabled=""
-      ng-reflect-ng-class="btn-disabled"
     >
        deleteButton 
     </button>

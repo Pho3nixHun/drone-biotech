@@ -1,16 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MapSearchInputFormControlComponent should render the template correctly when the VM is provided 1`] = `
 <app-map-search-input-form-control
   class="ng-untouched ng-dirty ng-invalid"
-  ng-reflect-default-center="[object Object]"
-  ng-reflect-form="[object Object]"
-  ng-reflect-vm="[object Object]"
 >
   <div
     appclickoutside=""
     class="w-full relative"
-    ng-reflect-attached-callback="() => this.isOpened.set(false)"
   >
     <div
       class="flex flex-row w-full"
@@ -18,8 +14,6 @@ exports[`MapSearchInputFormControlComponent should render the template correctly
       <input
         appelementref=""
         class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-        ng-reflect-form="[object Object]"
-        ng-reflect-signal="[Signal: null]"
         placeholder="place"
         type="text"
       />

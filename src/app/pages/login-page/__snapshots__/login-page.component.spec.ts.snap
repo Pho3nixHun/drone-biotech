@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LoginPageComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>
@@ -12,14 +12,12 @@ exports[`LoginPageComponent should not render the template when there is no VM p
 exports[`LoginPageComponent should render the template when there is a VM provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <section
     class="flex flex-col items-center justify-center min-h-screen px-4 md:px-0"
   >
-    <app-login-form
-      ng-reflect-vm="[object Object]"
-    >
+    <app-login-form>
       <div
         class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] w-full max-w-4xl md:mx-0 bg-white rounded-2xl shadow-md overflow-hidden"
       >
@@ -51,7 +49,6 @@ exports[`LoginPageComponent should render the template when there is a VM provid
           >
             <form
               class="w-full space-y-4 ng-untouched ng-pristine ng-invalid"
-              ng-reflect-form="[object Object]"
               novalidate=""
             >
               <label
@@ -64,7 +61,6 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                 class="block w-full border border-gray-300 p-2 rounded-md ng-untouched ng-pristine ng-invalid"
                 formcontrolname="email"
                 id="email"
-                ng-reflect-name="email"
                 placeholder="Email"
                 type="email"
               />
@@ -78,14 +74,12 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                 class="block w-full border border-gray-300 p-2 rounded-md ng-untouched ng-pristine ng-invalid"
                 formcontrolname="password"
                 id="password"
-                ng-reflect-name="password"
                 placeholder="password"
                 type="password"
               />
               <button
                 class="btn w-full btn-disabled"
                 disabled=""
-                ng-reflect-ng-class="btn-disabled"
               >
                  butt 
               </button>

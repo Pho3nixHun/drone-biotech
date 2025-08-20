@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
@@ -24,12 +24,9 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
             <div
               class="flex flex-row space-x-3 items-center"
             >
-              <app-status
-                ng-reflect-vm="[object Object]"
-              >
+              <app-status>
                 <p
                   class="font-medium rounded-full w-max px-3 py-1 flex items-center bg-green-200 text-green-800"
-                  ng-reflect-ng-class="bg-green-200 text-green-800"
                 >
                    OrderDetailsPage.header.status.active 
                 </p>
@@ -105,9 +102,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
           </app-summary-list>
         </div>
       </app-header>
-      <app-section-card
-        ng-reflect-vm="[object Object]"
-      >
+      <app-section-card>
         <section
           class="shadow p-4 flex flex-col space-y-4"
         >
@@ -319,9 +314,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
       <!--container-->
       <!--container-->
       <!--container-->
-      <app-section-card
-        ng-reflect-vm="[object Object]"
-      >
+      <app-section-card>
         <section
           class="shadow p-4 flex flex-col space-y-4"
         >
@@ -342,7 +335,6 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
             </a>
             <button
               class="btn btn-error"
-              ng-reflect-ng-class="btn-error"
             >
                Close order 
             </button>
@@ -355,9 +347,7 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
       <!--container-->
       <!--container-->
       <!--container-->
-      <app-section-card
-        ng-reflect-vm="[object Object]"
-      >
+      <app-section-card>
         <section
           class="shadow p-4 flex flex-col space-y-4"
         >
@@ -384,12 +374,11 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                       <img
                         alt="SJ"
                         class="object-contain rounded-full"
+                        decoding="auto"
                         fetchpriority="auto"
                         fill=""
                         loading="lazy"
                         ng-img="true"
-                        ng-reflect-fill=""
-                        ng-reflect-ng-src="assets/farming.jpg"
                         sizes="auto, 100vw"
                         src="assets/farming.jpg"
                         style="position: absolute; width: 100%; height: 100%; inset: 0;"
@@ -468,12 +457,11 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                       <img
                         alt="SJ"
                         class="object-contain rounded-full"
+                        decoding="auto"
                         fetchpriority="auto"
                         fill=""
                         loading="lazy"
                         ng-img="true"
-                        ng-reflect-fill=""
-                        ng-reflect-ng-src="assets/farming.jpg"
                         sizes="auto, 100vw"
                         src="assets/farming.jpg"
                         style="position: absolute; width: 100%; height: 100%; inset: 0;"
@@ -552,12 +540,11 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
                       <img
                         alt="SJ"
                         class="object-contain rounded-full"
+                        decoding="auto"
                         fetchpriority="auto"
                         fill=""
                         loading="lazy"
                         ng-img="true"
-                        ng-reflect-fill=""
-                        ng-reflect-ng-src="assets/farming.jpg"
                         sizes="auto, 100vw"
                         src="assets/farming.jpg"
                         style="position: absolute; width: 100%; height: 100%; inset: 0;"
@@ -594,13 +581,11 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
           >
             <input
               class="px-2 w-full border border-gray-300 ng-untouched ng-pristine ng-invalid"
-              ng-reflect-form="[object Object]"
               type="text"
             />
             <button
               class="btn rounded-none btn-disabled"
               disabled=""
-              ng-reflect-ng-class="btn-disabled"
             >
                button 
             </button>

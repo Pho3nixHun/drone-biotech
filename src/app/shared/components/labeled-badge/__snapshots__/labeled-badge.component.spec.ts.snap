@@ -1,13 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LabeledBadgeComponent should render the template correctly 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-labeled-badge
-    ng-reflect-color="text-blue-500"
-  >
+  <app-labeled-badge>
     <div
       class="h-fit py-2 px-4 rounded-full w-fit text-blue-500"
     >

@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ProductsPageComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>
@@ -12,15 +12,13 @@ exports[`ProductsPageComponent should not render the template when there is no V
 exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are provided 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame
-        ng-reflect-vm="[object Object]"
-      >
+      <app-frame>
         <section
           class="flex flex-col gap-y-10 py-10"
         >
@@ -34,7 +32,6 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -59,7 +56,6 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -84,7 +80,6 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -123,15 +118,13 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
 exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are provided 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame
-        ng-reflect-vm="[object Object]"
-      >
+      <app-frame>
         <section
           class="flex flex-col gap-y-10 py-10"
         >
@@ -145,7 +138,6 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -170,7 +162,6 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -195,7 +186,6 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -234,15 +224,13 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
 exports[`ProductsPageComponent should render the template when the VM is provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-frame
-        ng-reflect-vm="[object Object]"
-      >
+      <app-frame>
         <section
           class="flex flex-col gap-y-10 py-10"
         >
@@ -256,7 +244,6 @@ exports[`ProductsPageComponent should render the template when the VM is provide
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -281,7 +268,6 @@ exports[`ProductsPageComponent should render the template when the VM is provide
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -306,7 +292,6 @@ exports[`ProductsPageComponent should render the template when the VM is provide
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-vm="[object Object]"
               >
                 <a
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"

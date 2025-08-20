@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PilotDashboardPageComponent should not render the grids if there is no mission for the pilot 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -20,7 +20,7 @@ exports[`PilotDashboardPageComponent should not render the grids if there is no 
 exports[`PilotDashboardPageComponent should not render the template when there is no user 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>
@@ -29,7 +29,7 @@ exports[`PilotDashboardPageComponent should not render the template when there i
 exports[`PilotDashboardPageComponent should render one active mission if one active mission is provided for the pilot 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -50,12 +50,9 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
               </h3>
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -108,9 +105,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -128,9 +123,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -146,9 +139,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -164,9 +155,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -184,9 +173,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -196,9 +183,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -211,8 +196,6 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         missionText
                       </a>
@@ -237,7 +220,7 @@ exports[`PilotDashboardPageComponent should render one active mission if one act
 exports[`PilotDashboardPageComponent should render one completed mission if one completed mission is provided for the pilot 1`] = `
 <div
   id="root5"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -258,12 +241,9 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
               </h3>
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -316,9 +296,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -336,9 +314,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -354,9 +330,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -373,9 +347,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -392,9 +364,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -404,9 +374,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -419,8 +387,6 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -445,7 +411,7 @@ exports[`PilotDashboardPageComponent should render one completed mission if one 
 exports[`PilotDashboardPageComponent should render the template when there is a user provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -462,7 +428,7 @@ exports[`PilotDashboardPageComponent should render the template when there is a 
 exports[`PilotDashboardPageComponent should render three active missions if three missions are provided for the pilot 1`] = `
 <div
   id="root4"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -483,12 +449,9 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
               </h3>
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -541,9 +504,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -561,9 +522,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -579,9 +538,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -597,9 +554,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -617,9 +572,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -629,9 +582,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -644,8 +595,6 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         missionText
                       </a>
@@ -657,9 +606,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -677,9 +624,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -695,9 +640,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -713,9 +656,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -733,9 +674,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -745,9 +684,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -760,8 +697,6 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         missionText
                       </a>
@@ -773,9 +708,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -793,9 +726,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -811,9 +742,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -829,9 +758,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="scheti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -849,9 +776,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -861,9 +786,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -876,8 +799,6 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         missionText
                       </a>
@@ -902,7 +823,7 @@ exports[`PilotDashboardPageComponent should render three active missions if thre
 exports[`PilotDashboardPageComponent should render three completed missions if three completed missions are provided for the pilot 1`] = `
 <div
   id="root6"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -923,12 +844,9 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
               </h3>
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -981,9 +899,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1001,9 +917,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1019,9 +933,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1038,9 +950,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1057,9 +967,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1069,9 +977,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1084,8 +990,6 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -1097,9 +1001,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1117,9 +1019,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1135,9 +1035,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1154,9 +1052,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1173,9 +1069,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1185,9 +1079,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1200,8 +1092,6 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -1213,9 +1103,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1233,9 +1121,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1251,9 +1137,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1270,9 +1154,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1289,9 +1171,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1301,9 +1181,7 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1316,8 +1194,6 @@ exports[`PilotDashboardPageComponent should render three completed missions if t
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>

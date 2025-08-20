@@ -1,20 +1,18 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LandingPageComponent should have the correct routerLinks on product-items 1`] = `
 <div
   id="root12"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -49,7 +47,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -64,8 +61,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -91,8 +86,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -118,8 +111,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -152,7 +143,6 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -166,9 +156,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -177,9 +165,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -188,9 +174,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -199,9 +183,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -210,9 +192,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -237,9 +217,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -265,9 +243,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -293,9 +269,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -321,9 +295,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -349,9 +321,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -377,9 +347,7 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -422,18 +390,16 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
 exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
 <div
   id="root13"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -468,7 +434,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -483,8 +448,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -510,8 +473,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -537,8 +498,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -571,7 +530,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -601,9 +559,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -629,9 +585,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -657,9 +611,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -685,9 +637,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -713,9 +663,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -741,9 +689,7 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -786,18 +732,16 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
 exports[`LandingPageComponent should not render <app-product-item> when 0 is provided 1`] = `
 <div
   id="root9"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -832,7 +776,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -854,7 +797,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -868,9 +810,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -879,9 +819,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -890,9 +828,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -901,9 +837,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -912,9 +846,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -939,9 +871,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -967,9 +897,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -995,9 +923,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1023,9 +949,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1051,9 +975,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1079,9 +1001,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1124,18 +1044,16 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
 exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is provided 1`] = `
 <div
   id="root16"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -1170,7 +1088,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1185,8 +1102,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1212,8 +1127,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1239,8 +1152,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1273,7 +1184,6 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1287,9 +1197,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -1298,9 +1206,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -1309,9 +1215,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -1320,9 +1224,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -1331,9 +1233,7 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -1375,18 +1275,16 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
 exports[`LandingPageComponent should not render frames when 0 frame is provided 1`] = `
 <div
   id="root4"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -1432,7 +1330,7 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
 exports[`LandingPageComponent should not render the hero section when the heroXVM is not provided 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
@@ -1441,7 +1339,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1456,8 +1353,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1483,8 +1378,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1510,8 +1403,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1544,7 +1435,6 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1558,9 +1448,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -1569,9 +1457,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -1580,9 +1466,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -1591,9 +1475,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -1602,9 +1484,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -1629,9 +1509,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1657,9 +1535,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1685,9 +1561,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1713,9 +1587,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1741,9 +1613,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1769,9 +1639,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -1814,18 +1682,16 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
 exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provided 1`] = `
 <div
   id="root14"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -1860,7 +1726,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1875,8 +1740,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1902,8 +1765,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1929,8 +1790,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -1963,7 +1822,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -1977,9 +1835,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -2004,9 +1860,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2032,9 +1886,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2060,9 +1912,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2088,9 +1938,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2116,9 +1964,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2144,9 +1990,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2189,18 +2033,16 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
 exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provided 1`] = `
 <div
   id="root10"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -2235,7 +2077,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2250,8 +2091,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2284,7 +2123,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2298,9 +2136,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -2309,9 +2145,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -2320,9 +2154,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -2331,9 +2163,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -2342,9 +2172,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -2369,9 +2197,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2397,9 +2223,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2425,9 +2249,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2453,9 +2275,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2481,9 +2301,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2509,9 +2327,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2554,18 +2370,16 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
 exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is provided 1`] = `
 <div
   id="root17"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -2600,7 +2414,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2615,8 +2428,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2642,8 +2453,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2669,8 +2478,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2703,7 +2510,6 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2717,9 +2523,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -2728,9 +2532,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -2739,9 +2541,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -2750,9 +2550,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -2761,9 +2559,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -2788,9 +2584,7 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -2833,18 +2627,16 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
 exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`] = `
 <div
   id="root5"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -2879,7 +2671,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -2894,8 +2685,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2921,8 +2710,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2948,8 +2735,6 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -2993,18 +2778,16 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
 exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided 1`] = `
 <div
   id="root15"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -3039,7 +2822,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3054,8 +2836,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3081,8 +2861,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3108,8 +2886,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3142,7 +2918,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3156,9 +2931,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -3167,9 +2940,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -3178,9 +2949,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -3189,9 +2958,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -3200,9 +2967,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -3227,9 +2992,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3255,9 +3018,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3283,9 +3044,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3311,9 +3070,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3339,9 +3096,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3367,9 +3122,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3412,18 +3165,16 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
 exports[`LandingPageComponent should render 5 <app-product-item> in order when 5 <app-product-item>  are provided 1`] = `
 <div
   id="root11"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -3458,7 +3209,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3473,8 +3223,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3500,8 +3248,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3527,8 +3273,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3554,8 +3298,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,4"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3581,8 +3323,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,5"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3615,7 +3355,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3629,9 +3368,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -3640,9 +3377,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -3651,9 +3386,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -3662,9 +3395,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -3673,9 +3404,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -3700,9 +3429,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3728,9 +3455,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3756,9 +3481,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3784,9 +3507,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3812,9 +3533,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3840,9 +3559,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -3885,18 +3602,16 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
 exports[`LandingPageComponent should render 5 <app-testimonial-item> in order when 5 app-testimonial-item are provided 1`] = `
 <div
   id="root18"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -3931,7 +3646,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -3946,8 +3660,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -3973,8 +3685,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4000,8 +3710,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4034,7 +3742,6 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4048,9 +3755,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -4059,9 +3764,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -4070,9 +3773,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -4081,9 +3782,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -4092,9 +3791,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -4119,9 +3816,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4147,9 +3842,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4175,9 +3868,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4203,9 +3894,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4231,9 +3920,7 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4276,18 +3963,16 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
 exports[`LandingPageComponent should render 5 frames in order when 5 frames are provided 1`] = `
 <div
   id="root6"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -4322,7 +4007,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--container-->
       <app-frame
         id="0"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4337,8 +4021,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4364,8 +4046,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4391,8 +4071,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4425,7 +4103,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="1"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4439,9 +4116,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0prodtit"
                   class="w-52 h-52"
@@ -4450,9 +4125,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1prodtit"
                   class="w-52 h-52"
@@ -4461,9 +4134,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2prodtit"
                   class="w-52 h-52"
@@ -4472,9 +4143,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -4483,9 +4152,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -4510,9 +4177,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4538,9 +4203,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4566,9 +4229,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4594,9 +4255,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4622,9 +4281,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4650,9 +4307,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -4684,7 +4339,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="2"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4699,8 +4353,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4726,8 +4378,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4753,8 +4403,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4787,7 +4435,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="3"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4802,8 +4449,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4829,8 +4474,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4856,8 +4499,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -4890,7 +4531,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       <!--ng-container-->
       <app-frame
         id="4"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -4904,9 +4544,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0prodtit"
                   class="w-52 h-52"
@@ -4915,9 +4553,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1prodtit"
                   class="w-52 h-52"
@@ -4926,9 +4562,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2prodtit"
                   class="w-52 h-52"
@@ -4937,9 +4571,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -4948,9 +4580,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -4975,9 +4605,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5003,9 +4631,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5031,9 +4657,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5059,9 +4683,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5087,9 +4709,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5115,9 +4735,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5160,7 +4778,7 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
 exports[`LandingPageComponent should render loading state without VM 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
@@ -5179,18 +4797,16 @@ exports[`LandingPageComponent should render loading state without VM 1`] = `
 exports[`LandingPageComponent should render only partner frames when only partner frames are provided 1`] = `
 <div
   id="root8"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -5225,7 +4841,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5240,8 +4855,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5267,8 +4880,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5294,8 +4905,6 @@ exports[`LandingPageComponent should render only partner frames when only partne
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5339,18 +4948,16 @@ exports[`LandingPageComponent should render only partner frames when only partne
 exports[`LandingPageComponent should render only product frames when only product frames are provided 1`] = `
 <div
   id="root7"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -5385,7 +4992,6 @@ exports[`LandingPageComponent should render only product frames when only produc
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5400,8 +5006,6 @@ exports[`LandingPageComponent should render only product frames when only produc
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5427,8 +5031,6 @@ exports[`LandingPageComponent should render only product frames when only produc
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5454,8 +5056,6 @@ exports[`LandingPageComponent should render only product frames when only produc
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5499,18 +5099,16 @@ exports[`LandingPageComponent should render only product frames when only produc
 exports[`LandingPageComponent should render the hero section when the heroXVM is provided 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -5545,7 +5143,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5560,8 +5157,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5587,8 +5182,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5614,8 +5207,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -5648,7 +5239,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5662,9 +5252,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -5673,9 +5261,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -5684,9 +5270,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -5695,9 +5279,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -5706,9 +5288,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -5733,9 +5313,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5761,9 +5339,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5789,9 +5365,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5817,9 +5391,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5845,9 +5417,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5873,9 +5443,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -5918,18 +5486,16 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
 exports[`LandingPageComponent should render the template when there is a VM provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero
-        ng-reflect-vm="[object Object]"
-      >
+      <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url(assets/farming.jpg);"
+          style="background-image: url("assets/farming.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
@@ -5964,7 +5530,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <!--container-->
       <app-frame
         id="products"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -5979,8 +5544,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             >
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,1"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -6006,8 +5569,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,2"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -6033,8 +5594,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               </app-product-item>
               <app-product-item
                 class="h-full"
-                ng-reflect-router-link="products,3"
-                ng-reflect-vm="[object Object]"
                 tabindex="0"
               >
                 <a
@@ -6067,7 +5626,6 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       <!--ng-container-->
       <app-frame
         id="partners"
-        ng-reflect-vm="[object Object]"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
@@ -6081,9 +5639,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="0part"
                   class="w-52 h-52"
@@ -6092,9 +5648,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="1part"
                   class="w-52 h-52"
@@ -6103,9 +5657,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="2part"
                   class="w-52 h-52"
@@ -6114,9 +5666,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="3part"
                   class="w-52 h-52"
@@ -6125,9 +5675,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               </app-partner-logo>
               <!--container-->
               <!--container-->
-              <app-partner-logo
-                ng-reflect-vm="[object Object]"
-              >
+              <app-partner-logo>
                 <img
                   alt="4part"
                   class="w-52 h-52"
@@ -6152,9 +5700,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -6180,9 +5726,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -6208,9 +5752,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -6236,9 +5778,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -6264,9 +5804,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >
@@ -6292,9 +5830,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
             <swiper-slide
               class="pb-10"
             >
-              <app-testimonial-item
-                ng-reflect-vm="[object Object]"
-              >
+              <app-testimonial-item>
                 <div
                   class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
                 >

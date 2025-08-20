@@ -1,11 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MapAreaSelectFormControlComponent should render the template when the VM is provided 1`] = `
 <app-map-area-select-form-control
   class="ng-untouched ng-dirty ng-valid"
-  ng-reflect-form="[object Object]"
-  ng-reflect-map-ref="[object Object]"
-  ng-reflect-vm="[object Object]"
 >
   <div
     class="flex flex-col space-y-4 bg-white"
@@ -21,27 +18,22 @@ exports[`MapAreaSelectFormControlComponent should render the template when the V
       <textarea
         class="p-2 border rounded-md min-h-32 ng-untouched ng-pristine ng-invalid"
         id="[object Object]"
-        ng-reflect-form="[object Object]"
-        ng-reflect-ng-class="[object Object]"
       />
     </div>
     <button
       class="btn btn-primary"
-      ng-reflect-ng-class="btn-primary"
     >
        addButton 
     </button>
     <button
       class="btn btn-disabled"
       disabled=""
-      ng-reflect-ng-class="btn-disabled"
     >
        edit 
     </button>
     <button
       class="btn btn-disabled"
       disabled=""
-      ng-reflect-ng-class="btn-disabled"
     >
        deleteButton 
     </button>

@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`FrameComponent should render the template when the vm is not provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-frame>
     <section
@@ -22,11 +22,9 @@ exports[`FrameComponent should render the template when the vm is not provided 1
 exports[`FrameComponent should render the template when the vm is provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-frame
-    ng-reflect-vm="[object Object]"
-  >
+  <app-frame>
     <section
       class="flex flex-col gap-y-10 py-10"
     >

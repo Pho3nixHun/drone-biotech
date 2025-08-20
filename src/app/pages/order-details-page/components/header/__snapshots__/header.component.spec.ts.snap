@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`HeaderComponent should render the template correctly 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-header>
     <div
@@ -20,12 +20,9 @@ exports[`HeaderComponent should render the template correctly 1`] = `
         <div
           class="flex flex-row space-x-3 items-center"
         >
-          <app-status
-            ng-reflect-vm="[object Object]"
-          >
+          <app-status>
             <p
               class="font-medium rounded-full w-max px-3 py-1 flex items-center text-blue-500"
-              ng-reflect-ng-class="text-blue-500"
             >
               Status
             </p>

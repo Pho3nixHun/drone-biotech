@@ -1,17 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NavComponent should assign href with default target and relation if only href is provided in VM 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-nav>
     <nav
       class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
     >
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -19,9 +17,7 @@ exports[`NavComponent should assign href with default target and relation if onl
           target="null"
         />
       </app-nav-item>
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -40,15 +36,13 @@ exports[`NavComponent should assign href with default target and relation if onl
 exports[`NavComponent should assign href with target and relation if provided in VM 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-nav>
     <nav
       class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
     >
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -56,9 +50,7 @@ exports[`NavComponent should assign href with target and relation if provided in
           target="null"
         />
       </app-nav-item>
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -77,15 +69,13 @@ exports[`NavComponent should assign href with target and relation if provided in
 exports[`NavComponent should assign routerLink if provided in VM 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-nav>
     <nav
       class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
     >
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -93,9 +83,7 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
           target="null"
         />
       </app-nav-item>
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -114,15 +102,13 @@ exports[`NavComponent should assign routerLink if provided in VM 1`] = `
 exports[`NavComponent should project the provided content 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-nav>
     <nav
       class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
     >
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""
@@ -130,9 +116,7 @@ exports[`NavComponent should project the provided content 1`] = `
           target="null"
         />
       </app-nav-item>
-      <app-nav-item
-        ng-reflect-vm="[object Object]"
-      >
+      <app-nav-item>
         <a
           class="nav-item"
           href=""

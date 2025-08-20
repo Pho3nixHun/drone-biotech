@@ -1,13 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DialogLayoutComponent should render the template when the VM is provided, translate and project the content correctly 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-dialog-layout
-    ng-reflect-vm="[object Object]"
-  >
+  <app-dialog-layout>
     <section
       class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
     >

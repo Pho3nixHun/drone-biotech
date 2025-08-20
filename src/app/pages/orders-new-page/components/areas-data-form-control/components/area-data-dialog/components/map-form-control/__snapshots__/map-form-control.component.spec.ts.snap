@@ -1,22 +1,16 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MapFormControlComponent should render the template correctly when the VM is provided 1`] = `
 <app-map-form-control
   class="ng-untouched ng-dirty ng-valid"
-  ng-reflect-form="[object Object]"
-  ng-reflect-vm="[object Object]"
 >
   <div
     class="flex flex-col space-y-2"
   >
-    <app-map-search-input-form-control
-      ng-reflect-default-center="[object Object]"
-      ng-reflect-vm="[object Object]"
-    >
+    <app-map-search-input-form-control>
       <div
         appclickoutside=""
         class="w-full relative"
-        ng-reflect-attached-callback="() => this.isOpened.set(false)"
       >
         <div
           class="flex flex-row w-full"
@@ -24,8 +18,6 @@ exports[`MapFormControlComponent should render the template correctly when the V
           <input
             appelementref=""
             class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-            ng-reflect-form="[object Object]"
-            ng-reflect-signal="[Signal: null]"
             placeholder="place"
             type="text"
           />
@@ -48,14 +40,10 @@ exports[`MapFormControlComponent should render the template correctly when the V
     </app-map-search-input-form-control>
     <div
       appelementref=""
-      ng-reflect-signal="[Signal: null]"
       style="height: 600px;"
     />
     <app-map-area-select-form-control
       class="ng-untouched ng-dirty ng-invalid"
-      ng-reflect-form="[object Object]"
-      ng-reflect-map-ref="[object Object]"
-      ng-reflect-vm="[object Object]"
     >
       <div
         class="flex flex-col space-y-4 bg-white"
@@ -71,27 +59,22 @@ exports[`MapFormControlComponent should render the template correctly when the V
           <textarea
             class="p-2 border rounded-md min-h-32 ng-untouched ng-pristine ng-invalid"
             id="[object Object]"
-            ng-reflect-form="[object Object]"
-            ng-reflect-ng-class="[object Object]"
           />
         </div>
         <button
           class="btn btn-primary"
-          ng-reflect-ng-class="btn-primary"
         >
            add 
         </button>
         <button
           class="btn btn-disabled"
           disabled=""
-          ng-reflect-ng-class="btn-disabled"
         >
            edit 
         </button>
         <button
           class="btn btn-disabled"
           disabled=""
-          ng-reflect-ng-class="btn-disabled"
         >
            delete 
         </button>
@@ -100,23 +83,18 @@ exports[`MapFormControlComponent should render the template correctly when the V
     </app-map-area-select-form-control>
     <app-map-point-select-form-control
       class="ng-untouched ng-dirty ng-invalid"
-      ng-reflect-form="[object Object]"
-      ng-reflect-map-ref="[object Object]"
-      ng-reflect-vm="[object Object]"
     >
       <div
         class="flex flex-col space-y-4 bg-white"
       >
         <button
           class="btn btn-primary"
-          ng-reflect-ng-class="btn-primary"
         >
            add 
         </button>
         <button
           class="btn btn-disabled"
           disabled=""
-          ng-reflect-ng-class="btn-disabled"
         >
            delete 
         </button>

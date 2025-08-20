@@ -1,26 +1,22 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`HeaderComponent should project <app-logo>, <app-nav> elements and ignore other elements 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-header>
     <section
       class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
     >
-      <app-logo
-        ng-reflect-vm="[object Object]"
-      >
+      <app-logo>
         <img
           alt="lepke"
           class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
           src="assets/lepke.jpg"
         />
       </app-logo>
-      <app-logo
-        ng-reflect-vm="[object Object]"
-      >
+      <app-logo>
         <img
           alt="lepke"
           class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"

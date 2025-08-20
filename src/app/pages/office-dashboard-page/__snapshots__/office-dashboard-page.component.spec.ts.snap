@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OfficeDashboardPageComponent should render one active mission if one active mission is provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -30,12 +30,9 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -93,9 +90,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -113,9 +108,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -131,9 +124,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -149,9 +140,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -169,9 +158,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -189,9 +176,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -201,9 +186,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -219,16 +202,12 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           manageT
                         </a>
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           reassignT
                         </a>
@@ -244,9 +223,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -264,9 +241,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -282,9 +257,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -300,9 +273,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -320,9 +291,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -340,9 +309,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -352,9 +319,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -370,16 +335,12 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           manageT
                         </a>
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           reassignT
                         </a>
@@ -407,7 +368,7 @@ exports[`OfficeDashboardPageComponent should render one active mission if one ac
 exports[`OfficeDashboardPageComponent should render one completed mission 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -429,12 +390,9 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -492,9 +450,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -512,9 +468,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -530,9 +484,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -548,9 +500,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -569,9 +519,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                       <!--container-->
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -588,9 +536,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -600,9 +546,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -616,8 +560,6 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -630,9 +572,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -650,9 +590,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -668,9 +606,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -686,9 +622,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -707,9 +641,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                       <!--container-->
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -726,9 +658,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -738,9 +668,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -754,8 +682,6 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -780,7 +706,7 @@ exports[`OfficeDashboardPageComponent should render one completed mission 1`] = 
 exports[`OfficeDashboardPageComponent should render three active missions 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -807,12 +733,9 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -870,9 +793,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -890,9 +811,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -908,9 +827,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -926,9 +843,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -946,9 +861,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -966,9 +879,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -978,9 +889,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -996,16 +905,12 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           manageT
                         </a>
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           reassignT
                         </a>
@@ -1021,9 +926,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1041,9 +944,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1059,9 +960,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1077,9 +976,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1097,9 +994,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1117,9 +1012,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1129,9 +1022,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1147,16 +1038,12 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           manageT
                         </a>
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           reassignT
                         </a>
@@ -1172,9 +1059,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1192,9 +1077,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1210,9 +1093,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1228,9 +1109,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1248,9 +1127,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1268,9 +1145,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1280,9 +1155,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1298,16 +1171,12 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           manageT
                         </a>
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           reassignT
                         </a>
@@ -1323,9 +1192,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1343,9 +1210,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1361,9 +1226,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1379,9 +1242,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1399,9 +1260,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="area"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1419,9 +1278,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                       </app-key-value>
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="stat"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1431,9 +1288,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                              stat 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1449,16 +1304,12 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           manageT
                         </a>
                         <a
                           class="text-blue-500"
                           href="/"
-                          ng-reflect-ng-class="text-blue-500"
-                          ng-reflect-router-link="/"
                         >
                           reassignT
                         </a>
@@ -1486,7 +1337,7 @@ exports[`OfficeDashboardPageComponent should render three active missions 1`] = 
 exports[`OfficeDashboardPageComponent should render three completed missions 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-dashboard-spacer>
     <div
@@ -1508,12 +1359,9 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
               <!--container-->
             </div>
           </app-grid-section-header>
-          <app-grid
-            ng-reflect-vm="[object Object]"
-          >
+          <app-grid>
             <div
               class="grid gap-4 col-span-full grid-cols-6"
-              ng-reflect-ng-class="grid-cols-6"
             >
               <app-grid-header
                 class="grid grid-cols-subgrid col-span-full"
@@ -1571,9 +1419,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1591,9 +1437,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1609,9 +1453,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1627,9 +1469,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1648,9 +1488,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <!--container-->
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1667,9 +1505,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1679,9 +1515,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1695,8 +1529,6 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -1709,9 +1541,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1729,9 +1559,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1747,9 +1575,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1765,9 +1591,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1786,9 +1610,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <!--container-->
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1805,9 +1627,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1817,9 +1637,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1833,8 +1651,6 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -1847,9 +1663,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1867,9 +1681,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1885,9 +1697,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1903,9 +1713,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1924,9 +1732,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <!--container-->
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1943,9 +1749,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -1955,9 +1759,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -1971,8 +1773,6 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>
@@ -1985,9 +1785,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                     <div
                       class="xl:grid flex flex-col xl:grid-cols-subgrid xl:col-span-full xl:items-center gap-3 p-4 xl:p-0 rounded-xl shadow xl:shadow-none hover:-translate-y-1 xl:hover:translate-y-0 duration-100"
                     >
-                      <app-key-value
-                        ng-reflect-label="i"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -2005,9 +1803,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="cli"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -2023,9 +1819,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="field"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -2041,9 +1835,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         </div>
                         <!--container-->
                       </app-key-value>
-                      <app-key-value
-                        ng-reflect-label="pil"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -2062,9 +1854,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <!--container-->
                       <!--container-->
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="ti"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -2081,9 +1871,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                         <!--container-->
                       </app-key-value>
                       <!--container-->
-                      <app-key-value
-                        ng-reflect-label="per"
-                      >
+                      <app-key-value>
                         <div
                           class="duration-500 h-full flex flex-col justify-center"
                         >
@@ -2093,9 +1881,7 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                              per 
                           </p>
                           <!--container-->
-                          <app-labeled-badge
-                            ng-reflect-color="bg-green-200 text-green-600"
-                          >
+                          <app-labeled-badge>
                             <div
                               class="h-fit py-2 px-4 rounded-full w-fit bg-green-200 text-green-600"
                             >
@@ -2109,8 +1895,6 @@ exports[`OfficeDashboardPageComponent should render three completed missions 1`]
                       <a
                         class="text-blue-500"
                         href="/"
-                        ng-reflect-ng-class="text-blue-500"
-                        ng-reflect-router-link="/"
                       >
                         reportText
                       </a>

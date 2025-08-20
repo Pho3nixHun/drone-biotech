@@ -88,15 +88,17 @@ export class MapSearchInputFormControlComponent
     );
 
     private readonly locationResource = rxResource({
-        request: () => this.selectedPlace(),
-        loader: ({ request }) =>
-            request
-                ? this.service.getLocationByPlaceId(request.placeId)
+        params: () => this.selectedPlace(),
+        stream: ({ params }) =>
+            params
+                ? this.service.getLocationByPlaceId(params.placeId)
                 : of(null),
         defaultValue: null,
     });
 
     private readonly selectedPlaceEffect = effect(() => {
+        const hasValue = this.locationResource.hasValue();
+        if (!hasValue) return;
         const place = this.locationResource.value();
         this.changeBounds.emit(place);
         this.onChange(place);

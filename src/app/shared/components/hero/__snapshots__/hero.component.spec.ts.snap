@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`HeroComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-hero>
     <!--container-->
@@ -14,14 +14,12 @@ exports[`HeroComponent should not render the template when there is no VM provid
 exports[`HeroComponent should render the template when the VM is provided, project the content and ignore other elements 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-hero
-    ng-reflect-vm="[object Object]"
-  >
+  <app-hero>
     <section
       class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-      style="background-image: url(assets/lepke.jpg);"
+      style="background-image: url("assets/lepke.jpg");"
     >
       <div
         class="flex flex-col mx-10 space-y-5"

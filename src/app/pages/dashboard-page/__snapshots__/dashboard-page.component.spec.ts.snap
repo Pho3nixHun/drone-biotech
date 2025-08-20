@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DashboardPageComponent should not render the template if there is no user 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>
@@ -12,7 +12,7 @@ exports[`DashboardPageComponent should not render the template if there is no us
 exports[`DashboardPageComponent should render the summaries 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
@@ -29,7 +29,6 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
             >
               <span
                 class="h-8 w-8 rounded-full bg-blue-600"
-                ng-reflect-ng-class="bg-blue-600"
               />
               <div
                 class="w-full flex flex-row justify-between space-x-10"
@@ -82,7 +81,6 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                     </h4>
                     <p
                       class="text-2xl font-semibold tracking-wider text-blue-600"
-                      ng-reflect-ng-class="text-blue-600"
                     >
                       <!--container-->
                        2 
@@ -108,7 +106,6 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                     </h4>
                     <p
                       class="text-2xl font-semibold tracking-wider text-green-600"
-                      ng-reflect-ng-class="text-green-600"
                     >
                        DashboardPage.hectareQuantity 
                       <!--container-->
@@ -134,7 +131,6 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                     </h4>
                     <p
                       class="text-2xl font-semibold tracking-wider text-purple-600"
-                      ng-reflect-ng-class="text-purple-600"
                     >
                        DashboardPage.moneyQuantity 
                       <!--container-->
@@ -160,7 +156,6 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
                     </h4>
                     <p
                       class="text-2xl font-semibold tracking-wider text-yellow-600"
-                      ng-reflect-ng-class="text-yellow-600"
                     >
                       <!--container-->
                        3 
@@ -187,7 +182,7 @@ exports[`DashboardPageComponent should render the summaries 1`] = `
 exports[`DashboardPageComponent should render the template correctly if there is a user 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
@@ -204,7 +199,6 @@ exports[`DashboardPageComponent should render the template correctly if there is
             >
               <span
                 class="h-8 w-8 rounded-full bg-blue-600"
-                ng-reflect-ng-class="bg-blue-600"
               />
               <div
                 class="w-full flex flex-row justify-between space-x-10"
