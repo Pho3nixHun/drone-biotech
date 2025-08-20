@@ -1,6 +1,5 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.177.0/containers/javascript-node/.devcontainer/base.Dockerfile
 
-# [Choice] Node.js version: 16, 14, 12
 ARG VARIANT="22-bookworm"
 FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
@@ -16,7 +15,7 @@ RUN apt update && export DEBIAN_FRONTEND=noninteractive \
 USER node
 
 # [Optional] Uncomment if you want to install more global node modules
-RUN npm install -g npm @angular/cli@19.2.10 @angular/core@19.2.9 typescript@5.5.2
+# RUN npm install -g npm @angular/cli@20.1.6 @angular/core@20.1.7 typescript@5.8.3s
 
 # [Optional] Install OhMyZsh
 # RUN sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
