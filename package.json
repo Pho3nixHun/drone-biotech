@@ -20,6 +20,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/ngrx-toolkit": "^20.1.0",
     "@angular/animations": "^20.1.7",
     "@angular/cdk": "^20.1.6",
     "@angular/common": "^20.1.7",
@@ -39,6 +40,7 @@
     "@jsverse/transloco-persist-translations": "^7.0.1",
     "@ngrx/effects": "^20.0.0",
     "@ngrx/router-store": "^20.0.0",
+    "@ngrx/signals": "^20.0.0",
     "@ngrx/store": "^20.0.0",
     "@ngrx/store-devtools": "^20.0.0",
     "@tailwindcss/container-queries": "^0.1.1",

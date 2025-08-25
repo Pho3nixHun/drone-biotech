@@ -1,15 +1,14 @@
-import { NgModule } from '@angular/core';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
-import * as Effects from './auth.effects';
-import { authFeature } from './auth.state';
-import { AuthModule } from '@angular/fire/auth';
+import { inject, NgModule } from '@angular/core';
+import { AuthStore } from './auth.store';
+import { authEvents } from './auth.events';
+import { injectDispatch } from '@ngrx/signals/events';
 
 @NgModule({
-    imports: [
-        AuthModule,
-        EffectsModule.forFeature([Effects]),
-        StoreModule.forFeature(authFeature),
-    ],
+    declarations: [],
+    imports: [],
 })
-export class AuthStoreModule {}
+export class AuthModule {
+    private readonly _ = inject(AuthStore);
+    private readonly authEvents = injectDispatch(authEvents);
+    private readonly retrieveUser = authEvents.retrieveUser();
+}

@@ -18,15 +18,12 @@ import {
     provideAuth,
 } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-import { StoreModule } from '@ngrx/store';
+import { provideStore } from '@ngrx/store';
 import { routes } from './app.routes';
 import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideRouterStore, routerReducer } from '@ngrx/router-store';
-import { AuthStoreModule } from './stores/auth/auth.module';
-import { EffectsModule } from '@ngrx/effects';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { CustomRouterStateSerializer } from './stores/router/router-state-serializer';
 import { environment } from 'src/environments/environment';
 import { TranslocoModule } from '@modules/transloco/transloco.module';
 import { mapFormControlConfig } from './pages/orders-new-page/components/areas-data-form-control/components/area-data-dialog/components/map-form-control/map-form-control.config';
@@ -35,6 +32,8 @@ import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.confi
 import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';
 import { officeDashboardPageConfig } from './pages/office-dashboard-page/office-dashboard-page.config';
 import { orderDetailsPageConfig } from './pages/order-details-page/order-details-page.config';
+import { CustomRouterStateSerializer } from '@stores/router/router-state-serializer';
+import { AuthModule } from '@stores/auth/auth.module';
 
 const devMode = isDevMode();
 
@@ -57,13 +56,13 @@ export const appConfig: ApplicationConfig = {
         provideFirestore(() => getFirestore()),
         provideHttpClient(withJsonpSupport()),
         provideStorage(() => getStorage()),
-        importProvidersFrom(
-            StoreModule.forRoot({ router: routerReducer }),
-            EffectsModule.forRoot([]),
-            AuthStoreModule,
-            TranslocoModule
-        ),
-        provideRouterStore({ serializer: CustomRouterStateSerializer }),
+        provideStore({
+            router: routerReducer,
+        }),
+        provideRouterStore({
+            serializer: CustomRouterStateSerializer,
+        }),
+        importProvidersFrom([TranslocoModule, AuthModule]),
         ...(devMode ? [provideStoreDevtools()] : []),
         provideAnimationsAsync(),
         mapFormControlConfig,
