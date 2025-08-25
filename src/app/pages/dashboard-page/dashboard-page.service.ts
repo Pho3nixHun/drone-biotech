@@ -10,16 +10,15 @@ import {
     mapSummaryUnitTypeToTranslocoQuantityKey,
     SummaryXVM,
 } from './dashboard-page.model';
-import { Store } from '@ngrx/store';
-import { selectUser } from '@stores/auth/auth.selector';
 import { DASHBOARD_PAGE_CONFIG } from './dashboard-page.config';
 import { SummaryService } from '@services/summary/summary.service';
+import { AuthStore } from '@stores/auth/auth.store';
 
 @Injectable({
     providedIn: 'root',
 })
 export class DashboardPageService {
-    private readonly store = inject(Store);
+    private readonly store = inject(AuthStore);
     private readonly summaryService = inject(SummaryService);
     private readonly config = inject(DASHBOARD_PAGE_CONFIG);
 
@@ -27,9 +26,9 @@ export class DashboardPageService {
         return this.vm$;
     }
 
-    private readonly user$: Observable<User | null> = this.store
-        .select(selectUser)
-        .pipe(map((user) => (user ? mapAuthUserToDashboardUser(user) : null)));
+    private readonly user$: Observable<User | null> = of(
+        this.store.user()
+    ).pipe(map((user) => (user ? mapAuthUserToDashboardUser(user) : null)));
 
     private readonly filteredSummaryXVMs$: Observable<SummaryXVM[] | null> =
         this.user$.pipe(

@@ -1,7 +1,7 @@
 export interface LocationState {
     location: Location | null;
     loading: boolean;
-    error: Error | null;
+    error: string | null;
 }
 
 export interface Location {

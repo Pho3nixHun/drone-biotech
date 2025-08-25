@@ -14,21 +14,20 @@ import {
     mapMissionStatusTypeToTranslocoTextKey,
 } from '@interfaces/with-base-dashboard-page.interface';
 import { AppRouteSegment } from 'src/app/app-route-segment';
-import { Store } from '@ngrx/store';
-import { selectUserName } from '@stores/auth/auth.selector';
 import {
     ActiveMission,
     CompletedMission,
 } from '@services/mission/mission.service.model';
 import { PILOT_DASHBOARD_PAGE_CONFIG } from './pilot-dashboard-page.config';
+import { AuthStore } from '@stores/auth/auth.store';
 
 @Injectable({
     providedIn: 'root',
 })
 export class PilotDashboardPageService {
-    private readonly store = inject(Store);
+    private readonly store = inject(AuthStore);
     private readonly missionService = inject(MissionService);
-    private readonly pilotName$ = this.store.select(selectUserName);
+    private readonly pilotName$ = of(this.store.user()?.displayName);
 
     private readonly config = inject(PILOT_DASHBOARD_PAGE_CONFIG);
 

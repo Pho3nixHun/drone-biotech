@@ -4,8 +4,7 @@ import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
 import { enMock, orderDetailsPageMockConfig } from './order-details-page.mock';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
-import { provideMockStore } from '@ngrx/store/testing';
-import { selectUserName } from '@stores/auth/auth.selector';
+import { provideMockAuthStore } from '@stores/auth/auth.testing';
 
 describe('OrderDetailsPageComponent', () => {
     let fixture: ComponentFixture<OrderDetailsPageComponent>;
@@ -29,11 +28,7 @@ describe('OrderDetailsPageComponent', () => {
                     useValue: orderDetailsPageMockConfig,
                 },
                 provideMockDialogService(),
-                provideMockStore({
-                    selectors: [
-                        { selector: selectUserName, value: 'Sarah Johnson' },
-                    ],
-                }),
+                provideMockAuthStore(),
             ],
         }).compileComponents();
 

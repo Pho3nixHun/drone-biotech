@@ -1,6 +1,9 @@
 module.exports = {
     preset: 'jest-preset-angular',
-    setupFiles: ['<rootDir>/tests/google-maps.mock.js'],
+    setupFiles: [
+        '<rootDir>/tests/google-maps.mock.js',
+        '<rootDir>/tests/firebase.mock.js',
+    ],
     setupFilesAfterEnv: ['<rootDir>/tests/setup-jest.ts'],
     rootDir: './',
     modulePaths: ['<rootDir>'],

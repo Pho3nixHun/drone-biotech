@@ -1,25 +1,20 @@
 import { computed, inject, Injectable, Signal } from '@angular/core';
 import { OrdersNewPageVM } from './orders-new-page-vm.model';
 import { ordersNewPageVMDefault } from './orders-new-page.mock';
-import { Store } from '@ngrx/store';
-import { selectActualPosition } from 'src/app/stores/location/location.selectors';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { LocationActions } from 'src/app/stores/location/location.actions';
+import { injectDispatch } from '@ngrx/signals/events';
+import { LocationStore } from '@stores/location/location.store';
+import { locationEvents } from '@stores/location/location.events';
 
 @Injectable({
     providedIn: 'root',
 })
 export class OrdersNewPageService {
-    private readonly store = inject(Store);
-    private readonly dispatchLocation = this.store.dispatch(
-        LocationActions.getLocation()
-    );
-    private readonly actualPosition$ = this.store.select(selectActualPosition);
-
-    private readonly actualPositionSignal = toSignal(this.actualPosition$);
+    private readonly locationEvents = injectDispatch(locationEvents);
+    private readonly locationStore = inject(LocationStore);
+    private readonly dispatchLocation = this.locationEvents.getLocation();
 
     private readonly vm = computed<OrdersNewPageVM>(() => {
-        const actualPosition = this.actualPositionSignal() ?? null;
+        const actualPosition = this.locationStore.actualPosition();
         return {
             ...ordersNewPageVMDefault,
             frameXVM: {

@@ -1,13 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginPageComponent } from './login-page.component';
-import { provideMockStore } from '@ngrx/store/testing';
 import {
     provideLoginPageMockService,
     updateGetVMSignal,
 } from './login-page.service.mock';
 import { enLoginPageMock, loginPageVMMock } from './login-page.mock';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { selectAuthenticationError } from 'src/app/stores/auth/auth.selector';
 
 describe('LoginPageComponent', () => {
     let fixture: ComponentFixture<LoginPageComponent>;
@@ -26,14 +24,7 @@ describe('LoginPageComponent', () => {
                     },
                 }),
             ],
-            providers: [
-                provideLoginPageMockService(),
-                provideMockStore({
-                    selectors: [
-                        { selector: selectAuthenticationError, value: null },
-                    ],
-                }),
-            ],
+            providers: [provideLoginPageMockService()],
         }).compileComponents();
 
         updateGetVMSignal(undefined);
