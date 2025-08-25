@@ -1,8 +1,10 @@
 import { withDevtools } from '@angular-architects/ngrx-toolkit';
-import { signalStore, withState } from '@ngrx/signals';
+import { signalStore, withState, withHooks } from '@ngrx/signals';
 import { AuthState } from './auth.model';
 import { withAuthEffects } from './with-auth-effects';
 import { withAuthReducer } from './with-auth-reducer';
+import { injectDispatch } from '@ngrx/signals/events';
+import { authEvents } from './auth.events';
 
 export const initialState: AuthState = {
     user: null,
@@ -15,5 +17,11 @@ export const AuthStore = signalStore(
     withDevtools('auth'),
     withState<AuthState>(initialState),
     withAuthReducer(),
-    withAuthEffects()
+    withAuthEffects(),
+    withHooks({
+        onInit() {
+            const events = injectDispatch(authEvents);
+            events.retrieveUser();
+        },
+    })
 );
