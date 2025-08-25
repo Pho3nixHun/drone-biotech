@@ -3,7 +3,6 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FrameComponent } from '@components/frame/frame.component';
 import { OrdersNewPageService } from './orders-new-page.service';
-import { LocationStoreModule } from 'src/app/stores/location/location.module';
 import { TranslocoModule } from '@jsverse/transloco';
 import { AreasDataFormControlComponent } from './components/areas-data-form-control/areas-data-form-control.component';
 import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
@@ -32,7 +31,6 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
         NgClass,
         ReactiveFormsModule,
         TranslocoModule,
-        LocationStoreModule,
         FrameComponent,
         AreasDataFormControlComponent,
         PageLayoutComponent,

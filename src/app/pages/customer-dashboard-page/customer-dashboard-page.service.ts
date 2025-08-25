@@ -10,18 +10,17 @@ import {
     MyOrderXVM,
 } from './customer-dashboard-page.model';
 import { CUSTOMER_DASHBOARD_PAGE_CONFIG } from './customer-dashboard-page.config';
-import { Store } from '@ngrx/store';
-import { selectUserName } from '@stores/auth/auth.selector';
+import { AuthStore } from '@stores/auth/auth.store';
 
 @Injectable({
     providedIn: 'root',
 })
 export class CustomerDashboardPageService {
-    private readonly store = inject(Store);
+    private readonly store = inject(AuthStore);
     private readonly orderService = inject(OrderService);
 
     private readonly config = inject(CUSTOMER_DASHBOARD_PAGE_CONFIG);
-    private readonly userName$ = this.store.select(selectUserName);
+    private readonly userName$ = of(this.store.user.name);
 
     private readonly myOrders$ = this.userName$.pipe(
         switchMap((name) =>
