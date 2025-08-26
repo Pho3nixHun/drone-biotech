@@ -27,19 +27,69 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
             class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
+          </nav>
+        </app-nav>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow mt-72 md:mt-25"
+    >
+      <router-outlet />
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should not render sign out button if it is not provided in the vm 1`] = `
+<div
+  id="root11"
+  ng-version="20.1.7"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
+      >
+        <app-logo
+          class="cursor-pointer"
+          tabindex="0"
+        >
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+          >
+            <!--container-->
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -150,19 +200,23 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -215,19 +269,23 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -282,19 +340,23 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -375,19 +437,23 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -478,19 +544,85 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
+          </nav>
+        </app-nav>
+      </section>
+    </app-header>
+    <!--container-->
+    <div
+      class="flex-grow mt-72 md:mt-25"
+    >
+      <router-outlet />
+      <!--container-->
+    </div>
+  </div>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`AppComponent should render sign out button if it is provided in the vm 1`] = `
+<div
+  id="root10"
+  ng-version="20.1.7"
+>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <app-header>
+      <section
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
+      >
+        <app-logo
+          class="cursor-pointer"
+          tabindex="0"
+        >
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+          >
+            <!--container-->
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
+              >
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -570,19 +702,23 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>
@@ -662,19 +798,23 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
             </a>
             <!--ng-container-->
             <!--container-->
-            <button
-              class="nav-item"
-              mat-icon-button=""
-            >
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
+            <app-button>
+              <button
+                class="btn btn-primary btn-text btn-square"
               >
-                logout
-              </mat-icon>
-            </button>
+                <!--container-->
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                   logout 
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+            <!--container-->
           </nav>
         </app-nav>
       </section>

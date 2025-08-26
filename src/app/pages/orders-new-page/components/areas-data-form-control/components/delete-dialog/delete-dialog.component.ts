@@ -4,10 +4,16 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
 import { DeleteDialogReason, isDeleteDialogVM } from './delete-dialog.model';
 import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.component';
+import { ButtonComponent } from '@components/button/button.component';
 
 @Component({
     selector: 'app-delete-dialog',
-    imports: [MatIconModule, TranslocoModule, DialogLayoutComponent],
+    imports: [
+        MatIconModule,
+        TranslocoModule,
+        DialogLayoutComponent,
+        ButtonComponent,
+    ],
     templateUrl: './delete-dialog.component.html',
 })
 export class DeleteDialogComponent {

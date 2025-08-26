@@ -81,18 +81,12 @@
                 </app-areas-data-form-control>
 
                 <!-- Submit Button -->
-                <button
-                    (click)="submitForm()"
-                    [disabled]="!areasDataFormGroup.valid"
-                    [ngClass]="[
-                        areasDataFormGroup.valid
-                            ? 'btn-primary'
-                            : 'btn-disabled',
-                    ]"
-                    class="w-full btn"
-                >
-                    {{ t(vm.frameXVM.submitButtonTextKey) }}
-                </button>
+                <app-button
+                    class="*:btn-block"
+                    [vm]="vm.frameXVM.submitButtonXVM"
+                    [state]="areasDataFormGroup.valid ? 'default' : 'disabled'"
+                    (clicked)="submitForm()"
+                />
             </form>
         </app-frame>
     </app-page-layout>

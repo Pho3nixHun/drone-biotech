@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
-import { NgClass } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LoginFormComponent } from 'src/app/pages/login-page/components/login-form/login-form.component';
 import { LoginPageService } from './login-page.service';
 import { injectDispatch } from '@ngrx/signals/events';
 import { authEvents } from '@stores/auth/auth.events';
+import { ButtonComponent } from '@components/button/button.component';
 
 /**
  * LoginPageComponent
@@ -27,9 +27,9 @@ import { authEvents } from '@stores/auth/auth.events';
     selector: 'app-login-page',
     imports: [
         ReactiveFormsModule,
-        NgClass,
         LoginFormComponent,
         TranslocoModule,
+        ButtonComponent,
     ],
     templateUrl: './login-page.component.html',
 })

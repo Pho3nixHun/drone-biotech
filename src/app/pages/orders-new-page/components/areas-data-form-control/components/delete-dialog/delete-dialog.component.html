@@ -8,11 +8,7 @@
         <h3 class="text-lg">
             {{ t(vm.warningTextKey) }}
         </h3>
-        <button (click)="cancelClick()" class="btn btn-secondary">
-            {{ t(vm.cancelButtonTextKey) }}
-        </button>
-        <button (click)="deleteClick()" class="btn btn-error">
-            {{ t(vm.submitButtonTextKey) }}
-        </button>
+        <app-button [vm]="vm.deleteButtonVM" (clicked)="deleteClick()" />
+        <app-button [vm]="vm.cancelButtonVM" (clicked)="cancelClick()" />
     </app-dialog-layout>
 }

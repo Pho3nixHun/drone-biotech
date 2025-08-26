@@ -4,6 +4,7 @@ import { Component, input } from '@angular/core';
 import { DialogLayoutVM } from './dialog-layout.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { By } from '@angular/platform-browser';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const en = { title: 'value' };
 
@@ -24,6 +25,12 @@ describe('DialogLayoutComponent', () => {
     let compiled: HTMLElement;
     const vm: DialogLayoutVM = {
         titleKey: en.title,
+        closeButtonVM: {
+            type: 'withIcon',
+            variant: 'fill',
+            secondary: false,
+            icon: MatIcon.CLOSE,
+        },
     };
 
     beforeEach(async () => {

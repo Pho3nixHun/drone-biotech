@@ -108,8 +108,17 @@ export const landingPageVMDefault: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'LandingPage.hero.title',
         descriptionKey: 'LandingPage.hero.description',
-        primaryButtonLabelKey: 'LandingPage.hero.primaryButtonLabel',
-        secondaryButtonLabelKey: 'LandingPage.hero.secondaryButtonTitleLabel',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'LandingPage.hero.primaryButtonLabel',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'LandingPage.hero.secondaryButtonTitleLabel',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -119,8 +128,17 @@ export const landingPageVMWithoutFrameMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'heroTitle',
         descriptionKey: 'heroDescription',
-        primaryButtonLabelKey: 'heroPrimaryButtonLabel',
-        secondaryButtonLabelKey: 'heroSecondaryButtonLabel',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroPrimaryButtonLabel',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroSecondaryButtonLabel',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -254,8 +272,17 @@ export const landingPageVMWithOneFrameMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -472,8 +499,17 @@ export const landingPageVMWithFiveFramesMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -514,8 +550,17 @@ export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -556,8 +601,17 @@ export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -631,8 +685,17 @@ export const landingPageVMWithoutProductItemMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -715,8 +778,17 @@ export const landingPageVMWithOneProductItemMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -832,8 +904,17 @@ export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -911,8 +992,17 @@ export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -995,8 +1085,17 @@ export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -1095,8 +1194,17 @@ export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -1164,8 +1272,17 @@ export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -1239,8 +1356,17 @@ export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -1334,8 +1460,17 @@ export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 
@@ -1437,8 +1572,17 @@ export const landingPageVMMockWithRoutes: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };
 export const landingPageVMMock: LandingPageVM = {
@@ -1537,7 +1681,16 @@ export const landingPageVMMock: LandingPageVM = {
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'herotit',
         descriptionKey: 'herodesc',
-        primaryButtonLabelKey: 'heroprim',
-        secondaryButtonLabelKey: 'herosec',
+        primaryButtonVM: {
+            type: 'withText',
+            textKey: 'heroprim',
+            variant: 'fill',
+        },
+        secondaryButtonVM: {
+            type: 'withText',
+            textKey: 'herosec',
+            variant: 'fill',
+            secondary: true,
+        },
     },
 };

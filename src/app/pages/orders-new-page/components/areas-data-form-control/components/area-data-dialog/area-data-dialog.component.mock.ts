@@ -1,3 +1,4 @@
+import { MatIcon } from '@interfaces/mat-icon.enum';
 import { AreaDataDialogVM } from './area-data-dialog.model';
 
 export const enMock = {
@@ -18,33 +19,62 @@ export const enMock = {
 };
 
 export const mockVMWithoutAreaData: AreaDataDialogVM = {
+    closeButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
     commentLabelKey: enMock.commentLabel,
     coordinatesLabelKey: enMock.coordinatesLabel,
     missionNameLabelKey: enMock.missionNameLabel,
     applicationDateLabelKey: enMock.applicationDateLabel,
     areaData: null,
-    cancelButtonTextKey: enMock.cancelButtonText,
+    cancelButtonVM: {
+        type: 'withIcon',
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
     dosePerHqLabelKey: enMock.dosePerHqLabel,
     mapFormControlVM: {
         defaultCenter: null,
 
         mapAreaSelectFormControlVM: {
             areaValueKey: enMock.areaValue,
-            editButtonTextKey: enMock.editButtonText,
+            editButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
             coordinatesLabelKey: enMock.coordinatesLabel,
-            addButtonTextKey: enMock.addButtonText,
-            deleteButtonTextKey: enMock.deleteButtonText,
+            addButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
+            deleteButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
         },
         mapPointSelectFormControlVM: {
-            addButtonTextKey: enMock.addButtonText,
-            deleteButtonTextKey: enMock.deleteButtonText,
+            addButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
+            deleteButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
         },
         mapSearchInputFormControlVM: {
             distanceValueKey: enMock.dosePerHqLabel,
             placeholderKey: enMock.dosePerHqLabel,
         },
     },
-    submitButtonTextKey: enMock.submitButtonText,
+    submitButtonVM: {
+        type: 'withIcon',
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
     targetAreaLabelKey: enMock.targetAreaLabel,
     titleKey: enMock.title,
     type: 'areaDataDialogVM',
@@ -52,6 +82,7 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
 };
 
 export const mockVMWithAreaData: AreaDataDialogVM = {
+    closeButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
     commentLabelKey: enMock.commentLabel,
     coordinatesLabelKey: enMock.coordinatesLabel,
     missionNameLabelKey: enMock.missionNameLabel,
@@ -65,21 +96,45 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         id: 'id',
         targetArea: [{ lat: 10, lng: 10 }],
     },
-    cancelButtonTextKey: enMock.cancelButtonText,
+    cancelButtonVM: {
+        type: 'withIcon',
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
     dosePerHqLabelKey: enMock.dosePerHqLabel,
     mapFormControlVM: {
         defaultCenter: null,
 
         mapAreaSelectFormControlVM: {
             areaValueKey: enMock.areaValue,
-            editButtonTextKey: enMock.editButtonText,
+            editButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
             coordinatesLabelKey: enMock.coordinatesLabel,
-            addButtonTextKey: enMock.addButtonText,
-            deleteButtonTextKey: enMock.deleteButtonText,
+            addButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
+            deleteButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
         },
         mapPointSelectFormControlVM: {
-            addButtonTextKey: enMock.addButtonText,
-            deleteButtonTextKey: enMock.deleteButtonText,
+            addButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
+            deleteButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'fill',
+            },
         },
         mapSearchInputFormControlVM: {
             distanceValueKey: enMock.dosePerHqLabel,
@@ -87,7 +142,11 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         },
     },
 
-    submitButtonTextKey: enMock.submitButtonText,
+    submitButtonVM: {
+        type: 'withIcon',
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
     targetAreaLabelKey: enMock.targetAreaLabel,
     titleKey: enMock.title,
     type: 'areaDataDialogVM',

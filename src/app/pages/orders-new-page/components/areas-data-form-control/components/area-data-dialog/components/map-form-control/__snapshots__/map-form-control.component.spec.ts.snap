@@ -61,23 +61,60 @@ exports[`MapFormControlComponent should render the template correctly when the V
             id="[object Object]"
           />
         </div>
-        <button
-          class="btn btn-primary"
+        <div
+          class="join"
         >
-           add 
-        </button>
-        <button
-          class="btn btn-disabled"
-          disabled=""
-        >
-           edit 
-        </button>
-        <button
-          class="btn btn-disabled"
-          disabled=""
-        >
-           delete 
-        </button>
+          <app-button>
+            <button
+              class="btn btn-primary btn-square"
+            >
+              <!--container-->
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                 add 
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn btn-primary btn-disabled btn-square"
+              disabled=""
+            >
+              <!--container-->
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                 add 
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn btn-primary btn-disabled btn-square"
+              disabled=""
+            >
+              <!--container-->
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                 add 
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
       </div>
       <!--container-->
     </app-map-area-select-form-control>
@@ -85,21 +122,42 @@ exports[`MapFormControlComponent should render the template correctly when the V
       class="ng-untouched ng-dirty ng-invalid"
     >
       <div
-        class="flex flex-col space-y-4 bg-white"
+        class="join"
       >
-        <button
-          class="btn btn-primary"
-        >
-           add 
-        </button>
-        <button
-          class="btn btn-disabled"
-          disabled=""
-        >
-           delete 
-        </button>
+        <app-button>
+          <button
+            class="btn btn-primary btn-square"
+          >
+            <!--container-->
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+               add 
+            </mat-icon>
+            <!--container-->
+          </button>
+        </app-button>
+        <app-button>
+          <button
+            class="btn btn-primary btn-disabled btn-square"
+            disabled=""
+          >
+            <!--container-->
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+               add 
+            </mat-icon>
+            <!--container-->
+          </button>
+        </app-button>
       </div>
-      <!--container-->
     </app-map-point-select-form-control>
   </div>
 </app-map-form-control>

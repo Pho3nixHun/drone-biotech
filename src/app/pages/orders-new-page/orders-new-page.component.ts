@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FrameComponent } from '@components/frame/frame.component';
@@ -7,6 +6,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { AreasDataFormControlComponent } from './components/areas-data-form-control/areas-data-form-control.component';
 import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { ButtonComponent } from '@components/button/button.component';
 
 /**
  * OrdersNewPageComponent
@@ -28,12 +28,12 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
 @Component({
     selector: 'app-orders-new-page',
     imports: [
-        NgClass,
         ReactiveFormsModule,
         TranslocoModule,
         FrameComponent,
         AreasDataFormControlComponent,
         PageLayoutComponent,
+        ButtonComponent,
     ],
     templateUrl: './orders-new-page.component.html',
 })

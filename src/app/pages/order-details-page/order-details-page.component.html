@@ -13,11 +13,9 @@
                 {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
             </app-status>
 
-            @if (vm.headerXVM.addMissionButtonXVM.isVisible) {
-                <button class="btn btn-primary w-fit truncate">
-                    {{ t(vm.headerXVM.addMissionButtonXVM.textKey) }}
-                </button>
-            }
+            <a [routerLink]="vm.headerXVM.addNewMissionsButtonVM.routerLink">
+                <app-button [vm]="vm.headerXVM.addNewMissionsButtonVM" />
+            </a>
 
             <app-summary-list>
                 @for (
@@ -122,48 +120,30 @@
                 [formControl]="messageFormControl"
                 class="px-2 w-full border border-gray-300"
             />
-            <button
-                (click)="onSendMessageClick()"
-                [disabled]="messageFormControl.invalid"
-                [ngClass]="
-                    messageFormControl.valid ? 'btn-primary' : 'btn-disabled'
-                "
-                class="btn rounded-none"
-            >
-                {{ t(vm.buttonTextKey) }}
-            </button>
+            <app-button
+                [vm]="vm.submitButtonVM"
+                (clicked)="onSendMessageClick()"
+                [state]="messageFormControl.valid ? 'default' : 'disabled'"
+            />
         </div>
     </app-section-card>
 </ng-template>
 
 <ng-template #orderActions let-vm="sectionCardXVM">
     <app-section-card [vm]="vm" *transloco="let t">
-        <div
-            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
-        >
-            <a
-                class="btn btn-success"
-                [href]="vm.completionTemplateButtonXVM.link.href"
-                download
-            >
-                {{ t(vm.completionTemplateButtonXVM.textKey) }}
+        <div class="join">
+            <a [href]="vm.completionTemplateButtonVM.link.href" download>
+                <app-button [vm]="vm.completionTemplateButtonVM" />
             </a>
-            <button
-                class="btn"
-                [disabled]="vm.closeOrderButtonXVM.isDisabled"
-                [ngClass]="
-                    vm.closeOrderButtonXVM.isDisabled
-                        ? 'btn-disabled'
-                        : 'btn-error'
-                "
-                (click)="
+
+            <app-button
+                [vm]="vm.closeOrderButtonVM"
+                (clicked)="
                     openConfirmationDialog(
-                        vm.closeOrderButtonXVM.confirmationDialogVM
+                        vm.closeOrderButtonVM.confirmationDialogVM
                     )
                 "
-            >
-                {{ t(vm.closeOrderButtonXVM.textKey) }}
-            </button>
+            />
         </div>
     </app-section-card>
 </ng-template>

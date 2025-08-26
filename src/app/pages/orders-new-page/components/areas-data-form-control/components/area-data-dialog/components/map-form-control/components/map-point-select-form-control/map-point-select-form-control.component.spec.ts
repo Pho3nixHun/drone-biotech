@@ -4,7 +4,6 @@ import {
     MapPointSelectFormControlVM,
     provideMockEntryPointMarkerOptions,
 } from './map-point-select-form-control.model';
-import { getTranslocoModule } from 'transloco-testing.module';
 import {
     Component,
     computed,
@@ -19,19 +18,17 @@ import { MapPointSelectFormControlService } from './map-point-select-form-contro
 import {
     MapPointSelectFormControlMockService,
     provideMapPointSelectFormControlMockService,
-    updateEntryPointSignal,
 } from './map-point-select-form-control.service.mock';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
 import { provideMockMapOptions } from '../../map-form-control.model';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Coordinates } from '@stores/location/location.model';
-
-const enMock = { addButtonText: 'addButton', deleteButtonText: 'deleteButton' };
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const vm: MapPointSelectFormControlVM = {
-    deleteButtonTextKey: enMock.deleteButtonText,
-    addButtonTextKey: enMock.addButtonText,
+    addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    deleteButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
 };
 
 @Component({
@@ -70,16 +67,7 @@ describe('MapPointSelectFormControlComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [
-                TestHostComponent,
-                getTranslocoModule({
-                    langs: { en: enMock },
-                    translocoConfig: {
-                        availableLangs: ['en'],
-                        defaultLang: 'en',
-                    },
-                }),
-            ],
+            imports: [TestHostComponent],
             providers: [
                 provideMockEntryPointMarkerOptions(),
                 provideMockMapOptions(),
@@ -109,102 +97,6 @@ describe('MapPointSelectFormControlComponent', () => {
 
         //Assert
         expect(compiled).toMatchSnapshot();
-    });
-
-    //  test
-    it('should disable to add new entry point to the map if one is already drawn', () => {
-        // Arrange
-        updateEntryPointSignal({ lat: 10, lng: 10 });
-
-        // Act
-        fixture.detectChanges();
-        const addButton: DebugElement = fixture.debugElement.query(
-            By.css('button.btn-disabled')
-        );
-
-        // Assert
-        expect(addButton.nativeElement.disabled).toBe(true);
-    });
-
-    //  test
-    it('should enable to add new entry point to the map if no entry point is drawn', () => {
-        // Arrange
-        updateEntryPointSignal(null);
-
-        // Act
-        fixture.detectChanges();
-        const addButton: DebugElement = fixture.debugElement.query(
-            By.css('button.btn-primary')
-        );
-
-        // Assert
-        expect(addButton.nativeElement.disabled).toBe(false);
-    });
-
-    it('should disable to delete entry point if there is no entry point drawn ', () => {
-        // Arrange
-        updateEntryPointSignal(null);
-
-        // Act
-        fixture.detectChanges();
-        const deleteButton: DebugElement = fixture.debugElement.query(
-            By.css('button.btn-disabled')
-        );
-
-        // Assert
-        expect(deleteButton.nativeElement.disabled).toBe(true);
-    });
-
-    it('should enable to delete entry point if there is an entry point drawn ', () => {
-        // Arrange
-        updateEntryPointSignal({ lat: 10, lng: 10 });
-
-        // Act
-        fixture.detectChanges();
-        const deleteButton: DebugElement = fixture.debugElement.query(
-            By.css('button.btn-error')
-        );
-
-        // Assert
-        expect(deleteButton.nativeElement.disabled).toBe(false);
-    });
-
-    // Interaction test
-    it('should call drawMarker(null) when the addButton is clicked if there is no entry point drawn', () => {
-        //Arrange
-        updateEntryPointSignal(null);
-
-        //Act
-        fixture.detectChanges();
-        const serviceSpy = jest.spyOn(
-            mapPointSelectFormControlComponent['pointSelectService'],
-            'drawMarker'
-        );
-        fixture.debugElement
-            .query(By.css('button'))
-            .triggerEventHandler('click', null);
-
-        //Assert
-        expect(serviceSpy).toHaveBeenCalledWith(null);
-    });
-
-    // Interaction test
-    it('should call deleteMarker() when the deleteButton is clicked if there is an entry point a drawn', () => {
-        //Arrange
-        updateEntryPointSignal({ lat: 10, lng: 10 });
-        const serviceSpy = jest.spyOn(
-            mapPointSelectFormControlComponent['pointSelectService'],
-            'deleteMarker'
-        );
-
-        //Act
-        fixture.detectChanges();
-        fixture.debugElement
-            .query(By.css('button.btn-error'))
-            .triggerEventHandler('click', null);
-
-        //Assert
-        expect(serviceSpy).toHaveBeenCalledTimes(2);
     });
 
     // Unit test

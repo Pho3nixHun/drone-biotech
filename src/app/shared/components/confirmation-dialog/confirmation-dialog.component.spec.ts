@@ -8,19 +8,23 @@ import {
 import { ConfirmationDialogVM } from './confirmation-dialog.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const enMock = {
     title: 'tit',
-    cancelButtonText: 'cancelButton',
-    confirmButtonText: 'confirmButton',
     confirmText: 'confirm',
 };
 
 const vm: ConfirmationDialogVM = {
     type: 'confirmationDialogVM',
     titleKey: enMock.title,
-    cancelButtonTextKey: enMock.cancelButtonText,
-    confirmButtonTextKey: enMock.confirmButtonText,
+    cancelButtonVM: {
+        type: 'withIcon',
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
+    closeButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    confirmButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
     confirmTextKey: enMock.confirmText,
 };
 

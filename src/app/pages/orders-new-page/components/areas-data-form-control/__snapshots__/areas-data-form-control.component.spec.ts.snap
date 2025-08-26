@@ -9,19 +9,22 @@ exports[`AreasDataFormControlComponent should render the template when the VM is
     <div
       class="flex flex-row justify-between pr-3 xl:pr-2"
     >
-      <button
-        class="bg-emerald-400 hover:bg-emerald-500 text-white h-10 w-10 items-center justify-center text-center rounded-full inline-flex"
-        mat-icon-button=""
-      >
-        <mat-icon
-          aria-hidden="true"
-          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-          data-mat-icon-type="font"
-          role="img"
+      <app-button>
+        <button
+          class="btn btn-primary btn-text btn-square"
         >
-          add
-        </mat-icon>
-      </button>
+          <!--container-->
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+          >
+             add 
+          </mat-icon>
+          <!--container-->
+        </button>
+      </app-button>
     </div>
     <!--container-->
   </div>

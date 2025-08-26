@@ -9,7 +9,7 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
     class="w-80 md:w-96 block"
   >
     <section
-      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 flex flex-col"
     >
       <div
         class="flex justify-between"
@@ -19,17 +19,22 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
         >
            tit 
         </h3>
-        <button>
-          <mat-icon
-            aria-hidden="true"
-            class="mat-icon notranslate text-3xl material-icons mat-ligature-font mat-icon-no-color"
-            data-mat-icon-type="font"
-            role="img"
-            style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;"
+        <app-button>
+          <button
+            class="btn btn-primary btn-square"
           >
-            close
-          </mat-icon>
-        </button>
+            <!--container-->
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+               add 
+            </mat-icon>
+            <!--container-->
+          </button>
+        </app-button>
       </div>
       <div
         class="space-y-4"
@@ -41,18 +46,40 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
         </h3>
       </div>
       <div
-        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
+        class="ml-auto join"
       >
-        <button
-          class="btn btn-secondary"
-        >
-           cancel 
-        </button>
-        <button
-          class="btn btn-error"
-        >
-           submit 
-        </button>
+        <app-button>
+          <button
+            class="btn btn-primary btn-square"
+          >
+            <!--container-->
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+               add 
+            </mat-icon>
+            <!--container-->
+          </button>
+        </app-button>
+        <app-button>
+          <button
+            class="btn btn-primary btn-square"
+          >
+            <!--container-->
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              role="img"
+            >
+               add 
+            </mat-icon>
+            <!--container-->
+          </button>
+        </app-button>
       </div>
     </section>
     <!--container-->

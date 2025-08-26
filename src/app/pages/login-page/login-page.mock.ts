@@ -8,25 +8,33 @@ export const enLoginPageMock = {
 
 export const loginPageVMMock: LoginPageVM = {
     loginFormXVM: {
+        submitButtonVM: {
+            type: 'withText',
+            textKey: 'button',
+            variant: 'fill',
+        },
         errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
         titleKey: 'title',
         emailLabelKey: 'email',
         passwordLabelKey: 'password',
         descriptionKey: 'description',
-        buttonTitleKey: 'button',
         passwordPlaceholderKey: 'password',
     },
 };
 export const loginPageVMDefault: LoginPageVM = {
     loginFormXVM: {
+        submitButtonVM: {
+            type: 'withText',
+            textKey: 'LoginPage.loginForm.buttonTitle',
+            variant: 'fill',
+        },
         errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
         emailLabelKey: 'LoginPage.loginForm.emailLabel',
         passwordLabelKey: 'LoginPage.loginForm.passwordLabel',
         titleKey: 'LoginPage.loginForm.title',
         descriptionKey: 'LoginPage.loginForm.description',
-        buttonTitleKey: 'LoginPage.loginForm.buttonTitle',
         passwordPlaceholderKey: 'LoginPage.loginForm.passwordPlaceholder',
     },
 };

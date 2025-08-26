@@ -10,6 +10,9 @@ import {
     Role,
 } from './order-details-page.model';
 import { Message, Order } from '@services/order/order.service.model';
+import { AppRouteSegment } from 'src/app/app-route-segment';
+import { OrdersRouteSegment } from '../orders-new-page/orders-route-segment';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 export const mapOrderStatusToStatusToCSSStyles = (
     status: OrderStatus
@@ -37,13 +40,15 @@ export const mapRoleTranslocoTextKey = (role: Role): string =>
 export const mapHeaderXVM = (
     config: OrderDetailsPageConfig,
     order: Order,
-    status: OrderStatus,
-    addMissionButtonVisibility: boolean
+    status: OrderStatus
 ): HeaderXVM => ({
     ...config.headerConfig,
-    addMissionButtonXVM: {
-        isVisible: addMissionButtonVisibility,
-        textKey: config.headerConfig.addMissionButtonXVM.textKey,
+    addNewMissionsButtonVM: {
+        type: 'withText',
+        secondary: false,
+        variant: 'ghost',
+        textKey: 'Add new missions',
+        routerLink: ['/', AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
     },
     id: order.id,
     statusXVM: {
@@ -78,14 +83,12 @@ export const mapHeaderXVM = (
 });
 
 export const mapOrderActionsSectionCardXVM = (
-    config: OrderDetailsPageConfig,
-    closeOrderButtonIsDisabled: boolean
+    config: OrderDetailsPageConfig
 ): OrderActionsSectionCardXVM => ({
     ...config.sectionCardConfigs.orderActionsSectionCardConfig,
-    closeOrderButtonXVM: {
+    closeOrderButtonVM: {
         ...config.sectionCardConfigs.orderActionsSectionCardConfig
-            .closeOrderButtonXVM,
-        isDisabled: closeOrderButtonIsDisabled,
+            .closeOrderButtonVM,
     },
 });
 
@@ -215,8 +218,11 @@ export const mapMessagesSectionCardXVM = (
     messages: Message[]
 ): MessagesSectionCardXVM => ({
     type: 'messages',
-    buttonTextKey:
-        config.sectionCardConfigs.messagesSectionCardConfig.buttonTextKey,
+    submitButtonVM: {
+        type: 'withIcon',
+        variant: 'ghost',
+        icon: MatIcon.SEND,
+    },
     titleKey: config.sectionCardConfigs.messagesSectionCardConfig.titleKey,
     messageItemListXVM: {
         messageItemXVMs: messages

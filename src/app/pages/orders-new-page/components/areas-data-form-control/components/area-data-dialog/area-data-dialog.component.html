@@ -56,17 +56,14 @@
                 ></textarea>
             </div>
         </form>
-
-        <button
-            (click)="submitForm()"
-            [disabled]="areaDataFormGroup.invalid"
-            [ngClass]="[areaDataFormGroup.valid ? 'btn-primary' : 'disabled']"
-            class="btn"
-        >
-            {{ t(vm.submitButtonTextKey) }}
-        </button>
-        <button (click)="resetFormWithCloseDialog()" class="btn btn-error">
-            {{ t(vm.cancelButtonTextKey) }}
-        </button>
+        <app-button
+            [vm]="vm.submitButtonVM"
+            [state]="areaDataFormGroup.valid ? 'default' : 'disabled'"
+            (clicked)="submitForm()"
+        />
+        <app-button
+            [vm]="vm.cancelButtonVM"
+            (clicked)="resetFormWithCloseDialog()"
+        />
     </app-dialog-layout>
 }

@@ -17,15 +17,13 @@ import { Coordinates } from '@stores/location/location.model';
 import { provideMockEntryPointMarkerOptions } from './components/map-point-select-form-control/map-point-select-form-control.model';
 import { MapAreaSelectFormControlMockService } from './components/map-area-select-form-control/map-area-select-form-control.service.mock';
 import { MapAreaSelectFormControlService } from './components/map-area-select-form-control/map-area-select-form-control.service';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const headOffice = { lat: 25, lng: 25 };
 
 const en = {
-    addButtonText: 'add',
     areaValue: 'area',
     coordinatesLabel: 'coords',
-    deleteButtonText: 'delete',
-    editButtonText: 'edit',
     distanceValue: 'distance',
     placeholder: 'place',
 };
@@ -33,15 +31,23 @@ const en = {
 const mockVMWithCenter: MapFormControlVM = {
     defaultCenter: { lat: 10, lng: 10 },
     mapAreaSelectFormControlVM: {
-        addButtonTextKey: en.addButtonText,
+        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
         areaValueKey: en.areaValue,
         coordinatesLabelKey: en.coordinatesLabel,
-        deleteButtonTextKey: en.deleteButtonText,
-        editButtonTextKey: en.editButtonText,
+        deleteButtonVM: {
+            type: 'withIcon',
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
+        editButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
     },
     mapPointSelectFormControlVM: {
-        addButtonTextKey: en.addButtonText,
-        deleteButtonTextKey: en.deleteButtonText,
+        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+        deleteButtonVM: {
+            type: 'withIcon',
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
     },
     mapSearchInputFormControlVM: {
         distanceValueKey: en.distanceValue,
@@ -51,15 +57,23 @@ const mockVMWithCenter: MapFormControlVM = {
 const mockVMWithoutCenter: MapFormControlVM = {
     defaultCenter: null,
     mapAreaSelectFormControlVM: {
-        addButtonTextKey: en.addButtonText,
+        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
         areaValueKey: en.areaValue,
         coordinatesLabelKey: en.coordinatesLabel,
-        deleteButtonTextKey: en.deleteButtonText,
-        editButtonTextKey: en.editButtonText,
+        deleteButtonVM: {
+            type: 'withIcon',
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
+        editButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
     },
     mapPointSelectFormControlVM: {
-        addButtonTextKey: en.addButtonText,
-        deleteButtonTextKey: en.deleteButtonText,
+        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+        deleteButtonVM: {
+            type: 'withIcon',
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
     },
     mapSearchInputFormControlVM: {
         distanceValueKey: en.distanceValue,

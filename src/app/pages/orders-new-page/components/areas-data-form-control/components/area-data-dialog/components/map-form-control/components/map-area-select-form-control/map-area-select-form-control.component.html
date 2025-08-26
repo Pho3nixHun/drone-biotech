@@ -1,6 +1,8 @@
+@let vM = vm();
+
 <div class="flex flex-col space-y-4 bg-white" *transloco="let t">
     <div class="flex flex-col w-1/2">
-        <label for="coordinates">{{ t(vm().coordinatesLabelKey) }}</label>
+        <label for="coordinates">{{ t(vM.coordinatesLabelKey) }}</label>
         <textarea
             [id]="coordinatesControl"
             [formControl]="coordinatesControl"
@@ -12,28 +14,23 @@
         ></textarea>
     </div>
 
-    <button
-        (click)="drawPolygon(null)"
-        class="btn"
-        [ngClass]="[polygonPathsSignal() ? 'btn-disabled' : 'btn-primary']"
-        [disabled]="!!polygonPathsSignal()"
-    >
-        {{ t(vm().addButtonTextKey) }}
-    </button>
-    <button
-        (click)="editPolygon()"
-        class="btn"
-        [disabled]="!canBeEdited()"
-        [ngClass]="canBeEdited() ? 'btn-secondary' : 'btn-disabled'"
-    >
-        {{ t(vm().editButtonTextKey) }}
-    </button>
-    <button
-        class="btn"
-        (click)="deletePolygon()"
-        [ngClass]="[polygonPathsSignal() ? 'btn-error' : 'btn-disabled']"
-        [disabled]="!polygonPathsSignal()"
-    >
-        {{ t(vm().deleteButtonTextKey) }}
-    </button>
+    <div class="join">
+        <app-button
+            [vm]="vM.addButtonVM"
+            (clicked)="drawPolygon(null)"
+            [state]="polygonPathsSignal() ? 'disabled' : 'default'"
+        />
+
+        <app-button
+            [vm]="vM.editButtonVM"
+            (clicked)="editPolygon()"
+            [state]="canBeEdited() ? 'default' : 'disabled'"
+        />
+
+        <app-button
+            [vm]="vM.deleteButtonVM"
+            (clicked)="deletePolygon()"
+            [state]="polygonPathsSignal() ? 'default' : 'disabled'"
+        />
+    </div>
 </div>

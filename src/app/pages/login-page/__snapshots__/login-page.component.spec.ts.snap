@@ -77,12 +77,18 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                 placeholder="password"
                 type="password"
               />
-              <button
-                class="btn w-full btn-disabled"
-                disabled=""
+              <app-button
+                class="*:btn-block"
               >
-                 butt 
-              </button>
+                <button
+                  class="btn btn-primary btn-disabled"
+                  disabled=""
+                >
+                   butt 
+                  <!--container-->
+                  <!--container-->
+                </button>
+              </app-button>
             </form>
           </div>
         </div>

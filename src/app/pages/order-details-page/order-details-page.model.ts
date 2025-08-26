@@ -2,13 +2,14 @@ import { StatusVM } from '@components/status/status.model';
 import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
-import { WithTextNode } from '@interfaces/with-text-node.interface';
 import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
-import { WithVisibility } from '@interfaces/with-visibility.interface';
-import { WithDisabled } from '@interfaces/with-disabled.interface';
 import { WithLink } from '@interfaces/with-link.interface';
 import { AvatarXVM } from '@components/avatar/avatar.model';
 import { Value } from '@interfaces/with-value';
+import {
+    ButtonVM,
+    ButtonVMWithRouterLink,
+} from '@components/button/button.model';
 
 export type OrderStatus = OrderStatusFromService;
 
@@ -40,7 +41,7 @@ interface MessageItemListXVM {
 export interface MessagesSectionCardXVM extends SectionCardVM {
     type: 'messages';
     messageItemListXVM: MessageItemListXVM;
-    buttonTextKey: string;
+    submitButtonVM: ButtonVM;
 }
 
 interface InfoItemXVM {
@@ -61,15 +62,15 @@ export interface OrderDetailsSectionCardXVM extends SectionCardVM {
     infoPanelXVMs: InfoPanelXVM[];
 }
 
-interface CompletionTemplateButtonXVM extends WithTextNode, WithLink {}
+type CompletionTemplateButtonVM = ButtonVM & WithLink;
 
-interface CloseOrderButtonXVM extends WithTextNode, WithDisabled {
+type CloseOrderButtonVM = ButtonVM & {
     confirmationDialogVM: ConfirmationDialogVM;
-}
+};
 export interface OrderActionsSectionCardXVM extends SectionCardVM {
     type: 'orderActions';
-    completionTemplateButtonXVM: CompletionTemplateButtonXVM;
-    closeOrderButtonXVM: CloseOrderButtonXVM;
+    completionTemplateButtonVM: CompletionTemplateButtonVM;
+    closeOrderButtonVM: CloseOrderButtonVM;
 }
 
 interface StatusXVM extends StatusVM {
@@ -85,13 +86,12 @@ interface SummaryListXVM {
     summaryXVMs: SummaryXVM[];
 }
 
-interface AddMissionButtonXVM extends WithVisibility, WithTextNode {}
 export interface HeaderXVM {
     id: string;
     idTitleKey: string;
     statusXVM: StatusXVM;
     summaryListXVM: SummaryListXVM;
-    addMissionButtonXVM: AddMissionButtonXVM;
+    addNewMissionsButtonVM: ButtonVMWithRouterLink;
 }
 type SectionCardXVM =
     | OrderDetailsSectionCardXVM
@@ -111,7 +111,7 @@ export interface OrderDetailsPageConfig {
         createdDateValueKey: string;
         totalAreaTextKey: string;
         totalAreaValueKey: string;
-        addMissionButtonXVM: AddMissionButtonXVM;
+        addMissionButtonXVM: ButtonVM;
     };
     sectionCardConfigs: {
         orderDetailsSectionCardConfig: {

@@ -1,3 +1,4 @@
+import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrderDetailsPageConfig } from './order-details-page.model';
 
 export const orderDetailsPageConfig: OrderDetailsPageConfig = {
@@ -9,7 +10,9 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         totalAreaTextKey: 'OrderDetailsPage.header.totalAreaText',
         totalAreaValueKey: 'OrderDetailsPage.header.totalAreaValue',
         addMissionButtonXVM: {
-            isVisible: true,
+            type: 'withText',
+            secondary: false,
+            variant: 'ghost',
             textKey: 'OrderDetailsPage.header.addNewMissionButtonText',
         },
     },
@@ -23,25 +26,46 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
         orderActionsSectionCardConfig: {
             type: 'orderActions',
             titleKey: 'OrderDetailsPage.orderActions.title',
-            completionTemplateButtonXVM: {
+            completionTemplateButtonVM: {
+                type: 'withText',
+                variant: 'fill',
+                secondary: true,
                 textKey: 'OrderDetailsPage.orderActions.completion.text',
                 link: {
                     href: 'assets/lepke.jpg',
                 },
             },
-            closeOrderButtonXVM: {
+            closeOrderButtonVM: {
+                type: 'withText',
                 textKey: 'OrderDetailsPage.orderActions.close.text',
-                isDisabled: false,
+                secondary: true,
+                variant: 'fill',
                 confirmationDialogVM: {
+                    closeButtonVM: {
+                        type: 'withIcon',
+                        icon: MatIcon.CLOSE,
+                        secondary: false,
+                        variant: 'ghost',
+                    },
                     type: 'confirmationDialogVM',
                     titleKey:
                         'OrderDetailsPage.orderActions.close.dialog.title',
                     confirmTextKey:
                         'OrderDetailsPage.orderActions.close.dialog.confirmText',
-                    cancelButtonTextKey:
-                        'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
-                    confirmButtonTextKey:
-                        'OrderDetailsPage.orderActions.close.dialog.confirmButtonText',
+                    cancelButtonVM: {
+                        type: 'withText',
+                        textKey:
+                            'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
+                        secondary: false,
+                        variant: 'fill',
+                    },
+                    confirmButtonVM: {
+                        type: 'withText',
+                        textKey:
+                            'OrderDetailsPage.orderActions.close.dialog.confirmButtonText',
+                        secondary: false,
+                        variant: 'fill',
+                    },
                 },
             },
         },
@@ -123,7 +147,9 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
         totalAreaTextKey: enMock.totalAreaText,
         totalAreaValueKey: enMock.totalAreaValue,
         addMissionButtonXVM: {
-            isVisible: true,
+            type: 'withText',
+            secondary: false,
+            variant: 'fill',
             textKey: enMock.addNewMissionButtonText,
         },
     },
@@ -137,21 +163,42 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
         orderActionsSectionCardConfig: {
             type: 'orderActions',
             titleKey: enMock.orderActions.title,
-            completionTemplateButtonXVM: {
+            completionTemplateButtonVM: {
+                type: 'withText',
+                variant: 'fill',
+                secondary: true,
                 textKey: enMock.orderActions.completionButtonText,
                 link: {
                     href: 'assets/lepke.jpg',
                 },
             },
-            closeOrderButtonXVM: {
+            closeOrderButtonVM: {
                 textKey: enMock.orderActions.closeButtonText,
-                isDisabled: false,
+                type: 'withText',
+                secondary: true,
+                variant: 'ghost',
                 confirmationDialogVM: {
+                    closeButtonVM: {
+                        icon: MatIcon.ADD,
+                        secondary: false,
+                        type: 'withIcon',
+                        variant: 'ghost',
+                    },
                     type: 'confirmationDialogVM',
                     titleKey: '',
                     confirmTextKey: '',
-                    cancelButtonTextKey: '',
-                    confirmButtonTextKey: '',
+                    confirmButtonVM: {
+                        type: 'withText',
+                        secondary: false,
+                        variant: 'fill',
+                        textKey: enMock.orderActions.completionButtonText,
+                    },
+                    cancelButtonVM: {
+                        type: 'withText',
+                        secondary: false,
+                        variant: 'fill',
+                        textKey: enMock.orderActions.closeButtonText,
+                    },
                 },
             },
         },

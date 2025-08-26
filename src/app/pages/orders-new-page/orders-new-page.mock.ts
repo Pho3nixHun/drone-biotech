@@ -1,9 +1,15 @@
+import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrdersNewPageVM } from './orders-new-page-vm.model';
 
 export const ordersNewPageVMDefault: OrdersNewPageVM = {
     frameXVM: {
         titleKey: 'OrdersNewPage.title',
-        submitButtonTextKey: 'OrdersNewPage.submitButtonText',
+        submitButtonXVM: {
+            type: 'withText',
+            textKey: 'OrdersNewPage.submitButtonText',
+            secondary: false,
+            variant: 'fill',
+        },
         emailLabelKey: 'OrdersNewPage.emailLabel',
         endCustomerLabelKey: 'OrdersNewPage.endCustomerLabel',
         nameLabelKey: 'OrdersNewPage.nameLabel',
@@ -12,17 +18,47 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
         areasDataLabelKey: 'OrdersNewPage.areasDataLabel',
 
         areasDataFormControlVM: {
+            addButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.ADD,
+                variant: 'ghost',
+            },
+            deleteButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.DELETE,
+                secondary: true,
+                variant: 'ghost',
+            },
+            editButtonVM: {
+                type: 'withIcon',
+                icon: MatIcon.EDIT,
+                secondary: true,
+                variant: 'ghost',
+            },
             addAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                closeButtonVM: {
+                    type: 'withIcon',
+                    icon: MatIcon.CLOSE,
+                    secondary: true,
+                    variant: 'ghost',
+                },
+                cancelButtonVM: {
+                    type: 'withText',
+                    textKey: 'OrdersNewPage.areasDataDialog.cancelButtonText',
+                    secondary: true,
+                    variant: 'ghost',
+                },
                 coordinatesLabelKey:
                     'OrdersNewPage.areasDataDialog.coordinatesLabel',
                 commentLabelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
                 missionNameLabelKey:
                     'OrdersNewPage.areasDataDialog.missionNameLabel',
-                cancelButtonTextKey:
-                    'OrdersNewPage.areasDataDialog.cancelButtonText',
-                submitButtonTextKey:
-                    'OrdersNewPage.areasDataDialog.submitButtonText',
+                submitButtonVM: {
+                    type: 'withText',
+                    textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
+                    variant: 'fill',
+                },
                 applicationDateLabelKey:
                     'OrdersNewPage.areasDataDialog.applicationDateLabel',
                 dosePerHqLabelKey:
@@ -42,20 +78,43 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     mapAreaSelectFormControlVM: {
                         areaValueKey:
                             'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
-                        addButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
-                        editButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
-                        deleteButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                        addButtonVM: {
+                            type: 'withText',
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
+                        },
+                        editButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                        },
                         coordinatesLabelKey:
                             'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
                     },
                     mapPointSelectFormControlVM: {
-                        addButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
-                        deleteButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                        addButtonVM: {
+                            type: 'withText',
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                        },
                     },
                 },
                 areaData: null,
@@ -64,15 +123,28 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
 
             editAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                closeButtonVM: {
+                    type: 'withIcon',
+                    icon: MatIcon.CLOSE,
+                    secondary: true,
+                    variant: 'ghost',
+                },
                 coordinatesLabelKey:
                     'OrdersNewPage.areasDataDialog.coordinatesLabel',
                 commentLabelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
                 missionNameLabelKey:
                     'OrdersNewPage.areasDataDialog.missionNameLabel',
-                cancelButtonTextKey:
-                    'OrdersNewPage.areasDataDialog.cancelButtonText',
-                submitButtonTextKey:
-                    'OrdersNewPage.areasDataDialog.submitButtonText',
+                submitButtonVM: {
+                    type: 'withText',
+                    textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
+                    variant: 'fill',
+                },
+                cancelButtonVM: {
+                    type: 'withText',
+                    textKey: 'OrdersNewPage.areasDataDialog.cancelButtonText',
+                    secondary: true,
+                    variant: 'ghost',
+                },
                 applicationDateLabelKey:
                     'OrdersNewPage.areasDataDialog.applicationDateLabel',
                 dosePerHqLabelKey:
@@ -92,20 +164,43 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     mapAreaSelectFormControlVM: {
                         areaValueKey:
                             'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
-                        addButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
-                        editButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
-                        deleteButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                        addButtonVM: {
+                            type: 'withText',
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
+                        },
+                        editButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                        },
                         coordinatesLabelKey:
                             'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
                     },
                     mapPointSelectFormControlVM: {
-                        addButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
-                        deleteButtonTextKey:
-                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                        addButtonVM: {
+                            type: 'withText',
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey:
+                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                        },
                     },
                 },
 
@@ -115,12 +210,25 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
 
             deleteDialogVM: {
                 type: 'deleteDialogVM',
+                closeButtonVM: {
+                    type: 'withIcon',
+                    icon: MatIcon.CLOSE,
+                    secondary: true,
+                    variant: 'ghost',
+                },
                 titleKey: 'OrdersNewPage.deleteDialog.title',
                 warningTextKey: 'OrdersNewPage.deleteDialog.warningText',
-                submitButtonTextKey:
-                    'OrdersNewPage.deleteDialog.submitButtonText',
-                cancelButtonTextKey:
-                    'OrdersNewPage.deleteDialog.cancelButtonText',
+                deleteButtonVM: {
+                    type: 'withText',
+                    textKey: 'OrdersNewPage.deleteDialog.submitButtonText',
+                    variant: 'fill',
+                },
+                cancelButtonVM: {
+                    type: 'withText',
+                    textKey: 'OrdersNewPage.deleteDialog.cancelButtonText',
+                    secondary: true,
+                    variant: 'ghost',
+                },
             },
             actionsHeaderKey:
                 'OrdersNewPage.areasDataFormControl.actionsHeader',
@@ -160,6 +268,7 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
 };
 
 export const enMock = {
+    closeButtonText: 'close',
     coordinatesLabel: 'coords',
     commentLabel: 'comment',
     missionLabel: 'mission',
@@ -208,7 +317,12 @@ export const enMock = {
 export const ordersNewPageVMMock: OrdersNewPageVM = {
     frameXVM: {
         titleKey: enMock.frameTitle,
-        submitButtonTextKey: enMock.submitButtonText,
+        submitButtonXVM: {
+            type: 'withText',
+            variant: 'fill',
+            secondary: false,
+            textKey: enMock.submitButtonText,
+        },
         emailLabelKey: enMock.emailLabel,
         endCustomerLabelKey: enMock.endCustomerLabel,
         nameLabelKey: enMock.nameLabel,
@@ -217,13 +331,48 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
         areasDataLabelKey: enMock.areasDataLabel,
 
         areasDataFormControlVM: {
+            addButtonVM: {
+                type: 'withIcon',
+                secondary: false,
+                variant: 'ghost',
+                icon: MatIcon.ADD,
+            },
+            editButtonVM: {
+                type: 'withIcon',
+                secondary: false,
+                variant: 'ghost',
+                icon: MatIcon.EDIT,
+            },
+            deleteButtonVM: {
+                type: 'withIcon',
+                secondary: false,
+                variant: 'ghost',
+                icon: MatIcon.DELETE,
+            },
+
             addAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                closeButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.closeButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
                 coordinatesLabelKey: enMock.coordinatesLabel,
                 commentLabelKey: enMock.commentLabel,
                 missionNameLabelKey: enMock.missionLabel,
-                cancelButtonTextKey: enMock.cancelButtonText,
-                submitButtonTextKey: enMock.submitButtonText,
+                cancelButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.cancelButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
+                submitButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.cancelButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
                 applicationDateLabelKey: enMock.applicationDateLabel,
                 dosePerHqLabelKey: enMock.dosePerHqLabel,
                 entryPointLabelKey: enMock.entryPointLabel,
@@ -236,14 +385,39 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                     },
                     mapAreaSelectFormControlVM: {
                         areaValueKey: enMock.areaValue,
-                        addButtonTextKey: enMock.addButtonText,
-                        deleteButtonTextKey: enMock.deleteButtonText,
+                        addButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.addButtonText,
+                        },
+                        editButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.deleteButtonText,
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.editButton,
+                        },
                         coordinatesLabelKey: enMock.coordinatesLabel,
-                        editButtonTextKey: enMock.editButton,
                     },
                     mapPointSelectFormControlVM: {
-                        addButtonTextKey: enMock.addButtonText,
-                        deleteButtonTextKey: enMock.deleteButtonText,
+                        addButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.addButtonText,
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.deleteButtonText,
+                        },
                     },
                 },
                 areaData: null,
@@ -252,11 +426,27 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
 
             editAreaDataDialogVM: {
                 type: 'areaDataDialogVM',
+                closeButtonVM: {
+                    type: 'withIcon',
+                    icon: MatIcon.CLOSE,
+                    secondary: false,
+                    variant: 'fill',
+                },
                 coordinatesLabelKey: enMock.coordinatesLabel,
                 commentLabelKey: enMock.commentLabel,
                 missionNameLabelKey: enMock.missionLabel,
-                cancelButtonTextKey: enMock.cancelButtonText,
-                submitButtonTextKey: enMock.submitButtonText,
+                cancelButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.cancelButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
+                submitButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.submitButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
                 applicationDateLabelKey: enMock.applicationDateLabel,
                 dosePerHqLabelKey: enMock.dosePerHqLabel,
                 entryPointLabelKey: enMock.entryPointLabel,
@@ -270,14 +460,39 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                     },
                     mapAreaSelectFormControlVM: {
                         areaValueKey: enMock.areaValue,
-                        addButtonTextKey: enMock.addButtonText,
-                        editButtonTextKey: enMock.editButton,
-                        deleteButtonTextKey: enMock.deleteButtonText,
+                        addButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.addButtonText,
+                        },
+                        editButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.deleteButtonText,
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.editButton,
+                        },
                         coordinatesLabelKey: enMock.coordinatesLabel,
                     },
                     mapPointSelectFormControlVM: {
-                        addButtonTextKey: enMock.addButtonText,
-                        deleteButtonTextKey: enMock.deleteButtonText,
+                        addButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.addButtonText,
+                        },
+                        deleteButtonVM: {
+                            type: 'withText',
+                            secondary: true,
+                            variant: 'ghost',
+                            textKey: enMock.deleteButtonText,
+                        },
                     },
                 },
 
@@ -287,10 +502,26 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
 
             deleteDialogVM: {
                 type: 'deleteDialogVM',
+                closeButtonVM: {
+                    type: 'withIcon',
+                    icon: MatIcon.CLOSE,
+                    secondary: true,
+                    variant: 'ghost',
+                },
                 titleKey: enMock.title,
                 warningTextKey: enMock.warning,
-                submitButtonTextKey: enMock.submitButtonText,
-                cancelButtonTextKey: enMock.cancelButtonText,
+                cancelButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.cancelButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
+                deleteButtonVM: {
+                    type: 'withText',
+                    textKey: enMock.submitButtonText,
+                    secondary: false,
+                    variant: 'fill',
+                },
             },
             actionsHeaderKey: enMock.actionsHeader,
             targetAreaSizeHeaderKey: enMock.targetAreaSizeHeader,

@@ -5,20 +5,41 @@ exports[`MapPointSelectFormControlComponent should render the template when the 
   class="ng-untouched ng-dirty ng-valid"
 >
   <div
-    class="flex flex-col space-y-4 bg-white"
+    class="join"
   >
-    <button
-      class="btn btn-primary"
-    >
-       addButton 
-    </button>
-    <button
-      class="btn btn-disabled"
-      disabled=""
-    >
-       deleteButton 
-    </button>
+    <app-button>
+      <button
+        class="btn btn-primary btn-square"
+      >
+        <!--container-->
+        <mat-icon
+          aria-hidden="true"
+          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+          data-mat-icon-type="font"
+          role="img"
+        >
+           add 
+        </mat-icon>
+        <!--container-->
+      </button>
+    </app-button>
+    <app-button>
+      <button
+        class="btn btn-primary btn-disabled btn-square"
+        disabled=""
+      >
+        <!--container-->
+        <mat-icon
+          aria-hidden="true"
+          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+          data-mat-icon-type="font"
+          role="img"
+        >
+           add 
+        </mat-icon>
+        <!--container-->
+      </button>
+    </app-button>
   </div>
-  <!--container-->
 </app-map-point-select-form-control>
 `;
