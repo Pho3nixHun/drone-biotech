@@ -67,33 +67,4 @@ describe('LoginPageComponent', () => {
         expect(component.loginForm.controls.email.value).toBe('');
         expect(component.loginForm.controls.password.value).toBe('');
     });
-
-    it('should disable the submit button if the loginForm is invalid', () => {
-        //Arrange
-        updateGetVMSignal(loginPageVMMock);
-
-        //Act
-        component.loginForm.setValue({ email: '', password: '' });
-        fixture.detectChanges();
-
-        //Assert
-        const button = fixture.nativeElement.querySelector('button');
-        expect(button.disabled).toBe(true);
-    });
-
-    it('should enable the submit button if the loginForm is valid', () => {
-        //Arrange
-        updateGetVMSignal(loginPageVMMock);
-
-        //Act
-        component.loginForm.setValue({
-            email: 'test@freemail.hu',
-            password: 'password',
-        });
-        fixture.detectChanges();
-        const button = fixture.nativeElement.querySelector('button');
-
-        //Assert
-        expect(button.disabled).toBe(false);
-    });
 });

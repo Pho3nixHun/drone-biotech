@@ -6,7 +6,15 @@
         [vm]="vm"
     >
         <p>{{ t(vm.confirmTextKey) }}</p>
-        <app-button [vm]="vm.confirmButtonVM" (clicked)="onConfirmClick()" />
-        <app-button [vm]="vm.cancelButtonVM" (clicked)="onCancelClick()" />
+        <app-button [vm]="vm.confirmButtonXVM" (click)="onConfirmClick()">
+            @if (vm.confirmButtonXVM.textKey) {
+                <span>{{ t(vm.confirmButtonXVM.textKey) }}</span>
+            }
+        </app-button>
+        <app-button [vm]="vm.cancelButtonXVM" (click)="onCancelClick()">
+            @if (vm.cancelButtonXVM.textKey) {
+                <span>{{ t(vm.cancelButtonXVM.textKey) }}</span>
+            }
+        </app-button>
     </app-dialog-layout>
 }

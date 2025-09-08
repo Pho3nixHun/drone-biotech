@@ -25,10 +25,11 @@ import { provideMockMapOptions } from '../../map-form-control.model';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Coordinates } from '@stores/location/location.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
+import { getTranslocoModule } from 'transloco-testing.module';
 
 const vm: MapPointSelectFormControlVM = {
-    addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
-    deleteButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    deleteButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
 };
 
 @Component({
@@ -67,7 +68,16 @@ describe('MapPointSelectFormControlComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TestHostComponent],
+            imports: [
+                TestHostComponent,
+                getTranslocoModule({
+                    langs: { en: {} },
+                    translocoConfig: {
+                        availableLangs: ['en'],
+                        defaultLang: 'en',
+                    },
+                }),
+            ],
             providers: [
                 provideMockEntryPointMarkerOptions(),
                 provideMockMapOptions(),

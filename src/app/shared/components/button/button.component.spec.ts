@@ -1,25 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonComponent } from './button.component';
 import { Component, input } from '@angular/core';
-import { ButtonVM, State } from './button.model';
+import { ButtonXVM } from './button.model';
 import {
-    enMock,
+    mockFillButton,
     mockGhostButton,
-    mockIconButton,
     mockOutlineButton,
     mockPrimaryButton,
     mockSecondaryButton,
-    mockTextButton,
 } from './button.mock';
-import { getTranslocoModule } from 'transloco-testing.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-    imports: [ButtonComponent],
-    template: ` <app-button [vm]="vm()" [state]="state()" /> `,
+    imports: [ButtonComponent, MatIconModule],
+    template: `
+        <app-button [vm]="vm()" [disabled]="disabled()" [active]="active()">
+            <div>should not be displayed</div>
+            <span>text</span>
+            <mat-icon>search</mat-icon>
+        </app-button>
+    `,
 })
 class TestHostComponent {
-    public vm = input.required<ButtonVM>();
-    public state = input<State>('default');
+    public vm = input.required<ButtonXVM>();
+    public disabled = input<boolean>();
+    public active = input<boolean>();
 }
 describe('ButtonComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
@@ -27,16 +32,7 @@ describe('ButtonComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [
-                TestHostComponent,
-                getTranslocoModule({
-                    langs: { en: enMock },
-                    translocoConfig: {
-                        availableLangs: ['en'],
-                        defaultLang: 'en',
-                    },
-                }),
-            ],
+            imports: [TestHostComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TestHostComponent);
@@ -68,6 +64,17 @@ describe('ButtonComponent', () => {
     });
 
     // Snapshot testing
+    it('should render a filled button', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', mockFillButton);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
     it('should render a ghost button', () => {
         // Arrange
         fixture.componentRef.setInput('vm', mockGhostButton);
@@ -90,45 +97,12 @@ describe('ButtonComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
+
     // Snapshot testing
-    it('should render a button with text', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockTextButton);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render a button with icon', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockIconButton);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render a default button', () => {
+    it('should render an active button', () => {
         // Arrange
         fixture.componentRef.setInput('vm', mockPrimaryButton);
-        fixture.componentRef.setInput('state', 'default');
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render a active button', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockPrimaryButton);
-        fixture.componentRef.setInput('state', 'active');
+        fixture.componentRef.setInput('active', true);
 
         // Act
         fixture.detectChanges();
@@ -140,7 +114,7 @@ describe('ButtonComponent', () => {
     it('should render a disabled button', () => {
         // Arrange
         fixture.componentRef.setInput('vm', mockPrimaryButton);
-        fixture.componentRef.setInput('state', 'disabled');
+        fixture.componentRef.setInput('disabled', true);
 
         // Act
         fixture.detectChanges();

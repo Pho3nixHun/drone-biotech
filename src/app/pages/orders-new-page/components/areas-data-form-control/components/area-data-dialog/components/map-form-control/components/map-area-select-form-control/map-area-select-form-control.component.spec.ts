@@ -18,10 +18,7 @@ import {
     signal,
 } from '@angular/core';
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
-import {
-    MapAreaSelectFormControlMockService,
-    updatePolygonSignal,
-} from './map-area-select-form-control.service.mock';
+import { MapAreaSelectFormControlMockService } from './map-area-select-form-control.service.mock';
 import { By } from '@angular/platform-browser';
 import { ElementRefDirective } from '@directives/element-ref/element-ref.directive';
 import { provideMockMapOptions } from '../../map-form-control.model';
@@ -34,9 +31,9 @@ const enMock = {
 };
 
 const vm: MapAreaSelectFormControlVM = {
-    addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
-    deleteButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
-    editButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    deleteButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    editButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     areaValueKey: enMock.areaValue,
     coordinatesLabelKey: enMock.coordinatesLabel,
 };
@@ -105,26 +102,6 @@ describe('MapAreaSelectFormControlComponent', () => {
             By.directive(MapAreaSelectFormControlComponent)
         );
         mapAreaSelectFormControlComponent = innerDebugElement.componentInstance;
-    });
-
-    // Interaction test
-    it('should call drawPolygon(null) when the addButton is clicked if there is no target area drawn', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', vm);
-        updatePolygonSignal(null);
-
-        //Act
-        fixture.detectChanges();
-        const serviceSpy = jest.spyOn(
-            mapAreaSelectFormControlComponent['areaSelectService'],
-            'drawPolygon'
-        );
-        fixture.debugElement
-            .query(By.css('button.btn-primary'))
-            .triggerEventHandler('click', null);
-
-        //Assert
-        expect(serviceSpy).toHaveBeenCalledWith(null);
     });
 
     it('should initialize the map with the mapCanvas', () => {

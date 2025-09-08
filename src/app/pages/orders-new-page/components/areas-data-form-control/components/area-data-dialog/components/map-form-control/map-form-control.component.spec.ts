@@ -31,20 +31,18 @@ const en = {
 const mockVMWithCenter: MapFormControlVM = {
     defaultCenter: { lat: 10, lng: 10 },
     mapAreaSelectFormControlVM: {
-        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+        addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
         areaValueKey: en.areaValue,
         coordinatesLabelKey: en.coordinatesLabel,
-        deleteButtonVM: {
-            type: 'withIcon',
+        deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },
-        editButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+        editButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     },
     mapPointSelectFormControlVM: {
-        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
-        deleteButtonVM: {
-            type: 'withIcon',
+        addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+        deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },
@@ -57,20 +55,18 @@ const mockVMWithCenter: MapFormControlVM = {
 const mockVMWithoutCenter: MapFormControlVM = {
     defaultCenter: null,
     mapAreaSelectFormControlVM: {
-        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+        addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
         areaValueKey: en.areaValue,
         coordinatesLabelKey: en.coordinatesLabel,
-        deleteButtonVM: {
-            type: 'withIcon',
+        deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },
-        editButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+        editButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     },
     mapPointSelectFormControlVM: {
-        addButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
-        deleteButtonVM: {
-            type: 'withIcon',
+        addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+        deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },

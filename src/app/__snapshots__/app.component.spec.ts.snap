@@ -29,16 +29,15 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -202,16 +201,15 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -271,16 +269,15 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -342,16 +339,15 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -439,16 +435,15 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -546,16 +541,15 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -608,16 +602,15 @@ exports[`AppComponent should render sign out button if it is provided in the vm 
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -704,16 +697,15 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>
@@ -800,16 +792,15 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
             <!--container-->
             <app-button>
               <button
-                class="btn btn-primary btn-text btn-square"
+                class="btn flex flex-row justify-center btn-primary btn-text"
               >
-                <!--container-->
                 <mat-icon
                   aria-hidden="true"
                   class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
                   data-mat-icon-type="font"
                   role="img"
                 >
-                   logout 
+                  logout
                 </mat-icon>
                 <!--container-->
               </button>

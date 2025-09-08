@@ -20,18 +20,15 @@ describe('DeleteDialogComponent', () => {
     let compiled: HTMLElement;
     let component: DeleteDialogComponent;
     const vm: DeleteDialogVM = {
-        cancelButtonVM: {
-            type: 'withIcon',
+        cancelButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },
-        closeButtonVM: {
-            type: 'withIcon',
+        closeButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },
-        deleteButtonVM: {
-            type: 'withIcon',
+        deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
         },

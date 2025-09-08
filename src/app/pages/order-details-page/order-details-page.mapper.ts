@@ -43,11 +43,9 @@ export const mapHeaderXVM = (
     status: OrderStatus
 ): HeaderXVM => ({
     ...config.headerConfig,
-    addNewMissionsButtonVM: {
-        type: 'withText',
+    addNewMissionsButtonXVM: {
         secondary: false,
         variant: 'ghost',
-        textKey: 'Add new missions',
         routerLink: ['/', AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
     },
     id: order.id,
@@ -86,9 +84,9 @@ export const mapOrderActionsSectionCardXVM = (
     config: OrderDetailsPageConfig
 ): OrderActionsSectionCardXVM => ({
     ...config.sectionCardConfigs.orderActionsSectionCardConfig,
-    closeOrderButtonVM: {
+    closeOrderButtonXVM: {
         ...config.sectionCardConfigs.orderActionsSectionCardConfig
-            .closeOrderButtonVM,
+            .closeOrderButtonXVM,
     },
 });
 
@@ -218,8 +216,7 @@ export const mapMessagesSectionCardXVM = (
     messages: Message[]
 ): MessagesSectionCardXVM => ({
     type: 'messages',
-    submitButtonVM: {
-        type: 'withIcon',
+    submitButtonXVM: {
         variant: 'ghost',
         icon: MatIcon.SEND,
     },

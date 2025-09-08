@@ -8,8 +8,7 @@ export const enLoginPageMock = {
 
 export const loginPageVMMock: LoginPageVM = {
     loginFormXVM: {
-        submitButtonVM: {
-            type: 'withText',
+        submitButtonXVM: {
             textKey: 'button',
             variant: 'fill',
         },
@@ -24,8 +23,7 @@ export const loginPageVMMock: LoginPageVM = {
 };
 export const loginPageVMDefault: LoginPageVM = {
     loginFormXVM: {
-        submitButtonVM: {
-            type: 'withText',
+        submitButtonXVM: {
             textKey: 'LoginPage.loginForm.buttonTitle',
             variant: 'fill',
         },

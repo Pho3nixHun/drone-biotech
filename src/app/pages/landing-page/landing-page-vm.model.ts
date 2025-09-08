@@ -1,4 +1,4 @@
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 import { HeroVM } from '@components/hero/hero-vm.model';
 import { PartnerLogoVM } from '@components/partner-list/components/partner-logo/partner-logo-vm.model';
 import { ProductItemVM } from '@components/product-item/product-item-vm.model';
@@ -16,8 +16,8 @@ interface PartnerLogoXVM extends Partial<WithLink>, PartnerLogoVM {}
 interface HeroXVM extends HeroVM {
     titleKey: string;
     descriptionKey: string;
-    primaryButtonVM: ButtonVM;
-    secondaryButtonVM: ButtonVM;
+    primaryButtonXVM: ButtonXVM;
+    secondaryButtonXVM: ButtonXVM;
 }
 
 export interface WithPartnerLogos {

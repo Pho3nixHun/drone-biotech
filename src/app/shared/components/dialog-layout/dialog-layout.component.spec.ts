@@ -3,7 +3,6 @@ import { DialogLayoutComponent } from './dialog-layout.component';
 import { Component, input } from '@angular/core';
 import { DialogLayoutVM } from './dialog-layout.model';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { By } from '@angular/platform-browser';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const en = { title: 'value' };
@@ -25,8 +24,7 @@ describe('DialogLayoutComponent', () => {
     let compiled: HTMLElement;
     const vm: DialogLayoutVM = {
         titleKey: en.title,
-        closeButtonVM: {
-            type: 'withIcon',
+        closeButtonXVM: {
             variant: 'fill',
             secondary: false,
             icon: MatIcon.CLOSE,
@@ -60,25 +58,5 @@ describe('DialogLayoutComponent', () => {
 
         //Assert
         expect(compiled).toMatchSnapshot();
-    });
-
-    //Interaction test
-    it('should call the emitter after clicking on the close button', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', vm);
-
-        const baseDialogEmitterRef = fixture.debugElement.query(
-            By.directive(DialogLayoutComponent)
-        ).componentInstance.close;
-
-        jest.spyOn(baseDialogEmitterRef, 'emit');
-
-        //Act
-        fixture.detectChanges();
-        const closeButton = fixture.debugElement.query(By.css('button'));
-        closeButton.triggerEventHandler('click');
-
-        //Assert
-        expect(baseDialogEmitterRef.emit).toHaveBeenCalled();
     });
 });

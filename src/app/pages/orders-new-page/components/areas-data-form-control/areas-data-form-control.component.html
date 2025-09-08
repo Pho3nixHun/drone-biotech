@@ -3,7 +3,11 @@
 <div *transloco="let t">
     <div class="flex flex-row justify-between pr-3 xl:pr-2">
         <ng-content select="label" />
-        <app-button [vm]="vM.addButtonVM" (clicked)="addAreaData()" />
+        <app-button [vm]="vM.addButtonXVM" (click)="addAreaData()">
+            @if (vM.addButtonXVM.icon) {
+                <mat-icon>{{ vM.addButtonXVM.icon }}</mat-icon>
+            }
+        </app-button>
     </div>
     @if (xAreaData$() | async; as xAreaData) {
         <app-card-group>
@@ -89,13 +93,21 @@
                         {{ area.comment }}
                     </app-key-value>
                     <app-button
-                        [vm]="vM.editButtonVM"
-                        (clicked)="editAreaData(area.id)"
-                    />
+                        [vm]="vM.editButtonXVM"
+                        (click)="editAreaData(area.id)"
+                    >
+                        @if (vM.editButtonXVM.icon) {
+                            <mat-icon>{{ vM.editButtonXVM.icon }}</mat-icon>
+                        }
+                    </app-button>
                     <app-button
-                        [vm]="vM.deleteButtonVM"
-                        (clicked)="deleteAreaData(area.id)"
-                    />
+                        [vm]="vM.deleteButtonXVM"
+                        (click)="deleteAreaData(area.id)"
+                    >
+                        @if (vM.deleteButtonXVM.icon) {
+                            <mat-icon>{{ vM.deleteButtonXVM.icon }}</mat-icon>
+                        }
+                    </app-button>
                 </app-card-item>
             }
         </app-card-group>

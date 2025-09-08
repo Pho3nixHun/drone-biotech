@@ -16,21 +16,33 @@
 
     <div class="join">
         <app-button
-            [vm]="vM.addButtonVM"
-            (clicked)="drawPolygon(null)"
-            [state]="polygonPathsSignal() ? 'disabled' : 'default'"
-        />
+            [vm]="vM.addButtonXVM"
+            [disabled]="!!polygonPathsSignal()"
+            (click)="drawPolygon(null)"
+        >
+            @if (vM.addButtonXVM.textKey) {
+                <span>{{ t(vM.addButtonXVM.textKey) }}</span>
+            }
+        </app-button>
 
         <app-button
-            [vm]="vM.editButtonVM"
-            (clicked)="editPolygon()"
-            [state]="canBeEdited() ? 'default' : 'disabled'"
-        />
+            [vm]="vM.editButtonXVM"
+            [disabled]="!canBeEdited()"
+            (click)="editPolygon()"
+        >
+            @if (vM.editButtonXVM.textKey) {
+                <span>{{ t(vM.editButtonXVM.textKey) }}</span>
+            }
+        </app-button>
 
         <app-button
-            [vm]="vM.deleteButtonVM"
-            (clicked)="deletePolygon()"
-            [state]="polygonPathsSignal() ? 'default' : 'disabled'"
-        />
+            [vm]="vM.deleteButtonXVM"
+            [disabled]="!polygonPathsSignal()"
+            (click)="deletePolygon()"
+        >
+            @if (vM.deleteButtonXVM.textKey) {
+                <span>{{ t(vM.deleteButtonXVM.textKey) }}</span>
+            }
+        </app-button>
     </div>
 </div>

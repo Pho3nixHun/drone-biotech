@@ -66,51 +66,24 @@ exports[`MapFormControlComponent should render the template correctly when the V
         >
           <app-button>
             <button
-              class="btn btn-primary btn-square"
+              class="btn flex flex-row justify-center btn-primary"
             >
-              <!--container-->
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                 add 
-              </mat-icon>
               <!--container-->
             </button>
           </app-button>
           <app-button>
             <button
-              class="btn btn-primary btn-disabled btn-square"
+              class="btn flex flex-row justify-center btn-primary btn-disabled"
               disabled=""
             >
-              <!--container-->
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                 add 
-              </mat-icon>
               <!--container-->
             </button>
           </app-button>
           <app-button>
             <button
-              class="btn btn-primary btn-disabled btn-square"
+              class="btn flex flex-row justify-center btn-primary btn-disabled"
               disabled=""
             >
-              <!--container-->
-              <mat-icon
-                aria-hidden="true"
-                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                data-mat-icon-type="font"
-                role="img"
-              >
-                 add 
-              </mat-icon>
               <!--container-->
             </button>
           </app-button>
@@ -126,38 +99,21 @@ exports[`MapFormControlComponent should render the template correctly when the V
       >
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-               add 
-            </mat-icon>
             <!--container-->
           </button>
         </app-button>
         <app-button>
           <button
-            class="btn btn-primary btn-disabled btn-square"
+            class="btn flex flex-row justify-center btn-primary btn-disabled"
             disabled=""
           >
-            <!--container-->
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-               add 
-            </mat-icon>
             <!--container-->
           </button>
         </app-button>
       </div>
+      <!--container-->
     </app-map-point-select-form-control>
   </div>
 </app-map-form-control>

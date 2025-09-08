@@ -84,9 +84,15 @@
                 <app-button
                     class="*:btn-block"
                     [vm]="vm.frameXVM.submitButtonXVM"
-                    [state]="areasDataFormGroup.valid ? 'default' : 'disabled'"
-                    (clicked)="submitForm()"
-                />
+                    [disabled]="areasDataFormGroup.invalid"
+                    (click)="submitForm()"
+                >
+                    @if (vm.frameXVM.submitButtonXVM.textKey) {
+                        <span>{{
+                            t(vm.frameXVM.submitButtonXVM.textKey)
+                        }}</span>
+                    }
+                </app-button>
             </form>
         </app-frame>
     </app-page-layout>

@@ -25,7 +25,7 @@ export class AppService {
             ? {
                   ...appVMDefault,
                   signOutButtonVM: user
-                      ? appVMDefault.signOutButtonVM
+                      ? appVMDefault.signOutButtonXVM
                       : undefined,
                   headerCanBeShown,
               }

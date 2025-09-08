@@ -1,6 +1,6 @@
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 
 export interface DialogLayoutVM {
     titleKey: string;
-    closeButtonVM: ButtonVM;
+    closeButtonXVM: ButtonXVM;
 }

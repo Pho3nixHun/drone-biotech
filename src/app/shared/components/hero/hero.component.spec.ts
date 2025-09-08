@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroComponent } from './hero.component';
 import { Component, Input } from '@angular/core';
 import { HeroVM } from './hero-vm.model';
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 
 @Component({
@@ -16,7 +16,10 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 })
 class TestHostComponent {
     @Input() vm: HeroVM | null = null;
-    button: ButtonVM = { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' };
+    button: ButtonXVM = {
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    };
 }
 describe('HeroComponent', () => {
     let component: TestHostComponent;

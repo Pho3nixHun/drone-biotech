@@ -1,26 +1,16 @@
 @let vM = vm();
-@let state = resolvedState();
 
 <button
-    (click)="clicked.emit()"
-    [disabled]="state === 'disabled'"
-    class="btn"
+    class="btn flex flex-row justify-center"
+    [disabled]="disabled()"
     [ngClass]="{
         'btn-primary': !vM.secondary,
         'btn-secondary': vM.secondary,
         'btn-outline': vM.variant === 'outline',
         'btn-text': vM.variant === 'ghost',
-        'btn-active': state === 'active',
-        'btn-disabled': state === 'disabled',
-        'btn-square': vM.type === 'withIcon',
+        'btn-active': active(),
+        'btn-disabled': disabled(),
     }"
 >
-    @switch (vM.type) {
-        @case ('withText') {
-            {{ vM.textKey | transloco }}
-        }
-        @case ('withIcon') {
-            <mat-icon> {{ vM.icon }} </mat-icon>
-        }
-    }
+    <ng-content select="[span, mat-icon]" />
 </button>

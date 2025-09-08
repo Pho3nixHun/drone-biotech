@@ -31,8 +31,7 @@ export const appVMDefault: AppComponentVM = {
             routerLink: [AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
         },
     ],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: true,
         variant: 'ghost',
@@ -55,8 +54,7 @@ export const appMockVMWithoutNavItem: AppComponentVM = {
         altText: 'logo',
     },
     navItemXVMs: [],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -70,8 +68,7 @@ export const appMockVMWithOneNavItem: AppComponentVM = {
         altText: 'logo',
     },
     navItemXVMs: [{ textKey: 'text0', link: { href: `#${FrameID.PRODUCTS}` } }],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -92,8 +89,7 @@ export const appMockVMWithFiveNavItem: AppComponentVM = {
         { textKey: 'text3', link: { href: `#${FrameID.PRODUCTS}` } },
         { textKey: 'text4', link: { href: `#${FrameID.PRODUCTS}` } },
     ],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -108,8 +104,7 @@ export const appMockVMWithOneAnchor: AppComponentVM = {
         altText: 'logo',
     },
     navItemXVMs: [{ textKey: 'text0', routerLink: AppRouteSegment.LANDING }],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -130,8 +125,7 @@ export const appMockVMWithFiveAnchor: AppComponentVM = {
         { textKey: 'text3', routerLink: AppRouteSegment.LANDING },
         { textKey: 'text4', routerLink: AppRouteSegment.LANDING },
     ],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -163,8 +157,7 @@ export const appMockVMWithNavItemAndAnchor: AppComponentVM = {
             link: { href: `#${FrameID.PRODUCTS}` },
         },
     ],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -196,8 +189,7 @@ export const appMockVM: AppComponentVM = {
             link: { href: `#${FrameID.PRODUCTS}` },
         },
     ],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -212,8 +204,7 @@ export const appEmptyMockVMForRoutes: AppComponentVM = {
         altText: 'logo',
     },
     navItemXVMs: [],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -228,8 +219,7 @@ export const appMockVMWithSignoutButton: AppComponentVM = {
         altText: 'logo',
     },
     navItemXVMs: [],
-    signOutButtonVM: {
-        type: 'withIcon',
+    signOutButtonXVM: {
         icon: MatIcon.LOGOUT,
         secondary: false,
         variant: 'ghost',
@@ -243,5 +233,5 @@ export const appMockVMWithoutSignoutButton: AppComponentVM = {
         altText: 'logo',
     },
     navItemXVMs: [],
-    signOutButtonVM: undefined,
+    signOutButtonXVM: undefined,
 };

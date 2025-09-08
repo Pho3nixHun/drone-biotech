@@ -5,10 +5,22 @@
                 <h1>{{ t(heroXVM.titleKey) }}</h1>
                 <p>{{ t(heroXVM.descriptionKey) }}</p>
                 <a href="">
-                    <app-button [vm]="heroXVM.primaryButtonVM" />
+                    <app-button [vm]="heroXVM.primaryButtonXVM">
+                        @if (heroXVM.primaryButtonXVM.textKey) {
+                            <span>{{
+                                t(heroXVM.primaryButtonXVM.textKey)
+                            }}</span>
+                        }
+                    </app-button>
                 </a>
                 <a href="">
-                    <app-button [vm]="heroXVM.secondaryButtonVM" />
+                    <app-button [vm]="heroXVM.secondaryButtonXVM">
+                        @if (heroXVM.secondaryButtonXVM.textKey) {
+                            <span>{{
+                                t(heroXVM.secondaryButtonXVM.textKey)
+                            }}</span>
+                        }
+                    </app-button>
                 </a>
             </app-hero>
         }

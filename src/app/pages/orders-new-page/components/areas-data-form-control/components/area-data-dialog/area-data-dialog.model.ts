@@ -3,7 +3,7 @@ import { DialogReason } from '@services/dialog/dialog.service';
 import { DialogLayoutVM } from '@components/dialog-layout/dialog-layout.model';
 import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 
 export interface AreaDataDialogVM extends DialogLayoutVM {
     type: 'areaDataDialogVM';
@@ -14,8 +14,8 @@ export interface AreaDataDialogVM extends DialogLayoutVM {
     targetAreaLabelKey: string;
     applicationDateLabelKey: string;
     commentLabelKey: string;
-    cancelButtonVM: ButtonVM;
-    submitButtonVM: ButtonVM;
+    cancelButtonXVM: ButtonXVM;
+    submitButtonXVM: ButtonXVM;
     areaData: AreaData | null;
     mapFormControlVM: MapFormControlVM;
 }

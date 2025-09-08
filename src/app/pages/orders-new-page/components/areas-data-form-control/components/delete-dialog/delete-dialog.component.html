@@ -8,7 +8,15 @@
         <h3 class="text-lg">
             {{ t(vm.warningTextKey) }}
         </h3>
-        <app-button [vm]="vm.deleteButtonVM" (clicked)="deleteClick()" />
-        <app-button [vm]="vm.cancelButtonVM" (clicked)="cancelClick()" />
+        <app-button [vm]="vm.deleteButtonXVM" (click)="deleteClick()">
+            @if (vm.deleteButtonXVM.textKey) {
+                <span>{{ t(vm.deleteButtonXVM.textKey) }}</span>
+            }
+        </app-button>
+        <app-button [vm]="vm.cancelButtonXVM" (click)="cancelClick()">
+            @if (vm.cancelButtonXVM.textKey) {
+                <span>{{ t(vm.cancelButtonXVM.textKey) }}</span>
+            }
+        </app-button>
     </app-dialog-layout>
 }

@@ -13,8 +13,14 @@
                 {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
             </app-status>
 
-            <a [routerLink]="vm.headerXVM.addNewMissionsButtonVM.routerLink">
-                <app-button [vm]="vm.headerXVM.addNewMissionsButtonVM" />
+            <a [routerLink]="vm.headerXVM.addNewMissionsButtonXVM.routerLink">
+                <app-button [vm]="vm.headerXVM.addNewMissionsButtonXVM">
+                    @if (vm.headerXVM.addNewMissionsButtonXVM.textKey) {
+                        <span>{{
+                            t(vm.headerXVM.addNewMissionsButtonXVM.textKey)
+                        }}</span>
+                    }
+                </app-button>
             </a>
 
             <app-summary-list>
@@ -42,152 +48,201 @@
         @for (sectionCardXVM of vm.sectionCardXVMs; track $index) {
             @switch (sectionCardXVM.type) {
                 @case ('orderDetails') {
-                    <ng-container
-                        [ngTemplateOutlet]="orderDetails"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
+                    <app-section-card [vm]="sectionCardXVM" *transloco="let t">
+                        <div
+                            class="flex lg:flex-row flex-col space-y-8 lg:space-y-0"
+                        >
+                            @for (
+                                infoPanelXVM of sectionCardXVM.infoPanelXVMs;
+                                track $index
+                            ) {
+                                <app-info-panel class="lg:w-1/2 w-full">
+                                    <h4 class="font-medium">
+                                        {{ t(infoPanelXVM.titleKey) }}
+                                    </h4>
+                                    <app-info-item-list>
+                                        @for (
+                                            infoItemXVM of infoPanelXVM
+                                                .infoListXVM.infoItemXVMs;
+                                            track $index
+                                        ) {
+                                            <app-info-item>
+                                                <dt class="text-gray-600 w-32">
+                                                    {{
+                                                        t(infoItemXVM.labelKey)
+                                                    }}
+                                                </dt>
+                                                <dd>
+                                                    <strong class="font-medium">
+                                                        @if (
+                                                            infoItemXVM.value
+                                                                .type ===
+                                                            'withValueKey'
+                                                        ) {
+                                                            {{
+                                                                t(
+                                                                    infoItemXVM
+                                                                        .value
+                                                                        .key,
+                                                                    infoItemXVM
+                                                                        .value
+                                                                        .params
+                                                                )
+                                                            }}
+                                                        } @else {
+                                                            {{
+                                                                infoItemXVM
+                                                                    .value.value
+                                                            }}
+                                                        }
+                                                    </strong>
+                                                </dd>
+                                            </app-info-item>
+                                        }
+                                    </app-info-item-list>
+                                </app-info-panel>
+                            }
+                        </div>
+                    </app-section-card>
                 }
                 @case ('orderActions') {
-                    <ng-container
-                        [ngTemplateOutlet]="orderActions"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
+                    <app-section-card [vm]="sectionCardXVM" *transloco="let t">
+                        <div class="join">
+                            <a
+                                [href]="
+                                    sectionCardXVM.completionTemplateButtonXVM
+                                        .link.href
+                                "
+                                download
+                            >
+                                <app-button
+                                    [vm]="
+                                        sectionCardXVM.completionTemplateButtonXVM
+                                    "
+                                >
+                                    @if (
+                                        sectionCardXVM
+                                            .completionTemplateButtonXVM.textKey
+                                    ) {
+                                        <span>{{
+                                            t(
+                                                sectionCardXVM
+                                                    .completionTemplateButtonXVM
+                                                    .textKey
+                                            )
+                                        }}</span>
+                                    }
+                                </app-button>
+                            </a>
+
+                            <app-button
+                                [vm]="sectionCardXVM.closeOrderButtonXVM"
+                                (click)="
+                                    openConfirmationDialog(
+                                        sectionCardXVM.closeOrderButtonXVM
+                                            .confirmationDialogVM
+                                    )
+                                "
+                            >
+                                @if (
+                                    sectionCardXVM.closeOrderButtonXVM.textKey
+                                ) {
+                                    <span>{{
+                                        t(
+                                            sectionCardXVM.closeOrderButtonXVM
+                                                .textKey
+                                        )
+                                    }}</span>
+                                }
+                            </app-button>
+                        </div>
+                    </app-section-card>
                 }
                 @case ('messages') {
-                    <ng-container
-                        [ngTemplateOutlet]="messages"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
+                    <app-section-card [vm]="sectionCardXVM" *transloco="let t">
+                        <app-message-item-list>
+                            @for (
+                                messageItemXVM of sectionCardXVM
+                                    .messageItemListXVM.messageItemXVMs;
+                                track $index
+                            ) {
+                                <app-message-item>
+                                    @switch (messageItemXVM.avatarXVM.type) {
+                                        @case ('withInitials') {
+                                            <app-avatar
+                                                [class]="
+                                                    messageItemXVM.avatarXVM
+                                                        .colors
+                                                "
+                                            >
+                                                {{
+                                                    messageItemXVM.avatarXVM
+                                                        .initials
+                                                }}
+                                            </app-avatar>
+                                        }
+
+                                        @case ('withImage') {
+                                            <app-avatar
+                                                class="text-white *:bg-black"
+                                            >
+                                                <img
+                                                    [ngSrc]="
+                                                        messageItemXVM.avatarXVM
+                                                            .imageSrc
+                                                    "
+                                                    [alt]="
+                                                        messageItemXVM.avatarXVM
+                                                            .altTextKey
+                                                    "
+                                                    class="object-contain rounded-full"
+                                                    fill
+                                                />
+                                            </app-avatar>
+                                        }
+                                    }
+                                    <h3 class="font-medium">
+                                        {{
+                                            t(messageItemXVM.senderValueKey, {
+                                                role: t(
+                                                    messageItemXVM.roleTextKey
+                                                ),
+                                                name: messageItemXVM.senderName,
+                                            })
+                                        }}
+                                    </h3>
+                                    <p class="text-gray-700">
+                                        {{ messageItemXVM.message }}
+                                    </p>
+                                    <time class="text-gray-600 text-sm">{{
+                                        t(messageItemXVM.sendingDateValueKey, {
+                                            date: messageItemXVM.sendingDate,
+                                        })
+                                    }}</time>
+                                </app-message-item>
+                            }
+                        </app-message-item-list>
+                        <div class="w-full flex flex-row">
+                            <input
+                                type="text"
+                                [formControl]="messageFormControl"
+                                class="px-2 w-full border border-gray-300"
+                            />
+                            <app-button
+                                [vm]="sectionCardXVM.submitButtonXVM"
+                                [disabled]="messageFormControl.invalid"
+                                (click)="onSendMessageClick()"
+                            >
+                                @if (sectionCardXVM.submitButtonXVM.icon) {
+                                    <mat-icon>{{
+                                        t(sectionCardXVM.submitButtonXVM.icon)
+                                    }}</mat-icon>
+                                }
+                            </app-button>
+                        </div>
+                    </app-section-card>
                 }
             }
         }
     </app-page-layout>
 }
-
-<ng-template #messages let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <app-message-item-list>
-            @for (
-                messageItemXVM of vm.messageItemListXVM.messageItemXVMs;
-                track $index
-            ) {
-                <app-message-item>
-                    @switch (messageItemXVM.avatarXVM.type) {
-                        @case ('withInitials') {
-                            <app-avatar
-                                [class]="messageItemXVM.avatarXVM.colors"
-                            >
-                                {{ messageItemXVM.avatarXVM.initials }}
-                            </app-avatar>
-                        }
-
-                        @case ('withImage') {
-                            <app-avatar class="text-white *:bg-black">
-                                <img
-                                    [ngSrc]="messageItemXVM.avatarXVM.imageSrc"
-                                    [alt]="messageItemXVM.avatarXVM.altTextKey"
-                                    class="object-contain rounded-full"
-                                    fill
-                                />
-                            </app-avatar>
-                        }
-                    }
-                    <h3 class="font-medium">
-                        {{
-                            t(messageItemXVM.senderValueKey, {
-                                role: t(messageItemXVM.roleTextKey),
-                                name: messageItemXVM.senderName,
-                            })
-                        }}
-                    </h3>
-                    <p class="text-gray-700">
-                        {{ messageItemXVM.message }}
-                    </p>
-                    <time class="text-gray-600 text-sm">{{
-                        t(messageItemXVM.sendingDateValueKey, {
-                            date: messageItemXVM.sendingDate,
-                        })
-                    }}</time>
-                </app-message-item>
-            }
-        </app-message-item-list>
-        <div class="w-full flex flex-row">
-            <input
-                type="text"
-                [formControl]="messageFormControl"
-                class="px-2 w-full border border-gray-300"
-            />
-            <app-button
-                [vm]="vm.submitButtonVM"
-                (clicked)="onSendMessageClick()"
-                [state]="messageFormControl.valid ? 'default' : 'disabled'"
-            />
-        </div>
-    </app-section-card>
-</ng-template>
-
-<ng-template #orderActions let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <div class="join">
-            <a [href]="vm.completionTemplateButtonVM.link.href" download>
-                <app-button [vm]="vm.completionTemplateButtonVM" />
-            </a>
-
-            <app-button
-                [vm]="vm.closeOrderButtonVM"
-                (clicked)="
-                    openConfirmationDialog(
-                        vm.closeOrderButtonVM.confirmationDialogVM
-                    )
-                "
-            />
-        </div>
-    </app-section-card>
-</ng-template>
-
-<ng-template #orderDetails let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <div class="flex lg:flex-row flex-col space-y-8 lg:space-y-0">
-            @for (infoPanelXVM of vm.infoPanelXVMs; track $index) {
-                <app-info-panel class="lg:w-1/2 w-full">
-                    <h4 class="font-medium">
-                        {{ t(infoPanelXVM.titleKey) }}
-                    </h4>
-                    <app-info-item-list>
-                        @for (
-                            infoItemXVM of infoPanelXVM.infoListXVM
-                                .infoItemXVMs;
-                            track $index
-                        ) {
-                            <app-info-item>
-                                <dt class="text-gray-600 w-32">
-                                    {{ t(infoItemXVM.labelKey) }}
-                                </dt>
-                                <dd>
-                                    <strong class="font-medium">
-                                        @if (
-                                            infoItemXVM.value.type ===
-                                            'withValueKey'
-                                        ) {
-                                            {{
-                                                t(
-                                                    infoItemXVM.value.key,
-                                                    infoItemXVM.value.params
-                                                )
-                                            }}
-                                        } @else {
-                                            {{ infoItemXVM.value.value }}
-                                        }
-                                    </strong>
-                                </dd>
-                            </app-info-item>
-                        }
-                    </app-info-item-list>
-                </app-info-panel>
-            }
-        </div>
-    </app-section-card>
-</ng-template>

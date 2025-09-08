@@ -30,16 +30,16 @@ exports[`ConfirmationDialogComponent should render the template if the correct v
         </h3>
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
             <mat-icon
               aria-hidden="true"
               class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
               data-mat-icon-type="font"
+              left=""
               role="img"
             >
-               add 
+              add
             </mat-icon>
             <!--container-->
           </button>
@@ -57,33 +57,15 @@ exports[`ConfirmationDialogComponent should render the template if the correct v
       >
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-               add 
-            </mat-icon>
             <!--container-->
           </button>
         </app-button>
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-               add 
-            </mat-icon>
             <!--container-->
           </button>
         </app-button>

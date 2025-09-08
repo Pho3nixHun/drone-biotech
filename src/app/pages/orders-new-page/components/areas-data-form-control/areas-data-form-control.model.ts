@@ -1,4 +1,4 @@
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 import {
     AreaData,
     AreaDataDialogVM,
@@ -10,9 +10,9 @@ export interface AreasDataFormControlVM {
     editAreaDataDialogVM: AreaDataDialogVM;
     deleteDialogVM: DeleteDialogVM;
 
-    addButtonVM: ButtonVM;
-    editButtonVM: ButtonVM;
-    deleteButtonVM: ButtonVM;
+    addButtonXVM: ButtonXVM;
+    editButtonXVM: ButtonXVM;
+    deleteButtonXVM: ButtonXVM;
 
     entryPointHeaderKey: string;
     entryPointValueKey: string;

@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 
 export const ENTRY_POINT_MARKER_OPTIONS =
     new InjectionToken<google.maps.marker.AdvancedMarkerElementOptions>(
@@ -12,6 +12,6 @@ export const provideMockEntryPointMarkerOptions = () => ({
 });
 
 export interface MapPointSelectFormControlVM {
-    deleteButtonVM: ButtonVM;
-    addButtonVM: ButtonVM;
+    deleteButtonXVM: ButtonXVM;
+    addButtonXVM: ButtonXVM;
 }

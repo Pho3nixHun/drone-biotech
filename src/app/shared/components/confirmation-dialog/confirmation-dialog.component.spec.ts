@@ -18,13 +18,12 @@ const enMock = {
 const vm: ConfirmationDialogVM = {
     type: 'confirmationDialogVM',
     titleKey: enMock.title,
-    cancelButtonVM: {
-        type: 'withIcon',
+    cancelButtonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
-    closeButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
-    confirmButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    confirmButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     confirmTextKey: enMock.confirmText,
 };
 

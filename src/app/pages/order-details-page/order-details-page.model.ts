@@ -7,8 +7,8 @@ import { WithLink } from '@interfaces/with-link.interface';
 import { AvatarXVM } from '@components/avatar/avatar.model';
 import { Value } from '@interfaces/with-value';
 import {
-    ButtonVM,
-    ButtonVMWithRouterLink,
+    ButtonXVM,
+    ButtonXVMWithRouterLink,
 } from '@components/button/button.model';
 
 export type OrderStatus = OrderStatusFromService;
@@ -41,7 +41,7 @@ interface MessageItemListXVM {
 export interface MessagesSectionCardXVM extends SectionCardVM {
     type: 'messages';
     messageItemListXVM: MessageItemListXVM;
-    submitButtonVM: ButtonVM;
+    submitButtonXVM: ButtonXVM;
 }
 
 interface InfoItemXVM {
@@ -62,15 +62,15 @@ export interface OrderDetailsSectionCardXVM extends SectionCardVM {
     infoPanelXVMs: InfoPanelXVM[];
 }
 
-type CompletionTemplateButtonVM = ButtonVM & WithLink;
+type CompletionTemplateButtonXVM = ButtonXVM & WithLink;
 
-type CloseOrderButtonVM = ButtonVM & {
+type CloseOrderButtonXVM = ButtonXVM & {
     confirmationDialogVM: ConfirmationDialogVM;
 };
 export interface OrderActionsSectionCardXVM extends SectionCardVM {
     type: 'orderActions';
-    completionTemplateButtonVM: CompletionTemplateButtonVM;
-    closeOrderButtonVM: CloseOrderButtonVM;
+    completionTemplateButtonXVM: CompletionTemplateButtonXVM;
+    closeOrderButtonXVM: CloseOrderButtonXVM;
 }
 
 interface StatusXVM extends StatusVM {
@@ -91,7 +91,7 @@ export interface HeaderXVM {
     idTitleKey: string;
     statusXVM: StatusXVM;
     summaryListXVM: SummaryListXVM;
-    addNewMissionsButtonVM: ButtonVMWithRouterLink;
+    addNewMissionsButtonXVM: ButtonXVMWithRouterLink;
 }
 type SectionCardXVM =
     | OrderDetailsSectionCardXVM
@@ -111,7 +111,7 @@ export interface OrderDetailsPageConfig {
         createdDateValueKey: string;
         totalAreaTextKey: string;
         totalAreaValueKey: string;
-        addMissionButtonXVM: ButtonVM;
+        addMissionButtonXVM: ButtonXVM;
     };
     sectionCardConfigs: {
         orderDetailsSectionCardConfig: {

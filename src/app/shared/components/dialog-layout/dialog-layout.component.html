@@ -7,7 +7,11 @@
         <h3 class="text-3xl">
             {{ t(vM.titleKey) }}
         </h3>
-        <app-button (clicked)="onClick()" [vm]="vM.closeButtonVM" />
+        <app-button [vm]="vM.closeButtonXVM" (click)="onClick()">
+            @if (vM.closeButtonXVM.icon) {
+                <mat-icon left>{{ vM.closeButtonXVM.icon }}</mat-icon>
+            }
+        </app-button>
     </div>
     <div class="space-y-4">
         <ng-content />

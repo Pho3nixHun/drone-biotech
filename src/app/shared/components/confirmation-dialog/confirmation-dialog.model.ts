@@ -1,4 +1,4 @@
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 import { DialogLayoutVM } from '@components/dialog-layout/dialog-layout.model';
 import { DialogReason } from '@services/dialog/dialog.service';
 import { isObject } from '@utils/is-object.typeguard';
@@ -6,8 +6,8 @@ import { isObject } from '@utils/is-object.typeguard';
 export interface ConfirmationDialogVM extends DialogLayoutVM {
     type: 'confirmationDialogVM';
     confirmTextKey: string;
-    confirmButtonVM: ButtonVM;
-    cancelButtonVM: ButtonVM;
+    confirmButtonXVM: ButtonXVM;
+    cancelButtonXVM: ButtonXVM;
 }
 
 export interface SubmitReason extends DialogReason {

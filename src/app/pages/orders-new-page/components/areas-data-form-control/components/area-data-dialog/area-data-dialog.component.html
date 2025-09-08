@@ -57,13 +57,21 @@
             </div>
         </form>
         <app-button
-            [vm]="vm.submitButtonVM"
-            [state]="areaDataFormGroup.valid ? 'default' : 'disabled'"
-            (clicked)="submitForm()"
-        />
+            [vm]="vm.submitButtonXVM"
+            [disabled]="areaDataFormGroup.invalid"
+            (click)="submitForm()"
+        >
+            @if (vm.submitButtonXVM.textKey) {
+                <span>{{ t(vm.submitButtonXVM.textKey) }}</span>
+            }
+        </app-button>
         <app-button
-            [vm]="vm.cancelButtonVM"
-            (clicked)="resetFormWithCloseDialog()"
-        />
+            [vm]="vm.cancelButtonXVM"
+            (click)="resetFormWithCloseDialog()"
+        >
+            @if (vm.cancelButtonXVM.textKey) {
+                <span>{{ t(vm.cancelButtonXVM.textKey) }}</span>
+            }
+        </app-button>
     </app-dialog-layout>
 }

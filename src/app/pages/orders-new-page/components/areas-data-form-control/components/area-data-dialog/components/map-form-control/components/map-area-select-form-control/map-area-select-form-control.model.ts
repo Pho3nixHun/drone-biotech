@@ -1,11 +1,11 @@
 import { InjectionToken } from '@angular/core';
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 
 export interface MapAreaSelectFormControlVM {
     areaValueKey: string;
-    addButtonVM: ButtonVM;
-    editButtonVM: ButtonVM;
-    deleteButtonVM: ButtonVM;
+    addButtonXVM: ButtonXVM;
+    editButtonXVM: ButtonXVM;
+    deleteButtonXVM: ButtonXVM;
     coordinatesLabelKey: string;
 }
 

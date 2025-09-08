@@ -21,16 +21,16 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
         </h3>
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
             <mat-icon
               aria-hidden="true"
               class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
               data-mat-icon-type="font"
+              left=""
               role="img"
             >
-               add 
+              add
             </mat-icon>
             <!--container-->
           </button>
@@ -50,33 +50,15 @@ exports[`DeleteDialogComponent when the vm is correct should render the content 
       >
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-               add 
-            </mat-icon>
             <!--container-->
           </button>
         </app-button>
         <app-button>
           <button
-            class="btn btn-primary btn-square"
+            class="btn flex flex-row justify-center btn-primary"
           >
-            <!--container-->
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-               add 
-            </mat-icon>
             <!--container-->
           </button>
         </app-button>

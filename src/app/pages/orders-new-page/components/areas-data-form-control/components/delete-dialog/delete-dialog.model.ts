@@ -1,4 +1,4 @@
-import { ButtonVM } from '@components/button/button.model';
+import { ButtonXVM } from '@components/button/button.model';
 import { DialogLayoutVM } from '@components/dialog-layout/dialog-layout.model';
 import { DialogReason } from '@services/dialog/dialog.service';
 import { isObject } from '@utils/is-object.typeguard';
@@ -7,8 +7,8 @@ export interface DeleteDialogVM extends DialogLayoutVM {
     type: 'deleteDialogVM';
     titleKey: string;
     warningTextKey: string;
-    deleteButtonVM: ButtonVM;
-    cancelButtonVM: ButtonVM;
+    deleteButtonXVM: ButtonXVM;
+    cancelButtonXVM: ButtonXVM;
 }
 
 export interface DeleteDialogReason extends DialogReason {

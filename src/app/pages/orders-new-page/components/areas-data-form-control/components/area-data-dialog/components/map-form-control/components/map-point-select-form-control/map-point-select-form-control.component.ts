@@ -9,12 +9,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { Coordinates } from '@stores/location/location.model';
 import { Component, effect, forwardRef, inject, input } from '@angular/core';
 import { ButtonComponent } from '@components/button/button.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 const noop = () => {};
 
 @Component({
     selector: 'app-map-point-select-form-control',
-    imports: [ButtonComponent],
+    imports: [ButtonComponent, TranslocoModule],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

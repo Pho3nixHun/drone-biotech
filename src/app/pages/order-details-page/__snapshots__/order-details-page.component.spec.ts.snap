@@ -7,8 +7,5 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
 >
   <!--container-->
   <!--container-->
-  <!--container-->
-  <!--container-->
-  <!--container-->
 </div>
 `;

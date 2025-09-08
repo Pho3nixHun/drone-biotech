@@ -19,14 +19,13 @@ export const enMock = {
 };
 
 export const mockVMWithoutAreaData: AreaDataDialogVM = {
-    closeButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     commentLabelKey: enMock.commentLabel,
     coordinatesLabelKey: enMock.coordinatesLabel,
     missionNameLabelKey: enMock.missionNameLabel,
     applicationDateLabelKey: enMock.applicationDateLabel,
     areaData: null,
-    cancelButtonVM: {
-        type: 'withIcon',
+    cancelButtonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
@@ -36,31 +35,26 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
 
         mapAreaSelectFormControlVM: {
             areaValueKey: enMock.areaValue,
-            editButtonVM: {
-                type: 'withIcon',
+            editButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
             coordinatesLabelKey: enMock.coordinatesLabel,
-            addButtonVM: {
-                type: 'withIcon',
+            addButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
-            deleteButtonVM: {
-                type: 'withIcon',
+            deleteButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
         },
         mapPointSelectFormControlVM: {
-            addButtonVM: {
-                type: 'withIcon',
+            addButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
-            deleteButtonVM: {
-                type: 'withIcon',
+            deleteButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
@@ -70,8 +64,7 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
             placeholderKey: enMock.dosePerHqLabel,
         },
     },
-    submitButtonVM: {
-        type: 'withIcon',
+    submitButtonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
@@ -82,7 +75,7 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
 };
 
 export const mockVMWithAreaData: AreaDataDialogVM = {
-    closeButtonVM: { type: 'withIcon', icon: MatIcon.ADD, variant: 'fill' },
+    closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     commentLabelKey: enMock.commentLabel,
     coordinatesLabelKey: enMock.coordinatesLabel,
     missionNameLabelKey: enMock.missionNameLabel,
@@ -96,8 +89,7 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         id: 'id',
         targetArea: [{ lat: 10, lng: 10 }],
     },
-    cancelButtonVM: {
-        type: 'withIcon',
+    cancelButtonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
@@ -107,31 +99,26 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
 
         mapAreaSelectFormControlVM: {
             areaValueKey: enMock.areaValue,
-            editButtonVM: {
-                type: 'withIcon',
+            editButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
             coordinatesLabelKey: enMock.coordinatesLabel,
-            addButtonVM: {
-                type: 'withIcon',
+            addButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
-            deleteButtonVM: {
-                type: 'withIcon',
+            deleteButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
         },
         mapPointSelectFormControlVM: {
-            addButtonVM: {
-                type: 'withIcon',
+            addButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
-            deleteButtonVM: {
-                type: 'withIcon',
+            deleteButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
@@ -142,8 +129,7 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         },
     },
 
-    submitButtonVM: {
-        type: 'withIcon',
+    submitButtonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',
     },

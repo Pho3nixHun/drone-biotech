@@ -34,11 +34,15 @@
                     class="block w-full border border-gray-300 p-2 rounded-md"
                 />
                 <app-button
-                    [vm]="vm.loginFormXVM.submitButtonVM"
                     class="*:btn-block"
-                    [state]="loginForm.valid ? 'default' : 'disabled'"
-                    (clicked)="signIn()"
-                />
+                    [vm]="formXVM.submitButtonXVM"
+                    [disabled]="loginForm.invalid"
+                    (click)="signIn()"
+                >
+                    @if (formXVM.submitButtonXVM.textKey) {
+                        <span>{{ t(formXVM.submitButtonXVM.textKey) }}</span>
+                    }
+                </app-button>
             </form>
         </app-login-form>
     </section>

@@ -1,13 +1,21 @@
 @let vM = vm();
-<div class="join">
+<div class="join" *transloco="let t">
     <app-button
-        [vm]="vM.addButtonVM"
-        (clicked)="drawMarker(null)"
-        [state]="entryPointSignal() ? 'disabled' : 'default'"
-    />
+        [vm]="vM.addButtonXVM"
+        [disabled]="!!entryPointSignal()"
+        (click)="drawMarker(null)"
+    >
+        @if (vM.addButtonXVM.textKey) {
+            <span>{{ t(vM.addButtonXVM.textKey) }}</span>
+        }
+    </app-button>
     <app-button
-        [vm]="vM.deleteButtonVM"
-        (clicked)="deleteMarker()"
-        [state]="entryPointSignal() ? 'default' : 'disabled'"
-    />
+        [vm]="vM.deleteButtonXVM"
+        [disabled]="!entryPointSignal()"
+        (click)="deleteMarker()"
+    >
+        @if (vM.deleteButtonXVM.textKey) {
+            <span>{{ t(vM.deleteButtonXVM.textKey) }}</span>
+        }
+    </app-button>
 </div>
