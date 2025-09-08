@@ -62,7 +62,7 @@
             (click)="submitForm()"
         >
             @if (vm.submitButtonXVM.textKey) {
-                <span>{{ t(vm.submitButtonXVM.textKey) }}</span>
+                {{ t(vm.submitButtonXVM.textKey) }}
             }
         </app-button>
         <app-button
@@ -70,7 +70,7 @@
             (click)="resetFormWithCloseDialog()"
         >
             @if (vm.cancelButtonXVM.textKey) {
-                <span>{{ t(vm.cancelButtonXVM.textKey) }}</span>
+                {{ t(vm.cancelButtonXVM.textKey) }}
             }
         </app-button>
     </app-dialog-layout>

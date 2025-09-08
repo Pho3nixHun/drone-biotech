@@ -8,12 +8,12 @@
         <p>{{ t(vm.confirmTextKey) }}</p>
         <app-button [vm]="vm.confirmButtonXVM" (click)="onConfirmClick()">
             @if (vm.confirmButtonXVM.textKey) {
-                <span>{{ t(vm.confirmButtonXVM.textKey) }}</span>
+                {{ t(vm.confirmButtonXVM.textKey) }}
             }
         </app-button>
         <app-button [vm]="vm.cancelButtonXVM" (click)="onCancelClick()">
             @if (vm.cancelButtonXVM.textKey) {
-                <span>{{ t(vm.cancelButtonXVM.textKey) }}</span>
+                {{ t(vm.cancelButtonXVM.textKey) }}
             }
         </app-button>
     </app-dialog-layout>

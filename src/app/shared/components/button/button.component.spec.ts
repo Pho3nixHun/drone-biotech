@@ -15,8 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
     imports: [ButtonComponent, MatIconModule],
     template: `
         <app-button [vm]="vm()" [disabled]="disabled()" [active]="active()">
-            <div>should not be displayed</div>
-            <span>text</span>
+            text
             <mat-icon>search</mat-icon>
         </app-button>
     `,

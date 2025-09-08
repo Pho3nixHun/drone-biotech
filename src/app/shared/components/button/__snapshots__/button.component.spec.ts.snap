@@ -10,9 +10,7 @@ exports[`ButtonComponent should render a disabled button 1`] = `
       class="btn flex flex-row justify-center btn-primary btn-disabled"
       disabled=""
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
@@ -35,9 +33,7 @@ exports[`ButtonComponent should render a filled button 1`] = `
     <button
       class="btn flex flex-row justify-center btn-primary"
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
@@ -60,9 +56,7 @@ exports[`ButtonComponent should render a ghost button 1`] = `
     <button
       class="btn flex flex-row justify-center btn-primary btn-text"
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
@@ -85,9 +79,7 @@ exports[`ButtonComponent should render a primary button 1`] = `
     <button
       class="btn flex flex-row justify-center btn-primary"
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
@@ -110,9 +102,7 @@ exports[`ButtonComponent should render a secondary button 1`] = `
     <button
       class="btn flex flex-row justify-center btn-secondary btn-outline"
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
@@ -135,9 +125,7 @@ exports[`ButtonComponent should render an active button 1`] = `
     <button
       class="btn flex flex-row justify-center btn-primary btn-active"
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
@@ -160,9 +148,7 @@ exports[`ButtonComponent should render an outline button 1`] = `
     <button
       class="btn flex flex-row justify-center btn-primary btn-outline"
     >
-      <span>
-        text
-      </span>
+       text 
       <mat-icon
         aria-hidden="true"
         class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"

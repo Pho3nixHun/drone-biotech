@@ -84,9 +84,7 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                   class="btn flex flex-row justify-center btn-primary btn-disabled"
                   disabled=""
                 >
-                  <span>
-                    butt
-                  </span>
+                   butt 
                   <!--container-->
                 </button>
               </app-button>

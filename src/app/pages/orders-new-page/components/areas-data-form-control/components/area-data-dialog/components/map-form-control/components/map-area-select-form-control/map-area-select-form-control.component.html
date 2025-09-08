@@ -21,7 +21,7 @@
             (click)="drawPolygon(null)"
         >
             @if (vM.addButtonXVM.textKey) {
-                <span>{{ t(vM.addButtonXVM.textKey) }}</span>
+                {{ t(vM.addButtonXVM.textKey) }}
             }
         </app-button>
 
@@ -31,7 +31,7 @@
             (click)="editPolygon()"
         >
             @if (vM.editButtonXVM.textKey) {
-                <span>{{ t(vM.editButtonXVM.textKey) }}</span>
+                {{ t(vM.editButtonXVM.textKey) }}
             }
         </app-button>
 
@@ -41,7 +41,7 @@
             (click)="deletePolygon()"
         >
             @if (vM.deleteButtonXVM.textKey) {
-                <span>{{ t(vM.deleteButtonXVM.textKey) }}</span>
+                {{ t(vM.deleteButtonXVM.textKey) }}
             }
         </app-button>
     </div>

@@ -16,9 +16,7 @@
             <a [routerLink]="vm.headerXVM.addNewMissionsButtonXVM.routerLink">
                 <app-button [vm]="vm.headerXVM.addNewMissionsButtonXVM">
                     @if (vm.headerXVM.addNewMissionsButtonXVM.textKey) {
-                        <span>{{
-                            t(vm.headerXVM.addNewMissionsButtonXVM.textKey)
-                        }}</span>
+                        {{ t(vm.headerXVM.addNewMissionsButtonXVM.textKey) }}
                     }
                 </app-button>
             </a>
@@ -124,13 +122,13 @@
                                         sectionCardXVM
                                             .completionTemplateButtonXVM.textKey
                                     ) {
-                                        <span>{{
+                                        {{
                                             t(
                                                 sectionCardXVM
                                                     .completionTemplateButtonXVM
                                                     .textKey
                                             )
-                                        }}</span>
+                                        }}
                                     }
                                 </app-button>
                             </a>
@@ -147,12 +145,12 @@
                                 @if (
                                     sectionCardXVM.closeOrderButtonXVM.textKey
                                 ) {
-                                    <span>{{
+                                    {{
                                         t(
                                             sectionCardXVM.closeOrderButtonXVM
                                                 .textKey
                                         )
-                                    }}</span>
+                                    }}
                                 }
                             </app-button>
                         </div>

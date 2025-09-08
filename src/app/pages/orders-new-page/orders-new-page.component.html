@@ -88,9 +88,7 @@
                     (click)="submitForm()"
                 >
                     @if (vm.frameXVM.submitButtonXVM.textKey) {
-                        <span>{{
-                            t(vm.frameXVM.submitButtonXVM.textKey)
-                        }}</span>
+                        {{ t(vm.frameXVM.submitButtonXVM.textKey) }}
                     }
                 </app-button>
             </form>
