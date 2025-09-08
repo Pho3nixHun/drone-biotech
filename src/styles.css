@@ -20,7 +20,7 @@ html {
     }
 
     app-hero p {
-        @apply bg-black bg-opacity-60 font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
+        @apply bg-black font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
     }
 }
 

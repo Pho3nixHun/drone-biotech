@@ -4,8 +4,6 @@ import { Component, inject } from '@angular/core';
 import { NgClass, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { firstValueFrom } from 'rxjs';
-import { Store } from '@ngrx/store';
-import { selectUser } from '@stores/auth/auth.selector';
 import { DialogService } from '@services/dialog/dialog.service';
 import { SummaryListComponent } from '@components/summary-list/summary-list.component';
 import { StatusComponent } from '@components/status/status.component';
@@ -26,6 +24,7 @@ import {
     ConfirmationDialogReason,
     ConfirmationDialogVM,
 } from '@components/confirmation-dialog/confirmation-dialog.model';
+import { AuthStore } from '@stores/auth/auth.store';
 
 @Component({
     selector: 'app-order-details-page',
@@ -55,7 +54,7 @@ export class OrderDetailsPageComponent {
     private readonly fb = inject(FormBuilder);
     private readonly dialogService = inject(DialogService);
     private readonly orderDetailsPageService = inject(OrderDetailsPageService);
-    private readonly store = inject(Store);
+    private readonly store = inject(AuthStore);
 
     protected readonly vm = toSignal(this.orderDetailsPageService.getVM());
 
@@ -71,8 +70,7 @@ export class OrderDetailsPageComponent {
 
         if (!message) return;
 
-        const sender = await firstValueFrom(this.store.select(selectUser));
-
+        const sender = this.store.user();
         if (!sender) return;
 
         this.orderDetailsPageService.sendMessage({

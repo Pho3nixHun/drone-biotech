@@ -6,7 +6,6 @@ import {
     provideOrdersNewPageMockService,
     updateVMSignal,
 } from './orders-new-page.service.mock';
-import { LocationStoreMockModule } from 'src/app/stores/location/location.module';
 
 describe('OrdersNewPageComponent', () => {
     let component: OrdersNewPageComponent;
@@ -17,7 +16,6 @@ describe('OrdersNewPageComponent', () => {
         await TestBed.configureTestingModule({
             imports: [
                 OrdersNewPageComponent,
-                LocationStoreMockModule,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {

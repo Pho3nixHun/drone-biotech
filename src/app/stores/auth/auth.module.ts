@@ -1,15 +1,7 @@
-import { NgModule } from '@angular/core';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
-import * as Effects from './auth.effects';
-import { authFeature } from './auth.state';
-import { AuthModule } from '@angular/fire/auth';
+import { inject, NgModule } from '@angular/core';
+import { AuthStore } from './auth.store';
 
-@NgModule({
-    imports: [
-        AuthModule,
-        EffectsModule.forFeature([Effects]),
-        StoreModule.forFeature(authFeature),
-    ],
-})
-export class AuthStoreModule {}
+@NgModule()
+export class AuthModule {
+    private readonly _ = inject(AuthStore);
+}
