@@ -39,14 +39,6 @@ export class OrderDetailsPageService {
         this.statusSubject
     );
 
-    private readonly addMissionButtonVisibility$ = this.status$.pipe(
-        map((status) => status !== 'completed')
-    );
-
-    private readonly closeOrderButtonIsDisabled$ = this.status$.pipe(
-        map((status) => status === 'completed')
-    );
-
     private readonly messages$: Observable<Message[]> = merge(
         this.order$.pipe(
             map((order) =>
@@ -74,36 +66,17 @@ export class OrderDetailsPageService {
     private readonly vm$: Observable<OrderDetailsPageVM> = combineLatest([
         this.order$,
         this.status$,
-        this.addMissionButtonVisibility$,
-        this.closeOrderButtonIsDisabled$,
         this.messages$,
         of(this.config),
     ]).pipe(
-        map(
-            ([
-                order,
-                status,
-                addMissionButtonVisibility,
-                closeOrderButtonIsDisabled,
-                messages,
-                config,
-            ]) => ({
-                ...config,
-                headerXVM: mapHeaderXVM(
-                    config,
-                    order,
-                    status,
-                    addMissionButtonVisibility
-                ),
-                sectionCardXVMs: [
-                    mapOrderDetailsSectionCardXVM(config, order),
-                    mapOrderActionsSectionCardXVM(
-                        config,
-                        closeOrderButtonIsDisabled
-                    ),
-                    mapMessagesSectionCardXVM(config, messages),
-                ],
-            })
-        )
+        map(([order, status, messages, config]) => ({
+            ...config,
+            headerXVM: mapHeaderXVM(config, order, status),
+            sectionCardXVMs: [
+                mapOrderDetailsSectionCardXVM(config, order),
+                mapOrderActionsSectionCardXVM(config),
+                mapMessagesSectionCardXVM(config, messages),
+            ],
+        }))
     );
 }

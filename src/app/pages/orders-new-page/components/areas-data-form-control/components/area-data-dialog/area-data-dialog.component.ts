@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -14,15 +13,16 @@ import { MapFormControlComponent } from './components/map-form-control/map-form-
 import { v4 as uuidv4 } from 'uuid';
 import { Coordinates } from '@stores/location/location.model';
 import { isNullish } from '@utils/is-nullish.typeguard';
+import { ButtonComponent } from '@components/button/button.component';
 
 @Component({
     selector: 'app-area-data-dialog',
     imports: [
-        NgClass,
         ReactiveFormsModule,
         TranslocoModule,
         DialogLayoutComponent,
         MapFormControlComponent,
+        ButtonComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
 })

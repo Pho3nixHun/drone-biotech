@@ -14,6 +14,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
 import { isProductFrame } from './landing-page-vm.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { ButtonComponent } from '@components/button/button.component';
 
 /**
  * LandingPageComponent
@@ -48,6 +49,7 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
         TranslocoModule,
         TestimonialItemComponent,
         PageLayoutComponent,
+        ButtonComponent,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './landing-page.component.html',

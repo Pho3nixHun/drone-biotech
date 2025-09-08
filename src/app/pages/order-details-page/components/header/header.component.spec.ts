@@ -5,13 +5,20 @@ import { Component } from '@angular/core';
 import { StatusComponent } from '@components/status/status.component';
 import { SummaryListComponent } from '@components/summary-list/summary-list.component';
 import { StatusVM } from '@components/status/status.model';
+import { ButtonComponent } from '@components/button/button.component';
 
 @Component({
-    imports: [HeaderComponent, StatusComponent, SummaryListComponent],
+    imports: [
+        HeaderComponent,
+        StatusComponent,
+        SummaryListComponent,
+        ButtonComponent,
+    ],
     template: `
         <app-header
             ><h2>Title</h2>
-            <app-status [vm]="vm">Status</app-status><button>Button</button
+            <app-status [vm]="vm">Status</app-status
+            ><a href="">Should be projected</a
             ><app-summary-list></app-summary-list
         ></app-header>
     `,

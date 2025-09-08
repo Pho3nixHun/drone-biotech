@@ -36,6 +36,7 @@ import {
     METRES_TO_KILOMETERS,
     SQUARE_METRES_TO_HECTARE,
 } from '@stores/location/location.model';
+import { ButtonComponent } from '@components/button/button.component';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
@@ -49,6 +50,7 @@ const noop = () => {};
         KeyValueComponent,
         MatIconModule,
         AsyncPipe,
+        ButtonComponent,
     ],
     providers: [
         {

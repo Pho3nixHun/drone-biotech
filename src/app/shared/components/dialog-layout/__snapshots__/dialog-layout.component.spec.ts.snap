@@ -7,7 +7,7 @@ exports[`DialogLayoutComponent should render the template when the VM is provide
 >
   <app-dialog-layout>
     <section
-      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 @container/dialog"
+      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 flex flex-col"
     >
       <div
         class="flex justify-between"
@@ -17,32 +17,36 @@ exports[`DialogLayoutComponent should render the template when the VM is provide
         >
            value 
         </h3>
-        <button>
-          <mat-icon
-            aria-hidden="true"
-            class="mat-icon notranslate text-3xl material-icons mat-ligature-font mat-icon-no-color"
-            data-mat-icon-type="font"
-            role="img"
-            style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;"
+        <app-button>
+          <button
+            class="btn flex flex-row justify-center btn-primary"
           >
-            close
-          </mat-icon>
-        </button>
+            <mat-icon
+              aria-hidden="true"
+              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+              data-mat-icon-type="font"
+              left=""
+              role="img"
+            >
+              close
+            </mat-icon>
+            <!--container-->
+          </button>
+        </app-button>
       </div>
       <div
         class="space-y-4"
       >
+        <button>
+          Should be projected
+        </button>
         <div>
           Should be projected
         </div>
       </div>
       <div
-        class="flex justify-between @lg/dialog:justify-end @lg/dialog:space-x-3"
-      >
-        <button>
-          Should be projected
-        </button>
-      </div>
+        class="ml-auto join"
+      />
     </section>
     <!--container-->
   </app-dialog-layout>

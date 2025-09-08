@@ -24,19 +24,35 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -411,19 +427,35 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -753,19 +785,35 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -1065,19 +1113,35 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -1296,19 +1360,35 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
               heroDescription
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroPrimaryButtonLabel
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroPrimaryButtonLabel
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                heroSecondaryButtonLabel
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      heroSecondaryButtonLabel
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -1703,19 +1783,35 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -2054,19 +2150,35 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -2391,19 +2503,35 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -2648,19 +2776,35 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -2799,19 +2943,35 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -3186,19 +3346,35 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -3623,19 +3799,35 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -3984,19 +4176,35 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -4818,19 +5026,35 @@ exports[`LandingPageComponent should render only partner frames when only partne
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -4969,19 +5193,35 @@ exports[`LandingPageComponent should render only product frames when only produc
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -5120,19 +5360,35 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>
@@ -5507,19 +5763,35 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               herodesc0
             </p>
             <div
-              class="flex flex-col space-y-5 sm:flex-row sm:space-y-0 space-x-0 sm:space-x-5"
+              class="join"
             >
               <a
-                class="btn btn-primary"
                 href=""
               >
-                heroprim0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-primary"
+                  >
+                    <span>
+                      heroprim0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
               <a
-                class="btn btn-default"
                 href=""
               >
-                herosec0
+                <app-button>
+                  <button
+                    class="btn flex flex-row justify-center btn-secondary"
+                  >
+                    <span>
+                      herosec0
+                    </span>
+                    <!--container-->
+                  </button>
+                </app-button>
               </a>
             </div>
           </div>

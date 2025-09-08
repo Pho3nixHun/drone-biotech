@@ -14,6 +14,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import { isWithLink } from '@interfaces/with-link.interface';
 import { injectDispatch } from '@ngrx/signals/events';
 import { authEvents } from '@stores/auth/auth.events';
+import { ButtonComponent } from '@components/button/button.component';
 
 @Component({
     selector: 'app-root',
@@ -26,6 +27,7 @@ import { authEvents } from '@stores/auth/auth.events';
         MatIconModule,
         RouterModule,
         NgTemplateOutlet,
+        ButtonComponent,
     ],
     templateUrl: './app.component.html',
 })

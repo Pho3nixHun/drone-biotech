@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MapPointSelectFormControlService } from './map-point-select-form-control.service';
-import { TranslocoModule } from '@jsverse/transloco';
 import {
     ENTRY_POINT_MARKER_OPTIONS,
     MapPointSelectFormControlVM,
 } from './map-point-select-form-control.model';
-import { NgClass } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Coordinates } from '@stores/location/location.model';
 import { Component, effect, forwardRef, inject, input } from '@angular/core';
+import { ButtonComponent } from '@components/button/button.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 const noop = () => {};
 
 @Component({
     selector: 'app-map-point-select-form-control',
-    imports: [TranslocoModule, NgClass],
+    imports: [ButtonComponent, TranslocoModule],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

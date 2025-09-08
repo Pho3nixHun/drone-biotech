@@ -1,5 +1,6 @@
 import { WithTitle } from '@interfaces/with-title.interface';
 import { AreasDataFormControlVM } from './components/areas-data-form-control/areas-data-form-control.model';
+import { ButtonXVM } from '@components/button/button.model';
 
 export interface OrdersNewPageVM {
     frameXVM: FrameXVM;
@@ -7,7 +8,7 @@ export interface OrdersNewPageVM {
 
 export interface OrdersNewFrame extends WithTitle {
     areasDataFormControlVM: AreasDataFormControlVM;
-    submitButtonTextKey: string;
+    submitButtonXVM: ButtonXVM;
     internalOrderNumberLabelKey: string;
     nameLabelKey: string;
     phoneNumberLabelKey: string;

@@ -19,13 +19,18 @@
                         >
                         </ng-container>
                     }
-                    <button
-                        mat-icon-button
-                        (click)="signOut()"
-                        class="nav-item"
-                    >
-                        <mat-icon>logout</mat-icon>
-                    </button>
+                    @if (vm.signOutButtonXVM) {
+                        <app-button
+                            [vm]="vm.signOutButtonXVM"
+                            (click)="signOut()"
+                        >
+                            @if (vm.signOutButtonXVM.icon) {
+                                <mat-icon>{{
+                                    vm.signOutButtonXVM.icon
+                                }}</mat-icon>
+                            }
+                        </app-button>
+                    }
                 </app-nav>
             </app-header>
         }

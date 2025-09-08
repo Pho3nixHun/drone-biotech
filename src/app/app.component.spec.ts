@@ -12,6 +12,8 @@ import {
     appMockVMWithOneAnchor,
     appMockVMWithFiveAnchor,
     appMockVMWithNavItemAndAnchor,
+    appMockVMWithSignoutButton,
+    appMockVMWithoutSignoutButton,
 } from './app.mock';
 import {
     provideAppComponentMockService,
@@ -182,6 +184,32 @@ describe('AppComponent', () => {
         //Arrange
         mockStore.overrideSelector(selectHeaderCanBeShown, true);
         updateGetVMSignal(appMockVMWithNavItemAndAnchor);
+
+        //Act
+        mockStore.refreshState();
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    //Snapshot test
+    it(`should render sign out button if it is provided in the vm`, () => {
+        //Arrange
+        mockStore.overrideSelector(selectHeaderCanBeShown, true);
+        updateGetVMSignal(appMockVMWithSignoutButton);
+
+        //Act
+        mockStore.refreshState();
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    //Snapshot test
+    it(`should not render sign out button if it is not provided in the vm`, () => {
+        //Arrange
+        mockStore.overrideSelector(selectHeaderCanBeShown, true);
+        updateGetVMSignal(appMockVMWithoutSignoutButton);
 
         //Act
         mockStore.refreshState();

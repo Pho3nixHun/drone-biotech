@@ -2,6 +2,7 @@ import { Component, input, output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslocoModule } from '@jsverse/transloco';
 import { DialogLayoutVM } from './dialog-layout.model';
+import { ButtonComponent } from '@components/button/button.component';
 
 /**
  * DialogLayoutComponent
@@ -21,7 +22,7 @@ import { DialogLayoutVM } from './dialog-layout.model';
  */
 @Component({
     selector: 'app-dialog-layout',
-    imports: [MatIconModule, TranslocoModule],
+    imports: [MatIconModule, TranslocoModule, ButtonComponent],
     templateUrl: './dialog-layout.component.html',
 })
 export class DialogLayoutComponent {

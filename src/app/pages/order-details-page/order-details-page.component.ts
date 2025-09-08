@@ -1,7 +1,7 @@
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Component, inject } from '@angular/core';
-import { NgClass, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import { firstValueFrom } from 'rxjs';
 import { DialogService } from '@services/dialog/dialog.service';
@@ -25,6 +25,9 @@ import {
     ConfirmationDialogVM,
 } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { AuthStore } from '@stores/auth/auth.store';
+import { ButtonComponent } from '@components/button/button.component';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-order-details-page',
@@ -41,12 +44,12 @@ import { AuthStore } from '@stores/auth/auth.store';
         InfoPanelComponent,
         InfoItemListComponent,
         InfoItemComponent,
-        NgTemplateOutlet,
         ReactiveFormsModule,
-        NgClass,
         AvatarComponent,
         NgOptimizedImage,
-        NgClass,
+        ButtonComponent,
+        RouterModule,
+        MatIconModule,
     ],
     templateUrl: './order-details-page.component.html',
 })

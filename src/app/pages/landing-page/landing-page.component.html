@@ -4,12 +4,24 @@
             <app-hero [vm]="heroXVM" *transloco="let t">
                 <h1>{{ t(heroXVM.titleKey) }}</h1>
                 <p>{{ t(heroXVM.descriptionKey) }}</p>
-                <a href="" class="btn btn-primary">{{
-                    t(heroXVM.primaryButtonLabelKey)
-                }}</a>
-                <a href="" class="btn btn-default">{{
-                    t(heroXVM.secondaryButtonLabelKey)
-                }}</a>
+                <a href="">
+                    <app-button [vm]="heroXVM.primaryButtonXVM">
+                        @if (heroXVM.primaryButtonXVM.textKey) {
+                            <span>{{
+                                t(heroXVM.primaryButtonXVM.textKey)
+                            }}</span>
+                        }
+                    </app-button>
+                </a>
+                <a href="">
+                    <app-button [vm]="heroXVM.secondaryButtonXVM">
+                        @if (heroXVM.secondaryButtonXVM.textKey) {
+                            <span>{{
+                                t(heroXVM.secondaryButtonXVM.textKey)
+                            }}</span>
+                        }
+                    </app-button>
+                </a>
             </app-hero>
         }
 

@@ -1,19 +1,21 @@
-<div class="flex flex-col space-y-4 bg-white" *transloco="let t">
-    <button
-        (click)="drawMarker(null)"
-        class="btn"
-        [ngClass]="entryPointSignal() ? 'btn-disabled' : 'btn-primary'"
+@let vM = vm();
+<div class="join" *transloco="let t">
+    <app-button
+        [vm]="vM.addButtonXVM"
         [disabled]="!!entryPointSignal()"
+        (click)="drawMarker(null)"
     >
-        {{ t(vm().addButtonTextKey) }}
-    </button>
-
-    <button
-        (click)="deleteMarker()"
-        class="btn"
-        [ngClass]="entryPointSignal() ? 'btn-error' : 'btn-disabled'"
+        @if (vM.addButtonXVM.textKey) {
+            {{ t(vM.addButtonXVM.textKey) }}
+        }
+    </app-button>
+    <app-button
+        [vm]="vM.deleteButtonXVM"
         [disabled]="!entryPointSignal()"
+        (click)="deleteMarker()"
     >
-        {{ t(vm().deleteButtonTextKey) }}
-    </button>
+        @if (vM.deleteButtonXVM.textKey) {
+            {{ t(vM.deleteButtonXVM.textKey) }}
+        }
+    </app-button>
 </div>

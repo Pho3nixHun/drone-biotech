@@ -61,23 +61,33 @@ exports[`MapFormControlComponent should render the template correctly when the V
             id="[object Object]"
           />
         </div>
-        <button
-          class="btn btn-primary"
+        <div
+          class="join"
         >
-           add 
-        </button>
-        <button
-          class="btn btn-disabled"
-          disabled=""
-        >
-           edit 
-        </button>
-        <button
-          class="btn btn-disabled"
-          disabled=""
-        >
-           delete 
-        </button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary btn-disabled"
+              disabled=""
+            >
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary btn-disabled"
+              disabled=""
+            >
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
       </div>
       <!--container-->
     </app-map-area-select-form-control>
@@ -85,19 +95,23 @@ exports[`MapFormControlComponent should render the template correctly when the V
       class="ng-untouched ng-dirty ng-invalid"
     >
       <div
-        class="flex flex-col space-y-4 bg-white"
+        class="join"
       >
-        <button
-          class="btn btn-primary"
-        >
-           add 
-        </button>
-        <button
-          class="btn btn-disabled"
-          disabled=""
-        >
-           delete 
-        </button>
+        <app-button>
+          <button
+            class="btn flex flex-row justify-center btn-primary"
+          >
+            <!--container-->
+          </button>
+        </app-button>
+        <app-button>
+          <button
+            class="btn flex flex-row justify-center btn-primary btn-disabled"
+            disabled=""
+          >
+            <!--container-->
+          </button>
+        </app-button>
       </div>
       <!--container-->
     </app-map-point-select-form-control>

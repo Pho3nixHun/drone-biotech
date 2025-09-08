@@ -33,17 +33,16 @@
                     formControlName="password"
                     class="block w-full border border-gray-300 p-2 rounded-md"
                 />
-
-                <button
-                    (click)="signIn()"
+                <app-button
+                    class="*:btn-block"
+                    [vm]="formXVM.submitButtonXVM"
                     [disabled]="loginForm.invalid"
-                    class="btn w-full"
-                    [ngClass]="[
-                        loginForm.valid ? 'btn-secondary' : 'btn-disabled',
-                    ]"
+                    (click)="signIn()"
                 >
-                    {{ t(formXVM.buttonTitleKey) }}
-                </button>
+                    @if (formXVM.submitButtonXVM.textKey) {
+                        {{ t(formXVM.submitButtonXVM.textKey) }}
+                    }
+                </app-button>
             </form>
         </app-login-form>
     </section>

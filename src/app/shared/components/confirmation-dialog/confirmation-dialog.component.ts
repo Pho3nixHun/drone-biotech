@@ -7,10 +7,11 @@ import {
     isConfirmationDialogVM,
 } from './confirmation-dialog.model';
 import { TranslocoModule } from '@jsverse/transloco';
+import { ButtonComponent } from '@components/button/button.component';
 
 @Component({
     selector: 'app-confirmation-dialog',
-    imports: [DialogLayoutComponent, TranslocoModule],
+    imports: [DialogLayoutComponent, TranslocoModule, ButtonComponent],
     templateUrl: './confirmation-dialog.component.html',
 })
 export class ConfirmationDialogComponent {

@@ -8,10 +8,9 @@ import {
     provideMockDialogRef,
     updateDialogDataSignal,
 } from 'src/app/shared/providers/dialog-provider';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const enMock = {
-    cancelButton: 'cancel',
-    submitButton: 'submit',
     title: 'tit',
     warningText: 'warning',
 };
@@ -21,8 +20,18 @@ describe('DeleteDialogComponent', () => {
     let compiled: HTMLElement;
     let component: DeleteDialogComponent;
     const vm: DeleteDialogVM = {
-        cancelButtonTextKey: enMock.cancelButton,
-        submitButtonTextKey: enMock.submitButton,
+        cancelButtonXVM: {
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
+        closeButtonXVM: {
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
+        deleteButtonXVM: {
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
         titleKey: enMock.title,
         type: 'deleteDialogVM',
         warningTextKey: enMock.warningText,

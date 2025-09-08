@@ -27,9 +27,11 @@ exports[`HeaderComponent should render the template correctly 1`] = `
               Status
             </p>
           </app-status>
-          <button>
-            Button
-          </button>
+          <a
+            href=""
+          >
+            Should be projected
+          </a>
         </div>
       </div>
       <app-summary-list>

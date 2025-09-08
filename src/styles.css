@@ -3,6 +3,11 @@
 /* stylelint-disable-next-line import-notation */
 @import "tailwindcss";
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@plugin "flyonui" {
+    /* stylelint-disable-next-line property-no-unknown */
+    themes: corporate --default;
+}
 
 html {
     scroll-behavior: smooth;

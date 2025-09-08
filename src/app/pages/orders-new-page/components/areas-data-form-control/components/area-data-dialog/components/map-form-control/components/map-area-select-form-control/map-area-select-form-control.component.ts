@@ -32,13 +32,14 @@ import {
     mapStringToCoordinates,
 } from '../../map-form-control.model';
 import { map } from 'rxjs';
+import { ButtonComponent } from '@components/button/button.component';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
 @Component({
     selector: 'app-map-area-select-form-control',
-    imports: [TranslocoModule, NgClass, ReactiveFormsModule],
+    imports: [TranslocoModule, NgClass, ReactiveFormsModule, ButtonComponent],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
