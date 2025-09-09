@@ -2,270 +2,396 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrdersNewPageVM } from './orders-new-page-vm.model';
 
 export const ordersNewPageVMDefault: OrdersNewPageVM = {
-    frameXVM: {
-        titleKey: 'OrdersNewPage.title',
-        submitButtonXVM: {
-            textKey: 'OrdersNewPage.submitButtonText',
-            secondary: false,
-            variant: 'fill',
+    titleKey: 'OrdersNewPage.title',
+    requiredAssistiveTextKey: 'OrdersNewPage.requiredAssistiveText',
+    internalOrderNumberInputTextXVM: {
+        id: 'internalOrderNumber',
+        autocomplete: 'off',
+        readonly: false,
+        type: 'text',
+        labelKey: 'OrdersNewPage.internalOrderNumberLabel',
+        placeholderKey: 'OrdersNewPage.internalOrderNumberPlaceholder',
+    },
+    nameInputTextXVM: {
+        id: 'name',
+        autocomplete: 'name',
+        labelKey: 'OrdersNewPage.nameLabel',
+        placeholderKey: 'OrdersNewPage.endCustomerPlaceholder',
+        readonly: false,
+        type: 'text',
+    },
+    emailInputTextXVM: {
+        id: 'email',
+        autocomplete: 'email',
+        placeholderKey: 'OrdersNewPage.emailPlaceholder',
+        readonly: false,
+        type: 'email',
+        labelKey: 'OrdersNewPage.emailLabel',
+    },
+    phoneNumberInputTextXVM: {
+        id: 'phoneNumber',
+        autocomplete: 'tel',
+        readonly: false,
+        type: 'text',
+        placeholderKey: 'OrdersNewPage.phoneNumberPlaceholder',
+        labelKey: 'OrdersNewPage.phoneNumberLabel',
+    },
+    endCustomerInputTextXVM: {
+        id: 'endCustomer',
+        autocomplete: 'name',
+        readonly: false,
+        type: 'text',
+        placeholderKey: 'OrdersNewPage.endCustomerPlaceholder',
+        labelKey: 'OrdersNewPage.endCustomerLabel',
+    },
+    submitButtonXVM: {
+        textKey: 'OrdersNewPage.submitButtonText',
+        secondary: false,
+        variant: 'fill',
+    },
+    areasDataFormControlXVM: {
+        labelKey: 'OrdersNewPage.areasDataLabel',
+        actionsHeaderKey: 'OrdersNewPage.areasDataFormControl.actionsHeader',
+        targetAreaSizeHeaderKey:
+            'OrdersNewPage.areasDataFormControl.targetAreaSizeHeader',
+        entryPointHeaderKey:
+            'OrdersNewPage.areasDataFormControl.entryPointHeader',
+        doseHeaderKey: 'OrdersNewPage.areasDataFormControl.doseHeader',
+        applicationDateHeaderKey:
+            'OrdersNewPage.areasDataFormControl.applicationDateHeader',
+        trichogrammaRequirementHeaderKey:
+            'OrdersNewPage.areasDataFormControl.trichogrammaRequirementHeader',
+        distanceFromHeadOfficeHeaderKey:
+            'OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeHeader',
+        totalDistanceFromHeadOfficeHeaderKey:
+            'OrdersNewPage.areasDataFormControl.totalDistanceFromHeadOfficeHeader',
+        totalTargetAreaSizeHeaderKey:
+            'OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader',
+        totalTrichogrammaRequirementHeaderKey:
+            'OrdersNewPage.areasDataFormControl.totalTrichogrammaRequirementHeader',
+        applicationDateValueKey:
+            'OrdersNewPage.areasDataFormControl.applicationDateValue',
+        distanceFromHeadOfficeValueKey:
+            'OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeValue',
+        doseValueKey: 'OrdersNewPage.areasDataFormControl.doseValue',
+        targetAreaSizeValueKey:
+            'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
+        trichogrammaRequirementValueKey:
+            'OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue',
+        commentHeaderKey: 'OrdersNewPage.areasDataFormControl.commentHeader',
+        missionHeaderKey: 'OrdersNewPage.areasDataFormControl.missionHeader',
+        addButtonXVM: {
+            icon: MatIcon.ADD,
+            variant: 'ghost',
         },
-        emailLabelKey: 'OrdersNewPage.emailLabel',
-        endCustomerLabelKey: 'OrdersNewPage.endCustomerLabel',
-        nameLabelKey: 'OrdersNewPage.nameLabel',
-        phoneNumberLabelKey: 'OrdersNewPage.phoneNumberLabel',
-        internalOrderNumberLabelKey: 'OrdersNewPage.internalOrderNumberLabel',
-        areasDataLabelKey: 'OrdersNewPage.areasDataLabel',
+        deleteButtonXVM: {
+            icon: MatIcon.DELETE,
+            secondary: true,
+            variant: 'ghost',
+        },
+        editButtonXVM: {
+            icon: MatIcon.EDIT,
+            secondary: true,
+            variant: 'ghost',
+        },
 
-        areasDataFormControlVM: {
-            addButtonXVM: {
-                icon: MatIcon.ADD,
+        addAreaDataDialogVM: {
+            requiredAssistiveTextKey:
+                'OrdersNewPage.areasDataDialog.requiredAssistiveText',
+            dosePerHqMinErrorAssistiveTextValueKey:
+                'OrdersNewPage.areasDataDialog.dosePerHqMinErrorAssistiveTextValue',
+            missionNameMaxCharactersAllowedAssistiveTextValueKey:
+                'OrdersNewPage.areasDataDialog.missionNameMaxCharactersAllowedAssistiveTextValue',
+            missionNameMaxCharactersCounterAssistiveTextValueKey:
+                'OrdersNewPage.areasDataDialog.missionNameMaxCharactersCounterAssistiveTextValue',
+            type: 'areaDataDialogVM',
+            areaData: null,
+            titleKey: 'OrdersNewPage.areasDataDialog.title.add',
+            closeButtonXVM: {
+                icon: MatIcon.CLOSE,
+                secondary: true,
                 variant: 'ghost',
             },
+            cancelButtonXVM: {
+                textKey: 'OrdersNewPage.areasDataDialog.cancelButtonText',
+                secondary: true,
+                variant: 'ghost',
+            },
+            commentInputTextareaXVM: {
+                id: 'phoneNumber',
+                readonly: false,
+                labelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.commentPlaceholder',
+            },
+            missionNameInputTextXVM: {
+                autocomplete: 'off',
+                id: 'missionName',
+                readonly: false,
+                type: 'text',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.missionNamePlaceholder',
+                labelKey: 'OrdersNewPage.areasDataDialog.missionNameLabel',
+            },
+            submitButtonXVM: {
+                textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
+                variant: 'fill',
+            },
+            applicationDateInputTextXVM: {
+                id: 'applicationDate',
+                readonly: false,
+                type: 'datetime-local',
+                labelKey: 'OrdersNewPage.areasDataDialog.applicationDateLabel',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.applicationDatePlaceholder',
+                autocomplete: 'email',
+            },
+            dosePerHqInputTextXVM: {
+                id: 'dosePerHq',
+                readonly: false,
+                labelKey: 'OrdersNewPage.areasDataDialog.dosePerHqLabel',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.dosePerHqPlaceholder',
+            },
+            mapFormControlVM: {
+                defaultCenter: null,
+                mapSearchInputFormControlVM: {
+                    distanceValueKey:
+                        'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue',
+                    placeholderKey:
+                        'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder',
+                },
+                mapAreaSelectFormControlVM: {
+                    areaValueKey:
+                        'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
+                    addButtonXVM: {
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
+                    },
+                    editButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                    },
+                    coordinatesInputTextareaXVM: {
+                        id: 'coordinates',
+                        placeholderKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesPlaceholder',
+                        readonly: false,
+                        labelKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
+                    },
+                },
+                mapPointSelectFormControlVM: {
+                    addButtonXVM: {
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                    },
+                },
+            },
+        },
+        editAreaDataDialogVM: {
+            requiredAssistiveTextKey:
+                'OrdersNewPage.areasDataDialog.requiredAssistiveText',
+            dosePerHqMinErrorAssistiveTextValueKey:
+                'OrdersNewPage.areasDataDialog.dosePerHqMinErrorAssistiveTextValue',
+            missionNameMaxCharactersAllowedAssistiveTextValueKey:
+                'OrdersNewPage.areasDataDialog.missionNameMaxCharactersAllowedAssistiveTextValue',
+            missionNameMaxCharactersCounterAssistiveTextValueKey:
+                'OrdersNewPage.areasDataDialog.missionNameMaxCharactersCounterAssistiveTextValue',
+            type: 'areaDataDialogVM',
+            areaData: null,
+            titleKey: 'OrdersNewPage.areasDataDialog.title.add',
+            closeButtonXVM: {
+                icon: MatIcon.CLOSE,
+                secondary: true,
+                variant: 'ghost',
+            },
+            cancelButtonXVM: {
+                textKey: 'OrdersNewPage.areasDataDialog.cancelButtonText',
+                secondary: true,
+                variant: 'ghost',
+            },
+            commentInputTextareaXVM: {
+                id: 'phoneNumber',
+                readonly: false,
+                labelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.commentPlaceholder',
+            },
+            missionNameInputTextXVM: {
+                autocomplete: 'off',
+                id: 'missionName',
+                readonly: false,
+                type: 'text',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.missionNamePlaceholder',
+                labelKey: 'OrdersNewPage.areasDataDialog.missionNameLabel',
+            },
+            submitButtonXVM: {
+                textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
+                variant: 'fill',
+            },
+            applicationDateInputTextXVM: {
+                id: 'applicationDate',
+                readonly: false,
+                type: 'datetime-local',
+                labelKey: 'OrdersNewPage.areasDataDialog.applicationDateLabel',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.applicationDatePlaceholder',
+                autocomplete: 'email',
+            },
+            dosePerHqInputTextXVM: {
+                id: 'dosePerHq',
+                readonly: false,
+                labelKey: 'OrdersNewPage.areasDataDialog.dosePerHqLabel',
+                placeholderKey:
+                    'OrdersNewPage.areasDataDialog.dosePerHqPlaceholder',
+            },
+            mapFormControlVM: {
+                defaultCenter: null,
+                mapSearchInputFormControlVM: {
+                    distanceValueKey:
+                        'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue',
+                    placeholderKey:
+                        'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder',
+                },
+                mapAreaSelectFormControlVM: {
+                    areaValueKey:
+                        'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
+                    addButtonXVM: {
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
+                    },
+                    editButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
+                    },
+                    coordinatesInputTextareaXVM: {
+                        id: 'coordinates',
+                        placeholderKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesPlaceholder',
+                        readonly: false,
+                        labelKey:
+                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
+                    },
+                },
+                mapPointSelectFormControlVM: {
+                    addButtonXVM: {
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
+                    },
+                },
+            },
+        },
+        deleteDialogVM: {
+            type: 'deleteDialogVM',
+            closeButtonXVM: {
+                icon: MatIcon.CLOSE,
+                secondary: true,
+                variant: 'ghost',
+            },
+            titleKey: 'OrdersNewPage.deleteDialog.title',
+            warningTextKey: 'OrdersNewPage.deleteDialog.warningText',
             deleteButtonXVM: {
-                icon: MatIcon.DELETE,
+                textKey: 'OrdersNewPage.deleteDialog.submitButtonText',
+                variant: 'fill',
+            },
+            cancelButtonXVM: {
+                textKey: 'OrdersNewPage.deleteDialog.cancelButtonText',
                 secondary: true,
                 variant: 'ghost',
             },
-            editButtonXVM: {
-                icon: MatIcon.EDIT,
-                secondary: true,
-                variant: 'ghost',
-            },
-            addAreaDataDialogVM: {
-                type: 'areaDataDialogVM',
-                closeButtonXVM: {
-                    icon: MatIcon.CLOSE,
-                    secondary: true,
-                    variant: 'ghost',
-                },
-                cancelButtonXVM: {
-                    textKey: 'OrdersNewPage.areasDataDialog.cancelButtonText',
-                    secondary: true,
-                    variant: 'ghost',
-                },
-                coordinatesLabelKey:
-                    'OrdersNewPage.areasDataDialog.coordinatesLabel',
-                commentLabelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
-                missionNameLabelKey:
-                    'OrdersNewPage.areasDataDialog.missionNameLabel',
-                submitButtonXVM: {
-                    textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
-                    variant: 'fill',
-                },
-                applicationDateLabelKey:
-                    'OrdersNewPage.areasDataDialog.applicationDateLabel',
-                dosePerHqLabelKey:
-                    'OrdersNewPage.areasDataDialog.dosePerHqLabel',
-                entryPointLabelKey:
-                    'OrdersNewPage.areasDataDialog.entryPointLabelKey',
-                targetAreaLabelKey:
-                    'OrdersNewPage.areasDataDialog.targetAreaLabelKey',
-                mapFormControlVM: {
-                    defaultCenter: null,
-                    mapSearchInputFormControlVM: {
-                        distanceValueKey:
-                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue',
-                        placeholderKey:
-                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder',
-                    },
-                    mapAreaSelectFormControlVM: {
-                        areaValueKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
-                        addButtonXVM: {
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
-                        },
-                        editButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
-                        },
-                        coordinatesLabelKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
-                    },
-                    mapPointSelectFormControlVM: {
-                        addButtonXVM: {
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
-                        },
-                    },
-                },
-                areaData: null,
-                titleKey: 'OrdersNewPage.areasDataDialog.title.add',
-            },
-
-            editAreaDataDialogVM: {
-                type: 'areaDataDialogVM',
-                closeButtonXVM: {
-                    icon: MatIcon.CLOSE,
-                    secondary: true,
-                    variant: 'ghost',
-                },
-                coordinatesLabelKey:
-                    'OrdersNewPage.areasDataDialog.coordinatesLabel',
-                commentLabelKey: 'OrdersNewPage.areasDataDialog.commentLabel',
-                missionNameLabelKey:
-                    'OrdersNewPage.areasDataDialog.missionNameLabel',
-                submitButtonXVM: {
-                    textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
-                    variant: 'fill',
-                },
-                cancelButtonXVM: {
-                    textKey: 'OrdersNewPage.areasDataDialog.cancelButtonText',
-                    secondary: true,
-                    variant: 'ghost',
-                },
-                applicationDateLabelKey:
-                    'OrdersNewPage.areasDataDialog.applicationDateLabel',
-                dosePerHqLabelKey:
-                    'OrdersNewPage.areasDataDialog.dosePerHqLabel',
-                entryPointLabelKey:
-                    'OrdersNewPage.areasDataDialog.entryPointLabelKey',
-                targetAreaLabelKey:
-                    'OrdersNewPage.areasDataDialog.targetAreaLabelKey',
-                mapFormControlVM: {
-                    defaultCenter: null,
-                    mapSearchInputFormControlVM: {
-                        distanceValueKey:
-                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.distanceValue',
-                        placeholderKey:
-                            'OrdersNewPage.areasDataDialog.mapSearchInputFormControlVM.placeholder',
-                    },
-                    mapAreaSelectFormControlVM: {
-                        areaValueKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.areaValueKey',
-                        addButtonXVM: {
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.addButtonText',
-                        },
-                        editButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.editButtonText',
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.deleteButtonText',
-                        },
-                        coordinatesLabelKey:
-                            'OrdersNewPage.areasDataDialog.mapAreaSelectFormControl.coordinatesLabel',
-                    },
-                    mapPointSelectFormControlVM: {
-                        addButtonXVM: {
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.addButtonText',
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey:
-                                'OrdersNewPage.areasDataDialog.mapPointSelectFormControl.deleteButtonText',
-                        },
-                    },
-                },
-
-                areaData: null,
-                titleKey: 'OrdersNewPage.areasDataDialog.title.edit',
-            },
-
-            deleteDialogVM: {
-                type: 'deleteDialogVM',
-                closeButtonXVM: {
-                    icon: MatIcon.CLOSE,
-                    secondary: true,
-                    variant: 'ghost',
-                },
-                titleKey: 'OrdersNewPage.deleteDialog.title',
-                warningTextKey: 'OrdersNewPage.deleteDialog.warningText',
-                deleteButtonXVM: {
-                    textKey: 'OrdersNewPage.deleteDialog.submitButtonText',
-                    variant: 'fill',
-                },
-                cancelButtonXVM: {
-                    textKey: 'OrdersNewPage.deleteDialog.cancelButtonText',
-                    secondary: true,
-                    variant: 'ghost',
-                },
-            },
-            actionsHeaderKey:
-                'OrdersNewPage.areasDataFormControl.actionsHeader',
-            targetAreaSizeHeaderKey:
-                'OrdersNewPage.areasDataFormControl.targetAreaSizeHeader',
-            entryPointHeaderKey:
-                'OrdersNewPage.areasDataFormControl.entryPointHeader',
-            doseHeaderKey: 'OrdersNewPage.areasDataFormControl.doseHeader',
-            applicationDateHeaderKey:
-                'OrdersNewPage.areasDataFormControl.applicationDateHeader',
-            trichogrammaRequirementHeaderKey:
-                'OrdersNewPage.areasDataFormControl.trichogrammaRequirementHeader',
-            distanceFromHeadOfficeHeaderKey:
-                'OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeHeader',
-            totalDistanceFromHeadOfficeHeaderKey:
-                'OrdersNewPage.areasDataFormControl.totalDistanceFromHeadOfficeHeader',
-            totalTargetAreaSizeHeaderKey:
-                'OrdersNewPage.areasDataFormControl.totalTargetAreaSizeHeader',
-            totalTrichogrammaRequirementHeaderKey:
-                'OrdersNewPage.areasDataFormControl.totalTrichogrammaRequirementHeader',
-            applicationDateValueKey:
-                'OrdersNewPage.areasDataFormControl.applicationDateValue',
-            distanceFromHeadOfficeValueKey:
-                'OrdersNewPage.areasDataFormControl.distanceFromHeadOfficeValue',
-            doseValueKey: 'OrdersNewPage.areasDataFormControl.doseValue',
-            entryPointValueKey: '',
-            targetAreaSizeValueKey:
-                'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
-            trichogrammaRequirementValueKey:
-                'OrdersNewPage.areasDataFormControl.trichogrammaRequirementValue',
-            commentHeaderKey:
-                'OrdersNewPage.areasDataFormControl.commentHeader',
-            missionHeaderKey:
-                'OrdersNewPage.areasDataFormControl.missionHeader',
         },
     },
 };
 
 export const enMock = {
-    closeButtonText: 'close',
-    coordinatesLabel: 'coords',
-    commentLabel: 'comment',
-    missionLabel: 'mission',
-    frameTitle: 'tit',
+    title: 'tit',
     submitButtonText: 'sub',
     emailLabel: 'email',
+    emailPlaceholder: 'emailPlace',
     endCustomerLabel: 'endCustomer',
-    nameLabel: 'nameLab',
-    phoneNumberLabel: 'phoneNumber',
+    endCustomerPlaceholder: 'endCustomerPlace',
     internalOrderNumberLabel: 'internal',
+    internalOrderNumberPlaceholder: 'internalPlace',
+    nameLabel: 'nameLab',
+    namePlaceholder: 'namePlace',
+    phoneNumberLabel: 'phoneNumber',
+    phoneNumberPlaceholder: 'phoneNumberPlace',
     areasDataLabel: 'areasData',
-    cancelButtonText: 'cancelButton',
-    applicationDateLabel: 'applicationDate',
-    dosePerHqLabel: 'dosePer',
-    entryPointLabel: 'entryPoint',
-    targetAreaLabel: 'targetArea',
+    areasDataFormControl: {
+        dosePerHqMinErrorAssistiveTextValue: 'dosePerHqMinErrorAssistiveText',
+        missionNameMaxCharactersAllowedAssistiveTextValue:
+            'missionNameMaxCharactersAllowedAssistiveText',
+        missionNameMaxCharactersCounterAssistiveTextValue:
+            'missionNameMaxCharactersCounterAssistiveText',
+        requiredAssistiveText: 'requiredAssistiveText',
+        missionNameLabel: 'mission',
+        missionNamePlaceholder: 'missionPlace',
+        commentLabel: 'comment',
+        commentPlaceholder: 'commentPlace',
+        closeButtonText: 'close',
+        coordinatesLabel: 'coords',
+        coordinatesPlaceholder: 'coordsPlace',
+        cancelButtonText: 'cancelButton',
+        submitButtonText: 'submit',
+        applicationDateLabel: 'applicationDate',
+        applicationDatePlaceholder: 'applicationDatePlace',
+        dosePerHqLabel: 'dosePer',
+        dosePerHqPlaceholder: 'dosePerPlace',
+        entryPointLabel: 'entryPoint',
+        targetAreaLabel: 'targetArea',
+        mapFormControl: {
+            mapSearchInputFormControl: {
+                placeholder: 'place',
+                distanceValue: 'distance',
+            },
+            mapAreaSelectFormControl: {
+                addButtonText: 'addButton',
+                deleteButtonText: 'deleteButton',
+                areaValue: 'area',
+                editButton: 'edit',
+            },
+            warning: 'warn',
+            deleteButton: 'delete',
+            cancelButton: 'cancel',
+        },
+        label: 'lab',
+    },
     addButtonText: 'addButton',
     deleteButtonText: 'deleteButton',
-    title: 'ti',
-    type: 'areaDataDialogVM',
     actionsHeader: 'actions',
     targetAreaSizeHeader: 'targetAreaSize',
     entryPointHeader: 'entryPoint',
@@ -279,227 +405,353 @@ export const enMock = {
     applicationDateValue: 'applicationDate',
     distanceFromHeadOfficeValue: 'distanceFromHeadOffice',
     doseValue: 'doseValue',
-    entryPointValue: '',
     targetAreaSizeValue: 'targetAreaSize',
     trichogrammaRequirementValue: 'trichogrammaRequirement',
-    warning: 'warn',
-    placeholder: 'place',
-    distanceValue: 'distance',
     commentHeader: 'comment',
     missionHeader: 'mission',
-    areaValue: 'area',
-    editButton: 'edit',
+    requiredAssistiveText: 'required',
 };
 
 export const ordersNewPageVMMock: OrdersNewPageVM = {
-    frameXVM: {
-        titleKey: enMock.frameTitle,
-        submitButtonXVM: {
-            variant: 'fill',
-            secondary: false,
-            textKey: enMock.submitButtonText,
-        },
-        emailLabelKey: enMock.emailLabel,
-        endCustomerLabelKey: enMock.endCustomerLabel,
-        nameLabelKey: enMock.nameLabel,
-        phoneNumberLabelKey: enMock.phoneNumberLabel,
-        internalOrderNumberLabelKey: enMock.internalOrderNumberLabel,
-        areasDataLabelKey: enMock.areasDataLabel,
+    titleKey: enMock.title,
+    phoneNumberInputTextXVM: {
+        id: 'id',
+        autocomplete: 'email',
+        labelKey: enMock.phoneNumberLabel,
+        placeholderKey: enMock.phoneNumberPlaceholder,
+        readonly: false,
+        type: 'email',
+    },
+    submitButtonXVM: {
+        variant: 'fill',
+        secondary: false,
+        textKey: enMock.submitButtonText,
+    },
+    requiredAssistiveTextKey: enMock.requiredAssistiveText,
+    emailInputTextXVM: {
+        id: 'id',
+        readonly: false,
+        type: 'email',
+        autocomplete: 'email',
+        labelKey: enMock.emailLabel,
+        placeholderKey: enMock.emailPlaceholder,
+    },
+    endCustomerInputTextXVM: {
+        id: 'id',
+        readonly: false,
+        type: 'email',
+        autocomplete: 'email',
+        labelKey: enMock.endCustomerLabel,
+        placeholderKey: enMock.endCustomerPlaceholder,
+    },
+    internalOrderNumberInputTextXVM: {
+        id: 'id',
+        readonly: false,
+        type: 'email',
+        autocomplete: 'email',
+        labelKey: enMock.internalOrderNumberLabel,
+        placeholderKey: enMock.internalOrderNumberPlaceholder,
+    },
+    nameInputTextXVM: {
+        id: 'id',
+        readonly: false,
+        type: 'email',
+        autocomplete: 'email',
+        labelKey: enMock.nameLabel,
+        placeholderKey: enMock.namePlaceholder,
+    },
 
-        areasDataFormControlVM: {
-            addButtonXVM: {
-                secondary: false,
-                variant: 'ghost',
-                icon: MatIcon.ADD,
+    areasDataFormControlXVM: {
+        labelKey: enMock.areasDataFormControl.label,
+        addButtonXVM: {
+            icon: MatIcon.ADD,
+            variant: 'fill',
+        },
+        editButtonXVM: {
+            secondary: false,
+            variant: 'ghost',
+            icon: MatIcon.EDIT,
+        },
+        deleteButtonXVM: {
+            secondary: false,
+            variant: 'ghost',
+            icon: MatIcon.DELETE,
+        },
+
+        addAreaDataDialogVM: {
+            type: 'areaDataDialogVM',
+            dosePerHqMinErrorAssistiveTextValueKey:
+                enMock.areasDataFormControl.dosePerHqMinErrorAssistiveTextValue,
+            missionNameMaxCharactersAllowedAssistiveTextValueKey:
+                enMock.areasDataFormControl
+                    .missionNameMaxCharactersAllowedAssistiveTextValue,
+            missionNameMaxCharactersCounterAssistiveTextValueKey:
+                enMock.areasDataFormControl
+                    .missionNameMaxCharactersCounterAssistiveTextValue,
+            requiredAssistiveTextKey:
+                enMock.areasDataFormControl.requiredAssistiveText,
+            dosePerHqInputTextXVM: {
+                id: 'id',
+                labelKey: enMock.areasDataFormControl.dosePerHqLabel,
+                placeholderKey: enMock.areasDataFormControl.dosePerHqLabel,
+                readonly: false,
             },
-            editButtonXVM: {
+            missionNameInputTextXVM: {
+                id: 'id',
+                autocomplete: 'email',
+                labelKey: enMock.areasDataFormControl.missionNameLabel,
+                placeholderKey: enMock.areasDataFormControl.missionNameLabel,
+                readonly: false,
+                type: 'datetime-local',
+            },
+            commentInputTextareaXVM: {
+                id: 'id',
+                labelKey: enMock.areasDataFormControl.commentLabel,
+                placeholderKey: enMock.areasDataFormControl.commentPlaceholder,
+                readonly: false,
+            },
+            closeButtonXVM: {
+                textKey: enMock.areasDataFormControl.closeButtonText,
                 secondary: false,
+                variant: 'fill',
+            },
+            applicationDateInputTextXVM: {
+                id: 'id',
+                autocomplete: 'email',
+                labelKey: enMock.areasDataFormControl.applicationDateLabel,
+                placeholderKey:
+                    enMock.areasDataFormControl.applicationDatePlaceholder,
+                readonly: false,
+                type: 'email',
+            },
+
+            cancelButtonXVM: {
+                textKey: enMock.areasDataFormControl.cancelButtonText,
+                secondary: false,
+                variant: 'fill',
+            },
+            submitButtonXVM: {
+                textKey: enMock.areasDataFormControl.cancelButtonText,
+                secondary: false,
+                variant: 'fill',
+            },
+            mapFormControlVM: {
+                defaultCenter: null,
+                mapSearchInputFormControlVM: {
+                    placeholderKey:
+                        enMock.areasDataFormControl.mapFormControl
+                            .mapSearchInputFormControl.placeholder,
+                    distanceValueKey:
+                        enMock.areasDataFormControl.mapFormControl
+                            .mapSearchInputFormControl.distanceValue,
+                },
+                mapAreaSelectFormControlVM: {
+                    areaValueKey:
+                        enMock.areasDataFormControl.mapFormControl
+                            .mapAreaSelectFormControl.areaValue,
+                    addButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            enMock.areasDataFormControl.mapFormControl
+                                .mapAreaSelectFormControl.addButtonText,
+                    },
+                    editButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            enMock.areasDataFormControl.mapFormControl
+                                .mapAreaSelectFormControl.deleteButtonText,
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            enMock.areasDataFormControl.mapFormControl
+                                .mapAreaSelectFormControl.editButton,
+                    },
+                    coordinatesInputTextareaXVM: {
+                        id: 'id',
+                        placeholderKey:
+                            enMock.areasDataFormControl.coordinatesPlaceholder,
+                        labelKey: enMock.areasDataFormControl.coordinatesLabel,
+                        readonly: false,
+                    },
+                },
+                mapPointSelectFormControlVM: {
+                    addButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey: enMock.addButtonText,
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey: enMock.deleteButtonText,
+                    },
+                },
+            },
+            areaData: null,
+            titleKey: enMock.title,
+        },
+
+        editAreaDataDialogVM: {
+            type: 'areaDataDialogVM',
+            dosePerHqMinErrorAssistiveTextValueKey:
+                enMock.areasDataFormControl.dosePerHqMinErrorAssistiveTextValue,
+            missionNameMaxCharactersAllowedAssistiveTextValueKey:
+                enMock.areasDataFormControl
+                    .missionNameMaxCharactersAllowedAssistiveTextValue,
+            missionNameMaxCharactersCounterAssistiveTextValueKey:
+                enMock.areasDataFormControl
+                    .missionNameMaxCharactersCounterAssistiveTextValue,
+            requiredAssistiveTextKey:
+                enMock.areasDataFormControl.requiredAssistiveText,
+            dosePerHqInputTextXVM: {
+                id: 'id',
+                labelKey: enMock.areasDataFormControl.dosePerHqLabel,
+                placeholderKey: enMock.areasDataFormControl.dosePerHqLabel,
+                readonly: false,
+            },
+            missionNameInputTextXVM: {
+                id: 'id',
+                autocomplete: 'email',
+                labelKey: enMock.areasDataFormControl.missionNameLabel,
+                placeholderKey: enMock.areasDataFormControl.missionNameLabel,
+                readonly: false,
+                type: 'datetime-local',
+            },
+            commentInputTextareaXVM: {
+                id: 'id',
+                labelKey: enMock.areasDataFormControl.commentLabel,
+                placeholderKey: enMock.areasDataFormControl.commentPlaceholder,
+                readonly: false,
+            },
+            closeButtonXVM: {
+                textKey: enMock.areasDataFormControl.closeButtonText,
+                secondary: false,
+                variant: 'fill',
+            },
+            applicationDateInputTextXVM: {
+                id: 'id',
+                autocomplete: 'email',
+                labelKey: enMock.areasDataFormControl.applicationDateLabel,
+                placeholderKey:
+                    enMock.areasDataFormControl.applicationDatePlaceholder,
+                readonly: false,
+                type: 'email',
+            },
+
+            cancelButtonXVM: {
+                textKey: enMock.areasDataFormControl.cancelButtonText,
+                secondary: false,
+                variant: 'fill',
+            },
+            submitButtonXVM: {
+                textKey: enMock.areasDataFormControl.cancelButtonText,
+                secondary: false,
+                variant: 'fill',
+            },
+            mapFormControlVM: {
+                defaultCenter: null,
+                mapSearchInputFormControlVM: {
+                    placeholderKey:
+                        enMock.areasDataFormControl.mapFormControl
+                            .mapSearchInputFormControl.placeholder,
+                    distanceValueKey:
+                        enMock.areasDataFormControl.mapFormControl
+                            .mapSearchInputFormControl.distanceValue,
+                },
+                mapAreaSelectFormControlVM: {
+                    areaValueKey:
+                        enMock.areasDataFormControl.mapFormControl
+                            .mapAreaSelectFormControl.areaValue,
+                    addButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            enMock.areasDataFormControl.mapFormControl
+                                .mapAreaSelectFormControl.addButtonText,
+                    },
+                    editButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            enMock.areasDataFormControl.mapFormControl
+                                .mapAreaSelectFormControl.deleteButtonText,
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey:
+                            enMock.areasDataFormControl.mapFormControl
+                                .mapAreaSelectFormControl.editButton,
+                    },
+                    coordinatesInputTextareaXVM: {
+                        id: 'id',
+                        placeholderKey:
+                            enMock.areasDataFormControl.coordinatesPlaceholder,
+                        labelKey: enMock.areasDataFormControl.coordinatesLabel,
+                        readonly: false,
+                    },
+                },
+                mapPointSelectFormControlVM: {
+                    addButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey: enMock.addButtonText,
+                    },
+                    deleteButtonXVM: {
+                        secondary: true,
+                        variant: 'ghost',
+                        textKey: enMock.deleteButtonText,
+                    },
+                },
+            },
+            areaData: null,
+            titleKey: enMock.title,
+        },
+
+        deleteDialogVM: {
+            type: 'deleteDialogVM',
+            closeButtonXVM: {
+                icon: MatIcon.CLOSE,
+                secondary: true,
                 variant: 'ghost',
-                icon: MatIcon.EDIT,
+            },
+            titleKey: enMock.title,
+            warningTextKey: enMock.areasDataFormControl.mapFormControl.warning,
+            cancelButtonXVM: {
+                textKey:
+                    enMock.areasDataFormControl.mapFormControl.cancelButton,
+                secondary: false,
+                variant: 'fill',
             },
             deleteButtonXVM: {
+                textKey:
+                    enMock.areasDataFormControl.mapFormControl.deleteButton,
                 secondary: false,
-                variant: 'ghost',
-                icon: MatIcon.DELETE,
+                variant: 'fill',
             },
-
-            addAreaDataDialogVM: {
-                type: 'areaDataDialogVM',
-                closeButtonXVM: {
-                    textKey: enMock.closeButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                coordinatesLabelKey: enMock.coordinatesLabel,
-                commentLabelKey: enMock.commentLabel,
-                missionNameLabelKey: enMock.missionLabel,
-                cancelButtonXVM: {
-                    textKey: enMock.cancelButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                submitButtonXVM: {
-                    textKey: enMock.cancelButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                applicationDateLabelKey: enMock.applicationDateLabel,
-                dosePerHqLabelKey: enMock.dosePerHqLabel,
-                entryPointLabelKey: enMock.entryPointLabel,
-                targetAreaLabelKey: enMock.targetAreaLabel,
-                mapFormControlVM: {
-                    defaultCenter: null,
-                    mapSearchInputFormControlVM: {
-                        placeholderKey: enMock.placeholder,
-                        distanceValueKey: enMock.distanceValue,
-                    },
-                    mapAreaSelectFormControlVM: {
-                        areaValueKey: enMock.areaValue,
-                        addButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.addButtonText,
-                        },
-                        editButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.deleteButtonText,
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.editButton,
-                        },
-                        coordinatesLabelKey: enMock.coordinatesLabel,
-                    },
-                    mapPointSelectFormControlVM: {
-                        addButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.addButtonText,
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.deleteButtonText,
-                        },
-                    },
-                },
-                areaData: null,
-                titleKey: enMock.title,
-            },
-
-            editAreaDataDialogVM: {
-                type: 'areaDataDialogVM',
-                closeButtonXVM: {
-                    icon: MatIcon.CLOSE,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                coordinatesLabelKey: enMock.coordinatesLabel,
-                commentLabelKey: enMock.commentLabel,
-                missionNameLabelKey: enMock.missionLabel,
-                cancelButtonXVM: {
-                    textKey: enMock.cancelButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                submitButtonXVM: {
-                    textKey: enMock.submitButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                applicationDateLabelKey: enMock.applicationDateLabel,
-                dosePerHqLabelKey: enMock.dosePerHqLabel,
-                entryPointLabelKey: enMock.entryPointLabel,
-                targetAreaLabelKey: enMock.targetAreaLabel,
-                mapFormControlVM: {
-                    defaultCenter: null,
-
-                    mapSearchInputFormControlVM: {
-                        placeholderKey: enMock.placeholder,
-                        distanceValueKey: enMock.distanceValue,
-                    },
-                    mapAreaSelectFormControlVM: {
-                        areaValueKey: enMock.areaValue,
-                        addButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.addButtonText,
-                        },
-                        editButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.deleteButtonText,
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.editButton,
-                        },
-                        coordinatesLabelKey: enMock.coordinatesLabel,
-                    },
-                    mapPointSelectFormControlVM: {
-                        addButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.addButtonText,
-                        },
-                        deleteButtonXVM: {
-                            secondary: true,
-                            variant: 'ghost',
-                            textKey: enMock.deleteButtonText,
-                        },
-                    },
-                },
-
-                areaData: null,
-                titleKey: enMock.title,
-            },
-
-            deleteDialogVM: {
-                type: 'deleteDialogVM',
-                closeButtonXVM: {
-                    icon: MatIcon.CLOSE,
-                    secondary: true,
-                    variant: 'ghost',
-                },
-                titleKey: enMock.title,
-                warningTextKey: enMock.warning,
-                cancelButtonXVM: {
-                    textKey: enMock.cancelButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-                deleteButtonXVM: {
-                    textKey: enMock.submitButtonText,
-                    secondary: false,
-                    variant: 'fill',
-                },
-            },
-            actionsHeaderKey: enMock.actionsHeader,
-            targetAreaSizeHeaderKey: enMock.targetAreaSizeHeader,
-            entryPointHeaderKey: enMock.entryPointHeader,
-            doseHeaderKey: enMock.doseHeader,
-            applicationDateHeaderKey: enMock.applicationDateHeader,
-            trichogrammaRequirementHeaderKey:
-                enMock.trichogrammaRequirementHeader,
-            distanceFromHeadOfficeHeaderKey:
-                enMock.distanceFromHeadOfficeHeader,
-            totalDistanceFromHeadOfficeHeaderKey:
-                enMock.totalDistanceFromHeadOfficeHeader,
-            totalTargetAreaSizeHeaderKey: enMock.totalTargetAreaSizeHeader,
-            totalTrichogrammaRequirementHeaderKey:
-                enMock.totalTrichogrammaRequirementHeader,
-            applicationDateValueKey: enMock.applicationDateHeader,
-            distanceFromHeadOfficeValueKey: enMock.distanceFromHeadOfficeHeader,
-            doseValueKey: enMock.doseValue,
-            entryPointValueKey: enMock.entryPointValue,
-            targetAreaSizeValueKey: enMock.targetAreaSizeValue,
-            trichogrammaRequirementValueKey:
-                enMock.trichogrammaRequirementValue,
-            commentHeaderKey: enMock.commentHeader,
-            missionHeaderKey: enMock.missionHeader,
         },
+        actionsHeaderKey: enMock.actionsHeader,
+        targetAreaSizeHeaderKey: enMock.targetAreaSizeHeader,
+        entryPointHeaderKey: enMock.entryPointHeader,
+        doseHeaderKey: enMock.doseHeader,
+        applicationDateHeaderKey: enMock.applicationDateHeader,
+        trichogrammaRequirementHeaderKey: enMock.trichogrammaRequirementHeader,
+        distanceFromHeadOfficeHeaderKey: enMock.distanceFromHeadOfficeHeader,
+        totalDistanceFromHeadOfficeHeaderKey:
+            enMock.totalDistanceFromHeadOfficeHeader,
+        totalTargetAreaSizeHeaderKey: enMock.totalTargetAreaSizeHeader,
+        totalTrichogrammaRequirementHeaderKey:
+            enMock.totalTrichogrammaRequirementHeader,
+        applicationDateValueKey: enMock.applicationDateHeader,
+        distanceFromHeadOfficeValueKey: enMock.distanceFromHeadOfficeHeader,
+        doseValueKey: enMock.doseValue,
+        targetAreaSizeValueKey: enMock.targetAreaSizeValue,
+        trichogrammaRequirementValueKey: enMock.trichogrammaRequirementValue,
+        commentHeaderKey: enMock.commentHeader,
+        missionHeaderKey: enMock.missionHeader,
     },
 };

@@ -54,19 +54,19 @@ describe('OrdersNewPageComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-    it('should set the areasDataFormGroup to invalid if there is no value in the form', () => {
+    it('should set the formGroup to invalid if there is no value in the form', () => {
         // Arrange
 
         // Act
 
         // Assert
-        expect(component.areasDataFormGroup.touched).toBe(false);
-        expect(component.areasDataFormGroup.invalid).toBe(true);
+        expect(component['formGroup'].touched).toBe(false);
+        expect(component['formGroup'].invalid).toBe(true);
     });
 
-    it('should set the areasDataFormGroup to valid if the form is fulfilled with correct values', () => {
+    it('should set the formGroup to valid if the form is fulfilled with correct values', () => {
         //Arrange
-        component.areasDataFormGroup.setValue({
+        component['formGroup'].setValue({
             areasData: [
                 {
                     applicationDate: new Date(),
@@ -94,12 +94,12 @@ describe('OrdersNewPageComponent', () => {
         //Act
 
         // Assert
-        expect(component.areasDataFormGroup.valid).toBe(true);
+        expect(component['formGroup'].valid).toBe(true);
     });
 
     it('should reset the value of the form after submitting if the form is valid', () => {
         //Arrange
-        component.areasDataFormGroup.setValue({
+        component['formGroup'].setValue({
             areasData: [
                 {
                     applicationDate: new Date(),
@@ -128,6 +128,6 @@ describe('OrdersNewPageComponent', () => {
         //Act
 
         // Assert
-        expect(component.areasDataFormGroup.invalid).toBe(true);
+        expect(component['formGroup'].invalid).toBe(true);
     });
 });
