@@ -1,12 +1,13 @@
 import { InjectionToken } from '@angular/core';
 import { ButtonXVM } from '@components/button/button.model';
+import { InputTextareaXVM } from '@components/input-textarea/input-textarea.component';
 
 export interface MapAreaSelectFormControlVM {
     areaValueKey: string;
     addButtonXVM: ButtonXVM;
     editButtonXVM: ButtonXVM;
     deleteButtonXVM: ButtonXVM;
-    coordinatesLabelKey: string;
+    coordinatesInputTextareaXVM: InputTextareaXVM;
 }
 
 export const POLYGON_OPTIONS = new InjectionToken<google.maps.PolygonOptions>(

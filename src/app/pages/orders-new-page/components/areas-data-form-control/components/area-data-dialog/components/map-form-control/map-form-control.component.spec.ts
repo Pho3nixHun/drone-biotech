@@ -33,7 +33,12 @@ const mockVMWithCenter: MapFormControlVM = {
     mapAreaSelectFormControlVM: {
         addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
         areaValueKey: en.areaValue,
-        coordinatesLabelKey: en.coordinatesLabel,
+        coordinatesInputTextareaXVM: {
+            id: 'id',
+            labelKey: en.coordinatesLabel,
+            placeholderKey: en.placeholder,
+            readonly: false,
+        },
         deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
@@ -57,7 +62,12 @@ const mockVMWithoutCenter: MapFormControlVM = {
     mapAreaSelectFormControlVM: {
         addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
         areaValueKey: en.areaValue,
-        coordinatesLabelKey: en.coordinatesLabel,
+        coordinatesInputTextareaXVM: {
+            id: 'id',
+            labelKey: en.coordinatesLabel,
+            placeholderKey: en.placeholder,
+            readonly: false,
+        },
         deleteButtonXVM: {
             icon: MatIcon.ADD,
             variant: 'fill',
