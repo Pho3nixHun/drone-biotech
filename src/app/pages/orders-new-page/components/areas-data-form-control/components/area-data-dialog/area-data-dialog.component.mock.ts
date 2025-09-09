@@ -3,33 +3,77 @@ import { AreaDataDialogVM } from './area-data-dialog.model';
 
 export const enMock = {
     applicationDateLabel: 'applicationDate',
-    cancelButtonText: 'cancelButton',
+    applicationDatePlaceholder: 'applicationDatePlace',
     dosePerHqLabel: 'dosePerHq',
+    dosePerHqLabelPlaceholder: 'dosePerHqPlace',
     addButtonText: 'addButton',
     deleteButtonText: 'deleteButton',
     submitButtonText: 'submitButton',
     targetAreaLabel: 'targetArea',
-    title: 'tit',
+    targetAreaLabelPlaceholder: 'targetAreaPlace',
     entryPointLabel: 'entryPoint',
+    entryPointLabelPlaceholder: 'entryPointPlace',
     areaValue: 'area',
     editButtonText: 'edit',
     coordinatesLabel: 'coordinates',
+    coordinatesPlaceholder: 'coordinatesPlace',
     commentLabel: 'comment',
+    commentPlaceholder: 'commentPlace',
     missionNameLabel: 'missionName',
+    missionNamePlaceholder: 'missionNamePlace',
+    cancelButtonText: 'cancelButton',
+    title: 'tit',
+    dosePerHqMinErrorAssistiveTextValue: 'dosePerHqMinErrorAssistiveText',
+    missionNameMaxCharactersAllowedAssistiveTextValue:
+        'missionNameMaxCharactersAllowedAssistiveText',
+    missionNameMaxCharactersCounterAssistiveTextValue:
+        'missionNameMaxCharactersCounterAssistiveText',
+    requiredAssistiveText: 'requiredAssistive',
 };
 
 export const mockVMWithoutAreaData: AreaDataDialogVM = {
+    applicationDateInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.applicationDateLabel,
+        placeholderKey: enMock.applicationDatePlaceholder,
+        readonly: false,
+        autocomplete: 'name',
+        type: 'email',
+    },
+    commentInputTextareaXVM: {
+        id: 'id',
+        labelKey: enMock.commentLabel,
+        placeholderKey: enMock.commentPlaceholder,
+        readonly: false,
+    },
+    dosePerHqInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.dosePerHqLabel,
+        placeholderKey: enMock.dosePerHqLabelPlaceholder,
+        readonly: false,
+    },
+    missionNameInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.missionNameLabel,
+        placeholderKey: enMock.missionNamePlaceholder,
+        readonly: false,
+        autocomplete: 'off',
+        type: 'email',
+    },
+    dosePerHqMinErrorAssistiveTextValueKey:
+        enMock.dosePerHqMinErrorAssistiveTextValue,
+    missionNameMaxCharactersAllowedAssistiveTextValueKey:
+        enMock.missionNameMaxCharactersAllowedAssistiveTextValue,
+    missionNameMaxCharactersCounterAssistiveTextValueKey:
+        enMock.missionNameMaxCharactersCounterAssistiveTextValue,
+    requiredAssistiveTextKey: enMock.requiredAssistiveText,
+
     closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
-    commentLabelKey: enMock.commentLabel,
-    coordinatesLabelKey: enMock.coordinatesLabel,
-    missionNameLabelKey: enMock.missionNameLabel,
-    applicationDateLabelKey: enMock.applicationDateLabel,
     areaData: null,
     cancelButtonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
-    dosePerHqLabelKey: enMock.dosePerHqLabel,
     mapFormControlVM: {
         defaultCenter: null,
 
@@ -39,7 +83,12 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
-            coordinatesLabelKey: enMock.coordinatesLabel,
+            coordinatesInputTextareaXVM: {
+                id: 'id',
+                labelKey: enMock.coordinatesLabel,
+                placeholderKey: enMock.coordinatesPlaceholder,
+                readonly: false,
+            },
             addButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
@@ -68,18 +117,48 @@ export const mockVMWithoutAreaData: AreaDataDialogVM = {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
-    targetAreaLabelKey: enMock.targetAreaLabel,
     titleKey: enMock.title,
     type: 'areaDataDialogVM',
-    entryPointLabelKey: enMock.entryPointLabel,
 };
 
 export const mockVMWithAreaData: AreaDataDialogVM = {
+    applicationDateInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.applicationDateLabel,
+        placeholderKey: enMock.applicationDatePlaceholder,
+        readonly: false,
+        autocomplete: 'name',
+        type: 'email',
+    },
+    commentInputTextareaXVM: {
+        id: 'id',
+        labelKey: enMock.commentLabel,
+        placeholderKey: enMock.commentPlaceholder,
+        readonly: false,
+    },
+    dosePerHqInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.dosePerHqLabel,
+        placeholderKey: enMock.dosePerHqLabelPlaceholder,
+        readonly: false,
+    },
+    missionNameInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.missionNameLabel,
+        placeholderKey: enMock.missionNamePlaceholder,
+        readonly: false,
+        autocomplete: 'off',
+        type: 'email',
+    },
+    dosePerHqMinErrorAssistiveTextValueKey:
+        enMock.dosePerHqMinErrorAssistiveTextValue,
+    missionNameMaxCharactersAllowedAssistiveTextValueKey:
+        enMock.missionNameMaxCharactersAllowedAssistiveTextValue,
+    missionNameMaxCharactersCounterAssistiveTextValueKey:
+        enMock.missionNameMaxCharactersCounterAssistiveTextValue,
+    requiredAssistiveTextKey: enMock.requiredAssistiveText,
+
     closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
-    commentLabelKey: enMock.commentLabel,
-    coordinatesLabelKey: enMock.coordinatesLabel,
-    missionNameLabelKey: enMock.missionNameLabel,
-    applicationDateLabelKey: enMock.applicationDateLabel,
     areaData: {
         comment: enMock.commentLabel,
         missionName: enMock.missionNameLabel,
@@ -93,7 +172,6 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
-    dosePerHqLabelKey: enMock.dosePerHqLabel,
     mapFormControlVM: {
         defaultCenter: null,
 
@@ -103,7 +181,12 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
                 icon: MatIcon.ADD,
                 variant: 'fill',
             },
-            coordinatesLabelKey: enMock.coordinatesLabel,
+            coordinatesInputTextareaXVM: {
+                id: 'id',
+                labelKey: enMock.coordinatesLabel,
+                placeholderKey: enMock.coordinatesPlaceholder,
+                readonly: false,
+            },
             addButtonXVM: {
                 icon: MatIcon.ADD,
                 variant: 'fill',
@@ -133,8 +216,6 @@ export const mockVMWithAreaData: AreaDataDialogVM = {
         icon: MatIcon.ADD,
         variant: 'fill',
     },
-    targetAreaLabelKey: enMock.targetAreaLabel,
     titleKey: enMock.title,
     type: 'areaDataDialogVM',
-    entryPointLabelKey: enMock.entryPointLabel,
 };

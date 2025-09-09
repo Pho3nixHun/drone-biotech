@@ -1,23 +1,27 @@
 import { isObject } from '@utils/is-object.typeguard';
 import { DialogReason } from '@services/dialog/dialog.service';
 import { DialogLayoutVM } from '@components/dialog-layout/dialog-layout.model';
-import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
 import { ButtonXVM } from '@components/button/button.model';
+import { InputTextXVM } from '@components/input-text/input-text.component';
+import { InputTextareaXVM } from '@components/input-textarea/input-textarea.component';
+import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
+import { InputNumberXVM } from '@components/input-number/input-number.component';
 
 export interface AreaDataDialogVM extends DialogLayoutVM {
     type: 'areaDataDialogVM';
-    missionNameLabelKey: string;
-    dosePerHqLabelKey: string;
-    coordinatesLabelKey: string;
-    entryPointLabelKey: string;
-    targetAreaLabelKey: string;
-    applicationDateLabelKey: string;
-    commentLabelKey: string;
+    requiredAssistiveTextKey: string;
+    missionNameMaxCharactersAllowedAssistiveTextValueKey: string;
+    missionNameMaxCharactersCounterAssistiveTextValueKey: string;
+    dosePerHqMinErrorAssistiveTextValueKey: string;
+    missionNameInputTextXVM: InputTextXVM;
+    dosePerHqInputTextXVM: InputNumberXVM;
+    commentInputTextareaXVM: InputTextareaXVM;
+    applicationDateInputTextXVM: InputTextXVM;
+    mapFormControlVM: MapFormControlVM;
     cancelButtonXVM: ButtonXVM;
     submitButtonXVM: ButtonXVM;
     areaData: AreaData | null;
-    mapFormControlVM: MapFormControlVM;
 }
 
 export interface AreaData {

@@ -14,6 +14,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { Coordinates } from '@stores/location/location.model';
 import { isNullish } from '@utils/is-nullish.typeguard';
 import { ButtonComponent } from '@components/button/button.component';
+import { InputNumberComponent } from '@components/input-number/input-number.component';
+import { InputTextComponent } from '@components/input-text/input-text.component';
+import { InputTextareaComponent } from '@components/input-textarea/input-textarea.component';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
+
+const MISSION_NAME_MAX_LENGTH = 120;
+const DOSE_PER_HQ_MIN = 1;
 
 @Component({
     selector: 'app-area-data-dialog',
@@ -23,6 +31,9 @@ import { ButtonComponent } from '@components/button/button.component';
         DialogLayoutComponent,
         MapFormControlComponent,
         ButtonComponent,
+        InputNumberComponent,
+        InputTextComponent,
+        InputTextareaComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
 })
@@ -30,16 +41,20 @@ export class AreaDataDialogComponent {
     private readonly fb = inject(FormBuilder);
     protected readonly dialogRef = inject(DIALOG_REF);
     protected readonly unknownVM = signal<unknown>(inject(DIALOG_DATA));
-
+    protected readonly missionNameMaxLength = MISSION_NAME_MAX_LENGTH;
+    protected readonly dosePerHqMin = DOSE_PER_HQ_MIN;
     protected readonly vm = computed<AreaDataDialogVM | null>(() => {
         const vm = this.unknownVM();
         return isAreaDataDialogVM(vm) ? vm : null;
     });
 
-    public areaDataFormGroup = this.fb.group({
+    protected readonly formGroup = this.fb.group({
         missionName: this.fb.control<string>(
             this.vm()?.areaData?.missionName ?? '',
-            [Validators.required, Validators.maxLength(120)]
+            [
+                Validators.required,
+                Validators.maxLength(this.missionNameMaxLength),
+            ]
         ),
 
         map: this.fb.control<{
@@ -55,7 +70,7 @@ export class AreaDataDialogComponent {
 
         dosePerHq: this.fb.control<number | null>(
             this.vm()?.areaData?.dosePerHq ?? null,
-            [Validators.min(1), Validators.required]
+            [Validators.required, Validators.min(this.dosePerHqMin)]
         ),
         applicationDate: this.fb.control<Date | null>(
             this.vm()?.areaData?.applicationDate ?? null,
@@ -69,14 +84,14 @@ export class AreaDataDialogComponent {
             reasonType: 'cancel',
         };
         this.dialogRef.close(closeData);
-        this.areaDataFormGroup.reset();
+        this.formGroup.reset();
     }
 
     protected submitForm() {
-        if (this.areaDataFormGroup.invalid) return;
+        if (this.formGroup.invalid) return;
 
         const { missionName, map, dosePerHq, applicationDate, comment } =
-            this.areaDataFormGroup.value;
+            this.formGroup.value;
         if (
             !map ||
             !dosePerHq ||
@@ -103,6 +118,13 @@ export class AreaDataDialogComponent {
             },
         };
         this.dialogRef.close(closeData);
-        this.areaDataFormGroup.reset();
+        this.formGroup.reset();
     }
+
+    protected readonly missionNameLength = toSignal(
+        this.formGroup.controls.missionName.valueChanges.pipe(
+            map((missionName) => (missionName ? missionName.length : 0))
+        ),
+        { initialValue: 0 }
+    );
 }

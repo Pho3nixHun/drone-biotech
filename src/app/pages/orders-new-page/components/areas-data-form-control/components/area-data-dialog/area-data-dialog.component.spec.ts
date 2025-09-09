@@ -78,7 +78,7 @@ describe('AreaDataDialogComponent', () => {
             // Arrange
 
             // Act
-            const value = component.areaDataFormGroup.getRawValue();
+            const value = component['formGroup'].getRawValue();
             const { applicationDate, dosePerHq, comment, map, missionName } =
                 value;
 
@@ -117,7 +117,7 @@ describe('AreaDataDialogComponent', () => {
             // Arrange
 
             // Act
-            const value = component.areaDataFormGroup.getRawValue();
+            const value = component['formGroup'].getRawValue();
             const { applicationDate, dosePerHq, comment, map, missionName } =
                 value;
 
@@ -134,7 +134,7 @@ describe('AreaDataDialogComponent', () => {
         it('should reset the form and close the dialog when the resetFormWithCloseDialog() method is called', () => {
             // Arrange
             const closeSpy = jest.spyOn(dialogRef, 'close');
-            const resetSpy = jest.spyOn(component.areaDataFormGroup, 'reset');
+            const resetSpy = jest.spyOn(component['formGroup'], 'reset');
 
             // Act
             component['resetFormWithCloseDialog']();
@@ -147,7 +147,7 @@ describe('AreaDataDialogComponent', () => {
         // Unit testing
         it('should reset the form and close the dialog when the submitForm() method is called if the form is valid', () => {
             // Arrange
-            component.areaDataFormGroup.setValue({
+            component['formGroup'].setValue({
                 applicationDate: new Date(),
                 dosePerHq: 10,
                 map: {
@@ -162,7 +162,7 @@ describe('AreaDataDialogComponent', () => {
                 missionName: 'mission',
             });
             const closeSpy = jest.spyOn(dialogRef, 'close');
-            const resetSpy = jest.spyOn(component.areaDataFormGroup, 'reset');
+            const resetSpy = jest.spyOn(component['formGroup'], 'reset');
 
             // Act
             component['submitForm']();
