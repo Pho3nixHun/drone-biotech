@@ -4,9 +4,7 @@ import { AvatarComponent } from './avatar.component';
 
 @Component({
     imports: [AvatarComponent],
-    template: `<app-avatar [vm]="{ cssStyles: 'text-blue-400' }"
-        >C</app-avatar
-    >`,
+    template: `<app-avatar>C</app-avatar>`,
 })
 class TestHostComponent {}
 describe('AvatarComponent', () => {
@@ -22,7 +20,7 @@ describe('AvatarComponent', () => {
     });
 
     //Snapshot test
-    it('should render the template when the vm is provided and project the content', () => {
+    it('should render the template correctly', () => {
         //Arrange
 
         //Act

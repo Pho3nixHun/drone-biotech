@@ -8,7 +8,7 @@ import { AvatarComponent } from '@components/avatar/avatar.component';
     template: `
         <app-message-item>
             <img src="" alt="Should not be projected" />
-            <app-avatar [vm]="{ cssStyles: 'text-blue-300' }"></app-avatar>
+            <app-avatar></app-avatar>
             <div>Should not be projected</div>
             <h3>Should be projected</h3>
             <p>Should be projected</p>
