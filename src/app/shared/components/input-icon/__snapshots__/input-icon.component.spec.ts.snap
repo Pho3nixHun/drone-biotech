@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`InputIconComponent should render the template correctly 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-input-icon>
+    <span
+      class="label-text my-auto flex items-center"
+    >
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        add
+      </mat-icon>
+    </span>
+  </app-input-icon>
+</div>
+`;
