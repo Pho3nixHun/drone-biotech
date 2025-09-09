@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`LandingPageComponent should have the correct routerLinks on product-items 1`] = `
+exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
 <div
   id="root12"
   ng-version="20.1.7"
@@ -9,565 +9,15 @@ exports[`LandingPageComponent should have the correct routerLinks on product-ite
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
-        id="products"
+        id="2"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
-      <!--container-->
-    </section>
-  </app-page-layout>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`LandingPageComponent should not render <app-partner-logo> when 0 is provided 1`] = `
-<div
-  id="root13"
-  ng-version="20.1.7"
->
-  <app-page-layout>
-    <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
-    >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
-      <!--container-->
-      <app-frame
-        id="products"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
+            frame2tit
           </h2>
           <!--container-->
           <app-partner-list>
@@ -588,162 +38,6 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             pagination-dynamic-bullets="true"
             space-between="30"
           >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
             <!--container-->
           </swiper-container>
           <!--container-->
@@ -752,10 +46,9 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -770,57 +63,6 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
         id="products"
@@ -829,7 +71,7 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
+            frame1tit
           </h2>
           <!--container-->
           <app-product-list>
@@ -843,247 +85,10 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
         <!--container-->
       </app-frame>
       <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -1098,213 +103,21 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
-        id="products"
+        id="2"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
+            frame2tit
           </h2>
           <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
               <!--container-->
             </div>
           </app-partner-list>
@@ -1327,10 +140,20 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should not render anything if the VM is not provided 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -1338,70 +161,18 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
 
 exports[`LandingPageComponent should not render frames when 0 frame is provided 1`] = `
 <div
-  id="root4"
+  id="root6"
   ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              heroTitle
-            </h1>
-            <p>
-              heroDescription
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroPrimaryButtonLabel
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      heroSecondaryButtonLabel
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -1417,351 +188,18 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
       <!--container-->
-      <app-frame
-        id="products"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
   <!--container-->
   <!--container-->
+  <!--container-->
 </div>
 `;
 
-exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provided 1`] = `
+exports[`LandingPageComponent should not render the texts of the buttons inside the hero if provided 1`] = `
 <div
-  id="root14"
+  id="root5"
   ng-version="20.1.7"
 >
   <app-page-layout>
@@ -1771,16 +209,16 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
+          style="background-image: url("assets/unknown.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
           >
             <h1>
-              herotit0
+              tit
             </h1>
             <p>
-              herodesc0
+              tit
             </p>
             <div
               class="join"
@@ -1792,9 +230,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
                   <button
                     class="btn flex flex-row justify-center btn-primary"
                   >
-                    <span>
-                      heroprim0
-                    </span>
                     <!--container-->
                   </button>
                 </app-button>
@@ -1804,11 +239,8 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               >
                 <app-button>
                   <button
-                    class="btn flex flex-row justify-center btn-secondary"
+                    class="btn flex flex-row justify-center btn-primary"
                   >
-                    <span>
-                      herosec0
-                    </span>
                     <!--container-->
                   </button>
                 </app-button>
@@ -1820,110 +252,33 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       </app-hero>
       <!--container-->
       <!--container-->
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provided 1`] = `
+<div
+  id="root13"
+  ng-version="20.1.7"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <!--container-->
       <app-frame
-        id="products"
+        id="2"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
+            frame2tit
           </h2>
           <!--container-->
           <app-partner-list>
@@ -1933,7 +288,7 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="0part"
+                  alt="2frame1partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -1953,162 +308,6 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             pagination-dynamic-bullets="true"
             space-between="30"
           >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
             <!--container-->
           </swiper-container>
           <!--container-->
@@ -2117,10 +316,9 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -2135,57 +333,6 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
         id="products"
@@ -2194,7 +341,7 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
+            frame1tit
           </h2>
           <!--container-->
           <app-product-list>
@@ -2209,19 +356,19 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
                 >
                   <img
-                    alt="0prodtit"
+                    alt="1alt1"
                     class="w-auto h-auto object-cover rounded-md"
                     src="assets/lepke.jpg"
                   />
                   <h3
                     class="font-bold text-xl sm:text-2xl mt-4"
                   >
-                    0prodtit
+                    1tit1
                   </h3>
                   <p
                     class="mt-4"
                   >
-                    0proddesc
+                    1desc1
                   </p>
                 </a>
                 <!--container-->
@@ -2233,247 +380,10 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
         <!--container-->
       </app-frame>
       <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -2488,213 +398,21 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
-        id="products"
+        id="2"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
+            frame2tit
           </h2>
           <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
               <!--container-->
             </div>
           </app-partner-list>
@@ -2719,17 +437,17 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
                   <p
                     class="text-lg italic text-gray-700"
                   >
-                    "0message"
+                    "2frame1testimonial"
                   </p>
                   <p
                     class="font-semibold text-gray-900 mt-4"
                   >
-                    John Doe
+                    John
                   </p>
                   <p
                     class="text-gray-500"
                   >
-                    0role
+                    2frame1role
                   </p>
                 </div>
                 <!--container-->
@@ -2743,10 +461,9 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -2754,64 +471,13 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
 
 exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`] = `
 <div
-  id="root5"
+  id="root7"
   ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
         id="products"
@@ -2820,88 +486,13 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
+            frame1tit
           </h2>
           <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
             >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
               <!--container-->
             </div>
           </app-product-list>
@@ -2910,10 +501,9 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -2921,169 +511,22 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
 
 exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided 1`] = `
 <div
-  id="root15"
+  id="root14"
   ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
-        id="products"
+        id="1"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
+            frame2tit
           </h2>
           <!--container-->
           <app-partner-list>
@@ -3093,7 +536,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="0part"
+                  alt="2frame1partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -3102,7 +545,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="1part"
+                  alt="2frame2partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -3111,7 +554,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="2part"
+                  alt="2frame3partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -3120,7 +563,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="3part"
+                  alt="2frame4partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -3129,7 +572,7 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="4part"
+                  alt="2frame5partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -3149,162 +592,6 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             pagination-dynamic-bullets="true"
             space-between="30"
           >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
             <!--container-->
           </swiper-container>
           <!--container-->
@@ -3313,10 +600,9 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -3331,57 +617,6 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
         id="products"
@@ -3390,7 +625,7 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
+            frame1tit
           </h2>
           <!--container-->
           <app-product-list>
@@ -3405,19 +640,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
                 >
                   <img
-                    alt="0prodtit"
+                    alt="1alt1"
                     class="w-auto h-auto object-cover rounded-md"
                     src="assets/lepke.jpg"
                   />
                   <h3
                     class="font-bold text-xl sm:text-2xl mt-4"
                   >
-                    0prodtit
+                    1tit1
                   </h3>
                   <p
                     class="mt-4"
                   >
-                    0proddesc
+                    1desc1
                   </p>
                 </a>
                 <!--container-->
@@ -3430,19 +665,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
                 >
                   <img
-                    alt="1prodtit"
+                    alt="1alt2"
                     class="w-auto h-auto object-cover rounded-md"
                     src="assets/lepke.jpg"
                   />
                   <h3
                     class="font-bold text-xl sm:text-2xl mt-4"
                   >
-                    1prodtit
+                    1tit2
                   </h3>
                   <p
                     class="mt-4"
                   >
-                    1proddesc
+                    1desc2
                   </p>
                 </a>
                 <!--container-->
@@ -3455,19 +690,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
                 >
                   <img
-                    alt="2prodtit"
+                    alt="1alt3"
                     class="w-auto h-auto object-cover rounded-md"
                     src="assets/lepke.jpg"
                   />
                   <h3
                     class="font-bold text-xl sm:text-2xl mt-4"
                   >
-                    2prodtit
+                    1tit3
                   </h3>
                   <p
                     class="mt-4"
                   >
-                    2proddesc
+                    1desc3
                   </p>
                 </a>
                 <!--container-->
@@ -3480,19 +715,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
                 >
                   <img
-                    alt="0prodtit"
+                    alt="1alt4"
                     class="w-auto h-auto object-cover rounded-md"
                     src="assets/lepke.jpg"
                   />
                   <h3
                     class="font-bold text-xl sm:text-2xl mt-4"
                   >
-                    0prodtit
+                    1tit4
                   </h3>
                   <p
                     class="mt-4"
                   >
-                    0proddesc
+                    1desc4
                   </p>
                 </a>
                 <!--container-->
@@ -3505,19 +740,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
                   class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
                 >
                   <img
-                    alt="1prodtit"
+                    alt="1alt5"
                     class="w-auto h-auto object-cover rounded-md"
                     src="assets/lepke.jpg"
                   />
                   <h3
                     class="font-bold text-xl sm:text-2xl mt-4"
                   >
-                    1prodtit
+                    1tit5
                   </h3>
                   <p
                     class="mt-4"
                   >
-                    1proddesc
+                    1desc5
                   </p>
                 </a>
                 <!--container-->
@@ -3529,247 +764,10 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
         <!--container-->
       </app-frame>
       <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -3784,213 +782,21 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
       <!--container-->
       <app-frame
-        id="products"
+        id="2"
       >
         <section
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
+            frame2tit
           </h2>
           <!--container-->
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
               <!--container-->
             </div>
           </app-partner-list>
@@ -4015,17 +821,17 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                   <p
                     class="text-lg italic text-gray-700"
                   >
-                    "0message"
+                    "2frame1testimonial"
                   </p>
                   <p
                     class="font-semibold text-gray-900 mt-4"
                   >
-                    John Doe
+                    John
                   </p>
                   <p
                     class="text-gray-500"
                   >
-                    0role
+                    2frame1role
                   </p>
                 </div>
                 <!--container-->
@@ -4041,17 +847,17 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                   <p
                     class="text-lg italic text-gray-700"
                   >
-                    "1message"
+                    "2frame2testimonial"
                   </p>
                   <p
                     class="font-semibold text-gray-900 mt-4"
                   >
-                    Jane Smith
+                    Doe
                   </p>
                   <p
                     class="text-gray-500"
                   >
-                    1role
+                    2frame2role
                   </p>
                 </div>
                 <!--container-->
@@ -4067,17 +873,17 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                   <p
                     class="text-lg italic text-gray-700"
                   >
-                    "2message"
+                    "2frame3testimonial"
                   </p>
                   <p
                     class="font-semibold text-gray-900 mt-4"
                   >
-                    Emily Johnson
+                    Elizabeth
                   </p>
                   <p
                     class="text-gray-500"
                   >
-                    2role
+                    2frame3role
                   </p>
                 </div>
                 <!--container-->
@@ -4093,17 +899,17 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                   <p
                     class="text-lg italic text-gray-700"
                   >
-                    "3message"
+                    "2frame4testimonial"
                   </p>
                   <p
                     class="font-semibold text-gray-900 mt-4"
                   >
-                    Emily Johnson
+                    Swan
                   </p>
                   <p
                     class="text-gray-500"
                   >
-                    3role
+                    2frame4role
                   </p>
                 </div>
                 <!--container-->
@@ -4119,17 +925,17 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
                   <p
                     class="text-lg italic text-gray-700"
                   >
-                    "4message"
+                    "2frame5testimonial"
                   </p>
                   <p
                     class="font-semibold text-gray-900 mt-4"
                   >
-                    Emily Johnson
+                    Depp
                   </p>
                   <p
                     class="text-gray-500"
                   >
-                    4role
+                    2frame5role
                   </p>
                 </div>
                 <!--container-->
@@ -4143,10 +949,9 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -4154,161 +959,14 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
 
 exports[`LandingPageComponent should render 5 frames in order when 5 frames are provided 1`] = `
 <div
-  id="root6"
+  id="root8"
   ng-version="20.1.7"
 >
   <app-page-layout>
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
       <!--container-->
-      <!--container-->
-      <app-frame
-        id="0"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
       <app-frame
         id="1"
       >
@@ -4316,231 +974,16 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            1frame
+            frame1tit
           </h2>
           <!--container-->
-          <app-partner-list>
+          <app-product-list>
             <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
             >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0prodtit"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1prodtit"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2prodtit"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
               <!--container-->
             </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
+          </app-product-list>
         </section>
         <!--container-->
       </app-frame>
@@ -4552,91 +995,30 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
+            frame2tit
           </h2>
           <!--container-->
-          <app-product-list>
+          <app-partner-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
               <!--container-->
             </div>
-          </app-product-list>
+          </app-partner-list>
+          <!--container-->
+          <swiper-container
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            class="w-full sm:w-2/3 md:w-1/2"
+            keyboard="true"
+            pagination="true"
+            pagination-clickable="true"
+            pagination-dynamic-bullets="true"
+            space-between="30"
+          >
+            <!--container-->
+          </swiper-container>
+          <!--container-->
         </section>
         <!--container-->
       </app-frame>
@@ -4648,88 +1030,13 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            0frame
+            frame3tit
           </h2>
           <!--container-->
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
             >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
               <!--container-->
             </div>
           </app-product-list>
@@ -4744,7 +1051,28 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
           class="flex flex-col gap-y-10 py-10"
         >
           <h2>
-            1frame
+            frame4tit
+          </h2>
+          <!--container-->
+          <app-product-list>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+            >
+              <!--container-->
+            </div>
+          </app-product-list>
+        </section>
+        <!--container-->
+      </app-frame>
+      <!--ng-container-->
+      <app-frame
+        id="4"
+      >
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <h2>
+            frame5tit
           </h2>
           <!--container-->
           <app-partner-list>
@@ -4752,9 +1080,93 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
             >
               <!--container-->
+            </div>
+          </app-partner-list>
+          <!--container-->
+          <swiper-container
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            class="w-full sm:w-2/3 md:w-1/2"
+            keyboard="true"
+            pagination="true"
+            pagination-clickable="true"
+            pagination-dynamic-bullets="true"
+            space-between="30"
+          >
+            <!--container-->
+          </swiper-container>
+          <!--container-->
+        </section>
+        <!--container-->
+      </app-frame>
+      <!--ng-container-->
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should render 5 mixed <app-partner-logo> in order when 5 app-partner-logo are provided 1`] = `
+<div
+  id="root15"
+  ng-version="20.1.7"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
+      <!--container-->
+      <app-frame
+        id="2"
+      >
+        <section
+          class="flex flex-col gap-y-10 py-10"
+        >
+          <h2>
+            frame2tit
+          </h2>
+          <!--container-->
+          <app-partner-list>
+            <div
+              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
+            >
+              <a
+                href=""
+                rel="noopener noreferrer"
+                target="_self"
+              >
+                <app-partner-logo>
+                  <img
+                    alt="2frame1partner"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+              </a>
+              <!--container-->
+              <!--container-->
+              <a
+                href=""
+                rel="noopener noreferrer"
+                target="_self"
+              >
+                <app-partner-logo>
+                  <img
+                    alt="2frame2partner"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+              </a>
+              <!--container-->
+              <!--container-->
+              <!--container-->
               <app-partner-logo>
                 <img
-                  alt="0prodtit"
+                  alt="2frame3partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
@@ -4763,38 +1175,26 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <!--container-->
               <app-partner-logo>
                 <img
-                  alt="1prodtit"
+                  alt="2frame4partner"
                   class="w-52 h-52"
                   src="assets/lepke.jpg"
                 />
               </app-partner-logo>
               <!--container-->
+              <a
+                href=""
+                rel="noopener noreferrer"
+                target="_self"
+              >
+                <app-partner-logo>
+                  <img
+                    alt="2frame5partner"
+                    class="w-52 h-52"
+                    src="assets/lepke.jpg"
+                  />
+                </app-partner-logo>
+              </a>
               <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2prodtit"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
               <!--container-->
               <!--container-->
             </div>
@@ -4810,162 +1210,6 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             pagination-dynamic-bullets="true"
             space-between="30"
           >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
             <!--container-->
           </swiper-container>
           <!--container-->
@@ -4974,363 +1218,9 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
       </app-frame>
       <!--ng-container-->
       <!--container-->
-      <!--container-->
-      <!--container-->
     </section>
   </app-page-layout>
   <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`LandingPageComponent should render loading state without VM 1`] = `
-<div
-  id="root0"
-  ng-version="20.1.7"
->
-  <app-page-layout>
-    <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
-    >
-      <!--container-->
-       Loading... 
-      <!--container-->
-    </section>
-  </app-page-layout>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`LandingPageComponent should render only partner frames when only partner frames are provided 1`] = `
-<div
-  id="root8"
-  ng-version="20.1.7"
->
-  <app-page-layout>
-    <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
-    >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
-      <!--container-->
-      <app-frame
-        id="products"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
-      <!--container-->
-    </section>
-  </app-page-layout>
-  <!--container-->
-  <!--container-->
-</div>
-`;
-
-exports[`LandingPageComponent should render only product frames when only product frames are provided 1`] = `
-<div
-  id="root7"
-  ng-version="20.1.7"
->
-  <app-page-layout>
-    <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
-    >
-      <app-hero>
-        <section
-          class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
-        >
-          <div
-            class="flex flex-col mx-10 space-y-5"
-          >
-            <h1>
-              herotit0
-            </h1>
-            <p>
-              herodesc0
-            </p>
-            <div
-              class="join"
-            >
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-primary"
-                  >
-                    <span>
-                      heroprim0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
-                  <button
-                    class="btn flex flex-row justify-center btn-secondary"
-                  >
-                    <span>
-                      herosec0
-                    </span>
-                    <!--container-->
-                  </button>
-                </app-button>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!--container-->
-      </app-hero>
-      <!--container-->
-      <!--container-->
-      <app-frame
-        id="products"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
-      <!--container-->
-    </section>
-  </app-page-layout>
   <!--container-->
   <!--container-->
 </div>
@@ -5348,16 +1238,16 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
+          style="background-image: url("assets/unknown.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
           >
             <h1>
-              herotit0
+              tit
             </h1>
             <p>
-              herodesc0
+              tit
             </p>
             <div
               class="join"
@@ -5369,9 +1259,6 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
                   <button
                     class="btn flex flex-row justify-center btn-primary"
                   >
-                    <span>
-                      heroprim0
-                    </span>
                     <!--container-->
                   </button>
                 </app-button>
@@ -5381,11 +1268,8 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
               >
                 <app-button>
                   <button
-                    class="btn flex flex-row justify-center btn-secondary"
+                    class="btn flex flex-row justify-center btn-primary"
                   >
-                    <span>
-                      herosec0
-                    </span>
                     <!--container-->
                   </button>
                 </app-button>
@@ -5397,343 +1281,10 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
       </app-hero>
       <!--container-->
       <!--container-->
-      <app-frame
-        id="products"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
@@ -5748,19 +1299,38 @@ exports[`LandingPageComponent should render the template when there is a VM prov
     <section
       class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
     >
+      <!--container-->
+      <!--container-->
+    </section>
+  </app-page-layout>
+  <!--container-->
+  <!--container-->
+  <!--container-->
+</div>
+`;
+
+exports[`LandingPageComponent should render the texts of the buttons inside the hero if provided 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <app-page-layout>
+    <section
+      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+    >
       <app-hero>
         <section
           class="h-[75vh] flex flex-col justify-center bg-no-repeat bg-right-top bg-cover sm:space-y-10 md:ml-60 transition-all"
-          style="background-image: url("assets/farming.jpg");"
+          style="background-image: url("assets/unknown.jpg");"
         >
           <div
             class="flex flex-col mx-10 space-y-5"
           >
             <h1>
-              herotit0
+              tit
             </h1>
             <p>
-              herodesc0
+              tit
             </p>
             <div
               class="join"
@@ -5772,9 +1342,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
                   <button
                     class="btn flex flex-row justify-center btn-primary"
                   >
-                    <span>
-                      heroprim0
-                    </span>
+                     primary 
                     <!--container-->
                   </button>
                 </app-button>
@@ -5784,11 +1352,9 @@ exports[`LandingPageComponent should render the template when there is a VM prov
               >
                 <app-button>
                   <button
-                    class="btn flex flex-row justify-center btn-secondary"
+                    class="btn flex flex-row justify-center btn-primary"
                   >
-                    <span>
-                      herosec0
-                    </span>
+                     secondary 
                     <!--container-->
                   </button>
                 </app-button>
@@ -5800,343 +1366,10 @@ exports[`LandingPageComponent should render the template when there is a VM prov
       </app-hero>
       <!--container-->
       <!--container-->
-      <app-frame
-        id="products"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            0frame
-          </h2>
-          <!--container-->
-          <app-product-list>
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
-            >
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="0prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    0prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    0proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="1prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    1prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                tabindex="0"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="2prodtit"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    2prodtit
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    2proddesc
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <!--container-->
-            </div>
-          </app-product-list>
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <app-frame
-        id="partners"
-      >
-        <section
-          class="flex flex-col gap-y-10 py-10"
-        >
-          <h2>
-            1frame
-          </h2>
-          <!--container-->
-          <app-partner-list>
-            <div
-              class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
-            >
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="0part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="1part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="2part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="3part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-              <app-partner-logo>
-                <img
-                  alt="4part"
-                  class="w-52 h-52"
-                  src="assets/lepke.jpg"
-                />
-              </app-partner-logo>
-              <!--container-->
-              <!--container-->
-            </div>
-          </app-partner-list>
-          <!--container-->
-          <swiper-container
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
-            keyboard="true"
-            pagination="true"
-            pagination-clickable="true"
-            pagination-dynamic-bullets="true"
-            space-between="30"
-          >
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "0message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    John Doe
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    0role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "1message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Jane Smith
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    1role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "2message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    2role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "3message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    3role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "4message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    4role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <swiper-slide
-              class="pb-10"
-            >
-              <app-testimonial-item>
-                <div
-                  class="p-6 full mx-auto text-center rounded-md shadow transition-all cursor-pointer"
-                >
-                  <p
-                    class="text-lg italic text-gray-700"
-                  >
-                    "5message"
-                  </p>
-                  <p
-                    class="font-semibold text-gray-900 mt-4"
-                  >
-                    Emily Johnson
-                  </p>
-                  <p
-                    class="text-gray-500"
-                  >
-                    5role
-                  </p>
-                </div>
-                <!--container-->
-              </app-testimonial-item>
-            </swiper-slide>
-            <!--container-->
-          </swiper-container>
-          <!--container-->
-        </section>
-        <!--container-->
-      </app-frame>
-      <!--ng-container-->
-      <!--container-->
-      <!--container-->
       <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
   <!--container-->
 </div>
