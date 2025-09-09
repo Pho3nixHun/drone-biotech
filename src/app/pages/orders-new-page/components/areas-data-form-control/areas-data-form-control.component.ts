@@ -68,7 +68,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
     private readonly dialogService = inject(DialogService);
     private readonly reverseGeocodingService = inject(ReverseGeocodingService);
 
-    protected async addAreaData() {
+    public async addAreaData() {
         const vm: AreaDataDialogVM = {
             ...this.vm().addAreaDataDialogVM,
             areaData: null,

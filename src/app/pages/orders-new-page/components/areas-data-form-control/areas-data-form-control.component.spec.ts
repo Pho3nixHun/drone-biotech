@@ -53,7 +53,7 @@ const areaData = [
     imports: [AreasDataFormControlComponent, ReactiveFormsModule],
 })
 class TestHostComponent {
-    public vm = ordersNewPageVMMock.frameXVM.areasDataFormControlVM;
+    public vm = ordersNewPageVMMock.areasDataFormControlXVM;
     public form = new FormGroup({
         areaData: new FormControl<AreaData[]>(areaData),
     });

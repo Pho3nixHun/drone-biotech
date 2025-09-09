@@ -6,16 +6,16 @@ import {
 import { DeleteDialogVM } from './components/delete-dialog/delete-dialog.model';
 
 export interface AreasDataFormControlVM {
+    labelKey: string;
+
     addAreaDataDialogVM: AreaDataDialogVM;
     editAreaDataDialogVM: AreaDataDialogVM;
     deleteDialogVM: DeleteDialogVM;
 
-    addButtonXVM: ButtonXVM;
     editButtonXVM: ButtonXVM;
     deleteButtonXVM: ButtonXVM;
 
     entryPointHeaderKey: string;
-    entryPointValueKey: string;
 
     missionHeaderKey: string;
     commentHeaderKey: string;

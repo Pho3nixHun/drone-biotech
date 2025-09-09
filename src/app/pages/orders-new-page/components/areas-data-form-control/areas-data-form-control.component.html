@@ -1,13 +1,9 @@
 @let vM = vm();
 
 <div *transloco="let t">
-    <div class="flex flex-row justify-between pr-3 xl:pr-2">
-        <ng-content select="label" />
-        <app-button [vm]="vM.addButtonXVM" (click)="addAreaData()">
-            @if (vM.addButtonXVM.icon) {
-                <mat-icon>{{ vM.addButtonXVM.icon }}</mat-icon>
-            }
-        </app-button>
+    <div class="flex flex-row justify-between items-end">
+        <label class="label-text">{{ t(vM.labelKey) }}</label
+        ><ng-content select="app-button" />
     </div>
     @if (xAreaData$() | async; as xAreaData) {
         <app-card-group>
@@ -53,11 +49,6 @@
                     </app-key-value>
                     <app-key-value [label]="vM.entryPointHeaderKey">
                         {{ area.entryPointAddress }}
-                        {{
-                            t(vM.entryPointValueKey, {
-                                count: area.entryPointAddress,
-                            })
-                        }}
                     </app-key-value>
                     <app-key-value [label]="vM.doseHeaderKey">
                         {{
@@ -96,23 +87,22 @@
                         [vm]="vM.editButtonXVM"
                         (click)="editAreaData(area.id)"
                     >
-                        @if (vM.editButtonXVM.icon) {
-                            <mat-icon>{{ vM.editButtonXVM.icon }}</mat-icon>
+                        @if (vM.editButtonXVM.icon; as icon) {
+                            <mat-icon>{{ icon }}</mat-icon>
                         }
                     </app-button>
                     <app-button
                         [vm]="vM.deleteButtonXVM"
                         (click)="deleteAreaData(area.id)"
                     >
-                        @if (vM.deleteButtonXVM.icon) {
-                            <mat-icon>{{ vM.deleteButtonXVM.icon }}</mat-icon>
+                        @if (vM.deleteButtonXVM.icon; as icon) {
+                            <mat-icon>{{ icon }}</mat-icon>
                         }
                     </app-button>
                 </app-card-item>
             }
         </app-card-group>
-        @let data = totalAreaXData$() | async;
-        @if (data) {
+        @if (totalAreaXData$() | async; as data) {
             <div class="grid grid-cols-3 gap-1">
                 <div
                     class="grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
