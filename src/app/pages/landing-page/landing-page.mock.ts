@@ -1,36 +1,88 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { FrameID, LandingPageVM } from './landing-page-vm.model';
 
-export const enLandingMock = {
-    message0: '0message',
-    message1: '1message',
-    message2: '2message',
-    message3: '3message',
-    message4: '4message',
-    message5: '5message',
-    role0: '0role',
-    role1: '1role',
-    role2: '2role',
-    role3: '3role',
-    role4: '4role',
-    role5: '5role',
-    prodtit0: '0prodtit',
-    prodtit1: '1prodtit',
-    prodtit2: '2prodtit',
-    proddesc0: '0proddesc',
-    proddesc1: '1proddesc',
-    proddesc2: '2proddesc',
-    frame0: '0frame',
-    frame1: '1frame',
-    herotit: 'herotit0',
-    herodesc: 'herodesc0',
-    heroprim: 'heroprim0',
-    herosec: 'herosec0',
-    part0: '0part',
-    part1: '1part',
-    part2: '2part',
-    part3: '3part',
-    part4: '4part',
+export const enMock = {
+    hero: {
+        description: 'desc',
+        primaryButton: 'primary',
+        secondaryButton: 'secondary',
+        title: 'tit',
+    },
+    frame1: {
+        title: 'frame1tit',
+        product1: {
+            altText: '1alt1',
+            title: '1tit1',
+            description: '1desc1',
+        },
+        product2: {
+            altText: '1alt2',
+            title: '1tit2',
+            description: '1desc2',
+        },
+        product3: {
+            altText: '1alt3',
+            title: '1tit3',
+            description: '1desc3',
+        },
+        product4: {
+            altText: '1alt4',
+            title: '1tit4',
+            description: '1desc4',
+        },
+        product5: {
+            altText: '1alt5',
+            title: '1tit5',
+            description: '1desc5',
+        },
+    },
+    frame2: {
+        title: 'frame2tit',
+        partner1: {
+            altText: '2frame1partner',
+        },
+        partner2: {
+            altText: '2frame2partner',
+        },
+        partner3: {
+            altText: '2frame3partner',
+        },
+        partner4: {
+            altText: '2frame4partner',
+        },
+        partner5: {
+            altText: '2frame5partner',
+        },
+        testimonial1: {
+            message: '2frame1testimonial',
+            roleAndCompany: '2frame1role',
+        },
+        testimonial2: {
+            message: '2frame2testimonial',
+            roleAndCompany: '2frame2role',
+        },
+        testimonial3: {
+            message: '2frame3testimonial',
+            roleAndCompany: '2frame3role',
+        },
+        testimonial4: {
+            message: '2frame4testimonial',
+            roleAndCompany: '2frame4role',
+        },
+        testimonial5: {
+            message: '2frame5testimonial',
+            roleAndCompany: '2frame5role',
+        },
+    },
+    frame3: {
+        title: 'frame3tit',
+    },
+    frame4: {
+        title: 'frame4tit',
+    },
+    frame5: {
+        title: 'frame5tit',
+    },
 };
 export const landingPageVMDefault: LandingPageVM = {
     frameXVMs: [
@@ -120,1543 +172,354 @@ export const landingPageVMDefault: LandingPageVM = {
     },
 };
 
-export const landingPageVMWithoutFrameMock: LandingPageVM = {
+export const mockVM: LandingPageVM = {
+    frameXVMs: [],
+};
+
+export const mockVMWithoutHero: LandingPageVM = {
+    frameXVMs: [],
+};
+
+export const mockVMWithHero: LandingPageVM = {
     frameXVMs: [],
     heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'heroTitle',
-        descriptionKey: 'heroDescription',
+        titleKey: enMock.hero.title,
+        descriptionKey: enMock.hero.title,
+        backgroundImageSrc: 'assets/unknown.jpg',
         primaryButtonXVM: {
-            textKey: 'heroPrimaryButtonLabel',
             variant: 'fill',
         },
         secondaryButtonXVM: {
-            textKey: 'heroSecondaryButtonLabel',
             variant: 'fill',
-            secondary: true,
         },
     },
 };
 
-export const landingPageVMWithoutHeroXVM: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    id: '1',
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    id: '2',
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-    ],
-};
-
-export const landingPageVMWithOneFrameMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-    ],
+export const mockVMWithButtonTextsInHero: LandingPageVM = {
+    frameXVMs: [],
     heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
+        titleKey: enMock.hero.title,
+        descriptionKey: enMock.hero.title,
+        backgroundImageSrc: 'assets/unknown.jpg',
         primaryButtonXVM: {
-            textKey: 'heroprim',
             variant: 'fill',
+            textKey: enMock.hero.primaryButton,
         },
         secondaryButtonXVM: {
-            textKey: 'herosec',
             variant: 'fill',
-            secondary: true,
+            textKey: enMock.hero.secondaryButton,
         },
     },
 };
 
-export const landingPageVMWithFiveFramesMock: LandingPageVM = {
+export const mockVMWithoutButtonTextsInHero: LandingPageVM = {
+    frameXVMs: [],
+    heroXVM: {
+        titleKey: enMock.hero.title,
+        descriptionKey: enMock.hero.title,
+        backgroundImageSrc: 'assets/unknown.jpg',
+        primaryButtonXVM: {
+            variant: 'fill',
+        },
+        secondaryButtonXVM: {
+            variant: 'fill',
+        },
+    },
+};
+
+export const mockVMWithoutFrames: LandingPageVM = {
+    frameXVMs: [],
+};
+
+export const mockVMWithOneFrame: LandingPageVM = {
     frameXVMs: [
         {
-            id: '0',
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
+            id: FrameID.PRODUCTS,
+            titleKey: enMock.frame1.title,
+            productItemXVMs: [],
         },
+    ],
+};
+
+export const mockVMWithFiveFrames: LandingPageVM = {
+    frameXVMs: [
         {
             id: '1',
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    altTextKey: 'prodtit0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    altTextKey: 'prodtit1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    altTextKey: 'prodtit2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-        {
-            id: '2',
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: '3',
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: '4',
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    altTextKey: 'prodtit0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    altTextKey: 'prodtit1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    altTextKey: 'prodtit2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-
-export const landingPageVMWithOnlyPartnerFrameMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-
-export const landingPageVMWithOnlyProductFrameMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-
-export const landingPageVMWithoutProductItemMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
+            titleKey: enMock.frame1.title,
             productItemXVMs: [],
         },
         {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
+            id: '2',
+            titleKey: enMock.frame2.title,
+            partnerLogoXVMs: [],
+            testimonialItemVMs: [],
+        },
+        {
+            id: '3',
+            titleKey: enMock.frame3.title,
+            productItemXVMs: [],
+        },
+        {
+            id: '4',
+            titleKey: enMock.frame4.title,
+            productItemXVMs: [],
+        },
+        {
+            id: '4',
+            titleKey: enMock.frame5.title,
+            partnerLogoXVMs: [],
+            testimonialItemVMs: [],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };
 
-export const landingPageVMWithOneProductItemMock: LandingPageVM = {
+export const mockVMWithoutProductItem: LandingPageVM = {
     frameXVMs: [
         {
             id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
+            titleKey: enMock.frame1.title,
+            productItemXVMs: [],
+        },
+    ],
+};
+
+export const mockVMWithOneProductItem: LandingPageVM = {
+    frameXVMs: [
+        {
+            id: FrameID.PRODUCTS,
+            titleKey: enMock.frame1.title,
             productItemXVMs: [
                 {
                     id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
+                    altTextKey: enMock.frame1.product1.altText,
+                    titleKey: enMock.frame1.product1.title,
+                    descriptionKey: enMock.frame1.product1.description,
                     imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
                 },
             ],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };
 
-export const landingPageVMWithFiveProductItemMock: LandingPageVM = {
+export const mockVMWithFiveProductItem: LandingPageVM = {
     frameXVMs: [
         {
             id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
+            titleKey: enMock.frame1.title,
             productItemXVMs: [
                 {
                     id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
+                    altTextKey: enMock.frame1.product1.altText,
+                    titleKey: enMock.frame1.product1.title,
+                    descriptionKey: enMock.frame1.product1.description,
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
                     id: '2',
                     routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
+                    altTextKey: enMock.frame1.product2.altText,
+                    titleKey: enMock.frame1.product2.title,
+                    descriptionKey: enMock.frame1.product2.description,
                     imageSrc: 'assets/lepke.jpg',
                 },
-
                 {
                     id: '3',
                     routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
+                    altTextKey: enMock.frame1.product3.altText,
+                    titleKey: enMock.frame1.product3.title,
+                    descriptionKey: enMock.frame1.product3.description,
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
                     id: '4',
                     routerLink: [AppRouteSegment.PRODUCT, '4'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
+                    altTextKey: enMock.frame1.product4.altText,
+                    titleKey: enMock.frame1.product4.title,
+                    descriptionKey: enMock.frame1.product4.description,
                     imageSrc: 'assets/lepke.jpg',
                 },
                 {
                     id: '5',
                     routerLink: [AppRouteSegment.PRODUCT, '5'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
+                    altTextKey: enMock.frame1.product5.altText,
+                    titleKey: enMock.frame1.product5.title,
+                    descriptionKey: enMock.frame1.product5.description,
                     imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
                 },
             ],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };
 
-export const landingPageVMWithoutPartnerLogoXMock: LandingPageVM = {
+export const mockVMWithoutPartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
+            id: '2',
+            titleKey: enMock.frame2.title,
             partnerLogoXVMs: [],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
+            testimonialItemVMs: [],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };
 
-export const landingPageVMWithOnePartnerLogoXMock: LandingPageVM = {
+export const mockVMWithOnePartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
+            id: '2',
+            titleKey: enMock.frame2.title,
             partnerLogoXVMs: [
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-
-export const landingPageVMWithFivePartnerLogoXMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-
-export const landingPageVMWithoutTestimonialMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
+                    altTextKey: enMock.frame2.partner1.altText,
                 },
             ],
             testimonialItemVMs: [],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };
 
-export const landingPageVMWithOneTestimonialMock: LandingPageVM = {
+export const mockVMWithFivePartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
+            id: '1',
+            titleKey: enMock.frame2.title,
             partnerLogoXVMs: [
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
+                    altTextKey: enMock.frame2.partner1.altText,
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
+                    altTextKey: enMock.frame2.partner2.altText,
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
+                    altTextKey: enMock.frame2.partner3.altText,
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
+                    altTextKey: enMock.frame2.partner4.altText,
                 },
                 {
                     imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
+                    altTextKey: enMock.frame2.partner5.altText,
                 },
             ],
+            testimonialItemVMs: [],
+        },
+    ],
+};
+
+export const mockVMWithFiveMixedPartnerLogoXVM: LandingPageVM = {
+    frameXVMs: [
+        {
+            id: '2',
+            titleKey: enMock.frame2.title,
+            partnerLogoXVMs: [
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: enMock.frame2.partner1.altText,
+                    link: {
+                        href: '',
+                    },
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: enMock.frame2.partner2.altText,
+                    link: {
+                        href: '',
+                    },
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: enMock.frame2.partner3.altText,
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: enMock.frame2.partner4.altText,
+                },
+                {
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: enMock.frame2.partner5.altText,
+                    link: {
+                        href: '',
+                    },
+                },
+            ],
+            testimonialItemVMs: [],
+        },
+    ],
+};
+
+export const mockVMWithoutTestimonial: LandingPageVM = {
+    frameXVMs: [
+        {
+            id: '2',
+            titleKey: enMock.frame2.title,
+            partnerLogoXVMs: [],
+            testimonialItemVMs: [],
+        },
+    ],
+};
+
+export const mockVMWithOneTestimonial: LandingPageVM = {
+    frameXVMs: [
+        {
+            id: '2',
+            titleKey: enMock.frame2.title,
+            partnerLogoXVMs: [],
             testimonialItemVMs: [
                 {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
+                    name: 'John',
+                    messageKey: enMock.frame2.testimonial1.message,
+                    roleAndCompanyKey:
+                        enMock.frame2.testimonial1.roleAndCompany,
                 },
             ],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };
 
-export const landingPageVMWithFiveTestimonialMock: LandingPageVM = {
+export const mockVMWithFiveTestimonial: LandingPageVM = {
     frameXVMs: [
         {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
+            id: '2',
+            titleKey: enMock.frame2.title,
+            partnerLogoXVMs: [],
             testimonialItemVMs: [
                 {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
+                    name: 'John',
+                    messageKey: enMock.frame2.testimonial1.message,
+                    roleAndCompanyKey:
+                        enMock.frame2.testimonial1.roleAndCompany,
                 },
                 {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
+                    name: 'Doe',
+                    messageKey: enMock.frame2.testimonial2.message,
+                    roleAndCompanyKey:
+                        enMock.frame2.testimonial2.roleAndCompany,
                 },
                 {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
+                    name: 'Elizabeth',
+                    messageKey: enMock.frame2.testimonial3.message,
+                    roleAndCompanyKey:
+                        enMock.frame2.testimonial3.roleAndCompany,
                 },
                 {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
+                    name: 'Swan',
+                    messageKey: enMock.frame2.testimonial4.message,
+                    roleAndCompanyKey:
+                        enMock.frame2.testimonial4.roleAndCompany,
                 },
                 {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
+                    name: 'Depp',
+                    messageKey: enMock.frame2.testimonial5.message,
+                    roleAndCompanyKey:
+                        enMock.frame2.testimonial5.roleAndCompany,
                 },
             ],
         },
     ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-
-export const landingPageVMMockWithRoutes: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '1',
-
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '1',
-
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
-};
-export const landingPageVMMock: LandingPageVM = {
-    frameXVMs: [
-        {
-            id: FrameID.PRODUCTS,
-            titleKey: 'frame0',
-            productItemXVMs: [
-                {
-                    id: '1',
-                    routerLink: [AppRouteSegment.PRODUCT, '1'],
-                    altTextKey: 'prodtit0',
-                    titleKey: 'prodtit0',
-                    descriptionKey: 'proddesc0',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '2',
-
-                    routerLink: [AppRouteSegment.PRODUCT, '2'],
-                    altTextKey: 'prodtit1',
-                    titleKey: 'prodtit1',
-                    descriptionKey: 'proddesc1',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-                {
-                    id: '3',
-                    routerLink: [AppRouteSegment.PRODUCT, '3'],
-                    altTextKey: 'prodtit2',
-                    titleKey: 'prodtit2',
-                    descriptionKey: 'proddesc2',
-                    imageSrc: 'assets/lepke.jpg',
-                },
-            ],
-        },
-        {
-            id: FrameID.PARTNERS,
-            titleKey: 'frame1',
-            partnerLogoXVMs: [
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part0',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part1',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part2',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part3',
-                },
-                {
-                    imageSrc: 'assets/lepke.jpg',
-                    altTextKey: 'part4',
-                },
-            ],
-            testimonialItemVMs: [
-                {
-                    messageKey: 'message0',
-                    name: 'John Doe',
-                    roleAndCompanyKey: 'role0',
-                },
-                {
-                    messageKey: 'message1',
-                    name: 'Jane Smith',
-                    roleAndCompanyKey: 'role1',
-                },
-                {
-                    messageKey: 'message2',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role2',
-                },
-                {
-                    messageKey: 'message3',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role3',
-                },
-                {
-                    messageKey: 'message4',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role4',
-                },
-                {
-                    messageKey: 'message5',
-                    name: 'Emily Johnson',
-                    roleAndCompanyKey: 'role5',
-                },
-            ],
-        },
-    ],
-    heroXVM: {
-        backgroundImageSrc: 'assets/farming.jpg',
-        titleKey: 'herotit',
-        descriptionKey: 'herodesc',
-        primaryButtonXVM: {
-            textKey: 'heroprim',
-            variant: 'fill',
-        },
-        secondaryButtonXVM: {
-            textKey: 'herosec',
-            variant: 'fill',
-            secondary: true,
-        },
-    },
 };

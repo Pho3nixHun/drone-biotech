@@ -28,14 +28,20 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 const enMock = {
     areaValue: 'area',
     coordinatesLabel: 'coordinates',
+    placeholder: 'place',
 };
 
 const vm: MapAreaSelectFormControlVM = {
+    coordinatesInputTextareaXVM: {
+        id: 'id',
+        labelKey: enMock.coordinatesLabel,
+        placeholderKey: enMock.placeholder,
+        readonly: false,
+    },
     addButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     deleteButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     editButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
     areaValueKey: enMock.areaValue,
-    coordinatesLabelKey: enMock.coordinatesLabel,
 };
 @Component({
     imports: [

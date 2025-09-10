@@ -1,13 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
-import { AvatarComponent } from './avatar.component';
+
+import { InputIconComponent } from './input-icon.component';
+import { Component, signal } from '@angular/core';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 @Component({
-    imports: [AvatarComponent],
-    template: `<app-avatar>C</app-avatar>`,
+    imports: [InputIconComponent],
+    template: `<app-input-icon [icon]="leadingIcon()" />`,
 })
-class TestHostComponent {}
-describe('AvatarComponent', () => {
+class TestHostComponent {
+    public leadingIcon = signal<MatIcon>(MatIcon.ADD);
+}
+describe('InputIconComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
 
@@ -15,18 +19,19 @@ describe('AvatarComponent', () => {
         await TestBed.configureTestingModule({
             imports: [TestHostComponent],
         }).compileComponents();
+
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;
     });
 
-    //Snapshot test
+    // Snapshot testing
     it('should render the template correctly', () => {
-        //Arrange
+        // There is no need to arrange
 
-        //Act
+        // Act
         fixture.detectChanges();
 
-        //Assert
+        // Assert
         expect(compiled).toMatchSnapshot();
     });
 });

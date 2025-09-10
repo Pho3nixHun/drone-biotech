@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`AvatarComponent should render the template when the vm is provided and project the content 1`] = `
+exports[`AvatarComponent should render the template correctly 1`] = `
 <div
   id="root0"
   ng-version="20.1.7"

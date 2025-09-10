@@ -1,48 +1,60 @@
-@if (vm(); as vm) {
+@if (vm()?.loginFormXVM; as vm) {
     <section
         class="flex flex-col items-center justify-center min-h-screen px-4 md:px-0"
         *transloco="let t"
     >
-        @let formXVM = vm.loginFormXVM;
-
-        <app-login-form [vm]="formXVM">
-            @if (formXVM.errorMessageKey) {
+        <app-login-form [vm]="vm">
+            @if (vm.errorMessageKey; as messageKey) {
                 <p class="text-red-500 text-sm">
-                    {{ t(formXVM.errorMessageKey) }}
+                    {{ t(messageKey) }}
                 </p>
             }
-            <form [formGroup]="loginForm" class="w-full space-y-4">
-                <label for="email" class="block font-medium">
-                    {{ t(formXVM.emailLabelKey) }}
-                </label>
-                <input
-                    id="email"
-                    type="email"
-                    placeholder="Email"
-                    formControlName="email"
-                    class="block w-full border border-gray-300 p-2 rounded-md"
-                />
-
-                <label for="password" class="block font-medium">
-                    {{ t(formXVM.passwordLabelKey) }}
-                </label>
-                <input
-                    id="password"
-                    type="password"
-                    [placeholder]="t(formXVM.passwordPlaceholderKey)"
-                    formControlName="password"
-                    class="block w-full border border-gray-300 p-2 rounded-md"
-                />
-                <app-button
-                    class="*:btn-block"
-                    [vm]="formXVM.submitButtonXVM"
-                    [disabled]="loginForm.invalid"
-                    (click)="signIn()"
+            <form [formGroup]="formGroup">
+                <!-- Email input start-->
+                @let hasEmailRequiredError =
+                    formGroup.controls.email.hasError('required') &&
+                    formGroup.controls.email.dirty;
+                <app-input-text
+                    [vm]="vm.emailInputTextXVM"
+                    [invalid]="hasEmailRequiredError"
+                    [formControl]="formGroup.controls.email"
                 >
-                    @if (formXVM.submitButtonXVM.textKey) {
-                        {{ t(formXVM.submitButtonXVM.textKey) }}
+                    @if (hasEmailRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vm.requiredAssistiveTextKey)
+                        }}</span>
                     }
-                </app-button>
+                </app-input-text>
+                <!-- Email input end -->
+
+                <!-- Password input start -->
+                @let hasPasswordRequiredError =
+                    formGroup.controls.password.hasError('required') &&
+                    formGroup.controls.password.dirty;
+                <app-input-text
+                    [vm]="vm.passwordInputTextXVM"
+                    [invalid]="hasPasswordRequiredError"
+                    [formControl]="formGroup.controls.password"
+                >
+                    @if (hasPasswordRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vm.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                </app-input-text>
+                <!-- Password input end -->
+
+                @defer (on immediate) {
+                    <app-button
+                        [vm]="vm.submitButtonXVM"
+                        [disabled]="formGroup.invalid"
+                        (click)="signIn()"
+                    >
+                        @if (vm.submitButtonXVM.textKey; as textKey) {
+                            {{ t(textKey) }}
+                        }
+                    </app-button>
+                }
             </form>
         </app-login-form>
     </section>

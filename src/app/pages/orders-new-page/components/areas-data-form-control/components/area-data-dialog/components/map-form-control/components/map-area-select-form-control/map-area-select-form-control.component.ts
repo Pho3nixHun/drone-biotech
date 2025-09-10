@@ -24,7 +24,6 @@ import {
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { NgClass } from '@angular/common';
 import { coordinatesStringValidator } from '@utils/array-length.validator';
 import { getAreaOfPolygon, getCenter } from 'geolib';
 import {
@@ -33,13 +32,19 @@ import {
 } from '../../map-form-control.model';
 import { map } from 'rxjs';
 import { ButtonComponent } from '@components/button/button.component';
+import { InputTextareaComponent } from '@components/input-textarea/input-textarea.component';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
 @Component({
     selector: 'app-map-area-select-form-control',
-    imports: [TranslocoModule, NgClass, ReactiveFormsModule, ButtonComponent],
+    imports: [
+        TranslocoModule,
+        ReactiveFormsModule,
+        ButtonComponent,
+        InputTextareaComponent,
+    ],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

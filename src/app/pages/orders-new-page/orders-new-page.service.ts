@@ -14,32 +14,27 @@ export class OrdersNewPageService {
     private readonly dispatchLocation = this.locationEvents.getLocation();
 
     private readonly vm = computed<OrdersNewPageVM>(() => {
-        const actualPosition = this.locationStore.actualPosition();
+        const defaultCenter = this.locationStore.actualPosition();
         return {
             ...ordersNewPageVMDefault,
-            frameXVM: {
-                ...ordersNewPageVMDefault.frameXVM,
-                areasDataFormControlVM: {
-                    ...ordersNewPageVMDefault.frameXVM.areasDataFormControlVM,
-                    addAreaDataDialogVM: {
-                        ...ordersNewPageVMDefault.frameXVM
-                            .areasDataFormControlVM.addAreaDataDialogVM,
-                        mapFormControlVM: {
-                            ...ordersNewPageVMDefault.frameXVM
-                                .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapFormControlVM,
-                            defaultCenter: actualPosition,
-                        },
+            areasDataFormControlVM: {
+                ...ordersNewPageVMDefault.areasDataFormControlXVM,
+                addAreaDataDialogVM: {
+                    ...ordersNewPageVMDefault.areasDataFormControlXVM
+                        .addAreaDataDialogVM,
+                    mapFormControlVM: {
+                        ...ordersNewPageVMDefault.areasDataFormControlXVM
+                            .addAreaDataDialogVM.mapFormControlVM,
+                        defaultCenter,
                     },
-                    editAreaDataDialogVM: {
-                        ...ordersNewPageVMDefault.frameXVM
-                            .areasDataFormControlVM.addAreaDataDialogVM,
-                        mapFormControlVM: {
-                            ...ordersNewPageVMDefault.frameXVM
-                                .areasDataFormControlVM.addAreaDataDialogVM
-                                .mapFormControlVM,
-                            defaultCenter: actualPosition,
-                        },
+                },
+                editAreaDataDialogVM: {
+                    ...ordersNewPageVMDefault.areasDataFormControlXVM
+                        .addAreaDataDialogVM,
+                    mapFormControlVM: {
+                        ...ordersNewPageVMDefault.areasDataFormControlXVM
+                            .addAreaDataDialogVM.mapFormControlVM,
+                        defaultCenter,
                     },
                 },
             },

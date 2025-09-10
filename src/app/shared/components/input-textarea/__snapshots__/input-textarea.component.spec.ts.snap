@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`InputTextareaComponent should render the template correctly 1`] = `
+<div
+  id="root2"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template correctly if it is not readonly 1`] = `
+<div
+  id="root8"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template correctly if it is readonly 1`] = `
+<div
+  id="root9"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        id="id"
+        placeholder="place"
+        readonly=""
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template correctly if the button is provided in the vm 1`] = `
+<div
+  id="root5"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <app-button>
+          <button
+            class="btn flex flex-row justify-center btn-primary"
+          />
+        </app-button>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template correctly when it has invalid state 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40 is-invalid"
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template correctly when it has valid state 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template if the control is disabled 1`] = `
+<div
+  id="root7"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        disabled=""
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;
+
+exports[`InputTextareaComponent should render the template if the control is enabled 1`] = `
+<div
+  id="root6"
+  ng-version="20.1.7"
+>
+  <app-input-textarea
+    class="ng-untouched ng-pristine ng-valid"
+  >
+    <div
+      class="my-2"
+    >
+      <span
+        class="flex flex-row justify-between items-end label-text"
+      >
+        <label
+          for="id"
+        >
+          lab
+        </label>
+        <!--container-->
+      </span>
+      <textarea
+        autocomplete="off"
+        class="textarea min-h-40"
+        id="id"
+        placeholder="place"
+      />
+      <div
+        class="grid grid-cols-2 items-baseline helper-text"
+      >
+        <span>
+          <span
+            leftassistivetext=""
+          >
+            
+          </span>
+        </span>
+        <span
+          class="text-right"
+        >
+          <span
+            rightassistivetext=""
+          >
+            
+          </span>
+        </span>
+      </div>
+    </div>
+    <!--container-->
+  </app-input-textarea>
+</div>
+`;

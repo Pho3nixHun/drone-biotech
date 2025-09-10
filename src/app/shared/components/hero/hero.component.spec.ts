@@ -2,24 +2,18 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroComponent } from './hero.component';
 import { Component, Input } from '@angular/core';
 import { HeroVM } from './hero-vm.model';
-import { ButtonXVM } from '@components/button/button.model';
-import { MatIcon } from '@interfaces/mat-icon.enum';
 
 @Component({
     imports: [HeroComponent],
     template: ` <app-hero [vm]="vm"
         ><h1>Hello</h1>
         <p>World</p>
-        <a href="">Anchor</a><app-button [vm]="button">Button</app-button>
+        <a href="">Anchor</a>
         <div>Should not be projected</div>
     </app-hero>`,
 })
 class TestHostComponent {
     @Input() vm: HeroVM | null = null;
-    button: ButtonXVM = {
-        icon: MatIcon.ADD,
-        variant: 'fill',
-    };
 }
 describe('HeroComponent', () => {
     let component: TestHostComponent;

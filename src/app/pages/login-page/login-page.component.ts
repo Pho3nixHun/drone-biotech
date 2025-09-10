@@ -6,7 +6,9 @@ import { LoginPageService } from './login-page.service';
 import { injectDispatch } from '@ngrx/signals/events';
 import { authEvents } from '@stores/auth/auth.events';
 import { ButtonComponent } from '@components/button/button.component';
+import { InputTextComponent } from '@components/input-text/input-text.component';
 
+const PASSWORD_MIN_LENGTH = 6;
 /**
  * LoginPageComponent
  *
@@ -30,22 +32,27 @@ import { ButtonComponent } from '@components/button/button.component';
         LoginFormComponent,
         TranslocoModule,
         ButtonComponent,
+        InputTextComponent,
     ],
     templateUrl: './login-page.component.html',
 })
 export class LoginPageComponent {
-    protected readonly vm = inject(LoginPageService).getVM();
     private readonly fb = inject(FormBuilder);
     private readonly authEvents = injectDispatch(authEvents);
+    protected readonly vm = inject(LoginPageService).getVM();
+    private readonly passwordMinLength = PASSWORD_MIN_LENGTH;
 
-    public readonly loginForm = this.fb.group({
+    public readonly formGroup = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]],
+        password: [
+            '',
+            [Validators.required, Validators.minLength(this.passwordMinLength)],
+        ],
     });
 
-    signIn() {
-        if (this.loginForm.invalid) return;
-        const { email, password } = this.loginForm.value;
+    protected signIn() {
+        if (this.formGroup.invalid) return;
+        const { email, password } = this.formGroup.value;
 
         if (!email || !password) return;
         this.authEvents.signIn({ email, password });

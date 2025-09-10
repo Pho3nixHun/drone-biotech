@@ -1,6 +1,6 @@
 import { computed, inject, Injectable, Signal } from '@angular/core';
 import { LoginPageVM } from './login-page-vm.model';
-import { loginPageVMDefault } from './login-page.mock';
+import { loginPageVM } from './login-page.mock';
 import { mapErrorCodeToTranslocoKey } from 'src/app/stores/auth/auth.mapping';
 import { AuthStore } from '@stores/auth/auth.store';
 
@@ -15,16 +15,16 @@ export class LoginPageService {
     });
 
     private readonly vm = computed<LoginPageVM>(() => {
-        const authError = this.authError();
+        const errorMessageKey = this.authError();
         return {
             loginFormXVM: {
-                ...loginPageVMDefault.loginFormXVM,
-                errorMessageKey: authError,
+                ...loginPageVM.loginFormXVM,
+                errorMessageKey,
             },
         };
     });
 
-    public getVM(): Signal<LoginPageVM> {
+    public getVM(): Signal<LoginPageVM | undefined> {
         return this.vm;
     }
 }

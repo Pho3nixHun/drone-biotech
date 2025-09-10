@@ -1,5 +1,5 @@
-<app-page-layout>
-    @if (vm(); as vm) {
+@if (vm(); as vm) {
+    <app-page-layout>
         @if (vm.heroXVM; as heroXVM) {
             <app-hero [vm]="heroXVM" *transloco="let t">
                 <h1>{{ t(heroXVM.titleKey) }}</h1>
@@ -7,18 +7,14 @@
                 <a href="">
                     <app-button [vm]="heroXVM.primaryButtonXVM">
                         @if (heroXVM.primaryButtonXVM.textKey) {
-                            <span>{{
-                                t(heroXVM.primaryButtonXVM.textKey)
-                            }}</span>
+                            {{ t(heroXVM.primaryButtonXVM.textKey) }}
                         }
                     </app-button>
                 </a>
                 <a href="">
                     <app-button [vm]="heroXVM.secondaryButtonXVM">
                         @if (heroXVM.secondaryButtonXVM.textKey) {
-                            <span>{{
-                                t(heroXVM.secondaryButtonXVM.textKey)
-                            }}</span>
+                            {{ t(heroXVM.secondaryButtonXVM.textKey) }}
                         }
                     </app-button>
                 </a>
@@ -33,10 +29,8 @@
                 [ngTemplateOutletContext]="{ frameVM }"
             ></ng-container>
         }
-    } @else {
-        Loading...
-    }
-</app-page-layout>
+    </app-page-layout>
+}
 
 <ng-template #productFrame let-vm="frameVM">
     <app-frame [id]="vm.id" [vm]="vm">

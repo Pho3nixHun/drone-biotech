@@ -7,6 +7,7 @@ import { AreasDataFormControlComponent } from './components/areas-data-form-cont
 import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { ButtonComponent } from '@components/button/button.component';
+import { InputTextComponent } from '@components/input-text/input-text.component';
 import { MatIconModule } from '@angular/material/icon';
 
 /**
@@ -35,6 +36,7 @@ import { MatIconModule } from '@angular/material/icon';
         AreasDataFormControlComponent,
         PageLayoutComponent,
         ButtonComponent,
+        InputTextComponent,
         MatIconModule,
     ],
     templateUrl: './orders-new-page.component.html',
@@ -44,7 +46,7 @@ export class OrdersNewPageComponent {
     private readonly fb = inject(FormBuilder);
     protected readonly vm = this.ordersService.getVM();
 
-    public areasDataFormGroup = this.fb.group({
+    protected readonly formGroup = this.fb.group({
         internalOrderNumber: this.fb.control<string>('', Validators.required),
         contact: this.fb.group({
             name: this.fb.control<string>('', Validators.required),
@@ -59,8 +61,8 @@ export class OrdersNewPageComponent {
     });
 
     protected submitForm() {
-        if (this.areasDataFormGroup.valid) {
-            this.areasDataFormGroup.reset();
+        if (this.formGroup.valid) {
+            this.formGroup.reset();
         }
     }
 }
