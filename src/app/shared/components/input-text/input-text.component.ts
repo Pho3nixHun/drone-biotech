@@ -36,8 +36,9 @@ export class InputTextComponent implements ControlValueAccessor {
         const target = event.target;
         if (!(target instanceof HTMLInputElement)) return;
 
+        this.value.set(target.value);
         const onChange = this.onChange();
-        if (onChange) onChange(target.value);
+        if (onChange) onChange(this.value());
     }
 
     writeValue(value: string | null): void {
