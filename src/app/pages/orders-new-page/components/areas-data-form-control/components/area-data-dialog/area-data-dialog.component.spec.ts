@@ -1,30 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AreaDataDialogComponent } from './area-data-dialog.component';
+import { AreaData, AreaDataDialogVM } from './area-data-dialog.model';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { provideMockEntryPointMarkerOptions } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import { provideMockDialogService } from '@services/dialog/dialog.service.mock';
-import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
-import {
-    provideMockDialogDataFactory,
-    provideMockDialogRef,
-    updateDialogDataSignal,
-} from 'src/app/shared/providers/dialog-provider';
-import { provideMockPolygonOptions } from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
-import {
-    enMock,
-    mockVMWithAreaData,
-    mockVMWithoutAreaData,
-} from './area-data-dialog.component.mock';
 import { provideMockMapOptions } from './components/map-form-control/map-form-control.model';
-import { provideMockStore } from '@ngrx/store/testing';
+import { provideMockEntryPointMarkerOptions } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
+import { provideMapAreaSelectFormControlMockService } from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.service.mock';
+import { provideMapPointSelectFormControlMockService } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.service.mock';
+import {
+    provideMockPolygonOptions,
+    provideMockInfoWindowOptions,
+} from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
 
 describe('AreaDataDialogComponent', () => {
-    let fixture: ComponentFixture<AreaDataDialogComponent>;
-    let compiled: HTMLElement;
     let component: AreaDataDialogComponent;
+    let compiled: HTMLElement;
+    let fixture: ComponentFixture<AreaDataDialogComponent>;
 
     beforeEach(async () => {
+        HTMLDialogElement.prototype.showModal = jest.fn(function () {
+            this.setAttribute('open', '');
+        });
+
+        HTMLDialogElement.prototype.close = jest.fn(function () {
+            this.removeAttribute('open');
+        });
         await TestBed.configureTestingModule({
             imports: [
                 AreaDataDialogComponent,
@@ -37,151 +37,387 @@ describe('AreaDataDialogComponent', () => {
                 }),
             ],
             providers: [
-                provideMockDialogRef(),
-                provideMockDialogDataFactory(),
-                provideMockHeadOfficeLocation(),
                 provideMockMapOptions(),
+                provideMockHeadOfficeLocation(),
                 provideMockPolygonOptions(),
+                provideMockInfoWindowOptions(),
                 provideMockEntryPointMarkerOptions(),
-                provideMockDialogService(),
-                provideMockStore(),
+                provideMapAreaSelectFormControlMockService(),
+                provideMapPointSelectFormControlMockService(),
             ],
         }).compileComponents();
+
+        fixture = TestBed.createComponent(AreaDataDialogComponent);
+        component = fixture.debugElement.componentInstance;
+        compiled = fixture.debugElement.nativeElement;
     });
 
-    describe('when the vm is not correct', () => {
-        beforeEach(() => {
-            updateDialogDataSignal({});
-            fixture = TestBed.createComponent(AreaDataDialogComponent);
-            compiled = fixture.debugElement.nativeElement;
+    // Snapshot testing
+    it('should be closed', () => {
+        // Arrange
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the template correctly if it is opened and set the vm after calling the openDialog function', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the max length error assistive text for mission name', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+        component['formGroup'].controls.missionName.setValue(
+            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veritatis eligendi officiis dolorem est tempora iusto facilis officia quis, non delectus voluptatum ea quisquam voluptatibus quasi amet cumque quibusdam excepturi.'
+        );
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the required error assistive text for mission name', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+        const control = component['formGroup'].controls.missionName;
+        control.setValue('');
+        control.markAsDirty();
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the min error assistive text for dose per hq', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+        const control = component['formGroup'].controls.dosePerHq;
+        control.setValue(-1);
+        control.markAsDirty();
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the required error assistive text for application date', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+        component['formGroup'].controls.applicationDate.markAsDirty();
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    it('should disable confirm button if form invalid', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+        component['formGroup'].reset();
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    it('should enable confirm button if form valid', () => {
+        // Arrange
+        component['openDialog'](mockVM);
+        component['formGroup'].setValue({
+            applicationDate: new Date(10),
+            comment: 'comment',
+            dosePerHq: 10,
+            missionName: 'mission',
+            map: {
+                entryPoint: { lat: 10, lng: 10 },
+                targetArea: [
+                    { lat: 10, lng: 10 },
+                    { lat: 11, lng: 11 },
+                    { lat: 12, lng: 12 },
+                ],
+            },
         });
-        // Snapshot testing
-        it('should not render the content', () => {
-            // Arrange
 
-            // Act
-            fixture.detectChanges();
+        // Act
+        fixture.detectChanges();
 
-            // Assert
-            expect(compiled).toMatchSnapshot();
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Unit testing
+    it('should set the vm/area after calling the openDialog function', () => {
+        // Arrange
+        component['openDialog'](mockVM, areaData);
+
+        // There is no need to act
+
+        // Assert
+        expect(component['vm']()).toStrictEqual(mockVM);
+        expect(component['area']()).toStrictEqual(areaData);
+    });
+
+    // Unit testing
+    it("should set the form's value after calling the openDialog function if area is provided", () => {
+        // Arrange
+        component['openDialog'](mockVM, areaData);
+
+        //
+        fixture.detectChanges();
+
+        // Assert
+        const fg = component['formGroup'].controls;
+        expect(fg.applicationDate.value).toBe(areaData.applicationDate);
+        expect(fg.comment.value).toBe(areaData.comment);
+        expect(fg.dosePerHq.value).toBe(areaData.dosePerHq);
+        expect(fg.missionName.value).toBe(areaData.missionName);
+        //TODO TEST MAP
+    });
+
+    // Unit testing
+    it('should emit cancel response and close dialog', () => {
+        // Arrange
+        const responseSpy = jest.spyOn(component['response'], 'emit');
+        const dialogSpy = jest.spyOn(
+            component['dialog']().nativeElement,
+            'close'
+        );
+
+        // Act
+        component['cancel']();
+
+        // Assert
+        expect(responseSpy).toHaveBeenCalledWith({ type: 'cancel' });
+        expect(dialogSpy).toHaveBeenCalled();
+    });
+
+    // Unit testing
+    it('should emit submit response with areaData when form valid', () => {
+        // Arrange
+        component['area'].set(areaData);
+        const responseSpy = jest.spyOn(component['response'], 'emit');
+        const closeSpy = jest.spyOn(
+            component['dialog']().nativeElement,
+            'close'
+        );
+
+        // Act
+        fixture.detectChanges();
+        component['submitForm']();
+
+        // Assert
+        expect(closeSpy).toHaveBeenCalled();
+        expect(responseSpy).toHaveBeenCalledWith({
+            type: 'submit',
+            areaData,
         });
     });
 
-    describe('when the vm is correct with areaData', () => {
-        beforeEach(() => {
-            updateDialogDataSignal(mockVMWithAreaData);
-            fixture = TestBed.createComponent(AreaDataDialogComponent);
-            component = fixture.componentInstance;
-        });
-        // Unit testing
-        it('should set the value of the form to the value that is in the VM', () => {
-            // Arrange
+    // Unit testing
+    it('should not emit submit if form invalid', () => {
+        // Arrange
+        const spy = jest.spyOn(component['response'], 'emit');
+        component['formGroup'].reset();
 
-            // Act
-            const value = component['formGroup'].getRawValue();
-            const { applicationDate, dosePerHq, comment, map, missionName } =
-                value;
+        // Act
+        component['submitForm']();
 
-            // Assert
-            expect(applicationDate).toStrictEqual(new Date(10));
-            expect(dosePerHq).toBe(1);
-            expect(map?.entryPoint).toStrictEqual({ lat: 10, lng: 10 });
-            expect(map?.targetArea).toStrictEqual([{ lat: 10, lng: 10 }]);
-            expect(comment).toStrictEqual(enMock.commentLabel);
-            expect(missionName).toStrictEqual(enMock.missionNameLabel);
-        });
+        // Assert
+        expect(spy).not.toHaveBeenCalled();
     });
 
-    describe('when the vm is correct without areaData', () => {
-        let dialogRef: DialogRef<unknown>;
-        beforeEach(() => {
-            updateDialogDataSignal(mockVMWithoutAreaData);
-            fixture = TestBed.createComponent(AreaDataDialogComponent);
-            dialogRef = TestBed.inject(DIALOG_REF);
-            compiled = fixture.debugElement.nativeElement;
-            component = fixture.componentInstance;
-        });
+    // Unit testing
+    it('should reset formGroup when dialog closes', () => {
+        // Arrange
+        const resetSpy = jest.spyOn(component['formGroup'], 'reset');
+        const dialog: HTMLDialogElement =
+            fixture.nativeElement.querySelector('dialog');
 
-        // Snapshot testing
-        it('should render the content if the correct vm is provided', () => {
-            // Arrange
+        // Act
+        dialog.dispatchEvent(new Event('close'));
 
-            // Act
-            fixture.detectChanges();
-
-            // Assert
-            expect(compiled).toMatchSnapshot();
-        });
-
-        it('should set the value of the form to null if the areaData is null in the VM', () => {
-            // Arrange
-
-            // Act
-            const value = component['formGroup'].getRawValue();
-            const { applicationDate, dosePerHq, comment, map, missionName } =
-                value;
-
-            // Assert
-            expect(applicationDate).toBe(null);
-            expect(dosePerHq).toBe(null);
-            expect(comment).toBe('');
-            expect(map?.entryPoint).toBe(null);
-            expect(map?.targetArea).toBe(null);
-            expect(missionName).toBe('');
-        });
-
-        // Unit testing
-        it('should reset the form and close the dialog when the resetFormWithCloseDialog() method is called', () => {
-            // Arrange
-            const closeSpy = jest.spyOn(dialogRef, 'close');
-            const resetSpy = jest.spyOn(component['formGroup'], 'reset');
-
-            // Act
-            component['resetFormWithCloseDialog']();
-
-            // Assert
-            expect(closeSpy).toHaveBeenCalled();
-            expect(resetSpy).toHaveBeenCalled();
-        });
-
-        // Unit testing
-        it('should reset the form and close the dialog when the submitForm() method is called if the form is valid', () => {
-            // Arrange
-            component['formGroup'].setValue({
-                applicationDate: new Date(),
-                dosePerHq: 10,
-                map: {
-                    entryPoint: { lat: 10, lng: 10 },
-                    targetArea: [
-                        { lat: 10, lng: 10 },
-                        { lat: 20, lng: 20 },
-                        { lat: 30, lng: 30 },
-                    ],
-                },
-                comment: 'comment',
-                missionName: 'mission',
-            });
-            const closeSpy = jest.spyOn(dialogRef, 'close');
-            const resetSpy = jest.spyOn(component['formGroup'], 'reset');
-
-            // Act
-            component['submitForm']();
-
-            // Assert
-            expect(closeSpy).toHaveBeenCalledTimes(1);
-            expect(resetSpy).toHaveBeenCalledTimes(1);
-        });
-
-        // Unit testing
-        it('should not close the dialog when the submitForm() method is called if the form is invalid', () => {
-            // Arrange
-            const closeSpy = jest.spyOn(dialogRef, 'close');
-
-            // Act
-            component['submitForm']();
-
-            // Assert
-            expect(closeSpy).toHaveBeenCalledTimes(0);
-        });
+        // Assert
+        expect(resetSpy).toHaveBeenCalled();
     });
 });
+
+const areaData: AreaData = {
+    applicationDate: new Date(),
+    comment: 'comment',
+    dosePerHq: 10,
+    entryPoint: { lat: 10, lng: 10 },
+    id: 'id',
+    missionName: 'mission name',
+    targetArea: [{ lat: 10, lng: 21 }],
+};
+const enMock = {
+    addButtonText: 'add',
+    deleteButtonText: 'delete',
+    editButtonText: 'edit',
+    confirmButtonText: 'confirm',
+    cancelButtonText: 'cancel',
+    closeButtonText: 'close',
+    title: 'tit',
+    dosePerHqLabel: 'dosePer',
+    dosePerHqPlaceholder: 'dosePerPlace',
+    missionNameLabel: 'mission',
+    missionNamePlaceholder: 'missionPlace',
+    commentLabel: 'comment',
+    commentPlaceholder: 'commentPlace',
+    coordinatesLabel: 'coords',
+    coordinatesPlaceholder: 'coordsPlace',
+    applicationDateLabel: 'applicationDate',
+    applicationDatePlaceholder: 'applicationDatePlace',
+    dosePerHqMinErrorAssistiveTextValue: 'dosePerHqMinErrorAssistiveText',
+    missionNameMaxCharactersAllowedAssistiveTextValue:
+        'missionNameMaxCharactersAllowedAssistiveText',
+    missionNameMaxCharactersCounterAssistiveTextValue:
+        'missionNameMaxCharactersCounterAssistiveText',
+    requiredAssistiveText: 'requiredAssistiveText',
+    mapFormControl: {
+        mapSearchInputFormControl: {
+            placeholder: 'place',
+            distanceValue: 'distance',
+        },
+        mapAreaSelectFormControl: {
+            addButtonText: 'addButton',
+            deleteButtonText: 'deleteButton',
+            editButtonText: 'editButton',
+            areaValue: 'area',
+        },
+    },
+};
+
+const mockVM: AreaDataDialogVM = {
+    titleKey: enMock.title,
+    dosePerHqMinErrorAssistiveTextValueKey:
+        enMock.dosePerHqMinErrorAssistiveTextValue,
+    missionNameMaxCharactersAllowedAssistiveTextValueKey:
+        enMock.missionNameMaxCharactersAllowedAssistiveTextValue,
+    missionNameMaxCharactersCounterAssistiveTextValueKey:
+        enMock.missionNameMaxCharactersCounterAssistiveTextValue,
+    requiredAssistiveTextKey: enMock.requiredAssistiveText,
+
+    dosePerHqInputTextXVM: {
+        id: 'id',
+        labelKey: enMock.dosePerHqLabel,
+        placeholderKey: enMock.dosePerHqPlaceholder,
+        readonly: false,
+    },
+    missionNameInputTextXVM: {
+        id: 'id',
+        autocomplete: 'email',
+        labelKey: enMock.missionNameLabel,
+        placeholderKey: enMock.missionNamePlaceholder,
+        readonly: false,
+        type: 'text',
+    },
+    commentInputTextareaXVM: {
+        id: 'id',
+        labelKey: enMock.commentLabel,
+        placeholderKey: enMock.commentPlaceholder,
+        readonly: false,
+    },
+    applicationDateInputTextXVM: {
+        id: 'id',
+        autocomplete: 'off',
+        labelKey: enMock.applicationDateLabel,
+        placeholderKey: enMock.applicationDatePlaceholder,
+        readonly: false,
+        type: 'datetime-local',
+    },
+
+    closeButtonXVM: {
+        textKey: enMock.closeButtonText,
+        secondary: false,
+        variant: 'fill',
+    },
+    cancelButtonXVM: {
+        textKey: enMock.cancelButtonText,
+        secondary: false,
+        variant: 'fill',
+    },
+    confirmButtonXVM: {
+        textKey: enMock.confirmButtonText,
+        secondary: false,
+        variant: 'fill',
+    },
+
+    mapFormControlVM: {
+        defaultCenter: { lat: 0, lng: 0 },
+        mapSearchInputFormControlVM: {
+            placeholderKey:
+                enMock.mapFormControl.mapSearchInputFormControl.placeholder,
+            distanceValueKey:
+                enMock.mapFormControl.mapSearchInputFormControl.distanceValue,
+        },
+        mapAreaSelectFormControlVM: {
+            areaValueKey:
+                enMock.mapFormControl.mapAreaSelectFormControl.areaValue,
+            addButtonXVM: {
+                secondary: true,
+                variant: 'ghost',
+                textKey:
+                    enMock.mapFormControl.mapAreaSelectFormControl
+                        .addButtonText,
+            },
+            editButtonXVM: {
+                secondary: true,
+                variant: 'ghost',
+                textKey:
+                    enMock.mapFormControl.mapAreaSelectFormControl
+                        .editButtonText,
+            },
+            deleteButtonXVM: {
+                secondary: true,
+                variant: 'ghost',
+                textKey:
+                    enMock.mapFormControl.mapAreaSelectFormControl
+                        .deleteButtonText,
+            },
+            coordinatesInputTextareaXVM: {
+                id: 'id',
+                placeholderKey: enMock.coordinatesPlaceholder,
+                labelKey: enMock.coordinatesLabel,
+                readonly: false,
+            },
+        },
+        mapPointSelectFormControlVM: {
+            addButtonXVM: {
+                secondary: true,
+                variant: 'ghost',
+                textKey: enMock.addButtonText,
+            },
+            deleteButtonXVM: {
+                secondary: true,
+                variant: 'ghost',
+                textKey: enMock.deleteButtonText,
+            },
+        },
+    },
+};
