@@ -5,7 +5,7 @@ import { toObservable } from '@angular/core/rxjs-interop';
 import { Observable, switchMap } from 'rxjs';
 
 @Injectable({
-    providedIn: 'any',
+    providedIn: 'root',
 })
 export class MapPointSelectFormControlService {
     public initializeMap(mapRef: google.maps.Map) {

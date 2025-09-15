@@ -148,10 +148,13 @@ export class MapFormControlComponent implements ControlValueAccessor {
 
     private onTouched: () => void = () => {};
 
-    public writeValue(value: {
-        targetArea: Coordinates[] | null;
-        entryPoint: Coordinates | null;
-    }) {
+    public writeValue(
+        value: {
+            targetArea: Coordinates[] | null;
+            entryPoint: Coordinates | null;
+        } | null
+    ) {
+        if (!value) return;
         this.mapForm.setValue(value);
         this.targetArea.set(value.targetArea);
     }
