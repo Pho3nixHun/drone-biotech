@@ -18,21 +18,21 @@ export class OrdersNewPageService {
         return {
             ...ordersNewPageVMDefault,
             areasDataFormControlVM: {
-                ...ordersNewPageVMDefault.areasDataFormControlXVM,
+                ...ordersNewPageVMDefault.areasDataFormControlVM,
                 addAreaDataDialogVM: {
-                    ...ordersNewPageVMDefault.areasDataFormControlXVM
+                    ...ordersNewPageVMDefault.areasDataFormControlVM
                         .addAreaDataDialogVM,
                     mapFormControlVM: {
-                        ...ordersNewPageVMDefault.areasDataFormControlXVM
+                        ...ordersNewPageVMDefault.areasDataFormControlVM
                             .addAreaDataDialogVM.mapFormControlVM,
                         defaultCenter,
                     },
                 },
                 editAreaDataDialogVM: {
-                    ...ordersNewPageVMDefault.areasDataFormControlXVM
-                        .addAreaDataDialogVM,
+                    ...ordersNewPageVMDefault.areasDataFormControlVM
+                        .editAreaDataDialogVM,
                     mapFormControlVM: {
-                        ...ordersNewPageVMDefault.areasDataFormControlXVM
+                        ...ordersNewPageVMDefault.areasDataFormControlVM
                             .addAreaDataDialogVM.mapFormControlVM,
                         defaultCenter,
                     },
