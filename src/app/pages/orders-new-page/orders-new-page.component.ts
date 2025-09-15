@@ -9,6 +9,7 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
 import { ButtonComponent } from '@components/button/button.component';
 import { InputTextComponent } from '@components/input-text/input-text.component';
 import { MatIconModule } from '@angular/material/icon';
+import { minArrayLengthValidator } from 'src/app/shared/validators/min-array-length.validator';
 
 /**
  * OrdersNewPageComponent
@@ -57,7 +58,10 @@ export class OrdersNewPageComponent {
             ]),
         }),
         endCustomer: this.fb.control<string>('', Validators.required),
-        areasData: this.fb.control<AreaData[]>([], [Validators.required]),
+        areasData: this.fb.control<AreaData[]>(
+            [],
+            [(Validators.required, minArrayLengthValidator(1))]
+        ),
     });
 
     protected submitForm() {

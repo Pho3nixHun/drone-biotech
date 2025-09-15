@@ -1,39 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ConfirmationDialogComponent } from './confirmation-dialog.component';
-import {
-    provideMockDialogDataFactory,
-    provideMockDialogRef,
-    updateDialogDataSignal,
-} from '../../providers/dialog-provider';
 import { ConfirmationDialogVM } from './confirmation-dialog.model';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
 import { MatIcon } from '@interfaces/mat-icon.enum';
-
-const enMock = {
-    title: 'tit',
-    confirmText: 'confirm',
-};
-
-const vm: ConfirmationDialogVM = {
-    type: 'confirmationDialogVM',
-    titleKey: enMock.title,
-    cancelButtonXVM: {
-        icon: MatIcon.ADD,
-        variant: 'fill',
-    },
-    closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
-    confirmButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
-    confirmTextKey: enMock.confirmText,
-};
 
 describe('ConfirmationDialogComponent', () => {
     let fixture: ComponentFixture<ConfirmationDialogComponent>;
     let compiled: HTMLElement;
     let component: ConfirmationDialogComponent;
-    let dialogRef: DialogRef<unknown>;
 
     beforeEach(async () => {
+        HTMLDialogElement.prototype.showModal = jest.fn(function () {
+            this.setAttribute('open', '');
+        });
+        HTMLDialogElement.prototype.close = jest.fn(function () {
+            this.removeAttribute('open');
+        });
         await TestBed.configureTestingModule({
             imports: [
                 ConfirmationDialogComponent,
@@ -45,30 +27,16 @@ describe('ConfirmationDialogComponent', () => {
                     },
                 }),
             ],
-            providers: [provideMockDialogRef(), provideMockDialogDataFactory()],
         }).compileComponents();
-        dialogRef = TestBed.inject(DIALOG_REF);
+        fixture = TestBed.createComponent(ConfirmationDialogComponent);
+        component = fixture.componentInstance;
+        compiled = fixture.debugElement.nativeElement;
     });
 
     // Snapshot testing
-    it('should not render the template if not the correct vm is provided', () => {
+    it('should render the template correctly ', () => {
         // Arrange
-        updateDialogDataSignal({});
-        fixture = TestBed.createComponent(ConfirmationDialogComponent);
-        compiled = fixture.debugElement.nativeElement;
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render the template if the correct vm is provided', () => {
-        // Arrange
-        updateDialogDataSignal(vm);
-        fixture = TestBed.createComponent(ConfirmationDialogComponent);
-        compiled = fixture.debugElement.nativeElement;
+        fixture.componentRef.setInput('vm', mockVM);
 
         // Act
         fixture.detectChanges();
@@ -77,33 +45,62 @@ describe('ConfirmationDialogComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 
-    // Unit testing
-    it('should close the dialog with the cancel reason when onCancelClick function is called', () => {
+    // Snapshot testing
+    it('should render the template correctly if the dialog is opened', () => {
         // Arrange
-        updateDialogDataSignal(vm);
-        fixture = TestBed.createComponent(ConfirmationDialogComponent);
-        component = fixture.componentInstance;
-        const spy = jest.spyOn(dialogRef, 'close');
+        fixture.componentRef.setInput('vm', mockVM);
 
         // Act
-        component['onCancelClick']();
+        fixture.detectChanges();
+        component['openDialog']();
 
-        //Assert
-        expect(spy).toHaveBeenCalledWith({ reasonType: 'cancel' });
+        // Assert
+        expect(compiled).toMatchSnapshot();
     });
 
-    // Unit testing
-    it('should close the dialog with the submit reason when onConfirmClick function is called', () => {
+    // Snapshot testing
+    it('should close the dialog and send cancel response', () => {
         // Arrange
-        updateDialogDataSignal(vm);
-        fixture = TestBed.createComponent(ConfirmationDialogComponent);
-        component = fixture.componentInstance;
-        const spy = jest.spyOn(dialogRef, 'close');
+        const responseSpy = jest.spyOn(component['response'], 'emit');
+        fixture.componentRef.setInput('vm', mockVM);
 
         // Act
-        component['onConfirmClick']();
+        fixture.detectChanges();
+        component['cancelClick']();
 
-        //Assert
-        expect(spy).toHaveBeenCalledWith({ reasonType: 'submit' });
+        // Assert
+        expect(responseSpy).toHaveBeenCalledWith({ type: 'cancel' });
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should close the dialog and send submit response', () => {
+        // Arrange
+        const responseSpy = jest.spyOn(component['response'], 'emit');
+        fixture.componentRef.setInput('vm', mockVM);
+
+        // Act
+        fixture.detectChanges();
+        component['submitClick']();
+
+        // Assert
+        expect(responseSpy).toHaveBeenCalledWith({ type: 'submit' });
+        expect(compiled).toMatchSnapshot();
     });
 });
+
+const enMock = {
+    title: 'tit',
+    confirmText: 'confirm',
+};
+
+const mockVM: ConfirmationDialogVM = {
+    titleKey: enMock.title,
+    confirmTextKey: enMock.confirmText,
+    closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    confirmButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    cancelButtonXVM: {
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
+};

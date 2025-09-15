@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MapPointSelectFormControlService } from './map-point-select-form-control.service';
-import {
-    ENTRY_POINT_MARKER_OPTIONS,
-    MapPointSelectFormControlVM,
-} from './map-point-select-form-control.model';
+import { MapPointSelectFormControlVM } from './map-point-select-form-control.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Coordinates } from '@stores/location/location.model';
 import { Component, effect, forwardRef, inject, input } from '@angular/core';
@@ -21,10 +18,6 @@ const noop = () => {};
             provide: NG_VALUE_ACCESSOR,
             useExisting: forwardRef(() => MapPointSelectFormControlComponent),
             multi: true,
-        },
-        {
-            provide: MapPointSelectFormControlService,
-            deps: [ENTRY_POINT_MARKER_OPTIONS],
         },
     ],
     templateUrl: './map-point-select-form-control.component.html',

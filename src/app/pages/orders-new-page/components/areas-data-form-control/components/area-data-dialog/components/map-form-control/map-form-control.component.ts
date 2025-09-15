@@ -2,7 +2,6 @@
 import {
     Component,
     computed,
-    CUSTOM_ELEMENTS_SCHEMA,
     effect,
     ElementRef,
     forwardRef,
@@ -45,7 +44,6 @@ import { ElementRefDirective } from '@directives/element-ref/element-ref.directi
             multi: true,
         },
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './map-form-control.component.html',
 })
 export class MapFormControlComponent implements ControlValueAccessor {
@@ -148,10 +146,17 @@ export class MapFormControlComponent implements ControlValueAccessor {
 
     private onTouched: () => void = () => {};
 
-    public writeValue(value: {
-        targetArea: Coordinates[] | null;
-        entryPoint: Coordinates | null;
-    }) {
+    public writeValue(
+        value: {
+            targetArea: Coordinates[] | null;
+            entryPoint: Coordinates | null;
+        } | null
+    ) {
+        if (!value) {
+            this.mapForm.reset();
+            this.targetArea.set(null);
+            return;
+        }
         this.mapForm.setValue(value);
         this.targetArea.set(value.targetArea);
     }

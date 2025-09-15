@@ -6,6 +6,72 @@ exports[`OrderDetailsPageComponent should render the template correctly 1`] = `
   ng-version="20.1.7"
 >
   <!--container-->
+  <app-confirmation-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <app-dialog-layout
+        class="w-80 md:w-96 block"
+      >
+        <section
+          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        >
+          <div
+            class="flex flex-row justify-between"
+          >
+            <h2>
+                
+            </h2>
+            <app-button
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  add
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <p>
+              
+            </p>
+          </div>
+          <div
+            class="ml-auto join"
+          >
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 Proof of completion template 
+                <!--container-->
+              </button>
+            </app-button>
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 Close order 
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+        </section>
+      </app-dialog-layout>
+    </dialog>
+    <!--container-->
+  </app-confirmation-dialog>
   <!--container-->
 </div>
 `;

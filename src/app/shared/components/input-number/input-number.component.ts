@@ -36,6 +36,7 @@ export class InputNumberComponent implements ControlValueAccessor {
         const target = event.target;
         if (!(target instanceof HTMLInputElement)) return;
 
+        this.value.set(target.valueAsNumber);
         const onChange = this.onChange();
         if (onChange) onChange(target.valueAsNumber);
     }

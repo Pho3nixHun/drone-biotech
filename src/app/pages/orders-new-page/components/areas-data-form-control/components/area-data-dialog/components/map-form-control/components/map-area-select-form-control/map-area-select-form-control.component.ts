@@ -6,10 +6,7 @@ import {
     inject,
     input,
 } from '@angular/core';
-import {
-    MapAreaSelectFormControlVM,
-    POLYGON_OPTIONS,
-} from './map-area-select-form-control.model';
+import { MapAreaSelectFormControlVM } from './map-area-select-form-control.model';
 import {
     Coordinates,
     SQUARE_METRES_TO_HECTARE,
@@ -24,7 +21,7 @@ import {
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { coordinatesStringValidator } from '@utils/array-length.validator';
+import { coordinatesStringValidator } from 'src/app/shared/validators/array-length.validator';
 import { getAreaOfPolygon, getCenter } from 'geolib';
 import {
     mapCoordinatesToString,
@@ -50,10 +47,6 @@ const noop = () => {};
             provide: NG_VALUE_ACCESSOR,
             useExisting: forwardRef(() => MapAreaSelectFormControlComponent),
             multi: true,
-        },
-        {
-            provide: MapAreaSelectFormControlService,
-            deps: [POLYGON_OPTIONS],
         },
     ],
     templateUrl: './map-area-select-form-control.component.html',

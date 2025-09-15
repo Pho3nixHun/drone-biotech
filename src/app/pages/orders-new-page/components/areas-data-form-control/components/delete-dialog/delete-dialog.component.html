@@ -1,22 +1,24 @@
-@if (vm(); as vm) {
-    <app-dialog-layout
-        class="w-80 md:w-96 block"
-        (close)="cancelClick()"
-        [vm]="vm"
-        *transloco="let t"
-    >
-        <h3 class="text-lg">
-            {{ t(vm.warningTextKey) }}
-        </h3>
-        <app-button [vm]="vm.deleteButtonXVM" (click)="deleteClick()">
-            @if (vm.deleteButtonXVM.textKey) {
-                {{ t(vm.deleteButtonXVM.textKey) }}
+@let vM = vm();
+<dialog class="my-dialog" #dialog>
+    <app-dialog-layout class="w-80 md:w-96 block" *transloco="let t">
+        <h2>
+            {{ t(vM.titleKey) }}
+        </h2>
+        <p>{{ t(vM.confirmTextKey) }}</p>
+        <app-button [vm]="vM.closeButtonXVM" (click)="cancelClick()" close>
+            @if (vM.closeButtonXVM.icon; as icon) {
+                <mat-icon>{{ icon }}</mat-icon>
             }
         </app-button>
-        <app-button [vm]="vm.cancelButtonXVM" (click)="cancelClick()">
-            @if (vm.cancelButtonXVM.textKey) {
-                {{ t(vm.cancelButtonXVM.textKey) }}
+        <app-button [vm]="vM.confirmButtonXVM" (click)="submitClick()">
+            @if (vM.confirmButtonXVM.textKey; as textKey) {
+                {{ t(textKey) }}
+            }
+        </app-button>
+        <app-button [vm]="vM.cancelButtonXVM" (click)="cancelClick()">
+            @if (vM.cancelButtonXVM.textKey; as textKey) {
+                {{ t(textKey) }}
             }
         </app-button>
     </app-dialog-layout>
-}
+</dialog>
