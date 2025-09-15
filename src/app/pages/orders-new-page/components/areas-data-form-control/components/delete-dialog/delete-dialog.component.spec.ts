@@ -1,43 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DeleteDialogComponent } from './delete-dialog.component';
-import { DeleteDialogVM } from './delete-dialog.model';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { DIALOG_REF, DialogRef } from '@services/dialog/dialog.service';
-import {
-    provideMockDialogDataFactory,
-    provideMockDialogRef,
-    updateDialogDataSignal,
-} from 'src/app/shared/providers/dialog-provider';
+import { DeleteDialogVM } from './delete-dialog.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 
-const enMock = {
-    title: 'tit',
-    warningText: 'warning',
-};
-
 describe('DeleteDialogComponent', () => {
+    let component: DeleteDialogComponent;
     let fixture: ComponentFixture<DeleteDialogComponent>;
     let compiled: HTMLElement;
-    let component: DeleteDialogComponent;
-    const vm: DeleteDialogVM = {
-        cancelButtonXVM: {
-            icon: MatIcon.ADD,
-            variant: 'fill',
-        },
-        closeButtonXVM: {
-            icon: MatIcon.ADD,
-            variant: 'fill',
-        },
-        deleteButtonXVM: {
-            icon: MatIcon.ADD,
-            variant: 'fill',
-        },
-        titleKey: enMock.title,
-        type: 'deleteDialogVM',
-        warningTextKey: enMock.warningText,
-    };
 
     beforeEach(async () => {
+        HTMLDialogElement.prototype.showModal = jest.fn(function () {
+            this.setAttribute('open', '');
+        });
+        HTMLDialogElement.prototype.close = jest.fn(function () {
+            this.removeAttribute('open');
+        });
         await TestBed.configureTestingModule({
             imports: [
                 DeleteDialogComponent,
@@ -49,72 +27,85 @@ describe('DeleteDialogComponent', () => {
                     },
                 }),
             ],
-            providers: [provideMockDialogDataFactory(), provideMockDialogRef()],
         }).compileComponents();
+
+        fixture = TestBed.createComponent(DeleteDialogComponent);
+        component = fixture.componentInstance;
+        compiled = fixture.debugElement.nativeElement;
     });
 
-    describe('when the vm is not correct', () => {
-        beforeEach(() => {
-            updateDialogDataSignal({});
-            fixture = TestBed.createComponent(DeleteDialogComponent);
-            compiled = fixture.debugElement.nativeElement;
-        });
+    // Snapshot testing
+    it('should render the template correctly ', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', mockVM);
 
-        // Snapshot testing
-        it('should not render the content if not DeleteDialogVM is provided', () => {
-            // Arrange
+        // Act
+        fixture.detectChanges();
 
-            // Act
-            fixture.detectChanges();
-
-            //Assert
-            expect(compiled).toMatchSnapshot();
-        });
+        // Assert
+        expect(compiled).toMatchSnapshot();
     });
-    describe('when the vm is correct', () => {
-        let dialogRef: DialogRef<unknown>;
-        beforeEach(() => {
-            updateDialogDataSignal(vm);
-            fixture = TestBed.createComponent(DeleteDialogComponent);
-            dialogRef = TestBed.inject(DIALOG_REF);
-            compiled = fixture.debugElement.nativeElement;
+
+    // Snapshot testing
+    it('should render the template correctly if the dialog is opened', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', mockVM);
+
+        // Act
+        fixture.detectChanges();
+        component['openDialog']('id12');
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should close the dialog and send cancel response', () => {
+        // Arrange
+        const responseSpy = jest.spyOn(component['response'], 'emit');
+        fixture.componentRef.setInput('vm', mockVM);
+
+        // Act
+        fixture.detectChanges();
+        component['cancelClick']();
+
+        // Assert
+        expect(responseSpy).toHaveBeenCalledWith({ type: 'cancel' });
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should close the dialog and send submit response', () => {
+        // Arrange
+        const responseSpy = jest.spyOn(component['response'], 'emit');
+        fixture.componentRef.setInput('vm', mockVM);
+        component['areaDataId'].set('id12');
+
+        // Act
+        fixture.detectChanges();
+        component['submitClick']();
+
+        // Assert
+        expect(responseSpy).toHaveBeenCalledWith({
+            type: 'submit',
+            id: 'id12',
         });
-
-        // Snapshot testing
-        it('should render the content', () => {
-            // Arrange
-
-            // Act
-            fixture.detectChanges();
-
-            //Assert
-            expect(compiled).toMatchSnapshot();
-        });
-
-        // Unit testing
-        it('should close the dialog when the deleteClick() method is called', () => {
-            // Arrange
-            const deleteSpy = jest.spyOn(dialogRef, 'close');
-            component = fixture.componentInstance;
-
-            // Act
-            component['deleteClick']();
-
-            //Assert
-            expect(deleteSpy).toHaveBeenCalled();
-        });
-
-        // Unit testing
-        it('should close the dialog when the cancelClick() method is called', () => {
-            // Arrange
-            const deleteSpy = jest.spyOn(dialogRef, 'close');
-            component = fixture.componentInstance;
-
-            // Act
-            component['cancelClick']();
-
-            //Assert
-            expect(deleteSpy).toHaveBeenCalled();
-        });
+        expect(compiled).toMatchSnapshot();
     });
 });
+
+const enMock = {
+    title: 'tit',
+    confirmText: 'confirm',
+};
+
+const mockVM: DeleteDialogVM = {
+    titleKey: enMock.title,
+    confirmTextKey: enMock.confirmText,
+    closeButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    confirmButtonXVM: { icon: MatIcon.ADD, variant: 'fill' },
+    cancelButtonXVM: {
+        icon: MatIcon.ADD,
+        variant: 'fill',
+    },
+};

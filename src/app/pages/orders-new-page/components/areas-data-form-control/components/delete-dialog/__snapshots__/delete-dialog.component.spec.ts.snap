@@ -1,81 +1,282 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`DeleteDialogComponent when the vm is correct should render the content 1`] = `
+exports[`DeleteDialogComponent should close the dialog and send cancel response 1`] = `
 <div
-  id="root1"
+  id="root2"
   ng-version="20.1.7"
 >
-  <app-dialog-layout
-    class="w-80 md:w-96 block"
+  <dialog
+    class="my-dialog"
   >
-    <section
-      class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 flex flex-col"
+    <app-dialog-layout
+      class="w-80 md:w-96 block"
     >
-      <div
-        class="flex justify-between"
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
       >
-        <h3
-          class="text-3xl"
+        <div
+          class="flex flex-row justify-between"
         >
-           tit 
-        </h3>
-        <app-button>
-          <button
-            class="btn flex flex-row justify-center btn-primary"
+          <h2>
+             tit 
+          </h2>
+          <app-button
+            close=""
           >
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              left=""
-              role="img"
+            <button
+              class="btn flex flex-row justify-center btn-primary"
             >
-              add
-            </mat-icon>
-            <!--container-->
-          </button>
-        </app-button>
-      </div>
-      <div
-        class="space-y-4"
-      >
-        <h3
-          class="text-lg"
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                add
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+        <div
+          class="space-y-4"
         >
-           warning 
-        </h3>
-      </div>
-      <div
-        class="ml-auto join"
-      >
-        <app-button>
-          <button
-            class="btn flex flex-row justify-center btn-primary"
-          >
-            <!--container-->
-          </button>
-        </app-button>
-        <app-button>
-          <button
-            class="btn flex flex-row justify-center btn-primary"
-          >
-            <!--container-->
-          </button>
-        </app-button>
-      </div>
-    </section>
+          <p>
+            confirm
+          </p>
+        </div>
+        <div
+          class="ml-auto join"
+        >
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+      </section>
+    </app-dialog-layout>
     <!--container-->
-  </app-dialog-layout>
-  <!--container-->
-  <!--container-->
+  </dialog>
 </div>
 `;
 
-exports[`DeleteDialogComponent when the vm is not correct should not render the content if not DeleteDialogVM is provided 1`] = `
+exports[`DeleteDialogComponent should close the dialog and send submit response 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="my-dialog"
+  >
+    <app-dialog-layout
+      class="w-80 md:w-96 block"
+    >
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+      >
+        <div
+          class="flex flex-row justify-between"
+        >
+          <h2>
+             tit 
+          </h2>
+          <app-button
+            close=""
+          >
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                add
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+        <div
+          class="space-y-4"
+        >
+          <p>
+            confirm
+          </p>
+        </div>
+        <div
+          class="ml-auto join"
+        >
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`DeleteDialogComponent should render the template correctly  1`] = `
 <div
   id="root0"
   ng-version="20.1.7"
 >
-  <!--container-->
+  <dialog
+    class="my-dialog"
+  >
+    <app-dialog-layout
+      class="w-80 md:w-96 block"
+    >
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+      >
+        <div
+          class="flex flex-row justify-between"
+        >
+          <h2>
+             tit 
+          </h2>
+          <app-button
+            close=""
+          >
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                add
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+        <div
+          class="space-y-4"
+        >
+          <p>
+            confirm
+          </p>
+        </div>
+        <div
+          class="ml-auto join"
+        >
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`DeleteDialogComponent should render the template correctly if the dialog is opened 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="my-dialog"
+    open=""
+  >
+    <app-dialog-layout
+      class="w-80 md:w-96 block"
+    >
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+      >
+        <div
+          class="flex flex-row justify-between"
+        >
+          <h2>
+             tit 
+          </h2>
+          <app-button
+            close=""
+          >
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                data-mat-icon-type="font"
+                role="img"
+              >
+                add
+              </mat-icon>
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+        <div
+          class="space-y-4"
+        >
+          <p>
+            confirm
+          </p>
+        </div>
+        <div
+          class="ml-auto join"
+        >
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+  </dialog>
 </div>
 `;
