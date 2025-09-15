@@ -38,7 +38,7 @@ export class InputNumberComponent implements ControlValueAccessor {
 
         this.value.set(target.valueAsNumber);
         const onChange = this.onChange();
-        if (onChange) onChange(this.value());
+        if (onChange) onChange(target.valueAsNumber);
     }
 
     writeValue(value: number | null): void {

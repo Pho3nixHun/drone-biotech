@@ -24,7 +24,6 @@ import { InputTextComponent } from '@components/input-text/input-text.component'
 import { InputTextareaComponent } from '@components/input-textarea/input-textarea.component';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
-import { isUndefined } from '@utils/is-undefined.typeguard';
 import { MatIconModule } from '@angular/material/icon';
 
 const MISSION_NAME_MAX_LENGTH = 120;
@@ -73,7 +72,7 @@ export class AreaDataDialogComponent {
             null,
             Validators.required
         ),
-        comment: this.fb.control(''),
+        comment: this.fb.control<string | undefined>(''),
     });
 
     public openDialog(vm: AreaDataDialogVM, area?: AreaData) {
@@ -113,14 +112,7 @@ export class AreaDataDialogComponent {
 
         const { missionName, map, dosePerHq, applicationDate, comment } =
             this.formGroup.value;
-        if (
-            !map ||
-            !dosePerHq ||
-            !applicationDate ||
-            !missionName ||
-            isUndefined(comment)
-        )
-            return;
+        if (!map || !dosePerHq || !applicationDate || !missionName) return;
 
         const { targetArea, entryPoint } = map;
 
@@ -135,7 +127,7 @@ export class AreaDataDialogComponent {
                 targetArea,
                 dosePerHq,
                 applicationDate,
-                comment,
+                comment: comment ?? undefined,
             },
         });
         this.dialog().nativeElement.close();

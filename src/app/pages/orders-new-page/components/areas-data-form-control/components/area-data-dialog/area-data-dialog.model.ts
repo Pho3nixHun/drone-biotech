@@ -19,7 +19,7 @@ export interface AreaDataDialogVM extends DialogLayoutXVM {
 
 export interface AreaData {
     id: string;
-    comment: string | null;
+    comment?: string;
     missionName: string;
     targetArea: Coordinates[];
     entryPoint: Coordinates;
