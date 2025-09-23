@@ -1,11 +1,28 @@
 @let vM = vm();
 
 <div *transloco="let t">
-    <div class="flex flex-row justify-between items-end">
-        <label class="label-text">{{ t(vM.labelKey) }}</label
-        ><ng-content select="app-button" />
+    <div class="flex flex-row justify-between">
+        <label class="label-text">
+            {{ t(vM.labelKey) }}
+        </label>
+        @if (!vM.readonly) {
+            <app-button
+                [vm]="vM.addButtonXVM"
+                [disabled]="disabled()"
+                [class]="{ 'is-invalid': invalid() }"
+                (click)="
+                    !disabled() &&
+                        areaDataDialog.openDialog(vM.addAreaDataDialogVM)
+                "
+            >
+                @if (vM.addButtonXVM.icon; as icon) {
+                    <mat-icon>{{ icon }}</mat-icon>
+                }
+            </app-button>
+        }
     </div>
-    @if (xAreaData$() | async; as xAreaData) {
+
+    @if (areaXData(); as xAreaData) {
         <app-card-group>
             <div class="flex items-center">
                 {{ t(vM.missionHeaderKey) }}
@@ -85,7 +102,12 @@
                     </app-key-value>
                     <app-button
                         [vm]="vM.editButtonXVM"
-                        (click)="editAreaData(area.id)"
+                        (click)="
+                            areaDataDialog.openDialog(
+                                vM.editAreaDataDialogVM,
+                                area
+                            )
+                        "
                     >
                         @if (vM.editButtonXVM.icon; as icon) {
                             <mat-icon>{{ icon }}</mat-icon>
@@ -93,7 +115,7 @@
                     </app-button>
                     <app-button
                         [vm]="vM.deleteButtonXVM"
-                        (click)="deleteAreaData(area.id)"
+                        (click)="confirmationDialog.openDialog(area.id)"
                     >
                         @if (vM.deleteButtonXVM.icon; as icon) {
                             <mat-icon>{{ icon }}</mat-icon>
@@ -102,7 +124,8 @@
                 </app-card-item>
             }
         </app-card-group>
-        @if (totalAreaXData$() | async; as data) {
+
+        @if (totalAreaXData(); as data) {
             <div class="grid grid-cols-3 gap-1">
                 <div
                     class="grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
@@ -146,3 +169,14 @@
         }
     }
 </div>
+
+<app-area-data-dialog
+    #areaDataDialog
+    (response)="onAddMissionResponse($event)"
+/>
+
+<app-delete-dialog
+    #confirmationDialog
+    [vm]="vM.confirmationDialogVM"
+    (response)="onDeleteMissionResponse($event)"
+/>

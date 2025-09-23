@@ -2,7 +2,6 @@ import { StatusVM } from '@components/status/status.model';
 import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
 import { SectionCardVM } from '@components/section-card/section-card.model';
 import { WithTitle } from '@interfaces/with-title.interface';
-import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { WithLink } from '@interfaces/with-link.interface';
 import { AvatarXVM } from '@components/avatar/avatar.model';
 import { Value } from '@interfaces/with-value';
@@ -10,6 +9,7 @@ import {
     ButtonXVM,
     ButtonXVMWithRouterLink,
 } from '@components/button/button.model';
+import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
 
 export type OrderStatus = OrderStatusFromService;
 
@@ -64,9 +64,7 @@ export interface OrderDetailsSectionCardXVM extends SectionCardVM {
 
 type CompletionTemplateButtonXVM = ButtonXVM & WithLink;
 
-type CloseOrderButtonXVM = ButtonXVM & {
-    confirmationDialogVM: ConfirmationDialogVM;
-};
+type CloseOrderButtonXVM = ButtonXVM;
 export interface OrderActionsSectionCardXVM extends SectionCardVM {
     type: 'orderActions';
     completionTemplateButtonXVM: CompletionTemplateButtonXVM;
@@ -101,9 +99,11 @@ type SectionCardXVM =
 export interface OrderDetailsPageVM {
     headerXVM: HeaderXVM;
     sectionCardXVMs: SectionCardXVM[];
+    confirmationDialogVM: ConfirmationDialogVM;
 }
 
 export interface OrderDetailsPageConfig {
+    confirmationDialogVM: ConfirmationDialogVM;
     headerConfig: {
         idTitleKey: string;
         clientTextKey: string;

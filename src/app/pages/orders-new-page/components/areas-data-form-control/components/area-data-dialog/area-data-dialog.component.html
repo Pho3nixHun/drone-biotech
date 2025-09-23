@@ -1,116 +1,124 @@
-@if (vm(); as vm) {
-    <app-dialog-layout
-        class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block overflow-auto"
-        (close)="resetFormWithCloseDialog()"
-        [vm]="vm"
-        *transloco="let t"
-    >
-        <form [formGroup]="formGroup">
-            <!-- Mission name input start -->
-            @let hasMissionNameMaxLengthError =
-                formGroup.controls.missionName.hasError('maxlength');
+<dialog #dialog class="my-dialog" (close)="formGroup.reset()">
+    @if (vm(); as vm) {
+        <app-dialog-layout
+            *transloco="let t"
+            class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
+        >
+            <h2>{{ t(vm.titleKey) }}</h2>
+            <app-button [vm]="vm.closeButtonXVM" (click)="cancel()" close>
+                @if (vm.closeButtonXVM.icon; as icon) {
+                    <mat-icon>{{ icon }}</mat-icon>
+                }
+            </app-button>
+            <form [formGroup]="formGroup">
+                <!-- Mission name input start -->
+                @let hasMissionNameMaxLengthError =
+                    formGroup.controls.missionName.hasError('maxlength');
 
-            @let hasMissionNameRequiredError =
-                formGroup.controls.missionName.hasError('required') &&
-                formGroup.controls.missionName.dirty;
-
-            <app-input-text
-                [vm]="vm.missionNameInputTextXVM"
-                [invalid]="
-                    hasMissionNameMaxLengthError || hasMissionNameRequiredError
-                "
-                [formControl]="formGroup.controls.missionName"
-            >
-                @if (hasMissionNameMaxLengthError) {
-                    <span leftAssistiveText>{{
+                @let hasMissionNameRequiredError =
+                    formGroup.controls.missionName.hasError('required') &&
+                    formGroup.controls.missionName.dirty;
+                <app-input-text
+                    [vm]="vm.missionNameInputTextXVM"
+                    [invalid]="
+                        hasMissionNameMaxLengthError ||
+                        hasMissionNameRequiredError
+                    "
+                    [formControl]="formGroup.controls.missionName"
+                >
+                    @if (hasMissionNameMaxLengthError) {
+                        <span leftAssistiveText>{{
+                            t(
+                                vm.missionNameMaxCharactersAllowedAssistiveTextValueKey,
+                                {
+                                    max: missionNameMaxLength,
+                                }
+                            )
+                        }}</span>
+                    }
+                    @if (hasMissionNameRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vm.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                    <span rightAssistiveText>{{
                         t(
-                            vm.missionNameMaxCharactersAllowedAssistiveTextValueKey,
+                            vm.missionNameMaxCharactersCounterAssistiveTextValueKey,
                             {
+                                current: missionNameLength(),
                                 max: missionNameMaxLength,
                             }
                         )
                     }}</span>
-                }
-                @if (hasMissionNameRequiredError) {
-                    <span leftAssistiveText>{{
-                        t(vm.requiredAssistiveTextKey)
-                    }}</span>
-                }
-                <span rightAssistiveText>{{
-                    t(vm.missionNameMaxCharactersCounterAssistiveTextValueKey, {
-                        current: missionNameLength(),
-                        max: missionNameMaxLength,
-                    })
-                }}</span>
-            </app-input-text>
-            <!-- Mission name input end -->
+                </app-input-text>
+                <!-- Mission name input end -->
 
-            <!-- Map form control start -->
-            <app-map-form-control
-                [vm]="vm.mapFormControlVM"
-                [formControl]="formGroup.controls.map"
-            />
-            <!-- Map form control end -->
+                <!-- Map form control start -->
+                <app-map-form-control
+                    [vm]="vm.mapFormControlVM"
+                    [formControl]="formGroup.controls.map"
+                />
+                <!-- Map form control end -->
 
-            <!-- Dose per hq input start -->
-            @let hasDosePerHqMinError =
-                formGroup.controls.dosePerHq.hasError('min');
-            <app-input-number
-                [vm]="vm.dosePerHqInputTextXVM"
-                [invalid]="hasDosePerHqMinError"
-                [formControl]="formGroup.controls.dosePerHq"
+                <!-- Dose per hq input start -->
+                @let hasDosePerHqMinError =
+                    formGroup.controls.dosePerHq.dirty &&
+                    formGroup.controls.dosePerHq.hasError('min');
+
+                <app-input-number
+                    [vm]="vm.dosePerHqInputTextXVM"
+                    [invalid]="hasDosePerHqMinError"
+                    [formControl]="formGroup.controls.dosePerHq"
+                >
+                    @if (hasDosePerHqMinError) {
+                        <span leftAssistiveText>{{
+                            t(vm.dosePerHqMinErrorAssistiveTextValueKey, {
+                                min: dosePerHqMin,
+                            })
+                        }}</span>
+                    }
+                </app-input-number>
+                <!-- Dose per hq input end -->
+
+                <!-- Application date input start-->
+                @let hasApplicationDateRequiredError =
+                    formGroup.controls.applicationDate.hasError('required') &&
+                    formGroup.controls.applicationDate.dirty;
+
+                <app-input-text
+                    [vm]="vm.applicationDateInputTextXVM"
+                    [invalid]="hasApplicationDateRequiredError"
+                    [formControl]="formGroup.controls.applicationDate"
+                >
+                    @if (hasApplicationDateRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vm.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                </app-input-text>
+                <!-- Application date input end-->
+
+                <!-- Comment input start -->
+                <app-input-textarea
+                    [vm]="vm.commentInputTextareaXVM"
+                    [formControl]="formGroup.controls.comment"
+                />
+                <!-- Comment input end -->
+            </form>
+            <app-button
+                [vm]="vm.confirmButtonXVM"
+                [disabled]="formGroup.invalid"
+                (click)="submitForm()"
             >
-                @if (hasDosePerHqMinError) {
-                    <span leftAssistiveText>{{
-                        t(vm.dosePerHqMinErrorAssistiveTextValueKey, {
-                            min: dosePerHqMin,
-                        })
-                    }}</span>
+                @if (vm.confirmButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
                 }
-            </app-input-number>
-            <!-- Dose per hq input end -->
-
-            <!-- Application date input start-->
-            @let hasApplicationDateRequiredError =
-                formGroup.controls.applicationDate.hasError('required') &&
-                formGroup.controls.applicationDate.dirty;
-
-            <app-input-text
-                [vm]="vm.applicationDateInputTextXVM"
-                [invalid]="hasApplicationDateRequiredError"
-                [formControl]="formGroup.controls.applicationDate"
-            >
-                @if (hasApplicationDateRequiredError) {
-                    <span leftAssistiveText>{{
-                        t(vm.requiredAssistiveTextKey)
-                    }}</span>
+            </app-button>
+            <app-button [vm]="vm.cancelButtonXVM" (click)="cancel()">
+                @if (vm.cancelButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
                 }
-            </app-input-text>
-            <!-- Application date input end-->
-
-            <!-- Comment input start -->
-            <app-input-textarea
-                [vm]="vm.commentInputTextareaXVM"
-                [formControl]="formGroup.controls.comment"
-            />
-            <!-- Comment input end -->
-        </form>
-        <app-button
-            [vm]="vm.submitButtonXVM"
-            [disabled]="formGroup.invalid"
-            (click)="submitForm()"
-        >
-            @if (vm.submitButtonXVM.textKey; as textKey) {
-                {{ t(textKey) }}
-            }
-        </app-button>
-        <app-button
-            [vm]="vm.cancelButtonXVM"
-            (click)="resetFormWithCloseDialog()"
-        >
-            @if (vm.cancelButtonXVM.textKey; as textKey) {
-                {{ t(textKey) }}
-            }
-        </app-button>
-    </app-dialog-layout>
-}
+            </app-button>
+        </app-dialog-layout>
+    }
+</dialog>

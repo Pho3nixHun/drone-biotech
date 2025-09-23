@@ -1,22 +1,1258 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`AreasDataFormControlComponent should render the template when the VM is provided 1`] = `
-<app-areas-data-form-control
-  class="ng-untouched ng-dirty ng-valid"
-  formcontrolname="areaData"
+exports[`AreasDataFormControlComponent should not render the cards and total when there is no area provided 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
 >
   <div>
     <div
-      class="flex flex-row justify-between items-end"
+      class="flex flex-row justify-between"
     >
       <label
         class="label-text"
       >
-        lab
+         lab 
       </label>
+      <app-button>
+        <button
+          class="btn flex flex-row justify-center btn-primary"
+        >
+          <!--container-->
+        </button>
+      </app-button>
+      <!--container-->
     </div>
     <!--container-->
   </div>
   <!--container-->
-</app-areas-data-form-control>
+  <app-area-data-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <!--container-->
+    </dialog>
+  </app-area-data-dialog>
+  <app-delete-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <app-dialog-layout
+        class="w-80 md:w-96 block"
+      >
+        <section
+          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        >
+          <div
+            class="flex flex-row justify-between"
+          >
+            <h2>
+               tit 
+            </h2>
+            <app-button
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-secondary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <p>
+              warn
+            </p>
+          </div>
+          <div
+            class="ml-auto join"
+          >
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 delete 
+                <!--container-->
+              </button>
+            </app-button>
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 cancel 
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+        </section>
+      </app-dialog-layout>
+      <!--container-->
+    </dialog>
+  </app-delete-dialog>
+</div>
+`;
+
+exports[`AreasDataFormControlComponent should render 1 card and total when there is 1 mission provided 1`] = `
+<div
+  id="root2"
+  ng-version="20.1.7"
+>
+  <div>
+    <div
+      class="flex flex-row justify-between"
+    >
+      <label
+        class="label-text"
+      >
+         lab 
+      </label>
+      <app-button>
+        <button
+          class="btn flex flex-row justify-center btn-primary"
+        >
+          <!--container-->
+        </button>
+      </app-button>
+      <!--container-->
+    </div>
+    <app-card-group>
+      <div
+        class="grid xl:grid-cols-[1fr_1fr_1.5fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-4 xl:gap-y-1 md:grid-cols-2 text-left duration-500 transition-all rounded-md py-3"
+      >
+        <div
+          class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
+        >
+          <div
+            class="flex items-center"
+          >
+             mission 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             targetAreaSize 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             entryPoint 
+          </div>
+          <div
+            class="flex items-center"
+          >
+            dose
+          </div>
+          <div
+            class="flex items-center"
+          >
+             application 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             trichogrammaRequirement 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             distanceFromHeadOffice 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             comment 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             actions 
+          </div>
+        </div>
+        <app-card-item
+          class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
+        >
+          <div
+            class="grid grid-cols-subgrid xl:col-span-8 gap-4"
+          >
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   mission 
+                </p>
+                <!--container-->
+                 mission 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   targetAreaSize 
+                </p>
+                <!--container-->
+                 targetAreaSize 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   entryPoint 
+                </p>
+                <!--container-->
+                 Debrecen 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   dose 
+                </p>
+                <!--container-->
+                 doseValue 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   application 
+                </p>
+                <!--container-->
+                 applicationDate 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   trichogrammaRequirement 
+                </p>
+                <!--container-->
+                 trichogrammaRequirement 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   distanceFromHeadOffice 
+                </p>
+                <!--container-->
+                 distanceFromHeadOffice 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   comment 
+                </p>
+                <!--container-->
+                 comment 
+              </div>
+              <!--container-->
+            </app-key-value>
+          </div>
+          <div
+            class="grid col-span-1 xl:items-center gap-x-3 md:gap-y-3 xl:gap-x-3"
+          >
+            <div
+              class="flex flex-col space-y-7 xl:flex-row xl:space-x-3 xl:space-y-0 ml-auto xl:ml-0"
+            >
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    edit
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    delete
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+            </div>
+          </div>
+        </app-card-item>
+        <!--container-->
+      </div>
+    </app-card-group>
+    <!--container-->
+    <!--container-->
+  </div>
+  <!--container-->
+  <app-area-data-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <!--container-->
+    </dialog>
+  </app-area-data-dialog>
+  <app-delete-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <app-dialog-layout
+        class="w-80 md:w-96 block"
+      >
+        <section
+          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        >
+          <div
+            class="flex flex-row justify-between"
+          >
+            <h2>
+               tit 
+            </h2>
+            <app-button
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-secondary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <p>
+              warn
+            </p>
+          </div>
+          <div
+            class="ml-auto join"
+          >
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 delete 
+                <!--container-->
+              </button>
+            </app-button>
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 cancel 
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+        </section>
+      </app-dialog-layout>
+      <!--container-->
+    </dialog>
+  </app-delete-dialog>
+</div>
+`;
+
+exports[`AreasDataFormControlComponent should render 3 cardS and total when there are 3 missions provided 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <div>
+    <div
+      class="flex flex-row justify-between"
+    >
+      <label
+        class="label-text"
+      >
+         lab 
+      </label>
+      <app-button>
+        <button
+          class="btn flex flex-row justify-center btn-primary"
+        >
+          <!--container-->
+        </button>
+      </app-button>
+      <!--container-->
+    </div>
+    <app-card-group>
+      <div
+        class="grid xl:grid-cols-[1fr_1fr_1.5fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-4 xl:gap-y-1 md:grid-cols-2 text-left duration-500 transition-all rounded-md py-3"
+      >
+        <div
+          class="xl:display hidden xl:grid grid-cols-subgrid col-span-full bg-gray-300 border border-gray-400 p-3 tracking-wider"
+        >
+          <div
+            class="flex items-center"
+          >
+             mission 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             targetAreaSize 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             entryPoint 
+          </div>
+          <div
+            class="flex items-center"
+          >
+            dose
+          </div>
+          <div
+            class="flex items-center"
+          >
+             application 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             trichogrammaRequirement 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             distanceFromHeadOffice 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             comment 
+          </div>
+          <div
+            class="flex items-center"
+          >
+             actions 
+          </div>
+        </div>
+        <app-card-item
+          class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
+        >
+          <div
+            class="grid grid-cols-subgrid xl:col-span-8 gap-4"
+          >
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   mission 
+                </p>
+                <!--container-->
+                 mission 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   targetAreaSize 
+                </p>
+                <!--container-->
+                 targetAreaSize 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   entryPoint 
+                </p>
+                <!--container-->
+                 Debrecen 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   dose 
+                </p>
+                <!--container-->
+                 doseValue 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   application 
+                </p>
+                <!--container-->
+                 applicationDate 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   trichogrammaRequirement 
+                </p>
+                <!--container-->
+                 trichogrammaRequirement 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   distanceFromHeadOffice 
+                </p>
+                <!--container-->
+                 distanceFromHeadOffice 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   comment 
+                </p>
+                <!--container-->
+                 comment1 
+              </div>
+              <!--container-->
+            </app-key-value>
+          </div>
+          <div
+            class="grid col-span-1 xl:items-center gap-x-3 md:gap-y-3 xl:gap-x-3"
+          >
+            <div
+              class="flex flex-col space-y-7 xl:flex-row xl:space-x-3 xl:space-y-0 ml-auto xl:ml-0"
+            >
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    edit
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    delete
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+            </div>
+          </div>
+        </app-card-item>
+        <app-card-item
+          class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
+        >
+          <div
+            class="grid grid-cols-subgrid xl:col-span-8 gap-4"
+          >
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   mission 
+                </p>
+                <!--container-->
+                 mission 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   targetAreaSize 
+                </p>
+                <!--container-->
+                 targetAreaSize 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   entryPoint 
+                </p>
+                <!--container-->
+                 Debrecen 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   dose 
+                </p>
+                <!--container-->
+                 doseValue 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   application 
+                </p>
+                <!--container-->
+                 applicationDate 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   trichogrammaRequirement 
+                </p>
+                <!--container-->
+                 trichogrammaRequirement 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   distanceFromHeadOffice 
+                </p>
+                <!--container-->
+                 distanceFromHeadOffice 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   comment 
+                </p>
+                <!--container-->
+                 comment2 
+              </div>
+              <!--container-->
+            </app-key-value>
+          </div>
+          <div
+            class="grid col-span-1 xl:items-center gap-x-3 md:gap-y-3 xl:gap-x-3"
+          >
+            <div
+              class="flex flex-col space-y-7 xl:flex-row xl:space-x-3 xl:space-y-0 ml-auto xl:ml-0"
+            >
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    edit
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    delete
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+            </div>
+          </div>
+        </app-card-item>
+        <app-card-item
+          class="p-3 bg-gray-100 xl:p-2 grid xl:grid-cols-subgrid xl:col-span-full grid-cols-[2fr_1fr] duration-100 transition-all hover:bg-gray-200 border border-gray-300"
+        >
+          <div
+            class="grid grid-cols-subgrid xl:col-span-8 gap-4"
+          >
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   mission 
+                </p>
+                <!--container-->
+                 mission 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   targetAreaSize 
+                </p>
+                <!--container-->
+                 targetAreaSize 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   entryPoint 
+                </p>
+                <!--container-->
+                 Debrecen 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   dose 
+                </p>
+                <!--container-->
+                 doseValue 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   application 
+                </p>
+                <!--container-->
+                 applicationDate 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   trichogrammaRequirement 
+                </p>
+                <!--container-->
+                 trichogrammaRequirement 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   distanceFromHeadOffice 
+                </p>
+                <!--container-->
+                 distanceFromHeadOffice 
+              </div>
+              <!--container-->
+            </app-key-value>
+            <app-key-value>
+              <div
+                class="duration-500 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="xl:hidden display uppercase text-gray-400 text-xs tracking-widest"
+                >
+                   comment 
+                </p>
+                <!--container-->
+                 comment3 
+              </div>
+              <!--container-->
+            </app-key-value>
+          </div>
+          <div
+            class="grid col-span-1 xl:items-center gap-x-3 md:gap-y-3 xl:gap-x-3"
+          >
+            <div
+              class="flex flex-col space-y-7 xl:flex-row xl:space-x-3 xl:space-y-0 ml-auto xl:ml-0"
+            >
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    edit
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+              <app-button>
+                <button
+                  class="btn flex flex-row justify-center btn-primary btn-text"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    delete
+                  </mat-icon>
+                  <!--container-->
+                </button>
+              </app-button>
+            </div>
+          </div>
+        </app-card-item>
+        <!--container-->
+      </div>
+    </app-card-group>
+    <!--container-->
+    <!--container-->
+  </div>
+  <!--container-->
+  <app-area-data-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <!--container-->
+    </dialog>
+  </app-area-data-dialog>
+  <app-delete-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <app-dialog-layout
+        class="w-80 md:w-96 block"
+      >
+        <section
+          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        >
+          <div
+            class="flex flex-row justify-between"
+          >
+            <h2>
+               tit 
+            </h2>
+            <app-button
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-secondary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <p>
+              warn
+            </p>
+          </div>
+          <div
+            class="ml-auto join"
+          >
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 delete 
+                <!--container-->
+              </button>
+            </app-button>
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 cancel 
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+        </section>
+      </app-dialog-layout>
+      <!--container-->
+    </dialog>
+  </app-delete-dialog>
+</div>
+`;
+
+exports[`AreasDataFormControlComponent should render the template correctly with the projected contents 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <div>
+    <div
+      class="flex flex-row justify-between"
+    >
+      <label
+        class="label-text"
+      >
+         lab 
+      </label>
+      <app-button>
+        <button
+          class="btn flex flex-row justify-center btn-primary"
+        >
+          <!--container-->
+        </button>
+      </app-button>
+      <!--container-->
+    </div>
+    <!--container-->
+  </div>
+  <!--container-->
+  <app-area-data-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <!--container-->
+    </dialog>
+  </app-area-data-dialog>
+  <app-delete-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <app-dialog-layout
+        class="w-80 md:w-96 block"
+      >
+        <section
+          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        >
+          <div
+            class="flex flex-row justify-between"
+          >
+            <h2>
+               tit 
+            </h2>
+            <app-button
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-secondary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <p>
+              warn
+            </p>
+          </div>
+          <div
+            class="ml-auto join"
+          >
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 delete 
+                <!--container-->
+              </button>
+            </app-button>
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 cancel 
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+        </section>
+      </app-dialog-layout>
+      <!--container-->
+    </dialog>
+  </app-delete-dialog>
+</div>
+`;
+
+exports[`AreasDataFormControlComponent should set disabled state 1`] = `
+<div
+  id="root8"
+  ng-version="20.1.7"
+>
+  <div>
+    <div
+      class="flex flex-row justify-between"
+    >
+      <label
+        class="label-text"
+      >
+         lab 
+      </label>
+      <app-button>
+        <button
+          class="btn flex flex-row justify-center btn-primary btn-disabled"
+          disabled=""
+        >
+          <!--container-->
+        </button>
+      </app-button>
+      <!--container-->
+    </div>
+    <!--container-->
+  </div>
+  <!--container-->
+  <app-area-data-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <!--container-->
+    </dialog>
+  </app-area-data-dialog>
+  <app-delete-dialog>
+    <dialog
+      class="my-dialog"
+    >
+      <app-dialog-layout
+        class="w-80 md:w-96 block"
+      >
+        <section
+          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        >
+          <div
+            class="flex flex-row justify-between"
+          >
+            <h2>
+               tit 
+            </h2>
+            <app-button
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-secondary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <p>
+              warn
+            </p>
+          </div>
+          <div
+            class="ml-auto join"
+          >
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 delete 
+                <!--container-->
+              </button>
+            </app-button>
+            <app-button>
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                 cancel 
+                <!--container-->
+              </button>
+            </app-button>
+          </div>
+        </section>
+      </app-dialog-layout>
+      <!--container-->
+    </dialog>
+  </app-delete-dialog>
+</div>
 `;

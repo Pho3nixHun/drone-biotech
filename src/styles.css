@@ -38,3 +38,13 @@ body {
     margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+
+.my-dialog {
+    margin: auto;
+}
+
+.my-dialog::backdrop {
+    opacity: 0.5;
+    background-color: #000;
+}

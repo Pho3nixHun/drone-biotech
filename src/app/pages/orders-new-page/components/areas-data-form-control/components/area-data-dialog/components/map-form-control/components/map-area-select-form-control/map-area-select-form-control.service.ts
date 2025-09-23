@@ -8,7 +8,7 @@ import {
 } from './map-area-select-form-control.model';
 
 @Injectable({
-    providedIn: 'any',
+    providedIn: 'root',
 })
 export class MapAreaSelectFormControlService {
     public initializeMap(map: google.maps.Map) {

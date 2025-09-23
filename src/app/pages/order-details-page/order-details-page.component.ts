@@ -3,8 +3,6 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { Component, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
-import { firstValueFrom } from 'rxjs';
-import { DialogService } from '@services/dialog/dialog.service';
 import { SummaryListComponent } from '@components/summary-list/summary-list.component';
 import { StatusComponent } from '@components/status/status.component';
 import { SummaryComponent } from '@components/summary-list/components/summary/summary.component';
@@ -15,19 +13,16 @@ import { InfoPanelComponent } from '@components/info-panel/info-panel.component'
 import { InfoItemListComponent } from '@components/info-panel/components/info-item-list/info-item-list.component';
 import { AvatarComponent } from '@components/avatar/avatar.component';
 import { InfoItemComponent } from '@components/info-panel/components/info-item-list/components/info-item/info-item.component';
-import { ConfirmationDialogComponent } from '@components/confirmation-dialog/confirmation-dialog.component';
 import { MessageItemListComponent } from '@components/message-item-list/message-item-list.component';
 import { MessageItemComponent } from '@components/message-item/message-item.component';
-import { emptyStringValidator } from '@utils/empty-string.validator';
+import { emptyStringValidator } from 'src/app/shared/validators/empty-string.validator';
 import { OrderDetailsPageService } from './order-details-page.service';
-import {
-    ConfirmationDialogReason,
-    ConfirmationDialogVM,
-} from '@components/confirmation-dialog/confirmation-dialog.model';
 import { AuthStore } from '@stores/auth/auth.store';
 import { ButtonComponent } from '@components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { ConfirmationDialogComponent } from '@components/confirmation-dialog/confirmation-dialog.component';
+import { ConfirmationDialogResponse } from '@components/confirmation-dialog/confirmation-dialog.model';
 
 @Component({
     selector: 'app-order-details-page',
@@ -50,12 +45,12 @@ import { MatIconModule } from '@angular/material/icon';
         ButtonComponent,
         RouterModule,
         MatIconModule,
+        ConfirmationDialogComponent,
     ],
     templateUrl: './order-details-page.component.html',
 })
 export class OrderDetailsPageComponent {
     private readonly fb = inject(FormBuilder);
-    private readonly dialogService = inject(DialogService);
     private readonly orderDetailsPageService = inject(OrderDetailsPageService);
     private readonly store = inject(AuthStore);
 
@@ -89,12 +84,10 @@ export class OrderDetailsPageComponent {
         this.messageFormControl.reset();
     }
 
-    protected async openConfirmationDialog(vm: ConfirmationDialogVM) {
-        const reason: ConfirmationDialogReason = await firstValueFrom(
-            this.dialogService.create(vm, ConfirmationDialogComponent).result$
-        );
-
-        if (reason.reasonType === 'submit')
-            return this.orderDetailsPageService.closeOrder();
+    protected onConfirmationDialogResponse(
+        response: ConfirmationDialogResponse
+    ) {
+        if (response.type === 'submit')
+            this.orderDetailsPageService.closeOrder();
     }
 }

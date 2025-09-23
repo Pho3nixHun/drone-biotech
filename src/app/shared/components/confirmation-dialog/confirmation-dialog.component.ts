@@ -1,39 +1,39 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, ElementRef, input, output, viewChild } from '@angular/core';
 import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.component';
-import { DIALOG_DATA, DIALOG_REF } from '@services/dialog/dialog.service';
-import {
-    CancelReason,
-    SubmitReason,
-    isConfirmationDialogVM,
-} from './confirmation-dialog.model';
 import { TranslocoModule } from '@jsverse/transloco';
 import { ButtonComponent } from '@components/button/button.component';
+import {
+    ConfirmationDialogResponse,
+    ConfirmationDialogVM,
+} from './confirmation-dialog.model';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-confirmation-dialog',
-    imports: [DialogLayoutComponent, TranslocoModule, ButtonComponent],
+    imports: [
+        DialogLayoutComponent,
+        TranslocoModule,
+        ButtonComponent,
+        MatIconModule,
+    ],
     templateUrl: './confirmation-dialog.component.html',
 })
 export class ConfirmationDialogComponent {
-    protected readonly unknownVM = signal<unknown>(inject(DIALOG_DATA));
-    protected readonly dialogRef = inject(DIALOG_REF);
+    public readonly vm = input.required<ConfirmationDialogVM>();
+    public readonly response = output<ConfirmationDialogResponse>();
+    public readonly dialog =
+        viewChild.required<ElementRef<HTMLDialogElement>>('dialog');
 
-    protected vm = computed(() => {
-        const vm = this.unknownVM();
-        return isConfirmationDialogVM(vm) ? vm : null;
-    });
-
-    protected onConfirmClick() {
-        const reason: SubmitReason = {
-            reasonType: 'submit',
-        };
-        this.dialogRef.close(reason);
+    protected cancelClick() {
+        this.response.emit({ type: 'cancel' });
+        this.dialog().nativeElement.close();
+    }
+    protected submitClick() {
+        this.response.emit({ type: 'submit' });
+        this.dialog().nativeElement.close();
     }
 
-    protected onCancelClick() {
-        const reason: CancelReason = {
-            reasonType: 'cancel',
-        };
-        this.dialogRef.close(reason);
+    public openDialog() {
+        this.dialog().nativeElement.showModal();
     }
 }

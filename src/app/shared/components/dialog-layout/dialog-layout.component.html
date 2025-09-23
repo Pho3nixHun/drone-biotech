@@ -1,17 +1,7 @@
-@let vM = vm();
-<section
-    class="p-4 md:p-10 rounded-lg shadow-md transition-all duration-100 bg-white space-y-5 flex flex-col"
-    *transloco="let t"
->
-    <div class="flex justify-between">
-        <h3 class="text-3xl">
-            {{ t(vM.titleKey) }}
-        </h3>
-        <app-button [vm]="vM.closeButtonXVM" (click)="onClick()">
-            @if (vM.closeButtonXVM.icon) {
-                <mat-icon left>{{ vM.closeButtonXVM.icon }}</mat-icon>
-            }
-        </app-button>
+<section class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4">
+    <div class="flex flex-row justify-between">
+        <ng-content select="h2" />
+        <ng-content select="[close]" />
     </div>
     <div class="space-y-4">
         <ng-content />

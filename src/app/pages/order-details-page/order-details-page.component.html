@@ -135,12 +135,7 @@
 
                             <app-button
                                 [vm]="sectionCardXVM.closeOrderButtonXVM"
-                                (click)="
-                                    openConfirmationDialog(
-                                        sectionCardXVM.closeOrderButtonXVM
-                                            .confirmationDialogVM
-                                    )
-                                "
+                                (click)="confirmationDialog.openDialog()"
                             >
                                 @if (
                                     sectionCardXVM.closeOrderButtonXVM.textKey
@@ -243,4 +238,10 @@
             }
         }
     </app-page-layout>
+
+    <app-confirmation-dialog
+        #confirmationDialog
+        [vm]="vm.confirmationDialogVM"
+        (response)="onConfirmationDialogResponse($event)"
+    />
 }

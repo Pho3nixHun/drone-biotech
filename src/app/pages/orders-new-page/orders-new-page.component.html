@@ -100,25 +100,17 @@
                 <!-- End customer input end-->
 
                 <!-- Missions form control start -->
+                @let hasAreasDataMinArrayLengthError =
+                    formGroup.controls.areasData.touched &&
+                    formGroup.controls.areasData.hasError('minArrayLength');
+
                 <app-areas-data-form-control
                     #areasDataFormControl
-                    [vm]="vm.areasDataFormControlXVM"
+                    [vm]="vm.areasDataFormControlVM"
+                    [invalid]="hasAreasDataMinArrayLengthError"
                     [formControl]="formGroup.controls.areasData"
-                >
-                    <app-button
-                        [vm]="vm.areasDataFormControlXVM.addButtonXVM"
-                        (click)="areasDataFormControl.addAreaData()"
-                    >
-                        @if (
-                            vm.areasDataFormControlXVM.addButtonXVM.icon;
-                            as icon
-                        ) {
-                            <mat-icon>
-                                {{ icon }}
-                            </mat-icon>
-                        }
-                    </app-button>
-                </app-areas-data-form-control>
+                />
+
                 <!-- Missions form control end -->
 
                 <app-button

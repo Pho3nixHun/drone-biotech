@@ -7,7 +7,7 @@ import { Coordinates } from '@stores/location/location.model';
 import { TestBed } from '@angular/core/testing';
 import { MapAreaSelectFormControlService } from './map-area-select-form-control.service';
 @Injectable({
-    providedIn: 'any',
+    providedIn: 'root',
 })
 export class MapAreaSelectFormControlMockService {
     public initializeMap(map: google.maps.Map): void {}
@@ -25,7 +25,7 @@ const polygonSignal = signal<Coordinates[] | null>(null);
 export const updatePolygonSignal = (path: Coordinates[] | null) =>
     polygonSignal.set(path);
 
-export const provideMapAreaSelectFormControlMockService = (): TestBed =>
-    TestBed.overrideProvider(MapAreaSelectFormControlService, {
-        useFactory: () => MapAreaSelectFormControlMockService,
-    });
+export const provideMapAreaSelectFormControlMockService = () => ({
+    provide: MapAreaSelectFormControlService,
+    useClass: MapAreaSelectFormControlMockService,
+});

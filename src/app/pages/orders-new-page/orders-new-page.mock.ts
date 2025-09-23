@@ -46,10 +46,9 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
     },
     submitButtonXVM: {
         textKey: 'OrdersNewPage.submitButtonText',
-        secondary: false,
         variant: 'fill',
     },
-    areasDataFormControlXVM: {
+    areasDataFormControlVM: {
         labelKey: 'OrdersNewPage.areasDataLabel',
         actionsHeaderKey: 'OrdersNewPage.areasDataFormControl.actionsHeader',
         targetAreaSizeHeaderKey:
@@ -104,8 +103,6 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                 'OrdersNewPage.areasDataDialog.missionNameMaxCharactersAllowedAssistiveTextValue',
             missionNameMaxCharactersCounterAssistiveTextValueKey:
                 'OrdersNewPage.areasDataDialog.missionNameMaxCharactersCounterAssistiveTextValue',
-            type: 'areaDataDialogVM',
-            areaData: null,
             titleKey: 'OrdersNewPage.areasDataDialog.title.add',
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
@@ -133,7 +130,7 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     'OrdersNewPage.areasDataDialog.missionNamePlaceholder',
                 labelKey: 'OrdersNewPage.areasDataDialog.missionNameLabel',
             },
-            submitButtonXVM: {
+            confirmButtonXVM: {
                 textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
                 variant: 'fill',
             },
@@ -214,9 +211,7 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                 'OrdersNewPage.areasDataDialog.missionNameMaxCharactersAllowedAssistiveTextValue',
             missionNameMaxCharactersCounterAssistiveTextValueKey:
                 'OrdersNewPage.areasDataDialog.missionNameMaxCharactersCounterAssistiveTextValue',
-            type: 'areaDataDialogVM',
-            areaData: null,
-            titleKey: 'OrdersNewPage.areasDataDialog.title.add',
+            titleKey: 'OrdersNewPage.areasDataDialog.title.edit',
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
                 secondary: true,
@@ -243,7 +238,7 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     'OrdersNewPage.areasDataDialog.missionNamePlaceholder',
                 labelKey: 'OrdersNewPage.areasDataDialog.missionNameLabel',
             },
-            submitButtonXVM: {
+            confirmButtonXVM: {
                 textKey: 'OrdersNewPage.areasDataDialog.submitButtonText',
                 variant: 'fill',
             },
@@ -315,16 +310,15 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                 },
             },
         },
-        deleteDialogVM: {
-            type: 'deleteDialogVM',
+        confirmationDialogVM: {
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
                 secondary: true,
                 variant: 'ghost',
             },
             titleKey: 'OrdersNewPage.deleteDialog.title',
-            warningTextKey: 'OrdersNewPage.deleteDialog.warningText',
-            deleteButtonXVM: {
+            confirmTextKey: 'OrdersNewPage.deleteDialog.warningText',
+            confirmButtonXVM: {
                 textKey: 'OrdersNewPage.deleteDialog.submitButtonText',
                 variant: 'fill',
             },
@@ -461,7 +455,7 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
         placeholderKey: enMock.namePlaceholder,
     },
 
-    areasDataFormControlXVM: {
+    areasDataFormControlVM: {
         labelKey: enMock.areasDataFormControl.label,
         addButtonXVM: {
             icon: MatIcon.ADD,
@@ -479,7 +473,6 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
         },
 
         addAreaDataDialogVM: {
-            type: 'areaDataDialogVM',
             dosePerHqMinErrorAssistiveTextValueKey:
                 enMock.areasDataFormControl.dosePerHqMinErrorAssistiveTextValue,
             missionNameMaxCharactersAllowedAssistiveTextValueKey:
@@ -530,7 +523,7 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                 secondary: false,
                 variant: 'fill',
             },
-            submitButtonXVM: {
+            confirmButtonXVM: {
                 textKey: enMock.areasDataFormControl.cancelButtonText,
                 secondary: false,
                 variant: 'fill',
@@ -591,12 +584,10 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                     },
                 },
             },
-            areaData: null,
             titleKey: enMock.title,
         },
 
         editAreaDataDialogVM: {
-            type: 'areaDataDialogVM',
             dosePerHqMinErrorAssistiveTextValueKey:
                 enMock.areasDataFormControl.dosePerHqMinErrorAssistiveTextValue,
             missionNameMaxCharactersAllowedAssistiveTextValueKey:
@@ -647,7 +638,7 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                 secondary: false,
                 variant: 'fill',
             },
-            submitButtonXVM: {
+            confirmButtonXVM: {
                 textKey: enMock.areasDataFormControl.cancelButtonText,
                 secondary: false,
                 variant: 'fill',
@@ -708,26 +699,24 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                     },
                 },
             },
-            areaData: null,
             titleKey: enMock.title,
         },
 
-        deleteDialogVM: {
-            type: 'deleteDialogVM',
+        confirmationDialogVM: {
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
                 secondary: true,
                 variant: 'ghost',
             },
             titleKey: enMock.title,
-            warningTextKey: enMock.areasDataFormControl.mapFormControl.warning,
+            confirmTextKey: enMock.areasDataFormControl.mapFormControl.warning,
             cancelButtonXVM: {
                 textKey:
                     enMock.areasDataFormControl.mapFormControl.cancelButton,
                 secondary: false,
                 variant: 'fill',
             },
-            deleteButtonXVM: {
+            confirmButtonXVM: {
                 textKey:
                     enMock.areasDataFormControl.mapFormControl.deleteButton,
                 secondary: false,

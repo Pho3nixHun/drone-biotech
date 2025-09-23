@@ -2,6 +2,27 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrderDetailsPageConfig } from './order-details-page.model';
 
 export const orderDetailsPageConfig: OrderDetailsPageConfig = {
+    confirmationDialogVM: {
+        closeButtonXVM: {
+            icon: MatIcon.CLOSE,
+            variant: 'ghost',
+            secondary: true,
+        },
+        titleKey: 'OrderDetailsPage.orderActions.close.dialog.title',
+        confirmTextKey:
+            'OrderDetailsPage.orderActions.close.dialog.confirmText',
+        cancelButtonXVM: {
+            textKey:
+                'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
+            secondary: true,
+            variant: 'fill',
+        },
+        confirmButtonXVM: {
+            textKey:
+                'OrderDetailsPage.orderActions.close.dialog.confirmButtonText',
+            variant: 'fill',
+        },
+    },
     headerConfig: {
         idTitleKey: 'OrderDetailsPage.header.idTitle',
         clientTextKey: 'OrderDetailsPage.header.clientText',
@@ -37,30 +58,6 @@ export const orderDetailsPageConfig: OrderDetailsPageConfig = {
                 textKey: 'OrderDetailsPage.orderActions.close.text',
                 secondary: true,
                 variant: 'fill',
-                confirmationDialogVM: {
-                    closeButtonXVM: {
-                        icon: MatIcon.CLOSE,
-                        secondary: false,
-                        variant: 'ghost',
-                    },
-                    type: 'confirmationDialogVM',
-                    titleKey:
-                        'OrderDetailsPage.orderActions.close.dialog.title',
-                    confirmTextKey:
-                        'OrderDetailsPage.orderActions.close.dialog.confirmText',
-                    cancelButtonXVM: {
-                        textKey:
-                            'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
-                        secondary: false,
-                        variant: 'fill',
-                    },
-                    confirmButtonXVM: {
-                        textKey:
-                            'OrderDetailsPage.orderActions.close.dialog.confirmButtonText',
-                        secondary: false,
-                        variant: 'fill',
-                    },
-                },
             },
         },
         orderDetailsSectionCardConfig: {
@@ -133,6 +130,25 @@ export const enMock = {
 };
 
 export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
+    confirmationDialogVM: {
+        closeButtonXVM: {
+            icon: MatIcon.ADD,
+            secondary: false,
+            variant: 'ghost',
+        },
+        titleKey: '',
+        confirmTextKey: '',
+        confirmButtonXVM: {
+            secondary: false,
+            variant: 'fill',
+            textKey: enMock.orderActions.completionButtonText,
+        },
+        cancelButtonXVM: {
+            secondary: false,
+            variant: 'fill',
+            textKey: enMock.orderActions.closeButtonText,
+        },
+    },
     headerConfig: {
         idTitleKey: enMock.idTitle,
         clientTextKey: enMock.clientText,
@@ -169,26 +185,6 @@ export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
 
                 secondary: true,
                 variant: 'ghost',
-                confirmationDialogVM: {
-                    closeButtonXVM: {
-                        icon: MatIcon.ADD,
-                        secondary: false,
-                        variant: 'ghost',
-                    },
-                    type: 'confirmationDialogVM',
-                    titleKey: '',
-                    confirmTextKey: '',
-                    confirmButtonXVM: {
-                        secondary: false,
-                        variant: 'fill',
-                        textKey: enMock.orderActions.completionButtonText,
-                    },
-                    cancelButtonXVM: {
-                        secondary: false,
-                        variant: 'fill',
-                        textKey: enMock.orderActions.closeButtonText,
-                    },
-                },
             },
         },
         orderDetailsSectionCardConfig: {
