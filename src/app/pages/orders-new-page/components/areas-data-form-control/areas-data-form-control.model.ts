@@ -10,8 +10,7 @@ export interface AreasDataFormControlVM {
     readonly?: boolean;
 
     labelKey: string;
-    addAreaDataDialogVM: AreaDataDialogVM;
-    editAreaDataDialogVM: AreaDataDialogVM;
+    areaDataDialogVM: AreaDataDialogVM;
     confirmationDialogVM: ConfirmationDialogVM;
 
     editButtonXVM: ButtonXVM;

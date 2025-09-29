@@ -11,8 +11,10 @@
                 [disabled]="disabled()"
                 [class]="{ 'is-invalid': invalid() }"
                 (click)="
-                    !disabled() &&
-                        areaDataDialog.openDialog(vM.addAreaDataDialogVM)
+                    !disabled() && [
+                        areaDataDialog.area.set(undefined),
+                        areaDataDialog.dialog().nativeElement.showModal(),
+                    ]
                 "
             >
                 @if (vM.addButtonXVM.icon; as icon) {
@@ -103,10 +105,12 @@
                     <app-button
                         [vm]="vM.editButtonXVM"
                         (click)="
-                            areaDataDialog.openDialog(
-                                vM.editAreaDataDialogVM,
-                                area
-                            )
+                            [
+                                areaDataDialog.area.set(area),
+                                areaDataDialog
+                                    .dialog()
+                                    .nativeElement.showModal(),
+                            ]
                         "
                     >
                         @if (vM.editButtonXVM.icon; as icon) {
@@ -172,6 +176,7 @@
 
 <app-area-data-dialog
     #areaDataDialog
+    [vm]="vM.areaDataDialogVM"
     (response)="onAddMissionResponse($event)"
 />
 
