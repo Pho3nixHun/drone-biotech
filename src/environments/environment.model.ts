@@ -1,8 +1,11 @@
 import { FirebaseOptions } from '@angular/fire/app';
+import { Libraries } from '@googlemaps/js-api-loader';
 
 export interface Environment {
-    googleMapsConfig: {
+    googleMaps: {
         apiKey: string;
+        version: 'weekly';
+        libraries: Libraries;
     };
-    firebaseConfig: FirebaseOptions;
+    firebase: FirebaseOptions;
 }
