@@ -108,12 +108,14 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                     removePolygonButtonXVM: {
                         variant: 'fill',
                         secondary: true,
-                        textKey: 'Remove polygon',
+                        textKey:
+                            'OrdersNewPage.contextMenu.removePolygonButtonTextKey',
                     },
                     removeVertexButtonXVM: {
                         variant: 'fill',
                         secondary: true,
-                        textKey: 'Remove vertex',
+                        textKey:
+                            'OrdersNewPage.contextMenu.removeVertexButtonTextKey',
                     },
                 },
                 buttonsControlPosition: ControlPosition.INLINE_START_BLOCK_END,
