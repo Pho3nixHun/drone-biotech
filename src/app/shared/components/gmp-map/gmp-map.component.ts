@@ -18,12 +18,12 @@ import {
 @Component({
     selector: 'app-gmp-map',
     imports: [],
-    template: '<div #div style="height: 700px"><ng-content /></div>',
+    template: '<div #mapDiv style="height: 100%"><ng-content /></div>',
 })
 export class GmpMapComponent {
     private readonly options = inject(GMP_MAP_OPTIONS);
     private readonly divElement =
-        viewChild.required<ElementRef<HTMLDivElement>>('div');
+        viewChild.required<ElementRef<HTMLDivElement>>('mapDiv');
     public readonly buttons =
         contentChild<ElementRef<HTMLDivElement>>('buttons');
     public readonly center = input.required<Coordinates>();
@@ -34,7 +34,7 @@ export class GmpMapComponent {
         () => new google.maps.Map(this.divElement().nativeElement)
     );
 
-    public readonly pushButtonsEffect = effect(() => {
+    public readonly projectButtonsEffect = effect(() => {
         const map = this.map();
         const buttons = this.buttons();
         if (!buttons) return;

@@ -1,8 +1,8 @@
-import type { IStaticMethods } from 'flyonui/flyonui';
+import type { HSTabs } from 'flyonui/flyonui';
 
 declare global {
     interface Window {
-        HSStaticMethods: IStaticMethods;
+        HSTabs: typeof HSTabs;
     }
 }
 

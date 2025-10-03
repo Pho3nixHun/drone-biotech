@@ -10,7 +10,7 @@ export function coordinatesValidator(): ValidatorFn {
 
         const parts = value.split(/\s+/);
         if (parts.length !== 2) {
-            return { latlng: 'Must be in "lat lng" format' };
+            return { latlng: 'Must be in valid format' };
         }
 
         const [latStr, lngStr] = parts;

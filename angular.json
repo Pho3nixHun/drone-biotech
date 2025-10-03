@@ -32,7 +32,7 @@
                             "src/styles.css"
                         ],
                         "scripts": [
-                            "node_modules/flyonui/flyonui.js"
+                            "node_modules/flyonui/dist/tabs.js"
                         ]
                     },
                     "configurations": {
@@ -117,6 +117,7 @@
             "typeSeparator": "."
         },
         "@schematics/angular:module": {
+            "path": "src/app/shared/modules",
             "typeSeparator": "."
         },
         "@schematics/angular:pipe": {

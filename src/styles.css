@@ -11,10 +11,7 @@
 
 @import "../node_modules/flyonui/variants.css";
 
-@source "../node_modules/flyonui/flyonui.js";
-
-
-
+@source "../node_modules/flyonui/dist/tabs.js";
 
 html {
     scroll-behavior: smooth;
@@ -35,8 +32,13 @@ html {
         @apply bg-black font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
     }
 
-    app-tabs app-tab-button {
-        @apply w-full
+    dialog {
+        margin: auto;
+    }
+
+    dialog::backdrop {
+        opacity: 0.5;
+        background-color: #000;
     }
 }
 
@@ -48,14 +50,4 @@ body {
 body {
     margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
-
-
-.my-dialog {
-    margin: auto;
-}
-
-.my-dialog::backdrop {
-    opacity: 0.5;
-    background-color: #000;
 }

@@ -40,10 +40,22 @@ import { TabsDirective } from '@components/tabs/directives/tabs/tabs.directive';
 import { TabPanelComponent } from '@components/tabs/components/tab-panel/tab-panel.component';
 import { TabsNavComponent } from '@components/tabs/components/tabs-nav/tabs-nav.component';
 import { coordinatesValidator } from '@validators/coordinates.validator';
+import {
+    mapStringToCoordinatesArray,
+    mapStringToCoordinates,
+    mapCoordinatesToString,
+    mapCoordinatesArrayToString,
+    mapCenterToBounds,
+} from './area-data-dialog.mapper';
 
 const MISSION_NAME_MAX_LENGTH = 120;
 const DOSE_PER_HQ_MIN = 1;
 const MINIMUM_TARGET_AREA_COORDS = 3;
+const TARGET_AREA_SIZE = 5;
+const LAT_MULTIPLIER = 0.0005;
+const LNG_MULTIPLIER = 0.001;
+const LAT_DELTA = 0.01;
+const LNG_DELTA = 0.02;
 
 @Component({
     selector: 'app-area-data-dialog',
@@ -73,21 +85,19 @@ const MINIMUM_TARGET_AREA_COORDS = 3;
     templateUrl: './area-data-dialog.component.html',
 })
 export class AreaDataDialogComponent {
-    protected readonly dosePerHqMin = DOSE_PER_HQ_MIN;
-    protected readonly missionNameMaxLength = MISSION_NAME_MAX_LENGTH;
-    protected readonly minimumTargetAreaCoords = MINIMUM_TARGET_AREA_COORDS;
-    protected readonly headOfficeLocation = inject(HEAD_OFFICE_LOCATION);
     private readonly fb = inject(FormBuilder);
+    protected readonly headOfficeLocation = inject(HEAD_OFFICE_LOCATION);
+    protected readonly minimumTargetAreaCoords = MINIMUM_TARGET_AREA_COORDS;
+    protected readonly missionNameMaxLength = MISSION_NAME_MAX_LENGTH;
+    protected readonly dosePerHqMin = DOSE_PER_HQ_MIN;
+    protected readonly latDelta = LAT_DELTA;
+    protected readonly lngDelta = LNG_DELTA;
+    protected readonly mapCenterToBounds = mapCenterToBounds;
+    public readonly vm = input.required<AreaDataDialogVM>();
+    protected readonly response = output<AreaDataDialogResponse>();
+    public readonly area = signal<AreaData | undefined>(undefined);
     public readonly dialog =
         viewChild.required<ElementRef<HTMLDialogElement>>('dialog');
-    public readonly vm = input.required<AreaDataDialogVM>();
-    public readonly area = signal<AreaData | undefined>(undefined);
-    protected readonly response = output<AreaDataDialogResponse>();
-    protected readonly mapCoordinatesArrayToString =
-        mapCoordinatesArrayToString;
-    protected readonly mapStringToCoordinatesArray =
-        mapStringToCoordinatesArray;
-    protected readonly stringToCoordinate = stringToCoordinate;
 
     protected readonly formGroup = this.fb.group({
         missionName: this.fb.control('', [
@@ -170,20 +180,56 @@ export class AreaDataDialogComponent {
         });
         this.dialog().nativeElement.close();
     }
+
+    protected setMapTargetAreaFromText() {
+        const value = this.textFormGroup.controls.targetArea.value;
+        this.formGroup.controls.targetArea.setValue(
+            this.textFormGroup.controls.targetArea.valid && value
+                ? mapStringToCoordinatesArray(value)
+                : null
+        );
+    }
+
+    protected setMapEntryPointFromText() {
+        const value = this.textFormGroup.controls.entryPoint.value;
+        this.formGroup.controls.entryPoint.setValue(
+            this.textFormGroup.controls.entryPoint.valid && value
+                ? mapStringToCoordinates(value)
+                : null
+        );
+    }
+
+    protected setTextEntryPointFromValue(value: Coordinates | null) {
+        this.textFormGroup.controls.entryPoint.setValue(
+            value ? mapCoordinatesToString(value) : null
+        );
+    }
+
+    protected setTextTargetAreaFromValue(value: Coordinates[] | null) {
+        this.textFormGroup.controls.targetArea.setValue(
+            value ? mapCoordinatesArrayToString(value) : null
+        );
+    }
+
+    protected setTargetAreaFormControlFromCenter(center: Coordinates) {
+        if (this.formGroup.controls.targetArea.disabled) return;
+        this.formGroup.controls.targetArea.setValue([
+            {
+                lat: center.lat - LAT_MULTIPLIER * TARGET_AREA_SIZE,
+                lng: center.lng - LNG_MULTIPLIER * TARGET_AREA_SIZE,
+            },
+            {
+                lat: center.lat - LAT_MULTIPLIER * TARGET_AREA_SIZE,
+                lng: center.lng + LNG_MULTIPLIER * TARGET_AREA_SIZE,
+            },
+            {
+                lat: center.lat + LAT_MULTIPLIER * TARGET_AREA_SIZE,
+                lng: center.lng + LNG_MULTIPLIER * TARGET_AREA_SIZE,
+            },
+            {
+                lat: center.lat + LAT_MULTIPLIER * TARGET_AREA_SIZE,
+                lng: center.lng - LNG_MULTIPLIER * TARGET_AREA_SIZE,
+            },
+        ]);
+    }
 }
-
-const mapCoordinatesArrayToString = (coords: Coordinates[]): string =>
-    coords.map((coord) => `${coord.lat} ${coord.lng}`).join('\n');
-const mapStringToCoordinatesArray = (str: string): Coordinates[] =>
-    str
-        .split('\n')
-        .filter((line) => line.trim().length > 0) // skip empty lines
-        .map((line) => {
-            const [lat, lng] = line.trim().split(/\s+/).map(Number);
-            return { lat, lng };
-        });
-
-const stringToCoordinate = (str: string): Coordinates => {
-    const [lat, lng] = str.trim().split(/\s+/).map(Number);
-    return { lat, lng };
-};

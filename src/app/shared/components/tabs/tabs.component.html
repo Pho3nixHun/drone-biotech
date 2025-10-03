@@ -2,8 +2,8 @@
 <div
     class="flex gap-4"
     [ngClass]="{
-        'flex-row': orientation === 'vertical',
-        'flex-col': orientation === 'horizontal',
+        'flex-col': orientation === 'vertical',
+        'flex-row': orientation === 'horizontal',
     }"
 >
     <div><ng-content select="app-tabs-nav" /></div>

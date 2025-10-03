@@ -101,7 +101,7 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
             actualPosition: null,
             mapTabsXVM: {
                 variant: 'secondary',
-                orientation: 'horizontal',
+                orientation: 'vertical',
                 visualTabItemVM: {
                     id: TabItemID.MAP,
                     tabButtonXVM: {
@@ -412,7 +412,7 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
             mapTabsXVM: {
                 index: 1,
                 variant: 'secondary',
-                orientation: 'horizontal',
+                orientation: 'vertical',
                 visualTabItemVM: {
                     tabButtonXVM: { textKey: 'Coords' },
                     content: {

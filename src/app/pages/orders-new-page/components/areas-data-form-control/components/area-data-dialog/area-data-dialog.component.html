@@ -2,7 +2,7 @@
 <dialog
     #dialog
     *transloco="let t"
-    class="my-dialog lg:w-3/4 w-full h-full"
+    class="lg:w-3/4 w-full h-full"
     (close)="
         [
             area.set(undefined),
@@ -88,27 +88,12 @@
                 <app-tabs-nav>
                     <!-- Visual editor tab button start -->
                     <app-tab-button
+                        class="w-full"
                         [dataTabId]="visualTabItemVM.id"
                         (click)="
                             [
-                                entryPointFormControl.writeValue(
-                                    textFormGroup.controls.entryPoint.valid &&
-                                        textFormGroup.controls.entryPoint.value
-                                        ? stringToCoordinate(
-                                              textFormGroup.controls.entryPoint
-                                                  .value
-                                          )
-                                        : null
-                                ),
-                                targetAreaFormControl.writeValue(
-                                    textFormGroup.controls.targetArea.valid &&
-                                        textFormGroup.controls.targetArea.value
-                                        ? mapStringToCoordinatesArray(
-                                              textFormGroup.controls.targetArea
-                                                  .value
-                                          )
-                                        : null
-                                ),
+                                setMapTargetAreaFromText(),
+                                setMapEntryPointFromText(),
                             ]
                         "
                         ><mat-icon>{{
@@ -121,14 +106,17 @@
                     <!-- Visual editor tab button end -->
 
                     <!-- Text editor tab button start -->
-                    @let entryPoint = formGroup.controls.entryPoint.value;
-                    @let targetArea = formGroup.controls.targetArea.value;
                     <app-tab-button
+                        class="w-full"
                         [dataTabId]="textTabItemVM.id"
                         (click)="
                             [
-                                textFormGroup.controls.entryPoint.setValue(entryPoint?`${entryPoint.lat} ${entryPoint.lng}`:null),
-                                textFormGroup.controls.targetArea.setValue(targetArea ? mapCoordinatesArrayToString(targetArea) : null),
+                                setTextEntryPointFromValue(
+                                    formGroup.controls.entryPoint.value
+                                ),
+                                setTextTargetAreaFromValue(
+                                    formGroup.controls.targetArea.value
+                                ),
                             ]
                         "
                     >
@@ -148,6 +136,7 @@
                 <app-tab-panel [id]="visualTabItemVM.id">
                     <app-gmp-map
                         #map
+                        class="h-150 block"
                         [center]="
                             area()?.entryPoint ??
                             vM.actualPosition ??
@@ -208,32 +197,17 @@
                                     "
                                     [vm]="gmpMapXVM.addPolygonButtonXVM"
                                     (click)="
-                                        formGroup.controls.targetArea
-                                            .enabled && [
-                                            targetAreaFormControl.writeValue([
-                                                {
-                                                    lat: center.lat - 0.0025,
-                                                    lng: center.lng - 0.005,
-                                                },
-                                                {
-                                                    lat: center.lat - 0.0025,
-                                                    lng: center.lng + 0.005,
-                                                },
-                                                {
-                                                    lat: center.lat + 0.0025,
-                                                    lng: center.lng + 0.005,
-                                                },
-                                                {
-                                                    lat: center.lat + 0.0025,
-                                                    lng: center.lng - 0.005,
-                                                },
-                                            ]),
-                                            innerMap.fitBounds({
-                                                north: center.lat + 0.01,
-                                                south: center.lat - 0.01,
-                                                east: center.lng + 0.02,
-                                                west: center.lng - 0.02,
-                                            }),
+                                        [
+                                            setTargetAreaFormControlFromCenter(
+                                                center
+                                            ),
+                                            innerMap.fitBounds(
+                                                mapCenterToBounds(
+                                                    center,
+                                                    latDelta,
+                                                    lngDelta
+                                                )
+                                            ),
                                         ]
                                     "
                                 >

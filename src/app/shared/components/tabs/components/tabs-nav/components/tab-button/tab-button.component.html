@@ -6,8 +6,8 @@
     class="h-10 flex flex-row items-center gap-x-1"
     [ngClass]="{
         active: active(),
-        'w-full border-b-2 justify-center': orientation === 'horizontal',
-        'w-32 text-left border-r-2 ': orientation === 'vertical',
+        'w-full border-b-2 justify-center': orientation === 'vertical',
+        'w-32 text-left border-r-2 ': orientation === 'horizontal',
         'border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40':
             variant === 'primary',
         'border-secondary/20 hover:border-secondary/50 active-tab:border-secondary active-tab:text-secondary hover:text-secondary/70 text-secondary/40':
