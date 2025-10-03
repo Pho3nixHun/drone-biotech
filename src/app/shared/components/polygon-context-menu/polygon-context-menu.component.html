@@ -1,5 +1,6 @@
 @let vM = vm();
 <div
+    *transloco="let t"
     class="p-2 bg-white drop-shadow-2xl join join-horizontal flex items-center gap-2"
 >
     <div class="join join-vertical gap-2 w-40">
@@ -9,7 +10,9 @@
                 [vm]="vM.removeVertexButtonXVM"
                 (click)="polygonContextMenuEvent.emit({ type: 'remove' })"
             >
-                {{ vM.removeVertexButtonXVM.textKey }}
+                @if (vM.removeVertexButtonXVM.textKey; as key) {
+                    {{ t(key) }}
+                }
             </app-button>
         }
         <app-button
@@ -17,7 +20,9 @@
             [vm]="vM.removePolygonButtonXVM"
             (click)="polygonContextMenuEvent.emit({ type: 'clear' })"
         >
-            {{ vM.removePolygonButtonXVM.textKey }}
+            @if (vM.removePolygonButtonXVM.textKey; as key) {
+                {{ t(key) }}
+            }
         </app-button>
     </div>
     <app-button
