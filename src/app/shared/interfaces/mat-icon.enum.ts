@@ -8,6 +8,8 @@ export enum MatIcon {
     ADD_LOCATION_ALT = 'add_location_alt',
     LOCATION_OFF = 'location_off',
     ADD_BOX = 'add_box',
+    MAP = 'map',
+    TEXT_SNIPPET = 'text_snippet',
 }
 
 export interface WithMatIcon {
