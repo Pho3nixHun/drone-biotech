@@ -1,6 +1,7 @@
 import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrdersNewPageVM } from './orders-new-page.model';
 import { ControlPosition } from '@interfaces/control-position.enum';
+import { TabItemID } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 
 export const ordersNewPageVMDefault: OrdersNewPageVM = {
     titleKey: 'OrdersNewPage.title',
@@ -97,48 +98,93 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
 
         areaDataDialogVM: {
             editTitleKey: 'OrdersNewPage.areasDataDialog.title.edit',
-            gmpMapXVM: {
-                actualPosition: null,
-                polygonContextMenuVM: {
-                    closeButtonXVM: {
-                        icon: MatIcon.CLOSE,
-                        variant: 'ghost',
-                        secondary: true,
-                    },
-                    removePolygonButtonXVM: {
-                        variant: 'fill',
-                        secondary: true,
+            actualPosition: null,
+            mapTabsXVM: {
+                variant: 'secondary',
+                orientation: 'horizontal',
+                visualTabItemVM: {
+                    id: TabItemID.MAP,
+                    tabButtonXVM: {
                         textKey:
-                            'OrdersNewPage.contextMenu.removePolygonButtonTextKey',
+                            'OrdersNewPage.areasDataDialog.visualEditorButtonText',
+                        icon: MatIcon.MAP,
                     },
-                    removeVertexButtonXVM: {
-                        variant: 'fill',
-                        secondary: true,
-                        textKey:
-                            'OrdersNewPage.contextMenu.removeVertexButtonTextKey',
-                    },
-                },
-                buttonsControlPosition: ControlPosition.INLINE_START_BLOCK_END,
-                contentValueKey:
-                    'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
+                    content: {
+                        polygonContextMenuVM: {
+                            closeButtonXVM: {
+                                icon: MatIcon.CLOSE,
+                                variant: 'ghost',
+                                secondary: true,
+                            },
+                            removePolygonButtonXVM: {
+                                variant: 'fill',
+                                secondary: true,
+                                textKey:
+                                    'OrdersNewPage.contextMenu.removePolygonButtonTextKey',
+                            },
+                            removeVertexButtonXVM: {
+                                variant: 'fill',
+                                secondary: true,
+                                textKey:
+                                    'OrdersNewPage.contextMenu.removeVertexButtonTextKey',
+                            },
+                        },
+                        buttonsControlPosition:
+                            ControlPosition.INLINE_START_BLOCK_END,
+                        contentValueKey:
+                            'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
 
-                gmpPlaceAutocompleteXVM: {
-                    slot: ControlPosition.BLOCK_START_INLINE_START,
+                        gmpPlaceAutocompleteXVM: {
+                            slot: ControlPosition.BLOCK_START_INLINE_START,
+                        },
+                        removeAdvancedMarkerButtonXVM: {
+                            secondary: true,
+                            variant: 'fill',
+                            icon: MatIcon.LOCATION_OFF,
+                        },
+                        addAdvancedMarkerButtonXVM: {
+                            secondary: true,
+                            variant: 'fill',
+                            icon: MatIcon.ADD_LOCATION_ALT,
+                        },
+                        addPolygonButtonXVM: {
+                            secondary: true,
+                            variant: 'fill',
+                            icon: MatIcon.ADD_BOX,
+                        },
+                    },
                 },
-                removeAdvancedMarkerButtonXVM: {
-                    secondary: true,
-                    variant: 'fill',
-                    icon: MatIcon.LOCATION_OFF,
-                },
-                addAdvancedMarkerButtonXVM: {
-                    secondary: true,
-                    variant: 'fill',
-                    icon: MatIcon.ADD_LOCATION_ALT,
-                },
-                addPolygonButtonXVM: {
-                    secondary: true,
-                    variant: 'fill',
-                    icon: MatIcon.ADD_BOX,
+                textTabItemVM: {
+                    id: TabItemID.COORDINATES,
+                    tabButtonXVM: {
+                        textKey:
+                            'OrdersNewPage.areasDataDialog.textEditorButtonText',
+                        icon: MatIcon.TEXT_SNIPPET,
+                    },
+                    content: {
+                        entryPointInvalidTextKey:
+                            'OrdersNewPage.areasDataDialog.textEditorTab.entryPointInvalidErrorText',
+                        targetAreaInvalidTextKey:
+                            'OrdersNewPage.areasDataDialog.textEditorTab.targetAreaInvalidErrorText',
+                        targetAreaInputTextareaXVM: {
+                            id: 'targetArea',
+                            labelKey:
+                                'OrdersNewPage.areasDataDialog.textEditorTab.targetAreaLabel',
+                            placeholderKey:
+                                'OrdersNewPage.areasDataDialog.textEditorTab.targetAreaPlaceholder',
+                            readonly: false,
+                        },
+                        entryPointInputTextXVM: {
+                            autocomplete: 'off',
+                            id: 'entryPoint',
+                            labelKey:
+                                'OrdersNewPage.areasDataDialog.textEditorTab.entryPointLabel',
+                            placeholderKey:
+                                'OrdersNewPage.areasDataDialog.textEditorTab.entryPointPlaceholder',
+                            type: 'text',
+                            readonly: false,
+                        },
+                    },
                 },
             },
             requiredAssistiveTextKey:
@@ -362,43 +408,76 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
 
         areaDataDialogVM: {
             editTitleKey: '',
+            actualPosition: null,
+            mapTabsXVM: {
+                index: 1,
+                variant: 'secondary',
+                orientation: 'horizontal',
+                visualTabItemVM: {
+                    tabButtonXVM: { textKey: 'Coords' },
+                    content: {
+                        polygonContextMenuVM: {
+                            closeButtonXVM: {
+                                icon: MatIcon.CLOSE,
+                                variant: 'ghost',
+                            },
+                            removePolygonButtonXVM: {
+                                variant: 'fill',
+                                textKey: 'Remove polygon',
+                            },
+                            removeVertexButtonXVM: {
+                                variant: 'fill',
+                                textKey: 'Remove vertex',
+                            },
+                        },
+                        buttonsControlPosition:
+                            ControlPosition.BLOCK_END_INLINE_START,
+                        contentValueKey:
+                            'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
 
-            gmpMapXVM: {
-                actualPosition: null,
-                polygonContextMenuVM: {
-                    closeButtonXVM: {
-                        icon: MatIcon.CLOSE,
-                        variant: 'ghost',
+                        gmpPlaceAutocompleteXVM: {
+                            slot: ControlPosition.BLOCK_START_INLINE_START,
+                        },
+                        removeAdvancedMarkerButtonXVM: {
+                            variant: 'fill',
+                            icon: MatIcon.LOCATION_OFF,
+                        },
+                        addAdvancedMarkerButtonXVM: {
+                            variant: 'fill',
+                            icon: MatIcon.ADD_LOCATION_ALT,
+                        },
+                        addPolygonButtonXVM: {
+                            variant: 'fill',
+                            icon: MatIcon.ADD_BOX,
+                        },
                     },
-                    removePolygonButtonXVM: {
-                        variant: 'fill',
-                        textKey: 'Remove polygon',
+                    id: TabItemID.MAP,
+                },
+                textTabItemVM: {
+                    tabButtonXVM: { textKey: 'Coords' },
+                    content: {
+                        entryPointInvalidTextKey:
+                            'Entry point is in invalid format',
+                        targetAreaInvalidTextKey: '',
+                        targetAreaInputTextareaXVM: {
+                            id: 'targetArea',
+                            labelKey: 'Target area',
+                            placeholderKey: 'Coords',
+                            readonly: false,
+                        },
+                        entryPointInputTextXVM: {
+                            autocomplete: 'off',
+                            id: 'entryPoint',
+                            labelKey: 'Entry point',
+                            placeholderKey: 'Coords',
+                            type: 'text',
+                            readonly: false,
+                        },
                     },
-                    removeVertexButtonXVM: {
-                        variant: 'fill',
-                        textKey: 'Remove vertex',
-                    },
-                },
-                buttonsControlPosition: ControlPosition.BLOCK_END_INLINE_START,
-                contentValueKey:
-                    'OrdersNewPage.areasDataFormControl.targetAreaSizeValue',
-
-                gmpPlaceAutocompleteXVM: {
-                    slot: ControlPosition.BLOCK_START_INLINE_START,
-                },
-                removeAdvancedMarkerButtonXVM: {
-                    variant: 'fill',
-                    icon: MatIcon.LOCATION_OFF,
-                },
-                addAdvancedMarkerButtonXVM: {
-                    variant: 'fill',
-                    icon: MatIcon.ADD_LOCATION_ALT,
-                },
-                addPolygonButtonXVM: {
-                    variant: 'fill',
-                    icon: MatIcon.ADD_BOX,
+                    id: TabItemID.COORDINATES,
                 },
             },
+
             dosePerHqMinErrorAssistiveTextValueKey:
                 enMock.areasDataFormControl.dosePerHqMinErrorAssistiveTextValue,
             missionNameMaxCharactersAllowedAssistiveTextValueKey:

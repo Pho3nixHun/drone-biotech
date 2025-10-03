@@ -33,9 +33,17 @@ import { NgClass } from '@angular/common';
 import { GmpPlaceAutocompleteDirective } from '@directives/gmp-place-autocomplete/gmp-place-autocomplete.directive';
 import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { GmpPolygonDrawingDirective } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.directive';
+import { TabsComponent } from '@components/tabs/tabs.component';
+import { coordinatesStringValidator } from '@validators/array-length.validator';
+import { TabButtonComponent } from '@components/tabs/components/tabs-nav/components/tab-button/tab-button.component';
+import { TabsDirective } from '@components/tabs/directives/tabs/tabs.directive';
+import { TabPanelComponent } from '@components/tabs/components/tab-panel/tab-panel.component';
+import { TabsNavComponent } from '@components/tabs/components/tabs-nav/tabs-nav.component';
+import { coordinatesValidator } from '@validators/coordinates.validator';
 
 const MISSION_NAME_MAX_LENGTH = 120;
 const DOSE_PER_HQ_MIN = 1;
+const MINIMUM_TARGET_AREA_COORDS = 3;
 
 @Component({
     selector: 'app-area-data-dialog',
@@ -56,12 +64,18 @@ const DOSE_PER_HQ_MIN = 1;
         NgClass,
         GmpPlaceAutocompleteDirective,
         GmpAdvancedMarkerDirective,
+        TabsComponent,
+        TabButtonComponent,
+        TabsDirective,
+        TabPanelComponent,
+        TabsNavComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
 })
 export class AreaDataDialogComponent {
     protected readonly dosePerHqMin = DOSE_PER_HQ_MIN;
     protected readonly missionNameMaxLength = MISSION_NAME_MAX_LENGTH;
+    protected readonly minimumTargetAreaCoords = MINIMUM_TARGET_AREA_COORDS;
     protected readonly headOfficeLocation = inject(HEAD_OFFICE_LOCATION);
     private readonly fb = inject(FormBuilder);
     public readonly dialog =
@@ -69,6 +83,11 @@ export class AreaDataDialogComponent {
     public readonly vm = input.required<AreaDataDialogVM>();
     public readonly area = signal<AreaData | undefined>(undefined);
     protected readonly response = output<AreaDataDialogResponse>();
+    protected readonly mapCoordinatesArrayToString =
+        mapCoordinatesArrayToString;
+    protected readonly mapStringToCoordinatesArray =
+        mapStringToCoordinatesArray;
+    protected readonly stringToCoordinate = stringToCoordinate;
 
     protected readonly formGroup = this.fb.group({
         missionName: this.fb.control('', [
@@ -77,7 +96,7 @@ export class AreaDataDialogComponent {
         ]),
         targetArea: this.fb.control<Coordinates[] | null>(null, [
             Validators.required,
-            minArrayLengthValidator(3),
+            minArrayLengthValidator(this.minimumTargetAreaCoords),
         ]),
         entryPoint: this.fb.control<Coordinates | null>(null, [
             Validators.required,
@@ -91,6 +110,17 @@ export class AreaDataDialogComponent {
             Validators.required
         ),
         comment: this.fb.control<string | null>(null),
+    });
+
+    protected readonly textFormGroup = this.fb.group({
+        targetArea: this.fb.control<string>('', {
+            validators: coordinatesStringValidator(
+                this.minimumTargetAreaCoords
+            ),
+        }),
+        entryPoint: this.fb.control<string>('', {
+            validators: coordinatesValidator(),
+        }),
     });
 
     private readonly setValueEffect = effect(() => {
@@ -141,3 +171,19 @@ export class AreaDataDialogComponent {
         this.dialog().nativeElement.close();
     }
 }
+
+const mapCoordinatesArrayToString = (coords: Coordinates[]): string =>
+    coords.map((coord) => `${coord.lat} ${coord.lng}`).join('\n');
+const mapStringToCoordinatesArray = (str: string): Coordinates[] =>
+    str
+        .split('\n')
+        .filter((line) => line.trim().length > 0) // skip empty lines
+        .map((line) => {
+            const [lat, lng] = line.trim().split(/\s+/).map(Number);
+            return { lat, lng };
+        });
+
+const stringToCoordinate = (str: string): Coordinates => {
+    const [lat, lng] = str.trim().split(/\s+/).map(Number);
+    return { lat, lng };
+};
