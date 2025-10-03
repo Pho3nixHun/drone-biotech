@@ -1,0 +1,7 @@
+<nav
+    class="tabs tabs-bordered w-full"
+    role="tablist"
+    [ngClass]="{ 'tabs-vertical': host.vm().orientation === 'vertical' }"
+>
+    <ng-content select="app-tab-button" />
+</nav>
