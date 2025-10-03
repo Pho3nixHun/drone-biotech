@@ -31,7 +31,9 @@
                             "@angular/material/prebuilt-themes/azure-blue.css",
                             "src/styles.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/flyonui/flyonui.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
