@@ -29,6 +29,6 @@ export function coordinatesValidator(): ValidatorFn {
             return { latlng: 'Longitude must be between -180 and 180' };
         }
 
-        return null; // ✅ valid
+        return null;
     };
 }
