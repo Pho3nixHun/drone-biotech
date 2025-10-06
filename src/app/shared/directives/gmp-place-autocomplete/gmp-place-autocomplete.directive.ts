@@ -23,6 +23,7 @@ export class GmpPlaceAutocompleteDirective implements OnInit, OnDestroy {
         });
 
     ngOnInit() {
+        this.searchBar.style.margin = '10px';
         this.mapComponent
             .map()
             .controls[
