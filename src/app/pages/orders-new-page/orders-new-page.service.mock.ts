@@ -1,5 +1,5 @@
 import { Injectable, Signal, signal } from '@angular/core';
-import { OrdersNewPageVM } from './orders-new-page-vm.model';
+import { OrdersNewPageVM } from './orders-new-page.model';
 import { OrdersNewPageService } from './orders-new-page.service';
 
 @Injectable({

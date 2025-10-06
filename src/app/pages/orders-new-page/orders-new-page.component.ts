@@ -9,7 +9,8 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
 import { ButtonComponent } from '@components/button/button.component';
 import { InputTextComponent } from '@components/input-text/input-text.component';
 import { MatIconModule } from '@angular/material/icon';
-import { minArrayLengthValidator } from 'src/app/shared/validators/min-array-length.validator';
+import { minArrayLengthValidator } from '@validators/min-array-length.validator';
+import { GMP_POLYGON_OPTIONS } from '@tokens/gmp-polygon-options.token';
 
 /**
  * OrdersNewPageComponent
@@ -39,6 +40,16 @@ import { minArrayLengthValidator } from 'src/app/shared/validators/min-array-len
         ButtonComponent,
         InputTextComponent,
         MatIconModule,
+    ],
+    providers: [
+        {
+            provide: GMP_POLYGON_OPTIONS,
+            useValue: {
+                fillOpacity: 0.5,
+                strokeColor: 'blue',
+                fillColor: 'blue',
+            },
+        },
     ],
     templateUrl: './orders-new-page.component.html',
 })

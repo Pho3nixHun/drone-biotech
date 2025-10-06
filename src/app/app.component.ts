@@ -32,7 +32,6 @@ import { ButtonComponent } from '@components/button/button.component';
     templateUrl: './app.component.html',
 })
 export class AppComponent {
-    protected title = 'drone-biotech-webapp';
     protected readonly vm = inject(AppService).getVM();
     private readonly authEvents = injectDispatch(authEvents);
 

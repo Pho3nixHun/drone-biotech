@@ -1,11 +1,21 @@
 import { Coordinates } from '@stores/location/location.model';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { InputTextareaXVM } from '@components/input-textarea/input-textarea.component';
-import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
 import { InputNumberXVM } from '@components/input-number/input-number.component';
 import { DialogLayoutXVM } from '@components/dialog-layout/dialog-layout.component';
+import { ButtonXVM } from '@components/button/button.model';
+import { ControlPosition } from '@interfaces/control-position.enum';
+import { GmpPlaceAutocompleteXVM } from '@directives/gmp-place-autocomplete/gmp-place-autocomplete.directive';
+import { PolygonContextMenuVM } from '@components/polygon-context-menu/polygon-context-menu.component';
+import { TabsVM } from '@components/tabs/tabs.component';
+import { TabButtonXVM } from '@components/tabs/components/tabs-nav/components/tab-button/tab-button.component';
 
-export interface AreaDataDialogVM extends DialogLayoutXVM {
+export interface AreaDataDialogVM extends Omit<DialogLayoutXVM, 'titleKey'> {
+    actualPosition: Coordinates | null;
+    addTitleKey: string;
+    editTitleKey: string;
+    isEntryPointReadonly?: boolean;
+    isTargetAreaReadonly?: boolean;
     requiredAssistiveTextKey: string;
     missionNameMaxCharactersAllowedAssistiveTextValueKey: string;
     missionNameMaxCharactersCounterAssistiveTextValueKey: string;
@@ -14,8 +24,32 @@ export interface AreaDataDialogVM extends DialogLayoutXVM {
     dosePerHqInputTextXVM: InputNumberXVM;
     commentInputTextareaXVM: InputTextareaXVM;
     applicationDateInputTextXVM: InputTextXVM;
-    mapFormControlVM: MapFormControlVM;
+    mapTabsXVM: MapsTabsXVM;
 }
+
+interface MapsTabsXVM extends TabsVM {
+    visualTabItemVM: VisualTabItemVM;
+    textTabItemVM: TextTabItemVM;
+}
+
+export enum TabItemID {
+    MAP = 'map',
+    COORDINATES = 'coords',
+}
+
+interface BaseTabItem<T> {
+    id: TabItemID;
+    tabButtonXVM: TabButtonXVM;
+    content: T;
+}
+
+type VisualTabItemVM = BaseTabItem<GmpMapXVM>;
+type TextTabItemVM = BaseTabItem<{
+    targetAreaInvalidTextKey: string;
+    entryPointInvalidTextKey: string;
+    targetAreaInputTextareaXVM: InputTextareaXVM;
+    entryPointInputTextXVM: InputTextXVM;
+}>;
 
 export interface AreaData {
     id: string;
@@ -39,3 +73,13 @@ export interface AreaDataDialogResponseWithoutAreaData {
 export type AreaDataDialogResponse =
     | AreaDataDialogResponseWithAreaData
     | AreaDataDialogResponseWithoutAreaData;
+
+interface GmpMapXVM {
+    contentValueKey: string;
+    polygonContextMenuVM: PolygonContextMenuVM;
+    gmpPlaceAutocompleteXVM: GmpPlaceAutocompleteXVM;
+    removeAdvancedMarkerButtonXVM: ButtonXVM;
+    addAdvancedMarkerButtonXVM: ButtonXVM;
+    buttonsControlPosition: ControlPosition;
+    addPolygonButtonXVM: ButtonXVM;
+}

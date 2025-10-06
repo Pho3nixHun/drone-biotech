@@ -5,11 +5,11 @@ import { environment } from 'src/environments/environment';
 import { Coordinates } from '@stores/location/location.model';
 import {
     DistanceFromDestinationRequest,
-    HEAD_OFFICE_LOCATION,
     mapCoordinatesToWaypoints,
     RoutesRequest,
     RoutesResponse,
 } from './distance.model';
+import { HEAD_OFFICE_LOCATION } from '@tokens/head-office-location.token';
 
 @Injectable({
     providedIn: 'root',
@@ -63,7 +63,7 @@ export class DistanceService {
         const headers = new HttpHeaders({
             'Content-Type': 'application/json',
             'X-Goog-FieldMask': 'routes.distanceMeters',
-            'X-Goog-Api-Key': environment.googleMapsConfig.apiKey,
+            'X-Goog-Api-Key': environment.googleMaps.apiKey,
         });
 
         return this.httpClient
@@ -122,7 +122,7 @@ export class DistanceService {
         const headers = new HttpHeaders({
             'Content-Type': 'application/json',
             'X-Goog-FieldMask': `routes.optimized_intermediate_waypoint_index,routes.distanceMeters,routes.legs`,
-            'X-Goog-Api-Key': environment.googleMapsConfig.apiKey,
+            'X-Goog-Api-Key': environment.googleMaps.apiKey,
         });
 
         return this.httpClient

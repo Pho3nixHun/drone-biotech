@@ -1,13 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* stylelint-disable property-no-unknown */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable import-notation */
+/* stylelint-disable no-invalid-position-at-import-rule */
 
-/* stylelint-disable-next-line import-notation */
 @import "tailwindcss";
 
-/* stylelint-disable-next-line at-rule-no-unknown */
 @plugin "flyonui" {
-    /* stylelint-disable-next-line property-no-unknown */
     themes: corporate --default, dark --prefersdark
 }
+
+@import "../node_modules/flyonui/variants.css";
+
+@source "../node_modules/flyonui/dist/tabs.js";
 
 html {
     scroll-behavior: smooth;
@@ -27,6 +31,15 @@ html {
     app-hero p {
         @apply bg-black font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
     }
+
+    dialog {
+        margin: auto;
+    }
+
+    dialog::backdrop {
+        opacity: 0.5;
+        background-color: #000;
+    }
 }
 
 html,
@@ -37,14 +50,4 @@ body {
 body {
     margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
-
-
-.my-dialog {
-    margin: auto;
-}
-
-.my-dialog::backdrop {
-    opacity: 0.5;
-    background-color: #000;
 }
