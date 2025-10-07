@@ -13,6 +13,20 @@
 
 @source "../node_modules/flyonui/dist/tabs.js";
 
+
+:root {
+    --color-chat-sender: #0084FF;
+    --color-chat-receiver: #E4E6EB;
+}
+
+@theme {
+    --active-order: #16a34a;
+    --in-progress-order: #3b82f6;
+    --new-order: #22c55e;
+    --closed-order: #f59e0b;
+    --done-order: #6b7280;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-snap-align: start;
@@ -21,7 +35,7 @@ html {
 
 @layer base {
     h1 {
-        @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;
+        @apply font-black text-2xl sm:text-3xl lg:text-4xl transition-all ease-in-out;
     }
 
     h2 {

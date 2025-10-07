@@ -1,95 +1,166 @@
 import { MatIcon } from '@interfaces/mat-icon.enum';
-import { OrderDetailsPageConfig } from './order-details-page.model';
+import { OrderDetailsPageVM } from './order-details-page.model';
+import { AppRouteSegment } from 'src/app/app-route-segment';
+import { OrdersRouteSegment } from '../orders-new-page/orders-route-segment';
 
-export const orderDetailsPageConfig: OrderDetailsPageConfig = {
-    confirmationDialogVM: {
-        closeButtonXVM: {
-            icon: MatIcon.CLOSE,
-            variant: 'ghost',
-            secondary: true,
-        },
-        titleKey: 'OrderDetailsPage.orderActions.close.dialog.title',
-        confirmTextKey:
-            'OrderDetailsPage.orderActions.close.dialog.confirmText',
-        cancelButtonXVM: {
-            textKey:
-                'OrderDetailsPage.orderActions.close.dialog.cancelButtonText',
-            secondary: true,
-            variant: 'fill',
-        },
-        confirmButtonXVM: {
-            textKey:
-                'OrderDetailsPage.orderActions.close.dialog.confirmButtonText',
-            variant: 'fill',
-        },
-    },
-    headerConfig: {
-        idTitleKey: 'OrderDetailsPage.header.idTitle',
-        clientTextKey: 'OrderDetailsPage.header.clientText',
-        createdDateTextKey: 'OrderDetailsPage.header.createdDateText',
-        createdDateValueKey: 'OrderDetailsPage.header.createdDateValue',
-        totalAreaTextKey: 'OrderDetailsPage.header.totalAreaText',
-        totalAreaValueKey: 'OrderDetailsPage.header.totalAreaValue',
-        addMissionButtonXVM: {
-            secondary: false,
-            variant: 'ghost',
+export const orderDetailsPageVM: OrderDetailsPageVM = {
+    user: null,
+    status: 'new',
+    headerXVM: {
+        orderId: 'permetezés',
+        titleKey: 'OrderDetailsPage.title',
+        addNewMissionEnabled: false,
+        addNewMissionsButtonXVM: {
             textKey: 'OrderDetailsPage.header.addNewMissionButtonText',
+            routerLink: ['/', AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
+            variant: 'ghost',
+        },
+        statusBadgeXVM: {
+            shape: 'rounded',
         },
     },
-    sectionCardConfigs: {
-        messagesSectionCardConfig: {
-            buttonTextKey: 'OrderDetailsPage.messages.buttonText',
-            titleKey: 'OrderDetailsPage.messages.title',
-            dateValueKey: 'OrderDetailsPage.messages.dateValue',
-            senderValueKey: 'OrderDetailsPage.messages.senderValue',
+    actionsFrameXVM: {
+        completionTemplateButtonHidden: false,
+        closeOrderButtonHidden: false,
+        titleKey: 'OrderDetailsPage.actions.title',
+        completionTemplateButtonXVM: {
+            variant: 'fill',
+            secondary: true,
+            textKey: 'OrderDetailsPage.actions.completion.text',
+            link: {
+                href: 'assets/lepke.jpg',
+            },
         },
-        orderActionsSectionCardConfig: {
-            type: 'orderActions',
-            titleKey: 'OrderDetailsPage.orderActions.title',
-            completionTemplateButtonXVM: {
-                variant: 'fill',
+        closeOrderButtonXVM: {
+            textKey: 'OrderDetailsPage.actions.close.text',
+            secondary: true,
+            variant: 'fill',
+        },
+        confirmationDialogVM: {
+            closeButtonXVM: {
+                icon: MatIcon.CLOSE,
+                variant: 'ghost',
                 secondary: true,
-                textKey: 'OrderDetailsPage.orderActions.completion.text',
-                link: {
-                    href: 'assets/lepke.jpg',
-                },
             },
-            closeOrderButtonXVM: {
-                textKey: 'OrderDetailsPage.orderActions.close.text',
+            titleKey: 'OrderDetailsPage.actions.close.dialog.title',
+            confirmTextKey: 'OrderDetailsPage.actions.close.dialog.confirmText',
+            cancelButtonXVM: {
+                textKey:
+                    'OrderDetailsPage.actions.close.dialog.cancelButtonText',
                 secondary: true,
                 variant: 'fill',
             },
-        },
-        orderDetailsSectionCardConfig: {
-            type: 'orderDetails',
-            titleKey: 'OrderDetailsPage.details.title',
-            infoPanelConfig: {
-                clientInfoPanel: {
-                    titleKey: 'OrderDetailsPage.details.client.title',
-                    addressLabelKey: 'OrderDetailsPage.details.addressLabel',
-                    contactLabelKey: 'OrderDetailsPage.details.contactLabel',
-                    emailLabelKey: 'OrderDetailsPage.details.emailLabel',
-                    phoneLabelKey: 'OrderDetailsPage.details.phoneLabel',
-                },
-                summaryInfoPanel: {
-                    averageDoseLabelKey:
-                        'OrderDetailsPage.details.averageDoseLabel',
-                    averageDoseValueKey:
-                        'OrderDetailsPage.details.averageDoseValue',
-                    orderValueLabelKey:
-                        'OrderDetailsPage.details.orderValueLabel',
-                    orderValueValueKey:
-                        'OrderDetailsPage.details.orderValueValue',
-                    titleKey: 'OrderDetailsPage.details.summary.title',
-                    totalSupplyLabelKey:
-                        'OrderDetailsPage.details.totalSupplyLabel',
-                    totalSupplyValueKey:
-                        'OrderDetailsPage.details.totalSupplyValue',
-                    treatmentLabelKey:
-                        'OrderDetailsPage.details.treatmentLabel',
-                },
+            confirmButtonXVM: {
+                textKey:
+                    'OrderDetailsPage.actions.close.dialog.confirmButtonText',
+                variant: 'fill',
             },
         },
+    },
+    chatFrameXVM: {
+        submitMessageButtonXVM: {
+            variant: 'fill',
+            icon: MatIcon.SEND,
+        },
+        messageInputTextXVM: {
+            id: 'message',
+            autocomplete: 'off',
+            isLabelHidden: true,
+            labelKey: 'OrderDetailsPage.chat.input.label',
+            placeholderKey: 'OrderDetailsPage.chat.input.placeholder',
+            readonly: false,
+            type: 'text',
+        },
+        titleKey: 'OrderDetailsPage.chat.title',
+        messageXVMs: [
+            {
+                type: 'receiver',
+                role: 'office',
+                name: 'Operations Manager',
+                dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
+                nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
+                dateTime: new Date('2025-10-06T09:30:00'),
+                message:
+                    'Good morning! I just received the latest shipment report. Everything looks on track.',
+                avatarVM: {
+                    type: 'withInitials',
+                    initials: 'OM',
+                },
+            },
+            {
+                type: 'receiver',
+                role: 'pilot',
+                name: 'Ben Ford',
+                dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
+                nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
+                dateTime: new Date('2025-10-06T09:35:00'),
+                message:
+                    'Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.',
+                avatarVM: {
+                    type: 'withImage',
+                    imageSrc: 'assets/farming.jpg',
+                    altTextKey: 'Ben Ford',
+                },
+            },
+            {
+                type: 'receiver',
+                role: 'office',
+                name: 'Operations Manager',
+                dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
+                nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
+                dateTime: new Date('2025-10-06T09:40:00'),
+                message:
+                    'Perfect. Please make sure to inspect the new irrigation system while you’re there.',
+                avatarVM: {
+                    type: 'withInitials',
+                    initials: 'OM',
+                },
+            },
+            {
+                type: 'sender',
+                role: 'customer',
+                name: 'Calvin Jackson',
+                dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
+                nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
+                dateTime: new Date('2025-10-06T10:00:00'),
+                message:
+                    'Hi team, I just wanted to check on the status of my last order. Any updates?',
+                avatarVM: {
+                    type: 'withImage',
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'Calvin Jackson',
+                },
+            },
+            {
+                type: 'receiver',
+                role: 'office',
+                name: 'Field Manager',
+                dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
+                nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
+                dateTime: new Date('2025-10-06T10:05:00'),
+                message:
+                    'Hello Calvin, your order is being processed and should be shipped by this afternoon.',
+                avatarVM: {
+                    type: 'withInitials',
+                    initials: 'FM',
+                },
+            },
+            {
+                type: 'sender',
+                role: 'customer',
+                name: 'Calvin Jackson',
+                dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
+                nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
+                dateTime: new Date('2025-10-06T11:00:00'),
+                message:
+                    'Great, thanks for the update! Looking forward to receiving it.',
+                avatarVM: {
+                    type: 'withImage',
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'Calvin Jackson',
+                },
+            },
+        ],
     },
 };
 
@@ -126,89 +197,5 @@ export const enMock = {
         dateValue: 'date',
         buttonText: 'button',
         senderValue: 'send',
-    },
-};
-
-export const orderDetailsPageMockConfig: OrderDetailsPageConfig = {
-    confirmationDialogVM: {
-        closeButtonXVM: {
-            icon: MatIcon.ADD,
-            secondary: false,
-            variant: 'ghost',
-        },
-        titleKey: '',
-        confirmTextKey: '',
-        confirmButtonXVM: {
-            secondary: false,
-            variant: 'fill',
-            textKey: enMock.orderActions.completionButtonText,
-        },
-        cancelButtonXVM: {
-            secondary: false,
-            variant: 'fill',
-            textKey: enMock.orderActions.closeButtonText,
-        },
-    },
-    headerConfig: {
-        idTitleKey: enMock.idTitle,
-        clientTextKey: enMock.clientText,
-        createdDateTextKey: enMock.createdDateText,
-        createdDateValueKey: enMock.createdDateValue,
-        totalAreaTextKey: enMock.totalAreaText,
-        totalAreaValueKey: enMock.totalAreaValue,
-        addMissionButtonXVM: {
-            secondary: false,
-            variant: 'fill',
-            textKey: enMock.addNewMissionButtonText,
-        },
-    },
-    sectionCardConfigs: {
-        messagesSectionCardConfig: {
-            buttonTextKey: enMock.messages.buttonText,
-            titleKey: enMock.messages.title,
-            dateValueKey: enMock.messages.dateValue,
-            senderValueKey: enMock.messages.senderValue,
-        },
-        orderActionsSectionCardConfig: {
-            type: 'orderActions',
-            titleKey: enMock.orderActions.title,
-            completionTemplateButtonXVM: {
-                variant: 'fill',
-                secondary: true,
-                textKey: enMock.orderActions.completionButtonText,
-                link: {
-                    href: 'assets/lepke.jpg',
-                },
-            },
-            closeOrderButtonXVM: {
-                textKey: enMock.orderActions.closeButtonText,
-
-                secondary: true,
-                variant: 'ghost',
-            },
-        },
-        orderDetailsSectionCardConfig: {
-            type: 'orderDetails',
-            titleKey: enMock.orderDetails.title,
-            infoPanelConfig: {
-                clientInfoPanel: {
-                    titleKey: enMock.orderDetails.title,
-                    addressLabelKey: enMock.orderDetails.addressLabel,
-                    contactLabelKey: enMock.orderDetails.contactLabel,
-                    emailLabelKey: enMock.orderDetails.emailLabel,
-                    phoneLabelKey: enMock.orderDetails.phoneLabel,
-                },
-                summaryInfoPanel: {
-                    averageDoseLabelKey: enMock.orderDetails.averageDoseLabel,
-                    averageDoseValueKey: enMock.orderDetails.averageDoseValue,
-                    orderValueLabelKey: enMock.orderDetails.orderValueLabel,
-                    orderValueValueKey: enMock.orderDetails.orderValueValue,
-                    titleKey: enMock.orderDetails.title,
-                    totalSupplyLabelKey: enMock.orderDetails.totalSupplyLabel,
-                    totalSupplyValueKey: enMock.orderDetails.totalSupplyValue,
-                    treatmentLabelKey: enMock.orderDetails.treatmentLabel,
-                },
-            },
-        },
     },
 };

@@ -26,7 +26,6 @@ import { pilotDashboardPageConfig } from './pages/pilot-dashboard-page/pilot-das
 import { dashboardPageConfig } from './pages/dashboard-page/dashboard-page.config';
 import { customerDashboardPageConfig } from './pages/customer-dashboard-page/customer-dashboard-page.config';
 import { officeDashboardPageConfig } from './pages/office-dashboard-page/office-dashboard-page.config';
-import { orderDetailsPageConfig } from './pages/order-details-page/order-details-page.config';
 import { AuthModule } from '@stores/auth/auth.module';
 import { GoogleMapsModule } from '@modules/google-maps/google-maps.module';
 import {
@@ -72,7 +71,6 @@ export const appConfig: ApplicationConfig = {
         officeDashboardPageConfig,
         dashboardPageConfig,
         customerDashboardPageConfig,
-        orderDetailsPageConfig,
     ],
 };
 

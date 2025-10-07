@@ -1,82 +1,56 @@
-import { OrderService } from '@services/order/order.service';
-import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
-import { inject, Injectable } from '@angular/core';
-import {
-    combineLatest,
-    concat,
-    map,
-    merge,
-    Observable,
-    of,
-    scan,
-    Subject,
-} from 'rxjs';
-import {
-    Message,
-    OrderDetailsPageVM,
-    OrderStatus,
-} from './order-details-page.model';
-import {
-    mapHeaderXVM,
-    mapOrderDetailsSectionCardXVM,
-    mapOrderActionsSectionCardXVM,
-    mapMessagesSectionCardXVM,
-} from './order-details-page.mapper';
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { computed, inject, Injectable } from '@angular/core';
+import { orderDetailsPageVM } from './order-details-page.mock';
+import { Message, OrderDetailsPageVM } from './order-details-page.model';
+import { AuthStore } from '@stores/auth/auth.store';
 
 @Injectable({
     providedIn: 'root',
 })
 export class OrderDetailsPageService {
-    private readonly config = inject(ORDER_DETAILS_PAGE_CONFIG);
-    private readonly orderService = inject(OrderService);
+    private readonly store = inject(AuthStore);
+    private readonly user = this.store.user;
 
-    private readonly order$ = this.orderService.getOrder();
-    private readonly statusSubject = new Subject<OrderStatus>();
-    private readonly messagesSubject = new Subject<Message>();
+    private readonly vm = computed<OrderDetailsPageVM | undefined>(() => {
+        const user = this.user();
+        if (!user) return undefined;
 
-    private readonly status$ = concat(
-        this.order$.pipe(map((order) => order.status)),
-        this.statusSubject
-    );
+        const status = orderDetailsPageVM.status;
+        const addNewMissionEnabled =
+            status !== 'closed' &&
+            status !== 'done' &&
+            ((user.role === 'customer' && status === 'new') ||
+                user.role === 'office');
 
-    private readonly messages$: Observable<Message[]> = merge(
-        this.order$.pipe(
-            map((order) =>
-                order.messages.map((message) => ({
-                    ...message,
-                    senderName: message.sender,
-                }))
-            )
-        ),
-        this.messagesSubject.pipe(map((message) => [message]))
-    ).pipe(scan((acc, curr) => [...acc, ...curr]));
+        return {
+            ...orderDetailsPageVM,
+            headerXVM: {
+                ...orderDetailsPageVM.headerXVM,
+                addNewMissionEnabled,
+            },
+            actionsFrameXVM: {
+                ...orderDetailsPageVM.actionsFrameXVM,
+                closeOrderButtonHidden: status === 'closed',
+                completionTemplateButtonHidden:
+                    status !== 'closed' && status !== 'done',
+            },
+            user: {
+                name: user.displayName,
+                photoUrl: user.photoURL,
+                role: user.role,
+            },
+            chatFrameXVM: {
+                ...orderDetailsPageVM.chatFrameXVM,
+                readonlyMessageControl: status === 'closed',
+            },
+        };
+    });
 
     public getVM() {
-        return this.vm$;
+        return this.vm;
     }
 
-    public closeOrder() {
-        this.statusSubject.next('completed');
-    }
-
-    public sendMessage(message: Message) {
-        this.messagesSubject.next(message);
-    }
-
-    private readonly vm$: Observable<OrderDetailsPageVM> = combineLatest([
-        this.order$,
-        this.status$,
-        this.messages$,
-        of(this.config),
-    ]).pipe(
-        map(([order, status, messages, config]) => ({
-            ...config,
-            headerXVM: mapHeaderXVM(config, order, status),
-            sectionCardXVMs: [
-                mapOrderDetailsSectionCardXVM(config, order),
-                mapOrderActionsSectionCardXVM(config),
-                mapMessagesSectionCardXVM(config, messages),
-            ],
-        }))
-    );
+    closeOrder() {}
+    sendMessage(message: Message) {}
 }
