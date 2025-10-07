@@ -1,0 +1,10 @@
+@let vM = vm();
+<span
+    class="badge text-white"
+    [ngClass]="{
+        'badge-soft': vM.variant === 'soft',
+        'badge-outline': vM.variant === 'outline',
+        'rounded-full': vM.shape === 'rounded',
+    }"
+    ><ng-content
+/></span>
