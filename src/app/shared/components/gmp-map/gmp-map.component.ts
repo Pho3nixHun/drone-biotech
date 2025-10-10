@@ -26,10 +26,10 @@ export class GmpMapComponent {
         viewChild.required<ElementRef<HTMLDivElement>>('mapDiv');
     public readonly buttons =
         contentChild<ElementRef<HTMLDivElement>>('buttons');
-    public readonly center = input.required<Coordinates>();
+    public readonly center = input<Coordinates>();
     public readonly zoom = input<number>(14);
     public readonly actualCenter = signal<Coordinates | null>(null);
-
+    public readonly bounds = input<google.maps.LatLngBounds>();
     public readonly map = computed(
         () => new google.maps.Map(this.divElement().nativeElement)
     );
@@ -41,6 +41,11 @@ export class GmpMapComponent {
         map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(
             buttons.nativeElement
         );
+    });
+
+    public readonly setBounds = effect(() => {
+        const bounds = this.bounds();
+        if (bounds) this.map().fitBounds(bounds);
     });
 
     private readonly setOptionsEffect = effect(() => {
@@ -60,7 +65,7 @@ export class GmpMapComponent {
 }
 
 export interface GmpMapOptions
-    extends Omit<
+    extends Pick<
         google.maps.MapOptions,
         | 'mapId'
         | 'mapTypeId'
@@ -68,6 +73,12 @@ export interface GmpMapOptions
         | 'mapTypeControl'
         | 'streetViewControl'
         | 'disableDoubleClickZoom'
+        | 'draggable'
+        | 'fullscreenControl'
+        | 'disableDefaultUI'
+        | 'cameraControl'
+        | 'isFractionalZoomEnabled'
+        | 'keyboardShortcuts'
     > {
     mapId: 'DEMO_MAP_ID';
     mapTypeId: 'roadmap';

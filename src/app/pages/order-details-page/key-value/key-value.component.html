@@ -1,0 +1,10 @@
+@let orientation = vm().orientation;
+<div
+    class="flex"
+    [ngClass]="{
+        'flex-col space-y-1': orientation === 'vertical',
+        'flex-row space-x-1': orientation === 'horizontal',
+    }"
+>
+    <ng-content select="[a, app-value, app-key]" />
+</div>
