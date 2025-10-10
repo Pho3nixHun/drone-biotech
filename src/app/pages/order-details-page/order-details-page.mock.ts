@@ -6,6 +6,328 @@ import { OrdersRouteSegment } from '../orders-new-page/orders-route-segment';
 export const orderDetailsPageVM: OrderDetailsPageVM = {
     user: null,
     status: 'new',
+    missionsFrameXVM: {
+        titleKey: 'OrderDetailsPage.missions.title',
+        missionCardListXVM: {
+            missionCardXVMs: [
+                {
+                    cardFooterXVM: {
+                        buttonXVM: {
+                            routerLink: ['/'],
+                            variant: 'ghost',
+                            secondary: true,
+                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                        },
+                    },
+                    cardBodyXVM: {
+                        title: 'A-12345',
+                        titleKey: 'OrderDetailsPage.missions.card.title',
+                        keyValueXVMs: [
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.name.text',
+                                },
+                                valueVM: {
+                                    type: 'withoutKey',
+                                    value: 'North Field',
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.text',
+                                },
+                                valueVM: {
+                                    key: 'OrderDetailsPage.missions.card.area.value',
+                                    type: 'withKey',
+                                    params: { area: 45.8 },
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                                },
+                                valueVM: {
+                                    type: 'withKey',
+                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                    params: { date: new Date(122436234) },
+                                },
+                            },
+                        ],
+                        status: 'completed',
+                        statusBadgeXVM: { shape: 'rounded' },
+                    },
+                    gmpMapXVM: {
+                        bounds: null,
+                        entryPoint: { lat: 47.2285, lng: 21.176 },
+                        coordinates: [
+                            { lat: 47.2466806, lng: 21.1876058 },
+                            { lat: 47.2466806, lng: 21.1936058 },
+                            { lat: 47.2406806, lng: 21.1936058 },
+                            { lat: 47.2406806, lng: 21.1876058 },
+                        ],
+                    },
+                },
+                {
+                    cardFooterXVM: {
+                        buttonXVM: {
+                            routerLink: ['/'],
+                            variant: 'ghost',
+                            secondary: true,
+                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                        },
+                    },
+                    cardBodyXVM: {
+                        title: 'A-12346',
+                        titleKey: 'OrderDetailsPage.missions.card.title',
+                        keyValueXVMs: [
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.name.text',
+                                },
+                                valueVM: {
+                                    type: 'withoutKey',
+                                    value: 'South Field',
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.text',
+                                },
+                                valueVM: {
+                                    key: 'OrderDetailsPage.missions.card.area.value',
+                                    type: 'withKey',
+                                    params: { area: 62.1 },
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                                },
+                                valueVM: {
+                                    type: 'withKey',
+                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                    params: { date: new Date(12240234) },
+                                },
+                            },
+                        ],
+                        status: 'preparing',
+                        statusBadgeXVM: { shape: 'rounded' },
+                    },
+                    gmpMapXVM: {
+                        bounds: null,
+                        entryPoint: { lat: 47.23, lng: 21.205 },
+                        coordinates: [
+                            { lat: 47.2406806, lng: 21.1876058 },
+                            { lat: 47.2406806, lng: 21.1936058 },
+                            { lat: 47.2346806, lng: 21.1936058 },
+                            { lat: 47.2346806, lng: 21.1876058 },
+                        ],
+                    },
+                },
+                {
+                    cardFooterXVM: {
+                        buttonXVM: {
+                            routerLink: ['/'],
+                            variant: 'ghost',
+                            secondary: true,
+                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                        },
+                    },
+                    cardBodyXVM: {
+                        title: 'A-12347',
+                        titleKey: 'OrderDetailsPage.missions.card.title',
+                        keyValueXVMs: [
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.name.text',
+                                },
+                                valueVM: {
+                                    type: 'withoutKey',
+                                    value: 'East Meadow',
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.text',
+                                },
+                                valueVM: {
+                                    key: 'OrderDetailsPage.missions.card.area.value',
+                                    type: 'withKey',
+                                    params: { area: 80.1 },
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                                },
+                                valueVM: {
+                                    type: 'withKey',
+                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                    params: { date: new Date(122214234) },
+                                },
+                            },
+                        ],
+                        status: 'scheduled',
+                        statusBadgeXVM: { shape: 'rounded' },
+                    },
+                    gmpMapXVM: {
+                        bounds: null,
+                        entryPoint: { lat: 47.255, lng: 21.205 },
+                        coordinates: [
+                            { lat: 47.2406806, lng: 21.1796058 },
+                            { lat: 47.2406806, lng: 21.1856058 },
+                            { lat: 47.2346806, lng: 21.1856058 },
+                            { lat: 47.2346806, lng: 21.1796058 },
+                        ],
+                    },
+                },
+                {
+                    cardFooterXVM: {
+                        buttonXVM: {
+                            routerLink: ['/'],
+                            variant: 'ghost',
+                            secondary: true,
+                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                        },
+                    },
+                    cardBodyXVM: {
+                        title: 'A-12348',
+                        titleKey: 'OrderDetailsPage.missions.card.title',
+                        keyValueXVMs: [
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.name.text',
+                                },
+                                valueVM: {
+                                    type: 'withoutKey',
+                                    value: 'West Orchard',
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.text',
+                                },
+                                valueVM: {
+                                    key: 'OrderDetailsPage.missions.card.area.value',
+                                    type: 'withKey',
+                                    params: { area: 42.9 },
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                                },
+                                valueVM: {
+                                    type: 'withKey',
+                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                    params: { date: new Date(121224234) },
+                                },
+                            },
+                        ],
+                        status: 'completed',
+                        statusBadgeXVM: { shape: 'rounded' },
+                    },
+                    gmpMapXVM: {
+                        bounds: null,
+                        entryPoint: { lat: 47.2555, lng: 21.165 },
+                        coordinates: [
+                            { lat: 47.2466806, lng: 21.1796058 },
+                            { lat: 47.2466806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1796058 },
+                        ],
+                    },
+                },
+                {
+                    cardFooterXVM: {
+                        buttonXVM: {
+                            routerLink: ['/'],
+                            variant: 'ghost',
+                            secondary: true,
+                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                        },
+                    },
+                    cardBodyXVM: {
+                        title: 'A-12349',
+                        titleKey: 'OrderDetailsPage.missions.card.title',
+                        keyValueXVMs: [
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.name.text',
+                                },
+                                valueVM: {
+                                    type: 'withoutKey',
+                                    value: 'Central Vineyard',
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.text',
+                                },
+                                valueVM: {
+                                    key: 'OrderDetailsPage.missions.card.area.value',
+                                    type: 'withKey',
+                                    params: { area: 61 },
+                                },
+                            },
+                            {
+                                orientation: 'vertical',
+                                keyXVM: {
+                                    textKey:
+                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                                },
+                                valueVM: {
+                                    type: 'withKey',
+                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                    params: { date: new Date(122423214) },
+                                },
+                            },
+                        ],
+                        status: 'preparing',
+                        statusBadgeXVM: { shape: 'rounded' },
+                    },
+                    gmpMapXVM: {
+                        bounds: null,
+                        entryPoint: { lat: 47.24, lng: 21.21 },
+                        coordinates: [
+                            { lat: 47.2466806, lng: 21.1796058 },
+                            { lat: 47.2466806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1796058 },
+                        ],
+                    },
+                },
+            ],
+        },
+    },
     headerXVM: {
         orderId: 'permetezés',
         titleKey: 'OrderDetailsPage.title',

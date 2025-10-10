@@ -17,9 +17,24 @@ import { FrameComponent } from '@components/frame/frame.component';
 import { MessageComponent } from '@components/message/message.component';
 import { InputTextComponent } from '@components/input-text/input-text.component';
 import {
+    mapMissionStatusToTranslocoTextKey,
     mapOrderStatusToTranslocoTextKey,
     mapRoleToTranslocoTextKey,
 } from './order-details-page.mapper';
+import { KeyValueComponent } from './key-value/key-value.component';
+import { ValueComponent } from '@components/value/value.component';
+import { KeyComponent } from '@components/key/key.component';
+import { CardComponent } from '@components/card/card.component';
+import { CardBodyComponent } from '@components/card/components/card-body/card-body.component';
+import { CardListComponent } from '@components/card-list/card-list.component';
+import {
+    GMP_MAP_OPTIONS,
+    GmpMapComponent,
+} from '@components/gmp-map/gmp-map.component';
+import { GmpPolygonDrawingDirective } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.directive';
+import { GMP_POLYGON_OPTIONS } from '@tokens/gmp-polygon-options.token';
+import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
+import { CardFooterComponent } from '@components/card/components/card-footer/card-footer.component';
 
 @Component({
     selector: 'app-order-details-page',
@@ -38,6 +53,43 @@ import {
         FrameComponent,
         MessageComponent,
         InputTextComponent,
+        KeyValueComponent,
+        ValueComponent,
+        KeyComponent,
+        CardComponent,
+        CardBodyComponent,
+        CardListComponent,
+        GmpMapComponent,
+        GmpPolygonDrawingDirective,
+        GmpAdvancedMarkerDirective,
+        CardFooterComponent,
+    ],
+    providers: [
+        {
+            provide: GMP_MAP_OPTIONS,
+            useValue: {
+                mapTypeId: 'roadmap',
+                disableDoubleClickZoom: true,
+                clickableIcons: false,
+                mapId: 'DEMO_MAP_ID',
+                streetViewControl: false,
+                mapTypeControl: false,
+                draggable: false,
+                fullscreenControl: false,
+                disableDefaultUI: true,
+                cameraControl: false,
+                isFractionalZoomEnabled: false,
+                keyboardShortcuts: false,
+            },
+        },
+        {
+            provide: GMP_POLYGON_OPTIONS,
+            useValue: {
+                fillOpacity: 0.5,
+                strokeColor: 'blue',
+                fillColor: 'blue',
+            },
+        },
     ],
     templateUrl: './order-details-page.component.html',
 })
@@ -73,6 +125,8 @@ export class OrderDetailsPageComponent {
     }
 
     protected readonly mapRoleToTranslocoTextKey = mapRoleToTranslocoTextKey;
+    protected readonly mapMissionStatusToTranslocoTextKey =
+        mapMissionStatusToTranslocoTextKey;
     protected readonly mapOrderStatusToTranslocoTextKey =
         mapOrderStatusToTranslocoTextKey;
 }

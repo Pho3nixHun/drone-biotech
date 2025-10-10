@@ -7,6 +7,9 @@ import { FrameVM } from '@components/frame/frame.model';
 import { MessageVM } from '@components/message/message.component';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
+import { Coordinates } from '@stores/location/location.model';
+import { KeyValueXVM } from './key-value/key-value.component';
+import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -46,6 +49,36 @@ interface MessageXVM extends MessageVM {
     avatarVM: AvatarVM;
 }
 
+export type MissionStatus = 'scheduled' | 'preparing' | 'completed';
+
+interface MissionCardFooterXVM {
+    buttonXVM: ButtonXVM & WithRouterLink;
+}
+interface MissionCardBodyXVM extends Required<Pick<CardBodyXVM, 'titleKey'>> {
+    status: MissionStatus;
+    statusBadgeXVM: StatusBadgeXVM;
+    keyValueXVMs: KeyValueXVM[];
+    title: string;
+}
+interface MissionCardXVM {
+    gmpMapXVM: GmpMapXVM;
+    cardBodyXVM: MissionCardBodyXVM;
+    cardFooterXVM: MissionCardFooterXVM;
+}
+
+interface CardListXVM {
+    missionCardXVMs: MissionCardXVM[];
+}
+interface MissionsFrameXVM extends FrameVM {
+    missionCardListXVM: CardListXVM;
+}
+
+interface GmpMapXVM {
+    bounds: google.maps.LatLngBounds | null;
+    coordinates: Coordinates[];
+    entryPoint: Coordinates;
+}
+
 type StatusBadgeXVM = Omit<BadgeXVM, 'textKey'>;
 interface HeaderXVM {
     orderId: string;
@@ -62,4 +95,5 @@ export interface OrderDetailsPageVM {
     headerXVM: HeaderXVM;
     actionsFrameXVM: ActionsFrameXVM;
     chatFrameXVM: ChatFrameXVM;
+    missionsFrameXVM: MissionsFrameXVM;
 }

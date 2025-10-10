@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { computed, inject, Injectable } from '@angular/core';
 import { orderDetailsPageVM } from './order-details-page.mock';
 import { Message, OrderDetailsPageVM } from './order-details-page.model';
@@ -44,6 +42,32 @@ export class OrderDetailsPageService {
                 ...orderDetailsPageVM.chatFrameXVM,
                 readonlyMessageControl: status === 'closed',
             },
+            missionsFrameXVM: {
+                ...orderDetailsPageVM.missionsFrameXVM,
+                missionsCardListXVM: {
+                    ...orderDetailsPageVM.missionsFrameXVM.missionCardListXVM,
+                    missionCardXVMs: [
+                        ...orderDetailsPageVM.missionsFrameXVM.missionCardListXVM.missionCardXVMs.map(
+                            (mission) => {
+                                const bounds =
+                                    new google.maps.LatLngBounds().extend(
+                                        mission.gmpMapXVM.entryPoint
+                                    );
+                                mission.gmpMapXVM.coordinates.forEach(
+                                    (coords) => bounds.extend(coords)
+                                );
+                                return {
+                                    ...mission,
+                                    gmpMapXVM: {
+                                        ...mission.gmpMapXVM,
+                                        bounds,
+                                    },
+                                };
+                            }
+                        ),
+                    ],
+                },
+            },
         };
     });
 
@@ -51,6 +75,11 @@ export class OrderDetailsPageService {
         return this.vm;
     }
 
-    closeOrder() {}
-    sendMessage(message: Message) {}
+    closeOrder() {
+        // TODO: implement closing order
+    }
+    sendMessage(message: Message) {
+        // TODO: implement sending message
+        void message;
+    }
 }

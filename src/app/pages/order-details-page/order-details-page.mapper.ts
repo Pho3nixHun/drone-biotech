@@ -1,4 +1,4 @@
-import { OrderStatus, Role } from './order-details-page.model';
+import { MissionStatus, OrderStatus, Role } from './order-details-page.model';
 
 export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
     ({
@@ -14,4 +14,13 @@ export const mapRoleToTranslocoTextKey = (role: Role): string =>
         customer: 'OrderDetailsPage.role.customer',
         office: 'OrderDetailsPage.role.office',
         pilot: 'OrderDetailsPage.role.pilot',
+    })[role] ?? '';
+
+export const mapMissionStatusToTranslocoTextKey = (
+    role: MissionStatus
+): string =>
+    ({
+        scheduled: 'OrderDetailsPage.mission.status.scheduled',
+        preparing: 'OrderDetailsPage.mission.status.preparing',
+        completed: 'OrderDetailsPage.mission.status.completed',
     })[role] ?? '';

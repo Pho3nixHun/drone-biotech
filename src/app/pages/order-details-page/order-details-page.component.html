@@ -41,6 +41,88 @@
             }
         </app-page-header>
 
+        @let missionsFrameXVM = vM.missionsFrameXVM;
+        <app-frame [vm]="missionsFrameXVM">
+            <app-card-list>
+                @for (
+                    cardXVM of missionsFrameXVM.missionCardListXVM
+                        .missionCardXVMs;
+                    track $index
+                ) {
+                    <app-card>
+                        @if (cardXVM.gmpMapXVM.bounds; as bounds) {
+                            <app-gmp-map
+                                class="h-60"
+                                [bounds]="bounds"
+                                appGmpPolygonDrawing
+                                [coordinates]="cardXVM.gmpMapXVM.coordinates"
+                                [appGmpAdvancedMarker]="
+                                    cardXVM.gmpMapXVM.entryPoint
+                                "
+                            />
+                        }
+                        @let cardBodyXVM = cardXVM.cardBodyXVM;
+                        <app-card-body>
+                            <h3>
+                                {{
+                                    t(cardBodyXVM.titleKey, {
+                                        id: cardBodyXVM.title,
+                                    })
+                                }}
+                            </h3>
+                            <app-badge
+                                [vm]="cardBodyXVM.statusBadgeXVM"
+                                [ngClass]="{
+                                    '*:bg-green-400 *:border-green-400':
+                                        cardBodyXVM.status === 'completed',
+                                    '*:bg-yellow-400 *:border-yellow-400':
+                                        cardBodyXVM.status === 'scheduled',
+                                    '*:bg-blue-400 *:border-blue-400':
+                                        cardBodyXVM.status === 'preparing',
+                                }"
+                            >
+                                {{
+                                    t(
+                                        mapMissionStatusToTranslocoTextKey(
+                                            cardBodyXVM.status
+                                        )
+                                    )
+                                }}
+                            </app-badge>
+                            @for (
+                                keyValueXVM of cardBodyXVM.keyValueXVMs;
+                                track $index
+                            ) {
+                                <app-key-value [vm]="keyValueXVM">
+                                    <app-key class="text-base-300/30">{{
+                                        t(keyValueXVM.keyXVM.textKey)
+                                    }}</app-key>
+                                    <app-value [vm]="keyValueXVM.valueVM" />
+                                </app-key-value>
+                            }
+                        </app-card-body>
+                        <app-card-footer>
+                            @let buttonXVM = cardXVM.cardFooterXVM.buttonXVM;
+                            <a
+                                [routerLink]="buttonXVM.routerLink"
+                                [fragment]="buttonXVM.fragment"
+                                class="w-full"
+                            >
+                                <app-button
+                                    [vm]="buttonXVM"
+                                    class="*:btn-block"
+                                >
+                                    @if (buttonXVM.textKey; as textKey) {
+                                        {{ t(textKey) }}
+                                    }
+                                </app-button>
+                            </a>
+                        </app-card-footer>
+                    </app-card>
+                }
+            </app-card-list>
+        </app-frame>
+
         @let chatFrameXVM = vM.chatFrameXVM;
         <app-frame [vm]="chatFrameXVM">
             <div class="flex flex-col space-y-4">
