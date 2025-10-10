@@ -28,7 +28,7 @@ export class GmpAdvancedMarkerDirective implements OnInit, OnDestroy {
     public readonly position = input<Coordinates | null>(null, {
         alias: 'appGmpAdvancedMarker',
     });
-    public readonly editable = input<boolean>(true, {
+    public readonly editable = input<boolean>(false, {
         alias: 'markerEditable',
     });
     public readonly markerChange = output<MarkerChange>();

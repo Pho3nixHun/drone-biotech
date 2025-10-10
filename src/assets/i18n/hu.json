@@ -205,5 +205,16 @@
     "OrderDetailsPage.chat.buttonText": "Küldés",
     "OrderDetailsPage.chat.nameXRoleValue": "{role} - {name}",
     "OrderDetailsPage.chat.input.placeholder": "Írja be az üzenetet",
-    "OrderDetailsPage.chat.input.label": "Üzenet"
+    "OrderDetailsPage.chat.input.label": "Üzenet",
+    "OrderDetailsPage.missions.title": "Küldetések",
+    "OrderDetailsPage.missions.card.title": "#{id}",
+    "OrderDetailsPage.missions.card.edit.text": "Szerkesztés",
+    "OrderDetailsPage.missions.card.name.text": "Név",
+    "OrderDetailsPage.missions.card.area.text": "Terület",
+    "OrderDetailsPage.missions.card.area.value": "{area, number, :: .00} ha",
+    "OrderDetailsPage.missions.card.area.scheduledDate.text": "Ütemezett dátum",
+    "OrderDetailsPage.missions.card.area.scheduledDate.value": "{ date, date, long } { date, time, short }",
+    "OrderDetailsPage.mission.status.scheduled": "Ütemezve",
+    "OrderDetailsPage.mission.status.preparing": "Előkészítés alatt",
+    "OrderDetailsPage.mission.status.completed": "Befejezve"
 }

@@ -42,6 +42,10 @@ html {
         @apply font-black text-xl sm:text-2xl lg:text-3xl transition-all ease-in-out;
     }
 
+    h3 {
+        @apply font-black text-lg transition-all ease-in-out;
+    }
+
     app-hero p {
         @apply bg-black font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
     }

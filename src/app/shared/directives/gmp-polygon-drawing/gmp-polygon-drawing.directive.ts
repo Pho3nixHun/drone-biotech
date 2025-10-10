@@ -66,12 +66,13 @@ export class GmpPolygonDrawingDirective {
     private readonly editableEffect = effect(() => {
         const contextMenuVM = this.contextMenuVM();
         const editable = this.editable();
-        if (!editable || !contextMenuVM) return;
         this.polygon.setOptions({
             editable,
             geodesic: editable,
             draggable: editable,
+            clickable: editable,
         });
+        if (!contextMenuVM) return;
         this.polygon.addListener(
             'mouseup',
             (event: google.maps.PolyMouseEvent) => {
