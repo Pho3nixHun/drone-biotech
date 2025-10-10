@@ -44,7 +44,7 @@ export class OrderDetailsPageService {
             },
             missionsFrameXVM: {
                 ...orderDetailsPageVM.missionsFrameXVM,
-                missionsCardListXVM: {
+                missionCardListXVM: {
                     ...orderDetailsPageVM.missionsFrameXVM.missionCardListXVM,
                     missionCardXVMs: [
                         ...orderDetailsPageVM.missionsFrameXVM.missionCardListXVM.missionCardXVMs.map(
