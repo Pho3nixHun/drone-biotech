@@ -9,6 +9,7 @@ import { GmpPlaceAutocompleteXVM } from '@directives/gmp-place-autocomplete/gmp-
 import { PolygonContextMenuVM } from '@components/polygon-context-menu/polygon-context-menu.component';
 import { TabsVM } from '@components/tabs/tabs.component';
 import { TabButtonXVM } from '@components/tabs/components/tabs-nav/components/tab-button/tab-button.component';
+import { PolygonColors } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 
 export interface AreaDataDialogVM extends Omit<DialogLayoutXVM, 'titleKey'> {
     actualPosition: Coordinates | null;
@@ -50,20 +51,19 @@ type TextTabItemVM = BaseTabItem<{
     targetAreaInputTextareaXVM: InputTextareaXVM;
     entryPointInputTextXVM: InputTextXVM;
 }>;
-
-export interface AreaData {
+export interface Mission {
     id: string;
-    comment?: string;
-    missionName: string;
-    targetArea: Coordinates[];
+    name: string;
     entryPoint: Coordinates;
-    dosePerHq: number;
+    targetArea: Coordinates[];
     applicationDate: Date;
+    dosePerHq: number;
+    comment?: string;
 }
 
 export interface AreaDataDialogResponseWithAreaData {
     type: 'submit';
-    areaData: AreaData;
+    areaData: Mission;
 }
 
 export interface AreaDataDialogResponseWithoutAreaData {
@@ -75,6 +75,7 @@ export type AreaDataDialogResponse =
     | AreaDataDialogResponseWithoutAreaData;
 
 interface GmpMapXVM {
+    polygonColors: PolygonColors;
     contentValueKey: string;
     polygonContextMenuVM: PolygonContextMenuVM;
     gmpPlaceAutocompleteXVM: GmpPlaceAutocompleteXVM;

@@ -2,6 +2,7 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrdersNewPageVM } from './orders-new-page.model';
 import { ControlPosition } from '@interfaces/control-position.enum';
 import { TabItemID } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
+import { PolygonColor } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 
 export const ordersNewPageVMDefault: OrdersNewPageVM = {
     titleKey: 'OrdersNewPage.title',
@@ -110,6 +111,10 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
                         icon: MatIcon.MAP,
                     },
                     content: {
+                        polygonColors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
                         polygonContextMenuVM: {
                             closeButtonXVM: {
                                 icon: MatIcon.CLOSE,
@@ -416,6 +421,10 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                 visualTabItemVM: {
                     tabButtonXVM: { textKey: 'Coords' },
                     content: {
+                        polygonColors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
                         polygonContextMenuVM: {
                             closeButtonXVM: {
                                 icon: MatIcon.CLOSE,

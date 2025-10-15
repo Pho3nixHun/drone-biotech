@@ -2,10 +2,73 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 import { OrderDetailsPageVM } from './order-details-page.model';
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { OrdersRouteSegment } from '../orders-new-page/orders-route-segment';
+import { PolygonColor } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 
 export const orderDetailsPageVM: OrderDetailsPageVM = {
     user: null,
     status: 'new',
+    overviewFrameXVM: {
+        gmpMapXVM: {
+            bounds: null,
+            missions: [
+                {
+                    colors: {
+                        fillColor: PolygonColor.GREEN,
+                        strokeColor: PolygonColor.GREEN,
+                    },
+                    coordinates: [
+                        { lat: 47.27512, lng: 21.23584 },
+                        { lat: 47.27381, lng: 21.23997 },
+                        { lat: 47.27245, lng: 21.23863 },
+                        { lat: 47.27288, lng: 21.23392 },
+                        { lat: 47.27465, lng: 21.23284 },
+                    ],
+                },
+                {
+                    colors: {
+                        fillColor: PolygonColor.BLUE,
+                        strokeColor: PolygonColor.BLUE,
+                    },
+                    coordinates: [
+                        { lat: 47.26432, lng: 21.21148 },
+                        { lat: 47.2631, lng: 21.21394 },
+                        { lat: 47.26184, lng: 21.2127 },
+                        { lat: 47.26154, lng: 21.20933 },
+                        { lat: 47.26322, lng: 21.20877 },
+                    ],
+                },
+                {
+                    colors: {
+                        fillColor: PolygonColor.BLUE,
+                        strokeColor: PolygonColor.BLUE,
+                    },
+                    coordinates: [
+                        { lat: 47.24792, lng: 21.24458 },
+                        { lat: 47.24701, lng: 21.24726 },
+                        { lat: 47.24554, lng: 21.24661 },
+                        { lat: 47.24531, lng: 21.24328 },
+                        { lat: 47.2468, lng: 21.24257 },
+                        { lat: 47.24765, lng: 21.2438 },
+                    ],
+                },
+                {
+                    colors: {
+                        fillColor: PolygonColor.GREEN,
+                        strokeColor: PolygonColor.GREEN,
+                    },
+                    coordinates: [
+                        { lat: 47.25784, lng: 21.22542 },
+                        { lat: 47.25683, lng: 21.22857 },
+                        { lat: 47.25512, lng: 21.22794 },
+                        { lat: 47.25521, lng: 21.22466 },
+                        { lat: 47.25642, lng: 21.22398 },
+                    ],
+                },
+            ],
+        },
+        titleKey: 'Overview',
+    },
+
     missionsFrameXVM: {
         titleKey: 'OrderDetailsPage.missions.title',
         missionCardListXVM: {
@@ -63,14 +126,20 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         statusBadgeXVM: { shape: 'rounded' },
                     },
                     gmpMapXVM: {
+                        polygon: {
+                            colors: {
+                                fillColor: PolygonColor.BLUE,
+                                strokeColor: PolygonColor.BLUE,
+                            },
+                            coordinates: [
+                                { lat: 47.2466806, lng: 21.1876058 },
+                                { lat: 47.2466806, lng: 21.1936058 },
+                                { lat: 47.2406806, lng: 21.1936058 },
+                                { lat: 47.2406806, lng: 21.1876058 },
+                            ],
+                        },
                         bounds: null,
                         entryPoint: { lat: 47.2285, lng: 21.176 },
-                        coordinates: [
-                            { lat: 47.2466806, lng: 21.1876058 },
-                            { lat: 47.2466806, lng: 21.1936058 },
-                            { lat: 47.2406806, lng: 21.1936058 },
-                            { lat: 47.2406806, lng: 21.1876058 },
-                        ],
                     },
                 },
                 {
@@ -126,14 +195,20 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         statusBadgeXVM: { shape: 'rounded' },
                     },
                     gmpMapXVM: {
+                        polygon: {
+                            colors: {
+                                fillColor: PolygonColor.BLUE,
+                                strokeColor: PolygonColor.BLUE,
+                            },
+                            coordinates: [
+                                { lat: 47.2406806, lng: 21.1876058 },
+                                { lat: 47.2406806, lng: 21.1936058 },
+                                { lat: 47.2346806, lng: 21.1936058 },
+                                { lat: 47.2346806, lng: 21.1876058 },
+                            ],
+                        },
                         bounds: null,
                         entryPoint: { lat: 47.23, lng: 21.205 },
-                        coordinates: [
-                            { lat: 47.2406806, lng: 21.1876058 },
-                            { lat: 47.2406806, lng: 21.1936058 },
-                            { lat: 47.2346806, lng: 21.1936058 },
-                            { lat: 47.2346806, lng: 21.1876058 },
-                        ],
                     },
                 },
                 {
@@ -189,14 +264,20 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         statusBadgeXVM: { shape: 'rounded' },
                     },
                     gmpMapXVM: {
+                        polygon: {
+                            colors: {
+                                fillColor: PolygonColor.BLUE,
+                                strokeColor: PolygonColor.BLUE,
+                            },
+                            coordinates: [
+                                { lat: 47.2406806, lng: 21.1796058 },
+                                { lat: 47.2406806, lng: 21.1856058 },
+                                { lat: 47.2346806, lng: 21.1856058 },
+                                { lat: 47.2346806, lng: 21.1796058 },
+                            ],
+                        },
                         bounds: null,
                         entryPoint: { lat: 47.255, lng: 21.205 },
-                        coordinates: [
-                            { lat: 47.2406806, lng: 21.1796058 },
-                            { lat: 47.2406806, lng: 21.1856058 },
-                            { lat: 47.2346806, lng: 21.1856058 },
-                            { lat: 47.2346806, lng: 21.1796058 },
-                        ],
                     },
                 },
                 {
@@ -252,14 +333,20 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         statusBadgeXVM: { shape: 'rounded' },
                     },
                     gmpMapXVM: {
+                        polygon: {
+                            colors: {
+                                fillColor: PolygonColor.BLUE,
+                                strokeColor: PolygonColor.BLUE,
+                            },
+                            coordinates: [
+                                { lat: 47.2466806, lng: 21.1796058 },
+                                { lat: 47.2466806, lng: 21.1856058 },
+                                { lat: 47.2406806, lng: 21.1856058 },
+                                { lat: 47.2406806, lng: 21.1796058 },
+                            ],
+                        },
                         bounds: null,
                         entryPoint: { lat: 47.2555, lng: 21.165 },
-                        coordinates: [
-                            { lat: 47.2466806, lng: 21.1796058 },
-                            { lat: 47.2466806, lng: 21.1856058 },
-                            { lat: 47.2406806, lng: 21.1856058 },
-                            { lat: 47.2406806, lng: 21.1796058 },
-                        ],
                     },
                 },
                 {
@@ -317,12 +404,18 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                     gmpMapXVM: {
                         bounds: null,
                         entryPoint: { lat: 47.24, lng: 21.21 },
-                        coordinates: [
-                            { lat: 47.2466806, lng: 21.1796058 },
-                            { lat: 47.2466806, lng: 21.1856058 },
-                            { lat: 47.2406806, lng: 21.1856058 },
-                            { lat: 47.2406806, lng: 21.1796058 },
-                        ],
+                        polygon: {
+                            colors: {
+                                fillColor: PolygonColor.BLUE,
+                                strokeColor: PolygonColor.BLUE,
+                            },
+                            coordinates: [
+                                { lat: 47.2466806, lng: 21.1796058 },
+                                { lat: 47.2466806, lng: 21.1856058 },
+                                { lat: 47.2406806, lng: 21.1856058 },
+                                { lat: 47.2406806, lng: 21.1796058 },
+                            ],
+                        },
                     },
                 },
             ],

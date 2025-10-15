@@ -10,6 +10,7 @@ import { AvatarVM } from '@components/avatar/avatar.model';
 import { Coordinates } from '@stores/location/location.model';
 import { KeyValueXVM } from './key-value/key-value.component';
 import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
+import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -75,7 +76,7 @@ interface MissionsFrameXVM extends FrameVM {
 
 interface GmpMapXVM {
     bounds: google.maps.LatLngBounds | null;
-    coordinates: Coordinates[];
+    polygon: Polygon;
     entryPoint: Coordinates;
 }
 
@@ -96,4 +97,16 @@ export interface OrderDetailsPageVM {
     actionsFrameXVM: ActionsFrameXVM;
     chatFrameXVM: ChatFrameXVM;
     missionsFrameXVM: MissionsFrameXVM;
+    overviewFrameXVM: OverviewFrameXVM;
 }
+
+//  OverviewFrameXVM for visualizing all missions on the map
+interface OverviewFrameXVM extends FrameVM {
+    gmpMapXVM: OverviewGmpMapXVM;
+}
+interface OverviewGmpMapXVM {
+    bounds: google.maps.LatLngBounds | null;
+    missions: Polygon[];
+}
+
+// OverviewFrameXVM end

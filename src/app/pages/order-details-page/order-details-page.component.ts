@@ -86,8 +86,8 @@ import { CardFooterComponent } from '@components/card/components/card-footer/car
             provide: GMP_POLYGON_OPTIONS,
             useValue: {
                 fillOpacity: 0.5,
-                strokeColor: 'blue',
-                fillColor: 'blue',
+                strokeOpacity: 1,
+                strokeWeight: 2,
             },
         },
     ],

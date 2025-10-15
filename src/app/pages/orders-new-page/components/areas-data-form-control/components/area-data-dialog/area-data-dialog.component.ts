@@ -1,5 +1,5 @@
 import {
-    AreaData,
+    Mission,
     AreaDataDialogResponse,
     AreaDataDialogVM,
 } from './area-data-dialog.model';
@@ -47,6 +47,8 @@ import {
     mapCoordinatesArrayToString,
     mapCenterToBounds,
 } from './area-data-dialog.mapper';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { tap } from 'rxjs';
 
 const MISSION_NAME_MAX_LENGTH = 120;
 const DOSE_PER_HQ_MIN = 1;
@@ -95,12 +97,12 @@ export class AreaDataDialogComponent {
     protected readonly mapCenterToBounds = mapCenterToBounds;
     public readonly vm = input.required<AreaDataDialogVM>();
     protected readonly response = output<AreaDataDialogResponse>();
-    public readonly area = signal<AreaData | undefined>(undefined);
+    public readonly area = signal<Mission | undefined>(undefined);
     public readonly dialog =
         viewChild.required<ElementRef<HTMLDialogElement>>('dialog');
 
     protected readonly formGroup = this.fb.group({
-        missionName: this.fb.control('', [
+        name: this.fb.control('', [
             Validators.required,
             Validators.maxLength(this.missionNameMaxLength),
         ]),
@@ -122,6 +124,10 @@ export class AreaDataDialogComponent {
         comment: this.fb.control<string | null>(null),
     });
 
+    sd = toSignal(
+        this.formGroup.controls.targetArea.valueChanges.pipe(tap(console.log))
+    );
+
     protected readonly textFormGroup = this.fb.group({
         targetArea: this.fb.control<string>('', {
             validators: coordinatesStringValidator(
@@ -140,7 +146,7 @@ export class AreaDataDialogComponent {
             applicationDate: area.applicationDate,
             comment: area.comment ?? null,
             dosePerHq: area.dosePerHq,
-            missionName: area.missionName,
+            name: area.name,
             entryPoint: area.entryPoint,
             targetArea: area.targetArea,
         });
@@ -150,7 +156,7 @@ export class AreaDataDialogComponent {
         if (this.formGroup.invalid) return;
 
         const {
-            missionName,
+            name,
             entryPoint,
             targetArea,
             dosePerHq,
@@ -162,7 +168,7 @@ export class AreaDataDialogComponent {
             !targetArea ||
             !dosePerHq ||
             !applicationDate ||
-            !missionName
+            !name
         )
             return;
 
@@ -170,7 +176,7 @@ export class AreaDataDialogComponent {
             type: 'submit',
             areaData: {
                 id: this.area()?.id ?? uuidv4(),
-                missionName,
+                name,
                 entryPoint,
                 targetArea,
                 dosePerHq,

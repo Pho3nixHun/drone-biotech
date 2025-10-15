@@ -29,17 +29,17 @@
         <form [formGroup]="formGroup">
             <!-- Mission name input start -->
             @let hasMissionNameMaxLengthError =
-                formGroup.controls.missionName.hasError('maxlength');
+                formGroup.controls.name.hasError('maxlength');
 
             @let hasMissionNameRequiredError =
-                formGroup.controls.missionName.hasError('required') &&
-                formGroup.controls.missionName.dirty;
+                formGroup.controls.name.hasError('required') &&
+                formGroup.controls.name.dirty;
             <app-input-text
                 [vm]="vM.missionNameInputTextXVM"
                 [invalid]="
                     hasMissionNameMaxLengthError || hasMissionNameRequiredError
                 "
-                [formControl]="formGroup.controls.missionName"
+                [formControl]="formGroup.controls.name"
             >
                 @if (hasMissionNameMaxLengthError) {
                     <span leftAssistiveText>{{
@@ -58,8 +58,7 @@
                 }
                 <span rightAssistiveText>{{
                     t(vM.missionNameMaxCharactersCounterAssistiveTextValueKey, {
-                        current:
-                            formGroup.controls.missionName.value?.length ?? 0,
+                        current: formGroup.controls.name.value?.length ?? 0,
                         max: missionNameMaxLength,
                     })
                 }}</span>
@@ -147,9 +146,16 @@
                         appGmpPlaceAutocomplete
                         (locationChange)="innerMap.fitBounds($event.viewPort)"
                         appGmpPolygonDrawing
-                        [contextMenuVM]="gmpMapXVM.polygonContextMenuVM"
-                        [coordinates]="formGroup.controls.targetArea.value"
-                        [editable]="
+                        [polygonInput]="
+                            formGroup.controls.targetArea.value
+                                ? {
+                                      coordinates:
+                                          formGroup.controls.targetArea.value,
+                                      colors: gmpMapXVM.polygonColors,
+                                  }
+                                : null
+                        "
+                        [polygonEditable]="
                             formGroup.controls.targetArea.enabled &&
                             !vM.isTargetAreaReadonly
                         "

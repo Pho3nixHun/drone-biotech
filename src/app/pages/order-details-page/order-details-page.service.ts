@@ -21,7 +21,16 @@ export class OrderDetailsPageService {
             ((user.role === 'customer' && status === 'new') ||
                 user.role === 'office');
 
-        return {
+        const missionBounds =
+            orderDetailsPageVM.overviewFrameXVM.gmpMapXVM.missions.reduce(
+                (acc, polygon) => {
+                    polygon.coordinates.forEach((c) => acc.extend(c));
+                    return acc;
+                },
+                new google.maps.LatLngBounds()
+            );
+
+        const vm: OrderDetailsPageVM = {
             ...orderDetailsPageVM,
             headerXVM: {
                 ...orderDetailsPageVM.headerXVM,
@@ -50,12 +59,13 @@ export class OrderDetailsPageService {
                         ...orderDetailsPageVM.missionsFrameXVM.missionCardListXVM.missionCardXVMs.map(
                             (mission) => {
                                 const bounds =
-                                    new google.maps.LatLngBounds().extend(
-                                        mission.gmpMapXVM.entryPoint
+                                    mission.gmpMapXVM.polygon.coordinates.reduce(
+                                        (acc, coords) => acc.extend(coords),
+                                        new google.maps.LatLngBounds(
+                                            mission.gmpMapXVM.entryPoint
+                                        )
                                     );
-                                mission.gmpMapXVM.coordinates.forEach(
-                                    (coords) => bounds.extend(coords)
-                                );
+
                                 return {
                                     ...mission,
                                     gmpMapXVM: {
@@ -68,7 +78,15 @@ export class OrderDetailsPageService {
                     ],
                 },
             },
+            overviewFrameXVM: {
+                ...orderDetailsPageVM.overviewFrameXVM,
+                gmpMapXVM: {
+                    ...orderDetailsPageVM.overviewFrameXVM.gmpMapXVM,
+                    bounds: missionBounds,
+                },
+            },
         };
+        return vm;
     });
 
     public getVM() {

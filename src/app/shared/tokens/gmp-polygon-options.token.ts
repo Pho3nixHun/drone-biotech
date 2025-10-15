@@ -1,8 +1,8 @@
 import { InjectionToken } from '@angular/core';
 
-type GmpPolygonOptions = Pick<
+export type GmpPolygonOptions = Pick<
     google.maps.PolygonOptions,
-    'fillOpacity' | 'strokeColor' | 'fillColor'
+    'fillOpacity' | 'strokeOpacity' | 'strokeWeight'
 >;
 
 export const GMP_POLYGON_OPTIONS = new InjectionToken<GmpPolygonOptions>(

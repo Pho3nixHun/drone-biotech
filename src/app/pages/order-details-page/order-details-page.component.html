@@ -41,6 +41,18 @@
             }
         </app-page-header>
 
+        <app-frame [vm]="vM.overviewFrameXVM">
+            @let gmpMapXVM = vM.overviewFrameXVM.gmpMapXVM;
+            @if (gmpMapXVM.bounds; as bounds) {
+                <app-gmp-map
+                    class="h-96"
+                    [bounds]="bounds"
+                    appGmpPolygonDrawing
+                    [polygonsInput]="gmpMapXVM.missions"
+                />
+            }
+        </app-frame>
+
         @let missionsFrameXVM = vM.missionsFrameXVM;
         <app-frame [vm]="missionsFrameXVM">
             <app-card-list>
@@ -55,7 +67,7 @@
                                 class="h-60"
                                 [bounds]="bounds"
                                 appGmpPolygonDrawing
-                                [coordinates]="cardXVM.gmpMapXVM.coordinates"
+                                [polygonInput]="cardXVM.gmpMapXVM.polygon"
                                 [appGmpAdvancedMarker]="
                                     cardXVM.gmpMapXVM.entryPoint
                                 "
