@@ -5,7 +5,6 @@ import {
     effect,
     ElementRef,
     inject,
-    InjectionToken,
     input,
     signal,
     viewChild,
@@ -14,47 +13,59 @@ import {
     Coordinates,
     mapLatLngToCoordinates,
 } from '@stores/location/location.model';
+import { GMP_MAP_OPTIONS } from './gmp-map.model';
 
 @Component({
     selector: 'app-gmp-map',
-    imports: [],
     template: '<div #mapDiv style="height: 100%"><ng-content /></div>',
 })
 export class GmpMapComponent {
-    private readonly options = inject(GMP_MAP_OPTIONS);
     private readonly divElement =
         viewChild.required<ElementRef<HTMLDivElement>>('mapDiv');
-    public readonly buttons =
-        contentChild<ElementRef<HTMLDivElement>>('buttons');
-    public readonly center = input<Coordinates>();
+    public readonly menu = contentChild<ElementRef<HTMLDivElement>>('menu');
+    private readonly options = inject(GMP_MAP_OPTIONS);
+    public readonly interactive = input<boolean>(false);
     public readonly zoom = input<number>(14);
+    public readonly view = input.required<
+        Coordinates | google.maps.LatLngBounds
+    >();
     public readonly actualCenter = signal<Coordinates | null>(null);
-    public readonly bounds = input<google.maps.LatLngBounds>();
     public readonly map = computed(
         () => new google.maps.Map(this.divElement().nativeElement)
     );
 
-    public readonly projectButtonsEffect = effect(() => {
+    private readonly projectMenuEffect = effect(() => {
         const map = this.map();
-        const buttons = this.buttons();
-        if (!buttons) return;
+        const menu = this.menu();
+        if (!menu) return;
         map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(
-            buttons.nativeElement
+            menu.nativeElement
         );
     });
 
-    public readonly setBounds = effect(() => {
-        const bounds = this.bounds();
-        if (bounds) this.map().fitBounds(bounds);
+    private readonly setViewEffect = effect(() => {
+        const view = this.view();
+        return view instanceof google.maps.LatLngBounds
+            ? this.map().fitBounds(view)
+            : this.map().setCenter(view);
     });
 
     private readonly setOptionsEffect = effect(() => {
         const map = this.map();
+        const interactive = this.interactive();
+
         map.setOptions({
             ...this.options,
-            center: this.center(),
             zoom: this.zoom(),
+            draggable: interactive,
+            fullscreenControl: interactive,
+            zoomControl: interactive,
+            scrollwheel: interactive,
+            disableDoubleClickZoom: !interactive,
+            keyboardShortcuts: interactive,
+            cameraControl: interactive,
         });
+
         map.addListener('idle', () => {
             const center = map.getCenter();
             this.actualCenter.set(
@@ -63,32 +74,3 @@ export class GmpMapComponent {
         });
     });
 }
-
-export interface GmpMapOptions
-    extends Pick<
-        google.maps.MapOptions,
-        | 'mapId'
-        | 'mapTypeId'
-        | 'clickableIcons'
-        | 'mapTypeControl'
-        | 'streetViewControl'
-        | 'disableDoubleClickZoom'
-        | 'draggable'
-        | 'fullscreenControl'
-        | 'disableDefaultUI'
-        | 'cameraControl'
-        | 'isFractionalZoomEnabled'
-        | 'keyboardShortcuts'
-    > {
-    mapId: 'DEMO_MAP_ID';
-    mapTypeId: 'roadmap';
-}
-
-export const GMP_MAP_OPTIONS = new InjectionToken<GmpMapOptions>(
-    'Injection Token for GMP Map options'
-);
-
-export const provideMockGmpMapOptions = () => ({
-    provide: GMP_MAP_OPTIONS,
-    useValue: {},
-});

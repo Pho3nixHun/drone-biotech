@@ -27,12 +27,8 @@ import { KeyComponent } from '@components/key/key.component';
 import { CardComponent } from '@components/card/card.component';
 import { CardBodyComponent } from '@components/card/components/card-body/card-body.component';
 import { CardListComponent } from '@components/card-list/card-list.component';
-import {
-    GMP_MAP_OPTIONS,
-    GmpMapComponent,
-} from '@components/gmp-map/gmp-map.component';
+import { GmpMapComponent } from '@components/gmp-map/gmp-map.component';
 import { GmpPolygonDrawingDirective } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.directive';
-import { GMP_POLYGON_OPTIONS } from '@tokens/gmp-polygon-options.token';
 import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { CardFooterComponent } from '@components/card/components/card-footer/card-footer.component';
 
@@ -63,33 +59,6 @@ import { CardFooterComponent } from '@components/card/components/card-footer/car
         GmpPolygonDrawingDirective,
         GmpAdvancedMarkerDirective,
         CardFooterComponent,
-    ],
-    providers: [
-        {
-            provide: GMP_MAP_OPTIONS,
-            useValue: {
-                mapTypeId: 'roadmap',
-                disableDoubleClickZoom: true,
-                clickableIcons: false,
-                mapId: 'DEMO_MAP_ID',
-                streetViewControl: false,
-                mapTypeControl: false,
-                draggable: false,
-                fullscreenControl: false,
-                disableDefaultUI: true,
-                cameraControl: false,
-                isFractionalZoomEnabled: false,
-                keyboardShortcuts: false,
-            },
-        },
-        {
-            provide: GMP_POLYGON_OPTIONS,
-            useValue: {
-                fillOpacity: 0.5,
-                strokeOpacity: 1,
-                strokeWeight: 2,
-            },
-        },
     ],
     templateUrl: './order-details-page.component.html',
 })

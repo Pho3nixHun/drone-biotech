@@ -30,6 +30,7 @@ export interface PolygonChangeEvent {
     action: ChangeAction;
     coordinates: TargetArea | null;
     metadata: {
+        bounds: google.maps.LatLngBounds | null;
         center: Coordinates | null;
         sizeInHq?: number;
         perimeter?: number;

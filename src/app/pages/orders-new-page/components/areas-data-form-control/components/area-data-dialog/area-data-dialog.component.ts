@@ -45,10 +45,7 @@ import {
     mapStringToCoordinates,
     mapCoordinatesToString,
     mapCoordinatesArrayToString,
-    mapCenterToBounds,
 } from './area-data-dialog.mapper';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { tap } from 'rxjs';
 
 const MISSION_NAME_MAX_LENGTH = 120;
 const DOSE_PER_HQ_MIN = 1;
@@ -94,7 +91,6 @@ export class AreaDataDialogComponent {
     protected readonly dosePerHqMin = DOSE_PER_HQ_MIN;
     protected readonly latDelta = LAT_DELTA;
     protected readonly lngDelta = LNG_DELTA;
-    protected readonly mapCenterToBounds = mapCenterToBounds;
     public readonly vm = input.required<AreaDataDialogVM>();
     protected readonly response = output<AreaDataDialogResponse>();
     public readonly area = signal<Mission | undefined>(undefined);
@@ -123,10 +119,6 @@ export class AreaDataDialogComponent {
         ),
         comment: this.fb.control<string | null>(null),
     });
-
-    sd = toSignal(
-        this.formGroup.controls.targetArea.valueChanges.pipe(tap(console.log))
-    );
 
     protected readonly textFormGroup = this.fb.group({
         targetArea: this.fb.control<string>('', {

@@ -4,8 +4,6 @@ import { InputTextareaXVM } from '@components/input-textarea/input-textarea.comp
 import { InputNumberXVM } from '@components/input-number/input-number.component';
 import { DialogLayoutXVM } from '@components/dialog-layout/dialog-layout.component';
 import { ButtonXVM } from '@components/button/button.model';
-import { ControlPosition } from '@interfaces/control-position.enum';
-import { GmpPlaceAutocompleteXVM } from '@directives/gmp-place-autocomplete/gmp-place-autocomplete.directive';
 import { PolygonContextMenuVM } from '@components/polygon-context-menu/polygon-context-menu.component';
 import { TabsVM } from '@components/tabs/tabs.component';
 import { TabButtonXVM } from '@components/tabs/components/tabs-nav/components/tab-button/tab-button.component';
@@ -78,9 +76,7 @@ interface GmpMapXVM {
     polygonColors: PolygonColors;
     contentValueKey: string;
     polygonContextMenuVM: PolygonContextMenuVM;
-    gmpPlaceAutocompleteXVM: GmpPlaceAutocompleteXVM;
     removeAdvancedMarkerButtonXVM: ButtonXVM;
     addAdvancedMarkerButtonXVM: ButtonXVM;
-    buttonsControlPosition: ControlPosition;
     addPolygonButtonXVM: ButtonXVM;
 }

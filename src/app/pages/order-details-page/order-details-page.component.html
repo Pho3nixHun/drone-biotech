@@ -46,7 +46,7 @@
             @if (gmpMapXVM.bounds; as bounds) {
                 <app-gmp-map
                     class="h-96"
-                    [bounds]="bounds"
+                    [view]="bounds"
                     appGmpPolygonDrawing
                     [polygonsInput]="gmpMapXVM.missions"
                 />
@@ -65,7 +65,7 @@
                         @if (cardXVM.gmpMapXVM.bounds; as bounds) {
                             <app-gmp-map
                                 class="h-60"
-                                [bounds]="bounds"
+                                [view]="bounds"
                                 appGmpPolygonDrawing
                                 [polygonInput]="cardXVM.gmpMapXVM.polygon"
                                 [appGmpAdvancedMarker]="

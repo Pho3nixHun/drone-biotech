@@ -1,4 +1,12 @@
-import { Directive, input, output, effect, inject } from '@angular/core';
+import {
+    Directive,
+    input,
+    output,
+    effect,
+    inject,
+    EnvironmentInjector,
+    ApplicationRef,
+} from '@angular/core';
 import { GmpMapComponent } from '@components/gmp-map/gmp-map.component';
 import { GMP_POLYGON_OPTIONS } from '@tokens/gmp-polygon-options.token';
 import {
@@ -12,6 +20,10 @@ import { isNotUndefined } from '@utils/is-undefined.typeguard';
 import isEqual from 'lodash/isEqual';
 import { getAreaOfPolygon } from 'geolib';
 import { SQUARE_METRES_TO_HECTARE } from '@stores/location/location.model';
+import { PolygonContextMenu } from './gmp-polygon-context-menu.class';
+import { PolygonContextMenuVM } from '@components/polygon-context-menu/polygon-context-menu.component';
+
+type PolygonEditable = PolygonContextMenuVM | false;
 
 @Directive({
     selector: '[appGmpPolygonDrawing]',
@@ -19,11 +31,15 @@ import { SQUARE_METRES_TO_HECTARE } from '@stores/location/location.model';
 export class GmpPolygonDrawingDirective {
     private readonly options = inject(GMP_POLYGON_OPTIONS);
     private readonly map = inject(GmpMapComponent, { host: true });
-    public readonly polygonEditable = input<boolean>(false);
+    public readonly polygonEditable = input<PolygonEditable>(false);
     public readonly polygonChange = output<PolygonChangeEvent>();
     public readonly polygonsChange = output<PolygonsChangeEvent>();
     public readonly polygonInput = input<Polygon | null>(null);
     public readonly polygonsInput = input<Polygon[] | null>(null);
+    private readonly contextMenu = new PolygonContextMenu(
+        inject(EnvironmentInjector),
+        inject(ApplicationRef)
+    );
 
     private readonly polygon: google.maps.Polygon = new google.maps.Polygon({
         ...this.options,
@@ -54,18 +70,20 @@ export class GmpPolygonDrawingDirective {
                 action: 'delete',
                 coordinates: null,
                 metadata: {
+                    bounds: null,
                     center: null,
                 },
             });
 
+        const isEditable = !!editable;
         this.polygon.setOptions({
             fillColor: polygonInput.colors.fillColor,
             strokeColor: polygonInput.colors.strokeColor,
             paths: polygonInput.coordinates,
-            editable,
-            clickable: editable,
-            draggable: editable,
-            geodesic: editable,
+            editable: isEditable,
+            clickable: isEditable,
+            draggable: isEditable,
+            geodesic: isEditable,
             map,
         });
 
@@ -78,6 +96,7 @@ export class GmpPolygonDrawingDirective {
                     action: hasLength ? 'edit' : 'delete',
                     coordinates,
                     metadata: {
+                        bounds: null,
                         center: hasLength ? getCenter(coordinates) : null,
                         sizeInHq:
                             getAreaOfPolygon(coordinates) /
@@ -91,6 +110,10 @@ export class GmpPolygonDrawingDirective {
             action: 'draw',
             coordinates: polygonInput.coordinates,
             metadata: {
+                bounds: polygonInput.coordinates.reduce(
+                    (acc, curr) => acc.extend(curr),
+                    new google.maps.LatLngBounds()
+                ),
                 center: getCenter(polygonInput.coordinates),
                 sizeInHq:
                     getAreaOfPolygon(polygonInput.coordinates) /
@@ -98,13 +121,18 @@ export class GmpPolygonDrawingDirective {
             },
         });
 
-        if (!editable) return;
+        const contextMenuVM = editable;
+        if (!contextMenuVM) return;
         this.polygon.addListener(
             'mouseup',
             (event: google.maps.PolyMouseEvent) => {
-                if (isNotUndefined(event.vertex)) {
-                    console.log('Vertex modified:', event.vertex);
-                }
+                if (isNotUndefined(event.vertex))
+                    this.contextMenu.open(
+                        this.map.map(),
+                        this.polygon.getPath(),
+                        event.vertex,
+                        contextMenuVM
+                    );
             }
         );
     });
@@ -135,16 +163,17 @@ export class GmpPolygonDrawingDirective {
                 },
             });
 
+        const isEditable = !!editable;
         polygonsInput.forEach((curr) => {
             const polygon = new google.maps.Polygon({
                 ...this.options,
                 fillColor: curr.colors.fillColor,
                 strokeColor: curr.colors.strokeColor,
                 paths: curr.coordinates,
-                clickable: editable,
-                draggable: editable,
-                geodesic: editable,
-                editable,
+                clickable: isEditable,
+                draggable: isEditable,
+                geodesic: isEditable,
+                editable: isEditable,
                 map,
             });
 
