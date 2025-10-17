@@ -39,6 +39,23 @@
                     </app-button>
                 </a>
             }
+            <ul>
+                <app-stack [vm]="headerXVM.summary">
+                    @for (item of headerXVM.summary.items; track $index) {
+                        <li>
+                            <app-key-value [vm]="item">
+                                <app-key class="text-secondary">{{
+                                    t(item.keyXVM.textKey)
+                                }}</app-key>
+                                <app-value
+                                    [vm]="item.valueVM"
+                                    class="font-medium"
+                                />
+                            </app-key-value>
+                        </li>
+                    }
+                </app-stack>
+            </ul>
         </app-page-header>
 
         <app-frame [vm]="vM.overviewFrameXVM">
@@ -50,7 +67,68 @@
                     appGmpPolygonDrawing
                     [polygonsInput]="gmpMapXVM.missions"
                 />
+                @let summaryStackXVM = vM.overviewFrameXVM.summaryStackXVM;
+                <ul>
+                    <app-stack [vm]="summaryStackXVM">
+                        @for (
+                            keyValueXVM of summaryStackXVM.keyValueXVMs;
+                            track $index
+                        ) {
+                            <li>
+                                <app-key-value [vm]="keyValueXVM">
+                                    <app-key class="text-secondary">{{
+                                        t(keyValueXVM.keyXVM.textKey)
+                                    }}</app-key>
+                                    <app-value
+                                        [vm]="keyValueXVM.valueVM"
+                                        class="font-medium"
+                                    />
+                                </app-key-value>
+                            </li>
+                        }
+                    </app-stack>
+                </ul>
             }
+        </app-frame>
+
+        @let detailsFrameXVM = vM.detailsFrameXVM;
+        <app-frame [vm]="detailsFrameXVM">
+            @let detailsStackXVM = detailsFrameXVM.detailsStackXVM;
+            <app-stack [vm]="detailsStackXVM">
+                @for (
+                    summaryStackXVM of detailsStackXVM.summaryStackXVMs;
+                    track $index
+                ) {
+                    <ul>
+                        <app-stack [vm]="summaryStackXVM">
+                            @if (summaryStackXVM.titleKey; as title) {
+                                <h4 class="font-medium">
+                                    {{ t(title) }}
+                                </h4>
+                            }
+                            @for (
+                                keyValueXVM of summaryStackXVM.keyValueXVMs;
+                                track $index
+                            ) {
+                                <li>
+                                    <app-key-value
+                                        [vm]="keyValueXVM"
+                                        class="*:gap-2"
+                                    >
+                                        <app-key class="text-secondary">{{
+                                            t(keyValueXVM.keyXVM.textKey)
+                                        }}</app-key>
+                                        <app-value
+                                            [vm]="keyValueXVM.valueVM"
+                                            class="font-medium"
+                                        />
+                                    </app-key-value>
+                                </li>
+                            }
+                        </app-stack>
+                    </ul>
+                }
+            </app-stack>
         </app-frame>
 
         @let missionsFrameXVM = vM.missionsFrameXVM;

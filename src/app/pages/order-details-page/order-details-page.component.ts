@@ -31,6 +31,7 @@ import { GmpMapComponent } from '@components/gmp-map/gmp-map.component';
 import { GmpPolygonDrawingDirective } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.directive';
 import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { CardFooterComponent } from '@components/card/components/card-footer/card-footer.component';
+import { StackComponent } from '@components/stack/stack.component';
 
 @Component({
     selector: 'app-order-details-page',
@@ -59,6 +60,7 @@ import { CardFooterComponent } from '@components/card/components/card-footer/car
         GmpPolygonDrawingDirective,
         GmpAdvancedMarkerDirective,
         CardFooterComponent,
+        StackComponent,
     ],
     templateUrl: './order-details-page.component.html',
 })

@@ -11,6 +11,7 @@ import { Coordinates } from '@stores/location/location.model';
 import { KeyValueXVM } from './key-value/key-value.component';
 import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
+import { StackXVM } from '@components/stack/stack.component';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -81,15 +82,28 @@ interface GmpMapXVM {
 }
 
 type StatusBadgeXVM = Omit<BadgeXVM, 'textKey'>;
+
+interface SummaryHeader extends StackXVM {
+    items: KeyValueXVM[];
+}
 interface HeaderXVM {
     orderId: string;
     titleKey: string;
     statusBadgeXVM: StatusBadgeXVM;
     addNewMissionsButtonXVM: ButtonXVM & WithRouterLink;
     addNewMissionEnabled: boolean;
+    summary: SummaryHeader;
 }
 
 export type OrderStatus = 'active' | 'in-progress' | 'done' | 'new' | 'closed';
+
+interface DetailsStackXVM extends StackXVM {
+    summaryStackXVMs: SummaryStackXVM[];
+}
+interface DetailsFrameXVM extends FrameVM {
+    detailsStackXVM: DetailsStackXVM;
+}
+
 export interface OrderDetailsPageVM {
     user: User | null;
     status: OrderStatus;
@@ -98,15 +112,17 @@ export interface OrderDetailsPageVM {
     chatFrameXVM: ChatFrameXVM;
     missionsFrameXVM: MissionsFrameXVM;
     overviewFrameXVM: OverviewFrameXVM;
+    detailsFrameXVM: DetailsFrameXVM;
 }
 
-//  OverviewFrameXVM for visualizing all missions on the map
+interface SummaryStackXVM extends StackXVM {
+    keyValueXVMs: KeyValueXVM[];
+}
 interface OverviewFrameXVM extends FrameVM {
     gmpMapXVM: OverviewGmpMapXVM;
+    summaryStackXVM: SummaryStackXVM;
 }
 interface OverviewGmpMapXVM {
     bounds: google.maps.LatLngBounds | null;
     missions: Polygon[];
 }
-
-// OverviewFrameXVM end
