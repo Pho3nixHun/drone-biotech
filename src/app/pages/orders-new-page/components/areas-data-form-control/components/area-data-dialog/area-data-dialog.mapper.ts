@@ -16,14 +16,3 @@ export const mapStringToCoordinates = (str: string): Coordinates => {
 
 export const mapCoordinatesToString = (coordinates: Coordinates): string =>
     `${coordinates.lat} ${coordinates.lng}`;
-
-export const mapCenterToBounds = (
-    center: Coordinates,
-    latDelta: number,
-    lngDelta: number
-): google.maps.LatLngBoundsLiteral => ({
-    north: center.lat + latDelta,
-    south: center.lat - latDelta,
-    east: center.lng + lngDelta,
-    west: center.lng - lngDelta,
-});

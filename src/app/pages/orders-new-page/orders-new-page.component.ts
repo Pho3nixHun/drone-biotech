@@ -4,13 +4,12 @@ import { FrameComponent } from '@components/frame/frame.component';
 import { OrdersNewPageService } from './orders-new-page.service';
 import { TranslocoModule } from '@jsverse/transloco';
 import { AreasDataFormControlComponent } from './components/areas-data-form-control/areas-data-form-control.component';
-import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { ButtonComponent } from '@components/button/button.component';
 import { InputTextComponent } from '@components/input-text/input-text.component';
 import { MatIconModule } from '@angular/material/icon';
 import { minArrayLengthValidator } from '@validators/min-array-length.validator';
-import { GMP_POLYGON_OPTIONS } from '@tokens/gmp-polygon-options.token';
+import { Mission } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 
 /**
  * OrdersNewPageComponent
@@ -41,16 +40,7 @@ import { GMP_POLYGON_OPTIONS } from '@tokens/gmp-polygon-options.token';
         InputTextComponent,
         MatIconModule,
     ],
-    providers: [
-        {
-            provide: GMP_POLYGON_OPTIONS,
-            useValue: {
-                fillOpacity: 0.5,
-                strokeColor: 'blue',
-                fillColor: 'blue',
-            },
-        },
-    ],
+
     templateUrl: './orders-new-page.component.html',
 })
 export class OrdersNewPageComponent {
@@ -69,9 +59,9 @@ export class OrdersNewPageComponent {
             ]),
         }),
         endCustomer: this.fb.control<string>('', Validators.required),
-        areasData: this.fb.control<AreaData[]>(
+        missions: this.fb.control<Mission[]>(
             [],
-            [(Validators.required, minArrayLengthValidator(1))]
+            [Validators.required, minArrayLengthValidator(1)]
         ),
     });
 

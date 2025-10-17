@@ -1,5 +1,26 @@
+@let vM = vm();
+
 <div
-    class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+    class="avatar size-10 *:rounded-full"
+    [ngClass]="{ 'avatar-placeholder': vM.type === 'withInitials' }"
 >
-    <ng-content />
+    @switch (vM.type) {
+        @case ('withInitials') {
+            @let colors =
+                [
+                    'text-purple-500 bg-purple-200',
+                    'text-red-500 bg-red-200',
+                    'text-green-500 bg-green-200',
+                    'text-blue-500 bg-blue-200',
+                    'text-yellow-500 bg-yellow-200',
+                ];
+            @let remainder = mapInitialsToRemainder(vM.initials, colors.length);
+            <div [ngClass]="colors[remainder]">
+                {{ vM.initials }}
+            </div>
+        }
+        @case ('withImage') {
+            <img [src]="vM.imageSrc" [alt]="vM.altTextKey" />
+        }
+    }
 </div>

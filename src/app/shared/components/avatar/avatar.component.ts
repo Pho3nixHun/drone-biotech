@@ -1,8 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { AvatarVM, mapInitialsToRemainder } from './avatar.model';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-avatar',
-    imports: [],
+    imports: [NgClass],
     templateUrl: './avatar.component.html',
 })
-export class AvatarComponent {}
+export class AvatarComponent {
+    public vm = input.required<AvatarVM>();
+    protected mapInitialsToRemainder = mapInitialsToRemainder;
+}

@@ -1,6 +1,6 @@
 import { ButtonXVM } from '@components/button/button.model';
 import {
-    AreaData,
+    Mission,
     AreaDataDialogVM,
 } from './components/area-data-dialog/area-data-dialog.model';
 import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
@@ -42,17 +42,15 @@ export interface AreasDataFormControlVM {
     actionsHeaderKey: string;
 }
 
-export interface AreaXData extends AreaData {
+export interface MissionXData extends Mission {
     entryPointAddress: string;
     targetAreaSize: number;
     trichogrammaRequirement: number;
     distanceFromHeadOffice: number;
 }
 
-export interface TotalAreaXData {
+export interface TotalMissionXData {
     totalTargetAreaSize: number;
     totalTrichogrammaRequirement: number;
     totalDistanceFromHeadOffice: number;
 }
-
-export { AreaData } from './components/area-data-dialog/area-data-dialog.model';

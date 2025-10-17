@@ -100,15 +100,15 @@
                 <!-- End customer input end-->
 
                 <!-- Missions form control start -->
-                @let hasAreasDataMinArrayLengthError =
-                    formGroup.controls.areasData.touched &&
-                    formGroup.controls.areasData.hasError('minArrayLength');
+                @let hasMissionsMinArrayLengthError =
+                    formGroup.controls.missions.touched &&
+                    formGroup.controls.missions.hasError('minArrayLength');
 
                 <app-areas-data-form-control
                     #areasDataFormControl
                     [vm]="vm.areasDataFormControlVM"
-                    [invalid]="hasAreasDataMinArrayLengthError"
-                    [formControl]="formGroup.controls.areasData"
+                    [invalid]="hasMissionsMinArrayLengthError"
+                    [formControl]="formGroup.controls.missions"
                 />
 
                 <!-- Missions form control end -->

@@ -9,12 +9,12 @@ import {
 } from '@angular/core';
 import {
     AreasDataFormControlVM,
-    AreaXData,
-    TotalAreaXData,
+    MissionXData,
+    TotalMissionXData,
 } from './areas-data-form-control.model';
 import {
-    AreaData,
     AreaDataDialogResponse,
+    Mission,
 } from './components/area-data-dialog/area-data-dialog.model';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { combineLatest, forkJoin, map, of, switchMap } from 'rxjs';
@@ -64,10 +64,10 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
     protected readonly disabled = signal<boolean>(false);
     private readonly rgs = inject(ReverseGeocodingService);
     private readonly ds = inject(DistanceService);
-    private readonly value = signal<AreaData[] | null>(null);
+    private readonly value = signal<Mission[] | null>(null);
     private readonly onTouched = signal<(() => void) | null>(null);
     private readonly onChange = signal<
-        ((value: AreaData[] | null) => void) | null
+        ((value: Mission[] | null) => void) | null
     >(null);
 
     protected markAsTouched() {
@@ -110,11 +110,11 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         onChange(this.value());
     }
 
-    public writeValue(value: AreaData[] | null): void {
+    public writeValue(value: Mission[] | null): void {
         this.value.set(value);
     }
 
-    public registerOnChange(fn: (value: AreaData[] | null) => void): void {
+    public registerOnChange(fn: (value: Mission[] | null) => void): void {
         this.onChange.set(fn);
     }
 
@@ -126,7 +126,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         this.disabled.set(isDisabled);
     }
 
-    protected readonly areaXData: Signal<AreaXData[] | null> = toSignal(
+    protected readonly areaXData: Signal<MissionXData[] | null> = toSignal(
         combineLatest([
             toObservable(this.value),
             of(METRES_TO_KILOMETERS),
@@ -203,22 +203,24 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
             ),
     });
 
-    protected readonly totalAreaXData = computed<TotalAreaXData | null>(() => {
-        const areaXData = this.areaXData();
-        const totalDistanceFromHeadOffice =
-            this.totalDistanceFromHeadOffice.value();
-        if (!areaXData || !totalDistanceFromHeadOffice) return null;
+    protected readonly totalAreaXData = computed<TotalMissionXData | null>(
+        () => {
+            const areaXData = this.areaXData();
+            const totalDistanceFromHeadOffice =
+                this.totalDistanceFromHeadOffice.value();
+            if (!areaXData || !totalDistanceFromHeadOffice) return null;
 
-        return {
-            totalDistanceFromHeadOffice,
-            totalTargetAreaSize: areaXData.reduce(
-                (acc, curr) => acc + curr.targetAreaSize,
-                0
-            ),
-            totalTrichogrammaRequirement: areaXData.reduce(
-                (acc, curr) => acc + curr.trichogrammaRequirement,
-                0
-            ),
-        };
-    });
+            return {
+                totalDistanceFromHeadOffice,
+                totalTargetAreaSize: areaXData.reduce(
+                    (acc, curr) => acc + curr.targetAreaSize,
+                    0
+                ),
+                totalTrichogrammaRequirement: areaXData.reduce(
+                    (acc, curr) => acc + curr.trichogrammaRequirement,
+                    0
+                ),
+            };
+        }
+    );
 }

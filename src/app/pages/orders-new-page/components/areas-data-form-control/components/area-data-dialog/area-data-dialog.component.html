@@ -8,7 +8,7 @@
             area.set(undefined),
             formGroup.reset(),
             textFormGroup.reset(),
-            infoWindow.infoWindow.close(),
+            polygonWindow.close(),
         ]
     "
 >
@@ -29,17 +29,17 @@
         <form [formGroup]="formGroup">
             <!-- Mission name input start -->
             @let hasMissionNameMaxLengthError =
-                formGroup.controls.missionName.hasError('maxlength');
+                formGroup.controls.name.hasError('maxlength');
 
             @let hasMissionNameRequiredError =
-                formGroup.controls.missionName.hasError('required') &&
-                formGroup.controls.missionName.dirty;
+                formGroup.controls.name.hasError('required') &&
+                formGroup.controls.name.dirty;
             <app-input-text
                 [vm]="vM.missionNameInputTextXVM"
                 [invalid]="
                     hasMissionNameMaxLengthError || hasMissionNameRequiredError
                 "
-                [formControl]="formGroup.controls.missionName"
+                [formControl]="formGroup.controls.name"
             >
                 @if (hasMissionNameMaxLengthError) {
                     <span leftAssistiveText>{{
@@ -58,8 +58,7 @@
                 }
                 <span rightAssistiveText>{{
                     t(vM.missionNameMaxCharactersCounterAssistiveTextValueKey, {
-                        current:
-                            formGroup.controls.missionName.value?.length ?? 0,
+                        current: formGroup.controls.name.value?.length ?? 0,
                         max: missionNameMaxLength,
                     })
                 }}</span>
@@ -132,39 +131,52 @@
                 <!-- Tabs nav end -->
 
                 <!-- Visual editor tab panel start -->
-                @let gmpMapXVM = visualTabItemVM.content;
                 <app-tab-panel [id]="visualTabItemVM.id">
+                    @let gmpMapXVM = visualTabItemVM.content;
+                    @let view =
+                        area()?.entryPoint ??
+                        vM.actualPosition ??
+                        headOfficeLocation;
+
                     <app-gmp-map
                         #map
                         class="h-150 block"
-                        [center]="
-                            area()?.entryPoint ??
-                            vM.actualPosition ??
-                            headOfficeLocation
-                        "
+                        [view]="view"
+                        [interactive]="true"
                         appGmpInfoWindow
                         #infoWindow="gmpInfoWindow"
                         appGmpPlaceAutocomplete
                         (locationChange)="innerMap.fitBounds($event.viewPort)"
                         appGmpPolygonDrawing
-                        [contextMenuVM]="gmpMapXVM.polygonContextMenuVM"
-                        [coordinates]="formGroup.controls.targetArea.value"
-                        [editable]="
+                        [polygonInput]="
+                            formGroup.controls.targetArea.value
+                                ? {
+                                      coordinates:
+                                          formGroup.controls.targetArea.value,
+                                      colors: gmpMapXVM.polygonColors,
+                                  }
+                                : null
+                        "
+                        [polygonEditable]="
                             formGroup.controls.targetArea.enabled &&
-                            !vM.isTargetAreaReadonly
+                            !vM.isTargetAreaReadonly &&
+                            gmpMapXVM.polygonContextMenuVM
                         "
                         (polygonChange)="
                             [
-                                infoWindow.infoWindow.setOptions({
+                                polygonWindow.setOptions({
+                                    position: $event.metadata.center,
                                     content: t(gmpMapXVM.contentValueKey, {
                                         count: $event.metadata.sizeInHq,
                                     }),
-                                    position: $event.metadata.center,
                                 }),
-                                infoWindow.infoWindow.open({ map: innerMap }),
+                                polygonWindow.open({ map: innerMap }),
                                 targetAreaFormControl.writeValue(
                                     $event.coordinates
                                 ),
+                                $event.action === 'draw' &&
+                                    $event.metadata.bounds &&
+                                    innerMap.fitBounds($event.metadata.bounds),
                             ]
                         "
                         [appGmpAdvancedMarker]="
@@ -178,13 +190,11 @@
                             entryPointFormControl.writeValue($event.position)
                         "
                     >
+                        @let center = map.actualCenter();
                         @let innerMap = map.map();
-                        <div
-                            #buttons
-                            class="join join-vertical ml-2.5 mb-10"
-                            [slot]="gmpMapXVM.buttonsControlPosition"
-                        >
-                            @let center = map.actualCenter();
+                        @let polygonWindow = infoWindow.infoWindow;
+
+                        <div #menu class="join join-vertical ml-2.5 mb-10">
                             @if (center && !vM.isTargetAreaReadonly) {
                                 <!-- Add new polygon button start -->
                                 <app-button
@@ -200,13 +210,6 @@
                                         [
                                             setTargetAreaFormControlFromCenter(
                                                 center
-                                            ),
-                                            innerMap.fitBounds(
-                                                mapCenterToBounds(
-                                                    center,
-                                                    latDelta,
-                                                    lngDelta
-                                                )
                                             ),
                                         ]
                                     "

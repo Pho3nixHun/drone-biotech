@@ -28,9 +28,7 @@ export class GmpAdvancedMarkerDirective implements OnInit, OnDestroy {
     public readonly position = input<Coordinates | null>(null, {
         alias: 'appGmpAdvancedMarker',
     });
-    public readonly editable = input<boolean>(true, {
-        alias: 'markerEditable',
-    });
+    public readonly markerEditable = input<boolean>(false);
     public readonly markerChange = output<MarkerChange>();
 
     private readonly dragendListener = (event: google.maps.MapMouseEvent) => {
@@ -45,7 +43,7 @@ export class GmpAdvancedMarkerDirective implements OnInit, OnDestroy {
     }
 
     private readonly setOptionsEffect = effect(
-        () => (this.advancedMarker.gmpDraggable = this.editable())
+        () => (this.advancedMarker.gmpDraggable = this.markerEditable())
     );
 
     setMarkerEffect = effect(() => {

@@ -1,0 +1,30 @@
+@let vM = vm();
+<div
+    class="chat max-w-5/6"
+    [ngClass]="{
+        'chat-sender ml-auto': vM.type === 'sender',
+        'chat-receiver': vM.type === 'receiver',
+    }"
+>
+    <ng-content select="app-avatar" />
+    <div
+        class="chat-header flex flex-wrap gap-x-2"
+        [ngClass]="{ 'justify-end': vM.type === 'sender' }"
+    >
+        <ng-content />
+        <span class="text-base-content/50">
+            <ng-content select="time" />
+        </span>
+    </div>
+    <div
+        class="chat-bubble"
+        [style.backgroundColor]="
+            vM.type === 'receiver'
+                ? 'var(--color-chat-receiver)'
+                : 'var(--color-chat-sender)'
+        "
+        [style.color]="vM.type === 'receiver' ? 'black' : 'white'"
+    >
+        {{ vM.message }}
+    </div>
+</div>

@@ -7,7 +7,6 @@ import {
     output,
 } from '@angular/core';
 import { GmpMapComponent } from '@components/gmp-map/gmp-map.component';
-import { ControlPosition } from '@interfaces/control-position.enum';
 
 @Directive({
     selector: '[appGmpPlaceAutocomplete]',
@@ -69,10 +68,6 @@ const isPlacePredictionSelectEvent = (
 
 interface PlacePredictionSelectEvent extends Event {
     placePrediction: google.maps.places.PlacePrediction;
-}
-
-export interface GmpPlaceAutocompleteXVM {
-    slot: ControlPosition;
 }
 
 interface GmpPlaceAutocompleteOptions
