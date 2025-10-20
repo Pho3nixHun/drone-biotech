@@ -1,0 +1,178 @@
+@if (vm(); as vm) {
+    <app-page-layout *transloco="let t">
+        <!-- Page header that contains mission title, badge and creation date -->
+        @let headerXVM = vm.headerXVM;
+        @let statusBadgeXVM = headerXVM.statusBadgeXVM;
+        @let status = statusBadgeXVM.status;
+        @let creationDateKeyValueXVM = headerXVM.creationDateKeyValueXVM;
+
+        <app-page-header>
+            <h1>{{ t(headerXVM.titleKey) }}</h1>
+            <app-badge
+                [vm]="statusBadgeXVM"
+                class="*:text-black"
+                [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
+                >{{ t(mapMissionStatusToTranslocoTextKey(status)) }}</app-badge
+            >
+            <time class="text-secondary/70">
+                <app-key-value [vm]="creationDateKeyValueXVM">
+                    <app-key>{{
+                        t(creationDateKeyValueXVM.keyXVM.textKey)
+                    }}</app-key>
+                    <app-value [vm]="creationDateKeyValueXVM.valueVM" />
+                </app-key-value>
+            </time>
+        </app-page-header>
+        <!-- Page header end -->
+
+        <!-- Overview of the mission with map -->
+        @let mapOverviewFrameXVM = vm.mapOverviewFrameXVM;
+        @let gmpMapXVM = mapOverviewFrameXVM.gmpMapXVM;
+        @let openInGMButtonXVM = mapOverviewFrameXVM.openInGMButtonXVM;
+        @let overviewStackXVM = mapOverviewFrameXVM.overviewStackXVM;
+
+        <app-frame [vm]="mapOverviewFrameXVM">
+            @if (openInGMButtonXVM.link; as link) {
+                <a [href]="link.href">
+                    <app-button [vm]="openInGMButtonXVM">
+                        @if (openInGMButtonXVM.textKey; as textKey) {
+                            {{ t(textKey) }}
+                        }
+                    </app-button>
+                </a>
+            }
+            @if (gmpMapXVM.bounds; as bounds) {
+                <app-gmp-map
+                    class="h-96"
+                    [view]="bounds"
+                    appGmpPolygonDrawing
+                    [polygonInput]="gmpMapXVM.polygon"
+                    [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
+                />
+
+                <ul>
+                    <app-stack [vm]="overviewStackXVM">
+                        @for (
+                            keyValueXVM of overviewStackXVM.keyValueXVMs;
+                            track $index
+                        ) {
+                            <app-key-value [vm]="keyValueXVM">
+                                <app-key>{{
+                                    t(keyValueXVM.keyXVM.textKey)
+                                }}</app-key>
+                                <app-value
+                                    class="font-medium"
+                                    [vm]="keyValueXVM.valueVM"
+                                />
+                            </app-key-value>
+                        }
+                    </app-stack>
+                </ul>
+            }
+        </app-frame>
+        <!-- Overview end -->
+
+        <!-- Details about the mission, it can be updated via dialog -->
+        @let missionDetailsFrameXVM = vm.missionDetailsFrameXVM;
+        @let openUpdateMissionDialogButtonXVM =
+            missionDetailsFrameXVM.openUpdateMissionDialogButtonXVM;
+
+        <app-frame [vm]="missionDetailsFrameXVM">
+            <app-button
+                [vm]="openUpdateMissionDialogButtonXVM"
+                (click)="updateMissionDialog.showModal()"
+            >
+                @if (openUpdateMissionDialogButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
+                }
+            </app-button>
+        </app-frame>
+    </app-page-layout>
+
+    <!-- Update mission dialog, area size, date -->
+    @let updateMissionDialogVM =
+        vm.missionDetailsFrameXVM.openUpdateMissionDialogButtonXVM
+            .updateMissionDialogVM;
+    @let confirmButtonXVM = updateMissionDialogVM.confirmButtonXVM;
+    @let cancelButtonXVM = updateMissionDialogVM.cancelButtonXVM;
+    @let closeButtonXVM = updateMissionDialogVM.closeButtonXVM;
+    @let scheduledDateControl = missionDetailsGroup.controls.scheduledDate;
+    @let dosePerHaControl = missionDetailsGroup.controls.dosePerHa;
+    @let hasScheduledDateRequiredError =
+        scheduledDateControl.hasError('required') && scheduledDateControl.dirty;
+    @let hasDosePerHaRequiredError =
+        dosePerHaControl.hasError('required') && dosePerHaControl.dirty;
+    @let hasDosePerHaMinError =
+        dosePerHaControl.hasError('min') && dosePerHaControl.dirty;
+    @let submitButtonDisabled =
+        hasScheduledDateRequiredError ||
+        hasDosePerHaRequiredError ||
+        hasDosePerHaMinError;
+
+    <dialog #updateMissionDialog class="w-2xl">
+        <app-dialog-layout *transloco="let t">
+            <h2>{{ t(updateMissionDialogVM.titleKey) }}</h2>
+            <app-button
+                close
+                [vm]="closeButtonXVM"
+                (click)="updateMissionDialog.close()"
+            >
+                <mat-icon>{{ closeButtonXVM.icon }}</mat-icon>
+            </app-button>
+            <form [formGroup]="missionDetailsGroup">
+                <app-input-text
+                    [vm]="updateMissionDialogVM.dateInputTextXVM"
+                    [formControl]="scheduledDateControl"
+                    [invalid]="hasScheduledDateRequiredError"
+                >
+                    @if (hasScheduledDateRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(updateMissionDialogVM.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                </app-input-text>
+                <app-input-number
+                    [vm]="updateMissionDialogVM.dosePerHaInputTextXVM"
+                    [formControl]="dosePerHaControl"
+                    [invalid]="
+                        hasDosePerHaMinError || hasDosePerHaRequiredError
+                    "
+                >
+                    @if (hasDosePerHaRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(updateMissionDialogVM.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                    @if (hasDosePerHaMinError) {
+                        <span leftAssistiveText>{{
+                            t(
+                                updateMissionDialogVM.minDosePerHaAssistiveTextKey,
+                                {
+                                    min: dosePerHaMinValue,
+                                }
+                            )
+                        }}</span>
+                    }
+                </app-input-number>
+            </form>
+            <app-button
+                [vm]="confirmButtonXVM"
+                (click)="!submitButtonDisabled && updateMission()"
+                [disabled]="submitButtonDisabled"
+            >
+                @if (confirmButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
+                }
+            </app-button>
+            <app-button
+                [vm]="cancelButtonXVM"
+                (click)="updateMissionDialog.close()"
+            >
+                @if (cancelButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
+                }
+            </app-button>
+        </app-dialog-layout>
+    </dialog>
+    <!-- Update mission end -->
+}

@@ -294,7 +294,9 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             ],
                         },
                         bounds: null,
-                        entryPoint: { lat: 47.2285, lng: 21.176 },
+                        entryPoint: {
+                            coordinates: { lat: 47.2285, lng: 21.176 },
+                        },
                     },
                 },
                 {
@@ -363,7 +365,9 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             ],
                         },
                         bounds: null,
-                        entryPoint: { lat: 47.23, lng: 21.205 },
+                        entryPoint: {
+                            coordinates: { lat: 47.23, lng: 21.205 },
+                        },
                     },
                 },
                 {
@@ -432,7 +436,9 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             ],
                         },
                         bounds: null,
-                        entryPoint: { lat: 47.255, lng: 21.205 },
+                        entryPoint: {
+                            coordinates: { lat: 47.255, lng: 21.205 },
+                        },
                     },
                 },
                 {
@@ -501,7 +507,9 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             ],
                         },
                         bounds: null,
-                        entryPoint: { lat: 47.2555, lng: 21.165 },
+                        entryPoint: {
+                            coordinates: { lat: 47.2555, lng: 21.165 },
+                        },
                     },
                 },
                 {
@@ -558,7 +566,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                     },
                     gmpMapXVM: {
                         bounds: null,
-                        entryPoint: { lat: 47.24, lng: 21.21 },
+                        entryPoint: { coordinates: { lat: 47.24, lng: 21.21 } },
                         polygon: {
                             colors: {
                                 fillColor: PolygonColor.BLUE,

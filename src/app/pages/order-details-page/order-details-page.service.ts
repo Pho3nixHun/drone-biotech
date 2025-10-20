@@ -62,7 +62,7 @@ export class OrderDetailsPageService {
                                     mission.gmpMapXVM.polygon.coordinates.reduce(
                                         (acc, coords) => acc.extend(coords),
                                         new google.maps.LatLngBounds(
-                                            mission.gmpMapXVM.entryPoint
+                                            mission.gmpMapXVM.entryPoint.coordinates
                                         )
                                     );
 
