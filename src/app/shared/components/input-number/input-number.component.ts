@@ -36,9 +36,12 @@ export class InputNumberComponent implements ControlValueAccessor {
         const target = event.target;
         if (!(target instanceof HTMLInputElement)) return;
 
-        this.value.set(target.valueAsNumber);
+        const num = target.valueAsNumber;
+        const value = Number.isNaN(num) ? null : num;
+
+        this.value.set(value);
         const onChange = this.onChange();
-        if (onChange) onChange(target.valueAsNumber);
+        if (onChange) onChange(value);
     }
 
     writeValue(value: number | null): void {

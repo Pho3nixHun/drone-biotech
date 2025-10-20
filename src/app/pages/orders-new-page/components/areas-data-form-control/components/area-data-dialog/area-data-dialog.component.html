@@ -181,6 +181,11 @@
                         "
                         [appGmpAdvancedMarker]="
                             formGroup.controls.entryPoint.value
+                                ? {
+                                      coordinates:
+                                          formGroup.controls.entryPoint.value,
+                                  }
+                                : null
                         "
                         [markerEditable]="
                             formGroup.controls.entryPoint.enabled &&

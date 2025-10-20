@@ -7,11 +7,11 @@ import { FrameVM } from '@components/frame/frame.model';
 import { MessageVM } from '@components/message/message.component';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
-import { Coordinates } from '@stores/location/location.model';
 import { KeyValueXVM } from './key-value/key-value.component';
 import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 import { StackXVM } from '@components/stack/stack.component';
+import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -78,7 +78,7 @@ interface MissionsFrameXVM extends FrameVM {
 interface GmpMapXVM {
     bounds: google.maps.LatLngBounds | null;
     polygon: Polygon;
-    entryPoint: Coordinates;
+    entryPoint: AdvancedMarker;
 }
 
 type StatusBadgeXVM = Omit<BadgeXVM, 'textKey'>;

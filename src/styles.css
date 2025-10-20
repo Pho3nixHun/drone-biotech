@@ -25,6 +25,16 @@
     --new-order: #22c55e;
     --closed-order: #f59e0b;
     --done-order: #6b7280;
+    --new-mission: #e0f7fa;
+    --scheduled-mission: #ffe0b2;
+    --accepted-mission: #c8e6c9;
+    --rejected-mission: #ffcdd2;
+    --traveling-mission: #bbdefb;
+    --arrived-mission: #d1c4e9;
+    --in-progress-mission: #fff9c4;
+    --aborted-mission: #f8bbd0;
+    --completed-mission: #b2dfdb;
+    --done-mission: #cfd8dc;
 }
 
 html {

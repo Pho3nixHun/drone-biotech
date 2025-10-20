@@ -17,6 +17,10 @@ interface MarkerChange {
     position: Coordinates | null;
 }
 
+export interface AdvancedMarker {
+    coordinates: Coordinates;
+}
+
 @Directive({
     selector: '[appGmpAdvancedMarker]',
 })
@@ -25,7 +29,7 @@ export class GmpAdvancedMarkerDirective implements OnInit, OnDestroy {
     private readonly advancedMarker =
         new google.maps.marker.AdvancedMarkerElement();
 
-    public readonly position = input<Coordinates | null>(null, {
+    public readonly marker = input<AdvancedMarker | null>(null, {
         alias: 'appGmpAdvancedMarker',
     });
     public readonly markerEditable = input<boolean>(false);
@@ -47,13 +51,13 @@ export class GmpAdvancedMarkerDirective implements OnInit, OnDestroy {
     );
 
     setMarkerEffect = effect(() => {
-        const position = this.position();
-        if (!position) {
+        const marker = this.marker();
+        if (!marker) {
             this.advancedMarker.position = null;
             this.advancedMarker.map = null;
             return;
         }
-        this.advancedMarker.position = position;
+        this.advancedMarker.position = marker.coordinates;
         this.advancedMarker.map = this.mapComponent.map();
     });
 
