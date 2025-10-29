@@ -3,15 +3,108 @@ import { MissionDetailsPageVM } from './mission-details-page.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 
 export const missionDetailsPageVM: MissionDetailsPageVM = {
+    user: null,
+    status: 'new',
     dosePerHa: 1,
     scheduledDate: new Date(),
     headerXVM: {
         titleKey: 'MissionDetailsPage.header.title',
+        dialogActions: [
+            {
+                type: 'customerCancel',
+                accessConditions: [{ role: 'customer', status: 'new' }],
+                dialogVM: {
+                    confirmationTextKey:
+                        'MissionDetailsPage.customerCancel.dialog.confirmationText',
+                    optionalAssistiveTextKey:
+                        '"MissionDetailsPage.customerCancel.dialog.optionalText"',
+                    reasonInputTextareaXVM: {
+                        id: 'reason',
+                        labelKey:
+                            'MissionDetailsPage.customerCancel.dialog.reason.label',
+                        placeholderKey:
+                            'MissionDetailsPage.customerCancel.dialog.reason.placeHolder',
+                        readonly: false,
+                    },
+                    titleKey: 'MissionDetailsPage.customerCancel.dialog.title',
+                    closeButtonXVM: {
+                        variant: 'ghost',
+                        secondary: true,
+                        icon: MatIcon.CLOSE,
+                    },
+                    cancelButtonXVM: {
+                        variant: 'ghost',
+                        textKey:
+                            'MissionDetailsPage.customerCancel.dialog.cancelButton.text',
+                        secondary: true,
+                    },
+                    submitButtonXVM: {
+                        variant: 'fill',
+                        textKey:
+                            'MissionDetailsPage.customerCancel.dialog.submitButton.text',
+                    },
+                },
+                buttonXVM: {
+                    variant: 'fill',
+                    textKey: 'MissionDetailsPage.customerCancel.button.text',
+                },
+            },
+            {
+                type: 'officeCancel',
+                accessConditions: [
+                    { role: 'office', status: 'new' },
+                    { role: 'office', status: 'scheduled' },
+                    { role: 'office', status: 'rejected' },
+                    { role: 'office', status: 'accepted' },
+                    { role: 'office', status: 'traveling' },
+                    { role: 'office', status: 'arrived' },
+                    { role: 'office', status: 'aborted' },
+                    { role: 'office', status: 'in_progress' },
+                ],
+                dialogVM: {
+                    emptyStringAssistiveTextKey: 'Your message has no meaning.',
+                    confirmationTextKey:
+                        'MissionDetailsPage.officeCancel.dialog.confirmationText',
+                    requiredAssistiveTextKey:
+                        'MissionDetailsPage.officeCancel.dialog.requiredText',
+                    reasonInputTextareaXVM: {
+                        id: 'reason',
+                        labelKey:
+                            'MissionDetailsPage.officeCancel.dialog.reason.label',
+                        placeholderKey:
+                            'MissionDetailsPage.officeCancel.dialog.reason.placeHolder',
+                        readonly: false,
+                    },
+                    titleKey: 'MissionDetailsPage.officeCancel.dialog.title',
+                    closeButtonXVM: {
+                        variant: 'ghost',
+                        secondary: true,
+                        icon: MatIcon.CLOSE,
+                    },
+                    cancelButtonXVM: {
+                        variant: 'ghost',
+                        textKey:
+                            'MissionDetailsPage.officeCancel.dialog.cancelButton.text',
+                        secondary: true,
+                    },
+                    submitButtonXVM: {
+                        variant: 'fill',
+                        textKey:
+                            'MissionDetailsPage.officeCancel.dialog.submitButton.text',
+                    },
+                },
+                buttonXVM: {
+                    variant: 'fill',
+                    textKey: 'MissionDetailsPage.officeCancel.button.text',
+                },
+            },
+        ],
         statusBadgeXVM: {
-            status: 'accepted',
+            status: 'new',
             shape: 'rounded',
         },
         creationDateKeyValueXVM: {
+            gap: 'small',
             orientation: 'horizontal',
             keyXVM: {
                 textKey: 'MissionDetailsPage.header.creationDate.keyText',
@@ -29,7 +122,59 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
             align: 'normal',
             gap: 'large',
             orientation: 'horizontal',
-            keyValueXVMs: [],
+            keyValueXVMs: [
+                {
+                    orientation: 'horizontal',
+                    gap: 'small',
+
+                    keyXVM: {
+                        textKey: 'Scheduled date:',
+                    },
+                    valueVM: {
+                        type: 'withKey',
+                        key: 's',
+                        params: { date: new Date() },
+                    },
+                },
+                {
+                    orientation: 'horizontal',
+                    gap: 'small',
+
+                    keyXVM: {
+                        textKey: 'Total dose:',
+                    },
+                    valueVM: {
+                        type: 'withKey',
+                        key: '',
+                        params: { dose: 14 },
+                    },
+                },
+                {
+                    orientation: 'horizontal',
+                    gap: 'small',
+
+                    keyXVM: {
+                        textKey: 'Dose per ha',
+                    },
+                    valueVM: {
+                        type: 'withKey',
+                        key: 's',
+                        params: { dose: 2.3 },
+                    },
+                },
+                {
+                    orientation: 'horizontal',
+                    gap: 'small',
+
+                    keyXVM: {
+                        textKey: 'Status',
+                    },
+                    valueVM: {
+                        type: 'withoutKey',
+                        value: 'Awaiting approval',
+                    },
+                },
+            ],
         },
         openInGMButtonXVM: {
             secondary: true,
@@ -53,52 +198,125 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
             entryPoint: { coordinates: { lat: 47.2285, lng: 21.1952 } },
         },
     },
-    missionDetailsFrameXVM: {
-        titleKey: 'MissionDetailsPage.details.title',
-        openUpdateMissionDialogButtonXVM: {
-            textKey: 'MissionDetailsPage.details.updateMissionButton.text',
-            variant: 'fill',
-            updateMissionDialogVM: {
-                requiredAssistiveTextKey:
-                    'MissionDetailsPage.details.updateDialog.requiredText',
-                minDosePerHaAssistiveTextKey:
-                    'MissionDetailsPage.details.updateDialog.minDosePerHaAssistiveText',
-                titleKey: 'MissionDetailsPage.details.updateDialog.title',
-                closeButtonXVM: {
-                    variant: 'ghost',
-                    secondary: true,
-                    icon: MatIcon.CLOSE,
+    logFrameXVM: {
+        messageInputTextXVM: {
+            id: 'message',
+            autocomplete: 'off',
+            placeholderKey: 'MissionDetailsPage.logs.messageInput.placeholder',
+            readonly: false,
+            type: 'text',
+        },
+        readonlyMessageControl: false,
+        submitButtonXVM: {
+            variant: 'ghost',
+            icon: MatIcon.SEND,
+        },
+        titleKey: 'MissionDetailsPage.logs.title',
+        messageStackXVM: {
+            align: 'normal',
+            orientation: 'vertical',
+            gap: 'medium',
+            messageXVMs: [
+                {
+                    type: 'receiver',
+                    role: 'office',
+                    name: 'Operations Manager',
+                    dateTimeValueKey:
+                        'MissionDetailsPage.logs.message.dateTimeValue',
+                    nameXRoleValueKey:
+                        'MissionDetailsPage.logs.message.nameXRoleValue',
+                    dateTime: new Date('2025-10-06T09:30:00'),
+                    message:
+                        'Good morning! I just received the latest shipment report. Everything looks on track.',
+                    avatarVM: {
+                        type: 'withInitials',
+                        initials: 'OM',
+                    },
                 },
-                dateInputTextXVM: {
-                    id: 'missionDate',
-                    autocomplete: 'off',
-                    labelKey:
-                        'MissionDetailsPage.details.updateDialog.dateInput.label',
-                    placeholderKey:
-                        'MissionDetailsPage.details.updateDialog.dateInput.placeholder',
-                    type: 'datetime-local',
-                    readonly: false,
+                {
+                    type: 'receiver',
+                    role: 'pilot',
+                    name: 'Ben Ford',
+                    dateTimeValueKey:
+                        'MissionDetailsPage.logs.message.dateTimeValue',
+                    nameXRoleValueKey:
+                        'MissionDetailsPage.logs.message.nameXRoleValue',
+                    dateTime: new Date('2025-10-06T09:35:00'),
+                    message:
+                        'Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.',
+                    avatarVM: {
+                        type: 'withImage',
+                        imageSrc: 'assets/farming.jpg',
+                        altTextKey: 'Ben Ford',
+                    },
                 },
-                dosePerHaInputTextXVM: {
-                    id: 'dosePerHa',
-                    labelKey:
-                        'MissionDetailsPage.details.updateDialog.dosePerHaInput.label',
-                    placeholderKey:
-                        'MissionDetailsPage.details.updateDialog.dosePerHaInput.placeholder',
-                    readonly: false,
+                {
+                    type: 'receiver',
+                    role: 'office',
+                    name: 'Operations Manager',
+                    dateTimeValueKey:
+                        'MissionDetailsPage.logs.message.dateTimeValue',
+                    nameXRoleValueKey:
+                        'MissionDetailsPage.logs.message.nameXRoleValue',
+                    dateTime: new Date('2025-10-06T09:40:00'),
+                    message:
+                        'Perfect. Please make sure to inspect the new irrigation system while you’re there.',
+                    avatarVM: {
+                        type: 'withInitials',
+                        initials: 'OM',
+                    },
                 },
-                confirmButtonXVM: {
-                    variant: 'fill',
-                    textKey:
-                        'MissionDetailsPage.details.updateDialog.confirmButton.text',
+                {
+                    type: 'sender',
+                    role: 'customer',
+                    name: 'Calvin Jackson',
+                    dateTimeValueKey:
+                        'MissionDetailsPage.logs.message.dateTimeValue',
+                    nameXRoleValueKey:
+                        'MissionDetailsPage.logs.message.nameXRoleValue',
+                    dateTime: new Date('2025-10-06T10:00:00'),
+                    message:
+                        'Hi team, I just wanted to check on the status of my last order. Any updates?',
+                    avatarVM: {
+                        type: 'withImage',
+                        imageSrc: 'assets/lepke.jpg',
+                        altTextKey: 'Calvin Jackson',
+                    },
                 },
-                cancelButtonXVM: {
-                    variant: 'ghost',
-                    textKey:
-                        'MissionDetailsPage.details.updateDialog.cancelButton.text',
-                    secondary: true,
+                {
+                    type: 'receiver',
+                    role: 'office',
+                    name: 'Field Manager',
+                    dateTimeValueKey:
+                        'MissionDetailsPage.logs.message.dateTimeValue',
+                    nameXRoleValueKey:
+                        'MissionDetailsPage.logs.message.nameXRoleValue',
+                    dateTime: new Date('2025-10-06T10:05:00'),
+                    message:
+                        'Hello Calvin, your order is being processed and should be shipped by this afternoon.',
+                    avatarVM: {
+                        type: 'withInitials',
+                        initials: 'FM',
+                    },
                 },
-            },
+                {
+                    type: 'sender',
+                    role: 'customer',
+                    name: 'Calvin Jackson',
+                    dateTimeValueKey:
+                        'MissionDetailsPage.logs.message.dateTimeValue',
+                    nameXRoleValueKey:
+                        'MissionDetailsPage.logs.message.nameXRoleValue',
+                    dateTime: new Date('2025-10-06T11:00:00'),
+                    message:
+                        'Great, thanks for the update! Looking forward to receiving it.',
+                    avatarVM: {
+                        type: 'withImage',
+                        imageSrc: 'assets/lepke.jpg',
+                        altTextKey: 'Calvin Jackson',
+                    },
+                },
+            ],
         },
     },
 };

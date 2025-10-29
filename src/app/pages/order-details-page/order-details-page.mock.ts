@@ -3,7 +3,6 @@ import { OrderDetailsPageVM } from './order-details-page.model';
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { OrdersRouteSegment } from '../orders-new-page/orders-route-segment';
 import { PolygonColor } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
-
 export const orderDetailsPageVM: OrderDetailsPageVM = {
     user: null,
     status: 'new',
@@ -22,6 +21,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                     keyValueXVMs: [
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.client.contactText',
@@ -33,6 +33,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.client.emailText',
@@ -44,6 +45,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.client.phoneText',
@@ -55,6 +57,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.client.addressText',
@@ -74,6 +77,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                     keyValueXVMs: [
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.summary.treatmentText',
@@ -85,6 +89,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.summary.averageDoseText',
@@ -97,6 +102,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.summary.totalSupplyText',
@@ -109,6 +115,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                         {
                             orientation: 'horizontal',
+                            gap: 'small',
                             keyXVM: {
                                 textKey:
                                     'OrderDetailsPage.details.summary.priceText',
@@ -133,6 +140,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             keyValueXVMs: [
                 {
                     orientation: 'vertical',
+                    gap: 'small',
                     keyXVM: { textKey: 'OrderDetailsPage.overview.totalText' },
                     valueVM: {
                         type: 'withKey',
@@ -142,6 +150,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
                 {
                     orientation: 'vertical',
+                    gap: 'small',
                     keyXVM: {
                         textKey: 'OrderDetailsPage.overview.completedText',
                     },
@@ -153,6 +162,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
                 {
                     orientation: 'vertical',
+                    gap: 'small',
                     keyXVM: {
                         textKey: 'OrderDetailsPage.overview.remainingText',
                     },
@@ -223,7 +233,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             ],
         },
     },
-
     missionsFrameXVM: {
         titleKey: 'OrderDetailsPage.missions.title',
         missionCardListXVM: {
@@ -243,6 +252,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         keyValueXVMs: [
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.name.text',
@@ -254,6 +264,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.text',
@@ -266,6 +277,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.scheduledDate.text',
@@ -314,6 +326,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         keyValueXVMs: [
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.name.text',
@@ -325,6 +338,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.text',
@@ -337,6 +351,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.scheduledDate.text',
@@ -385,6 +400,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         keyValueXVMs: [
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.name.text',
@@ -396,6 +412,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.text',
@@ -408,6 +425,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.scheduledDate.text',
@@ -456,6 +474,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         keyValueXVMs: [
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.name.text',
@@ -467,6 +486,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.text',
@@ -479,6 +499,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.scheduledDate.text',
@@ -527,6 +548,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         keyValueXVMs: [
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.name.text',
@@ -538,6 +560,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.text',
@@ -550,6 +573,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                             },
                             {
                                 orientation: 'vertical',
+                                gap: 'small',
                                 keyXVM: {
                                     textKey:
                                         'OrderDetailsPage.missions.card.area.scheduledDate.text',
@@ -603,6 +627,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             items: [
                 {
                     orientation: 'horizontal',
+                    gap: 'small',
                     keyXVM: {
                         textKey: 'OrderDetailsPage.header.clientTextKey',
                     },
@@ -613,6 +638,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
                 {
                     orientation: 'horizontal',
+                    gap: 'small',
                     keyXVM: {
                         textKey: 'OrderDetailsPage.header.creationDateTextKey',
                     },
@@ -624,6 +650,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
                 {
                     orientation: 'horizontal',
+                    gap: 'small',
                     keyXVM: {
                         textKey: 'OrderDetailsPage.header.totalAreaTextKey',
                     },
@@ -682,8 +709,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         messageInputTextXVM: {
             id: 'message',
             autocomplete: 'off',
-            isLabelHidden: true,
-            labelKey: 'OrderDetailsPage.chat.input.label',
             placeholderKey: 'OrderDetailsPage.chat.input.placeholder',
             readonly: false,
             type: 'text',
@@ -780,7 +805,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         ],
     },
 };
-
 export const enMock = {
     idTitle: 'id',
     clientText: 'client',
@@ -789,7 +813,6 @@ export const enMock = {
     totalAreaText: 'totalArea',
     totalAreaValue: 'totalAreaV',
     addNewMissionButtonText: 'addNewMissionButton',
-
     orderActions: {
         title: 'tit',
         completionButtonText: 'Proof of completion template',

@@ -8,20 +8,51 @@
 
         <app-page-header>
             <h1>{{ t(headerXVM.titleKey) }}</h1>
-            <app-badge
-                [vm]="statusBadgeXVM"
-                class="*:text-black"
-                [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
-                >{{ t(mapMissionStatusToTranslocoTextKey(status)) }}</app-badge
-            >
-            <time class="text-secondary/70">
-                <app-key-value [vm]="creationDateKeyValueXVM">
-                    <app-key>{{
-                        t(creationDateKeyValueXVM.keyXVM.textKey)
-                    }}</app-key>
-                    <app-value [vm]="creationDateKeyValueXVM.valueVM" />
-                </app-key-value>
-            </time>
+            <div class="flex flex-row gap-3" metadata>
+                <!-- Will be an inline component -->
+                <app-badge
+                    [vm]="statusBadgeXVM"
+                    class="*:text-black"
+                    [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
+                    >{{
+                        t(mapMissionStatusToTranslocoTextKey(status))
+                    }}</app-badge
+                >
+                <time class="text-secondary/70">
+                    <app-key-value [vm]="creationDateKeyValueXVM">
+                        <app-key>{{
+                            t(creationDateKeyValueXVM.keyXVM.textKey)
+                        }}</app-key>
+                        <app-value [vm]="creationDateKeyValueXVM.valueVM" />
+                    </app-key-value>
+                </time>
+            </div>
+
+            <div class="flex flex-row gap-3" actionGroup>
+                <!-- Inline component -->
+                @for (action of headerXVM.dialogActions; track $index) {
+                    @switch (action.type) {
+                        @case ('customerCancel') {
+                            <ng-container
+                                [ngTemplateOutlet]="customerCancel"
+                                [ngTemplateOutletContext]="{
+                                    buttonXVM: action.buttonXVM,
+                                    dialogVM: action.dialogVM,
+                                }"
+                            />
+                        }
+                        @case ('officeCancel') {
+                            <ng-container
+                                [ngTemplateOutlet]="officeCancel"
+                                [ngTemplateOutletContext]="{
+                                    buttonXVM: action.buttonXVM,
+                                    dialogVM: action.dialogVM,
+                                }"
+                            />
+                        }
+                    }
+                }
+            </div>
         </app-page-header>
         <!-- Page header end -->
 
@@ -72,107 +103,97 @@
         </app-frame>
         <!-- Overview end -->
 
-        <!-- Details about the mission, it can be updated via dialog -->
-        @let missionDetailsFrameXVM = vm.missionDetailsFrameXVM;
-        @let openUpdateMissionDialogButtonXVM =
-            missionDetailsFrameXVM.openUpdateMissionDialogButtonXVM;
-
-        <app-frame [vm]="missionDetailsFrameXVM">
-            <app-button
-                [vm]="openUpdateMissionDialogButtonXVM"
-                (click)="updateMissionDialog.showModal()"
-            >
-                @if (openUpdateMissionDialogButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
+        <!-- Log frame, contains the messages, logs about the mission -->
+        @let logFrameXVM = vm.logFrameXVM;
+        @let messageStackXVM = logFrameXVM.messageStackXVM;
+        @let submitButtonXVM = logFrameXVM.submitButtonXVM;
+        @let submitButtonDisabled =
+            messageControl.disabled ||
+            messageControl.hasError('emptyString') ||
+            messageControl.hasError('required');
+        <app-frame [vm]="logFrameXVM">
+            <app-stack [vm]="messageStackXVM">
+                @for (messageXVM of messageStackXVM.messageXVMs; track $index) {
+                    <app-message [vm]="messageXVM">
+                        <app-avatar
+                            class="chat-avatar"
+                            [vm]="messageXVM.avatarVM"
+                        />
+                        {{
+                            t(messageXVM.nameXRoleValueKey, {
+                                name: messageXVM.name,
+                                role: t(
+                                    mapRoleToTranslocoTextKey(messageXVM.role)
+                                ),
+                            })
+                        }}
+                        <time>{{
+                            t(messageXVM.dateTimeValueKey, {
+                                date: messageXVM.dateTime,
+                            })
+                        }}</time>
+                    </app-message>
                 }
-            </app-button>
+            </app-stack>
+            @if (!logFrameXVM.readonlyMessageControl) {
+                <div class="join flex flex-row items-center">
+                    <app-input-text
+                        class="w-full"
+                        [vm]="logFrameXVM.messageInputTextXVM"
+                        [formControl]="messageControl"
+                    />
+                    <app-button
+                        [vm]="submitButtonXVM"
+                        [disabled]="submitButtonDisabled"
+                        (click)="!submitButtonDisabled && sendMessage()"
+                    >
+                        <mat-icon>
+                            {{ submitButtonXVM.icon }}
+                        </mat-icon>
+                    </app-button>
+                </div>
+            }
         </app-frame>
+        <!-- Log frame end -->
     </app-page-layout>
-
-    <!-- Update mission dialog, area size, date -->
-    @let updateMissionDialogVM =
-        vm.missionDetailsFrameXVM.openUpdateMissionDialogButtonXVM
-            .updateMissionDialogVM;
-    @let confirmButtonXVM = updateMissionDialogVM.confirmButtonXVM;
-    @let cancelButtonXVM = updateMissionDialogVM.cancelButtonXVM;
-    @let closeButtonXVM = updateMissionDialogVM.closeButtonXVM;
-    @let scheduledDateControl = missionDetailsGroup.controls.scheduledDate;
-    @let dosePerHaControl = missionDetailsGroup.controls.dosePerHa;
-    @let hasScheduledDateRequiredError =
-        scheduledDateControl.hasError('required') && scheduledDateControl.dirty;
-    @let hasDosePerHaRequiredError =
-        dosePerHaControl.hasError('required') && dosePerHaControl.dirty;
-    @let hasDosePerHaMinError =
-        dosePerHaControl.hasError('min') && dosePerHaControl.dirty;
-    @let submitButtonDisabled =
-        hasScheduledDateRequiredError ||
-        hasDosePerHaRequiredError ||
-        hasDosePerHaMinError;
-
-    <dialog #updateMissionDialog class="w-2xl">
-        <app-dialog-layout *transloco="let t">
-            <h2>{{ t(updateMissionDialogVM.titleKey) }}</h2>
-            <app-button
-                close
-                [vm]="closeButtonXVM"
-                (click)="updateMissionDialog.close()"
-            >
-                <mat-icon>{{ closeButtonXVM.icon }}</mat-icon>
-            </app-button>
-            <form [formGroup]="missionDetailsGroup">
-                <app-input-text
-                    [vm]="updateMissionDialogVM.dateInputTextXVM"
-                    [formControl]="scheduledDateControl"
-                    [invalid]="hasScheduledDateRequiredError"
-                >
-                    @if (hasScheduledDateRequiredError) {
-                        <span leftAssistiveText>{{
-                            t(updateMissionDialogVM.requiredAssistiveTextKey)
-                        }}</span>
-                    }
-                </app-input-text>
-                <app-input-number
-                    [vm]="updateMissionDialogVM.dosePerHaInputTextXVM"
-                    [formControl]="dosePerHaControl"
-                    [invalid]="
-                        hasDosePerHaMinError || hasDosePerHaRequiredError
-                    "
-                >
-                    @if (hasDosePerHaRequiredError) {
-                        <span leftAssistiveText>{{
-                            t(updateMissionDialogVM.requiredAssistiveTextKey)
-                        }}</span>
-                    }
-                    @if (hasDosePerHaMinError) {
-                        <span leftAssistiveText>{{
-                            t(
-                                updateMissionDialogVM.minDosePerHaAssistiveTextKey,
-                                {
-                                    min: dosePerHaMinValue,
-                                }
-                            )
-                        }}</span>
-                    }
-                </app-input-number>
-            </form>
-            <app-button
-                [vm]="confirmButtonXVM"
-                (click)="!submitButtonDisabled && updateMission()"
-                [disabled]="submitButtonDisabled"
-            >
-                @if (confirmButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
-            <app-button
-                [vm]="cancelButtonXVM"
-                (click)="updateMissionDialog.close()"
-            >
-                @if (cancelButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
-        </app-dialog-layout>
-    </dialog>
-    <!-- Update mission end -->
 }
+
+<!-- Dialog for customer cancel start -->
+<ng-template #customerCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
+    <app-button
+        class="self-start"
+        [vm]="buttonXVM"
+        (click)="customerCancelDialog.open(dialogVM)"
+    >
+        @if (buttonXVM.textKey; as textKey) {
+            {{ textKey | transloco }}
+        }
+    </app-button>
+    <app-customer-cancel-dialog
+        #customerCancelDialog
+        (response)="
+            $event.type === 'confirm' && service.cancelMission($event.reason)
+        "
+    />
+</ng-template>
+<!-- Dialog end -->
+
+<!-- Dialog for office cancel start -->
+<ng-template #officeCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
+    <app-button
+        class="self-start"
+        [vm]="buttonXVM"
+        (click)="officeCancelDialog.open(dialogVM)"
+    >
+        @if (buttonXVM.textKey; as textKey) {
+            {{ textKey | transloco }}
+        }
+    </app-button>
+    <app-office-cancel-dialog
+        #officeCancelDialog
+        (response)="
+            $event.type === 'confirm' && service.cancelMission($event.reason)
+        "
+    />
+</ng-template>
+<!-- Dialog end -->

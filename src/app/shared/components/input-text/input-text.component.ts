@@ -55,9 +55,8 @@ export class InputTextComponent implements ControlValueAccessor {
     }
 }
 export interface InputTextVM {
+    labelKey?: string;
     placeholderKey: string;
-    labelKey: string;
-    isLabelHidden?: boolean;
     id: string;
     readonly: boolean;
     autocomplete:

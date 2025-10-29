@@ -1,4 +1,5 @@
-import { MissionStatus } from './mission-details-page.model';
+import { User as StoreUser } from '@stores/auth/auth.model';
+import { MissionStatus, User, UserRole } from './mission-details-page.model';
 
 export const mapMissionStatusToTranslocoTextKey = (
     status: MissionStatus
@@ -32,3 +33,16 @@ export const mapMissionStatusToStatusBadgeColors = (
         completed: '*:bg-(--completed-mission) *:border-(--completed-mission)',
         done: '*:bg-(--done-mission) *:border-(--done-mission)',
     })[status] ?? '';
+
+export const mapRoleToTranslocoTextKey = (role: UserRole): string =>
+    ({
+        customer: 'MissionDetailsPage.role.customer',
+        office: 'MissionDetailsPage.role.office',
+        pilot: 'MissionDetailsPage.role.pilot',
+    })[role] ?? '';
+
+export const mapStoreUserToUser = (user: StoreUser): User => ({
+    name: user.displayName,
+    photoUrl: user.photoURL,
+    role: user.role,
+});
