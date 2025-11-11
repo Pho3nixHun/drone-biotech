@@ -4,7 +4,6 @@ import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.mod
 import { WithTitle } from '@interfaces/with-title.interface';
 import { KeyValueXVM } from '../order-details-page/key-value/key-value.component'; // TODO needs to be relocated
 import { BadgeXVM } from '@components/badge/badge.component';
-import { StackXVM } from '@components/stack/stack.component';
 import { ButtonXVM } from '@components/button/button.model';
 import { WithLink } from '@interfaces/with-link.interface';
 import { InputTextXVM } from '@components/input-text/input-text.component';
@@ -45,16 +44,11 @@ export type MissionStatus =
     | 'completed'
     | 'done';
 
-// Stack of labeled information items
-export interface KeyValueStackXVM extends StackXVM {
-    keyValueXVMs: KeyValueXVM[];
-}
-
 // Common structure for an actionable dialog
-export interface DialogActionBase<VM = unknown> {
+export interface DialogActionBase<XVM = unknown> {
     accessConditions: { role: UserRole; status: MissionStatus }[];
     buttonXVM: ButtonXVM;
-    dialogVM: VM;
+    dialogLayoutXVM: XVM;
 }
 
 // Cancel action — visible to customer only
@@ -81,7 +75,7 @@ interface GmpMapXVM {
 
 // Frame containing aerial overview + button to open in maps
 export interface MapOverviewFrameXVM extends FrameVM {
-    overviewStackXVM: KeyValueStackXVM;
+    overviews: KeyValueXVM[];
     gmpMapXVM: GmpMapXVM;
     openInGMButtonXVM: ButtonXVM & Partial<WithLink>;
 }
@@ -97,13 +91,10 @@ interface MessageXVM extends MessageVM {
 }
 
 // Scrollable list of message items
-interface MessageStackXVM extends StackXVM {
-    messageXVMs: MessageXVM[];
-}
 
 // Log section: message list + input + submit
 interface LogFrameXVM extends FrameVM {
-    messageStackXVM: MessageStackXVM;
+    messageXVMs: MessageXVM[];
     readonlyMessageControl: boolean;
     messageInputTextXVM: InputTextXVM;
     submitButtonXVM: ButtonXVM;

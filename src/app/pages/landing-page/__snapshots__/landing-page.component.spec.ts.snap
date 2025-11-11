@@ -14,12 +14,19 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -68,12 +75,19 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
         id="products"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame1tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame1tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -108,12 +122,19 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -275,12 +296,19 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -338,12 +366,19 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
         id="products"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame1tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame1tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -403,12 +438,19 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -483,12 +525,19 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
         id="products"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame1tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame1tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -523,12 +572,19 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
         id="1"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -622,12 +678,19 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
         id="products"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame1tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame1tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -787,12 +850,19 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -971,12 +1041,19 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         id="1"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame1tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame1tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -992,12 +1069,19 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -1027,12 +1111,19 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         id="3"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame3tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame3tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -1048,12 +1139,19 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         id="4"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame4tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame4tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-product-list>
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
@@ -1069,12 +1167,19 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
         id="4"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame5tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame5tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"
@@ -1123,12 +1228,19 @@ exports[`LandingPageComponent should render 5 mixed <app-partner-logo> in order 
         id="2"
       >
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="flex flex-col gap-y-4"
         >
-          <h2>
-            frame2tit
-          </h2>
-          <!--container-->
+          <div
+            class="grid grid-cols-2"
+          >
+            <h2>
+              frame2tit
+            </h2>
+            <!--container-->
+            <div
+              class="flex justify-end"
+            />
+          </div>
           <app-partner-list>
             <div
               class="flex flex-wrap flex-row justify-center ease-in-out transition-all"

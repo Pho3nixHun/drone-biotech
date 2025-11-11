@@ -31,7 +31,7 @@ export class MissionDetailsPageService {
 
     private readonly mapOverviewFrameXVM = computed<MapOverviewFrameXVM>(() => {
         const { mapOverviewFrameXVM } = this.vm();
-        const { gmpMapXVM, overviewStackXVM } = mapOverviewFrameXVM;
+        const { gmpMapXVM, overviews } = mapOverviewFrameXVM;
         const entryPointCoordinates = gmpMapXVM.entryPoint.coordinates;
         const targetAreaCoordinates = gmpMapXVM.polygon.coordinates;
         const address = this.location.value();
@@ -83,10 +83,7 @@ export class MissionDetailsPageService {
                 ...gmpMapXVM,
                 bounds,
             },
-            overviewStackXVM: {
-                ...overviewStackXVM,
-                keyValueXVMs,
-            },
+            overviews: [...overviews, ...keyValueXVMs],
         };
     });
 

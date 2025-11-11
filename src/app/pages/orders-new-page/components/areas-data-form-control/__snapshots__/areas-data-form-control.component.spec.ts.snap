@@ -28,77 +28,16 @@ exports[`AreasDataFormControlComponent should not render the cards and total whe
   <!--container-->
   <app-area-data-dialog>
     <dialog
-      class="my-dialog"
+      class="lg:w-3/4 w-full h-full"
     >
       <!--container-->
     </dialog>
   </app-area-data-dialog>
-  <app-delete-dialog>
-    <dialog
-      class="my-dialog"
-    >
-      <app-dialog-layout
-        class="w-80 md:w-96 block"
-      >
-        <section
-          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
-        >
-          <div
-            class="flex flex-row justify-between"
-          >
-            <h2>
-               tit 
-            </h2>
-            <app-button
-              close=""
-            >
-              <button
-                class="btn flex flex-row justify-center btn-secondary btn-text"
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  close
-                </mat-icon>
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-          <div
-            class="space-y-4"
-          >
-            <p>
-              warn
-            </p>
-          </div>
-          <div
-            class="ml-auto join"
-          >
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 delete 
-                <!--container-->
-              </button>
-            </app-button>
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 cancel 
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-        </section>
-      </app-dialog-layout>
+  <app-delete-mission-dialog>
+    <dialog>
       <!--container-->
     </dialog>
-  </app-delete-dialog>
+  </app-delete-mission-dialog>
 </div>
 `;
 
@@ -345,81 +284,20 @@ exports[`AreasDataFormControlComponent should render 1 card and total when there
   <!--container-->
   <app-area-data-dialog>
     <dialog
-      class="my-dialog"
+      class="lg:w-3/4 w-full h-full"
     >
       <!--container-->
     </dialog>
   </app-area-data-dialog>
-  <app-delete-dialog>
-    <dialog
-      class="my-dialog"
-    >
-      <app-dialog-layout
-        class="w-80 md:w-96 block"
-      >
-        <section
-          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
-        >
-          <div
-            class="flex flex-row justify-between"
-          >
-            <h2>
-               tit 
-            </h2>
-            <app-button
-              close=""
-            >
-              <button
-                class="btn flex flex-row justify-center btn-secondary btn-text"
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  close
-                </mat-icon>
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-          <div
-            class="space-y-4"
-          >
-            <p>
-              warn
-            </p>
-          </div>
-          <div
-            class="ml-auto join"
-          >
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 delete 
-                <!--container-->
-              </button>
-            </app-button>
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 cancel 
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-        </section>
-      </app-dialog-layout>
+  <app-delete-mission-dialog>
+    <dialog>
       <!--container-->
     </dialog>
-  </app-delete-dialog>
+  </app-delete-mission-dialog>
 </div>
 `;
 
-exports[`AreasDataFormControlComponent should render 3 cardS and total when there are 3 missions provided 1`] = `
+exports[`AreasDataFormControlComponent should render 3 cards and total when there are 3 missions provided 1`] = `
 <div
   id="root3"
   ng-version="20.1.7"
@@ -978,77 +856,16 @@ exports[`AreasDataFormControlComponent should render 3 cardS and total when ther
   <!--container-->
   <app-area-data-dialog>
     <dialog
-      class="my-dialog"
+      class="lg:w-3/4 w-full h-full"
     >
       <!--container-->
     </dialog>
   </app-area-data-dialog>
-  <app-delete-dialog>
-    <dialog
-      class="my-dialog"
-    >
-      <app-dialog-layout
-        class="w-80 md:w-96 block"
-      >
-        <section
-          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
-        >
-          <div
-            class="flex flex-row justify-between"
-          >
-            <h2>
-               tit 
-            </h2>
-            <app-button
-              close=""
-            >
-              <button
-                class="btn flex flex-row justify-center btn-secondary btn-text"
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  close
-                </mat-icon>
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-          <div
-            class="space-y-4"
-          >
-            <p>
-              warn
-            </p>
-          </div>
-          <div
-            class="ml-auto join"
-          >
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 delete 
-                <!--container-->
-              </button>
-            </app-button>
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 cancel 
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-        </section>
-      </app-dialog-layout>
+  <app-delete-mission-dialog>
+    <dialog>
       <!--container-->
     </dialog>
-  </app-delete-dialog>
+  </app-delete-mission-dialog>
 </div>
 `;
 
@@ -1080,83 +897,22 @@ exports[`AreasDataFormControlComponent should render the template correctly with
   <!--container-->
   <app-area-data-dialog>
     <dialog
-      class="my-dialog"
+      class="lg:w-3/4 w-full h-full"
     >
       <!--container-->
     </dialog>
   </app-area-data-dialog>
-  <app-delete-dialog>
-    <dialog
-      class="my-dialog"
-    >
-      <app-dialog-layout
-        class="w-80 md:w-96 block"
-      >
-        <section
-          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
-        >
-          <div
-            class="flex flex-row justify-between"
-          >
-            <h2>
-               tit 
-            </h2>
-            <app-button
-              close=""
-            >
-              <button
-                class="btn flex flex-row justify-center btn-secondary btn-text"
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  close
-                </mat-icon>
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-          <div
-            class="space-y-4"
-          >
-            <p>
-              warn
-            </p>
-          </div>
-          <div
-            class="ml-auto join"
-          >
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 delete 
-                <!--container-->
-              </button>
-            </app-button>
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 cancel 
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-        </section>
-      </app-dialog-layout>
+  <app-delete-mission-dialog>
+    <dialog>
       <!--container-->
     </dialog>
-  </app-delete-dialog>
+  </app-delete-mission-dialog>
 </div>
 `;
 
 exports[`AreasDataFormControlComponent should set disabled state 1`] = `
 <div
-  id="root8"
+  id="root5"
   ng-version="20.1.7"
 >
   <div>
@@ -1183,76 +939,15 @@ exports[`AreasDataFormControlComponent should set disabled state 1`] = `
   <!--container-->
   <app-area-data-dialog>
     <dialog
-      class="my-dialog"
+      class="lg:w-3/4 w-full h-full"
     >
       <!--container-->
     </dialog>
   </app-area-data-dialog>
-  <app-delete-dialog>
-    <dialog
-      class="my-dialog"
-    >
-      <app-dialog-layout
-        class="w-80 md:w-96 block"
-      >
-        <section
-          class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
-        >
-          <div
-            class="flex flex-row justify-between"
-          >
-            <h2>
-               tit 
-            </h2>
-            <app-button
-              close=""
-            >
-              <button
-                class="btn flex flex-row justify-center btn-secondary btn-text"
-              >
-                <mat-icon
-                  aria-hidden="true"
-                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                  data-mat-icon-type="font"
-                  role="img"
-                >
-                  close
-                </mat-icon>
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-          <div
-            class="space-y-4"
-          >
-            <p>
-              warn
-            </p>
-          </div>
-          <div
-            class="ml-auto join"
-          >
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 delete 
-                <!--container-->
-              </button>
-            </app-button>
-            <app-button>
-              <button
-                class="btn flex flex-row justify-center btn-primary"
-              >
-                 cancel 
-                <!--container-->
-              </button>
-            </app-button>
-          </div>
-        </section>
-      </app-dialog-layout>
+  <app-delete-mission-dialog>
+    <dialog>
       <!--container-->
     </dialog>
-  </app-delete-dialog>
+  </app-delete-mission-dialog>
 </div>
 `;

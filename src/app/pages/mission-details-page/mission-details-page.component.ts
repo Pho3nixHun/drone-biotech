@@ -29,8 +29,7 @@ import {
 import { CustomerCancelDialogComponent } from './components/customer-cancel-dialog/customer-cancel-dialog.component';
 import { OfficeCancelDialogComponent } from './components/office-cancel-dialog/office-cancel-dialog.component';
 import { emptyStringValidator } from '@validators/empty-string.validator';
-
-const DOSE_PER_HA_MIN_VALUE = 1;
+import { InlineComponent } from '@components/inline/inline.component';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -59,11 +58,11 @@ const DOSE_PER_HA_MIN_VALUE = 1;
         CustomerCancelDialogComponent,
         NgTemplateOutlet,
         OfficeCancelDialogComponent,
+        InlineComponent,
     ],
     templateUrl: './mission-details-page.component.html',
 })
 export class MissionDetailsPageComponent {
-    protected readonly dosePerHaMinValue = DOSE_PER_HA_MIN_VALUE;
     protected readonly service = inject(MissionDetailsPageService);
     private readonly fb = inject(FormBuilder);
     protected readonly vm = this.service.getVM();

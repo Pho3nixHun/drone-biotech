@@ -8,172 +8,144 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
     status: 'new',
     detailsFrameXVM: {
         titleKey: 'OrderDetailsPage.details.title',
-        detailsStackXVM: {
-            orientation: 'horizontal',
-            align: 'wrap',
-            gap: 'large',
-            summaryStackXVMs: [
-                {
-                    titleKey: 'OrderDetailsPage.details.client.title',
-                    orientation: 'vertical',
-                    align: 'normal',
-                    gap: 'small',
-                    keyValueXVMs: [
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.client.contactText',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'Sarah Johnson',
-                            },
-                        },
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.client.emailText',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 's.johnson@westbrook-ag.com',
-                            },
-                        },
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.client.phoneText',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: '(555) 789-1234',
-                            },
-                        },
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.client.addressText',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: '450 Farm Road, Westbrook County',
-                            },
-                        },
-                    ],
+        clientTitleKey: 'OrderDetailsPage.details.client.title',
+        detailsTitleKey: 'OrderDetailsPage.details.summary.title',
+        clientSummaries: [
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.client.contactText',
                 },
-                {
-                    orientation: 'vertical',
-                    align: 'normal',
-                    gap: 'small',
-                    titleKey: 'OrderDetailsPage.details.summary.title',
-                    keyValueXVMs: [
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.summary.treatmentText',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'Seasonal Pest Control',
-                            },
-                        },
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.summary.averageDoseText',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.details.summary.averageDoseValue',
-                                params: { dose: 25.5 },
-                            },
-                        },
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.summary.totalSupplyText',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.details.summary.totalSupplyValue',
-                                params: { amount: 868.75 },
-                            },
-                        },
-                        {
-                            orientation: 'horizontal',
-                            gap: 'small',
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.details.summary.priceText',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.details.summary.priceValue',
-                                params: { price: 34750 },
-                            },
-                        },
-                    ],
+                valueVM: {
+                    type: 'withoutKey',
+                    value: 'Sarah Johnson',
                 },
-            ],
-        },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.client.emailText',
+                },
+                valueVM: {
+                    type: 'withoutKey',
+                    value: 's.johnson@westbrook-ag.com',
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.client.phoneText',
+                },
+                valueVM: {
+                    type: 'withoutKey',
+                    value: '(555) 789-1234',
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.client.addressText',
+                },
+                valueVM: {
+                    type: 'withoutKey',
+                    value: '450 Farm Road, Westbrook County',
+                },
+            },
+        ],
+        detailsSummaries: [
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.summary.treatmentText',
+                },
+                valueVM: {
+                    type: 'withoutKey',
+                    value: 'Seasonal Pest Control',
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.summary.averageDoseText',
+                },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.details.summary.averageDoseValue',
+                    params: { dose: 25.5 },
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.summary.totalSupplyText',
+                },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.details.summary.totalSupplyValue',
+                    params: { amount: 868.75 },
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.details.summary.priceText',
+                },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.details.summary.priceValue',
+                    params: { price: 34750 },
+                },
+            },
+        ],
     },
     overviewFrameXVM: {
         titleKey: 'OrderDetailsPage.overview.title',
-        summaryStackXVM: {
-            gap: 'none',
-            align: 'between',
-            orientation: 'horizontal',
-            keyValueXVMs: [
-                {
-                    orientation: 'vertical',
-                    gap: 'small',
-                    keyXVM: { textKey: 'OrderDetailsPage.overview.totalText' },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 'OrderDetailsPage.overview.missionValue',
-                        params: { count: 5 },
-                    },
+
+        summaries: [
+            {
+                orientation: 'vertical',
+                gap: 'small',
+                keyXVM: { textKey: 'OrderDetailsPage.overview.totalText' },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.overview.missionValue',
+                    params: { count: 5 },
                 },
-                {
-                    orientation: 'vertical',
-                    gap: 'small',
-                    keyXVM: {
-                        textKey: 'OrderDetailsPage.overview.completedText',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 'OrderDetailsPage.overview.missionValue',
-                        params: { count: 2 },
-                    },
+            },
+            {
+                orientation: 'vertical',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.overview.completedText',
                 },
-                {
-                    orientation: 'vertical',
-                    gap: 'small',
-                    keyXVM: {
-                        textKey: 'OrderDetailsPage.overview.remainingText',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 'OrderDetailsPage.overview.missionValue',
-                        params: { count: 3 },
-                    },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.overview.missionValue',
+                    params: { count: 2 },
                 },
-            ],
-        },
+            },
+            {
+                orientation: 'vertical',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.overview.remainingText',
+                },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.overview.missionValue',
+                    params: { count: 3 },
+                },
+            },
+        ],
+
         gmpMapXVM: {
             bounds: null,
             missions: [
@@ -620,48 +592,43 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         statusBadgeXVM: {
             shape: 'rounded',
         },
-        summary: {
-            align: 'wrap',
-            gap: 'large',
-            orientation: 'horizontal',
-            items: [
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
-                    keyXVM: {
-                        textKey: 'OrderDetailsPage.header.clientTextKey',
-                    },
-                    valueVM: {
-                        type: 'withoutKey',
-                        value: 'Westbrook Agricultural Holdings',
-                    },
+        summaries: [
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.header.clientTextKey',
                 },
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
-                    keyXVM: {
-                        textKey: 'OrderDetailsPage.header.creationDateTextKey',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 'OrderDetailsPage.header.creationDateValueKey',
-                        params: { date: new Date('2025-09-15') },
-                    },
+                valueVM: {
+                    type: 'withoutKey',
+                    value: 'Westbrook Agricultural Holdings',
                 },
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
-                    keyXVM: {
-                        textKey: 'OrderDetailsPage.header.totalAreaTextKey',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 'OrderDetailsPage.header.totalAreaValueKey',
-                        params: { area: 347.5 },
-                    },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.header.creationDateTextKey',
                 },
-            ],
-        },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.header.creationDateValueKey',
+                    params: { date: new Date('2025-09-15') },
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'OrderDetailsPage.header.totalAreaTextKey',
+                },
+                valueVM: {
+                    type: 'withKey',
+                    key: 'OrderDetailsPage.header.totalAreaValueKey',
+                    params: { area: 347.5 },
+                },
+            },
+        ],
     },
     actionsFrameXVM: {
         completionTemplateButtonHidden: false,
@@ -680,7 +647,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             secondary: true,
             variant: 'fill',
         },
-        confirmationDialogVM: {
+        closeOrderDialogVM: {
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
                 variant: 'ghost',
@@ -692,7 +659,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 textKey:
                     'OrderDetailsPage.actions.close.dialog.cancelButtonText',
                 secondary: true,
-                variant: 'fill',
+                variant: 'ghost',
             },
             confirmButtonXVM: {
                 textKey:

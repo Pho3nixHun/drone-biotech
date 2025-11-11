@@ -8,11 +8,9 @@
 
         <app-page-header>
             <h1>{{ t(headerXVM.titleKey) }}</h1>
-            <div class="flex flex-row gap-3" metadata>
-                <!-- Will be an inline component -->
+            <app-inline metadata>
                 <app-badge
                     [vm]="statusBadgeXVM"
-                    class="*:text-black"
                     [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
                     >{{
                         t(mapMissionStatusToTranslocoTextKey(status))
@@ -26,10 +24,9 @@
                         <app-value [vm]="creationDateKeyValueXVM.valueVM" />
                     </app-key-value>
                 </time>
-            </div>
+            </app-inline>
 
-            <div class="flex flex-row gap-3" actionGroup>
-                <!-- Inline component -->
+            <app-inline actionGroup>
                 @for (action of headerXVM.dialogActions; track $index) {
                     @switch (action.type) {
                         @case ('customerCancel') {
@@ -37,7 +34,7 @@
                                 [ngTemplateOutlet]="customerCancel"
                                 [ngTemplateOutletContext]="{
                                     buttonXVM: action.buttonXVM,
-                                    dialogVM: action.dialogVM,
+                                    dialogVM: action.dialogLayoutXVM,
                                 }"
                             />
                         }
@@ -46,13 +43,13 @@
                                 [ngTemplateOutlet]="officeCancel"
                                 [ngTemplateOutletContext]="{
                                     buttonXVM: action.buttonXVM,
-                                    dialogVM: action.dialogVM,
+                                    dialogVM: action.dialogLayoutXVM,
                                 }"
                             />
                         }
                     }
                 }
-            </div>
+            </app-inline>
         </app-page-header>
         <!-- Page header end -->
 
@@ -60,7 +57,6 @@
         @let mapOverviewFrameXVM = vm.mapOverviewFrameXVM;
         @let gmpMapXVM = mapOverviewFrameXVM.gmpMapXVM;
         @let openInGMButtonXVM = mapOverviewFrameXVM.openInGMButtonXVM;
-        @let overviewStackXVM = mapOverviewFrameXVM.overviewStackXVM;
 
         <app-frame [vm]="mapOverviewFrameXVM">
             @if (openInGMButtonXVM.link; as link) {
@@ -81,39 +77,34 @@
                     [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
                 />
 
-                <ul>
-                    <app-stack [vm]="overviewStackXVM">
-                        @for (
-                            keyValueXVM of overviewStackXVM.keyValueXVMs;
-                            track $index
-                        ) {
-                            <app-key-value [vm]="keyValueXVM">
-                                <app-key>{{
-                                    t(keyValueXVM.keyXVM.textKey)
-                                }}</app-key>
-                                <app-value
-                                    class="font-medium"
-                                    [vm]="keyValueXVM.valueVM"
-                                />
-                            </app-key-value>
-                        }
-                    </app-stack>
-                </ul>
+                <app-stack>
+                    @for (
+                        overview of vm.mapOverviewFrameXVM.overviews;
+                        track $index
+                    ) {
+                        <app-key-value [vm]="overview">
+                            <app-key>{{ t(overview.keyXVM.textKey) }}</app-key>
+                            <app-value
+                                class="font-medium"
+                                [vm]="overview.valueVM"
+                            />
+                        </app-key-value>
+                    }
+                </app-stack>
             }
         </app-frame>
         <!-- Overview end -->
 
         <!-- Log frame, contains the messages, logs about the mission -->
         @let logFrameXVM = vm.logFrameXVM;
-        @let messageStackXVM = logFrameXVM.messageStackXVM;
         @let submitButtonXVM = logFrameXVM.submitButtonXVM;
         @let submitButtonDisabled =
             messageControl.disabled ||
             messageControl.hasError('emptyString') ||
             messageControl.hasError('required');
         <app-frame [vm]="logFrameXVM">
-            <app-stack [vm]="messageStackXVM">
-                @for (messageXVM of messageStackXVM.messageXVMs; track $index) {
+            <app-stack>
+                @for (messageXVM of logFrameXVM.messageXVMs; track $index) {
                     <app-message [vm]="messageXVM">
                         <app-avatar
                             class="chat-avatar"
@@ -160,11 +151,7 @@
 
 <!-- Dialog for customer cancel start -->
 <ng-template #customerCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
-    <app-button
-        class="self-start"
-        [vm]="buttonXVM"
-        (click)="customerCancelDialog.open(dialogVM)"
-    >
+    <app-button [vm]="buttonXVM" (click)="customerCancelDialog.open(dialogVM)">
         @if (buttonXVM.textKey; as textKey) {
             {{ textKey | transloco }}
         }
@@ -180,11 +167,7 @@
 
 <!-- Dialog for office cancel start -->
 <ng-template #officeCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
-    <app-button
-        class="self-start"
-        [vm]="buttonXVM"
-        (click)="officeCancelDialog.open(dialogVM)"
-    >
+    <app-button [vm]="buttonXVM" (click)="officeCancelDialog.open(dialogVM)">
         @if (buttonXVM.textKey; as textKey) {
             {{ textKey | transloco }}
         }

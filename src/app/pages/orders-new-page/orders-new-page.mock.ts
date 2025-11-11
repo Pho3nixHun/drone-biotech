@@ -242,7 +242,7 @@ export const ordersNewPageVMDefault: OrdersNewPageVM = {
             },
         },
 
-        confirmationDialogVM: {
+        deleteMissionDialogVM: {
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
                 secondary: true,
@@ -532,7 +532,7 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
             addTitleKey: enMock.title,
         },
 
-        confirmationDialogVM: {
+        deleteMissionDialogVM: {
             closeButtonXVM: {
                 icon: MatIcon.CLOSE,
                 secondary: true,

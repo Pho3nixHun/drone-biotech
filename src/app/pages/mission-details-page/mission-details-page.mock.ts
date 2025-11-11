@@ -13,11 +13,11 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
             {
                 type: 'customerCancel',
                 accessConditions: [{ role: 'customer', status: 'new' }],
-                dialogVM: {
+                dialogLayoutXVM: {
                     confirmationTextKey:
                         'MissionDetailsPage.customerCancel.dialog.confirmationText',
                     optionalAssistiveTextKey:
-                        '"MissionDetailsPage.customerCancel.dialog.optionalText"',
+                        'MissionDetailsPage.customerCancel.dialog.optionalText',
                     reasonInputTextareaXVM: {
                         id: 'reason',
                         labelKey:
@@ -38,7 +38,7 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                             'MissionDetailsPage.customerCancel.dialog.cancelButton.text',
                         secondary: true,
                     },
-                    submitButtonXVM: {
+                    confirmButtonXVM: {
                         variant: 'fill',
                         textKey:
                             'MissionDetailsPage.customerCancel.dialog.submitButton.text',
@@ -61,7 +61,7 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                     { role: 'office', status: 'aborted' },
                     { role: 'office', status: 'in_progress' },
                 ],
-                dialogVM: {
+                dialogLayoutXVM: {
                     emptyStringAssistiveTextKey: 'Your message has no meaning.',
                     confirmationTextKey:
                         'MissionDetailsPage.officeCancel.dialog.confirmationText',
@@ -87,7 +87,7 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                             'MissionDetailsPage.officeCancel.dialog.cancelButton.text',
                         secondary: true,
                     },
-                    submitButtonXVM: {
+                    confirmButtonXVM: {
                         variant: 'fill',
                         textKey:
                             'MissionDetailsPage.officeCancel.dialog.submitButton.text',
@@ -118,64 +118,58 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
     },
     mapOverviewFrameXVM: {
         titleKey: 'MissionDetailsPage.overview.title',
-        overviewStackXVM: {
-            align: 'normal',
-            gap: 'large',
-            orientation: 'horizontal',
-            keyValueXVMs: [
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
+        overviews: [
+            {
+                orientation: 'horizontal',
+                gap: 'small',
 
-                    keyXVM: {
-                        textKey: 'Scheduled date:',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 's',
-                        params: { date: new Date() },
-                    },
+                keyXVM: {
+                    textKey: 'Scheduled date:',
                 },
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
+                valueVM: {
+                    type: 'withKey',
+                    key: 's',
+                    params: { date: new Date() },
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
 
-                    keyXVM: {
-                        textKey: 'Total dose:',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: '',
-                        params: { dose: 14 },
-                    },
+                keyXVM: {
+                    textKey: 'Total dose:',
                 },
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
+                valueVM: {
+                    type: 'withKey',
+                    key: '',
+                    params: { dose: 14 },
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
+                keyXVM: {
+                    textKey: 'Dose per ha',
+                },
+                valueVM: {
+                    type: 'withKey',
+                    key: 's',
+                    params: { dose: 2.3 },
+                },
+            },
+            {
+                orientation: 'horizontal',
+                gap: 'small',
 
-                    keyXVM: {
-                        textKey: 'Dose per ha',
-                    },
-                    valueVM: {
-                        type: 'withKey',
-                        key: 's',
-                        params: { dose: 2.3 },
-                    },
+                keyXVM: {
+                    textKey: 'Status',
                 },
-                {
-                    orientation: 'horizontal',
-                    gap: 'small',
-
-                    keyXVM: {
-                        textKey: 'Status',
-                    },
-                    valueVM: {
-                        type: 'withoutKey',
-                        value: 'Awaiting approval',
-                    },
+                valueVM: {
+                    type: 'withoutKey',
+                    value: 'Awaiting approval',
                 },
-            ],
-        },
+            },
+        ],
         openInGMButtonXVM: {
             secondary: true,
             variant: 'fill',
@@ -212,111 +206,107 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
             icon: MatIcon.SEND,
         },
         titleKey: 'MissionDetailsPage.logs.title',
-        messageStackXVM: {
-            align: 'normal',
-            orientation: 'vertical',
-            gap: 'medium',
-            messageXVMs: [
-                {
-                    type: 'receiver',
-                    role: 'office',
-                    name: 'Operations Manager',
-                    dateTimeValueKey:
-                        'MissionDetailsPage.logs.message.dateTimeValue',
-                    nameXRoleValueKey:
-                        'MissionDetailsPage.logs.message.nameXRoleValue',
-                    dateTime: new Date('2025-10-06T09:30:00'),
-                    message:
-                        'Good morning! I just received the latest shipment report. Everything looks on track.',
-                    avatarVM: {
-                        type: 'withInitials',
-                        initials: 'OM',
-                    },
+
+        messageXVMs: [
+            {
+                type: 'receiver',
+                role: 'office',
+                name: 'Operations Manager',
+                dateTimeValueKey:
+                    'MissionDetailsPage.logs.message.dateTimeValue',
+                nameXRoleValueKey:
+                    'MissionDetailsPage.logs.message.nameXRoleValue',
+                dateTime: new Date('2025-10-06T09:30:00'),
+                message:
+                    'Good morning! I just received the latest shipment report. Everything looks on track.',
+                avatarVM: {
+                    type: 'withInitials',
+                    initials: 'OM',
                 },
-                {
-                    type: 'receiver',
-                    role: 'pilot',
-                    name: 'Ben Ford',
-                    dateTimeValueKey:
-                        'MissionDetailsPage.logs.message.dateTimeValue',
-                    nameXRoleValueKey:
-                        'MissionDetailsPage.logs.message.nameXRoleValue',
-                    dateTime: new Date('2025-10-06T09:35:00'),
-                    message:
-                        'Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.',
-                    avatarVM: {
-                        type: 'withImage',
-                        imageSrc: 'assets/farming.jpg',
-                        altTextKey: 'Ben Ford',
-                    },
+            },
+            {
+                type: 'receiver',
+                role: 'pilot',
+                name: 'Ben Ford',
+                dateTimeValueKey:
+                    'MissionDetailsPage.logs.message.dateTimeValue',
+                nameXRoleValueKey:
+                    'MissionDetailsPage.logs.message.nameXRoleValue',
+                dateTime: new Date('2025-10-06T09:35:00'),
+                message:
+                    'Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.',
+                avatarVM: {
+                    type: 'withImage',
+                    imageSrc: 'assets/farming.jpg',
+                    altTextKey: 'Ben Ford',
                 },
-                {
-                    type: 'receiver',
-                    role: 'office',
-                    name: 'Operations Manager',
-                    dateTimeValueKey:
-                        'MissionDetailsPage.logs.message.dateTimeValue',
-                    nameXRoleValueKey:
-                        'MissionDetailsPage.logs.message.nameXRoleValue',
-                    dateTime: new Date('2025-10-06T09:40:00'),
-                    message:
-                        'Perfect. Please make sure to inspect the new irrigation system while you’re there.',
-                    avatarVM: {
-                        type: 'withInitials',
-                        initials: 'OM',
-                    },
+            },
+            {
+                type: 'receiver',
+                role: 'office',
+                name: 'Operations Manager',
+                dateTimeValueKey:
+                    'MissionDetailsPage.logs.message.dateTimeValue',
+                nameXRoleValueKey:
+                    'MissionDetailsPage.logs.message.nameXRoleValue',
+                dateTime: new Date('2025-10-06T09:40:00'),
+                message:
+                    'Perfect. Please make sure to inspect the new irrigation system while you’re there.',
+                avatarVM: {
+                    type: 'withInitials',
+                    initials: 'OM',
                 },
-                {
-                    type: 'sender',
-                    role: 'customer',
-                    name: 'Calvin Jackson',
-                    dateTimeValueKey:
-                        'MissionDetailsPage.logs.message.dateTimeValue',
-                    nameXRoleValueKey:
-                        'MissionDetailsPage.logs.message.nameXRoleValue',
-                    dateTime: new Date('2025-10-06T10:00:00'),
-                    message:
-                        'Hi team, I just wanted to check on the status of my last order. Any updates?',
-                    avatarVM: {
-                        type: 'withImage',
-                        imageSrc: 'assets/lepke.jpg',
-                        altTextKey: 'Calvin Jackson',
-                    },
+            },
+            {
+                type: 'sender',
+                role: 'customer',
+                name: 'Calvin Jackson',
+                dateTimeValueKey:
+                    'MissionDetailsPage.logs.message.dateTimeValue',
+                nameXRoleValueKey:
+                    'MissionDetailsPage.logs.message.nameXRoleValue',
+                dateTime: new Date('2025-10-06T10:00:00'),
+                message:
+                    'Hi team, I just wanted to check on the status of my last order. Any updates?',
+                avatarVM: {
+                    type: 'withImage',
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'Calvin Jackson',
                 },
-                {
-                    type: 'receiver',
-                    role: 'office',
-                    name: 'Field Manager',
-                    dateTimeValueKey:
-                        'MissionDetailsPage.logs.message.dateTimeValue',
-                    nameXRoleValueKey:
-                        'MissionDetailsPage.logs.message.nameXRoleValue',
-                    dateTime: new Date('2025-10-06T10:05:00'),
-                    message:
-                        'Hello Calvin, your order is being processed and should be shipped by this afternoon.',
-                    avatarVM: {
-                        type: 'withInitials',
-                        initials: 'FM',
-                    },
+            },
+            {
+                type: 'receiver',
+                role: 'office',
+                name: 'Field Manager',
+                dateTimeValueKey:
+                    'MissionDetailsPage.logs.message.dateTimeValue',
+                nameXRoleValueKey:
+                    'MissionDetailsPage.logs.message.nameXRoleValue',
+                dateTime: new Date('2025-10-06T10:05:00'),
+                message:
+                    'Hello Calvin, your order is being processed and should be shipped by this afternoon.',
+                avatarVM: {
+                    type: 'withInitials',
+                    initials: 'FM',
                 },
-                {
-                    type: 'sender',
-                    role: 'customer',
-                    name: 'Calvin Jackson',
-                    dateTimeValueKey:
-                        'MissionDetailsPage.logs.message.dateTimeValue',
-                    nameXRoleValueKey:
-                        'MissionDetailsPage.logs.message.nameXRoleValue',
-                    dateTime: new Date('2025-10-06T11:00:00'),
-                    message:
-                        'Great, thanks for the update! Looking forward to receiving it.',
-                    avatarVM: {
-                        type: 'withImage',
-                        imageSrc: 'assets/lepke.jpg',
-                        altTextKey: 'Calvin Jackson',
-                    },
+            },
+            {
+                type: 'sender',
+                role: 'customer',
+                name: 'Calvin Jackson',
+                dateTimeValueKey:
+                    'MissionDetailsPage.logs.message.dateTimeValue',
+                nameXRoleValueKey:
+                    'MissionDetailsPage.logs.message.nameXRoleValue',
+                dateTime: new Date('2025-10-06T11:00:00'),
+                message:
+                    'Great, thanks for the update! Looking forward to receiving it.',
+                avatarVM: {
+                    type: 'withImage',
+                    imageSrc: 'assets/lepke.jpg',
+                    altTextKey: 'Calvin Jackson',
                 },
-            ],
-        },
+            },
+        ],
     },
 };
