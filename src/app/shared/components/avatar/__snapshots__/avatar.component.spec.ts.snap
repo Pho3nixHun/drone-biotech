@@ -1,16 +1,38 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`AvatarComponent should render the template correctly 1`] = `
+exports[`AvatarComponent should render the template correctly with image 1`] = `
 <div
   id="root0"
   ng-version="20.1.7"
 >
-  <app-avatar>
+  <div
+    class="avatar size-10 *:rounded-full"
+  >
+    <!--container-->
+    <img
+      alt="imageAltText"
+      src="image.jpg"
+    />
+    <!--container-->
+  </div>
+</div>
+`;
+
+exports[`AvatarComponent should render the template correctly with initials 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <div
+    class="avatar size-10 *:rounded-full avatar-placeholder"
+  >
     <div
-      class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
+      class="text-purple-500 bg-purple-200"
     >
-      C
+       JB 
     </div>
-  </app-avatar>
+    <!--container-->
+    <!--container-->
+  </div>
 </div>
 `;

@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { StackComponent } from './stack.component';
+import { InlineComponent } from './inline.component';
 import { Component } from '@angular/core';
 
 @Component({
-    imports: [StackComponent],
+    imports: [InlineComponent],
     template: `
-        <app-stack>
+        <app-inline>
             <h2>Should be projected</h2>
             <p>Should be projected</p>
-        </app-stack>
+        </app-inline>
     `,
 })
 class TestHostComponent {}
-
-describe('StackComponent', () => {
+describe('InlineComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
 
@@ -21,6 +20,7 @@ describe('StackComponent', () => {
         await TestBed.configureTestingModule({
             imports: [TestHostComponent],
         }).compileComponents();
+
         fixture = TestBed.createComponent(TestHostComponent);
         compiled = fixture.debugElement.nativeElement;
     });

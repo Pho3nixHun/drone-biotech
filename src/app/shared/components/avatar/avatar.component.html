@@ -20,7 +20,7 @@
             </div>
         }
         @case ('withImage') {
-            <img [src]="vM.imageSrc" [alt]="vM.altTextKey" />
+            <img [src]="vM.imageSrc" [alt]="vM.altTextKey | transloco" />
         }
     }
 </div>

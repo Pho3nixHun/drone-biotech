@@ -24,7 +24,6 @@ exports[`InputNumberComponent should render the template correctly 1`] = `
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -32,7 +31,6 @@ exports[`InputNumberComponent should render the template correctly 1`] = `
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -89,23 +87,6 @@ exports[`InputNumberComponent should render the template correctly if everything
       <div
         class="space-x-3 flex items-center input"
       >
-        <app-input-icon
-          leading=""
-        >
-          <span
-            class="label-text my-auto flex items-center"
-          >
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-              close
-            </mat-icon>
-          </span>
-        </app-input-icon>
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -113,23 +94,6 @@ exports[`InputNumberComponent should render the template correctly if everything
           placeholder="place"
           type="number"
         />
-        <app-input-icon
-          trailing=""
-        >
-          <span
-            class="label-text my-auto flex items-center"
-          >
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-              add
-            </mat-icon>
-          </span>
-        </app-input-icon>
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -181,7 +145,6 @@ exports[`InputNumberComponent should render the template correctly if it is not 
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -189,7 +152,6 @@ exports[`InputNumberComponent should render the template correctly if it is not 
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -241,7 +203,6 @@ exports[`InputNumberComponent should render the template correctly if it is read
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -250,7 +211,6 @@ exports[`InputNumberComponent should render the template correctly if it is read
           readonly=""
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -307,7 +267,6 @@ exports[`InputNumberComponent should render the template correctly if the button
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -315,7 +274,6 @@ exports[`InputNumberComponent should render the template correctly if the button
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -367,23 +325,6 @@ exports[`InputNumberComponent should render the template correctly if the leadin
       <div
         class="space-x-3 flex items-center input"
       >
-        <app-input-icon
-          leading=""
-        >
-          <span
-            class="label-text my-auto flex items-center"
-          >
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-              add
-            </mat-icon>
-          </span>
-        </app-input-icon>
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -391,7 +332,6 @@ exports[`InputNumberComponent should render the template correctly if the leadin
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -443,7 +383,6 @@ exports[`InputNumberComponent should render the template correctly if the traili
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -451,23 +390,6 @@ exports[`InputNumberComponent should render the template correctly if the traili
           placeholder="place"
           type="number"
         />
-        <app-input-icon
-          trailing=""
-        >
-          <span
-            class="label-text my-auto flex items-center"
-          >
-            <mat-icon
-              aria-hidden="true"
-              class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-              data-mat-icon-type="font"
-              role="img"
-            >
-              add
-            </mat-icon>
-          </span>
-        </app-input-icon>
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -519,7 +441,6 @@ exports[`InputNumberComponent should render the template correctly when it has i
       <div
         class="space-x-3 flex items-center input is-invalid"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -527,7 +448,6 @@ exports[`InputNumberComponent should render the template correctly when it has i
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -579,7 +499,6 @@ exports[`InputNumberComponent should render the template correctly when it has v
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -587,7 +506,6 @@ exports[`InputNumberComponent should render the template correctly when it has v
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -639,7 +557,6 @@ exports[`InputNumberComponent should render the template if the control is disab
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -648,7 +565,6 @@ exports[`InputNumberComponent should render the template if the control is disab
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"
@@ -700,7 +616,6 @@ exports[`InputNumberComponent should render the template if the control is enabl
       <div
         class="space-x-3 flex items-center input"
       >
-        <!--container-->
         <input
           autocomplete="off"
           class="grow"
@@ -708,7 +623,6 @@ exports[`InputNumberComponent should render the template if the control is enabl
           placeholder="place"
           type="number"
         />
-        <!--container-->
       </div>
       <div
         class="grid grid-cols-2 items-baseline helper-text"

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+
 /**
- * StackComponent
+ * InlineComponent
  *
  * Type: Presentational
  *
  * Scope:
- * - Responsible for structuring the items stack via content projection.
+ * - Responsible for structuring the items inline via content projection.
  * - Manages the overall layout.
  *
  * Out-of-Scope:
@@ -13,10 +14,11 @@ import { Component } from '@angular/core';
  * - Not responsible for fetching or transforming data.
  *
  * Purpose (optional):
- * To provide a flexible and reusable stack layout.
+ * To provide a flexible and reusable inline layout.
  */
 @Component({
-    selector: 'app-stack',
-    templateUrl: './stack.component.html',
+    selector: 'app-inline',
+    imports: [],
+    templateUrl: './inline.component.html',
 })
-export class StackComponent {}
+export class InlineComponent {}
