@@ -1,7 +1,7 @@
-import { DialogVM } from '@components/dialog/dialog.component';
+import { DialogLayoutXVM } from '@components/dialog-layout/dialog-layout.component';
 import { InputTextareaXVM } from '@components/input-textarea/input-textarea.component';
 
-export interface OfficeCancelDialogVM extends DialogVM {
+export interface OfficeCancelDialogVM extends DialogLayoutXVM {
     reasonInputTextareaXVM: InputTextareaXVM;
     requiredAssistiveTextKey: string;
     emptyStringAssistiveTextKey: string;

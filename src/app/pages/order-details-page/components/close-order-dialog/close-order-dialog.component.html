@@ -1,34 +1,26 @@
-<dialog #dialog class="w-2xl" (close)="reasonControl.reset()">
+<dialog #dialog>
     @if (vm(); as vm) {
         <app-dialog-layout *transloco="let t">
             <app-page-header>
-                <h2>{{ t(vm.titleKey) }}</h2>
+                <h2>
+                    {{ t(vm.titleKey) }}
+                </h2>
                 <app-button
                     [vm]="vm.closeButtonXVM"
                     (click)="cancel()"
                     actionGroup
                 >
-                    <mat-icon>{{ vm.closeButtonXVM.icon }}</mat-icon>
+                    @if (vm.closeButtonXVM.icon; as icon) {
+                        <mat-icon>{{ icon }}</mat-icon>
+                    }
                 </app-button>
             </app-page-header>
-
-            <p>{{ t(vm.confirmationTextKey) }}</p>
-
-            <app-input-textarea
-                [vm]="vm.reasonInputTextareaXVM"
-                [formControl]="reasonControl"
-            >
-                <span leftAssistiveText>
-                    {{ t(vm.optionalAssistiveTextKey) }}
-                </span>
-            </app-input-textarea>
-
+            <p>{{ t(vm.confirmTextKey) }}</p>
             <app-button [vm]="vm.confirmButtonXVM" (click)="submit()">
                 @if (vm.confirmButtonXVM.textKey; as textKey) {
                     {{ t(textKey) }}
                 }
             </app-button>
-
             <app-button [vm]="vm.cancelButtonXVM" (click)="cancel()">
                 @if (vm.cancelButtonXVM.textKey; as textKey) {
                     {{ t(textKey) }}

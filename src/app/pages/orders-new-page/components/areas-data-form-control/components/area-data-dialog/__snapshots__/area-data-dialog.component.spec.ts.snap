@@ -6,7 +6,7 @@ exports[`AreaDataDialogComponent should be closed 1`] = `
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
   >
     <!--container-->
   </dialog>
@@ -19,36 +19,47 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
           <form
-            class="ng-untouched ng-dirty ng-invalid"
+            class="ng-untouched ng-pristine ng-invalid"
             novalidate=""
           >
             <app-input-text
@@ -63,7 +74,8 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -97,144 +109,205 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
@@ -286,7 +359,8 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -382,36 +456,47 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
           <form
-            class="ng-untouched ng-dirty ng-valid"
+            class="ng-untouched ng-pristine ng-valid"
             novalidate=""
           >
             <app-input-text
@@ -426,7 +511,8 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -460,144 +546,205 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-valid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-valid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-pristine ng-valid"
             >
@@ -649,7 +796,8 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -744,36 +892,47 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
           <form
-            class="ng-untouched ng-dirty ng-invalid"
+            class="ng-untouched ng-pristine ng-invalid"
             novalidate=""
           >
             <app-input-text
@@ -788,7 +947,8 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -827,144 +987,205 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
@@ -1016,7 +1237,8 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -1112,31 +1334,42 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
@@ -1156,7 +1389,8 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -1190,144 +1424,205 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-dirty ng-invalid"
             >
@@ -1384,7 +1679,8 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -1480,31 +1776,42 @@ exports[`AreaDataDialogComponent should render the required error assistive text
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
@@ -1524,7 +1831,8 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -1558,144 +1866,205 @@ exports[`AreaDataDialogComponent should render the required error assistive text
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
@@ -1747,7 +2116,8 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -1848,31 +2218,42 @@ exports[`AreaDataDialogComponent should render the required error assistive text
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
@@ -1892,7 +2273,8 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -1931,144 +2313,205 @@ exports[`AreaDataDialogComponent should render the required error assistive text
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
@@ -2120,7 +2563,8 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -2210,42 +2654,53 @@ exports[`AreaDataDialogComponent should render the required error assistive text
 </div>
 `;
 
-exports[`AreaDataDialogComponent should render the template correctly if it is opened and set the vm after calling the openDialog function 1`] = `
+exports[`AreaDataDialogComponent should render the template correctly if it is opened and set the vm after calling the open function 1`] = `
 <div
   id="root1"
   ng-version="20.1.7"
 >
   <dialog
-    class="my-dialog"
+    class="lg:w-3/4 w-full h-full"
     open=""
   >
-    <app-dialog-layout
-      class="xl:w-300 lg:w-230 md:w-172 sm:w-140 w-96 h-200 block"
-    >
+    <app-dialog-layout>
       <section
-        class="flex flex-col p-4 md:p-10 shadow-md bg-white space-y-4"
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
-        <div
-          class="flex flex-row justify-between"
-        >
-          <h2>
-            tit
-          </h2>
-          <app-button
-            close=""
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
           >
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+            <div
+              class="flex flex-col gap-3"
             >
-              <!--container-->
-            </button>
-          </app-button>
-        </div>
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
         <div
           class="space-y-4"
         >
           <form
-            class="ng-untouched ng-dirty ng-invalid"
+            class="ng-untouched ng-pristine ng-invalid"
             novalidate=""
           >
             <app-input-text
@@ -2260,7 +2715,8 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
                   <label
                     for="id"
                   >
-                    mission
+                     mission 
+                    <!--container-->
                   </label>
                 </span>
                 <div
@@ -2294,144 +2750,205 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
               </div>
               <!--container-->
             </app-input-text>
-            <app-map-form-control
-              class="ng-untouched ng-dirty ng-valid"
-            >
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
               <div
-                class="flex flex-col space-y-2"
+                class="flex gap-4 flex-row"
               >
-                <app-map-search-input-form-control>
-                  <div
-                    appclickoutside=""
-                    class="w-full relative"
-                  >
-                    <div
-                      class="flex flex-row w-full"
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
                     >
-                      <input
-                        appelementref=""
-                        class="w-full bg-white p-4 h-12 border-r-0 border ng-untouched ng-pristine ng-valid"
-                        placeholder="place"
-                        type="text"
-                      />
-                      <div
-                        class="h-12 bg-white flex items-center px-4 border-l-0 border"
+                      <app-tab-button
+                        class="w-full"
                       >
-                        <mat-icon
-                          aria-hidden="true"
-                          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                          data-mat-icon-type="font"
-                          role="img"
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
                         >
-                          search
-                        </mat-icon>
-                      </div>
-                    </div>
-                    <!--container-->
-                  </div>
-                  <!--container-->
-                </app-map-search-input-form-control>
-                <div
-                  appelementref=""
-                  style="height: 600px;"
-                />
-                <app-map-area-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
-                >
-                  <div
-                    class="flex flex-col bg-white"
-                  >
-                    <app-input-textarea>
-                      <div
-                        class="my-2"
-                      >
-                        <span
-                          class="flex flex-row justify-between items-end label-text"
-                        >
-                          <label
-                            for="id"
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
                           >
-                            coords
-                          </label>
-                        </span>
-                        <textarea
-                          autocomplete="off"
-                          class="textarea min-h-40"
-                          id="id"
-                          placeholder="coordsPlace"
-                        />
-                        <div
-                          class="grid grid-cols-2 items-baseline helper-text"
-                        >
-                          <span />
-                          <span
-                            class="text-right"
-                          />
-                        </div>
-                      </div>
-                      <!--container-->
-                    </app-input-textarea>
-                    <div
-                      class="join"
-                    >
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text"
-                        >
-                           addButton 
-                          <!--container-->
+                            
+                          </mat-icon>
+                           add
                         </button>
-                      </app-button>
-                      <app-button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
                         <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
                         >
-                           editButton 
-                          <!--container-->
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
                         </button>
-                      </app-button>
-                      <app-button>
-                        <button
-                          class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                          disabled=""
-                        >
-                           deleteButton 
-                          <!--container-->
-                        </button>
-                      </app-button>
-                    </div>
-                  </div>
-                  <!--container-->
-                </app-map-area-select-form-control>
-                <app-map-point-select-form-control
-                  class="ng-untouched ng-dirty ng-invalid"
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
                 >
-                  <div
-                    class="join"
-                  >
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text"
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-150 block"
                       >
-                         add 
-                        <!--container-->
-                      </button>
-                    </app-button>
-                    <app-button>
-                      <button
-                        class="btn flex flex-row justify-center btn-secondary btn-text btn-disabled"
-                        disabled=""
+                        <div
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="join join-vertical ml-2.5 mb-10"
+                          >
+                            <!--container-->
+                            <app-button>
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <app-button
+                              class="hidden"
+                            >
+                              <button
+                                class="btn flex flex-row justify-center btn-primary"
+                              >
+                                <mat-icon
+                                  aria-hidden="true"
+                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                  data-mat-icon-type="font"
+                                  role="img"
+                                >
+                                  
+                                </mat-icon>
+                              </button>
+                            </app-button>
+                            <!--container-->
+                          </div>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
                       >
-                         delete 
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                            >
+                              
+                            </label>
+                          </span>
+                          <textarea
+                            autocomplete="off"
+                            class="textarea min-h-40"
+                            id=""
+                            placeholder=""
+                          />
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
                         <!--container-->
-                      </button>
-                    </app-button>
-                  </div>
-                  <!--container-->
-                </app-map-point-select-form-control>
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div
+                          class="my-2"
+                        >
+                          <span
+                            class="flex flex-row justify-between items-end label-text"
+                          >
+                            <label
+                              for=""
+                              hidden=""
+                            >
+                              <!--container-->
+                            </label>
+                          </span>
+                          <div
+                            class="space-x-3 flex items-center input"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="grow"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2 items-baseline helper-text"
+                          >
+                            <span>
+                              <!--container-->
+                            </span>
+                            <span
+                              class="text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
               </div>
-            </app-map-form-control>
+            </app-tabs>
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
@@ -2483,7 +3000,8 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
                   <label
                     for="id"
                   >
-                    applicationDate
+                     applicationDate 
+                    <!--container-->
                   </label>
                 </span>
                 <div

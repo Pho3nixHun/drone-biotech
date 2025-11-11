@@ -4,14 +4,17 @@ import { Component } from '@angular/core';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { ButtonComponent } from '@components/button/button.component';
 import { ButtonXVM } from '@components/button/button.model';
+import { PageHeaderComponent } from '@components/page-header/page-header.component';
 
 const en = { title: 'value' };
 
 @Component({
-    imports: [DialogLayoutComponent, ButtonComponent],
+    imports: [DialogLayoutComponent, ButtonComponent, PageHeaderComponent],
     template: `
         <app-dialog-layout>
-            <app-button close [vm]="button1"></app-button>
+            <app-page-header>
+                <app-button actionGroup [vm]="button1"></app-button>
+            </app-page-header>
             <app-button [vm]="button2"></app-button>
             <app-button [vm]="button3"></app-button>
             <div>Should be projected</div>

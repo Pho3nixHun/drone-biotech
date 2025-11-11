@@ -1,11 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { OfficeCancelDialogComponent } from './office-cancel-dialog.component';
+import { CloseOrderDialogComponent } from './close-order-dialog.component';
+import { CloseOrderDialogVM } from './close-order-dialog.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { OfficeCancelDialogVM } from './office-cancel-dialog.model';
 
-describe('OfficeCancelDialogComponent', () => {
-    let component: OfficeCancelDialogComponent;
-    let fixture: ComponentFixture<OfficeCancelDialogComponent>;
+describe('CloseOrderDialogComponent', () => {
+    let component: CloseOrderDialogComponent;
+    let fixture: ComponentFixture<CloseOrderDialogComponent>;
     let compiled: HTMLElement;
 
     beforeEach(async () => {
@@ -17,7 +18,7 @@ describe('OfficeCancelDialogComponent', () => {
         });
         await TestBed.configureTestingModule({
             imports: [
-                OfficeCancelDialogComponent,
+                CloseOrderDialogComponent,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {
@@ -28,16 +29,16 @@ describe('OfficeCancelDialogComponent', () => {
             ],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(OfficeCancelDialogComponent);
+        fixture = TestBed.createComponent(CloseOrderDialogComponent);
         component = fixture.componentInstance;
         compiled = fixture.debugElement.nativeElement;
     });
 
     // Unit testing
-    it('should open the dialog and set the vm', () => {
+    it('should open the dialog and set vm', () => {
         // Arrange
         const dialogSpy = jest.spyOn(
-            component['myDialog']().nativeElement,
+            component['dialog']().nativeElement,
             'showModal'
         );
 
@@ -50,44 +51,36 @@ describe('OfficeCancelDialogComponent', () => {
     });
 
     // Unit testing
-    it('should emit confirm with trimmed reason and close dialog', () => {
+    it('should emit submit and close dialog', () => {
         // Arrange
         const emitSpy = jest.spyOn(component.response, 'emit');
         const closeSpy = jest.spyOn(
-            component['myDialog']().nativeElement,
+            component['dialog']().nativeElement,
             'close'
         );
-        component['reasonControl'].setValue('  Reason text  ');
 
         // Act
         component['submit']();
 
         // Assert
-        expect(emitSpy).toHaveBeenCalledWith({
-            type: 'confirm',
-            reason: 'Reason text',
-        });
+        expect(emitSpy).toHaveBeenCalledWith({ type: 'submit' });
         expect(closeSpy).toHaveBeenCalled();
     });
 
     // Unit testing
-    it('should emit confirm with null reason if control is empty', () => {
+    it('should emit cancel and close dialog', () => {
         // Arrange
         const emitSpy = jest.spyOn(component.response, 'emit');
         const closeSpy = jest.spyOn(
-            component['myDialog']().nativeElement,
+            component['dialog']().nativeElement,
             'close'
         );
-        component['reasonControl'].setValue('   ');
 
         // Act
-        component['submit']();
+        component['cancel']();
 
         // Assert
-        expect(emitSpy).toHaveBeenCalledWith({
-            type: 'confirm',
-            reason: null,
-        });
+        expect(emitSpy).toHaveBeenCalledWith({ type: 'cancel' });
         expect(closeSpy).toHaveBeenCalled();
     });
 
@@ -107,28 +100,14 @@ describe('OfficeCancelDialogComponent', () => {
 const enMock = {
     title: 'tit',
     confirmText: 'confirm',
-    emptyStringAssistiveText: 'empty',
-    reasonLabel: 'reason',
-    placeHolder: 'place',
-    requiredAssistiveText: 'required',
+    confirmButtonText: 'conf',
+    closeButtonText: 'close',
 };
 
-const vm: OfficeCancelDialogVM = {
+const vm: CloseOrderDialogVM = {
     titleKey: enMock.title,
-    cancelButtonXVM: {
-        variant: 'fill',
-    },
-    closeButtonXVM: {
-        variant: 'fill',
-    },
-    confirmationTextKey: enMock.confirmText,
-    confirmButtonXVM: { variant: 'fill' },
-    emptyStringAssistiveTextKey: enMock.emptyStringAssistiveText,
-    reasonInputTextareaXVM: {
-        id: 'id',
-        labelKey: enMock.reasonLabel,
-        placeholderKey: enMock.placeHolder,
-        readonly: false,
-    },
-    requiredAssistiveTextKey: enMock.requiredAssistiveText,
+    confirmTextKey: enMock.title,
+    cancelButtonXVM: { variant: 'fill', textKey: enMock.closeButtonText },
+    closeButtonXVM: { variant: 'fill', icon: MatIcon.CLOSE },
+    confirmButtonXVM: { variant: 'fill', textKey: enMock.confirmButtonText },
 };
