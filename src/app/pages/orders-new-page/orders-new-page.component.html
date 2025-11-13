@@ -1,129 +1,126 @@
-@if (vm(); as vm) {
-    <app-page-layout>
-        <app-frame [vm]="vm" *transloco="let t">
-            <form class="sm:p-8 sm:shadow-md" [formGroup]="formGroup">
-                <!-- Internal order number input start -->
-                @let hasInternalOrderNumberRequiredError =
-                    formGroup.controls.internalOrderNumber.dirty &&
-                    formGroup.controls.internalOrderNumber.hasError('required');
+@let vM = vm();
+
+<app-page-layout *transloco="let t">
+    <app-frame [vm]="vM">
+        <form class="sm:p-8 sm:shadow-md" [formGroup]="formGroup">
+            <!-- Internal order number input start -->
+            @let hasInternalOrderNumberRequiredError =
+                formGroup.controls.internalOrderNumber.dirty &&
+                formGroup.controls.internalOrderNumber.hasError('required');
+            <app-input-text
+                [vm]="vM.internalOrderNumberInputTextXVM"
+                [invalid]="hasInternalOrderNumberRequiredError"
+                [formControl]="formGroup.controls.internalOrderNumber"
+            >
+                @if (hasInternalOrderNumberRequiredError) {
+                    <span leftAssistiveText>{{
+                        t(vM.requiredAssistiveTextKey)
+                    }}</span>
+                }
+            </app-input-text>
+            <!-- Internal order number input end -->
+
+            <div [formGroup]="formGroup.controls.contact">
+                <!-- Name input start -->
+                @let hasNameRequiredError =
+                    formGroup.controls.contact.controls.name.dirty &&
+                    formGroup.controls.contact.controls.name.hasError(
+                        'required'
+                    );
                 <app-input-text
-                    [vm]="vm.internalOrderNumberInputTextXVM"
-                    [invalid]="hasInternalOrderNumberRequiredError"
-                    [formControl]="formGroup.controls.internalOrderNumber"
+                    [vm]="vM.nameInputTextXVM"
+                    [invalid]="hasNameRequiredError"
+                    [formControl]="formGroup.controls.contact.controls.name"
                 >
-                    @if (hasInternalOrderNumberRequiredError) {
+                    @if (hasNameRequiredError) {
                         <span leftAssistiveText>{{
-                            t(vm.requiredAssistiveTextKey)
+                            t(vM.requiredAssistiveTextKey)
                         }}</span>
                     }
                 </app-input-text>
-                <!-- Internal order number input end -->
+                <!-- Name input end -->
 
-                <div [formGroup]="formGroup.controls.contact">
-                    <!-- Name input start -->
-                    @let hasNameRequiredError =
-                        formGroup.controls.contact.controls.name.dirty &&
-                        formGroup.controls.contact.controls.name.hasError(
-                            'required'
-                        );
-                    <app-input-text
-                        [vm]="vm.nameInputTextXVM"
-                        [invalid]="hasNameRequiredError"
-                        [formControl]="formGroup.controls.contact.controls.name"
-                    >
-                        @if (hasNameRequiredError) {
-                            <span leftAssistiveText>{{
-                                t(vm.requiredAssistiveTextKey)
-                            }}</span>
-                        }
-                    </app-input-text>
-                    <!-- Name input end -->
-
-                    <!-- Phone number input start -->
-                    @let hasPhoneNumberRequiredError =
-                        formGroup.controls.contact.controls.phoneNumber.dirty &&
-                        formGroup.controls.contact.controls.phoneNumber.hasError(
-                            'required'
-                        );
-                    <app-input-text
-                        [vm]="vm.phoneNumberInputTextXVM"
-                        [invalid]="hasPhoneNumberRequiredError"
-                        [formControl]="
-                            formGroup.controls.contact.controls.phoneNumber
-                        "
-                    >
-                        @if (hasPhoneNumberRequiredError) {
-                            <span leftAssistiveText>{{
-                                t(vm.requiredAssistiveTextKey)
-                            }}</span>
-                        }
-                    </app-input-text>
-                    <!-- Phone number input end -->
-
-                    <!-- Email input start -->
-                    @let hasEmailRequiredError =
-                        formGroup.controls.contact.controls.email.dirty &&
-                        formGroup.controls.contact.controls.email.hasError(
-                            'required'
-                        );
-                    <app-input-text
-                        [vm]="vm.emailInputTextXVM"
-                        [invalid]="hasEmailRequiredError"
-                        [formControl]="
-                            formGroup.controls.contact.controls.email
-                        "
-                    >
-                        @if (hasEmailRequiredError) {
-                            <span leftAssistiveText>{{
-                                t(vm.requiredAssistiveTextKey)
-                            }}</span>
-                        }
-                    </app-input-text>
-                    <!-- Email input end -->
-                </div>
-
-                <!-- End customer input start-->
-                @let hasEndCustomerRequiredError =
-                    formGroup.controls.endCustomer.dirty &&
-                    formGroup.controls.endCustomer.hasError('required');
+                <!-- Phone number input start -->
+                @let hasPhoneNumberRequiredError =
+                    formGroup.controls.contact.controls.phoneNumber.dirty &&
+                    formGroup.controls.contact.controls.phoneNumber.hasError(
+                        'required'
+                    );
                 <app-input-text
-                    [vm]="vm.endCustomerInputTextXVM"
-                    [invalid]="hasEndCustomerRequiredError"
-                    [formControl]="formGroup.controls.endCustomer"
+                    [vm]="vM.phoneNumberInputTextXVM"
+                    [invalid]="hasPhoneNumberRequiredError"
+                    [formControl]="
+                        formGroup.controls.contact.controls.phoneNumber
+                    "
                 >
-                    @if (hasEndCustomerRequiredError) {
+                    @if (hasPhoneNumberRequiredError) {
                         <span leftAssistiveText>{{
-                            t(vm.requiredAssistiveTextKey)
+                            t(vM.requiredAssistiveTextKey)
                         }}</span>
                     }
                 </app-input-text>
-                <!-- End customer input end-->
+                <!-- Phone number input end -->
 
-                <!-- Missions form control start -->
-                @let hasMissionsMinArrayLengthError =
-                    formGroup.controls.missions.touched &&
-                    formGroup.controls.missions.hasError('minArrayLength');
-
-                <app-areas-data-form-control
-                    #areasDataFormControl
-                    [vm]="vm.areasDataFormControlVM"
-                    [invalid]="hasMissionsMinArrayLengthError"
-                    [formControl]="formGroup.controls.missions"
-                />
-
-                <!-- Missions form control end -->
-
-                <app-button
-                    class="*:btn-block"
-                    [vm]="vm.submitButtonXVM"
-                    [disabled]="formGroup.invalid"
-                    (click)="submitForm()"
+                <!-- Email input start -->
+                @let hasEmailRequiredError =
+                    formGroup.controls.contact.controls.email.dirty &&
+                    formGroup.controls.contact.controls.email.hasError(
+                        'required'
+                    );
+                <app-input-text
+                    [vm]="vM.emailInputTextXVM"
+                    [invalid]="hasEmailRequiredError"
+                    [formControl]="formGroup.controls.contact.controls.email"
                 >
-                    @if (vm.submitButtonXVM.textKey; as textKey) {
-                        {{ t(textKey) }}
+                    @if (hasEmailRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vM.requiredAssistiveTextKey)
+                        }}</span>
                     }
-                </app-button>
-            </form>
-        </app-frame>
-    </app-page-layout>
-}
+                </app-input-text>
+                <!-- Email input end -->
+            </div>
+
+            <!-- End customer input start-->
+            @let hasEndCustomerRequiredError =
+                formGroup.controls.endCustomer.dirty &&
+                formGroup.controls.endCustomer.hasError('required');
+            <app-input-text
+                [vm]="vM.endCustomerInputTextXVM"
+                [invalid]="hasEndCustomerRequiredError"
+                [formControl]="formGroup.controls.endCustomer"
+            >
+                @if (hasEndCustomerRequiredError) {
+                    <span leftAssistiveText>{{
+                        t(vM.requiredAssistiveTextKey)
+                    }}</span>
+                }
+            </app-input-text>
+            <!-- End customer input end-->
+
+            <!-- Missions form control start -->
+            @let hasMissionsMinArrayLengthError =
+                formGroup.controls.missions.touched &&
+                formGroup.controls.missions.hasError('minArrayLength');
+
+            <app-areas-data-form-control
+                [vm]="vM.areasDataFormControlVM"
+                [invalid]="hasMissionsMinArrayLengthError"
+                [formControl]="formGroup.controls.missions"
+            />
+
+            <!-- Missions form control end -->
+
+            <app-button
+                class="*:btn-block"
+                [vm]="vM.submitButtonXVM"
+                [disabled]="formGroup.invalid"
+                (click)="submitForm()"
+            >
+                @if (vM.submitButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
+                }
+            </app-button>
+        </form>
+    </app-frame>
+</app-page-layout>

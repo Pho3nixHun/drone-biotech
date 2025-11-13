@@ -1,6 +1,5 @@
 import { WithLink } from '@interfaces/with-link.interface';
 import { ButtonXVM } from '@components/button/button.model';
-import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
 import { BadgeXVM } from '@components/badge/badge.component';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
 import { FrameVM } from '@components/frame/frame.model';
@@ -10,8 +9,8 @@ import { AvatarVM } from '@components/avatar/avatar.model';
 import { KeyValueXVM } from './key-value/key-value.component';
 import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
-import { StackXVM } from '@components/stack/stack.component';
 import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
+import { CloseOrderDialogVM } from './components/close-order-dialog/close-order-dialog.model';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -32,7 +31,7 @@ interface ActionsFrameXVM extends FrameVM {
     completionTemplateButtonXVM: ButtonXVM & WithLink;
     closeOrderButtonHidden: boolean;
     closeOrderButtonXVM: ButtonXVM;
-    confirmationDialogVM: ConfirmationDialogVM;
+    closeOrderDialogVM: CloseOrderDialogVM;
 }
 
 interface ChatFrameXVM extends FrameVM {
@@ -83,26 +82,16 @@ interface GmpMapXVM {
 
 type StatusBadgeXVM = Omit<BadgeXVM, 'textKey'>;
 
-interface SummaryHeader extends StackXVM {
-    items: KeyValueXVM[];
-}
 interface HeaderXVM {
     orderId: string;
     titleKey: string;
     statusBadgeXVM: StatusBadgeXVM;
     addNewMissionsButtonXVM: ButtonXVM & WithRouterLink;
     addNewMissionEnabled: boolean;
-    summary: SummaryHeader;
+    summaries: KeyValueXVM[];
 }
 
 export type OrderStatus = 'active' | 'in-progress' | 'done' | 'new' | 'closed';
-
-interface DetailsStackXVM extends StackXVM {
-    summaryStackXVMs: SummaryStackXVM[];
-}
-interface DetailsFrameXVM extends FrameVM {
-    detailsStackXVM: DetailsStackXVM;
-}
 
 export interface OrderDetailsPageVM {
     user: User | null;
@@ -115,12 +104,16 @@ export interface OrderDetailsPageVM {
     detailsFrameXVM: DetailsFrameXVM;
 }
 
-interface SummaryStackXVM extends StackXVM {
-    keyValueXVMs: KeyValueXVM[];
+interface DetailsFrameXVM extends FrameVM {
+    clientTitleKey: string;
+    detailsTitleKey: string;
+    clientSummaries: KeyValueXVM[];
+    detailsSummaries: KeyValueXVM[];
 }
+
 interface OverviewFrameXVM extends FrameVM {
     gmpMapXVM: OverviewGmpMapXVM;
-    summaryStackXVM: SummaryStackXVM;
+    summaries: KeyValueXVM[];
 }
 interface OverviewGmpMapXVM {
     bounds: google.maps.LatLngBounds | null;

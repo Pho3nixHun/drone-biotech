@@ -11,10 +11,7 @@
                 [disabled]="disabled()"
                 [class]="{ 'is-invalid': invalid() }"
                 (click)="
-                    !disabled() && [
-                        areaDataDialog.area.set(undefined),
-                        areaDataDialog.dialog().nativeElement.showModal(),
-                    ]
+                    !disabled() && [areaDataDialog.open(vM.areaDataDialogVM)]
                 "
             >
                 @if (vM.addButtonXVM.icon; as icon) {
@@ -104,14 +101,7 @@
                     </app-key-value>
                     <app-button
                         [vm]="vM.editButtonXVM"
-                        (click)="
-                            [
-                                areaDataDialog.area.set(area),
-                                areaDataDialog
-                                    .dialog()
-                                    .nativeElement.showModal(),
-                            ]
-                        "
+                        (click)="areaDataDialog.open(vM.areaDataDialogVM, area)"
                     >
                         @if (vM.editButtonXVM.icon; as icon) {
                             <mat-icon>{{ icon }}</mat-icon>
@@ -119,7 +109,12 @@
                     </app-button>
                     <app-button
                         [vm]="vM.deleteButtonXVM"
-                        (click)="confirmationDialog.openDialog(area.id)"
+                        (click)="
+                            deleteMissionDialog.open(
+                                vM.deleteMissionDialogVM,
+                                area.id
+                            )
+                        "
                     >
                         @if (vM.deleteButtonXVM.icon; as icon) {
                             <mat-icon>{{ icon }}</mat-icon>
@@ -176,12 +171,10 @@
 
 <app-area-data-dialog
     #areaDataDialog
-    [vm]="vM.areaDataDialogVM"
     (response)="onAddMissionResponse($event)"
 />
 
-<app-delete-dialog
-    #confirmationDialog
-    [vm]="vM.confirmationDialogVM"
+<app-delete-mission-dialog
+    #deleteMissionDialog
     (response)="onDeleteMissionResponse($event)"
 />

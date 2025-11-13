@@ -14,6 +14,7 @@ export class KeyValueComponent {
 
 interface KeyValueVM {
     orientation: 'horizontal' | 'vertical';
+    gap: 'small' | 'medium' | 'large' | 'none';
 }
 
 export interface KeyValueXVM extends KeyValueVM {

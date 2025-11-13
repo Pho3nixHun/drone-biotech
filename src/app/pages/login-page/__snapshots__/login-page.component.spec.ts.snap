@@ -54,7 +54,8 @@ exports[`LoginPageComponent should not render the error message if there is no e
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -93,7 +94,8 @@ exports[`LoginPageComponent should not render the error message if there is no e
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -197,7 +199,8 @@ exports[`LoginPageComponent should render template correctly with the defer bloc
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -236,7 +239,8 @@ exports[`LoginPageComponent should render template correctly with the defer bloc
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -344,7 +348,8 @@ exports[`LoginPageComponent should render the error message if an error is provi
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -383,7 +388,8 @@ exports[`LoginPageComponent should render the error message if an error is provi
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -478,7 +484,8 @@ exports[`LoginPageComponent should render the required assistive text inside the
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -522,7 +529,8 @@ exports[`LoginPageComponent should render the required assistive text inside the
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -617,7 +625,8 @@ exports[`LoginPageComponent should render the required assistive text inside the
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -656,7 +665,8 @@ exports[`LoginPageComponent should render the required assistive text inside the
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -756,7 +766,8 @@ exports[`LoginPageComponent should render the template correctly if the button d
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -795,7 +806,8 @@ exports[`LoginPageComponent should render the template correctly if the button d
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -898,7 +910,8 @@ exports[`LoginPageComponent should render the template correctly if the button h
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -937,7 +950,8 @@ exports[`LoginPageComponent should render the template correctly if the button h
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1041,7 +1055,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1080,7 +1095,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1183,7 +1199,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1222,7 +1239,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1324,7 +1342,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1363,7 +1382,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1465,7 +1485,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1504,7 +1525,8 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1606,7 +1628,8 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                     <label
                       for="email"
                     >
-                      elab
+                       elab 
+                      <!--container-->
                     </label>
                   </span>
                   <div
@@ -1645,7 +1668,8 @@ exports[`LoginPageComponent should render the template when there is a VM provid
                     <label
                       for="password"
                     >
-                      plab
+                       plab 
+                      <!--container-->
                     </label>
                   </span>
                   <div

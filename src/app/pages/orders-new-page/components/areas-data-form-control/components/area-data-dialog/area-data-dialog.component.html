@@ -1,391 +1,406 @@
-@let vM = vm();
 <dialog
     #dialog
-    *transloco="let t"
     class="lg:w-3/4 w-full h-full"
-    (close)="
-        [
-            area.set(undefined),
-            formGroup.reset(),
-            textFormGroup.reset(),
-            polygonWindow.close(),
-        ]
-    "
+    (close)="[area.set(undefined), formGroup.reset(), textFormGroup.reset()]"
 >
-    <app-dialog-layout>
-        <h2>
-            {{ t(area() ? vM.editTitleKey : vM.addTitleKey) }}
-        </h2>
-        <!-- Close button start -->
-        <app-button
-            close
-            [vm]="vM.closeButtonXVM"
-            (click)="[response.emit({ type: 'cancel' }), dialog.close()]"
-        >
-            <mat-icon>{{ vM.closeButtonXVM.icon }}</mat-icon>
-        </app-button>
-        <!-- Close button end -->
+    @if (vm(); as vm) {
+        <app-dialog-layout *transloco="let t">
+            <app-page-header>
+                <h2>
+                    {{ t(area() ? vm.editTitleKey : vm.addTitleKey) }}
+                </h2>
+                <!-- Close button start -->
+                <app-button
+                    actionGroup
+                    [vm]="vm.closeButtonXVM"
+                    (click)="
+                        [response.emit({ type: 'cancel' }), dialog.close()]
+                    "
+                >
+                    <mat-icon>{{ vm.closeButtonXVM.icon }}</mat-icon>
+                </app-button>
+                <!-- Close button end -->
+            </app-page-header>
 
-        <form [formGroup]="formGroup">
-            <!-- Mission name input start -->
-            @let hasMissionNameMaxLengthError =
-                formGroup.controls.name.hasError('maxlength');
+            <form [formGroup]="formGroup">
+                <!-- Mission name input start -->
+                @let hasMissionNameMaxLengthError =
+                    formGroup.controls.name.hasError('maxlength');
 
-            @let hasMissionNameRequiredError =
-                formGroup.controls.name.hasError('required') &&
-                formGroup.controls.name.dirty;
-            <app-input-text
-                [vm]="vM.missionNameInputTextXVM"
-                [invalid]="
-                    hasMissionNameMaxLengthError || hasMissionNameRequiredError
-                "
-                [formControl]="formGroup.controls.name"
-            >
-                @if (hasMissionNameMaxLengthError) {
-                    <span leftAssistiveText>{{
+                @let hasMissionNameRequiredError =
+                    formGroup.controls.name.hasError('required') &&
+                    formGroup.controls.name.dirty;
+                <app-input-text
+                    [vm]="vm.missionNameInputTextXVM"
+                    [invalid]="
+                        hasMissionNameMaxLengthError ||
+                        hasMissionNameRequiredError
+                    "
+                    [formControl]="formGroup.controls.name"
+                >
+                    @if (hasMissionNameMaxLengthError) {
+                        <span leftAssistiveText>{{
+                            t(
+                                vm.missionNameMaxCharactersAllowedAssistiveTextValueKey,
+                                {
+                                    max: missionNameMaxLength,
+                                }
+                            )
+                        }}</span>
+                    }
+                    @if (hasMissionNameRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vm.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                    <span rightAssistiveText>{{
                         t(
-                            vM.missionNameMaxCharactersAllowedAssistiveTextValueKey,
+                            vm.missionNameMaxCharactersCounterAssistiveTextValueKey,
                             {
+                                current:
+                                    formGroup.controls.name.value?.length ?? 0,
                                 max: missionNameMaxLength,
                             }
                         )
                     }}</span>
-                }
-                @if (hasMissionNameRequiredError) {
-                    <span leftAssistiveText>{{
-                        t(vM.requiredAssistiveTextKey)
-                    }}</span>
-                }
-                <span rightAssistiveText>{{
-                    t(vM.missionNameMaxCharactersCounterAssistiveTextValueKey, {
-                        current: formGroup.controls.name.value?.length ?? 0,
-                        max: missionNameMaxLength,
-                    })
-                }}</span>
-            </app-input-text>
-            <!-- Mission name input end -->
+                </app-input-text>
+                <!-- Mission name input end -->
 
-            <!-- Target area form control start -->
-            <app-advanced-marker-form-control
-                #entryPointFormControl
-                [formControl]="formGroup.controls.entryPoint"
-            />
-            <!-- Target area form control end -->
+                <!-- Target area form control start -->
+                <app-advanced-marker-form-control
+                    #entryPointFormControl
+                    [formControl]="formGroup.controls.entryPoint"
+                />
+                <!-- Target area form control end -->
 
-            <!-- Entry point form control start -->
-            <app-polygon-form-control
-                #targetAreaFormControl
-                [formControl]="formGroup.controls.targetArea"
-            />
-            <!-- Entry point form control end -->
+                <!-- Entry point form control start -->
+                <app-polygon-form-control
+                    #targetAreaFormControl
+                    [formControl]="formGroup.controls.targetArea"
+                />
+                <!-- Entry point form control end -->
 
-            <!-- Tabs start -->
-            @let visualTabItemVM = vM.mapTabsXVM.visualTabItemVM;
-            @let textTabItemVM = vM.mapTabsXVM.textTabItemVM;
-            <app-tabs [vm]="vM.mapTabsXVM" [appTabs]="vM.mapTabsXVM.index">
-                <!-- Tabs nav start -->
-                <app-tabs-nav>
-                    <!-- Visual editor tab button start -->
-                    <app-tab-button
-                        class="w-full"
-                        [dataTabId]="visualTabItemVM.id"
-                        (click)="
-                            [
-                                setMapTargetAreaFromText(),
-                                setMapEntryPointFromText(),
-                            ]
-                        "
-                        ><mat-icon>{{
-                            visualTabItemVM.tabButtonXVM.icon
-                        }}</mat-icon>
-                        {{
-                            t(visualTabItemVM.tabButtonXVM.textKey)
-                        }}</app-tab-button
-                    >
-                    <!-- Visual editor tab button end -->
+                <!-- Tabs start -->
+                @let visualTabItemVM = vm.mapTabsXVM.visualTabItemVM;
+                @let textTabItemVM = vm.mapTabsXVM.textTabItemVM;
+                <app-tabs [vm]="vm.mapTabsXVM" [appTabs]="vm.mapTabsXVM.index">
+                    <!-- Tabs nav start -->
+                    <app-tabs-nav>
+                        <!-- Visual editor tab button start -->
+                        <app-tab-button
+                            class="w-full"
+                            [dataTabId]="visualTabItemVM.id"
+                            (click)="
+                                [
+                                    setMapTargetAreaFromText(),
+                                    setMapEntryPointFromText(),
+                                ]
+                            "
+                            ><mat-icon>{{
+                                visualTabItemVM.tabButtonXVM.icon
+                            }}</mat-icon>
+                            {{
+                                t(visualTabItemVM.tabButtonXVM.textKey)
+                            }}</app-tab-button
+                        >
+                        <!-- Visual editor tab button end -->
 
-                    <!-- Text editor tab button start -->
-                    <app-tab-button
-                        class="w-full"
-                        [dataTabId]="textTabItemVM.id"
-                        (click)="
-                            [
-                                setTextEntryPointFromValue(
-                                    formGroup.controls.entryPoint.value
-                                ),
-                                setTextTargetAreaFromValue(
-                                    formGroup.controls.targetArea.value
-                                ),
-                            ]
-                        "
-                    >
-                        <mat-icon>{{
-                            textTabItemVM.tabButtonXVM.icon
-                        }}</mat-icon>
-                        {{
-                            t(textTabItemVM.tabButtonXVM.textKey)
-                        }}</app-tab-button
-                    >
-                    <!-- Text editor tab button end -->
-                </app-tabs-nav>
-                <!-- Tabs nav end -->
+                        <!-- Text editor tab button start -->
+                        <app-tab-button
+                            class="w-full"
+                            [dataTabId]="textTabItemVM.id"
+                            (click)="
+                                [
+                                    setTextEntryPointFromValue(
+                                        formGroup.controls.entryPoint.value
+                                    ),
+                                    setTextTargetAreaFromValue(
+                                        formGroup.controls.targetArea.value
+                                    ),
+                                ]
+                            "
+                        >
+                            <mat-icon>{{
+                                textTabItemVM.tabButtonXVM.icon
+                            }}</mat-icon>
+                            {{
+                                t(textTabItemVM.tabButtonXVM.textKey)
+                            }}</app-tab-button
+                        >
+                        <!-- Text editor tab button end -->
+                    </app-tabs-nav>
+                    <!-- Tabs nav end -->
 
-                <!-- Visual editor tab panel start -->
-                <app-tab-panel [id]="visualTabItemVM.id">
-                    @let gmpMapXVM = visualTabItemVM.content;
-                    @let view =
-                        area()?.entryPoint ??
-                        vM.actualPosition ??
-                        headOfficeLocation;
+                    <!-- Visual editor tab panel start -->
+                    <app-tab-panel [id]="visualTabItemVM.id">
+                        @let gmpMapXVM = visualTabItemVM.content;
+                        @let view =
+                            area()?.entryPoint ??
+                            vm.actualPosition ??
+                            headOfficeLocation;
 
-                    <app-gmp-map
-                        #map
-                        class="h-150 block"
-                        [view]="view"
-                        [interactive]="true"
-                        appGmpInfoWindow
-                        #infoWindow="gmpInfoWindow"
-                        appGmpPlaceAutocomplete
-                        (locationChange)="innerMap.fitBounds($event.viewPort)"
-                        appGmpPolygonDrawing
-                        [polygonInput]="
-                            formGroup.controls.targetArea.value
-                                ? {
-                                      coordinates:
-                                          formGroup.controls.targetArea.value,
-                                      colors: gmpMapXVM.polygonColors,
-                                  }
-                                : null
-                        "
-                        [polygonEditable]="
-                            formGroup.controls.targetArea.enabled &&
-                            !vM.isTargetAreaReadonly &&
-                            gmpMapXVM.polygonContextMenuVM
-                        "
-                        (polygonChange)="
-                            [
-                                polygonWindow.setOptions({
-                                    position: $event.metadata.center,
-                                    content: t(gmpMapXVM.contentValueKey, {
-                                        count: $event.metadata.sizeInHq,
+                        <app-gmp-map
+                            #map
+                            class="h-150 block"
+                            [view]="view"
+                            [interactive]="true"
+                            appGmpInfoWindow
+                            #infoWindow="gmpInfoWindow"
+                            appGmpPlaceAutocomplete
+                            (locationChange)="
+                                innerMap.fitBounds($event.viewPort)
+                            "
+                            appGmpPolygonDrawing
+                            [polygonInput]="
+                                formGroup.controls.targetArea.value
+                                    ? {
+                                          coordinates:
+                                              formGroup.controls.targetArea
+                                                  .value,
+                                          colors: gmpMapXVM.polygonColors,
+                                      }
+                                    : null
+                            "
+                            [polygonEditable]="
+                                formGroup.controls.targetArea.enabled &&
+                                !vm.isTargetAreaReadonly &&
+                                gmpMapXVM.polygonContextMenuVM
+                            "
+                            (polygonChange)="
+                                [
+                                    polygonWindow.setOptions({
+                                        position: $event.metadata.center,
+                                        content: t(gmpMapXVM.contentValueKey, {
+                                            count: $event.metadata.sizeInHq,
+                                        }),
                                     }),
-                                }),
-                                polygonWindow.open({ map: innerMap }),
-                                targetAreaFormControl.writeValue(
-                                    $event.coordinates
-                                ),
-                                $event.action === 'draw' &&
-                                    $event.metadata.bounds &&
-                                    innerMap.fitBounds($event.metadata.bounds),
-                            ]
-                        "
-                        [appGmpAdvancedMarker]="
-                            formGroup.controls.entryPoint.value
-                                ? {
-                                      coordinates:
-                                          formGroup.controls.entryPoint.value,
-                                  }
-                                : null
-                        "
-                        [markerEditable]="
-                            formGroup.controls.entryPoint.enabled &&
-                            !vM.isEntryPointReadonly
-                        "
-                        (markerChange)="
-                            entryPointFormControl.writeValue($event.position)
-                        "
-                    >
-                        @let center = map.actualCenter();
-                        @let innerMap = map.map();
-                        @let polygonWindow = infoWindow.infoWindow;
+                                    polygonWindow.open({ map: innerMap }),
+                                    targetAreaFormControl.writeValue(
+                                        $event.coordinates
+                                    ),
+                                    $event.action === 'draw' &&
+                                        $event.metadata.bounds &&
+                                        innerMap.fitBounds(
+                                            $event.metadata.bounds
+                                        ),
+                                ]
+                            "
+                            [appGmpAdvancedMarker]="
+                                formGroup.controls.entryPoint.value
+                                    ? {
+                                          coordinates:
+                                              formGroup.controls.entryPoint
+                                                  .value,
+                                      }
+                                    : null
+                            "
+                            [markerEditable]="
+                                formGroup.controls.entryPoint.enabled &&
+                                !vm.isEntryPointReadonly
+                            "
+                            (markerChange)="
+                                entryPointFormControl.writeValue(
+                                    $event.position
+                                )
+                            "
+                        >
+                            @let center = map.actualCenter();
+                            @let innerMap = map.map();
+                            @let polygonWindow = infoWindow.infoWindow;
 
-                        <div #menu class="join join-vertical ml-2.5 mb-10">
-                            @if (center && !vM.isTargetAreaReadonly) {
-                                <!-- Add new polygon button start -->
-                                <app-button
-                                    [ngClass]="{
-                                        hidden: formGroup.controls.targetArea
-                                            .valid,
-                                    }"
-                                    [disabled]="
-                                        formGroup.controls.targetArea.disabled
-                                    "
-                                    [vm]="gmpMapXVM.addPolygonButtonXVM"
-                                    (click)="
-                                        [
-                                            setTargetAreaFormControlFromCenter(
-                                                center
-                                            ),
-                                        ]
-                                    "
-                                >
-                                    <mat-icon>{{
-                                        gmpMapXVM.addPolygonButtonXVM.icon
-                                    }}</mat-icon>
-                                </app-button>
-                                <!-- Add new polygon button end -->
-                            }
-                            @if (!vM.isEntryPointReadonly) {
-                                <!-- Add new advanced marker button start -->
-                                <app-button
-                                    [vm]="gmpMapXVM.addAdvancedMarkerButtonXVM"
-                                    (click)="
-                                        [
+                            <div #menu class="join join-vertical ml-2.5 mb-10">
+                                @if (center && !vm.isTargetAreaReadonly) {
+                                    <!-- Add new polygon button start -->
+                                    <app-button
+                                        [ngClass]="{
+                                            hidden: formGroup.controls
+                                                .targetArea.valid,
+                                        }"
+                                        [disabled]="
+                                            formGroup.controls.targetArea
+                                                .disabled
+                                        "
+                                        [vm]="gmpMapXVM.addPolygonButtonXVM"
+                                        (click)="
+                                            [
+                                                setTargetAreaFormControlFromCenter(
+                                                    center
+                                                ),
+                                            ]
+                                        "
+                                    >
+                                        <mat-icon>{{
+                                            gmpMapXVM.addPolygonButtonXVM.icon
+                                        }}</mat-icon>
+                                    </app-button>
+                                    <!-- Add new polygon button end -->
+                                }
+                                @if (!vm.isEntryPointReadonly) {
+                                    <!-- Add new advanced marker button start -->
+                                    <app-button
+                                        [vm]="
+                                            gmpMapXVM.addAdvancedMarkerButtonXVM
+                                        "
+                                        (click)="
+                                            [
+                                                entryPointFormControl.writeValue(
+                                                    center
+                                                ),
+                                            ]
+                                        "
+                                        [ngClass]="{
+                                            hidden: formGroup.controls
+                                                .entryPoint.valid,
+                                        }"
+                                    >
+                                        <mat-icon>{{
+                                            gmpMapXVM.addAdvancedMarkerButtonXVM
+                                                .icon
+                                        }}</mat-icon>
+                                    </app-button>
+                                    <!-- Add new advanced marker button end -->
+
+                                    <!-- Remove advanced marker button start -->
+                                    <app-button
+                                        [vm]="
+                                            gmpMapXVM.removeAdvancedMarkerButtonXVM
+                                        "
+                                        [ngClass]="{
+                                            hidden: formGroup.controls
+                                                .entryPoint.invalid,
+                                        }"
+                                        (click)="
                                             entryPointFormControl.writeValue(
-                                                center
-                                            ),
-                                        ]
-                                    "
-                                    [ngClass]="{
-                                        hidden: formGroup.controls.entryPoint
-                                            .valid,
-                                    }"
-                                >
-                                    <mat-icon>{{
-                                        gmpMapXVM.addAdvancedMarkerButtonXVM
-                                            .icon
-                                    }}</mat-icon>
-                                </app-button>
-                                <!-- Add new advanced marker button end -->
+                                                null
+                                            )
+                                        "
+                                    >
+                                        <mat-icon>{{
+                                            gmpMapXVM
+                                                .removeAdvancedMarkerButtonXVM
+                                                .icon
+                                        }}</mat-icon>
+                                    </app-button>
+                                    <!-- Remove advanced marker button end -->
+                                }
+                            </div>
+                        </app-gmp-map>
+                    </app-tab-panel>
+                    <!-- Visual editor tab panel end -->
 
-                                <!-- Remove advanced marker button start -->
-                                <app-button
-                                    [vm]="
-                                        gmpMapXVM.removeAdvancedMarkerButtonXVM
-                                    "
-                                    [ngClass]="{
-                                        hidden: formGroup.controls.entryPoint
-                                            .invalid,
-                                    }"
-                                    (click)="
-                                        entryPointFormControl.writeValue(null)
-                                    "
-                                >
-                                    <mat-icon>{{
-                                        gmpMapXVM.removeAdvancedMarkerButtonXVM
-                                            .icon
-                                    }}</mat-icon>
-                                </app-button>
-                                <!-- Remove advanced marker button end -->
+                    <!-- Text editor tab panel start -->
+                    <app-tab-panel [id]="textTabItemVM.id">
+                        <!-- Target area textarea input start -->
+                        @let hasTargetAreaInvalidError =
+                            textFormGroup.controls.targetArea.invalid &&
+                            !!textFormGroup.controls.targetArea.value;
+                        <app-input-textarea
+                            [vm]="
+                                textTabItemVM.content.targetAreaInputTextareaXVM
+                            "
+                            [invalid]="hasTargetAreaInvalidError"
+                            [formControl]="textFormGroup.controls.targetArea"
+                        >
+                            @if (hasTargetAreaInvalidError) {
+                                <span leftAssistiveText>{{
+                                    t(
+                                        textTabItemVM.content
+                                            .targetAreaInvalidTextKey,
+                                        { count: minimumTargetAreaCoords }
+                                    )
+                                }}</span>
                             }
-                        </div>
-                    </app-gmp-map>
-                </app-tab-panel>
-                <!-- Visual editor tab panel end -->
+                        </app-input-textarea>
+                        <!-- Target area textarea input end -->
 
-                <!-- Text editor tab panel start -->
-                <app-tab-panel [id]="textTabItemVM.id">
-                    <!-- Target area textarea input start -->
-                    @let hasTargetAreaInvalidError =
-                        textFormGroup.controls.targetArea.invalid &&
-                        !!textFormGroup.controls.targetArea.value;
-                    <app-input-textarea
-                        [vm]="textTabItemVM.content.targetAreaInputTextareaXVM"
-                        [invalid]="hasTargetAreaInvalidError"
-                        [formControl]="textFormGroup.controls.targetArea"
-                    >
-                        @if (hasTargetAreaInvalidError) {
-                            <span leftAssistiveText>{{
-                                t(
-                                    textTabItemVM.content
-                                        .targetAreaInvalidTextKey,
-                                    { count: minimumTargetAreaCoords }
-                                )
-                            }}</span>
-                        }
-                    </app-input-textarea>
-                    <!-- Target area textarea input end -->
+                        <!-- Entry point text input start -->
+                        @let hasEntryPointInvalidError =
+                            textFormGroup.controls.entryPoint.invalid &&
+                            !!textFormGroup.controls.entryPoint.value;
+                        <app-input-text
+                            [vm]="textTabItemVM.content.entryPointInputTextXVM"
+                            [invalid]="hasEntryPointInvalidError"
+                            [formControl]="textFormGroup.controls.entryPoint"
+                        >
+                            @if (hasEntryPointInvalidError) {
+                                <span leftAssistiveText>{{
+                                    t(
+                                        textTabItemVM.content
+                                            .entryPointInvalidTextKey
+                                    )
+                                }}</span>
+                            }
+                        </app-input-text>
+                        <!-- Entry point text input end -->
+                    </app-tab-panel>
+                    <!-- Text editor tab panel end -->
+                </app-tabs>
+                <!-- Tabs end -->
 
-                    <!-- Entry point text input start -->
-                    @let hasEntryPointInvalidError =
-                        textFormGroup.controls.entryPoint.invalid &&
-                        !!textFormGroup.controls.entryPoint.value;
-                    <app-input-text
-                        [vm]="textTabItemVM.content.entryPointInputTextXVM"
-                        [invalid]="hasEntryPointInvalidError"
-                        [formControl]="textFormGroup.controls.entryPoint"
-                    >
-                        @if (hasEntryPointInvalidError) {
-                            <span leftAssistiveText>{{
-                                t(
-                                    textTabItemVM.content
-                                        .entryPointInvalidTextKey
-                                )
-                            }}</span>
-                        }
-                    </app-input-text>
-                    <!-- Entry point text input end -->
-                </app-tab-panel>
-                <!-- Text editor tab panel end -->
-            </app-tabs>
-            <!-- Tabs end -->
+                <!-- Dose per hq input start -->
+                @let hasDosePerHqMinError =
+                    formGroup.controls.dosePerHq.dirty &&
+                    formGroup.controls.dosePerHq.hasError('min');
 
-            <!-- Dose per hq input start -->
-            @let hasDosePerHqMinError =
-                formGroup.controls.dosePerHq.dirty &&
-                formGroup.controls.dosePerHq.hasError('min');
+                <app-input-number
+                    [vm]="vm.dosePerHqInputTextXVM"
+                    [invalid]="hasDosePerHqMinError"
+                    [formControl]="formGroup.controls.dosePerHq"
+                >
+                    @if (hasDosePerHqMinError) {
+                        <span leftAssistiveText>{{
+                            t(vm.dosePerHqMinErrorAssistiveTextValueKey, {
+                                min: dosePerHqMin,
+                            })
+                        }}</span>
+                    }
+                </app-input-number>
+                <!-- Dose per hq input end -->
 
-            <app-input-number
-                [vm]="vM.dosePerHqInputTextXVM"
-                [invalid]="hasDosePerHqMinError"
-                [formControl]="formGroup.controls.dosePerHq"
+                <!-- Application date input start-->
+                @let hasApplicationDateRequiredError =
+                    formGroup.controls.applicationDate.hasError('required') &&
+                    formGroup.controls.applicationDate.dirty;
+
+                <app-input-text
+                    [vm]="vm.applicationDateInputTextXVM"
+                    [invalid]="hasApplicationDateRequiredError"
+                    [formControl]="formGroup.controls.applicationDate"
+                >
+                    @if (hasApplicationDateRequiredError) {
+                        <span leftAssistiveText>{{
+                            t(vm.requiredAssistiveTextKey)
+                        }}</span>
+                    }
+                </app-input-text>
+                <!-- Application date input end-->
+
+                <!-- Comment input start -->
+                <app-input-textarea
+                    [vm]="vm.commentInputTextareaXVM"
+                    [formControl]="formGroup.controls.comment"
+                />
+                <!-- Comment input end -->
+            </form>
+
+            <!-- Submit button start -->
+            <app-button
+                [vm]="vm.confirmButtonXVM"
+                [disabled]="formGroup.invalid"
+                (click)="submit()"
             >
-                @if (hasDosePerHqMinError) {
-                    <span leftAssistiveText>{{
-                        t(vM.dosePerHqMinErrorAssistiveTextValueKey, {
-                            min: dosePerHqMin,
-                        })
-                    }}</span>
+                @if (vm.confirmButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
                 }
-            </app-input-number>
-            <!-- Dose per hq input end -->
-
-            <!-- Application date input start-->
-            @let hasApplicationDateRequiredError =
-                formGroup.controls.applicationDate.hasError('required') &&
-                formGroup.controls.applicationDate.dirty;
-
-            <app-input-text
-                [vm]="vM.applicationDateInputTextXVM"
-                [invalid]="hasApplicationDateRequiredError"
-                [formControl]="formGroup.controls.applicationDate"
-            >
-                @if (hasApplicationDateRequiredError) {
-                    <span leftAssistiveText>{{
-                        t(vM.requiredAssistiveTextKey)
-                    }}</span>
+            </app-button>
+            <!-- Submit button end -->
+            <!-- Cancel button start -->
+            <app-button [vm]="vm.cancelButtonXVM" (click)="cancel()">
+                @if (vm.cancelButtonXVM.textKey; as textKey) {
+                    {{ t(textKey) }}
                 }
-            </app-input-text>
-            <!-- Application date input end-->
-
-            <!-- Comment input start -->
-            <app-input-textarea
-                [vm]="vM.commentInputTextareaXVM"
-                [formControl]="formGroup.controls.comment"
-            />
-            <!-- Comment input end -->
-        </form>
-
-        <!-- Submit button start -->
-        <app-button
-            [vm]="vM.confirmButtonXVM"
-            [disabled]="formGroup.invalid"
-            (click)="submitForm()"
-        >
-            @if (vM.confirmButtonXVM.textKey; as textKey) {
-                {{ t(textKey) }}
-            }
-        </app-button>
-        <!-- Submit button end -->
-        <!-- Cancel button start -->
-        <app-button
-            [vm]="vM.cancelButtonXVM"
-            (click)="[response.emit({ type: 'cancel' }), dialog.close()]"
-        >
-            @if (vM.cancelButtonXVM.textKey; as textKey) {
-                {{ t(textKey) }}
-            }
-        </app-button>
-        <!-- Cancel button end -->
-    </app-dialog-layout>
+            </app-button>
+            <!-- Cancel button end -->
+        </app-dialog-layout>
+    }
 </dialog>

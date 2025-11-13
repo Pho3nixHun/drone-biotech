@@ -39,23 +39,14 @@
                     </app-button>
                 </a>
             }
-            <ul>
-                <app-stack [vm]="headerXVM.summary">
-                    @for (item of headerXVM.summary.items; track $index) {
-                        <li>
-                            <app-key-value [vm]="item">
-                                <app-key class="text-secondary">{{
-                                    t(item.keyXVM.textKey)
-                                }}</app-key>
-                                <app-value
-                                    [vm]="item.valueVM"
-                                    class="font-medium"
-                                />
-                            </app-key-value>
-                        </li>
-                    }
-                </app-stack>
-            </ul>
+            <app-inline metadata>
+                <ng-container
+                    [ngTemplateOutlet]="keyValues"
+                    [ngTemplateOutletContext]="{
+                        summaries: headerXVM.summaries,
+                    }"
+                />
+            </app-inline>
         </app-page-header>
 
         <app-frame [vm]="vM.overviewFrameXVM">
@@ -67,68 +58,44 @@
                     appGmpPolygonDrawing
                     [polygonsInput]="gmpMapXVM.missions"
                 />
-                @let summaryStackXVM = vM.overviewFrameXVM.summaryStackXVM;
-                <ul>
-                    <app-stack [vm]="summaryStackXVM">
-                        @for (
-                            keyValueXVM of summaryStackXVM.keyValueXVMs;
-                            track $index
-                        ) {
-                            <li>
-                                <app-key-value [vm]="keyValueXVM">
-                                    <app-key class="text-secondary">{{
-                                        t(keyValueXVM.keyXVM.textKey)
-                                    }}</app-key>
-                                    <app-value
-                                        [vm]="keyValueXVM.valueVM"
-                                        class="font-medium"
-                                    />
-                                </app-key-value>
-                            </li>
-                        }
-                    </app-stack>
-                </ul>
+
+                <app-inline>
+                    <ng-container
+                        [ngTemplateOutlet]="keyValues"
+                        [ngTemplateOutletContext]="{
+                            summaries: vM.overviewFrameXVM.summaries,
+                        }"
+                    />
+                </app-inline>
             }
         </app-frame>
 
         @let detailsFrameXVM = vM.detailsFrameXVM;
         <app-frame [vm]="detailsFrameXVM">
-            @let detailsStackXVM = detailsFrameXVM.detailsStackXVM;
-            <app-stack [vm]="detailsStackXVM">
-                @for (
-                    summaryStackXVM of detailsStackXVM.summaryStackXVMs;
-                    track $index
-                ) {
-                    <ul>
-                        <app-stack [vm]="summaryStackXVM">
-                            @if (summaryStackXVM.titleKey; as title) {
-                                <h4 class="font-medium">
-                                    {{ t(title) }}
-                                </h4>
-                            }
-                            @for (
-                                keyValueXVM of summaryStackXVM.keyValueXVMs;
-                                track $index
-                            ) {
-                                <li>
-                                    <app-key-value
-                                        [vm]="keyValueXVM"
-                                        class="*:gap-2"
-                                    >
-                                        <app-key class="text-secondary">{{
-                                            t(keyValueXVM.keyXVM.textKey)
-                                        }}</app-key>
-                                        <app-value
-                                            [vm]="keyValueXVM.valueVM"
-                                            class="font-medium"
-                                        />
-                                    </app-key-value>
-                                </li>
-                            }
-                        </app-stack>
-                    </ul>
-                }
-            </app-stack>
+            <app-inline>
+                <div>
+                    <h3>{{ t(detailsFrameXVM.clientTitleKey) }}</h3>
+                    <app-stack>
+                        <ng-container
+                            [ngTemplateOutlet]="keyValues"
+                            [ngTemplateOutletContext]="{
+                                summaries: detailsFrameXVM.clientSummaries,
+                            }"
+                        />
+                    </app-stack>
+                </div>
+                <div>
+                    <h3>{{ t(detailsFrameXVM.detailsTitleKey) }}</h3>
+                    <app-stack>
+                        <ng-container
+                            [ngTemplateOutlet]="keyValues"
+                            [ngTemplateOutletContext]="{
+                                summaries: detailsFrameXVM.detailsSummaries,
+                            }"
+                        />
+                    </app-stack>
+                </div>
+            </app-inline>
         </app-frame>
 
         @let missionsFrameXVM = vM.missionsFrameXVM;
@@ -287,19 +254,35 @@
                         actionsFrameXVM.closeOrderButtonXVM;
                     <app-button
                         [vm]="closeOrderButtonXVM"
-                        (click)="confirmationDialog.openDialog()"
+                        (click)="
+                            closeOrderDialog.open(
+                                actionsFrameXVM.closeOrderDialogVM
+                            )
+                        "
                     >
                         @if (closeOrderButtonXVM.textKey; as textKey) {
                             {{ t(textKey) }}
                         }
                     </app-button>
-                    <app-confirmation-dialog
-                        #confirmationDialog
-                        [vm]="actionsFrameXVM.confirmationDialogVM"
-                        (response)="onConfirmationDialogResponse($event)"
+                    <app-close-order-dialog
+                        #closeOrderDialog
+                        (response)="onCloseOrderDialogResponse($event)"
                     />
                 }
             </div>
         </app-frame>
     </app-page-layout>
+
+    <ng-template #keyValues let-summaries="summaries">
+        @for (summary of summaries; track $index) {
+            <li>
+                <app-key-value [vm]="summary">
+                    <app-key class="text-secondary">{{
+                        summary.keyXVM.textKey | transloco
+                    }}</app-key>
+                    <app-value [vm]="summary.valueVM" class="font-medium" />
+                </app-key-value>
+            </li>
+        }
+    </ng-template>
 }

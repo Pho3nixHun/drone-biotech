@@ -33,8 +33,26 @@ import {
 import { ButtonComponent } from '@components/button/button.component';
 import { AreaDataDialogComponent } from './components/area-data-dialog/area-data-dialog.component';
 import { toSignal, rxResource, toObservable } from '@angular/core/rxjs-interop';
-import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
-import { DeleteDialogResponse } from './components/delete-dialog/delete-dialog.model';
+import { DeleteMissionDialogComponent } from './components/delete-mission-dialog/delete-mission-dialog.component';
+import { DeleteMissionDialogResponse } from './components/delete-mission-dialog/delete-mission-dialog.model';
+
+/**
+ * AreasDataFormControlComponent
+ *
+ * Type: Container (CVA)
+ *
+ * Scope:
+ * - Renders a CVA that is responsible for controlling (add new one, delete existing) the missions via dialog responses.
+ *
+ * Out-of-Scope:
+ * - Does not handle the internal logic or styling of other components.
+ * - Not responsible for the detailed presentation logic.
+ * - Not responsible for creating a Mission or deletion.
+ * - Not responsible for data fetching.
+ *
+ * Purpose (optional):
+ * - To serve as a smart container component that integrates business logic to create a cohesive user interface.
+ */
 
 @Component({
     selector: 'app-areas-data-form-control',
@@ -46,7 +64,7 @@ import { DeleteDialogResponse } from './components/delete-dialog/delete-dialog.m
         MatIconModule,
         ButtonComponent,
         AreaDataDialogComponent,
-        DeleteDialogComponent,
+        DeleteMissionDialogComponent,
     ],
     providers: [
         {
@@ -97,7 +115,7 @@ export class AreasDataFormControlComponent implements ControlValueAccessor {
         onChange(this.value());
     }
 
-    protected onDeleteMissionResponse(response: DeleteDialogResponse) {
+    protected onDeleteMissionResponse(response: DeleteMissionDialogResponse) {
         this.markAsTouched();
 
         const onChange = this.onChange();

@@ -9,7 +9,6 @@ import {
     effect,
     ElementRef,
     inject,
-    input,
     output,
     signal,
     viewChild,
@@ -46,6 +45,8 @@ import {
     mapCoordinatesToString,
     mapCoordinatesArrayToString,
 } from './area-data-dialog.mapper';
+import { AbstractDialog } from '@components/dialog-layout/classes/abstract-dialog.class';
+import { PageHeaderComponent } from '@components/page-header/page-header.component';
 
 const MISSION_NAME_MAX_LENGTH = 120;
 const DOSE_PER_HQ_MIN = 1;
@@ -55,6 +56,22 @@ const LAT_MULTIPLIER = 0.0005;
 const LNG_MULTIPLIER = 0.001;
 const LAT_DELTA = 0.01;
 const LNG_DELTA = 0.02;
+
+/**
+ * AreaDataDialogComponent
+ *
+ * Type: Container (Dialog)
+ *
+ * Scope:
+ * - Renders a dialog that is responsible for creating a new mission or edit an existing one.
+ *
+ * Out-of-Scope:
+ * - Does not handle the internal logic or styling of other components.
+ * - Not responsible for the detailed presentation logic and fetching data or communicating with services.
+ *
+ * Purpose (optional):
+ * - To serve as a smart container component that handles its business logic.
+ */
 
 @Component({
     selector: 'app-area-data-dialog',
@@ -80,10 +97,11 @@ const LNG_DELTA = 0.02;
         TabsDirective,
         TabPanelComponent,
         TabsNavComponent,
+        PageHeaderComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
 })
-export class AreaDataDialogComponent {
+export class AreaDataDialogComponent extends AbstractDialog<AreaDataDialogVM> {
     private readonly fb = inject(FormBuilder);
     protected readonly headOfficeLocation = inject(HEAD_OFFICE_LOCATION);
     protected readonly minimumTargetAreaCoords = MINIMUM_TARGET_AREA_COORDS;
@@ -91,10 +109,9 @@ export class AreaDataDialogComponent {
     protected readonly dosePerHqMin = DOSE_PER_HQ_MIN;
     protected readonly latDelta = LAT_DELTA;
     protected readonly lngDelta = LNG_DELTA;
-    public readonly vm = input.required<AreaDataDialogVM>();
     protected readonly response = output<AreaDataDialogResponse>();
-    public readonly area = signal<Mission | undefined>(undefined);
-    public readonly dialog =
+    protected readonly area = signal<Mission | undefined>(undefined);
+    private readonly dialog =
         viewChild.required<ElementRef<HTMLDialogElement>>('dialog');
 
     protected readonly formGroup = this.fb.group({
@@ -131,20 +148,18 @@ export class AreaDataDialogComponent {
         }),
     });
 
-    private readonly setValueEffect = effect(() => {
-        const area = this.area();
-        if (!area) return;
-        this.formGroup.setValue({
-            applicationDate: area.applicationDate,
-            comment: area.comment ?? null,
-            dosePerHq: area.dosePerHq,
-            name: area.name,
-            entryPoint: area.entryPoint,
-            targetArea: area.targetArea,
-        });
-    });
+    public override open(vm: AreaDataDialogVM, area?: Mission): void {
+        this.vm.set(vm);
+        this.area.set(area);
+        this.dialog().nativeElement.showModal();
+    }
 
-    protected submitForm() {
+    protected override cancel(): void {
+        this.response.emit({ type: 'cancel' });
+        this.dialog().nativeElement.close();
+    }
+
+    protected override submit(): void {
         if (this.formGroup.invalid) return;
 
         const {
@@ -178,6 +193,19 @@ export class AreaDataDialogComponent {
         });
         this.dialog().nativeElement.close();
     }
+
+    private readonly setValueEffect = effect(() => {
+        const area = this.area();
+        if (!area) return;
+        this.formGroup.setValue({
+            applicationDate: area.applicationDate,
+            comment: area.comment ?? null,
+            dosePerHq: area.dosePerHq,
+            name: area.name,
+            entryPoint: area.entryPoint,
+            targetArea: area.targetArea,
+        });
+    });
 
     protected setMapTargetAreaFromText() {
         const value = this.textFormGroup.controls.targetArea.value;

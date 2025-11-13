@@ -1,4 +1,4 @@
-import { computed, inject, Injectable, Signal } from '@angular/core';
+import { computed, inject, Injectable } from '@angular/core';
 import { OrdersNewPageVM } from './orders-new-page.model';
 import { ordersNewPageVMDefault } from './orders-new-page.mock';
 import { injectDispatch } from '@ngrx/signals/events';
@@ -28,7 +28,7 @@ export class OrdersNewPageService {
         };
     });
 
-    public getVM(): Signal<OrdersNewPageVM> {
+    public getVM() {
         return this.vm;
     }
 }

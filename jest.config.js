@@ -15,6 +15,8 @@ module.exports = {
         '^@interfaces/(.*)$': '<rootDir>/src/app/shared/interfaces/$1',
         '^@utils/(.*)$': '<rootDir>/src/app/shared/utils/$1',
         '^@services/(.*)$': '<rootDir>/src/app/shared/services/$1',
+        '^@tokens/(.*)$': '<rootDir>/src/app/shared/tokens/$1',
+        '^@validators/(.*)$': '<rootDir>/src/app/shared/validators/$1',
         '^@stores/(.*)$': '<rootDir>/src/app/stores/$1',
     },
     transformIgnorePatterns: ['node_modules/?!(.\\*.mjs$|@jsverse)'],

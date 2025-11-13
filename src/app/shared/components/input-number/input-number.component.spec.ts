@@ -4,17 +4,17 @@ import { MatIcon } from '@interfaces/mat-icon.enum';
 import { Component, DebugElement, inject, input, signal } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { ButtonComponent } from '@components/button/button.component';
-import { InputIconComponent } from '@components/input-icon/input-icon.component';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { By } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     imports: [
-        InputIconComponent,
         InputNumberComponent,
         ButtonComponent,
         ReactiveFormsModule,
+        MatIconModule,
     ],
     template: `
         @let vM = vm();
@@ -23,10 +23,10 @@ import { By } from '@angular/platform-browser';
                 <app-button [vm]="vM.buttonXVM" />
             }
             @if (vM.leadingIcon) {
-                <app-input-icon leading [icon]="vM.leadingIcon" />
+                <mat-icon>{{ vM.leadingIcon }}</mat-icon>
             }
             @if (vM.trailingIcon) {
-                <app-input-icon trailing [icon]="vM.trailingIcon" />
+                <mat-icon>{{ vM.trailingIcon }}</mat-icon>
             }
             <span leftAssistiveText>{{ vM.requiredAssistiveTextKey }}</span>
             <span rightAssistiveText>{{ vM.requiredAssistiveTextKey }}</span>

@@ -1,23 +1,86 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BadgeComponent, BadgeXVM } from './badge.component';
+import { Component, input } from '@angular/core';
 
-import { BadgeComponent } from './badge.component';
+@Component({
+    imports: [BadgeComponent],
+    template: `@if (vm(); as vm) {
+        <app-badge [vm]="vm">{{ vm.textKey }}</app-badge>
+    }`,
+})
+class TestHostComponent {
+    public vm = input.required<BadgeXVM>();
+}
 
 describe('BadgeComponent', () => {
-  let component: BadgeComponent;
-  let fixture: ComponentFixture<BadgeComponent>;
+    let fixture: ComponentFixture<TestHostComponent>;
+    let compiled: HTMLElement;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BadgeComponent]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [TestHostComponent],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(BadgeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(TestHostComponent);
+        compiled = fixture.debugElement.nativeElement;
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    // Snapshot testing
+    it('should render the default badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', {
+            textKey: 'badgeText',
+        } as BadgeXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the rounded badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', {
+            textKey: 'badgeText',
+            shape: 'rounded',
+        } as BadgeXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the outline badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', {
+            textKey: 'badgeText',
+            variant: 'outline',
+        } as BadgeXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the soft badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('vm', {
+            textKey: 'badgeText',
+            variant: 'soft',
+        } as BadgeXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
 });

@@ -1,9 +1,23 @@
-@let orientation = vm().orientation;
+@let vM = vm();
+@let isHorizontal = vM.orientation === 'horizontal';
+@let isVertical = !isHorizontal;
+@let zeroGap = vM.gap === 'none';
+@let smallGap = vM.gap === 'small';
+@let mediumGap = vM.gap === 'medium';
+@let largeGap = vM.gap === 'large';
 <div
     class="flex"
     [ngClass]="{
-        'flex-col space-y-1': orientation === 'vertical',
-        'flex-row space-x-1': orientation === 'horizontal',
+        'flex-row': isHorizontal,
+        'space-x-0': isHorizontal && zeroGap,
+        'space-x-2': isHorizontal && smallGap,
+        'space-x-4': isHorizontal && mediumGap,
+        'space-x-6': isHorizontal && largeGap,
+        'flex-col': isVertical,
+        'space-y-0': isVertical && zeroGap,
+        'space-y-2': isVertical && smallGap,
+        'space-y-4': isVertical && mediumGap,
+        'space-y-6': isVertical && largeGap,
     }"
 >
     <ng-content select="[a, app-value, app-key]" />

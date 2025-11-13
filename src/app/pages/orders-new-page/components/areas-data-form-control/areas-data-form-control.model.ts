@@ -3,7 +3,7 @@ import {
     Mission,
     AreaDataDialogVM,
 } from './components/area-data-dialog/area-data-dialog.model';
-import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
+import { DeleteMissionDialogVM } from './components/delete-mission-dialog/delete-mission-dialog.model';
 
 export interface AreasDataFormControlVM {
     addButtonXVM: ButtonXVM;
@@ -11,7 +11,7 @@ export interface AreasDataFormControlVM {
 
     labelKey: string;
     areaDataDialogVM: AreaDataDialogVM;
-    confirmationDialogVM: ConfirmationDialogVM;
+    deleteMissionDialogVM: DeleteMissionDialogVM;
 
     editButtonXVM: ButtonXVM;
     deleteButtonXVM: ButtonXVM;

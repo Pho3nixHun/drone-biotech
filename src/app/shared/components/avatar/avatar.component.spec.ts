@@ -1,27 +1,55 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
 import { AvatarComponent } from './avatar.component';
+import { AvatarVM } from './avatar.model';
+import { TranslocoModule } from '@jsverse/transloco';
+import { getTranslocoModule } from 'transloco-testing.module';
 
-@Component({
-    imports: [AvatarComponent],
-    template: `<app-avatar>C</app-avatar>`,
-})
-class TestHostComponent {}
 describe('AvatarComponent', () => {
-    let fixture: ComponentFixture<TestHostComponent>;
+    let fixture: ComponentFixture<AvatarComponent>;
     let compiled: HTMLElement;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TestHostComponent],
+            imports: [
+                AvatarComponent,
+                TranslocoModule,
+                getTranslocoModule({
+                    langs: { en: enMock },
+                    translocoConfig: {
+                        availableLangs: ['en'],
+                        defaultLang: 'en',
+                    },
+                }),
+            ],
         }).compileComponents();
-        fixture = TestBed.createComponent(TestHostComponent);
+        fixture = TestBed.createComponent(AvatarComponent);
         compiled = fixture.debugElement.nativeElement;
     });
 
     //Snapshot test
-    it('should render the template correctly', () => {
+    it('should render the template correctly with image', () => {
         //Arrange
+        fixture.componentRef.setInput('vm', {
+            altTextKey: enMock.alText,
+            type: 'withImage',
+            imageSrc: 'image.jpg',
+        } as AvatarVM);
+
+        //Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should render the template correctly with initials', () => {
+        //Arrange
+        fixture.componentRef.setInput('vm', {
+            altTextKey: enMock.alText,
+            type: 'withInitials',
+            initials: 'JB',
+        } as AvatarVM);
 
         //Act
         fixture.detectChanges();
@@ -30,3 +58,7 @@ describe('AvatarComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 });
+
+const enMock = {
+    alText: 'imageAltText',
+};

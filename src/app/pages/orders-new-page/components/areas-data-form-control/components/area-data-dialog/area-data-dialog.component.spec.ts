@@ -1,16 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AreaDataDialogComponent } from './area-data-dialog.component';
-import { AreaData, AreaDataDialogVM } from './area-data-dialog.model';
+import { AreaDataDialogVM, Mission, TabItemID } from './area-data-dialog.model';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import { provideMockMapOptions } from './components/map-form-control/map-form-control.model';
-import { provideMockEntryPointMarkerOptions } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
-import { provideMapAreaSelectFormControlMockService } from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.service.mock';
-import { provideMapPointSelectFormControlMockService } from './components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.service.mock';
-import {
-    provideMockPolygonOptions,
-    provideMockInfoWindowOptions,
-} from './components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
+import { provideMockGmpMapOptions } from '@components/gmp-map/gmp-map.model';
+import { provideMockGmpPolygonOptions } from '@tokens/gmp-polygon-options.token';
+import { PolygonColor } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
+import { provideMockGmpPlaceAutocompleteOptions } from '@directives/gmp-place-autocomplete/gmp-place-autocomplete.directive';
 
 describe('AreaDataDialogComponent', () => {
     let component: AreaDataDialogComponent;
@@ -21,10 +17,10 @@ describe('AreaDataDialogComponent', () => {
         HTMLDialogElement.prototype.showModal = jest.fn(function () {
             this.setAttribute('open', '');
         });
-
         HTMLDialogElement.prototype.close = jest.fn(function () {
             this.removeAttribute('open');
         });
+
         await TestBed.configureTestingModule({
             imports: [
                 AreaDataDialogComponent,
@@ -37,13 +33,10 @@ describe('AreaDataDialogComponent', () => {
                 }),
             ],
             providers: [
-                provideMockMapOptions(),
+                provideMockGmpMapOptions(),
                 provideMockHeadOfficeLocation(),
-                provideMockPolygonOptions(),
-                provideMockInfoWindowOptions(),
-                provideMockEntryPointMarkerOptions(),
-                provideMapAreaSelectFormControlMockService(),
-                provideMapPointSelectFormControlMockService(),
+                provideMockGmpPolygonOptions(),
+                provideMockGmpPlaceAutocompleteOptions(),
             ],
         }).compileComponents();
 
@@ -64,9 +57,9 @@ describe('AreaDataDialogComponent', () => {
     });
 
     // Snapshot testing
-    it('should render the template correctly if it is opened and set the vm after calling the openDialog function', () => {
+    it('should render the template correctly if it is opened and set the vm after calling the open function', () => {
         // Arrange
-        component['openDialog'](mockVM);
+        component['open'](mockVM);
 
         // Act
         fixture.detectChanges();
@@ -78,8 +71,8 @@ describe('AreaDataDialogComponent', () => {
     // Snapshot testing
     it('should render the max length error assistive text for mission name', () => {
         // Arrange
-        component['openDialog'](mockVM);
-        component['formGroup'].controls.missionName.setValue(
+        component['open'](mockVM);
+        component['formGroup'].controls.name.setValue(
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veritatis eligendi officiis dolorem est tempora iusto facilis officia quis, non delectus voluptatum ea quisquam voluptatibus quasi amet cumque quibusdam excepturi.'
         );
 
@@ -93,8 +86,8 @@ describe('AreaDataDialogComponent', () => {
     // Snapshot testing
     it('should render the required error assistive text for mission name', () => {
         // Arrange
-        component['openDialog'](mockVM);
-        const control = component['formGroup'].controls.missionName;
+        component['open'](mockVM);
+        const control = component['formGroup'].controls.name;
         control.setValue('');
         control.markAsDirty();
 
@@ -108,7 +101,7 @@ describe('AreaDataDialogComponent', () => {
     // Snapshot testing
     it('should render the min error assistive text for dose per hq', () => {
         // Arrange
-        component['openDialog'](mockVM);
+        component['open'](mockVM);
         const control = component['formGroup'].controls.dosePerHq;
         control.setValue(-1);
         control.markAsDirty();
@@ -123,7 +116,7 @@ describe('AreaDataDialogComponent', () => {
     // Snapshot testing
     it('should render the required error assistive text for application date', () => {
         // Arrange
-        component['openDialog'](mockVM);
+        component['open'](mockVM);
         component['formGroup'].controls.applicationDate.markAsDirty();
 
         // Act
@@ -135,7 +128,7 @@ describe('AreaDataDialogComponent', () => {
 
     it('should disable confirm button if form invalid', () => {
         // Arrange
-        component['openDialog'](mockVM);
+        component['open'](mockVM);
         component['formGroup'].reset();
 
         // Act
@@ -147,20 +140,18 @@ describe('AreaDataDialogComponent', () => {
 
     it('should enable confirm button if form valid', () => {
         // Arrange
-        component['openDialog'](mockVM);
+        component['open'](mockVM);
         component['formGroup'].setValue({
             applicationDate: new Date(10),
             comment: 'comment',
             dosePerHq: 10,
-            missionName: 'mission',
-            map: {
-                entryPoint: { lat: 10, lng: 10 },
-                targetArea: [
-                    { lat: 10, lng: 10 },
-                    { lat: 11, lng: 11 },
-                    { lat: 12, lng: 12 },
-                ],
-            },
+            name: 'mission',
+            entryPoint: { lat: 10, lng: 10 },
+            targetArea: [
+                { lat: 10, lng: 10 },
+                { lat: 11, lng: 11 },
+                { lat: 12, lng: 12 },
+            ],
         });
 
         // Act
@@ -171,9 +162,9 @@ describe('AreaDataDialogComponent', () => {
     });
 
     // Unit testing
-    it('should set the vm/area after calling the openDialog function', () => {
+    it('should set the vm/area after calling the open function', () => {
         // Arrange
-        component['openDialog'](mockVM, areaData);
+        component['open'](mockVM, areaData);
 
         // There is no need to act
 
@@ -183,9 +174,9 @@ describe('AreaDataDialogComponent', () => {
     });
 
     // Unit testing
-    it("should set the form's value after calling the openDialog function if area is provided", () => {
+    it("should set the form's value after calling the open function if area is provided", () => {
         // Arrange
-        component['openDialog'](mockVM, areaData);
+        component['open'](mockVM, areaData);
 
         //
         fixture.detectChanges();
@@ -195,31 +186,15 @@ describe('AreaDataDialogComponent', () => {
         expect(fg.applicationDate.value).toBe(areaData.applicationDate);
         expect(fg.comment.value).toBe(areaData.comment);
         expect(fg.dosePerHq.value).toBe(areaData.dosePerHq);
-        expect(fg.missionName.value).toBe(areaData.missionName);
+        expect(fg.name.value).toBe(areaData.name);
         //TODO TEST MAP
-    });
-
-    // Unit testing
-    it('should emit cancel response and close dialog', () => {
-        // Arrange
-        const responseSpy = jest.spyOn(component['response'], 'emit');
-        const dialogSpy = jest.spyOn(
-            component['dialog']().nativeElement,
-            'close'
-        );
-
-        // Act
-        component['cancel']();
-
-        // Assert
-        expect(responseSpy).toHaveBeenCalledWith({ type: 'cancel' });
-        expect(dialogSpy).toHaveBeenCalled();
     });
 
     // Unit testing
     it('should emit submit response with areaData when form valid', () => {
         // Arrange
-        component['area'].set(areaData);
+        component['open'](mockVM, areaData);
+        fixture.detectChanges();
         const responseSpy = jest.spyOn(component['response'], 'emit');
         const closeSpy = jest.spyOn(
             component['dialog']().nativeElement,
@@ -227,8 +202,7 @@ describe('AreaDataDialogComponent', () => {
         );
 
         // Act
-        fixture.detectChanges();
-        component['submitForm']();
+        component['submit']();
 
         // Assert
         expect(closeSpy).toHaveBeenCalled();
@@ -245,35 +219,25 @@ describe('AreaDataDialogComponent', () => {
         component['formGroup'].reset();
 
         // Act
-        component['submitForm']();
+        component['submit']();
 
         // Assert
         expect(spy).not.toHaveBeenCalled();
     });
-
-    // Unit testing
-    it('should reset formGroup when dialog closes', () => {
-        // Arrange
-        const resetSpy = jest.spyOn(component['formGroup'], 'reset');
-        const dialog: HTMLDialogElement =
-            fixture.nativeElement.querySelector('dialog');
-
-        // Act
-        dialog.dispatchEvent(new Event('close'));
-
-        // Assert
-        expect(resetSpy).toHaveBeenCalled();
-    });
 });
 
-const areaData: AreaData = {
+const areaData: Mission = {
     applicationDate: new Date(),
     comment: 'comment',
     dosePerHq: 10,
     entryPoint: { lat: 10, lng: 10 },
     id: 'id',
-    missionName: 'mission name',
-    targetArea: [{ lat: 10, lng: 21 }],
+    name: 'mission name',
+    targetArea: [
+        { lat: 10, lng: 21 },
+        { lat: 12, lng: 23 },
+        { lat: 14, lng: 25 },
+    ],
 };
 const enMock = {
     addButtonText: 'add',
@@ -314,7 +278,7 @@ const enMock = {
 };
 
 const mockVM: AreaDataDialogVM = {
-    titleKey: enMock.title,
+    addTitleKey: enMock.title,
     dosePerHqMinErrorAssistiveTextValueKey:
         enMock.dosePerHqMinErrorAssistiveTextValue,
     missionNameMaxCharactersAllowedAssistiveTextValueKey:
@@ -368,56 +332,50 @@ const mockVM: AreaDataDialogVM = {
         variant: 'fill',
     },
 
-    mapFormControlVM: {
-        defaultCenter: { lat: 0, lng: 0 },
-        mapSearchInputFormControlVM: {
-            placeholderKey:
-                enMock.mapFormControl.mapSearchInputFormControl.placeholder,
-            distanceValueKey:
-                enMock.mapFormControl.mapSearchInputFormControl.distanceValue,
-        },
-        mapAreaSelectFormControlVM: {
-            areaValueKey:
-                enMock.mapFormControl.mapAreaSelectFormControl.areaValue,
-            addButtonXVM: {
-                secondary: true,
-                variant: 'ghost',
-                textKey:
-                    enMock.mapFormControl.mapAreaSelectFormControl
-                        .addButtonText,
-            },
-            editButtonXVM: {
-                secondary: true,
-                variant: 'ghost',
-                textKey:
-                    enMock.mapFormControl.mapAreaSelectFormControl
-                        .editButtonText,
-            },
-            deleteButtonXVM: {
-                secondary: true,
-                variant: 'ghost',
-                textKey:
-                    enMock.mapFormControl.mapAreaSelectFormControl
-                        .deleteButtonText,
-            },
-            coordinatesInputTextareaXVM: {
-                id: 'id',
-                placeholderKey: enMock.coordinatesPlaceholder,
-                labelKey: enMock.coordinatesLabel,
-                readonly: false,
+    editTitleKey: enMock.title,
+    actualPosition: null,
+    mapTabsXVM: {
+        orientation: 'horizontal',
+        variant: 'primary',
+        visualTabItemVM: {
+            id: TabItemID.COORDINATES,
+            tabButtonXVM: { textKey: enMock.addButtonText },
+            content: {
+                addAdvancedMarkerButtonXVM: { variant: 'fill' },
+                addPolygonButtonXVM: { variant: 'fill' },
+                contentValueKey: '',
+                polygonColors: {
+                    fillColor: PolygonColor.BLUE,
+                    strokeColor: PolygonColor.BLUE,
+                },
+                polygonContextMenuVM: {
+                    closeButtonXVM: { variant: 'fill' },
+                    removePolygonButtonXVM: { variant: 'fill' },
+                    removeVertexButtonXVM: { variant: 'fill' },
+                },
+                removeAdvancedMarkerButtonXVM: { variant: 'fill' },
             },
         },
-        mapPointSelectFormControlVM: {
-            addButtonXVM: {
-                secondary: true,
-                variant: 'ghost',
-                textKey: enMock.addButtonText,
+        textTabItemVM: {
+            content: {
+                entryPointInputTextXVM: {
+                    id: '',
+                    autocomplete: 'current-password',
+                    placeholderKey: '',
+                    readonly: false,
+                    type: 'datetime-local',
+                },
+                entryPointInvalidTextKey: '',
+                targetAreaInputTextareaXVM: {
+                    id: '',
+                    labelKey: '',
+                    placeholderKey: '',
+                    readonly: false,
+                },
+                targetAreaInvalidTextKey: '',
             },
-            deleteButtonXVM: {
-                secondary: true,
-                variant: 'ghost',
-                textKey: enMock.deleteButtonText,
-            },
+            id: TabItemID.MAP,
+            tabButtonXVM: { textKey: '' },
         },
     },
 };

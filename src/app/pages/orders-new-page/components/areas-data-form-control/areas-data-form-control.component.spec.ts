@@ -1,24 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { provideMockHeadOfficeLocation } from '@services/distance/distance.model';
-import {
-    AreaData,
-    AreasDataFormControlVM,
-} from './areas-data-form-control.model';
+import { AreasDataFormControlVM } from './areas-data-form-control.model';
 import { MatIcon } from '@interfaces/mat-icon.enum';
 import { provideHttpClient } from '@angular/common/http';
 import { ReverseGeocodingService } from '@services/reverse-geocoding/reverse-geocoding.service';
-import { provideMockMapOptions } from './components/area-data-dialog/components/map-form-control/map-form-control.model';
-import {
-    provideMockInfoWindowOptions,
-    provideMockPolygonOptions,
-} from './components/area-data-dialog/components/map-form-control/components/map-area-select-form-control/map-area-select-form-control.model';
-import { provideMockEntryPointMarkerOptions } from './components/area-data-dialog/components/map-form-control/components/map-point-select-form-control/map-point-select-form-control.model';
 import { DistanceService } from '@services/distance/distance.service';
 import { AreasDataFormControlComponent } from './areas-data-form-control.component';
-import { AreaDataDialogResponse } from './components/area-data-dialog/area-data-dialog.model';
-import { DeleteDialogResponse } from './components/delete-dialog/delete-dialog.model';
 import { of } from 'rxjs';
+import {
+    Mission,
+    TabItemID,
+} from './components/area-data-dialog/area-data-dialog.model';
+import { PolygonColor } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 
 describe('AreasDataFormControlComponent', () => {
     let fixture: ComponentFixture<AreasDataFormControlComponent>;
@@ -49,10 +43,6 @@ describe('AreasDataFormControlComponent', () => {
             providers: [
                 provideHttpClient(),
                 provideMockHeadOfficeLocation(),
-                provideMockMapOptions(),
-                provideMockPolygonOptions(),
-                provideMockInfoWindowOptions(),
-                provideMockEntryPointMarkerOptions(),
                 { provide: DistanceService, useValue: mockDistanceService },
                 {
                     provide: ReverseGeocodingService,
@@ -102,16 +92,16 @@ describe('AreasDataFormControlComponent', () => {
     it('should render 1 card and total when there is 1 mission provided', () => {
         //Arrange
         fixture.componentRef.setInput('vm', mockVM);
-        const areaData: AreaData = {
+        const mission: Mission = {
             applicationDate: new Date(10),
             comment: 'comment',
-            missionName: 'mission',
+            name: 'mission',
             entryPoint: { lat: 10, lng: 10 },
             targetArea: [],
             dosePerHq: 3,
             id: 'id12',
         };
-        component.writeValue([areaData]);
+        component.writeValue([mission]);
 
         //Act
         fixture.detectChanges();
@@ -121,14 +111,14 @@ describe('AreasDataFormControlComponent', () => {
     });
 
     // Snapshot test
-    it('should render 3 cardS and total when there are 3 missions provided', () => {
+    it('should render 3 cards and total when there are 3 missions provided', () => {
         //Arrange
         fixture.componentRef.setInput('vm', mockVM);
-        const areaData: AreaData[] = [
+        const mission: Mission[] = [
             {
                 applicationDate: new Date(10),
                 comment: 'comment1',
-                missionName: 'mission',
+                name: 'mission',
                 entryPoint: { lat: 10, lng: 10 },
                 targetArea: [],
                 dosePerHq: 3,
@@ -137,7 +127,7 @@ describe('AreasDataFormControlComponent', () => {
             {
                 applicationDate: new Date(10),
                 comment: 'comment2',
-                missionName: 'mission',
+                name: 'mission',
                 entryPoint: { lat: 10, lng: 10 },
                 targetArea: [],
                 dosePerHq: 3,
@@ -146,14 +136,14 @@ describe('AreasDataFormControlComponent', () => {
             {
                 applicationDate: new Date(10),
                 comment: 'comment3',
-                missionName: 'mission',
+                name: 'mission',
                 entryPoint: { lat: 10, lng: 10 },
                 targetArea: [],
                 dosePerHq: 3,
                 id: 'id3',
             },
         ];
-        component.writeValue(areaData);
+        component.writeValue(mission);
 
         //Act
         fixture.detectChanges();
@@ -165,111 +155,21 @@ describe('AreasDataFormControlComponent', () => {
     // Unit testing
     it('should write value', () => {
         // Arrange
-        const areaData: AreaData = {
+        const mission: Mission = {
             applicationDate: new Date(10),
             comment: 'comment',
-            missionName: 'mission',
+            name: 'mission',
             entryPoint: { lat: 10, lng: 10 },
             targetArea: [],
             dosePerHq: 3,
             id: 'id12',
         };
-        component.writeValue([areaData]);
+        component.writeValue([mission]);
 
         // There is no need to act
 
         // Assert
-        expect(component['value']()).toEqual([areaData]);
-    });
-
-    // Unit testing
-    it('should call onChange when value changes via add response', () => {
-        // Arrange
-        const mockOnChange = jest.fn();
-        component.registerOnChange(mockOnChange);
-
-        const areaData: AreaData = {
-            applicationDate: new Date(10),
-            comment: 'comment',
-            missionName: 'mission',
-            entryPoint: { lat: 10, lng: 10 },
-            targetArea: [],
-            dosePerHq: 3,
-            id: 'id12',
-        };
-        const response: AreaDataDialogResponse = {
-            type: 'submit',
-            areaData,
-        };
-
-        // Act
-        component['onAddMissionResponse'](response);
-
-        // Assert
-        expect(mockOnChange).toHaveBeenCalledWith([areaData]);
-    });
-
-    // Unit testing
-    it('should update existing area if ID matches', () => {
-        // Arrange
-        const mockOnChange = jest.fn();
-        component.registerOnChange(mockOnChange);
-        const areaData: AreaData = {
-            applicationDate: new Date(10),
-            comment: 'comment',
-            missionName: 'mission',
-            entryPoint: { lat: 10, lng: 10 },
-            targetArea: [],
-            dosePerHq: 3,
-            id: 'id12',
-        };
-        component.writeValue([areaData]);
-
-        // Act
-        const updated: AreaData = {
-            applicationDate: new Date(15),
-            comment: 'comment',
-            missionName: 'mission',
-            entryPoint: { lat: 12, lng: 12 },
-            targetArea: [],
-            dosePerHq: 20,
-            id: 'id12',
-        };
-        const response: AreaDataDialogResponse = {
-            type: 'submit',
-            areaData: updated,
-        };
-        component['onAddMissionResponse'](response);
-
-        // Assert
-        expect(component['value']()).toEqual([response.areaData]);
-    });
-
-    // Unit testing
-    it('should delete area on delete response', () => {
-        // Arrange
-        const mockOnChange = jest.fn();
-        component.registerOnChange(mockOnChange);
-
-        const areaData: AreaData = {
-            applicationDate: new Date(15),
-            comment: 'comment',
-            missionName: 'mission',
-            entryPoint: { lat: 12, lng: 12 },
-            targetArea: [],
-            dosePerHq: 20,
-            id: 'id12',
-        };
-        component.writeValue([areaData]);
-
-        const response: DeleteDialogResponse = { type: 'submit', id: 'id12' };
-
-        // Act
-        component['onDeleteMissionResponse'](response);
-
-        // Assert
-        expect(component['value']()).toEqual([]);
-        expect(mockOnChange).toHaveBeenCalledWith([]);
+        expect(component['value']()).toEqual([mission]);
     });
 
     // Unit testing
@@ -364,7 +264,11 @@ const mockVM: AreasDataFormControlVM = {
         icon: MatIcon.DELETE,
     },
 
-    addAreaDataDialogVM: {
+    areaDataDialogVM: {
+        actualPosition: null,
+        addTitleKey: 'add',
+        editTitleKey: 'edit',
+
         dosePerHqMinErrorAssistiveTextValueKey: enMock.dosePerHqMinError,
         missionNameMaxCharactersAllowedAssistiveTextValueKey:
             enMock.missionNameMaxCharsAllowed,
@@ -416,155 +320,71 @@ const mockVM: AreasDataFormControlVM = {
             variant: 'fill',
         },
 
-        mapFormControlVM: {
-            defaultCenter: null,
-            mapSearchInputFormControlVM: {
-                placeholderKey:
-                    enMock.mapFormControl.mapSearchInput.placeholder,
-                distanceValueKey:
-                    enMock.mapFormControl.mapSearchInput.distanceValue,
+        mapTabsXVM: {
+            orientation: 'vertical',
+            variant: 'secondary',
+            visualTabItemVM: {
+                id: TabItemID.MAP,
+                content: {
+                    addAdvancedMarkerButtonXVM: {
+                        variant: 'fill',
+                    },
+                    addPolygonButtonXVM: {
+                        variant: 'fill',
+                    },
+                    contentValueKey: '',
+                    polygonColors: {
+                        fillColor: PolygonColor.BLUE,
+                        strokeColor: PolygonColor.BLUE,
+                    },
+                    polygonContextMenuVM: {
+                        closeButtonXVM: {
+                            variant: 'fill',
+                        },
+                        removePolygonButtonXVM: {
+                            variant: 'fill',
+                        },
+                        removeVertexButtonXVM: {
+                            variant: 'fill',
+                        },
+                    },
+                    removeAdvancedMarkerButtonXVM: {
+                        variant: 'fill',
+                    },
+                },
+                tabButtonXVM: {
+                    textKey: '',
+                },
             },
-            mapAreaSelectFormControlVM: {
-                areaValueKey: enMock.mapFormControl.mapAreaSelect.areaValue,
-                addButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.mapFormControl.mapAreaSelect.addButton,
+            textTabItemVM: {
+                id: TabItemID.COORDINATES,
+                content: {
+                    entryPointInputTextXVM: {
+                        id: '',
+                        autocomplete: 'off',
+                        labelKey: 'label',
+                        placeholderKey: 'place',
+                        readonly: false,
+                        type: 'text',
+                    },
+                    entryPointInvalidTextKey: '',
+                    targetAreaInvalidTextKey: '',
+                    targetAreaInputTextareaXVM: {
+                        id: '',
+                        labelKey: 'label',
+                        placeholderKey: 'place',
+                        readonly: false,
+                    },
                 },
-                editButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.mapFormControl.mapAreaSelect.editButton,
-                },
-                deleteButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.mapFormControl.mapAreaSelect.deleteButton,
-                },
-                coordinatesInputTextareaXVM: {
-                    id: 'id',
-                    placeholderKey: enMock.coordinatesPlaceholder,
-                    labelKey: enMock.coordinates,
-                    readonly: false,
-                },
-            },
-            mapPointSelectFormControlVM: {
-                addButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.addButton,
-                },
-                deleteButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.deleteButton,
+
+                tabButtonXVM: {
+                    textKey: '',
                 },
             },
         },
-        titleKey: enMock.title,
     },
 
-    editAreaDataDialogVM: {
-        dosePerHqMinErrorAssistiveTextValueKey: enMock.dosePerHqMinError,
-        missionNameMaxCharactersAllowedAssistiveTextValueKey:
-            enMock.missionNameMaxCharsAllowed,
-        missionNameMaxCharactersCounterAssistiveTextValueKey:
-            enMock.missionNameMaxCharsCounter,
-        requiredAssistiveTextKey: enMock.requiredAssistive,
-
-        dosePerHqInputTextXVM: {
-            id: 'id',
-            labelKey: enMock.dosePerHq,
-            placeholderKey: enMock.dosePerHqPlaceholder,
-            readonly: false,
-        },
-        missionNameInputTextXVM: {
-            id: 'id',
-            autocomplete: 'email',
-            labelKey: enMock.missionName,
-            placeholderKey: enMock.missionPlaceholder,
-            readonly: false,
-            type: 'datetime-local',
-        },
-        commentInputTextareaXVM: {
-            id: 'id',
-            labelKey: enMock.comment,
-            placeholderKey: enMock.commentPlaceholder,
-            readonly: false,
-        },
-        closeButtonXVM: {
-            textKey: enMock.closeButton,
-            secondary: false,
-            variant: 'fill',
-        },
-        applicationDateInputTextXVM: {
-            id: 'id',
-            autocomplete: 'email',
-            labelKey: enMock.applicationDate,
-            placeholderKey: enMock.applicationDatePlaceholder,
-            readonly: false,
-            type: 'email',
-        },
-        cancelButtonXVM: {
-            textKey: enMock.cancelButton,
-            secondary: false,
-            variant: 'fill',
-        },
-        confirmButtonXVM: {
-            textKey: enMock.cancelButton,
-            secondary: false,
-            variant: 'fill',
-        },
-
-        mapFormControlVM: {
-            defaultCenter: null,
-            mapSearchInputFormControlVM: {
-                placeholderKey:
-                    enMock.mapFormControl.mapSearchInput.placeholder,
-                distanceValueKey:
-                    enMock.mapFormControl.mapSearchInput.distanceValue,
-            },
-            mapAreaSelectFormControlVM: {
-                areaValueKey: enMock.mapFormControl.mapAreaSelect.areaValue,
-                addButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.mapFormControl.mapAreaSelect.addButton,
-                },
-                editButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.mapFormControl.mapAreaSelect.editButton,
-                },
-                deleteButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.mapFormControl.mapAreaSelect.deleteButton,
-                },
-                coordinatesInputTextareaXVM: {
-                    id: 'id',
-                    placeholderKey: enMock.coordinatesPlaceholder,
-                    labelKey: enMock.coordinates,
-                    readonly: false,
-                },
-            },
-            mapPointSelectFormControlVM: {
-                addButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.addButton,
-                },
-                deleteButtonXVM: {
-                    secondary: true,
-                    variant: 'ghost',
-                    textKey: enMock.deleteButton,
-                },
-            },
-        },
-        titleKey: enMock.title,
-    },
-
-    confirmationDialogVM: {
+    deleteMissionDialogVM: {
         closeButtonXVM: {
             icon: MatIcon.CLOSE,
             secondary: true,

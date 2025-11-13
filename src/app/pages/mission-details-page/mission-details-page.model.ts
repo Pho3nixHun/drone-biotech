@@ -4,19 +4,34 @@ import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.mod
 import { WithTitle } from '@interfaces/with-title.interface';
 import { KeyValueXVM } from '../order-details-page/key-value/key-value.component'; // TODO needs to be relocated
 import { BadgeXVM } from '@components/badge/badge.component';
-import { StackXVM } from '@components/stack/stack.component';
 import { ButtonXVM } from '@components/button/button.model';
 import { WithLink } from '@interfaces/with-link.interface';
-import { DialogLayoutXVM } from '@components/dialog-layout/dialog-layout.component';
 import { InputTextXVM } from '@components/input-text/input-text.component';
-import { InputNumberXVM } from '@components/input-number/input-number.component';
+import { MessageVM } from '@components/message/message.component';
+import { AvatarVM } from '@components/avatar/avatar.model';
+import { OfficeCancelDialogVM } from './components/office-cancel-dialog/office-cancel-dialog.model';
+import { CustomerCancelDialogVM } from './components/customer-cancel-dialog/customer-cancel-dialog.model';
 
-interface GmpMapXVM {
-    polygon: Polygon;
-    entryPoint: AdvancedMarker;
-    bounds: google.maps.LatLngBounds | null;
+// Domain logic models
+
+// User roles allowed in mission lifecycle
+export type UserRole = 'pilot' | 'customer' | 'office';
+
+// Basic user info shown in UI and logs
+export interface User {
+    role: UserRole;
+    name: string;
+    photoUrl: string | null;
 }
 
+// Single communication message between users
+export interface Message {
+    sender: User;
+    sendingDate: Date;
+    message: string;
+}
+
+// Mission lifecycle statuses
 export type MissionStatus =
     | 'new'
     | 'scheduled'
@@ -29,44 +44,81 @@ export type MissionStatus =
     | 'completed'
     | 'done';
 
-interface StatusBadgeXVM extends Pick<BadgeXVM, 'shape' | 'variant'> {
-    status: MissionStatus;
+// Common structure for an actionable dialog
+export interface DialogActionBase<XVM = unknown> {
+    accessConditions: { role: UserRole; status: MissionStatus }[];
+    buttonXVM: ButtonXVM;
+    dialogLayoutXVM: XVM;
 }
 
-interface HeaderXVM extends WithTitle {
-    statusBadgeXVM: StatusBadgeXVM;
-    creationDateKeyValueXVM: KeyValueXVM;
+// Cancel action — visible to customer only
+interface CustomerCancelDialogAction
+    extends DialogActionBase<CustomerCancelDialogVM> {
+    type: 'customerCancel';
 }
 
-export interface KeyValueStackXVM extends StackXVM {
-    keyValueXVMs: KeyValueXVM[];
+// Cancel action — visible to office staff only
+interface OfficeCancelDialogAction
+    extends DialogActionBase<OfficeCancelDialogVM> {
+    type: 'officeCancel';
 }
 
+// All possible mission dialog actions
+type DialogAction = CustomerCancelDialogAction | OfficeCancelDialogAction;
+
+// Google Maps configuration/state
+interface GmpMapXVM {
+    polygon: Polygon;
+    entryPoint: AdvancedMarker;
+    bounds: google.maps.LatLngBounds | null;
+}
+
+// Frame containing aerial overview + button to open in maps
 export interface MapOverviewFrameXVM extends FrameVM {
-    overviewStackXVM: KeyValueStackXVM;
+    overviews: KeyValueXVM[];
     gmpMapXVM: GmpMapXVM;
     openInGMButtonXVM: ButtonXVM & Partial<WithLink>;
 }
 
-interface UpdateMissionDialogVM extends DialogLayoutXVM {
-    requiredAssistiveTextKey: string;
-    minDosePerHaAssistiveTextKey: string;
-    dateInputTextXVM: InputTextXVM;
-    dosePerHaInputTextXVM: InputNumberXVM;
+// UI representation of a chat/log item with role + avatar
+interface MessageXVM extends MessageVM {
+    dateTime: Date;
+    dateTimeValueKey: string;
+    name: string;
+    role: UserRole;
+    nameXRoleValueKey: string;
+    avatarVM: AvatarVM;
 }
 
-interface UpdateMissionDialogButtonXVM extends ButtonXVM {
-    updateMissionDialogVM: UpdateMissionDialogVM;
+// Scrollable list of message items
+
+// Log section: message list + input + submit
+interface LogFrameXVM extends FrameVM {
+    messageXVMs: MessageXVM[];
+    readonlyMessageControl: boolean;
+    messageInputTextXVM: InputTextXVM;
+    submitButtonXVM: ButtonXVM;
 }
 
-interface MissionDetailsFrameXVM extends FrameVM {
-    openUpdateMissionDialogButtonXVM: UpdateMissionDialogButtonXVM;
+// Badge that shows mission status
+interface StatusBadgeXVM extends Pick<BadgeXVM, 'shape' | 'variant'> {
+    status: MissionStatus;
 }
 
+// Header displaying mission metadata, allowed actions
+export interface HeaderXVM extends WithTitle {
+    statusBadgeXVM: StatusBadgeXVM;
+    creationDateKeyValueXVM: KeyValueXVM;
+    dialogActions: DialogAction[];
+}
+
+// Page-level view model
 export interface MissionDetailsPageVM {
+    user: User | null;
     scheduledDate: Date;
     dosePerHa: number;
     headerXVM: HeaderXVM;
+    status: MissionStatus;
     mapOverviewFrameXVM: MapOverviewFrameXVM;
-    missionDetailsFrameXVM: MissionDetailsFrameXVM;
+    logFrameXVM: LogFrameXVM;
 }

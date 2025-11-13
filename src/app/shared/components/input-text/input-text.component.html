@@ -1,9 +1,11 @@
 <div *transloco="let t" class="my-2">
     @let vM = vm();
     <span class="flex flex-row justify-between items-end label-text">
-        <label [for]="vM.id" [hidden]="vM.isLabelHidden">{{
-            t(vM.labelKey)
-        }}</label>
+        <label [for]="vM.id" [hidden]="!vM.labelKey">
+            @if (vM.labelKey; as labelKey) {
+                {{ t(labelKey) }}
+            }
+        </label>
         <ng-content select="app-button" />
     </span>
     <div
