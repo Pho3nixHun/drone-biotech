@@ -1,8 +1,8 @@
 import { Environment } from './environment.model';
 
 export const environment: Environment = {
-    googleMapsConfig: { apiKey: '' },
-    firebaseConfig: {
+    googleMaps: { apiKey: '', libraries: [], version: 'weekly' },
+    firebase: {
         apiKey: '',
         authDomain: 'localhost',
         projectId: 'drone-biotech',

@@ -7,7 +7,7 @@ exports[`BadgeComponent should render the default badge correctly 1`] = `
 >
   <app-badge>
     <span
-      class="badge text-white"
+      class="badge"
     >
       badgeText
     </span>
@@ -23,7 +23,7 @@ exports[`BadgeComponent should render the outline badge correctly 1`] = `
 >
   <app-badge>
     <span
-      class="badge text-white badge-outline"
+      class="badge badge-outline"
     >
       badgeText
     </span>
@@ -39,7 +39,7 @@ exports[`BadgeComponent should render the rounded badge correctly 1`] = `
 >
   <app-badge>
     <span
-      class="badge text-white rounded-full"
+      class="badge rounded-full"
     >
       badgeText
     </span>
@@ -55,7 +55,7 @@ exports[`BadgeComponent should render the soft badge correctly 1`] = `
 >
   <app-badge>
     <span
-      class="badge text-white badge-soft"
+      class="badge badge-soft"
     >
       badgeText
     </span>
