@@ -1,13 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NotFoundMessageComponent should render the template when the VM is provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-not-found-message
-    ng-reflect-vm="[object Object]"
-  >
+  <app-not-found-message>
     <div
       class="text-center space-y-5 mx-5"
     >
@@ -24,7 +22,6 @@ exports[`NotFoundMessageComponent should render the template when the VM is prov
       <a
         class="btn btn-secondary"
         href="/link"
-        ng-reflect-router-link="link"
       >
         txt
       </a>

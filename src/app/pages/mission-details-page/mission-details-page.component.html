@@ -1,0 +1,182 @@
+@if (vm(); as vm) {
+    <app-page-layout *transloco="let t">
+        <!-- Page header that contains mission title, badge and creation date -->
+        @let headerXVM = vm.headerXVM;
+        @let statusBadgeXVM = headerXVM.statusBadgeXVM;
+        @let status = statusBadgeXVM.status;
+        @let creationDateKeyValueXVM = headerXVM.creationDateKeyValueXVM;
+
+        <app-page-header>
+            <h1>{{ t(headerXVM.titleKey) }}</h1>
+            <app-inline metadata>
+                <app-badge
+                    [vm]="statusBadgeXVM"
+                    [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
+                    >{{
+                        t(mapMissionStatusToTranslocoTextKey(status))
+                    }}</app-badge
+                >
+                <time class="text-secondary/70">
+                    <app-key-value [vm]="creationDateKeyValueXVM">
+                        <app-key>{{
+                            t(creationDateKeyValueXVM.keyXVM.textKey)
+                        }}</app-key>
+                        <app-value [vm]="creationDateKeyValueXVM.valueVM" />
+                    </app-key-value>
+                </time>
+            </app-inline>
+
+            <app-inline actionGroup>
+                @for (action of headerXVM.dialogActions; track $index) {
+                    @switch (action.type) {
+                        @case ('customerCancel') {
+                            <ng-container
+                                [ngTemplateOutlet]="customerCancel"
+                                [ngTemplateOutletContext]="{
+                                    buttonXVM: action.buttonXVM,
+                                    dialogVM: action.dialogLayoutXVM,
+                                }"
+                            />
+                        }
+                        @case ('officeCancel') {
+                            <ng-container
+                                [ngTemplateOutlet]="officeCancel"
+                                [ngTemplateOutletContext]="{
+                                    buttonXVM: action.buttonXVM,
+                                    dialogVM: action.dialogLayoutXVM,
+                                }"
+                            />
+                        }
+                    }
+                }
+            </app-inline>
+        </app-page-header>
+        <!-- Page header end -->
+
+        <!-- Overview of the mission with map -->
+        @let mapOverviewFrameXVM = vm.mapOverviewFrameXVM;
+        @let gmpMapXVM = mapOverviewFrameXVM.gmpMapXVM;
+        @let openInGMButtonXVM = mapOverviewFrameXVM.openInGMButtonXVM;
+
+        <app-frame [vm]="mapOverviewFrameXVM">
+            @if (openInGMButtonXVM.link; as link) {
+                <a [href]="link.href">
+                    <app-button [vm]="openInGMButtonXVM">
+                        @if (openInGMButtonXVM.textKey; as textKey) {
+                            {{ t(textKey) }}
+                        }
+                    </app-button>
+                </a>
+            }
+            @if (gmpMapXVM.bounds; as bounds) {
+                <app-gmp-map
+                    class="h-96"
+                    [view]="bounds"
+                    appGmpPolygonDrawing
+                    [polygonInput]="gmpMapXVM.polygon"
+                    [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
+                />
+
+                <app-stack>
+                    @for (
+                        overview of vm.mapOverviewFrameXVM.overviews;
+                        track $index
+                    ) {
+                        <app-key-value [vm]="overview">
+                            <app-key>{{ t(overview.keyXVM.textKey) }}</app-key>
+                            <app-value
+                                class="font-medium"
+                                [vm]="overview.valueVM"
+                            />
+                        </app-key-value>
+                    }
+                </app-stack>
+            }
+        </app-frame>
+        <!-- Overview end -->
+
+        <!-- Log frame, contains the messages, logs about the mission -->
+        @let logFrameXVM = vm.logFrameXVM;
+        @let submitButtonXVM = logFrameXVM.submitButtonXVM;
+        @let submitButtonDisabled =
+            messageControl.disabled ||
+            messageControl.hasError('emptyString') ||
+            messageControl.hasError('required');
+        <app-frame [vm]="logFrameXVM">
+            <app-stack>
+                @for (messageXVM of logFrameXVM.messageXVMs; track $index) {
+                    <app-message [vm]="messageXVM">
+                        <app-avatar
+                            class="chat-avatar"
+                            [vm]="messageXVM.avatarVM"
+                        />
+                        {{
+                            t(messageXVM.nameXRoleValueKey, {
+                                name: messageXVM.name,
+                                role: t(
+                                    mapRoleToTranslocoTextKey(messageXVM.role)
+                                ),
+                            })
+                        }}
+                        <time>{{
+                            t(messageXVM.dateTimeValueKey, {
+                                date: messageXVM.dateTime,
+                            })
+                        }}</time>
+                    </app-message>
+                }
+            </app-stack>
+            @if (!logFrameXVM.readonlyMessageControl) {
+                <div class="join flex flex-row items-center">
+                    <app-input-text
+                        class="w-full"
+                        [vm]="logFrameXVM.messageInputTextXVM"
+                        [formControl]="messageControl"
+                    />
+                    <app-button
+                        [vm]="submitButtonXVM"
+                        [disabled]="submitButtonDisabled"
+                        (click)="!submitButtonDisabled && sendMessage()"
+                    >
+                        <mat-icon>
+                            {{ submitButtonXVM.icon }}
+                        </mat-icon>
+                    </app-button>
+                </div>
+            }
+        </app-frame>
+        <!-- Log frame end -->
+    </app-page-layout>
+}
+
+<!-- Dialog for customer cancel start -->
+<ng-template #customerCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
+    <app-button [vm]="buttonXVM" (click)="customerCancelDialog.open(dialogVM)">
+        @if (buttonXVM.textKey; as textKey) {
+            {{ textKey | transloco }}
+        }
+    </app-button>
+    <app-customer-cancel-dialog
+        #customerCancelDialog
+        (response)="
+            $event.type === 'confirm' && service.cancelMission($event.reason)
+        "
+    />
+</ng-template>
+<!-- Dialog end -->
+
+<!-- Dialog for office cancel start -->
+<ng-template #officeCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
+    <app-button [vm]="buttonXVM" (click)="officeCancelDialog.open(dialogVM)">
+        @if (buttonXVM.textKey; as textKey) {
+            {{ textKey | transloco }}
+        }
+    </app-button>
+    <app-office-cancel-dialog
+        #officeCancelDialog
+        (response)="
+            $event.type === 'confirm' && service.cancelMission($event.reason)
+        "
+    />
+</ng-template>
+<!-- Dialog end -->

@@ -8,7 +8,7 @@ import { HeroVM } from './hero-vm.model';
     template: ` <app-hero [vm]="vm"
         ><h1>Hello</h1>
         <p>World</p>
-        <a href="">Anchor</a><button>Button</button>
+        <a href="">Anchor</a>
         <div>Should not be projected</div>
     </app-hero>`,
 })

@@ -1,7 +1,6 @@
-import { Component, input, output } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { TranslocoModule } from '@jsverse/transloco';
-import { DialogLayoutVM } from './dialog-layout.model';
+import { Component } from '@angular/core';
+import { ButtonXVM } from '@components/button/button.model';
+import { WithTitle } from '@interfaces/with-title.interface';
 
 /**
  * DialogLayoutComponent
@@ -21,13 +20,13 @@ import { DialogLayoutVM } from './dialog-layout.model';
  */
 @Component({
     selector: 'app-dialog-layout',
-    imports: [MatIconModule, TranslocoModule],
+    imports: [],
     templateUrl: './dialog-layout.component.html',
 })
-export class DialogLayoutComponent {
-    public vm = input.required<DialogLayoutVM>();
-    public readonly close = output<void>();
-    public onClick() {
-        this.close.emit();
-    }
+export class DialogLayoutComponent {}
+
+export interface DialogLayoutXVM extends WithTitle {
+    confirmButtonXVM: ButtonXVM;
+    closeButtonXVM: ButtonXVM;
+    cancelButtonXVM: ButtonXVM;
 }

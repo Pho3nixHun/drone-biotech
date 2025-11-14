@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ButtonComponent should render a disabled button 1`] = `
+<div
+  id="root6"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-primary btn-disabled"
+      disabled=""
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;
+
+exports[`ButtonComponent should render a filled button 1`] = `
+<div
+  id="root2"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-primary"
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;
+
+exports[`ButtonComponent should render a ghost button 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-primary btn-text"
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;
+
+exports[`ButtonComponent should render a primary button 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-primary"
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;
+
+exports[`ButtonComponent should render a secondary button 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-secondary btn-outline"
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;
+
+exports[`ButtonComponent should render an active button 1`] = `
+<div
+  id="root5"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-primary btn-active"
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;
+
+exports[`ButtonComponent should render an outline button 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <app-button>
+    <button
+      class="btn flex flex-row justify-center btn-primary btn-outline"
+    >
+       text 
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+        data-mat-icon-type="font"
+        role="img"
+      >
+        search
+      </mat-icon>
+    </button>
+  </app-button>
+</div>
+`;

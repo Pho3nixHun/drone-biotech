@@ -30,6 +30,9 @@
             "@utils/*": ["src/app/shared/utils/*"],
             "@guards/*": ["src/app/shared/guards/*"],
             "@services/*": ["src/app/shared/services/*"],
+            "@tokens/*": ["src/app/shared/tokens/*"],
+            "@providers/*": ["src/app/shared/providers/*"],
+            "@validators/*": ["src/app/shared/validators/*"],
             "@stores/*": ["src/app/stores/*"]
         }
     },

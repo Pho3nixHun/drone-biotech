@@ -1,0 +1,35 @@
+@let vM = vm();
+<div
+    *transloco="let t"
+    class="p-2 bg-white drop-shadow-2xl join join-horizontal flex items-center gap-2"
+>
+    <div class="join join-vertical gap-2 w-40">
+        @if (showRemoveVertexButton()) {
+            <app-button
+                class="*:btn-block"
+                [vm]="vM.removeVertexButtonXVM"
+                (click)="polygonContextMenuEvent.emit({ type: 'remove' })"
+            >
+                @if (vM.removeVertexButtonXVM.textKey; as key) {
+                    {{ t(key) }}
+                }
+            </app-button>
+        }
+        <app-button
+            class="*:btn-block"
+            [vm]="vM.removePolygonButtonXVM"
+            (click)="polygonContextMenuEvent.emit({ type: 'clear' })"
+        >
+            @if (vM.removePolygonButtonXVM.textKey; as key) {
+                {{ t(key) }}
+            }
+        </app-button>
+    </div>
+    <app-button
+        class="ml-auto max-h-fit"
+        [vm]="vM.closeButtonXVM"
+        (click)="polygonContextMenuEvent.emit({ type: 'close' })"
+    >
+        <mat-icon>{{ vM.closeButtonXVM.icon }}</mat-icon>
+    </app-button>
+</div>

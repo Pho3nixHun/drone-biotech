@@ -1,16 +1,22 @@
+import { ButtonXVM } from '@components/button/button.model';
 import {
-    AreaData,
+    Mission,
     AreaDataDialogVM,
 } from './components/area-data-dialog/area-data-dialog.model';
-import { DeleteDialogVM } from './components/delete-dialog/delete-dialog.model';
+import { DeleteMissionDialogVM } from './components/delete-mission-dialog/delete-mission-dialog.model';
 
 export interface AreasDataFormControlVM {
-    addAreaDataDialogVM: AreaDataDialogVM;
-    editAreaDataDialogVM: AreaDataDialogVM;
-    deleteDialogVM: DeleteDialogVM;
+    addButtonXVM: ButtonXVM;
+    readonly?: boolean;
+
+    labelKey: string;
+    areaDataDialogVM: AreaDataDialogVM;
+    deleteMissionDialogVM: DeleteMissionDialogVM;
+
+    editButtonXVM: ButtonXVM;
+    deleteButtonXVM: ButtonXVM;
 
     entryPointHeaderKey: string;
-    entryPointValueKey: string;
 
     missionHeaderKey: string;
     commentHeaderKey: string;
@@ -36,17 +42,15 @@ export interface AreasDataFormControlVM {
     actionsHeaderKey: string;
 }
 
-export interface AreaXData extends AreaData {
+export interface MissionXData extends Mission {
     entryPointAddress: string;
     targetAreaSize: number;
     trichogrammaRequirement: number;
     distanceFromHeadOffice: number;
 }
 
-export interface TotalAreaXData {
+export interface TotalMissionXData {
     totalTargetAreaSize: number;
     totalTrichogrammaRequirement: number;
     totalDistanceFromHeadOffice: number;
 }
-
-export { AreaData } from './components/area-data-dialog/area-data-dialog.model';

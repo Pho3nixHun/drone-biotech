@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DeleteMissionDialogComponent should render the template correctly 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <dialog
+    open=""
+  >
+    <app-dialog-layout
+      class="w-80 md:w-96 block"
+    >
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+              close=""
+            >
+              <button
+                class="btn flex flex-row justify-center btn-primary btn-text"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+                <!--container-->
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <p>
+            conf
+          </p>
+        </div>
+        <div
+          class="ml-auto join"
+        >
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+               conf 
+              <!--container-->
+            </button>
+          </app-button>
+          <app-button>
+            <button
+              class="btn flex flex-row justify-center btn-primary"
+            >
+               cancel 
+              <!--container-->
+            </button>
+          </app-button>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;

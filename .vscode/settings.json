@@ -6,6 +6,12 @@
         "noopener",
         "noreferrer",
         "trichogramma",
-        "jsverse"
+        "jsverse",
+        "firestore",
+        "flyonui",
+        "googlemaps",
+        "messageformat",
+        "ngrx",
+        "parlament"
     ]
 }

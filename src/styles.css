@@ -1,7 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* stylelint-disable property-no-unknown */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable import-notation */
+/* stylelint-disable no-invalid-position-at-import-rule */
+
+@import "tailwindcss";
+
+@plugin "flyonui" {
+    themes: corporate --default, dark --prefersdark
+}
+
+@import "../node_modules/flyonui/variants.css";
+
+@source "../node_modules/flyonui/dist/tabs.js";
+
+
+:root {
+    --color-chat-sender: #0084FF;
+    --color-chat-receiver: #E4E6EB;
+}
+
+@theme {
+    --active-order: #16a34a;
+    --in-progress-order: #3b82f6;
+    --new-order: #22c55e;
+    --closed-order: #f59e0b;
+    --done-order: #6b7280;
+    --new-mission: #e0f7fa;
+    --scheduled-mission: #ffe0b2;
+    --accepted-mission: #c8e6c9;
+    --rejected-mission: #ffcdd2;
+    --traveling-mission: #bbdefb;
+    --arrived-mission: #d1c4e9;
+    --in-progress-mission: #fff9c4;
+    --aborted-mission: #f8bbd0;
+    --completed-mission: #b2dfdb;
+    --done-mission: #cfd8dc;
+}
 
 html {
     scroll-behavior: smooth;
@@ -11,15 +45,28 @@ html {
 
 @layer base {
     h1 {
-        @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;
+        @apply font-black text-2xl sm:text-3xl lg:text-4xl transition-all ease-in-out;
     }
 
     h2 {
         @apply font-black text-xl sm:text-2xl lg:text-3xl transition-all ease-in-out;
     }
 
+    h3 {
+        @apply font-black text-lg transition-all ease-in-out;
+    }
+
     app-hero p {
-        @apply bg-black bg-opacity-60 font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
+        @apply bg-black font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
+    }
+
+    dialog {
+        margin: auto;
+    }
+
+    dialog::backdrop {
+        opacity: 0.5;
+        background-color: #000;
     }
 }
 
