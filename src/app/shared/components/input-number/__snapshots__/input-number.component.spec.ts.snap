@@ -79,7 +79,7 @@ exports[`InputNumberComponent should render the template correctly if everything
         </label>
         <app-button>
           <button
-            class="btn flex flex-row justify-center btn-primary"
+            class="btn primary"
           />
         </app-button>
         <!--container-->
@@ -259,7 +259,7 @@ exports[`InputNumberComponent should render the template correctly if the button
         </label>
         <app-button>
           <button
-            class="btn flex flex-row justify-center btn-primary"
+            class="btn primary"
           />
         </app-button>
         <!--container-->

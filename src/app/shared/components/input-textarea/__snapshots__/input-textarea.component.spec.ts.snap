@@ -181,7 +181,7 @@ exports[`InputTextareaComponent should render the template correctly if the butt
         </label>
         <app-button>
           <button
-            class="btn flex flex-row justify-center btn-primary"
+            class="btn primary"
           />
         </app-button>
         <!--container-->

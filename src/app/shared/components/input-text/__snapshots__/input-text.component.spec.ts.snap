@@ -83,7 +83,7 @@ exports[`InputTextComponent should render the template correctly if everything i
         </label>
         <app-button>
           <button
-            class="btn flex flex-row justify-center btn-primary"
+            class="btn primary"
           />
         </app-button>
         <!--container-->
@@ -290,7 +290,7 @@ exports[`InputTextComponent should render the template correctly if the button i
         </label>
         <app-button>
           <button
-            class="btn flex flex-row justify-center btn-primary"
+            class="btn primary"
           />
         </app-button>
         <!--container-->
