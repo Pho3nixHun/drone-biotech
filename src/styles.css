@@ -1,22 +1,84 @@
-/* stylelint-disable property-no-unknown */
 /* stylelint-disable at-rule-no-unknown */
 /* stylelint-disable import-notation */
-/* stylelint-disable no-invalid-position-at-import-rule */
+/* stylelint-disable at-rule-empty-line-before */
 
 @import "tailwindcss";
 
-@plugin "flyonui" {
-    themes: corporate --default, dark --prefersdark
+@import './app/shared/components/cluster/cluster.component.css';
+
+@import './app/shared/components/stack/stack.component.css';
+
+@import './app/shared/components/button/button.component.css';
+
+/* 
+Primitive tokens (Tier-1): 
+    - Has no semantic meaning, just the raw values 
+*/
+:root {
+    /* Spacing scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
 }
 
-@import "../node_modules/flyonui/variants.css";
+/* 
+Semantic tokens (Tier-2):
+    - Values with semantic meaning 
+*/
+@theme {
+    /* Primary semantic colors - blue */
+    --color-primary-50: var(--color-blue-50);
+    --color-primary-100: var(--color-blue-100);
+    --color-primary-200: var(--color-blue-200);
+    --color-primary-300: var(--color-blue-300);
+    --color-primary-400: var(--color-blue-400);
+    --color-primary-500: var(--color-blue-500);
+    --color-primary-600: var(--color-blue-600);
+    --color-primary-700: var(--color-blue-700);
+    --color-primary-800: var(--color-blue-800);
+    --color-primary-900: var(--color-blue-900);
+    --color-primary: var(--color-blue-500);
 
-@source "../node_modules/flyonui/dist/tabs.js";
+    /* Secondary semantic colors - orange */
+    --color-secondary-50: var(--color-orange-50);
+    --color-secondary-100: var(--color-orange-100);
+    --color-secondary-200: var(--color-orange-200);
+    --color-secondary-300: var(--color-orange-300);
+    --color-secondary-400: var(--color-orange-400);
+    --color-secondary-500: var(--color-orange-500);
+    --color-secondary-600: var(--color-orange-600);
+    --color-secondary-700: var(--color-orange-700);
+    --color-secondary-800: var(--color-orange-800);
+    --color-secondary-900: var(--color-orange-900);
+    --color-secondary: var(--color-orange-500);
 
+    /* Text semantic colors */
+    --color-content-primary: var(--color-white);
+    --color-content-secondary: var(--color-gray-400);
 
-:root {
-    --color-chat-sender: #0084FF;
-    --color-chat-receiver: #E4E6EB;
+    /* Layout gap semantic scales */
+    --layout-gap-xs: var(--space-2);
+    --layout-gap-sm: var(--space-4);
+    --layout-gap-md: var(--space-6);
+    --layout-gap-lg: var(--space-8);
+    --layout-gap-xl: var(--space-12);
+    --layout-gap-2xl: var(--space-16);
+
+    /* Component gap semantic scales */
+    --component-gap-xs: var(--space-1);
+    --component-gap-sm: var(--space-2);
+    --component-gap-md: var(--space-4);
+    --component-gap-lg: var(--space-6);
+    --component-gap-xl: var(--space-8);
 }
 
 @theme {
@@ -38,6 +100,7 @@
 }
 
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
     scroll-snap-align: start;
     scroll-padding-top: 2rem;

@@ -30,9 +30,6 @@
                         "styles": [
                             "@angular/material/prebuilt-themes/azure-blue.css",
                             "src/styles.css"
-                        ],
-                        "scripts": [
-                            "node_modules/flyonui/dist/tabs.js"
                         ]
                     },
                     "configurations": {

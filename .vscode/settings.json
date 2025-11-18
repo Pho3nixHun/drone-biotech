@@ -8,10 +8,10 @@
         "trichogramma",
         "jsverse",
         "firestore",
-        "flyonui",
         "googlemaps",
         "messageformat",
         "ngrx",
         "parlament"
-    ]
+    ],
+    "css.lint.unknownAtRules": "ignore"
 }

@@ -1,0 +1,87 @@
+@layer components {
+    .btn {
+        padding: var(--component-gap-sm) var(--component-gap-md);
+
+        @apply border inline-flex items-center justify-center rounded-sm transition cursor-pointer;
+
+        &.primary {
+            @apply bg-primary border-primary text-content-primary;
+
+            &:hover {
+                @apply bg-primary-600 border-primary-600
+            }
+
+            &:active {
+                @apply bg-primary-700 border-primary-700
+            }
+
+            &.ghost {
+                @apply bg-transparent text-primary border-transparent;
+
+                &:hover {
+                    @apply bg-primary-50 text-primary-600
+                }
+
+                &:active {
+                    @apply bg-primary-100 text-primary-700
+                }
+            }
+
+            &.outline {
+                @apply bg-transparent text-primary;
+
+                &:hover {
+                    @apply bg-primary-50 text-primary-600 border-primary-600
+                }
+
+                &:active {
+                    @apply bg-primary-100 text-primary-700 border-primary-700
+                }
+            }
+
+            &.disabled {
+                @apply bg-primary-100 border-primary-100 pointer-events-none text-primary-300;
+            }
+        }
+
+        &.secondary {
+            @apply bg-secondary border-secondary text-content-secondary;
+
+            &:hover {
+                @apply bg-secondary-600 border-secondary-600
+            }
+
+            &:active {
+                @apply bg-secondary-700 border-secondary-700
+            }
+
+            &.ghost {
+                @apply bg-transparent text-secondary border-transparent;
+
+                &:hover {
+                    @apply bg-secondary-50 text-secondary-600
+                }
+
+                &:active {
+                    @apply bg-secondary-100 text-secondary-700
+                }
+            }
+
+            &.outline {
+                @apply bg-transparent text-secondary;
+
+                &:hover {
+                    @apply bg-secondary-50 text-secondary-600 border-secondary-600
+                }
+
+                &:active {
+                    @apply bg-secondary-100 text-secondary-700 border-secondary-700
+                }
+            }
+
+            &.disabled {
+                @apply bg-secondary-100 border-secondary-100 pointer-events-none text-secondary-300;
+            }
+        }
+    }
+}

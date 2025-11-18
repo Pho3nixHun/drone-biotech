@@ -1,0 +1,63 @@
+/* stylelint-disable selector-class-pattern */
+
+@layer components {
+    .cluster {
+        @apply flex flex-wrap;
+
+        &.gap-x-none {
+            column-gap: 0;
+        }
+
+        &.gap-x-xs {
+            column-gap: var(--layout-gap-xs);
+        }
+
+        &.gap-x-sm {
+            column-gap: var(--layout-gap-sm);
+        }
+
+        &.gap-x-md {
+            column-gap: var(--layout-gap-md);
+        }
+
+        &.gap-x-lg {
+            column-gap: var(--layout-gap-lg);
+        }
+
+        &.gap-x-xl {
+            column-gap: var(--layout-gap-xl);
+        }
+
+        &.gap-x-2xl {
+            column-gap: var(--layout-gap-2xl);
+        }
+
+        &.gap-y-none {
+            row-gap: 0;
+        }
+
+        &.gap-y-xs {
+            row-gap: var(--layout-gap-xs);
+        }
+
+        &.gap-y-sm {
+            row-gap: var(--layout-gap-sm);
+        }
+
+        &.gap-y-md {
+            row-gap: var(--layout-gap-md);
+        }
+
+        &.gap-y-lg {
+            row-gap: var(--layout-gap-lg);
+        }
+
+        &.gap-y-xl {
+            row-gap: var(--layout-gap-xl);
+        }
+
+        &.gap-y-2xl {
+            row-gap: var(--layout-gap-2xl);
+        }
+    }
+}

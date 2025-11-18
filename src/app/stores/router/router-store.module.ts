@@ -1,9 +1,7 @@
-import { importProvidersFrom, NgModule } from '@angular/core';
-import { EffectsModule } from '@ngrx/effects';
+import { NgModule } from '@angular/core';
 import { routerReducer, provideRouterStore } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
 import { CustomRouterStateSerializer } from '@stores/router/router-state-serializer';
-import * as routerEffects from '@stores/router/router.effects';
 
 @NgModule({
     providers: [
@@ -13,7 +11,6 @@ import * as routerEffects from '@stores/router/router.effects';
         provideRouterStore({
             serializer: CustomRouterStateSerializer,
         }),
-        importProvidersFrom([EffectsModule.forRoot(routerEffects)]),
     ],
 })
 export class RouterStoreModule {}

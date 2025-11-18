@@ -1,12 +1,12 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 /**
- * StackComponent
+ * ClusterComponent
  *
  * Type: Presentational
  *
  * Scope:
- * - Responsible for structuring the items stack via content projection.
+ * - Responsible for structuring the items cluster via content projection.
  * - Manages the overall layout.
  *
  * Out-of-Scope:
@@ -14,17 +14,16 @@ import { Component, input } from '@angular/core';
  * - Not responsible for fetching or transforming data.
  *
  * Purpose (optional):
- * To provide a flexible and reusable stack layout.
+ * To provide a flexible and reusable cluster layout.
  */
 @Component({
-    selector: 'app-stack',
+    selector: 'app-cluster',
     imports: [NgClass],
-    templateUrl: './stack.component.html',
+    templateUrl: './cluster.component.html',
 })
-export class StackComponent {
-    public readonly orientation = input.required<Orientation>();
-    public readonly gap = input<Gap>('none');
+export class ClusterComponent {
+    public readonly gapX = input<Gap>('none');
+    public readonly gapY = input<Gap>('none');
 }
 
-export type Orientation = 'horizontal' | 'vertical';
 export type Gap = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';

@@ -1,15 +1,18 @@
 @let vM = vm();
+@let primary = !vM.secondary;
+@let secondary = vM.secondary;
+@let ghost = vM.variant === 'ghost';
+@let outline = vM.variant === 'outline';
 
 <button
-    class="btn flex flex-row justify-center"
+    class="btn"
     [disabled]="disabled()"
     [ngClass]="{
-        'btn-primary': !vM.secondary,
-        'btn-secondary': vM.secondary,
-        'btn-outline': vM.variant === 'outline',
-        'btn-text': vM.variant === 'ghost',
-        'btn-active': active(),
-        'btn-disabled': disabled(),
+        primary: primary,
+        secondary: secondary,
+        ghost: ghost,
+        outline: outline,
+        disabled: disabled(),
     }"
 >
     <ng-content />

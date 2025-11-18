@@ -1,3 +1,26 @@
-<ul class="flex flex-col gap-2">
+@let isHorizontal = orientation() === 'horizontal';
+@let isVertical = orientation() === 'vertical';
+@let isGapNone = gap() === 'none';
+@let isGapXs = gap() === 'xs';
+@let isGapSm = gap() === 'sm';
+@let isGapMd = gap() === 'md';
+@let isGapLg = gap() === 'lg';
+@let isGapXl = gap() === 'xl';
+@let isGap2xl = gap() === '2xl';
+
+<div
+    class="stack"
+    [ngClass]="{
+        horizontal: isHorizontal,
+        vertical: isVertical,
+        'gap-none': isGapNone,
+        'gap-xs': isGapXs,
+        'gap-sm': isGapSm,
+        'gap-md': isGapMd,
+        'gap-lg': isGapLg,
+        'gap-xl': isGapXl,
+        'gap-2xl': isGap2xl,
+    }"
+>
     <ng-content />
-</ul>
+</div>

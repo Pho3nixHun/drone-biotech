@@ -1,20 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonComponent } from './button.component';
 import { Component, input } from '@angular/core';
-import { ButtonXVM } from './button.model';
-import {
-    mockFillButton,
-    mockGhostButton,
-    mockOutlineButton,
-    mockPrimaryButton,
-    mockSecondaryButton,
-} from './button.mock';
+import { ButtonVM, ButtonXVM } from './button.model';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     imports: [ButtonComponent, MatIconModule],
     template: `
-        <app-button [vm]="vm()" [disabled]="disabled()" [active]="active()">
+        <app-button [vm]="vm()" [disabled]="disabled()">
             text
             <mat-icon>search</mat-icon>
         </app-button>
@@ -98,18 +91,6 @@ describe('ButtonComponent', () => {
     });
 
     // Snapshot testing
-    it('should render an active button', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockPrimaryButton);
-        fixture.componentRef.setInput('active', true);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
     it('should render a disabled button', () => {
         // Arrange
         fixture.componentRef.setInput('vm', mockPrimaryButton);
@@ -122,3 +103,22 @@ describe('ButtonComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 });
+
+const mockPrimaryButton: ButtonVM = {
+    variant: 'fill',
+};
+
+const mockSecondaryButton: ButtonVM = {
+    variant: 'outline',
+    secondary: true,
+};
+
+const mockFillButton: ButtonVM = {
+    variant: 'fill',
+};
+const mockGhostButton: ButtonVM = {
+    variant: 'ghost',
+};
+const mockOutlineButton: ButtonVM = {
+    variant: 'outline',
+};
