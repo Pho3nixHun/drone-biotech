@@ -11,5 +11,5 @@ export interface OrdersNewPageVM extends WithTitle {
     phoneNumberInputTextXVM: InputTextXVM;
     emailInputTextXVM: InputTextXVM;
     endCustomerInputTextXVM: InputTextXVM;
-    submitButtonXVM: ButtonXVM;
+    submitButtonXVM: ButtonXVM<'withText'>;
 }

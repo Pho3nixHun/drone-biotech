@@ -42,21 +42,24 @@
                 }
             </app-input-textarea>
 
-            <app-button
-                [vm]="vm.confirmButtonXVM"
-                [disabled]="submitButtonDisabled"
-                (click)="!submitButtonDisabled && submit()"
-            >
-                @if (vm.confirmButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
+            <app-stack orientation="horizontal" footerActionGroup>
+                <app-button
+                    [vm]="vm.confirmButtonXVM"
+                    [disabled]="submitButtonDisabled"
+                    (click)="!submitButtonDisabled && submit()"
+                    class="*:rounded-r-none"
+                >
+                    {{ t(vm.confirmButtonXVM.textKey) }}
+                </app-button>
 
-            <app-button [vm]="vm.cancelButtonXVM" (click)="cancel()">
-                @if (vm.cancelButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
+                <app-button
+                    [vm]="vm.cancelButtonXVM"
+                    (click)="cancel()"
+                    class="*:rounded-l-none"
+                >
+                    {{ t(vm.cancelButtonXVM.textKey) }}
+                </app-button>
+            </app-stack>
         </app-dialog-layout>
     }
 </dialog>

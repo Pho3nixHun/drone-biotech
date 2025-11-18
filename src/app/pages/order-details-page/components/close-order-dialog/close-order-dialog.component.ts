@@ -9,6 +9,7 @@ import { ButtonComponent } from '@components/button/button.component';
 import { TranslocoModule } from '@jsverse/transloco';
 import { MatIconModule } from '@angular/material/icon';
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
+import { StackComponent } from '@components/stack/stack.component';
 
 /**
  * CloseOrderDialogComponent
@@ -36,6 +37,7 @@ import { PageHeaderComponent } from '@components/page-header/page-header.compone
         TranslocoModule,
         MatIconModule,
         PageHeaderComponent,
+        StackComponent,
     ],
     templateUrl: './close-order-dialog.component.html',
 })

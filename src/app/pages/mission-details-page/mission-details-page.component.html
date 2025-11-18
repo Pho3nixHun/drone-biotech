@@ -8,7 +8,7 @@
 
         <app-page-header>
             <h1>{{ t(headerXVM.titleKey) }}</h1>
-            <app-inline metadata>
+            <app-stack orientation="horizontal" gap="md" metadata>
                 <app-badge
                     [vm]="statusBadgeXVM"
                     [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
@@ -16,17 +16,17 @@
                         t(mapMissionStatusToTranslocoTextKey(status))
                     }}</app-badge
                 >
-                <time class="text-secondary/70">
-                    <app-key-value [vm]="creationDateKeyValueXVM">
+                <time>
+                    <app-stack orientation="horizontal" gap="sm">
                         <app-key>{{
                             t(creationDateKeyValueXVM.keyXVM.textKey)
                         }}</app-key>
                         <app-value [vm]="creationDateKeyValueXVM.valueVM" />
-                    </app-key-value>
+                    </app-stack>
                 </time>
-            </app-inline>
+            </app-stack>
 
-            <app-inline actionGroup>
+            <app-stack orientation="horizontal" gap="md" actionGroup>
                 @for (action of headerXVM.dialogActions; track $index) {
                     @switch (action.type) {
                         @case ('customerCancel') {
@@ -49,7 +49,7 @@
                         }
                     }
                 }
-            </app-inline>
+            </app-stack>
         </app-page-header>
         <!-- Page header end -->
 
@@ -62,9 +62,7 @@
             @if (openInGMButtonXVM.link; as link) {
                 <a [href]="link.href">
                     <app-button [vm]="openInGMButtonXVM">
-                        @if (openInGMButtonXVM.textKey; as textKey) {
-                            {{ t(textKey) }}
-                        }
+                        {{ t(openInGMButtonXVM.textKey) }}
                     </app-button>
                 </a>
             }
@@ -77,18 +75,18 @@
                     [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
                 />
 
-                <app-stack>
+                <app-stack orientation="vertical" gap="sm">
                     @for (
                         overview of vm.mapOverviewFrameXVM.overviews;
                         track $index
                     ) {
-                        <app-key-value [vm]="overview">
+                        <app-stack orientation="horizontal" gap="sm">
                             <app-key>{{ t(overview.keyXVM.textKey) }}</app-key>
                             <app-value
                                 class="font-medium"
                                 [vm]="overview.valueVM"
                             />
-                        </app-key-value>
+                        </app-stack>
                     }
                 </app-stack>
             }
@@ -103,7 +101,7 @@
             messageControl.hasError('emptyString') ||
             messageControl.hasError('required');
         <app-frame [vm]="logFrameXVM">
-            <app-stack>
+            <app-stack orientation="vertical" gap="md">
                 @for (messageXVM of logFrameXVM.messageXVMs; track $index) {
                     <app-message [vm]="messageXVM">
                         <app-avatar
@@ -152,9 +150,7 @@
 <!-- Dialog for customer cancel start -->
 <ng-template #customerCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
     <app-button [vm]="buttonXVM" (click)="customerCancelDialog.open(dialogVM)">
-        @if (buttonXVM.textKey; as textKey) {
-            {{ textKey | transloco }}
-        }
+        {{ buttonXVM.textKey | transloco }}
     </app-button>
     <app-customer-cancel-dialog
         #customerCancelDialog
@@ -168,9 +164,7 @@
 <!-- Dialog for office cancel start -->
 <ng-template #officeCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
     <app-button [vm]="buttonXVM" (click)="officeCancelDialog.open(dialogVM)">
-        @if (buttonXVM.textKey; as textKey) {
-            {{ textKey | transloco }}
-        }
+        {{ buttonXVM.textKey | transloco }}
     </app-button>
     <app-office-cancel-dialog
         #officeCancelDialog

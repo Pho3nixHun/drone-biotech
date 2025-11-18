@@ -268,12 +268,14 @@ exports[`LoginPageComponent should render template correctly with the defer bloc
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-disabled"
+                  class="btn primary disabled"
                   disabled=""
                 >
-                  <!--container-->
+                   butt 
                 </button>
               </app-button>
               <!--container-->
@@ -835,12 +837,14 @@ exports[`LoginPageComponent should render the template correctly if the button d
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-disabled"
+                  class="btn primary disabled"
                   disabled=""
                 >
-                  <!--container-->
+                   butt 
                 </button>
               </app-button>
               <!--container-->
@@ -979,13 +983,14 @@ exports[`LoginPageComponent should render the template correctly if the button h
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-disabled"
+                  class="btn primary disabled"
                   disabled=""
                 >
                    butt 
-                  <!--container-->
                 </button>
               </app-button>
               <!--container-->
@@ -1124,12 +1129,14 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-disabled"
+                  class="btn primary disabled"
                   disabled=""
                 >
-                  <!--container-->
+                   butt 
                 </button>
               </app-button>
               <!--container-->
@@ -1268,11 +1275,13 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary"
+                  class="btn primary"
                 >
-                  <!--container-->
+                   butt 
                 </button>
               </app-button>
               <!--container-->
@@ -1411,11 +1420,13 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary"
+                  class="btn primary"
                 >
-                  <!--container-->
+                   butt 
                 </button>
               </app-button>
               <!--container-->
@@ -1554,11 +1565,13 @@ exports[`LoginPageComponent should render the template correctly if the form is 
                 <!--container-->
               </app-input-text>
               <!--container-->
-              <app-button>
+              <app-button
+                class="*:w-full"
+              >
                 <button
-                  class="btn flex flex-row justify-center btn-primary"
+                  class="btn primary"
                 >
-                  <!--container-->
+                   butt 
                 </button>
               </app-button>
               <!--container-->

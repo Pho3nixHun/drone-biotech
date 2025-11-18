@@ -19,20 +19,18 @@ import {
     mapOrderStatusToTranslocoTextKey,
     mapRoleToTranslocoTextKey,
 } from './order-details-page.mapper';
-import { KeyValueComponent } from './key-value/key-value.component';
 import { ValueComponent } from '@components/value/value.component';
 import { KeyComponent } from '@components/key/key.component';
 import { CardComponent } from '@components/card/card.component';
 import { CardBodyComponent } from '@components/card/components/card-body/card-body.component';
-import { CardListComponent } from '@components/card-list/card-list.component';
 import { GmpMapComponent } from '@components/gmp-map/gmp-map.component';
 import { GmpPolygonDrawingDirective } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.directive';
 import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { CardFooterComponent } from '@components/card/components/card-footer/card-footer.component';
 import { StackComponent } from '@components/stack/stack.component';
-import { InlineComponent } from '@components/inline/inline.component';
 import { CloseOrderDialogDialogResponse } from './components/close-order-dialog/close-order-dialog.model';
 import { CloseOrderDialogComponent } from './components/close-order-dialog/close-order-dialog.component';
+import { ClusterComponent } from '@components/cluster/cluster.component';
 
 @Component({
     selector: 'app-order-details-page',
@@ -50,20 +48,18 @@ import { CloseOrderDialogComponent } from './components/close-order-dialog/close
         FrameComponent,
         MessageComponent,
         InputTextComponent,
-        KeyValueComponent,
         ValueComponent,
         KeyComponent,
         CardComponent,
         CardBodyComponent,
-        CardListComponent,
         GmpMapComponent,
         GmpPolygonDrawingDirective,
         GmpAdvancedMarkerDirective,
         CardFooterComponent,
         StackComponent,
         NgTemplateOutlet,
-        InlineComponent,
         CloseOrderDialogComponent,
+        ClusterComponent,
     ],
     templateUrl: './order-details-page.component.html',
 })

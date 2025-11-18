@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { OfficeCancelDialogComponent } from './office-cancel-dialog.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import { OfficeCancelDialogVM } from './office-cancel-dialog.model';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 describe('OfficeCancelDialogComponent', () => {
     let component: OfficeCancelDialogComponent;
@@ -107,6 +108,7 @@ describe('OfficeCancelDialogComponent', () => {
 const enMock = {
     title: 'tit',
     confirmText: 'confirm',
+    cancelText: 'cancel',
     emptyStringAssistiveText: 'empty',
     reasonLabel: 'reason',
     placeHolder: 'place',
@@ -117,12 +119,14 @@ const vm: OfficeCancelDialogVM = {
     titleKey: enMock.title,
     cancelButtonXVM: {
         variant: 'fill',
+        textKey: enMock.cancelText,
     },
     closeButtonXVM: {
+        icon: MatIcon.CLOSE,
         variant: 'fill',
     },
     confirmationTextKey: enMock.confirmText,
-    confirmButtonXVM: { variant: 'fill' },
+    confirmButtonXVM: { variant: 'fill', textKey: enMock.confirmText },
     emptyStringAssistiveTextKey: enMock.emptyStringAssistiveText,
     reasonInputTextareaXVM: {
         id: 'id',

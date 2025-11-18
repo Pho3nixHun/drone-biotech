@@ -250,6 +250,7 @@ const enMock = {
 
 const mockVM: AreasDataFormControlVM = {
     addButtonXVM: {
+        icon: MatIcon.CLOSE,
         variant: 'fill',
     },
     labelKey: enMock.label,
@@ -297,7 +298,7 @@ const mockVM: AreasDataFormControlVM = {
             readonly: false,
         },
         closeButtonXVM: {
-            textKey: enMock.closeButton,
+            icon: MatIcon.CLOSE,
             secondary: false,
             variant: 'fill',
         },
@@ -327,9 +328,11 @@ const mockVM: AreasDataFormControlVM = {
                 id: TabItemID.MAP,
                 content: {
                     addAdvancedMarkerButtonXVM: {
+                        icon: MatIcon.ADD,
                         variant: 'fill',
                     },
                     addPolygonButtonXVM: {
+                        icon: MatIcon.ADD,
                         variant: 'fill',
                     },
                     contentValueKey: '',
@@ -339,16 +342,20 @@ const mockVM: AreasDataFormControlVM = {
                     },
                     polygonContextMenuVM: {
                         closeButtonXVM: {
+                            icon: MatIcon.ADD,
                             variant: 'fill',
                         },
                         removePolygonButtonXVM: {
+                            textKey: enMock.deleteButton,
                             variant: 'fill',
                         },
                         removeVertexButtonXVM: {
+                            textKey: enMock.deleteButton,
                             variant: 'fill',
                         },
                     },
                     removeAdvancedMarkerButtonXVM: {
+                        icon: MatIcon.ADD,
                         variant: 'fill',
                     },
                 },

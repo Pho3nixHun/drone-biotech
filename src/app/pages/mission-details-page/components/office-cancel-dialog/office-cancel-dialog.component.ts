@@ -18,6 +18,7 @@ import {
 } from './office-cancel-dialog.model';
 import { AbstractDialog } from '@components/dialog-layout/classes/abstract-dialog.class';
 import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.component';
+import { StackComponent } from '@components/stack/stack.component';
 
 /**
  * OfficeCancelDialogComponent
@@ -46,6 +47,7 @@ import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.c
         TranslocoModule,
         ReactiveFormsModule,
         DialogLayoutComponent,
+        StackComponent,
     ],
     templateUrl: './office-cancel-dialog.component.html',
 })

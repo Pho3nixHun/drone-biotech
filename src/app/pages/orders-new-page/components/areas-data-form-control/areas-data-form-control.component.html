@@ -14,9 +14,7 @@
                     !disabled() && [areaDataDialog.open(vM.areaDataDialogVM)]
                 "
             >
-                @if (vM.addButtonXVM.icon; as icon) {
-                    <mat-icon>{{ icon }}</mat-icon>
-                }
+                <mat-icon>{{ vM.addButtonXVM.icon }}</mat-icon>
             </app-button>
         }
     </div>
@@ -103,9 +101,7 @@
                         [vm]="vM.editButtonXVM"
                         (click)="areaDataDialog.open(vM.areaDataDialogVM, area)"
                     >
-                        @if (vM.editButtonXVM.icon; as icon) {
-                            <mat-icon>{{ icon }}</mat-icon>
-                        }
+                        <mat-icon>{{ vM.editButtonXVM.icon }}</mat-icon>
                     </app-button>
                     <app-button
                         [vm]="vM.deleteButtonXVM"
@@ -116,9 +112,7 @@
                             )
                         "
                     >
-                        @if (vM.deleteButtonXVM.icon; as icon) {
-                            <mat-icon>{{ icon }}</mat-icon>
-                        }
+                        <mat-icon>{{ vM.deleteButtonXVM.icon }}</mat-icon>
                     </app-button>
                 </app-card-item>
             }

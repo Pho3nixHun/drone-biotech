@@ -21,6 +21,7 @@ export const mockLoginPageVM: LoginPageVM = {
         requiredAssistiveTextKey: enMock.requiredAssistiveText,
         submitButtonXVM: {
             variant: 'fill',
+            textKey: enMock.button,
         },
         errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
@@ -78,6 +79,7 @@ export const mockLoginPageVMWithoutButtonText: LoginPageVM = {
         requiredAssistiveTextKey: enMock.requiredAssistiveText,
         submitButtonXVM: {
             variant: 'fill',
+            textKey: enMock.button,
         },
         errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
@@ -106,6 +108,7 @@ export const mockLoginPageVMWithoutErrorMessage: LoginPageVM = {
         requiredAssistiveTextKey: enMock.requiredAssistiveText,
         submitButtonXVM: {
             variant: 'fill',
+            textKey: enMock.button,
         },
         errorMessageKey: null,
         backgroundImageSrc: 'assets/farming.jpg',
@@ -134,6 +137,7 @@ export const mockLoginPageVMWithErrorMessage: LoginPageVM = {
         requiredAssistiveTextKey: enMock.requiredAssistiveText,
         submitButtonXVM: {
             variant: 'fill',
+            textKey: enMock.button,
         },
         errorMessageKey: enMock.errorMessage,
         backgroundImageSrc: 'assets/farming.jpg',

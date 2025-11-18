@@ -15,6 +15,7 @@ import { CustomerCancelDialogVM } from './customer-cancel-dialog.model';
 import { AbstractDialog } from '@components/dialog-layout/classes/abstract-dialog.class';
 import { OfficeCancelDialogResult } from '../office-cancel-dialog/office-cancel-dialog.model';
 import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.component';
+import { StackComponent } from '@components/stack/stack.component';
 
 /**
  * CustomerCancelDialogComponent
@@ -44,6 +45,7 @@ import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.c
         InputTextareaComponent,
         ReactiveFormsModule,
         DialogLayoutComponent,
+        StackComponent,
     ],
     templateUrl: './customer-cancel-dialog.component.html',
 })

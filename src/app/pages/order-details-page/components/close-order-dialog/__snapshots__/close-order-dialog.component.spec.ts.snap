@@ -27,7 +27,7 @@ exports[`CloseOrderDialogComponent should render the template correctly 1`] = `
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -37,7 +37,6 @@ exports[`CloseOrderDialogComponent should render the template correctly 1`] = `
                 >
                   close
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
           </header>
@@ -50,24 +49,35 @@ exports[`CloseOrderDialogComponent should render the template correctly 1`] = `
           </p>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               conf 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               close 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   conf 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   close 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>

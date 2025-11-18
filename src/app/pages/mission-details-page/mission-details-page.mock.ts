@@ -104,8 +104,6 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
             shape: 'rounded',
         },
         creationDateKeyValueXVM: {
-            gap: 'small',
-            orientation: 'horizontal',
             keyXVM: {
                 textKey: 'MissionDetailsPage.header.creationDate.keyText',
             },
@@ -120,9 +118,6 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
         titleKey: 'MissionDetailsPage.overview.title',
         overviews: [
             {
-                orientation: 'horizontal',
-                gap: 'small',
-
                 keyXVM: {
                     textKey: 'Scheduled date:',
                 },
@@ -133,9 +128,6 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
-
                 keyXVM: {
                     textKey: 'Total dose:',
                 },
@@ -146,8 +138,6 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'Dose per ha',
                 },
@@ -158,9 +148,6 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
-
                 keyXVM: {
                     textKey: 'Status',
                 },

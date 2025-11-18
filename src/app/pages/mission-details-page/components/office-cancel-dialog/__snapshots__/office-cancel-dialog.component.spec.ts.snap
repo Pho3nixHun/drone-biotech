@@ -28,7 +28,7 @@ exports[`OfficeCancelDialogComponent should render the template correctly 1`] = 
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -36,7 +36,7 @@ exports[`OfficeCancelDialogComponent should render the template correctly 1`] = 
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -85,23 +85,36 @@ exports[`OfficeCancelDialogComponent should render the template correctly 1`] = 
           </app-input-textarea>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>

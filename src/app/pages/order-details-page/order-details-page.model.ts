@@ -6,11 +6,11 @@ import { FrameVM } from '@components/frame/frame.model';
 import { MessageVM } from '@components/message/message.component';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
-import { KeyValueXVM } from './key-value/key-value.component';
 import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { CloseOrderDialogVM } from './components/close-order-dialog/close-order-dialog.model';
+import { KeyValueXVM } from '@interfaces/key-value.interface';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -27,10 +27,8 @@ export interface Message {
 }
 
 interface ActionsFrameXVM extends FrameVM {
-    completionTemplateButtonHidden: boolean;
-    completionTemplateButtonXVM: ButtonXVM & WithLink;
-    closeOrderButtonHidden: boolean;
-    closeOrderButtonXVM: ButtonXVM;
+    completionTemplateButtonXVM: ButtonXVM<'withText'> & WithLink;
+    closeOrderButtonXVM: ButtonXVM<'withText'>;
     closeOrderDialogVM: CloseOrderDialogVM;
 }
 
@@ -38,7 +36,7 @@ interface ChatFrameXVM extends FrameVM {
     messageXVMs: MessageXVM[];
     readonlyMessageControl?: boolean;
     messageInputTextXVM: InputTextXVM;
-    submitMessageButtonXVM: ButtonXVM;
+    submitMessageButtonXVM: ButtonXVM<'withIcon'>;
 }
 
 interface MessageXVM extends MessageVM {
@@ -53,7 +51,7 @@ interface MessageXVM extends MessageVM {
 export type MissionStatus = 'scheduled' | 'preparing' | 'completed';
 
 interface MissionCardFooterXVM {
-    buttonXVM: ButtonXVM & WithRouterLink;
+    buttonXVM: ButtonXVM<'withText'> & WithRouterLink;
 }
 interface MissionCardBodyXVM extends Required<Pick<CardBodyXVM, 'titleKey'>> {
     status: MissionStatus;
@@ -67,11 +65,8 @@ interface MissionCardXVM {
     cardFooterXVM: MissionCardFooterXVM;
 }
 
-interface CardListXVM {
-    missionCardXVMs: MissionCardXVM[];
-}
 interface MissionsFrameXVM extends FrameVM {
-    missionCardListXVM: CardListXVM;
+    missionCardXVMs: MissionCardXVM[];
 }
 
 interface GmpMapXVM {
@@ -86,7 +81,7 @@ interface HeaderXVM {
     orderId: string;
     titleKey: string;
     statusBadgeXVM: StatusBadgeXVM;
-    addNewMissionsButtonXVM: ButtonXVM & WithRouterLink;
+    addNewMissionsButtonXVM: ButtonXVM<'withText'> & WithRouterLink;
     addNewMissionEnabled: boolean;
     summaries: KeyValueXVM[];
 }

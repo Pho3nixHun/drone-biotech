@@ -188,9 +188,11 @@ export const mockVMWithHero: LandingPageVM = {
         backgroundImageSrc: 'assets/unknown.jpg',
         primaryButtonXVM: {
             variant: 'fill',
+            textKey: enMock.hero.primaryButton,
         },
         secondaryButtonXVM: {
             variant: 'fill',
+            textKey: enMock.hero.secondaryButton,
         },
     },
 };
@@ -220,9 +222,11 @@ export const mockVMWithoutButtonTextsInHero: LandingPageVM = {
         backgroundImageSrc: 'assets/unknown.jpg',
         primaryButtonXVM: {
             variant: 'fill',
+            textKey: enMock.hero.primaryButton,
         },
         secondaryButtonXVM: {
             variant: 'fill',
+            textKey: enMock.hero.secondaryButton,
         },
     },
 };

@@ -29,7 +29,7 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -39,7 +39,6 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -61,7 +60,7 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
 </div>
 `;
 
-exports[`AppComponent should not render sign out button if it is not provided in the vm 1`] = `
+exports[`AppComponent should not render sign out button if the user is not logged in 1`] = `
 <div
   id="root11"
   ng-version="20.1.7"
@@ -87,7 +86,55 @@ exports[`AppComponent should not render sign out button if it is not provided in
           <nav
             class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
+            <a
+              class="nav-item"
+              href="/"
+            >
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
             <!--container-->
+            <app-button>
+              <button
+                class="btn primary ghost"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </app-button>
             <!--container-->
           </nav>
         </app-nav>
@@ -115,6 +162,78 @@ exports[`AppComponent should not render the <app-header> when the headerCanBeSho
   <div
     class="min-h-screen flex flex-col"
   >
+    <app-header>
+      <section
+        class="pt-4 sm:px-20 lg:px-40 w-full flex flex-col justify-between items-center md:flex-row transition-all absolute"
+      >
+        <app-logo
+          class="cursor-pointer"
+          tabindex="0"
+        >
+          <img
+            alt="logo"
+            class="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-0"
+            src="assets/phoenix.jpg"
+          />
+        </app-logo>
+        <app-nav>
+          <nav
+            class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
+          >
+            <a
+              class="nav-item"
+              href="/"
+            >
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
+            <!--container-->
+            <app-button>
+              <button
+                class="btn primary ghost"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  logout
+                </mat-icon>
+              </button>
+            </app-button>
+            <!--container-->
+          </nav>
+        </app-nav>
+      </section>
+    </app-header>
     <!--container-->
     <div
       class="flex-grow mt-72 md:mt-25"
@@ -201,7 +320,7 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -211,7 +330,6 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -269,7 +387,7 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -279,7 +397,6 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -339,7 +456,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -349,7 +466,6 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -435,7 +551,7 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -445,7 +561,6 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -541,7 +656,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -551,7 +666,6 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -573,7 +687,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
 </div>
 `;
 
-exports[`AppComponent should render sign out button if it is provided in the vm 1`] = `
+exports[`AppComponent should render sign out button if the user is logged in 1`] = `
 <div
   id="root10"
   ng-version="20.1.7"
@@ -599,10 +713,44 @@ exports[`AppComponent should render sign out button if it is provided in the vm 
           <nav
             class="flex flex-col items-center space-y-4 text-center md:items-start md:flex-row md:space-y-0 md:space-x-10 md:text-left"
           >
+            <a
+              class="nav-item"
+              href="/"
+            >
+              0title
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               1title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#partners"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               2title 
+            </a>
+            <!--ng-container-->
+            <a
+              class="nav-item"
+              href="#products"
+              rel="noopener,noreferrer"
+              target="_self"
+            >
+               3title 
+            </a>
+            <!--ng-container-->
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -612,7 +760,6 @@ exports[`AppComponent should render sign out button if it is provided in the vm 
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -697,7 +844,7 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -707,7 +854,6 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->
@@ -792,7 +938,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
             <!--container-->
             <app-button>
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -802,7 +948,6 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
                 >
                   logout
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
             <!--container-->

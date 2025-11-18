@@ -20,7 +20,7 @@ exports[`DialogLayoutComponent should render the projected contents and the temp
             actiongroup=""
           >
             <button
-              class="btn flex flex-row justify-center btn-primary"
+              class="btn primary"
             />
           </app-button>
         </header>
@@ -28,24 +28,23 @@ exports[`DialogLayoutComponent should render the projected contents and the temp
       <div
         class="space-y-4"
       >
+        <app-button>
+          <button
+            class="btn primary"
+          />
+        </app-button>
+        <app-button>
+          <button
+            class="btn primary"
+          />
+        </app-button>
         <div>
           Should be projected
         </div>
       </div>
       <div
-        class="ml-auto join"
-      >
-        <app-button>
-          <button
-            class="btn flex flex-row justify-center btn-primary"
-          />
-        </app-button>
-        <app-button>
-          <button
-            class="btn flex flex-row justify-center btn-primary"
-          />
-        </app-button>
-      </div>
+        class="ml-auto"
+      />
     </section>
   </app-dialog-layout>
 </div>

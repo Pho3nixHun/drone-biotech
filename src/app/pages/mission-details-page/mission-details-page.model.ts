@@ -2,7 +2,6 @@ import { FrameVM } from '@components/frame/frame.model';
 import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 import { WithTitle } from '@interfaces/with-title.interface';
-import { KeyValueXVM } from '../order-details-page/key-value/key-value.component'; // TODO needs to be relocated
 import { BadgeXVM } from '@components/badge/badge.component';
 import { ButtonXVM } from '@components/button/button.model';
 import { WithLink } from '@interfaces/with-link.interface';
@@ -11,6 +10,7 @@ import { MessageVM } from '@components/message/message.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
 import { OfficeCancelDialogVM } from './components/office-cancel-dialog/office-cancel-dialog.model';
 import { CustomerCancelDialogVM } from './components/customer-cancel-dialog/customer-cancel-dialog.model';
+import { KeyValueXVM } from '@interfaces/key-value.interface';
 
 // Domain logic models
 
@@ -77,7 +77,7 @@ interface GmpMapXVM {
 export interface MapOverviewFrameXVM extends FrameVM {
     overviews: KeyValueXVM[];
     gmpMapXVM: GmpMapXVM;
-    openInGMButtonXVM: ButtonXVM & Partial<WithLink>;
+    openInGMButtonXVM: ButtonXVM<'withText'> & Partial<WithLink>;
 }
 
 // UI representation of a chat/log item with role + avatar
@@ -97,7 +97,7 @@ interface LogFrameXVM extends FrameVM {
     messageXVMs: MessageXVM[];
     readonlyMessageControl: boolean;
     messageInputTextXVM: InputTextXVM;
-    submitButtonXVM: ButtonXVM;
+    submitButtonXVM: ButtonXVM<'withIcon'>;
 }
 
 // Badge that shows mission status

@@ -66,19 +66,21 @@
                 </app-input-text>
                 <!-- Mission name input end -->
 
-                <!-- Target area form control start -->
+                <!-- Entry point form control start -->
+                @let entryPointControl = formGroup.controls.entryPoint;
                 <app-advanced-marker-form-control
                     #entryPointFormControl
-                    [formControl]="formGroup.controls.entryPoint"
-                />
-                <!-- Target area form control end -->
-
-                <!-- Entry point form control start -->
-                <app-polygon-form-control
-                    #targetAreaFormControl
-                    [formControl]="formGroup.controls.targetArea"
+                    [formControl]="entryPointControl"
                 />
                 <!-- Entry point form control end -->
+
+                <!-- Target area form control start -->
+                @let targetAreaControl = formGroup.controls.targetArea;
+                <app-polygon-form-control
+                    #targetAreaFormControl
+                    [formControl]="targetAreaControl"
+                />
+                <!-- Target area form control end -->
 
                 <!-- Tabs start -->
                 @let visualTabItemVM = vm.mapTabsXVM.visualTabItemVM;
@@ -112,10 +114,10 @@
                             (click)="
                                 [
                                     setTextEntryPointFromValue(
-                                        formGroup.controls.entryPoint.value
+                                        entryPointControl.value
                                     ),
                                     setTextTargetAreaFromValue(
-                                        formGroup.controls.targetArea.value
+                                        targetAreaControl.value
                                     ),
                                 ]
                             "
@@ -141,7 +143,7 @@
 
                         <app-gmp-map
                             #map
-                            class="h-150 block"
+                            class="h-96 block"
                             [view]="view"
                             [interactive]="true"
                             appGmpInfoWindow
@@ -152,17 +154,15 @@
                             "
                             appGmpPolygonDrawing
                             [polygonInput]="
-                                formGroup.controls.targetArea.value
+                                targetAreaControl.value
                                     ? {
-                                          coordinates:
-                                              formGroup.controls.targetArea
-                                                  .value,
+                                          coordinates: targetAreaControl.value,
                                           colors: gmpMapXVM.polygonColors,
                                       }
                                     : null
                             "
                             [polygonEditable]="
-                                formGroup.controls.targetArea.enabled &&
+                                targetAreaControl.enabled &&
                                 !vm.isTargetAreaReadonly &&
                                 gmpMapXVM.polygonContextMenuVM
                             "
@@ -186,16 +186,14 @@
                                 ]
                             "
                             [appGmpAdvancedMarker]="
-                                formGroup.controls.entryPoint.value
+                                entryPointControl.value
                                     ? {
-                                          coordinates:
-                                              formGroup.controls.entryPoint
-                                                  .value,
+                                          coordinates: entryPointControl.value,
                                       }
                                     : null
                             "
                             [markerEditable]="
-                                formGroup.controls.entryPoint.enabled &&
+                                entryPointControl.enabled &&
                                 !vm.isEntryPointReadonly
                             "
                             (markerChange)="
@@ -207,83 +205,83 @@
                             @let center = map.actualCenter();
                             @let innerMap = map.map();
                             @let polygonWindow = infoWindow.infoWindow;
+                            @let addPolygonButtonXVM =
+                                gmpMapXVM.addPolygonButtonXVM;
+                            @let removeAdvancedMarkerButtonXVM =
+                                gmpMapXVM.removeAdvancedMarkerButtonXVM;
+                            @let addAdvancedMarkerButtonXVM =
+                                gmpMapXVM.addAdvancedMarkerButtonXVM;
 
-                            <div #menu class="join join-vertical ml-2.5 mb-10">
-                                @if (center && !vm.isTargetAreaReadonly) {
+                            <app-stack
+                                orientation="vertical"
+                                class="ml-2.5 mb-10"
+                            >
+                                @if (
+                                    center &&
+                                    !vm.isTargetAreaReadonly &&
+                                    targetAreaControl.invalid
+                                ) {
                                     <!-- Add new polygon button start -->
                                     <app-button
-                                        [ngClass]="{
-                                            hidden: formGroup.controls
-                                                .targetArea.valid,
-                                        }"
-                                        [disabled]="
-                                            formGroup.controls.targetArea
-                                                .disabled
-                                        "
-                                        [vm]="gmpMapXVM.addPolygonButtonXVM"
+                                        [vm]="addPolygonButtonXVM"
+                                        [disabled]="targetAreaControl.disabled"
+                                        class="*:rounded-b-none"
                                         (click)="
-                                            [
-                                                setTargetAreaFormControlFromCenter(
-                                                    center
-                                                ),
-                                            ]
+                                            setTargetAreaFormControlFromCenter(
+                                                center
+                                            )
                                         "
                                     >
                                         <mat-icon>{{
-                                            gmpMapXVM.addPolygonButtonXVM.icon
+                                            addPolygonButtonXVM.icon
                                         }}</mat-icon>
                                     </app-button>
                                     <!-- Add new polygon button end -->
                                 }
                                 @if (!vm.isEntryPointReadonly) {
-                                    <!-- Add new advanced marker button start -->
-                                    <app-button
-                                        [vm]="
-                                            gmpMapXVM.addAdvancedMarkerButtonXVM
-                                        "
-                                        (click)="
-                                            [
+                                    @if (entryPointControl.invalid) {
+                                        <!-- Add new advanced marker button start -->
+                                        <app-button
+                                            [vm]="addAdvancedMarkerButtonXVM"
+                                            (click)="
+                                                [
+                                                    entryPointFormControl.writeValue(
+                                                        center
+                                                    ),
+                                                ]
+                                            "
+                                            [ngClass]="{
+                                                '*:rounded-t-none':
+                                                    targetAreaControl.invalid,
+                                            }"
+                                        >
+                                            <mat-icon>{{
+                                                addAdvancedMarkerButtonXVM.icon
+                                            }}</mat-icon>
+                                        </app-button>
+                                        <!-- Add new advanced marker button end -->
+                                    } @else {
+                                        <!-- Remove advanced marker button start -->
+                                        <app-button
+                                            [vm]="removeAdvancedMarkerButtonXVM"
+                                            (click)="
                                                 entryPointFormControl.writeValue(
-                                                    center
-                                                ),
-                                            ]
-                                        "
-                                        [ngClass]="{
-                                            hidden: formGroup.controls
-                                                .entryPoint.valid,
-                                        }"
-                                    >
-                                        <mat-icon>{{
-                                            gmpMapXVM.addAdvancedMarkerButtonXVM
-                                                .icon
-                                        }}</mat-icon>
-                                    </app-button>
-                                    <!-- Add new advanced marker button end -->
-
-                                    <!-- Remove advanced marker button start -->
-                                    <app-button
-                                        [vm]="
-                                            gmpMapXVM.removeAdvancedMarkerButtonXVM
-                                        "
-                                        [ngClass]="{
-                                            hidden: formGroup.controls
-                                                .entryPoint.invalid,
-                                        }"
-                                        (click)="
-                                            entryPointFormControl.writeValue(
-                                                null
-                                            )
-                                        "
-                                    >
-                                        <mat-icon>{{
-                                            gmpMapXVM
-                                                .removeAdvancedMarkerButtonXVM
-                                                .icon
-                                        }}</mat-icon>
-                                    </app-button>
-                                    <!-- Remove advanced marker button end -->
+                                                    null
+                                                )
+                                            "
+                                            [ngClass]="{
+                                                '*:rounded-t-none':
+                                                    targetAreaControl.invalid,
+                                            }"
+                                        >
+                                            <mat-icon>{{
+                                                removeAdvancedMarkerButtonXVM.icon
+                                            }}</mat-icon>
+                                        </app-button>
+                                        <!-- Remove advanced marker button end -->
+                                    }
                                 }
-                            </div>
+                            </app-stack>
                         </app-gmp-map>
                     </app-tab-panel>
                     <!-- Visual editor tab panel end -->
@@ -383,24 +381,28 @@
                 <!-- Comment input end -->
             </form>
 
-            <!-- Submit button start -->
-            <app-button
-                [vm]="vm.confirmButtonXVM"
-                [disabled]="formGroup.invalid"
-                (click)="submit()"
-            >
-                @if (vm.confirmButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
-            <!-- Submit button end -->
-            <!-- Cancel button start -->
-            <app-button [vm]="vm.cancelButtonXVM" (click)="cancel()">
-                @if (vm.cancelButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
-            <!-- Cancel button end -->
+            <app-stack orientation="horizontal" footerActionGroup>
+                <!-- Submit button start -->
+                <app-button
+                    class="*:rounded-r-none"
+                    [vm]="vm.confirmButtonXVM"
+                    [disabled]="formGroup.invalid"
+                    (click)="submit()"
+                >
+                    {{ t(vm.confirmButtonXVM.textKey) }}
+                </app-button>
+                <!-- Submit button end -->
+
+                <!-- Cancel button start -->
+                <app-button
+                    class="*:rounded-l-none"
+                    [vm]="vm.cancelButtonXVM"
+                    (click)="cancel()"
+                >
+                    {{ t(vm.cancelButtonXVM.textKey) }}
+                </app-button>
+                <!-- Cancel button end -->
+            </app-stack>
         </app-dialog-layout>
     }
 </dialog>

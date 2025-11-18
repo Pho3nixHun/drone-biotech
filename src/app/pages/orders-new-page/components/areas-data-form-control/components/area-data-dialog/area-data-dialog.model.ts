@@ -76,7 +76,7 @@ interface GmpMapXVM {
     polygonColors: PolygonColors;
     contentValueKey: string;
     polygonContextMenuVM: PolygonContextMenuVM;
-    removeAdvancedMarkerButtonXVM: ButtonXVM;
-    addAdvancedMarkerButtonXVM: ButtonXVM;
-    addPolygonButtonXVM: ButtonXVM;
+    removeAdvancedMarkerButtonXVM: ButtonXVM<'withIcon'>;
+    addAdvancedMarkerButtonXVM: ButtonXVM<'withIcon'>;
+    addPolygonButtonXVM: ButtonXVM<'withIcon'>;
 }

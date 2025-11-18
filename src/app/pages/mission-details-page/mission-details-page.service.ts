@@ -9,9 +9,9 @@ import {
 import { ReverseGeocodingService } from '@services/reverse-geocoding/reverse-geocoding.service';
 import { getAreaOfPolygon } from 'geolib';
 import { SQUARE_METRES_TO_HECTARE } from '@stores/location/location.model';
-import { KeyValueXVM } from '../order-details-page/key-value/key-value.component';
 import { AuthStore } from '@stores/auth/auth.store';
 import { mapStoreUserToUser } from './mission-details-page.mapper';
+import { KeyValueXVM } from '@interfaces/key-value.interface';
 
 @Injectable({
     providedIn: 'root',
@@ -44,8 +44,6 @@ export class MissionDetailsPageService {
         const href = `${this.baseUrl}${entryPointCoordinates.lat},${entryPointCoordinates.lng}`;
         const keyValueXVMs: KeyValueXVM[] = [
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'MissionDetailsPage.overview.areaSize.text',
                 },
@@ -59,8 +57,6 @@ export class MissionDetailsPageService {
 
         if (address) {
             keyValueXVMs.push({
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'MissionDetailsPage.overview.address.text',
                 },

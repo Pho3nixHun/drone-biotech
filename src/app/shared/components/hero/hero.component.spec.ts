@@ -2,13 +2,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroComponent } from './hero.component';
 import { Component, Input } from '@angular/core';
 import { HeroVM } from './hero-vm.model';
+import { StackComponent } from '@components/stack/stack.component';
 
 @Component({
-    imports: [HeroComponent],
+    imports: [HeroComponent, StackComponent],
     template: ` <app-hero [vm]="vm"
         ><h1>Hello</h1>
         <p>World</p>
-        <a href="">Anchor</a>
+        <app-stack orientation="vertical"></app-stack>
         <div>Should not be projected</div>
     </app-hero>`,
 })

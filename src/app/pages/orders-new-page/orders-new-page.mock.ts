@@ -505,7 +505,7 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                 readonly: false,
             },
             closeButtonXVM: {
-                textKey: enMock.areasDataFormControl.closeButtonText,
+                icon: MatIcon.CLOSE,
                 secondary: false,
                 variant: 'fill',
             },
@@ -518,7 +518,6 @@ export const ordersNewPageVMMock: OrdersNewPageVM = {
                 readonly: false,
                 type: 'email',
             },
-
             cancelButtonXVM: {
                 textKey: enMock.areasDataFormControl.cancelButtonText,
                 secondary: false,

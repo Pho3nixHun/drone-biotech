@@ -16,8 +16,8 @@ interface PartnerLogoXVM extends Partial<WithLink>, PartnerLogoVM {}
 interface HeroXVM extends HeroVM {
     titleKey: string;
     descriptionKey: string;
-    primaryButtonXVM: ButtonXVM;
-    secondaryButtonXVM: ButtonXVM;
+    primaryButtonXVM: ButtonXVM<'withText'>;
+    secondaryButtonXVM: ButtonXVM<'withText'>;
 }
 
 export interface WithPartnerLogos {

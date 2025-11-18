@@ -47,6 +47,7 @@ import {
 } from './area-data-dialog.mapper';
 import { AbstractDialog } from '@components/dialog-layout/classes/abstract-dialog.class';
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
+import { StackComponent } from '@components/stack/stack.component';
 
 const MISSION_NAME_MAX_LENGTH = 120;
 const DOSE_PER_HQ_MIN = 1;
@@ -98,6 +99,7 @@ const LNG_DELTA = 0.02;
         TabPanelComponent,
         TabsNavComponent,
         PageHeaderComponent,
+        StackComponent,
     ],
     templateUrl: './area-data-dialog.component.html',
 })

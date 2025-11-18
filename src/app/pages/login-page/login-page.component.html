@@ -49,10 +49,9 @@
                         [vm]="vm.submitButtonXVM"
                         [disabled]="formGroup.invalid"
                         (click)="signIn()"
+                        class="*:w-full"
                     >
-                        @if (vm.submitButtonXVM.textKey; as textKey) {
-                            {{ t(textKey) }}
-                        }
+                        {{ t(vm.submitButtonXVM.textKey) }}
                     </app-button>
                 }
             </form>

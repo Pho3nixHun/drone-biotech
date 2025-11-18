@@ -7,6 +7,7 @@ import { provideMockGmpMapOptions } from '@components/gmp-map/gmp-map.model';
 import { provideMockGmpPolygonOptions } from '@tokens/gmp-polygon-options.token';
 import { PolygonColor } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 import { provideMockGmpPlaceAutocompleteOptions } from '@directives/gmp-place-autocomplete/gmp-place-autocomplete.directive';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 describe('AreaDataDialogComponent', () => {
     let component: AreaDataDialogComponent;
@@ -245,7 +246,6 @@ const enMock = {
     editButtonText: 'edit',
     confirmButtonText: 'confirm',
     cancelButtonText: 'cancel',
-    closeButtonText: 'close',
     title: 'tit',
     dosePerHqLabel: 'dosePer',
     dosePerHqPlaceholder: 'dosePerPlace',
@@ -317,7 +317,7 @@ const mockVM: AreaDataDialogVM = {
     },
 
     closeButtonXVM: {
-        textKey: enMock.closeButtonText,
+        icon: MatIcon.CLOSE,
         secondary: false,
         variant: 'fill',
     },
@@ -341,19 +341,31 @@ const mockVM: AreaDataDialogVM = {
             id: TabItemID.COORDINATES,
             tabButtonXVM: { textKey: enMock.addButtonText },
             content: {
-                addAdvancedMarkerButtonXVM: { variant: 'fill' },
-                addPolygonButtonXVM: { variant: 'fill' },
+                addAdvancedMarkerButtonXVM: {
+                    variant: 'fill',
+                    icon: MatIcon.ADD,
+                },
+                addPolygonButtonXVM: { variant: 'fill', icon: MatIcon.ADD },
                 contentValueKey: '',
                 polygonColors: {
                     fillColor: PolygonColor.BLUE,
                     strokeColor: PolygonColor.BLUE,
                 },
                 polygonContextMenuVM: {
-                    closeButtonXVM: { variant: 'fill' },
-                    removePolygonButtonXVM: { variant: 'fill' },
-                    removeVertexButtonXVM: { variant: 'fill' },
+                    closeButtonXVM: { variant: 'fill', icon: MatIcon.ADD },
+                    removePolygonButtonXVM: {
+                        variant: 'fill',
+                        textKey: enMock.deleteButtonText,
+                    },
+                    removeVertexButtonXVM: {
+                        variant: 'fill',
+                        textKey: enMock.deleteButtonText,
+                    },
                 },
-                removeAdvancedMarkerButtonXVM: { variant: 'fill' },
+                removeAdvancedMarkerButtonXVM: {
+                    variant: 'fill',
+                    icon: MatIcon.ADD,
+                },
             },
         },
         textTabItemVM: {

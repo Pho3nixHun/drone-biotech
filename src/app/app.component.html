@@ -1,14 +1,15 @@
 @if (vm(); as vm) {
     <div class="min-h-screen flex flex-col">
-        @if (vm.headerCanBeShown) {
+        @let headerXVM = vm.headerXVM;
+        @if (!headerXVM.hidden) {
             <app-header>
                 <app-logo
-                    [vm]="vm.logoXVM"
-                    [routerLink]="vm.logoXVM.routerLink"
+                    [vm]="headerXVM.logoXVM"
+                    [routerLink]="headerXVM.logoXVM.routerLink"
                     class="cursor-pointer"
                 />
                 <app-nav>
-                    @for (navItemXVM of vm.navItemXVMs; track $index) {
+                    @for (navItemXVM of headerXVM.navItemXVMs; track $index) {
                         <ng-container
                             [ngTemplateOutlet]="
                                 isWithLink(navItemXVM)
@@ -19,16 +20,14 @@
                         >
                         </ng-container>
                     }
-                    @if (vm.signOutButtonXVM) {
+                    @if (!headerXVM.signOutButtonXVM.hidden) {
                         <app-button
-                            [vm]="vm.signOutButtonXVM"
+                            [vm]="headerXVM.signOutButtonXVM"
                             (click)="signOut()"
                         >
-                            @if (vm.signOutButtonXVM.icon) {
-                                <mat-icon>{{
-                                    vm.signOutButtonXVM.icon
-                                }}</mat-icon>
-                            }
+                            <mat-icon>{{
+                                headerXVM.signOutButtonXVM.icon
+                            }}</mat-icon>
                         </app-button>
                     }
                 </app-nav>

@@ -5,6 +5,7 @@ import { getTranslocoModule } from 'transloco-testing.module';
 import { ButtonComponent } from '@components/button/button.component';
 import { ButtonXVM } from '@components/button/button.model';
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const en = { title: 'value' };
 
@@ -22,14 +23,17 @@ const en = { title: 'value' };
     `,
 })
 class TestHostComponent {
-    button1: ButtonXVM = {
+    button1: ButtonXVM<'withIcon'> = {
         variant: 'fill',
+        icon: MatIcon.ADD,
     };
-    button2: ButtonXVM = {
+    button2: ButtonXVM<'withIcon'> = {
         variant: 'fill',
+        icon: MatIcon.ADD,
     };
-    button3: ButtonXVM = {
+    button3: ButtonXVM<'withIcon'> = {
         variant: 'fill',
+        icon: MatIcon.ADD,
     };
 }
 describe('DialogLayoutComponent', () => {

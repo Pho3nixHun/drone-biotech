@@ -41,7 +41,7 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -49,7 +49,7 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -178,47 +178,40 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
                               >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -422,25 +415,36 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>
@@ -478,7 +482,7 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -486,7 +490,7 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -615,47 +619,38 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                              <!--container-->
+                              <!--container-->
+                              <app-button>
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -859,24 +854,35 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>
@@ -914,7 +920,7 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -922,7 +928,7 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -1056,47 +1062,40 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
                               >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -1300,25 +1299,36 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>
@@ -1356,7 +1366,7 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -1364,7 +1374,7 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -1493,47 +1503,40 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
                               >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -1742,25 +1745,36 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>
@@ -1798,7 +1812,7 @@ exports[`AreaDataDialogComponent should render the required error assistive text
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -1806,7 +1820,7 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -1935,47 +1949,40 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
                               >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -2184,25 +2191,36 @@ exports[`AreaDataDialogComponent should render the required error assistive text
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>
@@ -2240,7 +2258,7 @@ exports[`AreaDataDialogComponent should render the required error assistive text
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -2248,7 +2266,7 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -2382,47 +2400,40 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
                               >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -2626,25 +2637,36 @@ exports[`AreaDataDialogComponent should render the required error assistive text
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>
@@ -2682,7 +2704,7 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
               actiongroup=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary"
+                class="btn primary"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -2690,7 +2712,7 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
                   data-mat-icon-type="font"
                   role="img"
                 >
-                  
+                  close
                 </mat-icon>
               </button>
             </app-button>
@@ -2819,47 +2841,40 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
                         appgmpinfowindow=""
                         appgmpplaceautocomplete=""
                         appgmppolygondrawing=""
-                        class="h-150 block"
+                        class="h-96 block"
                       >
                         <div
                           style="height: 100%;"
                         >
-                          <div
-                            class="join join-vertical ml-2.5 mb-10"
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
                           >
-                            <!--container-->
-                            <app-button>
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
-                              >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
-                                >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <app-button
-                              class="hidden"
+                            <div
+                              class="stack vertical gap-none"
                             >
-                              <button
-                                class="btn flex flex-row justify-center btn-primary"
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
                               >
-                                <mat-icon
-                                  aria-hidden="true"
-                                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-                                  data-mat-icon-type="font"
-                                  role="img"
+                                <button
+                                  class="btn primary"
                                 >
-                                  
-                                </mat-icon>
-                              </button>
-                            </app-button>
-                            <!--container-->
-                          </div>
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
                         </div>
                       </app-gmp-map>
                     </div>
@@ -3063,25 +3078,36 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
           </form>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary btn-disabled"
-              disabled=""
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               confirm 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>

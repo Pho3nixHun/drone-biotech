@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CustomerCancelDialogComponent } from './customer-cancel-dialog.component';
 import { CustomerCancelDialogVM } from './customer-cancel-dialog.model';
 import { getTranslocoModule } from 'transloco-testing.module';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 describe('CustomerCancelDialogComponent', () => {
     let component: CustomerCancelDialogComponent;
@@ -118,6 +119,7 @@ describe('CustomerCancelDialogComponent', () => {
 const enMock = {
     title: 'tit',
     confirmText: 'confirm',
+    cancelText: 'cancel',
     reasonLabel: 'reason',
     placeHolder: 'place',
     optionalAssistiveText: 'optional',
@@ -128,12 +130,14 @@ const vm: CustomerCancelDialogVM = {
     titleKey: enMock.title,
     cancelButtonXVM: {
         variant: 'fill',
+        textKey: enMock.cancelText,
     },
     closeButtonXVM: {
         variant: 'fill',
+        icon: MatIcon.CLOSE,
     },
     confirmationTextKey: enMock.confirmText,
-    confirmButtonXVM: { variant: 'fill' },
+    confirmButtonXVM: { variant: 'fill', textKey: enMock.confirmText },
     reasonInputTextareaXVM: {
         id: 'id',
         labelKey: enMock.reasonLabel,

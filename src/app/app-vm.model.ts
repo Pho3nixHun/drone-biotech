@@ -6,9 +6,13 @@ import { WithTextNode } from '@interfaces/with-text-node.interface';
 
 type NavItemXVM = NavItemVM & WithTextNode;
 type LogoXVM = WithRouterLink & LogoVM;
-export interface AppComponentVM {
-    headerCanBeShown: boolean;
+
+interface HeaderXVM {
     logoXVM: LogoXVM;
     navItemXVMs: NavItemXVM[];
-    signOutButtonXVM: ButtonXVM | undefined;
+    signOutButtonXVM: ButtonXVM<'withIcon'>;
+    hidden?: boolean;
+}
+export interface AppComponentVM {
+    headerXVM: HeaderXVM;
 }

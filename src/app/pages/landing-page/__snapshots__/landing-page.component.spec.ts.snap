@@ -241,32 +241,32 @@ exports[`LandingPageComponent should not render the texts of the buttons inside 
             <p>
               tit
             </p>
-            <div
-              class="join"
+            <app-stack
+              orientation="horizontal"
             >
-              <a
-                href=""
+              <div
+                class="stack horizontal gap-none"
               >
-                <app-button>
+                <app-button
+                  class="*:rounded-r-none"
+                >
                   <button
-                    class="btn flex flex-row justify-center btn-primary"
+                    class="btn primary"
                   >
-                    <!--container-->
+                     primary 
                   </button>
                 </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
+                <app-button
+                  class="*:rounded-l-none"
+                >
                   <button
-                    class="btn flex flex-row justify-center btn-primary"
+                    class="btn primary"
                   >
-                    <!--container-->
+                     secondary 
                   </button>
                 </app-button>
-              </a>
-            </div>
+              </div>
+            </app-stack>
           </div>
         </section>
         <!--container-->
@@ -1361,32 +1361,32 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
             <p>
               tit
             </p>
-            <div
-              class="join"
+            <app-stack
+              orientation="horizontal"
             >
-              <a
-                href=""
+              <div
+                class="stack horizontal gap-none"
               >
-                <app-button>
+                <app-button
+                  class="*:rounded-r-none"
+                >
                   <button
-                    class="btn flex flex-row justify-center btn-primary"
+                    class="btn primary"
                   >
-                    <!--container-->
+                     primary 
                   </button>
                 </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
+                <app-button
+                  class="*:rounded-l-none"
+                >
                   <button
-                    class="btn flex flex-row justify-center btn-primary"
+                    class="btn primary"
                   >
-                    <!--container-->
+                     secondary 
                   </button>
                 </app-button>
-              </a>
-            </div>
+              </div>
+            </app-stack>
           </div>
         </section>
         <!--container-->
@@ -1444,34 +1444,32 @@ exports[`LandingPageComponent should render the texts of the buttons inside the 
             <p>
               tit
             </p>
-            <div
-              class="join"
+            <app-stack
+              orientation="horizontal"
             >
-              <a
-                href=""
+              <div
+                class="stack horizontal gap-none"
               >
-                <app-button>
+                <app-button
+                  class="*:rounded-r-none"
+                >
                   <button
-                    class="btn flex flex-row justify-center btn-primary"
+                    class="btn primary"
                   >
                      primary 
-                    <!--container-->
                   </button>
                 </app-button>
-              </a>
-              <a
-                href=""
-              >
-                <app-button>
+                <app-button
+                  class="*:rounded-l-none"
+                >
                   <button
-                    class="btn flex flex-row justify-center btn-primary"
+                    class="btn primary"
                   >
                      secondary 
-                    <!--container-->
                   </button>
                 </app-button>
-              </a>
-            </div>
+              </div>
+            </app-stack>
           </div>
         </section>
         <!--container-->

@@ -26,7 +26,7 @@ import { WithTitle } from '@interfaces/with-title.interface';
 export class DialogLayoutComponent {}
 
 export interface DialogLayoutXVM extends WithTitle {
-    confirmButtonXVM: ButtonXVM;
-    closeButtonXVM: ButtonXVM;
-    cancelButtonXVM: ButtonXVM;
+    closeButtonXVM: ButtonXVM<'withIcon'>;
+    cancelButtonXVM: ButtonXVM<'withText'>;
+    confirmButtonXVM: ButtonXVM<'withText'>;
 }

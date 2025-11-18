@@ -14,6 +14,7 @@ import {
     mapLatLngToCoordinates,
 } from '@stores/location/location.model';
 import { GMP_MAP_OPTIONS } from './gmp-map.model';
+import { StackComponent } from '@components/stack/stack.component';
 
 @Component({
     selector: 'app-gmp-map',
@@ -22,7 +23,7 @@ import { GMP_MAP_OPTIONS } from './gmp-map.model';
 export class GmpMapComponent {
     private readonly divElement =
         viewChild.required<ElementRef<HTMLDivElement>>('mapDiv');
-    public readonly menu = contentChild<ElementRef<HTMLDivElement>>('menu');
+    public readonly menu = contentChild(StackComponent, { read: ElementRef });
     private readonly options = inject(GMP_MAP_OPTIONS);
     public readonly interactive = input<boolean>(false);
     public readonly zoom = input<number>(14);

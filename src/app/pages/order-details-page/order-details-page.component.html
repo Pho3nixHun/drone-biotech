@@ -33,20 +33,19 @@
             @if (headerXVM.addNewMissionEnabled) {
                 <a [routerLink]="buttonXVM.routerLink">
                     <app-button [vm]="buttonXVM">
-                        @if (buttonXVM.textKey) {
-                            {{ t(buttonXVM.textKey) }}
-                        }
+                        {{ t(buttonXVM.textKey) }}
                     </app-button>
                 </a>
             }
-            <app-inline metadata>
+
+            <app-cluster gapX="2xl" gapY="sm" metadata>
                 <ng-container
                     [ngTemplateOutlet]="keyValues"
                     [ngTemplateOutletContext]="{
                         summaries: headerXVM.summaries,
                     }"
                 />
-            </app-inline>
+            </app-cluster>
         </app-page-header>
 
         <app-frame [vm]="vM.overviewFrameXVM">
@@ -59,23 +58,23 @@
                     [polygonsInput]="gmpMapXVM.missions"
                 />
 
-                <app-inline>
+                <app-cluster gapX="2xl" gapY="sm">
                     <ng-container
                         [ngTemplateOutlet]="keyValues"
                         [ngTemplateOutletContext]="{
                             summaries: vM.overviewFrameXVM.summaries,
                         }"
                     />
-                </app-inline>
+                </app-cluster>
             }
         </app-frame>
 
         @let detailsFrameXVM = vM.detailsFrameXVM;
         <app-frame [vm]="detailsFrameXVM">
-            <app-inline>
-                <div>
+            <app-cluster gapX="2xl" gapY="xl">
+                <app-stack orientation="vertical" gap="md">
                     <h3>{{ t(detailsFrameXVM.clientTitleKey) }}</h3>
-                    <app-stack>
+                    <app-stack orientation="vertical" gap="sm">
                         <ng-container
                             [ngTemplateOutlet]="keyValues"
                             [ngTemplateOutletContext]="{
@@ -83,10 +82,10 @@
                             }"
                         />
                     </app-stack>
-                </div>
-                <div>
+                </app-stack>
+                <app-stack orientation="vertical" gap="md">
                     <h3>{{ t(detailsFrameXVM.detailsTitleKey) }}</h3>
-                    <app-stack>
+                    <app-stack orientation="vertical" gap="sm">
                         <ng-container
                             [ngTemplateOutlet]="keyValues"
                             [ngTemplateOutletContext]="{
@@ -94,16 +93,14 @@
                             }"
                         />
                     </app-stack>
-                </div>
-            </app-inline>
+                </app-stack>
+            </app-cluster>
         </app-frame>
 
-        @let missionsFrameXVM = vM.missionsFrameXVM;
-        <app-frame [vm]="missionsFrameXVM">
-            <app-card-list>
+        <app-frame [vm]="vM.missionsFrameXVM">
+            <app-cluster gapX="md" gapY="md">
                 @for (
-                    cardXVM of missionsFrameXVM.missionCardListXVM
-                        .missionCardXVMs;
+                    cardXVM of vM.missionsFrameXVM.missionCardXVMs;
                     track $index
                 ) {
                     <app-card>
@@ -150,12 +147,12 @@
                                 keyValueXVM of cardBodyXVM.keyValueXVMs;
                                 track $index
                             ) {
-                                <app-key-value [vm]="keyValueXVM">
+                                <app-stack orientation="horizontal" gap="sm">
                                     <app-key class="text-base-300/30">{{
                                         t(keyValueXVM.keyXVM.textKey)
                                     }}</app-key>
                                     <app-value [vm]="keyValueXVM.valueVM" />
-                                </app-key-value>
+                                </app-stack>
                             }
                         </app-card-body>
                         <app-card-footer>
@@ -165,24 +162,19 @@
                                 [fragment]="buttonXVM.fragment"
                                 class="w-full"
                             >
-                                <app-button
-                                    [vm]="buttonXVM"
-                                    class="*:btn-block"
-                                >
-                                    @if (buttonXVM.textKey; as textKey) {
-                                        {{ t(textKey) }}
-                                    }
+                                <app-button [vm]="buttonXVM" class="*:w-full">
+                                    {{ t(buttonXVM.textKey) }}
                                 </app-button>
                             </a>
                         </app-card-footer>
                     </app-card>
                 }
-            </app-card-list>
+            </app-cluster>
         </app-frame>
 
         @let chatFrameXVM = vM.chatFrameXVM;
         <app-frame [vm]="chatFrameXVM">
-            <div class="flex flex-col space-y-4">
+            <app-stack orientation="vertical" gap="sm">
                 @for (messageXVM of chatFrameXVM.messageXVMs; track $index) {
                     <app-message [vm]="messageXVM">
                         <app-avatar
@@ -204,7 +196,7 @@
                         }}</time>
                     </app-message>
                 }
-            </div>
+            </app-stack>
 
             @if (!chatFrameXVM.readonlyMessageControl) {
                 @let disabled =
@@ -233,56 +225,55 @@
 
         @let actionsFrameXVM = vM.actionsFrameXVM;
         <app-frame [vm]="actionsFrameXVM">
-            <div class="join">
-                @if (!actionsFrameXVM.completionTemplateButtonHidden) {
-                    @let completionTemplateButtonXVM =
-                        actionsFrameXVM.completionTemplateButtonXVM;
+            <app-stack orientation="horizontal">
+                @let completionTemplateButtonXVM =
+                    actionsFrameXVM.completionTemplateButtonXVM;
+                @if (!completionTemplateButtonXVM.hidden) {
                     <a [href]="completionTemplateButtonXVM.link.href" download>
-                        <app-button [vm]="completionTemplateButtonXVM">
-                            @if (
-                                completionTemplateButtonXVM.textKey;
-                                as textKey
-                            ) {
-                                {{ t(textKey) }}
-                            }
+                        <app-button
+                            [vm]="completionTemplateButtonXVM"
+                            [ngClass]="{
+                                '*:rounded-r-none': !closeOrderButtonXVM.hidden,
+                            }"
+                        >
+                            {{ t(completionTemplateButtonXVM.textKey) }}
                         </app-button>
                     </a>
                 }
 
-                @if (!actionsFrameXVM.closeOrderButtonHidden) {
-                    @let closeOrderButtonXVM =
-                        actionsFrameXVM.closeOrderButtonXVM;
+                @let closeOrderButtonXVM = actionsFrameXVM.closeOrderButtonXVM;
+                @if (!closeOrderButtonXVM.hidden) {
                     <app-button
                         [vm]="closeOrderButtonXVM"
+                        [ngClass]="{
+                            '*:rounded-l-none':
+                                !completionTemplateButtonXVM.hidden,
+                        }"
                         (click)="
                             closeOrderDialog.open(
                                 actionsFrameXVM.closeOrderDialogVM
                             )
                         "
                     >
-                        @if (closeOrderButtonXVM.textKey; as textKey) {
-                            {{ t(textKey) }}
-                        }
+                        {{ t(closeOrderButtonXVM.textKey) }}
                     </app-button>
                     <app-close-order-dialog
                         #closeOrderDialog
                         (response)="onCloseOrderDialogResponse($event)"
                     />
                 }
-            </div>
+            </app-stack>
         </app-frame>
     </app-page-layout>
 
     <ng-template #keyValues let-summaries="summaries">
         @for (summary of summaries; track $index) {
-            <li>
-                <app-key-value [vm]="summary">
-                    <app-key class="text-secondary">{{
-                        summary.keyXVM.textKey | transloco
-                    }}</app-key>
-                    <app-value [vm]="summary.valueVM" class="font-medium" />
-                </app-key-value>
-            </li>
+            <app-stack orientation="horizontal" gap="sm">
+                <app-key class="text-secondary">{{
+                    summary.keyXVM.textKey | transloco
+                }}</app-key>
+                <app-value [vm]="summary.valueVM" class="font-medium" />
+            </app-stack>
         }
     </ng-template>
 }

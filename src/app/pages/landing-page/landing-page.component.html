@@ -4,20 +4,20 @@
             <app-hero [vm]="heroXVM" *transloco="let t">
                 <h1>{{ t(heroXVM.titleKey) }}</h1>
                 <p>{{ t(heroXVM.descriptionKey) }}</p>
-                <a href="">
-                    <app-button [vm]="heroXVM.primaryButtonXVM">
-                        @if (heroXVM.primaryButtonXVM.textKey) {
-                            {{ t(heroXVM.primaryButtonXVM.textKey) }}
-                        }
+                <app-stack orientation="horizontal">
+                    <app-button
+                        [vm]="heroXVM.primaryButtonXVM"
+                        class="*:rounded-r-none"
+                    >
+                        {{ t(heroXVM.primaryButtonXVM.textKey) }}
                     </app-button>
-                </a>
-                <a href="">
-                    <app-button [vm]="heroXVM.secondaryButtonXVM">
-                        @if (heroXVM.secondaryButtonXVM.textKey) {
-                            {{ t(heroXVM.secondaryButtonXVM.textKey) }}
-                        }
+                    <app-button
+                        [vm]="heroXVM.secondaryButtonXVM"
+                        class="*:rounded-l-none"
+                    >
+                        {{ t(heroXVM.secondaryButtonXVM.textKey) }}
                     </app-button>
-                </a>
+                </app-stack>
             </app-hero>
         }
 

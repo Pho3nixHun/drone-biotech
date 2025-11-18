@@ -30,15 +30,13 @@ exports[`HeroComponent should render the template when the VM is provided, proje
         <p>
           World
         </p>
-        <div
-          class="join"
+        <app-stack
+          orientation="vertical"
         >
-          <a
-            href=""
-          >
-            Anchor
-          </a>
-        </div>
+          <div
+            class="stack vertical gap-none"
+          />
+        </app-stack>
       </div>
     </section>
     <!--container-->

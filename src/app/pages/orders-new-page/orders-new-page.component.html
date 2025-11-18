@@ -112,14 +112,12 @@
             <!-- Missions form control end -->
 
             <app-button
-                class="*:btn-block"
+                class="*:w-full"
                 [vm]="vM.submitButtonXVM"
                 [disabled]="formGroup.invalid"
                 (click)="submitForm()"
             >
-                @if (vM.submitButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
+                {{ t(vM.submitButtonXVM.textKey) }}
             </app-button>
         </form>
     </app-frame>

@@ -8,7 +8,7 @@ export interface LoginPageVM {
 
 export interface LoginFormXVM extends LoginFormVM {
     errorMessageKey: string | null;
-    submitButtonXVM: ButtonXVM;
+    submitButtonXVM: ButtonXVM<'withText'>;
     requiredAssistiveTextKey: string;
     emailInputTextXVM: InputTextXVM;
     passwordInputTextXVM: InputTextXVM;

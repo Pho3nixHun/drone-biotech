@@ -5,36 +5,37 @@ import { OrdersRouteSegment } from './pages/orders-new-page/orders-route-segment
 import { MatIcon } from '@interfaces/mat-icon.enum';
 
 export const appVMDefault: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [
-        {
-            textKey: 'AppComponent.navItems.0.title',
-            routerLink: AppRouteSegment.LANDING,
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
         },
-        {
-            textKey: 'AppComponent.navItems.1.title',
-            routerLink: AppRouteSegment.LANDING,
-            fragment: FrameID.PRODUCTS,
+        navItemXVMs: [
+            {
+                textKey: 'AppComponent.navItems.0.title',
+                routerLink: AppRouteSegment.LANDING,
+            },
+            {
+                textKey: 'AppComponent.navItems.1.title',
+                routerLink: AppRouteSegment.LANDING,
+                fragment: FrameID.PRODUCTS,
+            },
+            {
+                textKey: 'AppComponent.navItems.2.title',
+                routerLink: AppRouteSegment.LANDING,
+                fragment: FrameID.PARTNERS,
+            },
+            {
+                textKey: 'AppComponent.navItems.3.title',
+                routerLink: [AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
+            },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: true,
+            variant: 'ghost',
         },
-        {
-            textKey: 'AppComponent.navItems.2.title',
-            routerLink: AppRouteSegment.LANDING,
-            fragment: FrameID.PARTNERS,
-        },
-        {
-            textKey: 'AppComponent.navItems.3.title',
-            routerLink: [AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
-        },
-    ],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: true,
-        variant: 'ghost',
     },
 };
 
@@ -47,191 +48,179 @@ export const enAppMock = {
 };
 
 export const appMockVMWithoutNavItem: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
+        },
+        navItemXVMs: [],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+        },
     },
 };
 export const appMockVMWithOneNavItem: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [{ textKey: 'text0', link: { href: `#${FrameID.PRODUCTS}` } }],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
+        },
+        navItemXVMs: [
+            { textKey: 'text0', link: { href: `#${FrameID.PRODUCTS}` } },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+        },
     },
 };
 
 export const appMockVMWithFiveNavItem: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [
-        { textKey: 'text0', link: { href: `#${FrameID.PRODUCTS}` } },
-        { textKey: 'text1', link: { href: `#${FrameID.PRODUCTS}` } },
-        { textKey: 'text2', link: { href: `#${FrameID.PRODUCTS}` } },
-        { textKey: 'text3', link: { href: `#${FrameID.PRODUCTS}` } },
-        { textKey: 'text4', link: { href: `#${FrameID.PRODUCTS}` } },
-    ],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
+        },
+        navItemXVMs: [
+            { textKey: 'text0', link: { href: `#${FrameID.PRODUCTS}` } },
+            { textKey: 'text1', link: { href: `#${FrameID.PRODUCTS}` } },
+            { textKey: 'text2', link: { href: `#${FrameID.PRODUCTS}` } },
+            { textKey: 'text3', link: { href: `#${FrameID.PRODUCTS}` } },
+            { textKey: 'text4', link: { href: `#${FrameID.PRODUCTS}` } },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+        },
     },
 };
 
 export const appMockVMWithOneAnchor: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [{ textKey: 'text0', routerLink: AppRouteSegment.LANDING }],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
+        },
+        navItemXVMs: [
+            { textKey: 'text0', routerLink: AppRouteSegment.LANDING },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+        },
     },
 };
 
 export const appMockVMWithFiveAnchor: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [
-        { textKey: 'text0', routerLink: AppRouteSegment.LANDING },
-        { textKey: 'text1', routerLink: AppRouteSegment.LANDING },
-        { textKey: 'text2', routerLink: AppRouteSegment.LANDING },
-        { textKey: 'text3', routerLink: AppRouteSegment.LANDING },
-        { textKey: 'text4', routerLink: AppRouteSegment.LANDING },
-    ],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
+        },
+        navItemXVMs: [
+            { textKey: 'text0', routerLink: AppRouteSegment.LANDING },
+            { textKey: 'text1', routerLink: AppRouteSegment.LANDING },
+            { textKey: 'text2', routerLink: AppRouteSegment.LANDING },
+            { textKey: 'text3', routerLink: AppRouteSegment.LANDING },
+            { textKey: 'text4', routerLink: AppRouteSegment.LANDING },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+        },
     },
 };
 
 export const appMockVMWithNavItemAndAnchor: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [
-        {
-            textKey: 'text0',
-            routerLink: AppRouteSegment.LANDING,
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
         },
-        {
-            textKey: 'text1',
-            link: { href: `#${FrameID.PRODUCTS}` },
+        navItemXVMs: [
+            {
+                textKey: 'text0',
+                routerLink: AppRouteSegment.LANDING,
+            },
+            {
+                textKey: 'text1',
+                link: { href: `#${FrameID.PRODUCTS}` },
+            },
+            {
+                textKey: 'text2',
+                link: { href: `#${FrameID.PARTNERS}` },
+            },
+            {
+                textKey: 'text3',
+                link: { href: `#${FrameID.PRODUCTS}` },
+            },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
         },
-        {
-            textKey: 'text2',
-            link: { href: `#${FrameID.PARTNERS}` },
-        },
-        {
-            textKey: 'text3',
-            link: { href: `#${FrameID.PRODUCTS}` },
-        },
-    ],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
     },
 };
 
 export const appMockVM: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [
-        {
-            textKey: 'text0',
-            routerLink: AppRouteSegment.LANDING,
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
         },
-        {
-            textKey: 'text1',
-            link: { href: `#${FrameID.PRODUCTS}` },
+        navItemXVMs: [
+            {
+                textKey: 'text0',
+                routerLink: AppRouteSegment.LANDING,
+            },
+            {
+                textKey: 'text1',
+                link: { href: `#${FrameID.PRODUCTS}` },
+            },
+            {
+                textKey: 'text2',
+                link: { href: `#${FrameID.PARTNERS}` },
+            },
+            {
+                textKey: 'text3',
+                link: { href: `#${FrameID.PRODUCTS}` },
+            },
+        ],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+            hidden: false,
         },
-        {
-            textKey: 'text2',
-            link: { href: `#${FrameID.PARTNERS}` },
-        },
-        {
-            textKey: 'text3',
-            link: { href: `#${FrameID.PRODUCTS}` },
-        },
-    ],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
     },
 };
 
 export const appEmptyMockVMForRoutes: AppComponentVM = {
-    headerCanBeShown: false,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
+    headerXVM: {
+        logoXVM: {
+            imageSrc: 'assets/phoenix.jpg',
+            routerLink: '',
+            altText: 'logo',
+        },
+        navItemXVMs: [],
+        signOutButtonXVM: {
+            icon: MatIcon.LOGOUT,
+            secondary: false,
+            variant: 'ghost',
+        },
     },
-    navItemXVMs: [],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
-    },
-};
-
-export const appMockVMWithSignoutButton: AppComponentVM = {
-    headerCanBeShown: true,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [],
-    signOutButtonXVM: {
-        icon: MatIcon.LOGOUT,
-        secondary: false,
-        variant: 'ghost',
-    },
-};
-export const appMockVMWithoutSignoutButton: AppComponentVM = {
-    headerCanBeShown: true,
-    logoXVM: {
-        imageSrc: 'assets/phoenix.jpg',
-        routerLink: '',
-        altText: 'logo',
-    },
-    navItemXVMs: [],
-    signOutButtonXVM: undefined,
 };

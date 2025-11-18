@@ -16,9 +16,16 @@ exports[`AreasDataFormControlComponent should not render the cards and total whe
       </label>
       <app-button>
         <button
-          class="btn flex flex-row justify-center btn-primary"
+          class="btn primary"
         >
-          <!--container-->
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+          >
+            close
+          </mat-icon>
         </button>
       </app-button>
       <!--container-->
@@ -57,9 +64,16 @@ exports[`AreasDataFormControlComponent should render 1 card and total when there
       </label>
       <app-button>
         <button
-          class="btn flex flex-row justify-center btn-primary"
+          class="btn primary"
         >
-          <!--container-->
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+          >
+            close
+          </mat-icon>
         </button>
       </app-button>
       <!--container-->
@@ -244,7 +258,7 @@ exports[`AreasDataFormControlComponent should render 1 card and total when there
             >
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -254,12 +268,11 @@ exports[`AreasDataFormControlComponent should render 1 card and total when there
                   >
                     edit
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -269,7 +282,6 @@ exports[`AreasDataFormControlComponent should render 1 card and total when there
                   >
                     delete
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
             </div>
@@ -313,9 +325,16 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
       </label>
       <app-button>
         <button
-          class="btn flex flex-row justify-center btn-primary"
+          class="btn primary"
         >
-          <!--container-->
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+          >
+            close
+          </mat-icon>
         </button>
       </app-button>
       <!--container-->
@@ -500,7 +519,7 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
             >
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -510,12 +529,11 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
                   >
                     edit
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -525,7 +543,6 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
                   >
                     delete
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
             </div>
@@ -658,7 +675,7 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
             >
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -668,12 +685,11 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
                   >
                     edit
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -683,7 +699,6 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
                   >
                     delete
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
             </div>
@@ -816,7 +831,7 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
             >
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -826,12 +841,11 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
                   >
                     edit
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
               <app-button>
                 <button
-                  class="btn flex flex-row justify-center btn-primary btn-text"
+                  class="btn primary ghost"
                 >
                   <mat-icon
                     aria-hidden="true"
@@ -841,7 +855,6 @@ exports[`AreasDataFormControlComponent should render 3 cards and total when ther
                   >
                     delete
                   </mat-icon>
-                  <!--container-->
                 </button>
               </app-button>
             </div>
@@ -885,9 +898,16 @@ exports[`AreasDataFormControlComponent should render the template correctly with
       </label>
       <app-button>
         <button
-          class="btn flex flex-row justify-center btn-primary"
+          class="btn primary"
         >
-          <!--container-->
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+          >
+            close
+          </mat-icon>
         </button>
       </app-button>
       <!--container-->
@@ -926,10 +946,17 @@ exports[`AreasDataFormControlComponent should set disabled state 1`] = `
       </label>
       <app-button>
         <button
-          class="btn flex flex-row justify-center btn-primary btn-disabled"
+          class="btn primary disabled"
           disabled=""
         >
-          <!--container-->
+          <mat-icon
+            aria-hidden="true"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+            data-mat-icon-type="font"
+            role="img"
+          >
+            close
+          </mat-icon>
         </button>
       </app-button>
       <!--container-->

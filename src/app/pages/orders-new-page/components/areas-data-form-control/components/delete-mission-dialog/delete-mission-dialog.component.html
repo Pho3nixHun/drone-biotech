@@ -1,6 +1,6 @@
 <dialog #dialog>
     @if (vm(); as vm) {
-        <app-dialog-layout class="w-80 md:w-96 block" *transloco="let t">
+        <app-dialog-layout *transloco="let t">
             <app-page-header>
                 <h2>
                     {{ t(vm.titleKey) }}
@@ -9,24 +9,29 @@
                     actionGroup
                     [vm]="vm.closeButtonXVM"
                     (click)="cancel()"
-                    close
                 >
-                    @if (vm.closeButtonXVM.icon; as icon) {
-                        <mat-icon>{{ icon }}</mat-icon>
-                    }
+                    <mat-icon>{{ vm.closeButtonXVM.icon }}</mat-icon>
                 </app-button>
             </app-page-header>
+
             <p>{{ t(vm.confirmTextKey) }}</p>
-            <app-button [vm]="vm.confirmButtonXVM" (click)="submit()">
-                @if (vm.confirmButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
-            <app-button [vm]="vm.cancelButtonXVM" (click)="cancel()">
-                @if (vm.cancelButtonXVM.textKey; as textKey) {
-                    {{ t(textKey) }}
-                }
-            </app-button>
+
+            <app-stack orientation="horizontal" footerActionGroup>
+                <app-button
+                    [vm]="vm.confirmButtonXVM"
+                    (click)="submit()"
+                    class="*:rounded-r-none"
+                >
+                    {{ t(vm.confirmButtonXVM.textKey) }}
+                </app-button>
+                <app-button
+                    [vm]="vm.cancelButtonXVM"
+                    (click)="cancel()"
+                    class="*:rounded-l-none"
+                >
+                    {{ t(vm.cancelButtonXVM.textKey) }}
+                </app-button>
+            </app-stack>
         </app-dialog-layout>
     }
 </dialog>

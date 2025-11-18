@@ -12,8 +12,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         detailsTitleKey: 'OrderDetailsPage.details.summary.title',
         clientSummaries: [
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.client.contactText',
                 },
@@ -23,8 +21,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.client.emailText',
                 },
@@ -34,8 +30,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.client.phoneText',
                 },
@@ -45,8 +39,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.client.addressText',
                 },
@@ -58,8 +50,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         ],
         detailsSummaries: [
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.summary.treatmentText',
                 },
@@ -69,8 +59,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.summary.averageDoseText',
                 },
@@ -81,8 +69,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.summary.totalSupplyText',
                 },
@@ -93,8 +79,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.details.summary.priceText',
                 },
@@ -111,8 +95,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
 
         summaries: [
             {
-                orientation: 'vertical',
-                gap: 'small',
                 keyXVM: { textKey: 'OrderDetailsPage.overview.totalText' },
                 valueVM: {
                     type: 'withKey',
@@ -121,8 +103,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'vertical',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.overview.completedText',
                 },
@@ -133,8 +113,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'vertical',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.overview.remainingText',
                 },
@@ -207,378 +185,346 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
     },
     missionsFrameXVM: {
         titleKey: 'OrderDetailsPage.missions.title',
-        missionCardListXVM: {
-            missionCardXVMs: [
-                {
-                    cardFooterXVM: {
-                        buttonXVM: {
-                            routerLink: ['/'],
-                            variant: 'ghost',
-                            secondary: true,
-                            textKey: 'OrderDetailsPage.missions.card.edit.text',
-                        },
-                    },
-                    cardBodyXVM: {
-                        title: 'A-12345',
-                        titleKey: 'OrderDetailsPage.missions.card.title',
-                        keyValueXVMs: [
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.name.text',
-                                },
-                                valueVM: {
-                                    type: 'withoutKey',
-                                    value: 'North Field',
-                                },
-                            },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.text',
-                                },
-                                valueVM: {
-                                    key: 'OrderDetailsPage.missions.card.area.value',
-                                    type: 'withKey',
-                                    params: { area: 45.8 },
-                                },
-                            },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                                },
-                                valueVM: {
-                                    type: 'withKey',
-                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                    params: { date: new Date(122436234) },
-                                },
-                            },
-                        ],
-                        status: 'completed',
-                        statusBadgeXVM: { shape: 'rounded' },
-                    },
-                    gmpMapXVM: {
-                        polygon: {
-                            colors: {
-                                fillColor: PolygonColor.BLUE,
-                                strokeColor: PolygonColor.BLUE,
-                            },
-                            coordinates: [
-                                { lat: 47.2466806, lng: 21.1876058 },
-                                { lat: 47.2466806, lng: 21.1936058 },
-                                { lat: 47.2406806, lng: 21.1936058 },
-                                { lat: 47.2406806, lng: 21.1876058 },
-                            ],
-                        },
-                        bounds: null,
-                        entryPoint: {
-                            coordinates: { lat: 47.2285, lng: 21.176 },
-                        },
+        missionCardXVMs: [
+            {
+                cardFooterXVM: {
+                    buttonXVM: {
+                        routerLink: ['/'],
+                        variant: 'ghost',
+                        secondary: true,
+                        textKey: 'OrderDetailsPage.missions.card.edit.text',
                     },
                 },
-                {
-                    cardFooterXVM: {
-                        buttonXVM: {
-                            routerLink: ['/'],
-                            variant: 'ghost',
-                            secondary: true,
-                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                cardBodyXVM: {
+                    title: 'A-12345',
+                    titleKey: 'OrderDetailsPage.missions.card.title',
+                    keyValueXVMs: [
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.name.text',
+                            },
+                            valueVM: {
+                                type: 'withoutKey',
+                                value: 'North Field',
+                            },
                         },
-                    },
-                    cardBodyXVM: {
-                        title: 'A-12346',
-                        titleKey: 'OrderDetailsPage.missions.card.title',
-                        keyValueXVMs: [
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.name.text',
-                                },
-                                valueVM: {
-                                    type: 'withoutKey',
-                                    value: 'South Field',
-                                },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.text',
                             },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.text',
-                                },
-                                valueVM: {
-                                    key: 'OrderDetailsPage.missions.card.area.value',
-                                    type: 'withKey',
-                                    params: { area: 62.1 },
-                                },
+                            valueVM: {
+                                key: 'OrderDetailsPage.missions.card.area.value',
+                                type: 'withKey',
+                                params: { area: 45.8 },
                             },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                                },
-                                valueVM: {
-                                    type: 'withKey',
-                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                    params: { date: new Date(12240234) },
-                                },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
                             },
+                            valueVM: {
+                                type: 'withKey',
+                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                params: { date: new Date(122436234) },
+                            },
+                        },
+                    ],
+                    status: 'completed',
+                    statusBadgeXVM: { shape: 'rounded' },
+                },
+                gmpMapXVM: {
+                    polygon: {
+                        colors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
+                        coordinates: [
+                            { lat: 47.2466806, lng: 21.1876058 },
+                            { lat: 47.2466806, lng: 21.1936058 },
+                            { lat: 47.2406806, lng: 21.1936058 },
+                            { lat: 47.2406806, lng: 21.1876058 },
                         ],
-                        status: 'preparing',
-                        statusBadgeXVM: { shape: 'rounded' },
                     },
-                    gmpMapXVM: {
-                        polygon: {
-                            colors: {
-                                fillColor: PolygonColor.BLUE,
-                                strokeColor: PolygonColor.BLUE,
-                            },
-                            coordinates: [
-                                { lat: 47.2406806, lng: 21.1876058 },
-                                { lat: 47.2406806, lng: 21.1936058 },
-                                { lat: 47.2346806, lng: 21.1936058 },
-                                { lat: 47.2346806, lng: 21.1876058 },
-                            ],
-                        },
-                        bounds: null,
-                        entryPoint: {
-                            coordinates: { lat: 47.23, lng: 21.205 },
-                        },
+                    bounds: null,
+                    entryPoint: {
+                        coordinates: { lat: 47.2285, lng: 21.176 },
                     },
                 },
-                {
-                    cardFooterXVM: {
-                        buttonXVM: {
-                            routerLink: ['/'],
-                            variant: 'ghost',
-                            secondary: true,
-                            textKey: 'OrderDetailsPage.missions.card.edit.text',
-                        },
-                    },
-                    cardBodyXVM: {
-                        title: 'A-12347',
-                        titleKey: 'OrderDetailsPage.missions.card.title',
-                        keyValueXVMs: [
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.name.text',
-                                },
-                                valueVM: {
-                                    type: 'withoutKey',
-                                    value: 'East Meadow',
-                                },
-                            },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.text',
-                                },
-                                valueVM: {
-                                    key: 'OrderDetailsPage.missions.card.area.value',
-                                    type: 'withKey',
-                                    params: { area: 80.1 },
-                                },
-                            },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                                },
-                                valueVM: {
-                                    type: 'withKey',
-                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                    params: { date: new Date(122214234) },
-                                },
-                            },
-                        ],
-                        status: 'scheduled',
-                        statusBadgeXVM: { shape: 'rounded' },
-                    },
-                    gmpMapXVM: {
-                        polygon: {
-                            colors: {
-                                fillColor: PolygonColor.BLUE,
-                                strokeColor: PolygonColor.BLUE,
-                            },
-                            coordinates: [
-                                { lat: 47.2406806, lng: 21.1796058 },
-                                { lat: 47.2406806, lng: 21.1856058 },
-                                { lat: 47.2346806, lng: 21.1856058 },
-                                { lat: 47.2346806, lng: 21.1796058 },
-                            ],
-                        },
-                        bounds: null,
-                        entryPoint: {
-                            coordinates: { lat: 47.255, lng: 21.205 },
-                        },
+            },
+            {
+                cardFooterXVM: {
+                    buttonXVM: {
+                        routerLink: ['/'],
+                        variant: 'ghost',
+                        secondary: true,
+                        textKey: 'OrderDetailsPage.missions.card.edit.text',
                     },
                 },
-                {
-                    cardFooterXVM: {
-                        buttonXVM: {
-                            routerLink: ['/'],
-                            variant: 'ghost',
-                            secondary: true,
-                            textKey: 'OrderDetailsPage.missions.card.edit.text',
+                cardBodyXVM: {
+                    title: 'A-12346',
+                    titleKey: 'OrderDetailsPage.missions.card.title',
+                    keyValueXVMs: [
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.name.text',
+                            },
+                            valueVM: {
+                                type: 'withoutKey',
+                                value: 'South Field',
+                            },
                         },
-                    },
-                    cardBodyXVM: {
-                        title: 'A-12348',
-                        titleKey: 'OrderDetailsPage.missions.card.title',
-                        keyValueXVMs: [
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.name.text',
-                                },
-                                valueVM: {
-                                    type: 'withoutKey',
-                                    value: 'West Orchard',
-                                },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.text',
                             },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.text',
-                                },
-                                valueVM: {
-                                    key: 'OrderDetailsPage.missions.card.area.value',
-                                    type: 'withKey',
-                                    params: { area: 42.9 },
-                                },
+                            valueVM: {
+                                key: 'OrderDetailsPage.missions.card.area.value',
+                                type: 'withKey',
+                                params: { area: 62.1 },
                             },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                                },
-                                valueVM: {
-                                    type: 'withKey',
-                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                    params: { date: new Date(121224234) },
-                                },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
                             },
+                            valueVM: {
+                                type: 'withKey',
+                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                params: { date: new Date(12240234) },
+                            },
+                        },
+                    ],
+                    status: 'preparing',
+                    statusBadgeXVM: { shape: 'rounded' },
+                },
+                gmpMapXVM: {
+                    polygon: {
+                        colors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
+                        coordinates: [
+                            { lat: 47.2406806, lng: 21.1876058 },
+                            { lat: 47.2406806, lng: 21.1936058 },
+                            { lat: 47.2346806, lng: 21.1936058 },
+                            { lat: 47.2346806, lng: 21.1876058 },
                         ],
-                        status: 'completed',
-                        statusBadgeXVM: { shape: 'rounded' },
                     },
-                    gmpMapXVM: {
-                        polygon: {
-                            colors: {
-                                fillColor: PolygonColor.BLUE,
-                                strokeColor: PolygonColor.BLUE,
-                            },
-                            coordinates: [
-                                { lat: 47.2466806, lng: 21.1796058 },
-                                { lat: 47.2466806, lng: 21.1856058 },
-                                { lat: 47.2406806, lng: 21.1856058 },
-                                { lat: 47.2406806, lng: 21.1796058 },
-                            ],
-                        },
-                        bounds: null,
-                        entryPoint: {
-                            coordinates: { lat: 47.2555, lng: 21.165 },
-                        },
+                    bounds: null,
+                    entryPoint: {
+                        coordinates: { lat: 47.23, lng: 21.205 },
                     },
                 },
-                {
-                    cardFooterXVM: {
-                        buttonXVM: {
-                            routerLink: ['/'],
-                            variant: 'ghost',
-                            secondary: true,
-                            textKey: 'OrderDetailsPage.missions.card.edit.text',
-                        },
-                    },
-                    cardBodyXVM: {
-                        title: 'A-12349',
-                        titleKey: 'OrderDetailsPage.missions.card.title',
-                        keyValueXVMs: [
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.name.text',
-                                },
-                                valueVM: {
-                                    type: 'withoutKey',
-                                    value: 'Central Vineyard',
-                                },
-                            },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.text',
-                                },
-                                valueVM: {
-                                    key: 'OrderDetailsPage.missions.card.area.value',
-                                    type: 'withKey',
-                                    params: { area: 61 },
-                                },
-                            },
-                            {
-                                orientation: 'vertical',
-                                gap: 'small',
-                                keyXVM: {
-                                    textKey:
-                                        'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                                },
-                                valueVM: {
-                                    type: 'withKey',
-                                    key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                    params: { date: new Date(122423214) },
-                                },
-                            },
-                        ],
-                        status: 'preparing',
-                        statusBadgeXVM: { shape: 'rounded' },
-                    },
-                    gmpMapXVM: {
-                        bounds: null,
-                        entryPoint: { coordinates: { lat: 47.24, lng: 21.21 } },
-                        polygon: {
-                            colors: {
-                                fillColor: PolygonColor.BLUE,
-                                strokeColor: PolygonColor.BLUE,
-                            },
-                            coordinates: [
-                                { lat: 47.2466806, lng: 21.1796058 },
-                                { lat: 47.2466806, lng: 21.1856058 },
-                                { lat: 47.2406806, lng: 21.1856058 },
-                                { lat: 47.2406806, lng: 21.1796058 },
-                            ],
-                        },
+            },
+            {
+                cardFooterXVM: {
+                    buttonXVM: {
+                        routerLink: ['/'],
+                        variant: 'ghost',
+                        secondary: true,
+                        textKey: 'OrderDetailsPage.missions.card.edit.text',
                     },
                 },
-            ],
-        },
+                cardBodyXVM: {
+                    title: 'A-12347',
+                    titleKey: 'OrderDetailsPage.missions.card.title',
+                    keyValueXVMs: [
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.name.text',
+                            },
+                            valueVM: {
+                                type: 'withoutKey',
+                                value: 'East Meadow',
+                            },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.text',
+                            },
+                            valueVM: {
+                                key: 'OrderDetailsPage.missions.card.area.value',
+                                type: 'withKey',
+                                params: { area: 80.1 },
+                            },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                            },
+                            valueVM: {
+                                type: 'withKey',
+                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                params: { date: new Date(122214234) },
+                            },
+                        },
+                    ],
+                    status: 'scheduled',
+                    statusBadgeXVM: { shape: 'rounded' },
+                },
+                gmpMapXVM: {
+                    polygon: {
+                        colors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
+                        coordinates: [
+                            { lat: 47.2406806, lng: 21.1796058 },
+                            { lat: 47.2406806, lng: 21.1856058 },
+                            { lat: 47.2346806, lng: 21.1856058 },
+                            { lat: 47.2346806, lng: 21.1796058 },
+                        ],
+                    },
+                    bounds: null,
+                    entryPoint: {
+                        coordinates: { lat: 47.255, lng: 21.205 },
+                    },
+                },
+            },
+            {
+                cardFooterXVM: {
+                    buttonXVM: {
+                        routerLink: ['/'],
+                        variant: 'ghost',
+                        secondary: true,
+                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                    },
+                },
+                cardBodyXVM: {
+                    title: 'A-12348',
+                    titleKey: 'OrderDetailsPage.missions.card.title',
+                    keyValueXVMs: [
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.name.text',
+                            },
+                            valueVM: {
+                                type: 'withoutKey',
+                                value: 'West Orchard',
+                            },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.text',
+                            },
+                            valueVM: {
+                                key: 'OrderDetailsPage.missions.card.area.value',
+                                type: 'withKey',
+                                params: { area: 42.9 },
+                            },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                            },
+                            valueVM: {
+                                type: 'withKey',
+                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                params: { date: new Date(121224234) },
+                            },
+                        },
+                    ],
+                    status: 'completed',
+                    statusBadgeXVM: { shape: 'rounded' },
+                },
+                gmpMapXVM: {
+                    polygon: {
+                        colors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
+                        coordinates: [
+                            { lat: 47.2466806, lng: 21.1796058 },
+                            { lat: 47.2466806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1796058 },
+                        ],
+                    },
+                    bounds: null,
+                    entryPoint: {
+                        coordinates: { lat: 47.2555, lng: 21.165 },
+                    },
+                },
+            },
+            {
+                cardFooterXVM: {
+                    buttonXVM: {
+                        routerLink: ['/'],
+                        variant: 'ghost',
+                        secondary: true,
+                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                    },
+                },
+                cardBodyXVM: {
+                    title: 'A-12349',
+                    titleKey: 'OrderDetailsPage.missions.card.title',
+                    keyValueXVMs: [
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.name.text',
+                            },
+                            valueVM: {
+                                type: 'withoutKey',
+                                value: 'Central Vineyard',
+                            },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.text',
+                            },
+                            valueVM: {
+                                key: 'OrderDetailsPage.missions.card.area.value',
+                                type: 'withKey',
+                                params: { area: 61 },
+                            },
+                        },
+                        {
+                            keyXVM: {
+                                textKey:
+                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
+                            },
+                            valueVM: {
+                                type: 'withKey',
+                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                                params: { date: new Date(122423214) },
+                            },
+                        },
+                    ],
+                    status: 'preparing',
+                    statusBadgeXVM: { shape: 'rounded' },
+                },
+                gmpMapXVM: {
+                    bounds: null,
+                    entryPoint: { coordinates: { lat: 47.24, lng: 21.21 } },
+                    polygon: {
+                        colors: {
+                            fillColor: PolygonColor.BLUE,
+                            strokeColor: PolygonColor.BLUE,
+                        },
+                        coordinates: [
+                            { lat: 47.2466806, lng: 21.1796058 },
+                            { lat: 47.2466806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1856058 },
+                            { lat: 47.2406806, lng: 21.1796058 },
+                        ],
+                    },
+                },
+            },
+        ],
     },
     headerXVM: {
         orderId: 'permetezés',
@@ -589,13 +535,9 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             routerLink: ['/', AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
             variant: 'ghost',
         },
-        statusBadgeXVM: {
-            shape: 'rounded',
-        },
+        statusBadgeXVM: { shape: 'rounded' },
         summaries: [
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.header.clientTextKey',
                 },
@@ -605,8 +547,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.header.creationDateTextKey',
                 },
@@ -617,8 +557,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                orientation: 'horizontal',
-                gap: 'small',
                 keyXVM: {
                     textKey: 'OrderDetailsPage.header.totalAreaTextKey',
                 },
@@ -631,8 +569,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         ],
     },
     actionsFrameXVM: {
-        completionTemplateButtonHidden: false,
-        closeOrderButtonHidden: false,
         titleKey: 'OrderDetailsPage.actions.title',
         completionTemplateButtonXVM: {
             variant: 'fill',

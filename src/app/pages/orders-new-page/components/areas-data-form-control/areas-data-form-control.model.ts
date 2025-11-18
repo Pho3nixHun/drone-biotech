@@ -6,15 +6,15 @@ import {
 import { DeleteMissionDialogVM } from './components/delete-mission-dialog/delete-mission-dialog.model';
 
 export interface AreasDataFormControlVM {
-    addButtonXVM: ButtonXVM;
+    addButtonXVM: ButtonXVM<'withIcon'>;
     readonly?: boolean;
 
     labelKey: string;
     areaDataDialogVM: AreaDataDialogVM;
     deleteMissionDialogVM: DeleteMissionDialogVM;
 
-    editButtonXVM: ButtonXVM;
-    deleteButtonXVM: ButtonXVM;
+    editButtonXVM: ButtonXVM<'withIcon'>;
+    deleteButtonXVM: ButtonXVM<'withIcon'>;
 
     entryPointHeaderKey: string;
 

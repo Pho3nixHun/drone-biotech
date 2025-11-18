@@ -15,6 +15,7 @@ import { ButtonComponent } from '@components/button/button.component';
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
 import { DialogLayoutComponent } from '@components/dialog-layout/dialog-layout.component';
 import { TranslocoModule } from '@jsverse/transloco';
+import { StackComponent } from '@components/stack/stack.component';
 
 /**
  * DeleteMissionDialogComponent
@@ -40,6 +41,7 @@ import { TranslocoModule } from '@jsverse/transloco';
         PageHeaderComponent,
         DialogLayoutComponent,
         TranslocoModule,
+        StackComponent,
     ],
     templateUrl: './delete-mission-dialog.component.html',
 })

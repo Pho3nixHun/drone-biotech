@@ -75,12 +75,14 @@ export class PolygonContextMenu extends google.maps.OverlayView {
         const panes = this.getPanes();
         const ref = this.componentRef();
         const vertex = this.vertex();
+        const vm = this.vm();
         if (
             !panes ||
             !(map instanceof google.maps.Map) ||
             ref ||
             !path ||
-            isNull(vertex)
+            isNull(vertex) ||
+            !vm
         )
             return;
 
@@ -88,11 +90,18 @@ export class PolygonContextMenu extends google.maps.OverlayView {
             environmentInjector: this.injector,
             hostElement: this.containerDiv,
             bindings: [
-                inputBinding('vm', () => this.vm()),
-                inputBinding(
-                    'showRemoveVertexButton',
-                    () => path.getLength() > 3
-                ),
+                inputBinding('vm', () => {
+                    const { removeVertexButtonXVM } = vm;
+                    const computedVM: PolygonContextMenuVM = {
+                        ...vm,
+                        removeVertexButtonXVM: {
+                            ...removeVertexButtonXVM,
+                            hidden: path.getLength() < 3,
+                        },
+                    };
+                    return computedVM;
+                }),
+
                 outputBinding(
                     'polygonContextMenuEvent',
                     (event: PolygonContextMenuEvent) => {

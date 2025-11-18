@@ -9,7 +9,6 @@ import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
 import { TranslocoModule } from '@jsverse/transloco';
 import { BadgeComponent } from '@components/badge/badge.component';
-import { KeyValueComponent } from '../order-details-page/key-value/key-value.component';
 import { KeyComponent } from '@components/key/key.component';
 import { ValueComponent } from '@components/value/value.component';
 import { StackComponent } from '@components/stack/stack.component';
@@ -29,7 +28,6 @@ import {
 import { CustomerCancelDialogComponent } from './components/customer-cancel-dialog/customer-cancel-dialog.component';
 import { OfficeCancelDialogComponent } from './components/office-cancel-dialog/office-cancel-dialog.component';
 import { emptyStringValidator } from '@validators/empty-string.validator';
-import { InlineComponent } from '@components/inline/inline.component';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -43,7 +41,6 @@ import { InlineComponent } from '@components/inline/inline.component';
         TranslocoModule,
         BadgeComponent,
         NgClass,
-        KeyValueComponent,
         KeyComponent,
         ValueComponent,
         StackComponent,
@@ -58,7 +55,6 @@ import { InlineComponent } from '@components/inline/inline.component';
         CustomerCancelDialogComponent,
         NgTemplateOutlet,
         OfficeCancelDialogComponent,
-        InlineComponent,
     ],
     templateUrl: './mission-details-page.component.html',
 })

@@ -8,9 +8,7 @@ exports[`DeleteMissionDialogComponent should render the template correctly 1`] =
   <dialog
     open=""
   >
-    <app-dialog-layout
-      class="w-80 md:w-96 block"
-    >
+    <app-dialog-layout>
       <section
         class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
       >
@@ -27,10 +25,9 @@ exports[`DeleteMissionDialogComponent should render the template correctly 1`] =
             </div>
             <app-button
               actiongroup=""
-              close=""
             >
               <button
-                class="btn flex flex-row justify-center btn-primary btn-text"
+                class="btn primary ghost"
               >
                 <mat-icon
                   aria-hidden="true"
@@ -40,7 +37,6 @@ exports[`DeleteMissionDialogComponent should render the template correctly 1`] =
                 >
                   close
                 </mat-icon>
-                <!--container-->
               </button>
             </app-button>
           </header>
@@ -53,24 +49,35 @@ exports[`DeleteMissionDialogComponent should render the template correctly 1`] =
           </p>
         </div>
         <div
-          class="ml-auto join"
+          class="ml-auto"
         >
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
             >
-               conf 
-              <!--container-->
-            </button>
-          </app-button>
-          <app-button>
-            <button
-              class="btn flex flex-row justify-center btn-primary"
-            >
-               cancel 
-              <!--container-->
-            </button>
-          </app-button>
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   conf 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
         </div>
       </section>
     </app-dialog-layout>

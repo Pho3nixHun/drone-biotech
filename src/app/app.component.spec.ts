@@ -12,8 +12,6 @@ import {
     appMockVMWithOneAnchor,
     appMockVMWithFiveAnchor,
     appMockVMWithNavItemAndAnchor,
-    appMockVMWithSignoutButton,
-    appMockVMWithoutSignoutButton,
 } from './app.mock';
 import {
     provideAppComponentMockService,
@@ -193,10 +191,10 @@ describe('AppComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
     //Snapshot test
-    it(`should render sign out button if it is provided in the vm`, () => {
+    it(`should render sign out button if the user is logged in`, () => {
         //Arrange
         mockStore.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithSignoutButton);
+        updateGetVMSignal(appMockVM);
 
         //Act
         mockStore.refreshState();
@@ -206,10 +204,10 @@ describe('AppComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
     //Snapshot test
-    it(`should not render sign out button if it is not provided in the vm`, () => {
+    it(`should not render sign out button if the user is not logged in`, () => {
         //Arrange
         mockStore.overrideSelector(selectHeaderCanBeShown, true);
-        updateGetVMSignal(appMockVMWithoutSignoutButton);
+        updateGetVMSignal(appMockVM);
 
         //Act
         mockStore.refreshState();
