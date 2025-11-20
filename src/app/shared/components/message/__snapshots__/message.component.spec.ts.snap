@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`MessageComponent should render the template correctly if the type is receiver 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-message>
+    <div
+      class="chat max-w-5/6 chat-receiver"
+    >
+      <app-avatar>
+        <div
+          class="avatar size-10 *:rounded-full avatar-placeholder"
+        >
+          <div
+            class="text-purple-500 bg-purple-200"
+          >
+             JB 
+          </div>
+          <!--container-->
+          <!--container-->
+        </div>
+      </app-avatar>
+      <div
+        class="chat-header flex flex-wrap gap-x-2"
+      >
+        <span
+          class="text-base-content/50"
+        >
+          <time>
+            Time
+          </time>
+        </span>
+      </div>
+      <div
+        class="chat-bubble"
+        style="background-color: var(--color-chat-receiver); color: black;"
+      >
+         receiver_message 
+      </div>
+    </div>
+  </app-message>
+</div>
+`;
+
+exports[`MessageComponent should render the template correctly if the type is sender 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <app-message>
+    <div
+      class="chat max-w-5/6 chat-sender ml-auto"
+    >
+      <app-avatar>
+        <div
+          class="avatar size-10 *:rounded-full avatar-placeholder"
+        >
+          <div
+            class="text-purple-500 bg-purple-200"
+          >
+             JB 
+          </div>
+          <!--container-->
+          <!--container-->
+        </div>
+      </app-avatar>
+      <div
+        class="chat-header flex flex-wrap gap-x-2 justify-end"
+      >
+        <span
+          class="text-base-content/50"
+        >
+          <time>
+            Time
+          </time>
+        </span>
+      </div>
+      <div
+        class="chat-bubble"
+        style="background-color: var(--color-chat-sender); color: white;"
+      >
+         sender_message 
+      </div>
+    </div>
+  </app-message>
+</div>
+`;

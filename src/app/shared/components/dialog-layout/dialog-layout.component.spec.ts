@@ -1,30 +1,44 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DialogLayoutComponent } from './dialog-layout.component';
-import { Component, input } from '@angular/core';
-import { DialogLayoutVM } from './dialog-layout.model';
+import { Component } from '@angular/core';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { By } from '@angular/platform-browser';
+import { ButtonComponent } from '@components/button/button.component';
+import { ButtonXVM } from '@components/button/button.model';
+import { PageHeaderComponent } from '@components/page-header/page-header.component';
+import { MatIcon } from '@interfaces/mat-icon.enum';
 
 const en = { title: 'value' };
 
 @Component({
-    imports: [DialogLayoutComponent],
+    imports: [DialogLayoutComponent, ButtonComponent, PageHeaderComponent],
     template: `
-        <app-dialog-layout [vm]="vm()">
-            <button>Should be projected</button>
+        <app-dialog-layout>
+            <app-page-header>
+                <app-button actionGroup [vm]="button1"></app-button>
+            </app-page-header>
+            <app-button [vm]="button2"></app-button>
+            <app-button [vm]="button3"></app-button>
             <div>Should be projected</div>
         </app-dialog-layout>
     `,
 })
 class TestHostComponent {
-    public vm = input.required<DialogLayoutVM>();
+    button1: ButtonXVM<'withIcon'> = {
+        variant: 'fill',
+        icon: MatIcon.ADD,
+    };
+    button2: ButtonXVM<'withIcon'> = {
+        variant: 'fill',
+        icon: MatIcon.ADD,
+    };
+    button3: ButtonXVM<'withIcon'> = {
+        variant: 'fill',
+        icon: MatIcon.ADD,
+    };
 }
 describe('DialogLayoutComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;
-    const vm: DialogLayoutVM = {
-        titleKey: en.title,
-    };
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
@@ -44,34 +58,13 @@ describe('DialogLayoutComponent', () => {
     });
 
     //Snapshot test
-    it('should render the template when the VM is provided, translate and project the content correctly', () => {
+    it('should render the projected contents and the template correctly', () => {
         //Arrange
-        fixture.componentRef.setInput('vm', vm);
 
         //Act
         fixture.detectChanges();
 
         //Assert
         expect(compiled).toMatchSnapshot();
-    });
-
-    //Interaction test
-    it('should call the emitter after clicking on the close button', () => {
-        //Arrange
-        fixture.componentRef.setInput('vm', vm);
-
-        const baseDialogEmitterRef = fixture.debugElement.query(
-            By.directive(DialogLayoutComponent)
-        ).componentInstance.close;
-
-        jest.spyOn(baseDialogEmitterRef, 'emit');
-
-        //Act
-        fixture.detectChanges();
-        const closeButton = fixture.debugElement.query(By.css('button'));
-        closeButton.triggerEventHandler('click');
-
-        //Assert
-        expect(baseDialogEmitterRef.emit).toHaveBeenCalled();
     });
 });
