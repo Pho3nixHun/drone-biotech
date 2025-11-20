@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ProductListComponent should render the template when the VM is provided and ignore other elements 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-product-list>
     <div
@@ -11,7 +11,6 @@ exports[`ProductListComponent should render the template when the VM is provided
     >
       <app-product-item
         class="h-full"
-        ng-reflect-vm="[object Object]"
       >
         <a
           class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
@@ -36,7 +35,6 @@ exports[`ProductListComponent should render the template when the VM is provided
       </app-product-item>
       <app-product-item
         class="h-full"
-        ng-reflect-vm="[object Object]"
       >
         <a
           class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"

@@ -1,0 +1,19 @@
+@let vM = vm();
+@let primary = !vM.secondary;
+@let secondary = vM.secondary;
+@let ghost = vM.variant === 'ghost';
+@let outline = vM.variant === 'outline';
+
+<button
+    class="btn"
+    [disabled]="disabled()"
+    [ngClass]="{
+        primary: primary,
+        secondary: secondary,
+        ghost: ghost,
+        outline: outline,
+        disabled: disabled(),
+    }"
+>
+    <ng-content />
+</button>

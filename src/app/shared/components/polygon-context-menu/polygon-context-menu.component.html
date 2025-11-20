@@ -1,0 +1,30 @@
+@let vM = vm();
+<app-stack
+    *transloco="let t"
+    orientation="horizontal"
+    gap="md"
+    class="*:bg-white *:p-2 drop-shadow-2xl"
+>
+    <app-stack orientation="vertical" gap="md">
+        @if (!vM.removeVertexButtonXVM.hidden) {
+            <app-button
+                [vm]="vM.removeVertexButtonXVM"
+                (click)="polygonContextMenuEvent.emit({ type: 'remove' })"
+            >
+                {{ t(vM.removeVertexButtonXVM.textKey) }}
+            </app-button>
+        }
+        <app-button
+            [vm]="vM.removePolygonButtonXVM"
+            (click)="polygonContextMenuEvent.emit({ type: 'clear' })"
+        >
+            {{ t(vM.removePolygonButtonXVM.textKey) }}
+        </app-button>
+    </app-stack>
+    <app-button
+        [vm]="vM.closeButtonXVM"
+        (click)="polygonContextMenuEvent.emit({ type: 'close' })"
+    >
+        <mat-icon>{{ vM.closeButtonXVM.icon }}</mat-icon>
+    </app-button>
+</app-stack>

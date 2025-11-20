@@ -1,0 +1,27 @@
+<div *transloco="let t" class="my-2">
+    @let vM = vm();
+    <span class="flex flex-row justify-between items-end label-text">
+        <label [for]="vM.id">{{ t(vM.labelKey) }}</label>
+        <ng-content select="app-button" />
+    </span>
+    <textarea
+        class="textarea min-h-40"
+        [ngClass]="{ 'is-invalid': invalid() }"
+        [id]="vM.id"
+        [value]="value()"
+        [disabled]="disabled()"
+        [placeholder]="t(vM.placeholderKey)"
+        (blur)="markAsTouched()"
+        (input)="changed($event)"
+        [readonly]="vM.readonly"
+        autocomplete="off"
+    ></textarea>
+    <div class="grid grid-cols-2 items-baseline helper-text">
+        <span>
+            <ng-content select="[leftAssistiveText]" />
+        </span>
+        <span class="text-right">
+            <ng-content select="[rightAssistiveText]" />
+        </span>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BadgeComponent should render the default badge correctly 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge"
+    >
+      badgeText
+    </span>
+  </app-badge>
+  <!--container-->
+</div>
+`;
+
+exports[`BadgeComponent should render the outline badge correctly 1`] = `
+<div
+  id="root2"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge badge-outline"
+    >
+      badgeText
+    </span>
+  </app-badge>
+  <!--container-->
+</div>
+`;
+
+exports[`BadgeComponent should render the rounded badge correctly 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge rounded-full"
+    >
+      badgeText
+    </span>
+  </app-badge>
+  <!--container-->
+</div>
+`;
+
+exports[`BadgeComponent should render the soft badge correctly 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge badge-soft"
+    >
+      badgeText
+    </span>
+  </app-badge>
+  <!--container-->
+</div>
+`;

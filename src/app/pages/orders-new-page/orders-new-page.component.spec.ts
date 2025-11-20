@@ -6,7 +6,7 @@ import {
     provideOrdersNewPageMockService,
     updateVMSignal,
 } from './orders-new-page.service.mock';
-import { LocationStoreMockModule } from 'src/app/stores/location/location.module';
+import { Validators } from '@angular/forms';
 
 describe('OrdersNewPageComponent', () => {
     let component: OrdersNewPageComponent;
@@ -17,7 +17,6 @@ describe('OrdersNewPageComponent', () => {
         await TestBed.configureTestingModule({
             imports: [
                 OrdersNewPageComponent,
-                LocationStoreMockModule,
                 getTranslocoModule({
                     langs: { en: enMock },
                     translocoConfig: {
@@ -34,102 +33,160 @@ describe('OrdersNewPageComponent', () => {
         component = fixture.componentInstance;
     });
 
-    //Snapshot testing
-    it('should not render the template when the VM is not provided', () => {
-        //Arrange
-        updateVMSignal(undefined);
-        //Act
-        fixture.detectChanges();
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot testing
-    it('should render the template when the VM is provided', () => {
-        //Arrange
+    // Snapshot testing
+    it('should render the template correctly', () => {
+        // Arrange
         updateVMSignal(ordersNewPageVMMock);
 
-        //Act
+        // Act
         fixture.detectChanges();
 
-        //Assert
+        // Assert
         expect(compiled).toMatchSnapshot();
     });
 
-    it('should set the areasDataFormGroup to invalid if there is no value in the form', () => {
+    it('should initialize the form with correct controls and validators', () => {
         // Arrange
+        const { contact, endCustomer, internalOrderNumber, missions } =
+            component['formGroup'].controls;
+        const { email, name, phoneNumber } = contact.controls;
 
-        // Act
+        // There is no need to act
 
         // Assert
-        expect(component.areasDataFormGroup.touched).toBe(false);
-        expect(component.areasDataFormGroup.invalid).toBe(true);
+        expect(endCustomer.value).toBe('');
+        expect(endCustomer.hasValidator(Validators.required)).toBe(true);
+
+        expect(internalOrderNumber.value).toBe('');
+        expect(internalOrderNumber.hasValidator(Validators.required)).toBe(
+            true
+        );
+
+        expect(missions.value).toStrictEqual([]);
+        expect(missions.hasValidator(Validators.required)).toBe(true);
+
+        expect(email.value).toBe('');
+        expect(email.hasValidator(Validators.required)).toBe(true);
+        expect(email.hasValidator(Validators.email)).toBe(true);
+
+        expect(name.value).toBe('');
+        expect(name.hasValidator(Validators.required)).toBe(true);
+
+        expect(phoneNumber.value).toBe('');
+        expect(phoneNumber.hasValidator(Validators.required)).toBe(true);
     });
 
-    it('should set the areasDataFormGroup to valid if the form is fulfilled with correct values', () => {
-        //Arrange
-        component.areasDataFormGroup.setValue({
-            areasData: [
+    it('form should be invalid the fields are empty', () => {
+        // Assert
+        expect(component['formGroup'].invalid).toBe(true);
+    });
+
+    it('form should become valid when all required values satisfy conditions', () => {
+        // Arrange
+        const form = component['formGroup'];
+        form.patchValue({
+            internalOrderNumber: 'A123',
+            contact: {
+                name: 'Test Name',
+                phoneNumber: '12345678',
+                email: 'test@test.com',
+            },
+            endCustomer: 'Customer Inc',
+            missions: [
                 {
-                    applicationDate: new Date(),
-                    dosePerHq: 10,
-                    entryPoint: { lat: 10, lng: 10 },
-                    id: 'id',
-                    targetArea: [
-                        { lat: 10, lng: 10 },
-                        { lat: 20, lng: 20 },
-                        { lat: 30, lng: 30 },
-                    ],
-                    comment: 'comment',
-                    missionName: 'mission',
+                    id: 'Id',
+                    applicationDate: new Date(1),
+                    dosePerHq: 1,
+                    entryPoint: { lat: 10, lng: 11 },
+                    name: 'Name',
+                    targetArea: [],
+                    comment: '',
                 },
             ],
-            contact: {
-                email: 'test@gmail.com',
-                name: 'Joe',
-                phoneNumber: '06301111111',
-            },
-            endCustomer: 'customer',
-            internalOrderNumber: 'number',
         });
 
-        //Act
-
         // Assert
-        expect(component.areasDataFormGroup.valid).toBe(true);
+        expect(form.valid).toBe(true);
     });
 
-    it('should reset the value of the form after submitting if the form is valid', () => {
-        //Arrange
-        component.areasDataFormGroup.setValue({
-            areasData: [
+    it("'s form should become valid when all required values satisfy conditions", () => {
+        // Arrange
+        const form = component['formGroup'];
+        form.patchValue({
+            internalOrderNumber: 'A123',
+            contact: {
+                name: 'Test Name',
+                phoneNumber: '12345678',
+                email: 'test@test.com',
+            },
+            endCustomer: 'Customer Inc',
+            missions: [
                 {
-                    applicationDate: new Date(),
-                    dosePerHq: 10,
-                    entryPoint: { lat: 10, lng: 10 },
-                    id: 'id',
-                    targetArea: [
-                        { lat: 10, lng: 10 },
-                        { lat: 20, lng: 20 },
-                        { lat: 30, lng: 30 },
-                    ],
-                    comment: 'comment',
-                    missionName: 'mission',
+                    id: 'Id',
+                    applicationDate: new Date(1),
+                    dosePerHq: 1,
+                    entryPoint: { lat: 10, lng: 11 },
+                    name: 'Name',
+                    targetArea: [],
+                    comment: '',
                 },
             ],
+        });
+
+        // Assert
+        expect(form.valid).toBe(true);
+    });
+
+    it("'s form should become valid when all required values satisfy conditions", () => {
+        // Arrange
+        const form = component['formGroup'];
+        const resetSpy = jest.spyOn(form, 'reset');
+
+        form.patchValue({
+            internalOrderNumber: 'A123',
             contact: {
-                email: 'test@gmail.com',
-                name: 'Joe',
-                phoneNumber: '06301111111',
+                name: 'Test Name',
+                phoneNumber: '12345678',
+                email: 'test@test.com',
             },
-            endCustomer: 'customer',
-            internalOrderNumber: 'number',
+            endCustomer: 'Customer Inc',
+            missions: [
+                {
+                    id: 'Id',
+                    applicationDate: new Date(1),
+                    dosePerHq: 1,
+                    entryPoint: { lat: 10, lng: 11 },
+                    name: 'Name',
+                    targetArea: [],
+                    comment: '',
+                },
+            ],
         });
         component['submitForm']();
 
-        //Act
+        // Assert
+        expect(resetSpy).toHaveBeenCalled();
+    });
+
+    test("'s submitForm should not reset form if invalid", () => {
+        // Arrange
+        const form = component['formGroup'];
+        const resetSpy = jest.spyOn(form, 'reset');
+
+        form.patchValue({
+            internalOrderNumber: '',
+            contact: {
+                name: '',
+                phoneNumber: '',
+                email: '',
+            },
+            endCustomer: '',
+            missions: [],
+        });
+
+        component['submitForm']();
 
         // Assert
-        expect(component.areasDataFormGroup.invalid).toBe(true);
+        expect(resetSpy).not.toHaveBeenCalled();
     });
 });

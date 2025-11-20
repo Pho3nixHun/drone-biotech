@@ -1,0 +1,11 @@
+@let orientation = vm().orientation;
+<div
+    class="flex gap-4"
+    [ngClass]="{
+        'flex-col': orientation === 'vertical',
+        'flex-row': orientation === 'horizontal',
+    }"
+>
+    <div><ng-content select="app-tabs-nav" /></div>
+    <div class="w-full"><ng-content select="app-tab-panel" /></div>
+</div>

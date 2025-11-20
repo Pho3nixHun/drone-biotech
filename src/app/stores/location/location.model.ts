@@ -1,7 +1,7 @@
 export interface LocationState {
     location: Location | null;
     loading: boolean;
-    error: Error | null;
+    error: string | null;
 }
 
 export interface Location {
@@ -31,6 +31,20 @@ export interface Coordinates {
     lat: number;
     lng: number;
 }
+
+export const mapMVCArrayToLatLngArray = (
+    path: google.maps.MVCArray<google.maps.LatLng>
+): google.maps.LatLng[] => path.getArray();
+
+export const mapLatLngToCoordinates = (
+    pos:
+        | google.maps.LatLng
+        | google.maps.LatLngLiteral
+        | google.maps.LatLngAltitudeLiteral
+): Coordinates => ({
+    lat: typeof pos.lat === 'function' ? pos.lat() : pos.lat,
+    lng: typeof pos.lng === 'function' ? pos.lng() : pos.lng,
+});
 
 export const METRES_TO_KILOMETERS = 1000;
 export const SQUARE_METRES_TO_HECTARE = 10000;
