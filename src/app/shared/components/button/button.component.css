@@ -1,87 +1,94 @@
 @layer components {
     .btn {
-        padding: var(--component-gap-sm) var(--component-gap-md);
+        --btn-interactive-scale-active: var(--interactive-scale-active);
+        --btn-gap-x: var(--component-gap-sm);
+        --btn-padding-x: var(--component-gap-md);
+        --btn-padding-y: var(--component-gap-sm);
 
-        @apply border inline-flex items-center justify-center rounded-sm transition cursor-pointer;
+        @apply border inline-flex items-center justify-center rounded-md transition cursor-pointer;
 
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        gap: 0 var(--btn-gap-x);
+
+        /* Primary component level tokens (Tier-3) */
         &.primary {
-            @apply bg-primary border-primary text-content-primary;
+            --btn-background: var(--interactive-primary);
+            --btn-border: var(--interactive-primary);
+            --btn-text: var(--text-inverse);
+            --btn-background-hover: var(--interactive-primary-hover);
+            --btn-border-hover: var(--interactive-primary-hover);
+            --btn-ghost-text: var(--interactive-primary);
+            --btn-ghost-background-hover: var(--interactive-primary-inverse-hover);
+            --btn-ghost-text-hover: var(--interactive-primary-hover);
+            --btn-outline-border: var(--interactive-primary);
+            --btn-outline-text: var(--interactive-primary);
+            --btn-outline-background-hover: var(--interactive-primary-inverse-hover);
+            --btn-outline-text-hover: var(--interactive-primary-hover);
+            --btn-outline-border-hover: var(--interactive-primary-hover);
+            --btn-disabled-background: var(--state-primary-disabled);
+            --btn-disabled-border: var(--state-primary-disabled);
+        }
+
+        /* Secondary component level tokens (Tier-3) */
+        &.secondary {
+            --btn-background: var(--interactive-secondary);
+            --btn-border: var(--interactive-secondary);
+            --btn-text: var(--text-inverse);
+            --btn-background-hover: var(--interactive-secondary-hover);
+            --btn-border-hover: var(--interactive-secondary-hover);
+            --btn-ghost-text: var(--interactive-secondary);
+            --btn-ghost-background-hover: var(--interactive-secondary-inverse-hover);
+            --btn-ghost-text-hover: var(--interactive-secondary-hover);
+            --btn-outline-border: var(--interactive-secondary);
+            --btn-outline-text: var(--interactive-secondary);
+            --btn-outline-background-hover: var(--interactive-secondary-inverse-hover);
+            --btn-outline-text-hover: var(--interactive-secondary-hover);
+            --btn-outline-border-hover: var(--interactive-secondary-hover);
+            --btn-disabled-background: var(--state-secondary-disabled);
+            --btn-disabled-border: var(--state-secondary-disabled);
+        }
+
+        background-color: var(--btn-background);
+        border-color: var(--btn-border);
+        color: var(--btn-text);
+
+        &:hover {
+            background-color: var(--btn-background-hover);
+            border-color: var(--btn-border-hover);
+        }
+
+        &.ghost {
+            background: transparent;
+            border-color: transparent;
+            color: var(--btn-ghost-text);
 
             &:hover {
-                @apply bg-primary-600 border-primary-600
-            }
-
-            &:active {
-                @apply bg-primary-700 border-primary-700
-            }
-
-            &.ghost {
-                @apply bg-transparent text-primary border-transparent;
-
-                &:hover {
-                    @apply bg-primary-50 text-primary-600
-                }
-
-                &:active {
-                    @apply bg-primary-100 text-primary-700
-                }
-            }
-
-            &.outline {
-                @apply bg-transparent text-primary;
-
-                &:hover {
-                    @apply bg-primary-50 text-primary-600 border-primary-600
-                }
-
-                &:active {
-                    @apply bg-primary-100 text-primary-700 border-primary-700
-                }
-            }
-
-            &.disabled {
-                @apply bg-primary-100 border-primary-100 pointer-events-none text-primary-300;
+                background-color: var(--btn-ghost-background-hover);
+                color: var(--btn-ghost-text-hover);
             }
         }
 
-        &.secondary {
-            @apply bg-secondary border-secondary text-content-secondary;
+        &.outline {
+            background: transparent;
+            border-color: var(--btn-outline-border);
+            color: var(--btn-outline-text);
 
             &:hover {
-                @apply bg-secondary-600 border-secondary-600
+                background-color: var(--btn-outline-background-hover);
+                border-color: var(--btn-outline-border-hover);
+                color: var(--btn-outline-text-hover);
             }
+        }
 
-            &:active {
-                @apply bg-secondary-700 border-secondary-700
-            }
+        &.disabled {
+            pointer-events: none;
+            background-color: var(--btn-disabled-background);
+            border-color: var(--btn-disabled-border);
+            color: var(--text-inverse);
+        }
 
-            &.ghost {
-                @apply bg-transparent text-secondary border-transparent;
-
-                &:hover {
-                    @apply bg-secondary-50 text-secondary-600
-                }
-
-                &:active {
-                    @apply bg-secondary-100 text-secondary-700
-                }
-            }
-
-            &.outline {
-                @apply bg-transparent text-secondary;
-
-                &:hover {
-                    @apply bg-secondary-50 text-secondary-600 border-secondary-600
-                }
-
-                &:active {
-                    @apply bg-secondary-100 text-secondary-700 border-secondary-700
-                }
-            }
-
-            &.disabled {
-                @apply bg-secondary-100 border-secondary-100 pointer-events-none text-secondary-300;
-            }
+        &:active {
+            scale: var(--btn-interactive-scale-active);
         }
     }
 }

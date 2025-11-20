@@ -7,7 +7,6 @@ import { AreasDataFormControlComponent } from './components/areas-data-form-cont
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { ButtonComponent } from '@components/button/button.component';
 import { InputTextComponent } from '@components/input-text/input-text.component';
-import { MatIconModule } from '@angular/material/icon';
 import { minArrayLengthValidator } from '@validators/min-array-length.validator';
 import { Mission } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 
@@ -38,7 +37,6 @@ import { Mission } from './components/areas-data-form-control/components/area-da
         PageLayoutComponent,
         ButtonComponent,
         InputTextComponent,
-        MatIconModule,
     ],
 
     templateUrl: './orders-new-page.component.html',

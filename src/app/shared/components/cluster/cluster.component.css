@@ -1,63 +1,67 @@
-/* stylelint-disable selector-class-pattern */
-
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 @layer components {
     .cluster {
         @apply flex flex-wrap;
 
+        column-gap: var(--cluster-gap-x);
+        row-gap: var(--cluster-gap-y);
+
+        /* X-gap modifiers */
         &.gap-x-none {
-            column-gap: 0;
+            --cluster-gap-x: 0;
         }
 
         &.gap-x-xs {
-            column-gap: var(--layout-gap-xs);
+            --cluster-gap-x: var(--layout-gap-xs);
         }
 
         &.gap-x-sm {
-            column-gap: var(--layout-gap-sm);
+            --cluster-gap-x: var(--layout-gap-sm);
         }
 
         &.gap-x-md {
-            column-gap: var(--layout-gap-md);
+            --cluster-gap-x: var(--layout-gap-md);
         }
 
         &.gap-x-lg {
-            column-gap: var(--layout-gap-lg);
+            --cluster-gap-x: var(--layout-gap-lg);
         }
 
         &.gap-x-xl {
-            column-gap: var(--layout-gap-xl);
+            --cluster-gap-x: var(--layout-gap-xl);
         }
 
         &.gap-x-2xl {
-            column-gap: var(--layout-gap-2xl);
+            --cluster-gap-x: var(--layout-gap-2xl);
         }
 
+        /* Y-gap modifiers */
         &.gap-y-none {
-            row-gap: 0;
+            --cluster-gap-y: 0;
         }
 
         &.gap-y-xs {
-            row-gap: var(--layout-gap-xs);
+            --cluster-gap-y: var(--layout-gap-xs);
         }
 
         &.gap-y-sm {
-            row-gap: var(--layout-gap-sm);
+            --cluster-gap-y: var(--layout-gap-sm);
         }
 
         &.gap-y-md {
-            row-gap: var(--layout-gap-md);
+            --cluster-gap-y: var(--layout-gap-md);
         }
 
         &.gap-y-lg {
-            row-gap: var(--layout-gap-lg);
+            --cluster-gap-y: var(--layout-gap-lg);
         }
 
         &.gap-y-xl {
-            row-gap: var(--layout-gap-xl);
+            --cluster-gap-y: var(--layout-gap-xl);
         }
 
         &.gap-y-2xl {
-            row-gap: var(--layout-gap-2xl);
+            --cluster-gap-y: var(--layout-gap-2xl);
         }
     }
 }

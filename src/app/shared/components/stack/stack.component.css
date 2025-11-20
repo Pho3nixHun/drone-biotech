@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 /* stylelint-disable selector-class-pattern */
 
 @layer components {
@@ -7,69 +8,43 @@
         &.horizontal {
             @apply flex-row;
 
-            &.gap-none {
-                column-gap: 0;
-            }
-
-            &.gap-xs {
-                column-gap: var(--layout-gap-xs);
-            }
-
-            &.gap-sm {
-                column-gap: var(--layout-gap-sm);
-            }
-
-            &.gap-md {
-                column-gap: var(--layout-gap-md);
-            }
-
-            &.gap-lg {
-                column-gap: var(--layout-gap-lg);
-            }
-
-            &.gap-xl {
-                column-gap: var(--layout-gap-xl);
-            }
-
-            &.gap-2xl {
-                column-gap: var(--layout-gap-2xl);
-            }
+            column-gap: var(--stack-gap);
+            row-gap: 0;
         }
 
         &.vertical {
             @apply flex-col;
 
-            &.gap-none {
-                row-gap: var(--layout-gap-none);
-            }
+            row-gap: var(--stack-gap);
+            column-gap: 0;
+        }
 
-            &.gap-xs {
-                row-gap: var(--layout-gap-xs);
-            }
+        &.gap-none {
+            --stack-gap: 0;
+        }
 
-            &.gap-sm {
-                row-gap: var(--layout-gap-sm);
-            }
+        &.gap-xs {
+            --stack-gap: var(--layout-gap-xs);
+        }
 
-            &.gap-md {
-                row-gap: var(--layout-gap-md);
-            }
+        &.gap-sm {
+            --stack-gap: var(--layout-gap-sm);
+        }
 
-            &.gap-lg {
-                row-gap: var(--layout-gap-lg);
-            }
+        &.gap-md {
+            --stack-gap: var(--layout-gap-md);
+        }
 
-            &.gap-xl {
-                row-gap: var(--layout-gap-xl);
-            }
+        &.gap-lg {
+            --stack-gap: var(--layout-gap-lg);
+        }
 
-            &.gap-2xl {
-                row-gap: var(--layout-gap-2xl);
-            }
+        &.gap-xl {
+            --stack-gap: var(--layout-gap-xl);
+        }
 
-            &.gap-3xl {
-                row-gap: var(--layout-gap-3xl);
-            }
+        &.gap-2xl {
+            --stack-gap: var(--layout-gap-2xl);
         }
     }
 }
