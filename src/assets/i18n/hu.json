@@ -241,6 +241,7 @@
     "MissionDetailsPage.status.aborted": "Megszakítva",
     "MissionDetailsPage.status.completed": "Befejezve",
     "MissionDetailsPage.status.done": "Kész",
+    "MissionDetailsPage.status.cancelled": "Törölt",
     "MissionDetailsPage.overview.title": "Küldetés áttekintése",
     "MissionDetailsPage.overview.openInGMButton.text": "Megnyitás Google Térképen",
     "MissionDetailsPage.overview.areaSize.text": "Terület mérete:",

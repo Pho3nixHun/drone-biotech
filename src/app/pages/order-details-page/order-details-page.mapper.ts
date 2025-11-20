@@ -1,4 +1,16 @@
+import { Intent } from '@components/badge/badge.component';
 import { MissionStatus, OrderStatus, Role } from './order-details-page.model';
+
+export const ORDER_STATUS_TO_INTENT: Record<OrderStatus, Intent> = {
+    new: 'accent',
+    active: 'accent',
+    'in-progress': 'accent',
+    closed: 'accent',
+    done: 'success',
+};
+
+export const mapOrderStatusToBadgeIntent = (status: OrderStatus): Intent =>
+    ORDER_STATUS_TO_INTENT[status];
 
 export const mapOrderStatusToTranslocoTextKey = (status: OrderStatus): string =>
     ({
@@ -15,6 +27,15 @@ export const mapRoleToTranslocoTextKey = (role: Role): string =>
         office: 'OrderDetailsPage.role.office',
         pilot: 'OrderDetailsPage.role.pilot',
     })[role] ?? '';
+
+export const MISSION_STATUS_TO_INTENT: Record<MissionStatus, Intent> = {
+    completed: 'success',
+    preparing: 'accent',
+    scheduled: 'accent',
+};
+
+export const mapMissionStatusToBadgeIntent = (status: MissionStatus): Intent =>
+    MISSION_STATUS_TO_INTENT[status];
 
 export const mapMissionStatusToTranslocoTextKey = (
     role: MissionStatus

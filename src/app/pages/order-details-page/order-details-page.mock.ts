@@ -233,7 +233,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                     ],
                     status: 'completed',
-                    statusBadgeXVM: { shape: 'rounded' },
                 },
                 gmpMapXVM: {
                     polygon: {
@@ -301,7 +300,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                     ],
                     status: 'preparing',
-                    statusBadgeXVM: { shape: 'rounded' },
                 },
                 gmpMapXVM: {
                     polygon: {
@@ -369,7 +367,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                     ],
                     status: 'scheduled',
-                    statusBadgeXVM: { shape: 'rounded' },
                 },
                 gmpMapXVM: {
                     polygon: {
@@ -437,7 +434,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                     ],
                     status: 'completed',
-                    statusBadgeXVM: { shape: 'rounded' },
                 },
                 gmpMapXVM: {
                     polygon: {
@@ -505,7 +501,6 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                         },
                     ],
                     status: 'preparing',
-                    statusBadgeXVM: { shape: 'rounded' },
                 },
                 gmpMapXVM: {
                     bounds: null,
@@ -533,9 +528,8 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         addNewMissionsButtonXVM: {
             textKey: 'OrderDetailsPage.header.addNewMissionButtonText',
             routerLink: ['/', AppRouteSegment.ORDERS, OrdersRouteSegment.NEW],
-            variant: 'ghost',
+            variant: 'fill',
         },
-        statusBadgeXVM: { shape: 'rounded' },
         summaries: [
             {
                 keyXVM: {

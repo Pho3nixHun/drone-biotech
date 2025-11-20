@@ -241,6 +241,7 @@
     "MissionDetailsPage.status.aborted": "Aborted",
     "MissionDetailsPage.status.completed": "Completed",
     "MissionDetailsPage.status.done": "Done",
+    "MissionDetailsPage.status.cancelled": "Cancelled",
     "MissionDetailsPage.overview.title": "Mission overview",
     "MissionDetailsPage.overview.openInGMButton.text": "Open in Google Maps",
     "MissionDetailsPage.overview.areaSize.text": "Area size:",

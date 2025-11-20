@@ -100,7 +100,7 @@ exports[`ButtonComponent should render a secondary button 1`] = `
 >
   <app-button>
     <button
-      class="btn secondary outline"
+      class="btn secondary outlined"
     >
        text 
       <mat-icon
@@ -123,7 +123,7 @@ exports[`ButtonComponent should render an outline button 1`] = `
 >
   <app-button>
     <button
-      class="btn primary outline"
+      class="btn primary outlined"
     >
        text 
       <mat-icon

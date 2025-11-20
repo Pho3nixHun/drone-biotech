@@ -15,7 +15,9 @@ import { FrameComponent } from '@components/frame/frame.component';
 import { MessageComponent } from '@components/message/message.component';
 import { InputTextComponent } from '@components/input-text/input-text.component';
 import {
+    mapMissionStatusToBadgeIntent,
     mapMissionStatusToTranslocoTextKey,
+    mapOrderStatusToBadgeIntent,
     mapOrderStatusToTranslocoTextKey,
     mapRoleToTranslocoTextKey,
 } from './order-details-page.mapper';
@@ -93,10 +95,13 @@ export class OrderDetailsPageComponent {
     ) {
         if (response.type === 'submit') this.service.closeOrder();
     }
-
     protected readonly mapRoleToTranslocoTextKey = mapRoleToTranslocoTextKey;
     protected readonly mapMissionStatusToTranslocoTextKey =
         mapMissionStatusToTranslocoTextKey;
+    protected readonly mapOrderStatusToBadgeIntent =
+        mapOrderStatusToBadgeIntent;
+    protected readonly mapMissionStatusToBadgeIntent =
+        mapMissionStatusToBadgeIntent;
     protected readonly mapOrderStatusToTranslocoTextKey =
         mapOrderStatusToTranslocoTextKey;
 }

@@ -99,10 +99,6 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                 },
             },
         ],
-        statusBadgeXVM: {
-            status: 'new',
-            shape: 'rounded',
-        },
         creationDateKeyValueXVM: {
             keyXVM: {
                 textKey: 'MissionDetailsPage.header.creationDate.keyText',

@@ -1,6 +1,5 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { WithTextNode } from '@interfaces/with-text-node.interface';
 
 @Component({
     selector: 'app-badge',
@@ -8,12 +7,13 @@ import { WithTextNode } from '@interfaces/with-text-node.interface';
     templateUrl: './badge.component.html',
 })
 export class BadgeComponent {
-    public vm = input.required<BadgeVM>();
+    public readonly intent = input<Intent>('accent');
+    public readonly variant = input<Variant>('fill');
+    public readonly shape = input<Shape>('rounded');
+    public readonly size = input<Size>('md');
 }
 
-interface BadgeVM {
-    variant?: 'soft' | 'outline';
-    shape?: 'rounded';
-}
-
-export interface BadgeXVM extends BadgeVM, WithTextNode {}
+export type Intent = 'accent' | 'error' | 'warning' | 'success';
+type Variant = 'fill' | 'outline';
+type Shape = 'rounded' | 'pilled';
+type Size = 'md' | 'sm';

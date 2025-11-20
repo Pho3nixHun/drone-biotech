@@ -4,6 +4,8 @@
 
 @import "tailwindcss";
 
+@import './app/shared/components/badge/badge.component.css';
+
 @import './app/shared/components/cluster/cluster.component.css';
 
 @import './app/shared/components/stack/stack.component.css';
@@ -51,8 +53,18 @@ Semantic tokens (Tier-2):
     --interactive-scale-active: var(--scale-sm);
 
     /* State semantic colors */
-    --state-primary-disabled: var(--color-blue-100);
-    --state-secondary-disabled: var(--color-orange-100);
+    --state-primary: var(--color-blue-500);
+    --state-primary-subtle: var(--color-blue-100);
+    --state-secondary: var(--color-orange-500);
+    --state-secondary-subtle: var(--color-orange-100);
+    --state-accent: var(--color-blue-500);
+    --state-accent-subtle: var(--color-blue-100);
+    --state-success: var(--color-green-500);
+    --state-success-subtle: var(--color-green-100);
+    --state-warning: var(--color-yellow-500);
+    --state-warning-subtle: var(--color-yellow-100);
+    --state-error: var(--color-red-500);
+    --state-error-subtle: var(--color-red-100);
 
     /* Layout gap semantic scales */
     --layout-gap-xs: var(--space-2);
@@ -68,24 +80,6 @@ Semantic tokens (Tier-2):
     --component-gap-md: var(--space-4);
     --component-gap-lg: var(--space-6);
     --component-gap-xl: var(--space-8);
-}
-
-@theme {
-    --active-order: #16a34a;
-    --in-progress-order: #3b82f6;
-    --new-order: #22c55e;
-    --closed-order: #f59e0b;
-    --done-order: #6b7280;
-    --new-mission: #e0f7fa;
-    --scheduled-mission: #ffe0b2;
-    --accepted-mission: #c8e6c9;
-    --rejected-mission: #ffcdd2;
-    --traveling-mission: #bbdefb;
-    --arrived-mission: #d1c4e9;
-    --in-progress-mission: #fff9c4;
-    --aborted-mission: #f8bbd0;
-    --completed-mission: #b2dfdb;
-    --done-mission: #cfd8dc;
 }
 
 html {

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { NgClass, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { MissionDetailsPageService } from './mission-details-page.service';
 import { FrameComponent } from '@components/frame/frame.component';
@@ -21,7 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MessageComponent } from '@components/message/message.component';
 import { AvatarComponent } from '@components/avatar/avatar.component';
 import {
-    mapMissionStatusToStatusBadgeColors,
+    mapMissionStatusToBadgeIntent,
     mapMissionStatusToTranslocoTextKey,
     mapRoleToTranslocoTextKey,
 } from './mission-details-page.mapper';
@@ -40,7 +40,6 @@ import { emptyStringValidator } from '@validators/empty-string.validator';
         PageHeaderComponent,
         TranslocoModule,
         BadgeComponent,
-        NgClass,
         KeyComponent,
         ValueComponent,
         StackComponent,
@@ -83,7 +82,7 @@ export class MissionDetailsPageComponent {
 
     protected readonly mapMissionStatusToTranslocoTextKey =
         mapMissionStatusToTranslocoTextKey;
-    protected readonly mapMissionStatusToStatusBadgeColors =
-        mapMissionStatusToStatusBadgeColors;
+    protected readonly mapMissionStatusToBadgeIntent =
+        mapMissionStatusToBadgeIntent;
     protected readonly mapRoleToTranslocoTextKey = mapRoleToTranslocoTextKey;
 }

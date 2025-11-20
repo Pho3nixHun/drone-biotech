@@ -1,10 +1,16 @@
-@let vM = vm();
 <span
     class="badge"
     [ngClass]="{
-        'badge-soft': vM.variant === 'soft',
-        'badge-outline': vM.variant === 'outline',
-        'rounded-full': vM.shape === 'rounded',
+        accent: intent() === 'accent',
+        success: intent() === 'success',
+        warning: intent() === 'warning',
+        error: intent() === 'error',
+        filled: variant() === 'fill',
+        outlined: variant() === 'outline',
+        rounded: shape() === 'rounded',
+        pilled: shape() === 'pilled',
+        'size-md': size() === 'md',
+        'size-sm': size() === 'sm',
     }"
     ><ng-content
 /></span>

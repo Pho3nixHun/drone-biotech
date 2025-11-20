@@ -1,15 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BadgeComponent, BadgeXVM } from './badge.component';
+import { BadgeComponent } from './badge.component';
 import { Component, input } from '@angular/core';
+
+type Intent = 'accent' | 'error' | 'warning' | 'success';
+type Variant = 'fill' | 'outline';
+type Shape = 'rounded' | 'pilled';
+type Size = 'md' | 'sm';
 
 @Component({
     imports: [BadgeComponent],
-    template: `@if (vm(); as vm) {
-        <app-badge [vm]="vm">{{ vm.textKey }}</app-badge>
-    }`,
+    template: `
+        <app-badge
+            [intent]="intent()"
+            [variant]="variant()"
+            [shape]="shape()"
+            [size]="size()"
+            >Text</app-badge
+        >
+    `,
 })
 class TestHostComponent {
-    public vm = input.required<BadgeXVM>();
+    public intent = input<Intent>();
+    public variant = input<Variant>();
+    public shape = input<Shape>();
+    public size = input<Size>();
 }
 
 describe('BadgeComponent', () => {
@@ -28,9 +42,6 @@ describe('BadgeComponent', () => {
     // Snapshot testing
     it('should render the default badge correctly', () => {
         // Arrange
-        fixture.componentRef.setInput('vm', {
-            textKey: 'badgeText',
-        } as BadgeXVM);
 
         // Act
         fixture.detectChanges();
@@ -40,12 +51,9 @@ describe('BadgeComponent', () => {
     });
 
     // Snapshot testing
-    it('should render the rounded badge correctly', () => {
+    it('should render the filled badge correctly', () => {
         // Arrange
-        fixture.componentRef.setInput('vm', {
-            textKey: 'badgeText',
-            shape: 'rounded',
-        } as BadgeXVM);
+        fixture.componentRef.setInput('variant', 'fill');
 
         // Act
         fixture.detectChanges();
@@ -53,14 +61,10 @@ describe('BadgeComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-
     // Snapshot testing
-    it('should render the outline badge correctly', () => {
+    it('should render the outlined badge correctly', () => {
         // Arrange
-        fixture.componentRef.setInput('vm', {
-            textKey: 'badgeText',
-            variant: 'outline',
-        } as BadgeXVM);
+        fixture.componentRef.setInput('variant', 'outline');
 
         // Act
         fixture.detectChanges();
@@ -68,14 +72,87 @@ describe('BadgeComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-
     // Snapshot testing
-    it('should render the soft badge correctly', () => {
+    it('should render accent intent badge correctly', () => {
         // Arrange
-        fixture.componentRef.setInput('vm', {
-            textKey: 'badgeText',
-            variant: 'soft',
-        } as BadgeXVM);
+        fixture.componentRef.setInput('intent', 'accent');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render error intent badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('intent', 'error');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render warning intent badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('intent', 'warning');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render success intent badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('intent', 'success');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render small size badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('size', 'sm');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render medium size badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('size', 'md');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render rounded badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('shape', 'rounded');
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it('should render pilled badge correctly', () => {
+        // Arrange
+        fixture.componentRef.setInput('shape', 'pilled');
 
         // Act
         fixture.detectChanges();

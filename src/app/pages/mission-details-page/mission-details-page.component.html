@@ -2,16 +2,15 @@
     <app-page-layout *transloco="let t">
         <!-- Page header that contains mission title, badge and creation date -->
         @let headerXVM = vm.headerXVM;
-        @let statusBadgeXVM = headerXVM.statusBadgeXVM;
-        @let status = statusBadgeXVM.status;
+        @let status = vm.status;
         @let creationDateKeyValueXVM = headerXVM.creationDateKeyValueXVM;
 
         <app-page-header>
             <h1>{{ t(headerXVM.titleKey) }}</h1>
             <app-stack orientation="horizontal" gap="md" metadata>
                 <app-badge
-                    [vm]="statusBadgeXVM"
-                    [ngClass]="mapMissionStatusToStatusBadgeColors(status)"
+                    shape="pilled"
+                    [intent]="mapMissionStatusToBadgeIntent(status)"
                     >{{
                         t(mapMissionStatusToTranslocoTextKey(status))
                     }}</app-badge

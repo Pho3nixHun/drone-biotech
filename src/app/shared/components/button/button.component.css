@@ -25,8 +25,8 @@
             --btn-outline-background-hover: var(--interactive-primary-inverse-hover);
             --btn-outline-text-hover: var(--interactive-primary-hover);
             --btn-outline-border-hover: var(--interactive-primary-hover);
-            --btn-disabled-background: var(--state-primary-disabled);
-            --btn-disabled-border: var(--state-primary-disabled);
+            --btn-disabled-background: var(--state-primary-subtle);
+            --btn-disabled-border: var(--state-primary-subtle);
         }
 
         /* Secondary component level tokens (Tier-3) */
@@ -44,8 +44,8 @@
             --btn-outline-background-hover: var(--interactive-secondary-inverse-hover);
             --btn-outline-text-hover: var(--interactive-secondary-hover);
             --btn-outline-border-hover: var(--interactive-secondary-hover);
-            --btn-disabled-background: var(--state-secondary-disabled);
-            --btn-disabled-border: var(--state-secondary-disabled);
+            --btn-disabled-background: var(--state-secondary-subtle);
+            --btn-disabled-border: var(--state-secondary-subtle);
         }
 
         background-color: var(--btn-background);
@@ -68,7 +68,7 @@
             }
         }
 
-        &.outline {
+        &.outlined {
             background: transparent;
             border-color: var(--btn-outline-border);
             color: var(--btn-outline-text);

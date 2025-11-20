@@ -1,5 +1,6 @@
 import { User as StoreUser } from '@stores/auth/auth.model';
 import { MissionStatus, User, UserRole } from './mission-details-page.model';
+import { Intent } from '@components/badge/badge.component';
 
 export const mapMissionStatusToTranslocoTextKey = (
     status: MissionStatus
@@ -15,24 +16,25 @@ export const mapMissionStatusToTranslocoTextKey = (
         aborted: 'MissionDetailsPage.status.aborted',
         completed: 'MissionDetailsPage.status.completed',
         done: 'MissionDetailsPage.status.done',
+        cancelled: 'MissionDetailsPage.status.cancelled',
     })[status] ?? '';
 
-export const mapMissionStatusToStatusBadgeColors = (
-    status: MissionStatus
-): string =>
-    ({
-        new: '*:bg-(--new-mission) *:border-(--new-mission) *:text-secondary',
-        scheduled: '*:bg-(--scheduled-mission) *:border-(--scheduled-mission)',
-        accepted: '*:bg-(--accepted-mission) *:border-(--accepted-mission)',
-        rejected: '*:bg-(--rejected-mission) *:border-(--rejected-mission)',
-        traveling: '*:bg-(--traveling-mission) *:border-(--traveling-mission)',
-        arrived: '*:bg-(--arrived-mission) *:border-(--arrived-mission)',
-        in_progress:
-            '*:bg-(--in-progress-mission) *:border-(--in-progress-mission)',
-        aborted: '*:bg-(--aborted-mission) *:border-(--aborted-mission)',
-        completed: '*:bg-(--completed-mission) *:border-(--completed-mission)',
-        done: '*:bg-(--done-mission) *:border-(--done-mission)',
-    })[status] ?? '';
+export const MISSION_STATUS_TO_INTENT: Record<MissionStatus, Intent> = {
+    new: 'accent',
+    scheduled: 'accent',
+    accepted: 'accent',
+    traveling: 'accent',
+    done: 'success',
+    arrived: 'success',
+    completed: 'success',
+    aborted: 'warning',
+    rejected: 'warning',
+    in_progress: 'warning',
+    cancelled: 'error',
+};
+
+export const mapMissionStatusToBadgeIntent = (status: MissionStatus): Intent =>
+    MISSION_STATUS_TO_INTENT[status];
 
 export const mapRoleToTranslocoTextKey = (role: UserRole): string =>
     ({

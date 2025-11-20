@@ -12,33 +12,24 @@
                 }}
             </h1>
 
-            <app-badge
-                [vm]="headerXVM.statusBadgeXVM"
-                [ngClass]="{
-                    '*:bg-(--new-order) *:border-(--new-order)':
-                        vM.status === 'new',
-                    '*:bg-(--active-order) *:border-(--active-order)':
-                        vM.status === 'active',
-                    '*:bg-(--in-progress-order) *:border-(--in-progress-order)':
-                        vM.status === 'in-progress',
-                    '*:bg-(--done-order) *:border-(--done-order)':
-                        vM.status === 'done',
-                    '*:bg-(--closed-order) *:border-(--closed-order)':
-                        vM.status === 'closed',
-                }"
-                >{{ t(mapOrderStatusToTranslocoTextKey(vM.status)) }}</app-badge
-            >
-
             @let buttonXVM = headerXVM.addNewMissionsButtonXVM;
             @if (headerXVM.addNewMissionEnabled) {
-                <a [routerLink]="buttonXVM.routerLink">
+                <a [routerLink]="buttonXVM.routerLink" actionGroup>
                     <app-button [vm]="buttonXVM">
                         {{ t(buttonXVM.textKey) }}
                     </app-button>
                 </a>
             }
 
-            <app-cluster gapX="2xl" gapY="sm" metadata>
+            <app-cluster gapX="md" gapY="sm" metadata>
+                <app-badge
+                    shape="pilled"
+                    [intent]="mapOrderStatusToBadgeIntent(vM.status)"
+                    >{{
+                        t(mapOrderStatusToTranslocoTextKey(vM.status))
+                    }}</app-badge
+                >
+
                 <ng-container
                     [ngTemplateOutlet]="keyValues"
                     [ngTemplateOutletContext]="{
@@ -125,15 +116,13 @@
                                 }}
                             </h3>
                             <app-badge
-                                [vm]="cardBodyXVM.statusBadgeXVM"
-                                [ngClass]="{
-                                    '*:bg-green-400 *:border-green-400':
-                                        cardBodyXVM.status === 'completed',
-                                    '*:bg-yellow-400 *:border-yellow-400':
-                                        cardBodyXVM.status === 'scheduled',
-                                    '*:bg-blue-400 *:border-blue-400':
-                                        cardBodyXVM.status === 'preparing',
-                                }"
+                                size="sm"
+                                variant="outline"
+                                [intent]="
+                                    mapMissionStatusToBadgeIntent(
+                                        cardBodyXVM.status
+                                    )
+                                "
                             >
                                 {{
                                     t(

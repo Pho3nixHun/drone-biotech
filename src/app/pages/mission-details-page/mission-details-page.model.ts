@@ -2,7 +2,6 @@ import { FrameVM } from '@components/frame/frame.model';
 import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 import { WithTitle } from '@interfaces/with-title.interface';
-import { BadgeXVM } from '@components/badge/badge.component';
 import { ButtonXVM } from '@components/button/button.model';
 import { WithLink } from '@interfaces/with-link.interface';
 import { InputTextXVM } from '@components/input-text/input-text.component';
@@ -39,10 +38,11 @@ export type MissionStatus =
     | 'rejected'
     | 'traveling'
     | 'arrived'
-    | 'in_progress'
     | 'aborted'
+    | 'in_progress'
     | 'completed'
-    | 'done';
+    | 'done'
+    | 'cancelled';
 
 // Common structure for an actionable dialog
 export interface DialogActionBase<XVM = unknown> {
@@ -100,14 +100,8 @@ interface LogFrameXVM extends FrameVM {
     submitButtonXVM: ButtonXVM<'withIcon'>;
 }
 
-// Badge that shows mission status
-interface StatusBadgeXVM extends Pick<BadgeXVM, 'shape' | 'variant'> {
-    status: MissionStatus;
-}
-
 // Header displaying mission metadata, allowed actions
 export interface HeaderXVM extends WithTitle {
-    statusBadgeXVM: StatusBadgeXVM;
     creationDateKeyValueXVM: KeyValueXVM;
     dialogActions: DialogAction[];
 }

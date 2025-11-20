@@ -1,6 +1,5 @@
 import { WithLink } from '@interfaces/with-link.interface';
 import { ButtonXVM } from '@components/button/button.model';
-import { BadgeXVM } from '@components/badge/badge.component';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
 import { FrameVM } from '@components/frame/frame.model';
 import { MessageVM } from '@components/message/message.component';
@@ -55,7 +54,6 @@ interface MissionCardFooterXVM {
 }
 interface MissionCardBodyXVM extends Required<Pick<CardBodyXVM, 'titleKey'>> {
     status: MissionStatus;
-    statusBadgeXVM: StatusBadgeXVM;
     keyValueXVMs: KeyValueXVM[];
     title: string;
 }
@@ -75,12 +73,9 @@ interface GmpMapXVM {
     entryPoint: AdvancedMarker;
 }
 
-type StatusBadgeXVM = Omit<BadgeXVM, 'textKey'>;
-
 interface HeaderXVM {
     orderId: string;
     titleKey: string;
-    statusBadgeXVM: StatusBadgeXVM;
     addNewMissionsButtonXVM: ButtonXVM<'withText'> & WithRouterLink;
     addNewMissionEnabled: boolean;
     summaries: KeyValueXVM[];
