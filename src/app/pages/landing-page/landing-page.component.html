@@ -1,15 +1,23 @@
-<app-page-layout>
-    @if (vm(); as vm) {
+@if (vm(); as vm) {
+    <app-page-layout>
         @if (vm.heroXVM; as heroXVM) {
             <app-hero [vm]="heroXVM" *transloco="let t">
                 <h1>{{ t(heroXVM.titleKey) }}</h1>
                 <p>{{ t(heroXVM.descriptionKey) }}</p>
-                <a href="" class="btn btn-primary">{{
-                    t(heroXVM.primaryButtonLabelKey)
-                }}</a>
-                <a href="" class="btn btn-default">{{
-                    t(heroXVM.secondaryButtonLabelKey)
-                }}</a>
+                <app-stack orientation="horizontal">
+                    <app-button
+                        [vm]="heroXVM.primaryButtonXVM"
+                        class="*:rounded-r-none"
+                    >
+                        {{ t(heroXVM.primaryButtonXVM.textKey) }}
+                    </app-button>
+                    <app-button
+                        [vm]="heroXVM.secondaryButtonXVM"
+                        class="*:rounded-l-none"
+                    >
+                        {{ t(heroXVM.secondaryButtonXVM.textKey) }}
+                    </app-button>
+                </app-stack>
             </app-hero>
         }
 
@@ -21,10 +29,8 @@
                 [ngTemplateOutletContext]="{ frameVM }"
             ></ng-container>
         }
-    } @else {
-        Loading...
-    }
-</app-page-layout>
+    </app-page-layout>
+}
 
 <ng-template #productFrame let-vm="frameVM">
     <app-frame [id]="vm.id" [vm]="vm">

@@ -1,9 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable import-notation */
+/* stylelint-disable at-rule-empty-line-before */
+
+@import "tailwindcss";
+
+@import './app/shared/components/badge/badge.component.css';
+
+@import './app/shared/components/cluster/cluster.component.css';
+
+@import './app/shared/components/stack/stack.component.css';
+
+@import './app/shared/components/button/button.component.css';
+
+/* 
+Primitive tokens (Tier-1): 
+    - Has no semantic meaning, just the raw values 
+*/
+:root {
+    /* Spacing scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+
+    /* Transform scale */
+    --scale-sm: 95%
+}
+
+/* 
+Semantic tokens (Tier-2):
+    - Values with semantic meaning 
+*/
+@theme {
+    /* Text semantic colors */
+    --text-primary: var(--color-gray-900);
+    --text-secondary: var(--color-gray-700);
+    --text-subtle: var(--color-gray-500);
+    --text-inverse: var(--color-white);
+    --text-error: var(--color-red-600);
+
+    /* Border semantic colors */
+    --border-default: var(--color-gray-300);
+    --border-strong: var(--color-gray-600);
+    --border-focus: var(--color-blue-600);
+    --border-error: var(--color-red-600);
+
+    /* Interactive semantic colors */
+    --interactive-primary: var(--color-blue-500);
+    --interactive-primary-hover: var(--color-blue-600);
+    --interactive-primary-inverse-hover: var(--color-blue-100);
+    --interactive-secondary: var(--color-orange-500);
+    --interactive-secondary-hover: var(--color-orange-600);
+    --interactive-secondary-inverse-hover: var(--color-orange-100);
+    --interactive-scale-active: var(--scale-sm);
+
+    /* State semantic colors */
+    --state-primary: var(--color-blue-600);
+    --state-primary-subtle: var(--color-blue-200);
+    --state-secondary: var(--color-orange-600);
+    --state-secondary-subtle: var(--color-orange-200);
+    --state-accent: var(--color-gray-600);
+    --state-accent-subtle: var(--color-gray-200);
+    --state-success: var(--color-green-600);
+    --state-success-subtle: var(--color-green-200);
+    --state-warning: var(--color-yellow-600);
+    --state-warning-subtle: var(--color-yellow-200);
+    --state-error: var(--color-red-600);
+    --state-error-subtle: var(--color-red-200);
+
+    /* Layout gap semantic scales */
+    --layout-gap-xs: var(--space-2);
+    --layout-gap-sm: var(--space-4);
+    --layout-gap-md: var(--space-6);
+    --layout-gap-lg: var(--space-8);
+    --layout-gap-xl: var(--space-12);
+    --layout-gap-2xl: var(--space-16);
+
+    /* Component gap semantic scales */
+    --component-gap-xs: var(--space-1);
+    --component-gap-sm: var(--space-2);
+    --component-gap-md: var(--space-4);
+    --component-gap-lg: var(--space-6);
+    --component-gap-xl: var(--space-8);
+}
 
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
     scroll-snap-align: start;
     scroll-padding-top: 2rem;
@@ -11,15 +101,96 @@ html {
 
 @layer base {
     h1 {
-        @apply text-white text-left font-black text-4xl md:text-black sm:text-5xl lg:text-6xl md:w-2/3 w-full transition-all;
+        @apply font-black text-2xl sm:text-3xl lg:text-4xl transition-all ease-in-out;
     }
 
     h2 {
         @apply font-black text-xl sm:text-2xl lg:text-3xl transition-all ease-in-out;
     }
 
+    h3 {
+        @apply font-black text-lg transition-all ease-in-out;
+    }
+
     app-hero p {
-        @apply bg-black bg-opacity-60 font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
+        @apply bg-black font-medium p-4 text-white text-base rounded-md w-full sm:text-lg md:w-2/3 lg:w-1/2 transition-all;
+    }
+
+    dialog {
+        margin: auto;
+    }
+
+    dialog::backdrop {
+        opacity: 0.5;
+        background-color: #000;
+    }
+}
+
+@layer components {
+    .input {
+        /* Input component level tokens (Tier-3) */
+        --input-text: var(--text-secondary);
+        --input-padding-x: var(--component-gap-md);
+        --input-padding-y: var(--component-gap-sm);
+        --input-text-disabled: var(--state-accent);
+        --input-border: var(--border-default);
+        --input-border-hover: var(--border-strong);
+        --input-border-focus: var(--border-focus);
+        --input-border-error: var(--border-error);
+        --input-border-disabled: var(--state-accent-subtle);
+        --input-background-disabled: var(--state-accent-subtle);
+
+        padding: var(--input-padding-y) var(--input-padding-x);
+        border-color: var(--input-border);
+        color: var(--input-text);
+
+        @apply flex-1 rounded-md border w-full transition;
+
+        &:hover {
+            border-color: var(--input-border-hover);
+        }
+
+        &:focus {
+            outline: solid;
+            border-color: var(--input-border-focus);
+            outline-color: var(--input-border-focus);
+        }
+
+        &.invalid {
+            border-color: var(--input-border-error);
+            color: var(--text-error);
+
+            &:focus {
+                --input-border-focus: var(--input-border-error);
+            }
+        }
+
+        &.disabled {
+            color: var(--input-text-disabled);
+            border-color: var(--input-border-disabled);
+            background-color: var(--input-background-disabled)
+        }
+
+    }
+
+    .label,
+    .helper-text {
+        --component-text: var(--text-subtle);
+        --component-text-error: var(--text-error);
+
+        color: var(--component-text);
+
+        &.invalid {
+            color: var(--component-text-error);
+        }
+    }
+
+    .label {
+        @apply text-sm;
+    }
+
+    .helper-text {
+        @apply text-xs;
     }
 }
 

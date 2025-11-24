@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CustomerCancelDialogComponent should render the template correctly 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="w-2xl"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                tit
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <p>
+            confirm
+          </p>
+          <app-input-textarea
+            class="ng-untouched ng-pristine ng-valid"
+          >
+            <div>
+              <label
+                class="label"
+                for="id"
+              >
+                 reason 
+                <!--container-->
+              </label>
+              <div
+                class="flex flex-row"
+              >
+                <textarea
+                  autocomplete="off"
+                  class="input min-h-40"
+                  id="id"
+                  placeholder="place"
+                />
+              </div>
+              <div
+                class="grid grid-cols-2"
+              >
+                <span
+                  class="helper-text"
+                >
+                  <span
+                    leftassistivetext=""
+                  >
+                     optional 
+                  </span>
+                </span>
+                <span
+                  class="helper-text text-right"
+                />
+              </div>
+            </div>
+            <!--container-->
+          </app-input-textarea>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;

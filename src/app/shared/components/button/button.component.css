@@ -1,0 +1,94 @@
+@layer components {
+    .btn {
+        --btn-interactive-scale-active: var(--interactive-scale-active);
+        --btn-gap-x: var(--component-gap-sm);
+        --btn-padding-x: var(--component-gap-md);
+        --btn-padding-y: var(--component-gap-sm);
+
+        @apply border inline-flex items-center justify-center rounded-md transition cursor-pointer;
+
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        gap: 0 var(--btn-gap-x);
+
+        /* Primary component level tokens (Tier-3) */
+        &.primary {
+            --btn-background: var(--interactive-primary);
+            --btn-border: var(--interactive-primary);
+            --btn-text: var(--text-inverse);
+            --btn-background-hover: var(--interactive-primary-hover);
+            --btn-border-hover: var(--interactive-primary-hover);
+            --btn-ghost-text: var(--interactive-primary);
+            --btn-ghost-background-hover: var(--interactive-primary-inverse-hover);
+            --btn-ghost-text-hover: var(--interactive-primary-hover);
+            --btn-outline-border: var(--interactive-primary);
+            --btn-outline-text: var(--interactive-primary);
+            --btn-outline-background-hover: var(--interactive-primary-inverse-hover);
+            --btn-outline-text-hover: var(--interactive-primary-hover);
+            --btn-outline-border-hover: var(--interactive-primary-hover);
+            --btn-disabled-background: var(--state-primary-subtle);
+            --btn-disabled-border: var(--state-primary-subtle);
+        }
+
+        /* Secondary component level tokens (Tier-3) */
+        &.secondary {
+            --btn-background: var(--interactive-secondary);
+            --btn-border: var(--interactive-secondary);
+            --btn-text: var(--text-inverse);
+            --btn-background-hover: var(--interactive-secondary-hover);
+            --btn-border-hover: var(--interactive-secondary-hover);
+            --btn-ghost-text: var(--interactive-secondary);
+            --btn-ghost-background-hover: var(--interactive-secondary-inverse-hover);
+            --btn-ghost-text-hover: var(--interactive-secondary-hover);
+            --btn-outline-border: var(--interactive-secondary);
+            --btn-outline-text: var(--interactive-secondary);
+            --btn-outline-background-hover: var(--interactive-secondary-inverse-hover);
+            --btn-outline-text-hover: var(--interactive-secondary-hover);
+            --btn-outline-border-hover: var(--interactive-secondary-hover);
+            --btn-disabled-background: var(--state-secondary-subtle);
+            --btn-disabled-border: var(--state-secondary-subtle);
+        }
+
+        background-color: var(--btn-background);
+        border-color: var(--btn-border);
+        color: var(--btn-text);
+
+        &:hover {
+            background-color: var(--btn-background-hover);
+            border-color: var(--btn-border-hover);
+        }
+
+        &.ghost {
+            background: transparent;
+            border-color: transparent;
+            color: var(--btn-ghost-text);
+
+            &:hover {
+                background-color: var(--btn-ghost-background-hover);
+                color: var(--btn-ghost-text-hover);
+            }
+        }
+
+        &.outlined {
+            background: transparent;
+            border-color: var(--btn-outline-border);
+            color: var(--btn-outline-text);
+
+            &:hover {
+                background-color: var(--btn-outline-background-hover);
+                border-color: var(--btn-outline-border-hover);
+                color: var(--btn-outline-text-hover);
+            }
+        }
+
+        &.disabled {
+            pointer-events: none;
+            background-color: var(--btn-disabled-background);
+            border-color: var(--btn-disabled-border);
+            color: var(--text-inverse);
+        }
+
+        &:active {
+            scale: var(--btn-interactive-scale-active);
+        }
+    }
+}

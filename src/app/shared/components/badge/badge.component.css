@@ -1,0 +1,64 @@
+@layer components {
+    .badge {
+        /* Badge component level tokens (Tier-3) */
+        --badge-text: var(--text-inverse);
+
+        @apply border;
+
+        pointer-events: none;
+        padding: var(--badge-padding-y) var(--badge-padding-x);
+        border-radius: var(--badge-border-radius);
+        border-color: var(--badge-border);
+
+
+        &.filled {
+            background-color: var(--badge-background);
+            color: var(--badge-text);
+        }
+
+        &.outlined {
+            background-color: transparent;
+            color: var(--badge-border);
+        }
+
+        &.accent {
+            --badge-background: var(--state-accent);
+            --badge-border: var(--state-accent)
+        }
+
+        &.success {
+            --badge-background: var(--state-success);
+            --badge-border: var(--state-success)
+        }
+
+        &.warning {
+            --badge-background: var(--state-warning);
+            --badge-border: var(--state-warning)
+        }
+
+        &.error {
+            --badge-background: var(--state-error);
+            --badge-border: var(--state-error)
+        }
+
+        &.rounded {
+            --badge-border-radius: 100px;
+        }
+
+        &.pilled {
+            --badge-border-radius: 9999px;
+        }
+
+        &.size-md {
+            --badge-padding-x: var(--component-gap-md);
+            --badge-padding-y: var(--component-gap-sm);
+        }
+
+        &.size-sm {
+            @apply text-sm;
+
+            --badge-padding-x: var(--component-gap-sm);
+            --badge-padding-y: var(--component-gap-xs);
+        }
+    }
+}

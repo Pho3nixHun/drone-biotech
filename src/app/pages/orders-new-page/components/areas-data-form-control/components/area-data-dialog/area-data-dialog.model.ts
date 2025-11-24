@@ -1,54 +1,82 @@
-import { isObject } from '@utils/is-object.typeguard';
-import { DialogReason } from '@services/dialog/dialog.service';
-import { DialogLayoutVM } from '@components/dialog-layout/dialog-layout.model';
-import { MapFormControlVM } from './components/map-form-control/map-form-control.model';
 import { Coordinates } from '@stores/location/location.model';
+import { InputTextXVM } from '@components/input-text/input-text.component';
+import { InputTextareaXVM } from '@components/input-textarea/input-textarea.component';
+import { InputNumberXVM } from '@components/input-number/input-number.component';
+import { DialogLayoutXVM } from '@components/dialog-layout/dialog-layout.component';
+import { ButtonXVM } from '@components/button/button.model';
+import { PolygonContextMenuVM } from '@components/polygon-context-menu/polygon-context-menu.component';
+import { TabsVM } from '@components/tabs/tabs.component';
+import { TabButtonXVM } from '@components/tabs/components/tabs-nav/components/tab-button/tab-button.component';
+import { PolygonColors } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 
-export interface AreaDataDialogVM extends DialogLayoutVM {
-    type: 'areaDataDialogVM';
-    missionNameLabelKey: string;
-    dosePerHqLabelKey: string;
-    coordinatesLabelKey: string;
-    entryPointLabelKey: string;
-    targetAreaLabelKey: string;
-    applicationDateLabelKey: string;
-    commentLabelKey: string;
-    cancelButtonTextKey: string;
-    submitButtonTextKey: string;
-    areaData: AreaData | null;
-    mapFormControlVM: MapFormControlVM;
+export interface AreaDataDialogVM extends Omit<DialogLayoutXVM, 'titleKey'> {
+    actualPosition: Coordinates | null;
+    addTitleKey: string;
+    editTitleKey: string;
+    isEntryPointReadonly?: boolean;
+    isTargetAreaReadonly?: boolean;
+    requiredAssistiveTextKey: string;
+    missionNameMaxCharactersAllowedAssistiveTextValueKey: string;
+    missionNameMaxCharactersCounterAssistiveTextValueKey: string;
+    dosePerHqMinErrorAssistiveTextValueKey: string;
+    missionNameInputTextXVM: InputTextXVM;
+    dosePerHqInputTextXVM: InputNumberXVM;
+    commentInputTextareaXVM: InputTextareaXVM;
+    applicationDateInputTextXVM: InputTextXVM;
+    mapTabsXVM: MapsTabsXVM;
 }
 
-export interface AreaData {
+interface MapsTabsXVM extends TabsVM {
+    visualTabItemVM: VisualTabItemVM;
+    textTabItemVM: TextTabItemVM;
+}
+
+export enum TabItemID {
+    MAP = 'map',
+    COORDINATES = 'coords',
+}
+
+interface BaseTabItem<T> {
+    id: TabItemID;
+    tabButtonXVM: TabButtonXVM;
+    content: T;
+}
+
+type VisualTabItemVM = BaseTabItem<GmpMapXVM>;
+type TextTabItemVM = BaseTabItem<{
+    targetAreaInvalidTextKey: string;
+    entryPointInvalidTextKey: string;
+    targetAreaInputTextareaXVM: InputTextareaXVM;
+    entryPointInputTextXVM: InputTextXVM;
+}>;
+export interface Mission {
     id: string;
-    comment: string;
-    missionName: string;
-    targetArea: Coordinates[];
+    name: string;
     entryPoint: Coordinates;
-    dosePerHq: number;
+    targetArea: Coordinates[];
     applicationDate: Date;
+    dosePerHq: number;
+    comment?: string;
 }
 
-export interface AreaDataDialogResultWithAreaData extends DialogReason {
-    reasonType: 'submit';
-    type: 'areaDataDialogResultWithAreaData';
-    areaData: AreaData;
+export interface AreaDataDialogResponseWithAreaData {
+    type: 'submit';
+    areaData: Mission;
 }
 
-export interface AreaDataDialogResultWithoutAreaData extends DialogReason {
-    reasonType: 'cancel';
+export interface AreaDataDialogResponseWithoutAreaData {
+    type: 'cancel';
 }
 
-export function isAreaDataDialogResultWithAreaData(
-    data: unknown
-): data is AreaDataDialogResultWithAreaData {
-    return (
-        isObject(data) &&
-        'type' in data &&
-        data.type === 'areaDataDialogResultWithAreaData'
-    );
-}
+export type AreaDataDialogResponse =
+    | AreaDataDialogResponseWithAreaData
+    | AreaDataDialogResponseWithoutAreaData;
 
-export function isAreaDataDialogVM(data: unknown): data is AreaDataDialogVM {
-    return isObject(data) && 'type' in data && data.type === 'areaDataDialogVM';
+interface GmpMapXVM {
+    polygonColors: PolygonColors;
+    contentValueKey: string;
+    polygonContextMenuVM: PolygonContextMenuVM;
+    removeAdvancedMarkerButtonXVM: ButtonXVM<'withIcon'>;
+    addAdvancedMarkerButtonXVM: ButtonXVM<'withIcon'>;
+    addPolygonButtonXVM: ButtonXVM<'withIcon'>;
 }

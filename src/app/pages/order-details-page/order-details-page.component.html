@@ -1,213 +1,271 @@
-@if (vm(); as vm) {
+@let vM = vm();
+@let user = vM?.user;
+@if (vM && user) {
     <app-page-layout *transloco="let t">
-        <app-header>
-            <h2>
+        @let headerXVM = vM.headerXVM;
+        <app-page-header>
+            <h1>
                 {{
-                    t(vm.headerXVM.idTitleKey, {
-                        id: vm.headerXVM.id,
+                    t(headerXVM.titleKey, {
+                        id: headerXVM.orderId,
                     })
                 }}
-            </h2>
+            </h1>
 
-            <app-status [vm]="vm.headerXVM.statusXVM">
-                {{ t(vm.headerXVM.statusXVM.statusTextKey) }}
-            </app-status>
-
-            @if (vm.headerXVM.addMissionButtonXVM.isVisible) {
-                <button class="btn btn-primary w-fit truncate">
-                    {{ t(vm.headerXVM.addMissionButtonXVM.textKey) }}
-                </button>
+            @let buttonXVM = headerXVM.addNewMissionsButtonXVM;
+            @if (headerXVM.addNewMissionEnabled) {
+                <a [routerLink]="buttonXVM.routerLink" actionGroup>
+                    <app-button [vm]="buttonXVM">
+                        {{ t(buttonXVM.textKey) }}
+                    </app-button>
+                </a>
             }
 
-            <app-summary-list>
+            <app-cluster gapX="md" gapY="sm" metadata>
+                <app-badge
+                    shape="pilled"
+                    [intent]="mapOrderStatusToBadgeIntent(vM.status)"
+                    >{{
+                        t(mapOrderStatusToTranslocoTextKey(vM.status))
+                    }}</app-badge
+                >
+
+                <ng-container
+                    [ngTemplateOutlet]="keyValues"
+                    [ngTemplateOutletContext]="{
+                        summaries: headerXVM.summaries,
+                    }"
+                />
+            </app-cluster>
+        </app-page-header>
+
+        <app-frame [vm]="vM.overviewFrameXVM">
+            @let gmpMapXVM = vM.overviewFrameXVM.gmpMapXVM;
+            @if (gmpMapXVM.bounds; as bounds) {
+                <app-gmp-map
+                    class="h-96"
+                    [view]="bounds"
+                    appGmpPolygonDrawing
+                    [polygonsInput]="gmpMapXVM.missions"
+                />
+
+                <app-cluster gapX="2xl" gapY="sm">
+                    <ng-container
+                        [ngTemplateOutlet]="keyValues"
+                        [ngTemplateOutletContext]="{
+                            summaries: vM.overviewFrameXVM.summaries,
+                        }"
+                    />
+                </app-cluster>
+            }
+        </app-frame>
+
+        @let detailsFrameXVM = vM.detailsFrameXVM;
+        <app-frame [vm]="detailsFrameXVM">
+            <app-cluster gapX="2xl" gapY="xl">
+                <app-stack orientation="vertical" gap="md">
+                    <h3>{{ t(detailsFrameXVM.clientTitleKey) }}</h3>
+                    <app-stack orientation="vertical" gap="sm">
+                        <ng-container
+                            [ngTemplateOutlet]="keyValues"
+                            [ngTemplateOutletContext]="{
+                                summaries: detailsFrameXVM.clientSummaries,
+                            }"
+                        />
+                    </app-stack>
+                </app-stack>
+                <app-stack orientation="vertical" gap="md">
+                    <h3>{{ t(detailsFrameXVM.detailsTitleKey) }}</h3>
+                    <app-stack orientation="vertical" gap="sm">
+                        <ng-container
+                            [ngTemplateOutlet]="keyValues"
+                            [ngTemplateOutletContext]="{
+                                summaries: detailsFrameXVM.detailsSummaries,
+                            }"
+                        />
+                    </app-stack>
+                </app-stack>
+            </app-cluster>
+        </app-frame>
+
+        <app-frame [vm]="vM.missionsFrameXVM">
+            <app-cluster gapX="md" gapY="md">
                 @for (
-                    summary of vm.headerXVM.summaryListXVM.summaryXVMs;
+                    cardXVM of vM.missionsFrameXVM.missionCardXVMs;
                     track $index
                 ) {
-                    <app-summary>
-                        <p class="text-gray-600">
-                            {{ t(summary.textKey) }}
-                        </p>
-
-                        <p class="font-medium">
-                            @if (summary.value.type === 'withValueKey') {
-                                {{ t(summary.value.key, summary.value.params) }}
-                            } @else {
-                                {{ summary.value.value }}
-                            }
-                        </p>
-                    </app-summary>
-                }
-            </app-summary-list>
-        </app-header>
-
-        @for (sectionCardXVM of vm.sectionCardXVMs; track $index) {
-            @switch (sectionCardXVM.type) {
-                @case ('orderDetails') {
-                    <ng-container
-                        [ngTemplateOutlet]="orderDetails"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
-                }
-                @case ('orderActions') {
-                    <ng-container
-                        [ngTemplateOutlet]="orderActions"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
-                }
-                @case ('messages') {
-                    <ng-container
-                        [ngTemplateOutlet]="messages"
-                        [ngTemplateOutletContext]="{ sectionCardXVM }"
-                    >
-                    </ng-container>
-                }
-            }
-        }
-    </app-page-layout>
-}
-
-<ng-template #messages let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <app-message-item-list>
-            @for (
-                messageItemXVM of vm.messageItemListXVM.messageItemXVMs;
-                track $index
-            ) {
-                <app-message-item>
-                    @switch (messageItemXVM.avatarXVM.type) {
-                        @case ('withInitials') {
-                            <app-avatar
-                                [class]="messageItemXVM.avatarXVM.colors"
+                    <app-card>
+                        @if (cardXVM.gmpMapXVM.bounds; as bounds) {
+                            <app-gmp-map
+                                class="h-60"
+                                [view]="bounds"
+                                appGmpPolygonDrawing
+                                [polygonInput]="cardXVM.gmpMapXVM.polygon"
+                                [appGmpAdvancedMarker]="
+                                    cardXVM.gmpMapXVM.entryPoint
+                                "
+                            />
+                        }
+                        @let cardBodyXVM = cardXVM.cardBodyXVM;
+                        <app-card-body>
+                            <h3>
+                                {{
+                                    t(cardBodyXVM.titleKey, {
+                                        id: cardBodyXVM.title,
+                                    })
+                                }}
+                            </h3>
+                            <app-badge
+                                size="sm"
+                                variant="outline"
+                                [intent]="
+                                    mapMissionStatusToBadgeIntent(
+                                        cardBodyXVM.status
+                                    )
+                                "
                             >
-                                {{ messageItemXVM.avatarXVM.initials }}
-                            </app-avatar>
-                        }
+                                {{
+                                    t(
+                                        mapMissionStatusToTranslocoTextKey(
+                                            cardBodyXVM.status
+                                        )
+                                    )
+                                }}
+                            </app-badge>
+                            @for (
+                                keyValueXVM of cardBodyXVM.keyValueXVMs;
+                                track $index
+                            ) {
+                                <app-stack orientation="horizontal" gap="sm">
+                                    <app-key class="text-base-300/30">{{
+                                        t(keyValueXVM.keyXVM.textKey)
+                                    }}</app-key>
+                                    <app-value [vm]="keyValueXVM.valueVM" />
+                                </app-stack>
+                            }
+                        </app-card-body>
+                        <app-card-footer>
+                            @let buttonXVM = cardXVM.cardFooterXVM.buttonXVM;
+                            <a
+                                [routerLink]="buttonXVM.routerLink"
+                                [fragment]="buttonXVM.fragment"
+                                class="w-full"
+                            >
+                                <app-button [vm]="buttonXVM" class="*:w-full">
+                                    {{ t(buttonXVM.textKey) }}
+                                </app-button>
+                            </a>
+                        </app-card-footer>
+                    </app-card>
+                }
+            </app-cluster>
+        </app-frame>
 
-                        @case ('withImage') {
-                            <app-avatar class="text-white *:bg-black">
-                                <img
-                                    [ngSrc]="messageItemXVM.avatarXVM.imageSrc"
-                                    [alt]="messageItemXVM.avatarXVM.altTextKey"
-                                    class="object-contain rounded-full"
-                                    fill
-                                />
-                            </app-avatar>
-                        }
-                    }
-                    <h3 class="font-medium">
+        @let chatFrameXVM = vM.chatFrameXVM;
+        <app-frame [vm]="chatFrameXVM">
+            <app-stack orientation="vertical" gap="sm">
+                @for (messageXVM of chatFrameXVM.messageXVMs; track $index) {
+                    <app-message [vm]="messageXVM">
+                        <app-avatar
+                            class="chat-avatar"
+                            [vm]="messageXVM.avatarVM"
+                        />
                         {{
-                            t(messageItemXVM.senderValueKey, {
-                                role: t(messageItemXVM.roleTextKey),
-                                name: messageItemXVM.senderName,
+                            t(messageXVM.nameXRoleValueKey, {
+                                name: messageXVM.name,
+                                role: t(
+                                    mapRoleToTranslocoTextKey(messageXVM.role)
+                                ),
                             })
                         }}
-                    </h3>
-                    <p class="text-gray-700">
-                        {{ messageItemXVM.message }}
-                    </p>
-                    <time class="text-gray-600 text-sm">{{
-                        t(messageItemXVM.sendingDateValueKey, {
-                            date: messageItemXVM.sendingDate,
-                        })
-                    }}</time>
-                </app-message-item>
-            }
-        </app-message-item-list>
-        <div class="w-full flex flex-row">
-            <input
-                type="text"
-                [formControl]="messageFormControl"
-                class="px-2 w-full border border-gray-300"
-            />
-            <button
-                (click)="onSendMessageClick()"
-                [disabled]="messageFormControl.invalid"
-                [ngClass]="
-                    messageFormControl.valid ? 'btn-primary' : 'btn-disabled'
-                "
-                class="btn rounded-none"
-            >
-                {{ t(vm.buttonTextKey) }}
-            </button>
-        </div>
-    </app-section-card>
-</ng-template>
+                        <time>{{
+                            t(messageXVM.dateTimeValueKey, {
+                                date: messageXVM.dateTime,
+                            })
+                        }}</time>
+                    </app-message>
+                }
+            </app-stack>
 
-<ng-template #orderActions let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <div
-            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
-        >
-            <a
-                class="btn btn-success"
-                [href]="vm.completionTemplateButtonXVM.link.href"
-                download
-            >
-                {{ t(vm.completionTemplateButtonXVM.textKey) }}
-            </a>
-            <button
-                class="btn"
-                [disabled]="vm.closeOrderButtonXVM.isDisabled"
-                [ngClass]="
-                    vm.closeOrderButtonXVM.isDisabled
-                        ? 'btn-disabled'
-                        : 'btn-error'
-                "
-                (click)="
-                    openConfirmationDialog(
-                        vm.closeOrderButtonXVM.confirmationDialogVM
-                    )
-                "
-            >
-                {{ t(vm.closeOrderButtonXVM.textKey) }}
-            </button>
-        </div>
-    </app-section-card>
-</ng-template>
+            @if (!chatFrameXVM.readonlyMessageControl) {
+                @let disabled =
+                    messageControl.disabled ||
+                    messageControl.hasError('emptyString') ||
+                    messageControl.hasError('required');
 
-<ng-template #orderDetails let-vm="sectionCardXVM">
-    <app-section-card [vm]="vm" *transloco="let t">
-        <div class="flex lg:flex-row flex-col space-y-8 lg:space-y-0">
-            @for (infoPanelXVM of vm.infoPanelXVMs; track $index) {
-                <app-info-panel class="lg:w-1/2 w-full">
-                    <h4 class="font-medium">
-                        {{ t(infoPanelXVM.titleKey) }}
-                    </h4>
-                    <app-info-item-list>
-                        @for (
-                            infoItemXVM of infoPanelXVM.infoListXVM
-                                .infoItemXVMs;
-                            track $index
-                        ) {
-                            <app-info-item>
-                                <dt class="text-gray-600 w-32">
-                                    {{ t(infoItemXVM.labelKey) }}
-                                </dt>
-                                <dd>
-                                    <strong class="font-medium">
-                                        @if (
-                                            infoItemXVM.value.type ===
-                                            'withValueKey'
-                                        ) {
-                                            {{
-                                                t(
-                                                    infoItemXVM.value.key,
-                                                    infoItemXVM.value.params
-                                                )
-                                            }}
-                                        } @else {
-                                            {{ infoItemXVM.value.value }}
-                                        }
-                                    </strong>
-                                </dd>
-                            </app-info-item>
-                        }
-                    </app-info-item-list>
-                </app-info-panel>
+                <app-input-text
+                    [vm]="chatFrameXVM.messageInputTextXVM"
+                    [formControl]="messageControl"
+                    class="[&_.input]:rounded-r-none"
+                    [ngClass]="{
+                        disabled: messageControl.disabled,
+                    }"
+                >
+                    <app-button
+                        [vm]="chatFrameXVM.submitMessageButtonXVM"
+                        [disabled]="disabled"
+                        (click)="!disabled && sendMessage()"
+                        class="*:rounded-l-none"
+                    >
+                        <mat-icon>{{
+                            chatFrameXVM.submitMessageButtonXVM.icon
+                        }}</mat-icon>
+                    </app-button>
+                </app-input-text>
             }
-        </div>
-    </app-section-card>
-</ng-template>
+        </app-frame>
+
+        @let actionsFrameXVM = vM.actionsFrameXVM;
+        <app-frame [vm]="actionsFrameXVM">
+            <app-stack orientation="horizontal">
+                @let completionTemplateButtonXVM =
+                    actionsFrameXVM.completionTemplateButtonXVM;
+                @if (!completionTemplateButtonXVM.hidden) {
+                    <a [href]="completionTemplateButtonXVM.link.href" download>
+                        <app-button
+                            [vm]="completionTemplateButtonXVM"
+                            [ngClass]="{
+                                '*:rounded-r-none': !closeOrderButtonXVM.hidden,
+                            }"
+                        >
+                            {{ t(completionTemplateButtonXVM.textKey) }}
+                        </app-button>
+                    </a>
+                }
+
+                @let closeOrderButtonXVM = actionsFrameXVM.closeOrderButtonXVM;
+                @if (!closeOrderButtonXVM.hidden) {
+                    <app-button
+                        [vm]="closeOrderButtonXVM"
+                        [ngClass]="{
+                            '*:rounded-l-none':
+                                !completionTemplateButtonXVM.hidden,
+                        }"
+                        (click)="
+                            closeOrderDialog.open(
+                                actionsFrameXVM.closeOrderDialogVM
+                            )
+                        "
+                    >
+                        {{ t(closeOrderButtonXVM.textKey) }}
+                    </app-button>
+                    <app-close-order-dialog
+                        #closeOrderDialog
+                        (response)="onCloseOrderDialogResponse($event)"
+                    />
+                }
+            </app-stack>
+        </app-frame>
+    </app-page-layout>
+
+    <ng-template #keyValues let-summaries="summaries">
+        @for (summary of summaries; track $index) {
+            <app-stack orientation="horizontal" gap="sm">
+                <app-key class="text-secondary">{{
+                    summary.keyXVM.textKey | transloco
+                }}</app-key>
+                <app-value [vm]="summary.valueVM" class="font-medium" />
+            </app-stack>
+        }
+    </ng-template>
+}
