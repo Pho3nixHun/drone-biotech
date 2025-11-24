@@ -2,7 +2,6 @@ import { NgClass } from '@angular/common';
 import { Component, forwardRef, signal, input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { ButtonXVM } from '@components/button/button.model';
-import { MatIcon } from '@interfaces/mat-icon.enum';
 import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
@@ -71,6 +70,4 @@ export interface InputTextVM {
 
 export interface InputTextXVM extends InputTextVM {
     buttonXVM?: ButtonXVM;
-    leadingIcon?: MatIcon;
-    trailingIcon?: MatIcon;
 }

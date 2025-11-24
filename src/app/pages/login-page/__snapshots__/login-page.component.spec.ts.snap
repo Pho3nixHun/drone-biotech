@@ -45,38 +45,35 @@ exports[`LoginPageComponent should not render the error message if there is no e
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -85,38 +82,35 @@ exports[`LoginPageComponent should not render the error message if there is no e
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -190,38 +184,35 @@ exports[`LoginPageComponent should render template correctly with the defer bloc
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -230,38 +221,35 @@ exports[`LoginPageComponent should render template correctly with the defer bloc
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -341,38 +329,35 @@ exports[`LoginPageComponent should render the error message if an error is provi
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -381,38 +366,35 @@ exports[`LoginPageComponent should render the error message if an error is provi
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -477,34 +459,31 @@ exports[`LoginPageComponent should render the required assistive text inside the
               <app-input-text
                 class="ng-untouched ng-dirty ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label invalid"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input is-invalid"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input invalid"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text invalid"
+                    >
                       <span
                         leftassistivetext=""
                       >
@@ -513,7 +492,7 @@ exports[`LoginPageComponent should render the required assistive text inside the
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right invalid"
                     />
                   </div>
                 </div>
@@ -522,38 +501,35 @@ exports[`LoginPageComponent should render the required assistive text inside the
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -618,38 +594,35 @@ exports[`LoginPageComponent should render the required assistive text inside the
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -658,34 +631,31 @@ exports[`LoginPageComponent should render the required assistive text inside the
               <app-input-text
                 class="ng-untouched ng-dirty ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label invalid"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input is-invalid"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input invalid"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text invalid"
+                    >
                       <span
                         leftassistivetext=""
                       >
@@ -694,7 +664,7 @@ exports[`LoginPageComponent should render the required assistive text inside the
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right invalid"
                     />
                   </div>
                 </div>
@@ -759,38 +729,35 @@ exports[`LoginPageComponent should render the template correctly if the button d
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -799,38 +766,35 @@ exports[`LoginPageComponent should render the template correctly if the button d
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -905,38 +869,35 @@ exports[`LoginPageComponent should render the template correctly if the button h
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -945,38 +906,35 @@ exports[`LoginPageComponent should render the template correctly if the button h
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1051,38 +1009,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1091,38 +1046,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1197,38 +1149,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-valid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1237,38 +1186,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-valid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1342,38 +1288,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-valid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1382,38 +1325,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-valid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1487,38 +1427,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-valid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1527,38 +1464,35 @@ exports[`LoginPageComponent should render the template correctly if the form is 
               <app-input-text
                 class="ng-untouched ng-pristine ng-valid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1632,38 +1566,35 @@ exports[`LoginPageComponent should render the template when there is a VM provid
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="email"
                   >
-                    <label
-                      for="email"
-                    >
-                       elab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     elab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="email"
-                      class="grow"
+                      class="input"
                       id="email"
                       placeholder="eplace"
                       type="email"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>
@@ -1672,38 +1603,35 @@ exports[`LoginPageComponent should render the template when there is a VM provid
               <app-input-text
                 class="ng-untouched ng-pristine ng-invalid"
               >
-                <div
-                  class="my-2"
-                >
-                  <span
-                    class="flex flex-row justify-between items-end label-text"
+                <div>
+                  <label
+                    class="label"
+                    for="password"
                   >
-                    <label
-                      for="password"
-                    >
-                       plab 
-                      <!--container-->
-                    </label>
-                  </span>
+                     plab 
+                    <!--container-->
+                  </label>
                   <div
-                    class="space-x-3 flex items-center input"
+                    class="flex flex-row"
                   >
                     <input
                       autocomplete="current-password"
-                      class="grow"
+                      class="input"
                       id="password"
                       placeholder="pplace"
                       type="password"
                     />
                   </div>
                   <div
-                    class="grid grid-cols-2 items-baseline helper-text"
+                    class="grid grid-cols-2"
                   >
-                    <span>
+                    <span
+                      class="helper-text"
+                    >
                       <!--container-->
                     </span>
                     <span
-                      class="text-right"
+                      class="helper-text text-right"
                     />
                   </div>
                 </div>

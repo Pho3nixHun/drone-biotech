@@ -51,33 +51,35 @@ exports[`OfficeCancelDialogComponent should render the template correctly 1`] = 
           <app-input-textarea
             class="ng-untouched ng-pristine ng-invalid"
           >
-            <div
-              class="my-2"
-            >
-              <span
-                class="flex flex-row justify-between items-end label-text"
+            <div>
+              <label
+                class="label"
+                for="id"
               >
-                <label
-                  for="id"
-                >
-                  reason
-                </label>
-              </span>
-              <textarea
-                autocomplete="off"
-                class="textarea min-h-40"
-                id="id"
-                placeholder="place"
-              />
+                 reason 
+                <!--container-->
+              </label>
               <div
-                class="grid grid-cols-2 items-baseline helper-text"
+                class="flex flex-row"
               >
-                <span>
+                <textarea
+                  autocomplete="off"
+                  class="input min-h-40"
+                  id="id"
+                  placeholder="place"
+                />
+              </div>
+              <div
+                class="grid grid-cols-2"
+              >
+                <span
+                  class="helper-text"
+                >
                   <!--container-->
                   <!--container-->
                 </span>
                 <span
-                  class="text-right"
+                  class="helper-text text-right"
                 />
               </div>
             </div>

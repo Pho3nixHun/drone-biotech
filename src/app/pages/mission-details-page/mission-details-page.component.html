@@ -124,22 +124,25 @@
                 }
             </app-stack>
             @if (!logFrameXVM.readonlyMessageControl) {
-                <div class="join flex flex-row items-center">
-                    <app-input-text
-                        class="w-full"
-                        [vm]="logFrameXVM.messageInputTextXVM"
-                        [formControl]="messageControl"
-                    />
+                <app-input-text
+                    [vm]="logFrameXVM.messageInputTextXVM"
+                    [formControl]="messageControl"
+                    class="[&_.input]:rounded-r-none"
+                    [ngClass]="{
+                        disabled: messageControl.disabled,
+                    }"
+                >
                     <app-button
                         [vm]="submitButtonXVM"
                         [disabled]="submitButtonDisabled"
                         (click)="!submitButtonDisabled && sendMessage()"
+                        class="*:rounded-l-none"
                     >
                         <mat-icon>
                             {{ submitButtonXVM.icon }}
                         </mat-icon>
                     </app-button>
-                </div>
+                </app-input-text>
             }
         </app-frame>
         <!-- Log frame end -->

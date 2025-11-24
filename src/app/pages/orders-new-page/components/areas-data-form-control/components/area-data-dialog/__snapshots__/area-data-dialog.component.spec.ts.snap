@@ -65,39 +65,36 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   >
                     <span
                       rightassistivetext=""
@@ -225,32 +222,34 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -259,38 +258,35 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -304,37 +300,35 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -343,38 +337,35 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -383,30 +374,32 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -506,39 +499,36 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
             <app-input-text
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   >
                     <span
                       rightassistivetext=""
@@ -664,32 +654,34 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -698,38 +690,35 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -743,37 +732,35 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
             <app-input-number
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -782,38 +769,35 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
             <app-input-text
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -822,30 +806,32 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -944,34 +930,31 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input is-invalid"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input invalid"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text invalid"
+                  >
                     <span
                       leftassistivetext=""
                     >
@@ -981,7 +964,7 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right invalid"
                   >
                     <span
                       rightassistivetext=""
@@ -1109,32 +1092,34 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -1143,38 +1128,35 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -1188,37 +1170,35 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -1227,38 +1207,35 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -1267,30 +1244,32 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -1390,39 +1369,36 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   >
                     <span
                       rightassistivetext=""
@@ -1550,32 +1526,34 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -1584,38 +1562,35 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -1629,33 +1604,31 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
             <app-input-number
               class="ng-untouched ng-dirty ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input is-invalid"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input invalid"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text invalid"
+                  >
                     <span
                       leftassistivetext=""
                     >
@@ -1664,7 +1637,7 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right invalid"
                   />
                 </div>
               </div>
@@ -1673,38 +1646,35 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -1713,30 +1683,32 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -1836,39 +1808,36 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   >
                     <span
                       rightassistivetext=""
@@ -1996,32 +1965,34 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -2030,38 +2001,35 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -2075,37 +2043,35 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -2114,34 +2080,31 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-text
               class="ng-untouched ng-dirty ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input is-invalid"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input invalid"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text invalid"
+                  >
                     <span
                       leftassistivetext=""
                     >
@@ -2150,7 +2113,7 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right invalid"
                   />
                 </div>
               </div>
@@ -2159,30 +2122,32 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -2282,34 +2247,31 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-text
               class="ng-untouched ng-dirty ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input is-invalid"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input invalid"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text invalid"
+                  >
                     <!--container-->
                     <span
                       leftassistivetext=""
@@ -2319,7 +2281,7 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right invalid"
                   >
                     <span
                       rightassistivetext=""
@@ -2447,32 +2409,34 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -2481,38 +2445,35 @@ exports[`AreaDataDialogComponent should render the required error assistive text
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -2526,37 +2487,35 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -2565,38 +2524,35 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -2605,30 +2561,32 @@ exports[`AreaDataDialogComponent should render the required error assistive text
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -2728,39 +2686,36 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     mission 
-                    <!--container-->
-                  </label>
-                </span>
+                   mission 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="email"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="missionPlace"
                     type="text"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   >
                     <span
                       rightassistivetext=""
@@ -2888,32 +2843,34 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
                       <app-input-textarea
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                            >
-                              
-                            </label>
-                          </span>
-                          <textarea
-                            autocomplete="off"
-                            class="textarea min-h-40"
-                            id=""
-                            placeholder=""
-                          />
+                            <!--container-->
+                          </label>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="flex flex-row"
                           >
-                            <span>
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -2922,38 +2879,35 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
                       <app-input-text
                         class="ng-untouched ng-pristine ng-invalid"
                       >
-                        <div
-                          class="my-2"
-                        >
-                          <span
-                            class="flex flex-row justify-between items-end label-text"
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
                           >
-                            <label
-                              for=""
-                              hidden=""
-                            >
-                              <!--container-->
-                            </label>
-                          </span>
+                            <!--container-->
+                          </label>
                           <div
-                            class="space-x-3 flex items-center input"
+                            class="flex flex-row"
                           >
                             <input
                               autocomplete="current-password"
-                              class="grow"
+                              class="input"
                               id=""
                               placeholder=""
                               type="datetime-local"
                             />
                           </div>
                           <div
-                            class="grid grid-cols-2 items-baseline helper-text"
+                            class="grid grid-cols-2"
                           >
-                            <span>
+                            <span
+                              class="helper-text"
+                            >
                               <!--container-->
                             </span>
                             <span
-                              class="text-right"
+                              class="helper-text text-right"
                             />
                           </div>
                         </div>
@@ -2967,37 +2921,35 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
             <app-input-number
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    dosePer
-                  </label>
-                </span>
+                   dosePer 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="dosePerPlace"
                     type="number"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -3006,38 +2958,35 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
             <app-input-text
               class="ng-untouched ng-pristine ng-invalid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                     applicationDate 
-                    <!--container-->
-                  </label>
-                </span>
+                   applicationDate 
+                  <!--container-->
+                </label>
                 <div
-                  class="space-x-3 flex items-center input"
+                  class="flex flex-row"
                 >
                   <input
                     autocomplete="off"
-                    class="grow"
+                    class="input"
                     id="id"
                     placeholder="applicationDatePlace"
                     type="datetime-local"
                   />
                 </div>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="grid grid-cols-2"
                 >
-                  <span>
+                  <span
+                    class="helper-text"
+                  >
                     <!--container-->
                   </span>
                   <span
-                    class="text-right"
+                    class="helper-text text-right"
                   />
                 </div>
               </div>
@@ -3046,30 +2995,32 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
             <app-input-textarea
               class="ng-untouched ng-pristine ng-valid"
             >
-              <div
-                class="my-2"
-              >
-                <span
-                  class="flex flex-row justify-between items-end label-text"
+              <div>
+                <label
+                  class="label"
+                  for="id"
                 >
-                  <label
-                    for="id"
-                  >
-                    comment
-                  </label>
-                </span>
-                <textarea
-                  autocomplete="off"
-                  class="textarea min-h-40"
-                  id="id"
-                  placeholder="commentPlace"
-                />
+                   comment 
+                  <!--container-->
+                </label>
                 <div
-                  class="grid grid-cols-2 items-baseline helper-text"
+                  class="flex flex-row"
                 >
-                  <span />
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
                   <span
-                    class="text-right"
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
                   />
                 </div>
               </div>

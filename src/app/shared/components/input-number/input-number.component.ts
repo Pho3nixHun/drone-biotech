@@ -2,7 +2,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Component, forwardRef, input, signal } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
 import { ButtonXVM } from '@components/button/button.model';
-import { MatIcon } from '@interfaces/mat-icon.enum';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -67,6 +66,4 @@ export interface InputNumberVM {
 
 export interface InputNumberXVM extends InputNumberVM {
     buttonXVM?: ButtonXVM;
-    leadingIcon?: MatIcon;
-    trailingIcon?: MatIcon;
 }

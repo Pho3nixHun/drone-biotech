@@ -142,30 +142,6 @@ describe('InputTextComponent', () => {
     });
 
     // Snapshot testing
-    it('should render the template correctly if the leading icon is provided in the vm', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockVMWithLeadingIcon);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should render the template correctly if the trailing icon is provided in the vm', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockVMWithTrailingIcon);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
     it('should render the template correctly if everything is provided in the vm', () => {
         // Arrange
         fixture.componentRef.setInput('vm', mockVMFull);
@@ -252,26 +228,6 @@ const mockVMWithButton: InputTextXVM = {
         variant: 'fill',
     },
 };
-
-const mockVMWithLeadingIcon: InputTextXVM = {
-    id: 'id',
-    autocomplete: 'tel',
-    labelKey: enMock.label,
-    placeholderKey: enMock.placeholder,
-    readonly: false,
-    type: 'text',
-    leadingIcon: MatIcon.ADD,
-};
-
-const mockVMWithTrailingIcon: InputTextXVM = {
-    id: 'id',
-    autocomplete: 'tel',
-    labelKey: enMock.label,
-    placeholderKey: enMock.placeholder,
-    readonly: false,
-    type: 'text',
-    trailingIcon: MatIcon.ADD,
-};
 const mockVMFull: InputTextXVM = {
     id: 'id',
     autocomplete: 'tel',
@@ -279,8 +235,6 @@ const mockVMFull: InputTextXVM = {
     placeholderKey: enMock.placeholder,
     readonly: false,
     type: 'text',
-    trailingIcon: MatIcon.ADD,
-    leadingIcon: MatIcon.CLOSE,
     buttonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',

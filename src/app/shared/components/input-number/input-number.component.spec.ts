@@ -22,12 +22,6 @@ import { MatIconModule } from '@angular/material/icon';
             @if (vM.buttonXVM) {
                 <app-button [vm]="vM.buttonXVM" />
             }
-            @if (vM.leadingIcon) {
-                <mat-icon>{{ vM.leadingIcon }}</mat-icon>
-            }
-            @if (vM.trailingIcon) {
-                <mat-icon>{{ vM.trailingIcon }}</mat-icon>
-            }
             <span leftAssistiveText>{{ vM.requiredAssistiveTextKey }}</span>
             <span rightAssistiveText>{{ vM.requiredAssistiveTextKey }}</span>
             <div>should not be displayed</div>
@@ -143,30 +137,6 @@ describe('InputNumberComponent', () => {
     });
 
     // Snapshot testing
-    it('should render the template correctly if the leading icon is provided in the vm', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockVMWithLeadingIcon);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
-    it('should render the template correctly if the trailing icon is provided in the vm', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockVMWithTrailingIcon);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    // Snapshot testing
     it('should render the template correctly if everything is provided in the vm', () => {
         // Arrange
         fixture.componentRef.setInput('vm', mockVMFull);
@@ -250,28 +220,11 @@ const mockVMWithButton: InputNumberXVM = {
     },
 };
 
-const mockVMWithLeadingIcon: InputNumberXVM = {
-    id: 'id',
-    labelKey: enMock.label,
-    placeholderKey: enMock.placeholder,
-    readonly: false,
-    leadingIcon: MatIcon.ADD,
-};
-
-const mockVMWithTrailingIcon: InputNumberXVM = {
-    id: 'id',
-    labelKey: enMock.label,
-    placeholderKey: enMock.placeholder,
-    readonly: false,
-    trailingIcon: MatIcon.ADD,
-};
 const mockVMFull: InputNumberXVM = {
     id: 'id',
     labelKey: enMock.label,
     placeholderKey: enMock.placeholder,
     readonly: false,
-    trailingIcon: MatIcon.ADD,
-    leadingIcon: MatIcon.CLOSE,
     buttonXVM: {
         icon: MatIcon.ADD,
         variant: 'fill',

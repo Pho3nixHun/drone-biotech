@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { NgTemplateOutlet } from '@angular/common';
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { MissionDetailsPageService } from './mission-details-page.service';
 import { FrameComponent } from '@components/frame/frame.component';
@@ -54,6 +54,7 @@ import { emptyStringValidator } from '@validators/empty-string.validator';
         CustomerCancelDialogComponent,
         NgTemplateOutlet,
         OfficeCancelDialogComponent,
+        NgClass,
     ],
     templateUrl: './mission-details-page.component.html',
 })

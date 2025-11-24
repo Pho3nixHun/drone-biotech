@@ -8,29 +8,31 @@ exports[`InputTextareaComponent should render the template correctly 1`] = `
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        id="id"
-        placeholder="place"
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40"
+          id="id"
+          placeholder="place"
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -38,7 +40,7 @@ exports[`InputTextareaComponent should render the template correctly 1`] = `
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -61,29 +63,31 @@ exports[`InputTextareaComponent should render the template correctly if it is no
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        id="id"
-        placeholder="place"
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40"
+          id="id"
+          placeholder="place"
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -91,7 +95,7 @@ exports[`InputTextareaComponent should render the template correctly if it is no
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -114,30 +118,32 @@ exports[`InputTextareaComponent should render the template correctly if it is re
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        id="id"
-        placeholder="place"
-        readonly=""
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40"
+          id="id"
+          placeholder="place"
+          readonly=""
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -145,7 +151,7 @@ exports[`InputTextareaComponent should render the template correctly if it is re
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -168,34 +174,36 @@ exports[`InputTextareaComponent should render the template correctly if the butt
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
+        <!--container-->
+      </label>
+      <div
+        class="flex flex-row"
+      >
+        <textarea
+          autocomplete="off"
+          class="input min-h-40"
+          id="id"
+          placeholder="place"
+        />
         <app-button>
           <button
             class="btn primary"
           />
         </app-button>
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        id="id"
-        placeholder="place"
-      />
+      </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -203,7 +211,7 @@ exports[`InputTextareaComponent should render the template correctly if the butt
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -226,29 +234,31 @@ exports[`InputTextareaComponent should render the template correctly when it has
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label invalid"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40 is-invalid"
-        id="id"
-        placeholder="place"
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40 invalid"
+          id="id"
+          placeholder="place"
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text invalid"
+        >
           <span
             leftassistivetext=""
           >
@@ -256,7 +266,7 @@ exports[`InputTextareaComponent should render the template correctly when it has
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right invalid"
         >
           <span
             rightassistivetext=""
@@ -279,29 +289,31 @@ exports[`InputTextareaComponent should render the template correctly when it has
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        id="id"
-        placeholder="place"
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40"
+          id="id"
+          placeholder="place"
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -309,7 +321,7 @@ exports[`InputTextareaComponent should render the template correctly when it has
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -332,30 +344,32 @@ exports[`InputTextareaComponent should render the template if the control is dis
   <app-input-textarea
     class="ng-untouched ng-pristine"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        disabled=""
-        id="id"
-        placeholder="place"
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40 disabled"
+          disabled=""
+          id="id"
+          placeholder="place"
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -363,7 +377,7 @@ exports[`InputTextareaComponent should render the template if the control is dis
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -386,29 +400,31 @@ exports[`InputTextareaComponent should render the template if the control is ena
   <app-input-textarea
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-          lab
-        </label>
+         lab 
         <!--container-->
-      </span>
-      <textarea
-        autocomplete="off"
-        class="textarea min-h-40"
-        id="id"
-        placeholder="place"
-      />
+      </label>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="flex flex-row"
       >
-        <span>
+        <textarea
+          autocomplete="off"
+          class="input min-h-40"
+          id="id"
+          placeholder="place"
+        />
+        <!--container-->
+      </div>
+      <div
+        class="grid grid-cols-2"
+      >
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -416,7 +432,7 @@ exports[`InputTextareaComponent should render the template if the control is ena
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""

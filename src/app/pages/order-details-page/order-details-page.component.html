@@ -193,22 +193,25 @@
                     messageControl.hasError('emptyString') ||
                     messageControl.hasError('required');
 
-                <div class="join flex flex-row items-center">
-                    <app-input-text
-                        class="w-full"
-                        [vm]="chatFrameXVM.messageInputTextXVM"
-                        [formControl]="messageControl"
-                    ></app-input-text>
+                <app-input-text
+                    [vm]="chatFrameXVM.messageInputTextXVM"
+                    [formControl]="messageControl"
+                    class="[&_.input]:rounded-r-none"
+                    [ngClass]="{
+                        disabled: messageControl.disabled,
+                    }"
+                >
                     <app-button
                         [vm]="chatFrameXVM.submitMessageButtonXVM"
                         [disabled]="disabled"
                         (click)="!disabled && sendMessage()"
+                        class="*:rounded-l-none"
                     >
                         <mat-icon>{{
                             chatFrameXVM.submitMessageButtonXVM.icon
                         }}</mat-icon>
                     </app-button>
-                </div>
+                </app-input-text>
             }
         </app-frame>
 

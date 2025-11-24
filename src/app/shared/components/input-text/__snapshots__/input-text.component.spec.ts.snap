@@ -8,27 +8,20 @@ exports[`InputTextComponent should render the template correctly 1`] = `
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input"
           id="id"
           placeholder="place"
           type="text"
@@ -36,9 +29,11 @@ exports[`InputTextComponent should render the template correctly 1`] = `
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -46,7 +41,7 @@ exports[`InputTextComponent should render the template correctly 1`] = `
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -63,66 +58,43 @@ exports[`InputTextComponent should render the template correctly 1`] = `
 
 exports[`InputTextComponent should render the template correctly if everything is provided in the vm 1`] = `
 <div
-  id="root8"
+  id="root6"
   ng-version="20.1.7"
 >
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
+        <!--container-->
+      </label>
+      <div
+        class="flex flex-row"
+      >
+        <input
+          autocomplete="tel"
+          class="input"
+          id="id"
+          placeholder="place"
+          type="text"
+        />
         <app-button>
           <button
             class="btn primary"
           />
         </app-button>
         <!--container-->
-      </span>
-      <div
-        class="space-x-3 flex items-center input"
-      >
-        <mat-icon
-          aria-hidden="true"
-          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-          data-mat-icon-type="font"
-          leading=""
-          role="img"
-        >
-          close
-        </mat-icon>
-        <!--container-->
-        <input
-          autocomplete="tel"
-          class="grow"
-          id="id"
-          placeholder="place"
-          type="text"
-        />
-        <mat-icon
-          aria-hidden="true"
-          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-          data-mat-icon-type="font"
-          role="img"
-          trailing=""
-        >
-          add
-        </mat-icon>
-        <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -130,7 +102,7 @@ exports[`InputTextComponent should render the template correctly if everything i
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -147,33 +119,26 @@ exports[`InputTextComponent should render the template correctly if everything i
 
 exports[`InputTextComponent should render the template correctly if it is not readonly 1`] = `
 <div
-  id="root11"
+  id="root9"
   ng-version="20.1.7"
 >
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input"
           id="id"
           placeholder="place"
           type="datetime-local"
@@ -181,9 +146,11 @@ exports[`InputTextComponent should render the template correctly if it is not re
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -191,7 +158,7 @@ exports[`InputTextComponent should render the template correctly if it is not re
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -208,33 +175,26 @@ exports[`InputTextComponent should render the template correctly if it is not re
 
 exports[`InputTextComponent should render the template correctly if it is readonly 1`] = `
 <div
-  id="root12"
+  id="root10"
   ng-version="20.1.7"
 >
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input"
           id="id"
           placeholder="place"
           readonly=""
@@ -243,9 +203,11 @@ exports[`InputTextComponent should render the template correctly if it is readon
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -253,7 +215,7 @@ exports[`InputTextComponent should render the template correctly if it is readon
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -276,42 +238,37 @@ exports[`InputTextComponent should render the template correctly if the button i
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
+        <!--container-->
+      </label>
+      <div
+        class="flex flex-row"
+      >
+        <input
+          autocomplete="tel"
+          class="input"
+          id="id"
+          placeholder="place"
+          type="text"
+        />
         <app-button>
           <button
             class="btn primary"
           />
         </app-button>
         <!--container-->
-      </span>
-      <div
-        class="space-x-3 flex items-center input"
-      >
-        <!--container-->
-        <input
-          autocomplete="tel"
-          class="grow"
-          id="id"
-          placeholder="place"
-          type="text"
-        />
-        <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -319,147 +276,7 @@ exports[`InputTextComponent should render the template correctly if the button i
           </span>
         </span>
         <span
-          class="text-right"
-        >
-          <span
-            rightassistivetext=""
-          >
-            
-          </span>
-        </span>
-      </div>
-    </div>
-    <!--container-->
-  </app-input-text>
-</div>
-`;
-
-exports[`InputTextComponent should render the template correctly if the leading icon is provided in the vm 1`] = `
-<div
-  id="root6"
-  ng-version="20.1.7"
->
-  <app-input-text
-    class="ng-untouched ng-pristine ng-valid"
-  >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
-      >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
-        <!--container-->
-      </span>
-      <div
-        class="space-x-3 flex items-center input"
-      >
-        <mat-icon
-          aria-hidden="true"
-          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-          data-mat-icon-type="font"
-          leading=""
-          role="img"
-        >
-          add
-        </mat-icon>
-        <!--container-->
-        <input
-          autocomplete="tel"
-          class="grow"
-          id="id"
-          placeholder="place"
-          type="text"
-        />
-        <!--container-->
-      </div>
-      <div
-        class="grid grid-cols-2 items-baseline helper-text"
-      >
-        <span>
-          <span
-            leftassistivetext=""
-          >
-            
-          </span>
-        </span>
-        <span
-          class="text-right"
-        >
-          <span
-            rightassistivetext=""
-          >
-            
-          </span>
-        </span>
-      </div>
-    </div>
-    <!--container-->
-  </app-input-text>
-</div>
-`;
-
-exports[`InputTextComponent should render the template correctly if the trailing icon is provided in the vm 1`] = `
-<div
-  id="root7"
-  ng-version="20.1.7"
->
-  <app-input-text
-    class="ng-untouched ng-pristine ng-valid"
-  >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
-      >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
-        <!--container-->
-      </span>
-      <div
-        class="space-x-3 flex items-center input"
-      >
-        <!--container-->
-        <input
-          autocomplete="tel"
-          class="grow"
-          id="id"
-          placeholder="place"
-          type="text"
-        />
-        <mat-icon
-          aria-hidden="true"
-          class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
-          data-mat-icon-type="font"
-          role="img"
-          trailing=""
-        >
-          add
-        </mat-icon>
-        <!--container-->
-      </div>
-      <div
-        class="grid grid-cols-2 items-baseline helper-text"
-      >
-        <span>
-          <span
-            leftassistivetext=""
-          >
-            
-          </span>
-        </span>
-        <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -482,27 +299,20 @@ exports[`InputTextComponent should render the template correctly when it has inv
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label invalid"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input is-invalid"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input invalid"
           id="id"
           placeholder="place"
           type="text"
@@ -510,9 +320,11 @@ exports[`InputTextComponent should render the template correctly when it has inv
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text invalid"
+        >
           <span
             leftassistivetext=""
           >
@@ -520,7 +332,7 @@ exports[`InputTextComponent should render the template correctly when it has inv
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right invalid"
         >
           <span
             rightassistivetext=""
@@ -543,27 +355,20 @@ exports[`InputTextComponent should render the template correctly when it has val
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input"
           id="id"
           placeholder="place"
           type="text"
@@ -571,9 +376,11 @@ exports[`InputTextComponent should render the template correctly when it has val
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -581,7 +388,7 @@ exports[`InputTextComponent should render the template correctly when it has val
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -598,33 +405,26 @@ exports[`InputTextComponent should render the template correctly when it has val
 
 exports[`InputTextComponent should render the template if the control is disabled 1`] = `
 <div
-  id="root10"
+  id="root8"
   ng-version="20.1.7"
 >
   <app-input-text
     class="ng-untouched ng-pristine"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input disabled"
           disabled=""
           id="id"
           placeholder="place"
@@ -633,9 +433,11 @@ exports[`InputTextComponent should render the template if the control is disable
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -643,7 +445,7 @@ exports[`InputTextComponent should render the template if the control is disable
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
@@ -660,33 +462,26 @@ exports[`InputTextComponent should render the template if the control is disable
 
 exports[`InputTextComponent should render the template if the control is enabled 1`] = `
 <div
-  id="root9"
+  id="root7"
   ng-version="20.1.7"
 >
   <app-input-text
     class="ng-untouched ng-pristine ng-valid"
   >
-    <div
-      class="my-2"
-    >
-      <span
-        class="flex flex-row justify-between items-end label-text"
+    <div>
+      <label
+        class="label"
+        for="id"
       >
-        <label
-          for="id"
-        >
-           lab 
-          <!--container-->
-        </label>
+         lab 
         <!--container-->
-      </span>
+      </label>
       <div
-        class="space-x-3 flex items-center input"
+        class="flex flex-row"
       >
-        <!--container-->
         <input
           autocomplete="tel"
-          class="grow"
+          class="input"
           id="id"
           placeholder="place"
           type="text"
@@ -694,9 +489,11 @@ exports[`InputTextComponent should render the template if the control is enabled
         <!--container-->
       </div>
       <div
-        class="grid grid-cols-2 items-baseline helper-text"
+        class="grid grid-cols-2"
       >
-        <span>
+        <span
+          class="helper-text"
+        >
           <span
             leftassistivetext=""
           >
@@ -704,7 +501,7 @@ exports[`InputTextComponent should render the template if the control is enabled
           </span>
         </span>
         <span
-          class="text-right"
+          class="helper-text text-right"
         >
           <span
             rightassistivetext=""
