@@ -1,148 +1,113 @@
-import { StatusVM } from '@components/status/status.model';
-import { OrderStatus as OrderStatusFromService } from '@services/order/order.service.model';
-import { SectionCardVM } from '@components/section-card/section-card.model';
-import { WithTitle } from '@interfaces/with-title.interface';
-import { WithTextNode } from '@interfaces/with-text-node.interface';
-import { ConfirmationDialogVM } from '@components/confirmation-dialog/confirmation-dialog.model';
-import { WithVisibility } from '@interfaces/with-visibility.interface';
-import { WithDisabled } from '@interfaces/with-disabled.interface';
 import { WithLink } from '@interfaces/with-link.interface';
-import { AvatarXVM } from '@components/avatar/avatar.model';
-import { Value } from '@interfaces/with-value';
-
-export type OrderStatus = OrderStatusFromService;
+import { ButtonXVM } from '@components/button/button.model';
+import { WithRouterLink } from '@interfaces/with-router-link.interface';
+import { FrameVM } from '@components/frame/frame.model';
+import { InputTextXVM } from '@components/input-text/input-text.component';
+import { AvatarVM } from '@components/avatar/avatar.model';
+import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
+import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
+import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
+import { CloseOrderDialogVM } from './components/close-order-dialog/close-order-dialog.model';
+import { KeyValueXVM } from '@interfaces/key-value.interface';
+import { ChatBubbleType } from '@components/chat-bubble/chat-bubble.component';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
-export interface User {
+interface User {
     role: Role;
     name: string;
     photoUrl: string | null;
 }
+
 export interface Message {
     sender: User;
     sendingDate: Date;
     message: string;
 }
-export interface MessageItemXVM
-    extends Pick<Message, 'message' | 'sendingDate'> {
-    senderName: string;
-    roleTextKey: string;
-    senderValueKey: string;
-    sendingDateValueKey: string;
-    avatarXVM: AvatarXVM;
+
+interface ActionsFrameXVM extends FrameVM {
+    completionTemplateButtonXVM: ButtonXVM<'withText'> & WithLink;
+    closeOrderButtonXVM: ButtonXVM<'withText'>;
+    closeOrderDialogVM: CloseOrderDialogVM;
 }
 
-interface MessageItemListXVM {
-    messageItemXVMs: MessageItemXVM[];
+interface ChatFrameXVM extends FrameVM {
+    messageXVMs: MessageXVM[];
+    readonlyMessageControl?: boolean;
+    messageInputTextXVM: InputTextXVM;
+    submitMessageButtonXVM: ButtonXVM<'withIcon'>;
 }
 
-export interface MessagesSectionCardXVM extends SectionCardVM {
-    type: 'messages';
-    messageItemListXVM: MessageItemListXVM;
-    buttonTextKey: string;
+interface MessageXVM {
+    dateTime: Date;
+    dateTimeValueKey: string;
+    name: string;
+    role: Role;
+    nameXRoleValueKey: string;
+    avatarVM: AvatarVM;
+    message: string;
+    type: ChatBubbleType;
 }
 
-interface InfoItemXVM {
-    labelKey: string;
-    value: Value;
+export type MissionStatus = 'scheduled' | 'preparing' | 'completed';
+
+interface MissionCardFooterXVM {
+    buttonXVM: ButtonXVM<'withText'> & WithRouterLink;
+}
+interface MissionCardBodyXVM extends Required<Pick<CardBodyXVM, 'titleKey'>> {
+    status: MissionStatus;
+    keyValueXVMs: KeyValueXVM[];
+    title: string;
+}
+interface MissionCardXVM {
+    gmpMapXVM: GmpMapXVM;
+    cardBodyXVM: MissionCardBodyXVM;
+    cardFooterXVM: MissionCardFooterXVM;
 }
 
-interface InfoListXVM {
-    infoItemXVMs: InfoItemXVM[];
+interface MissionsFrameXVM extends FrameVM {
+    missionCardXVMs: MissionCardXVM[];
 }
 
-interface InfoPanelXVM extends WithTitle {
-    infoListXVM: InfoListXVM;
+interface GmpMapXVM {
+    bounds: google.maps.LatLngBounds | null;
+    polygon: Polygon;
+    entryPoint: AdvancedMarker;
 }
 
-export interface OrderDetailsSectionCardXVM extends SectionCardVM {
-    type: 'orderDetails';
-    infoPanelXVMs: InfoPanelXVM[];
+interface HeaderXVM {
+    orderId: string;
+    titleKey: string;
+    addNewMissionsButtonXVM: ButtonXVM<'withText'> & WithRouterLink;
+    addNewMissionEnabled: boolean;
+    summaries: KeyValueXVM[];
 }
 
-interface CompletionTemplateButtonXVM extends WithTextNode, WithLink {}
-
-interface CloseOrderButtonXVM extends WithTextNode, WithDisabled {
-    confirmationDialogVM: ConfirmationDialogVM;
-}
-export interface OrderActionsSectionCardXVM extends SectionCardVM {
-    type: 'orderActions';
-    completionTemplateButtonXVM: CompletionTemplateButtonXVM;
-    closeOrderButtonXVM: CloseOrderButtonXVM;
-}
-
-interface StatusXVM extends StatusVM {
-    statusTextKey: string;
-}
-
-interface SummaryXVM {
-    textKey: string;
-    value: Value;
-}
-
-interface SummaryListXVM {
-    summaryXVMs: SummaryXVM[];
-}
-
-interface AddMissionButtonXVM extends WithVisibility, WithTextNode {}
-export interface HeaderXVM {
-    id: string;
-    idTitleKey: string;
-    statusXVM: StatusXVM;
-    summaryListXVM: SummaryListXVM;
-    addMissionButtonXVM: AddMissionButtonXVM;
-}
-type SectionCardXVM =
-    | OrderDetailsSectionCardXVM
-    | OrderActionsSectionCardXVM
-    | MessagesSectionCardXVM;
+export type OrderStatus = 'active' | 'in-progress' | 'done' | 'new' | 'closed';
 
 export interface OrderDetailsPageVM {
+    user: User | null;
+    status: OrderStatus;
     headerXVM: HeaderXVM;
-    sectionCardXVMs: SectionCardXVM[];
+    actionsFrameXVM: ActionsFrameXVM;
+    chatFrameXVM: ChatFrameXVM;
+    missionsFrameXVM: MissionsFrameXVM;
+    overviewFrameXVM: OverviewFrameXVM;
+    detailsFrameXVM: DetailsFrameXVM;
 }
 
-export interface OrderDetailsPageConfig {
-    headerConfig: {
-        idTitleKey: string;
-        clientTextKey: string;
-        createdDateTextKey: string;
-        createdDateValueKey: string;
-        totalAreaTextKey: string;
-        totalAreaValueKey: string;
-        addMissionButtonXVM: AddMissionButtonXVM;
-    };
-    sectionCardConfigs: {
-        orderDetailsSectionCardConfig: {
-            type: 'orderDetails';
-            titleKey: string;
-            infoPanelConfig: {
-                clientInfoPanel: {
-                    titleKey: string;
-                    addressLabelKey: string;
-                    contactLabelKey: string;
-                    emailLabelKey: string;
-                    phoneLabelKey: string;
-                };
-                summaryInfoPanel: {
-                    titleKey: string;
-                    averageDoseLabelKey: string;
-                    averageDoseValueKey: string;
-                    orderValueLabelKey: string;
-                    orderValueValueKey: string;
-                    totalSupplyLabelKey: string;
-                    totalSupplyValueKey: string;
-                    treatmentLabelKey: string;
-                };
-            };
-        };
-        messagesSectionCardConfig: {
-            titleKey: string;
-            buttonTextKey: string;
-            dateValueKey: string;
-            senderValueKey: string;
-        };
-        orderActionsSectionCardConfig: OrderActionsSectionCardXVM;
-    };
+interface DetailsFrameXVM extends FrameVM {
+    clientTitleKey: string;
+    detailsTitleKey: string;
+    clientSummaries: KeyValueXVM[];
+    detailsSummaries: KeyValueXVM[];
+}
+
+interface OverviewFrameXVM extends FrameVM {
+    gmpMapXVM: OverviewGmpMapXVM;
+    summaries: KeyValueXVM[];
+}
+interface OverviewGmpMapXVM {
+    bounds: google.maps.LatLngBounds | null;
+    missions: Polygon[];
 }

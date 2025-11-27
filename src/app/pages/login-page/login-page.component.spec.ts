@@ -1,13 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+    ComponentFixture,
+    DeferBlockBehavior,
+    DeferBlockState,
+    TestBed,
+} from '@angular/core/testing';
 import { LoginPageComponent } from './login-page.component';
-import { provideMockStore } from '@ngrx/store/testing';
 import {
     provideLoginPageMockService,
     updateGetVMSignal,
 } from './login-page.service.mock';
-import { enLoginPageMock, loginPageVMMock } from './login-page.mock';
+import {
+    enMock,
+    mockLoginPageVM,
+    mockLoginPageVMWithButtonText,
+    mockLoginPageVMWithErrorMessage,
+    mockLoginPageVMWithoutButtonText,
+    mockLoginPageVMWithoutErrorMessage,
+} from './login-page.mock';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { selectAuthenticationError } from 'src/app/stores/auth/auth.selector';
 
 describe('LoginPageComponent', () => {
     let fixture: ComponentFixture<LoginPageComponent>;
@@ -19,90 +29,221 @@ describe('LoginPageComponent', () => {
             imports: [
                 LoginPageComponent,
                 getTranslocoModule({
-                    langs: { en: enLoginPageMock },
+                    langs: { en: enMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',
                     },
                 }),
             ],
-            providers: [
-                provideLoginPageMockService(),
-                provideMockStore({
-                    selectors: [
-                        { selector: selectAuthenticationError, value: null },
-                    ],
-                }),
-            ],
+            providers: [provideLoginPageMockService()],
+            deferBlockBehavior: DeferBlockBehavior.Manual,
         }).compileComponents();
 
-        updateGetVMSignal(undefined);
         fixture = TestBed.createComponent(LoginPageComponent);
         component = fixture.componentInstance;
         compiled = fixture.debugElement.nativeElement;
     });
 
-    //Snapshot test
+    // Snapshot testing
     it('should not render the template when there is no VM provided', () => {
-        //Arrange
+        // Arrange
+        updateGetVMSignal(undefined);
 
-        //Act
+        // Act
         fixture.detectChanges();
 
-        //Assert
+        // Assert
         expect(compiled).toMatchSnapshot();
     });
 
-    //Snapshot test
+    // Snapshot testing
     it('should render the template when there is a VM provided', () => {
-        //Arrange
-        updateGetVMSignal(loginPageVMMock);
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
 
-        //Act
+        // Act
         fixture.detectChanges();
 
-        //Assert
+        // Assert
         expect(compiled).toMatchSnapshot();
     });
 
-    it('should initialize form controls with empty values', () => {
-        //Arrange
-        //There is no need to arrange
+    // Snapshot testing
+    it('should render template correctly with the defer block on immediate', async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
 
-        //Act
-        //There is no need to act
-
-        //Assert
-        expect(component.loginForm.controls.email.value).toBe('');
-        expect(component.loginForm.controls.password.value).toBe('');
-    });
-
-    it('should disable the submit button if the loginForm is invalid', () => {
-        //Arrange
-        updateGetVMSignal(loginPageVMMock);
-
-        //Act
-        component.loginForm.setValue({ email: '', password: '' });
+        // Act
         fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
 
-        //Assert
-        const button = fixture.nativeElement.querySelector('button');
-        expect(button.disabled).toBe(true);
+        // Assert
+        expect(compiled).toMatchSnapshot();
     });
 
-    it('should enable the submit button if the loginForm is valid', () => {
-        //Arrange
-        updateGetVMSignal(loginPageVMMock);
+    // Snapshot testing
+    it('should render the template correctly if the form is invalid with the defer block on immediate', async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
+        component.formGroup.reset();
 
-        //Act
-        component.loginForm.setValue({
-            email: 'test@freemail.hu',
+        // Act
+        fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the template correctly if the form is valid with the defer block on immediate', async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
+        component.formGroup.setValue({
+            email: 'test@gmail.com',
             password: 'password',
         });
-        fixture.detectChanges();
-        const button = fixture.nativeElement.querySelector('button');
 
-        //Assert
-        expect(button.disabled).toBe(false);
+        // Act
+        fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the template correctly if the form is valid with the defer block on immediate', async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
+        component.formGroup.setValue({
+            email: 'test@gmail.com',
+            password: 'password',
+        });
+
+        // Act
+        fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the template correctly if the form is valid with the defer block on immediate', async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
+        component.formGroup.setValue({
+            email: 'test@gmail.com',
+            password: 'password',
+        });
+
+        // Act
+        fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the template correctly if the button has text in defer block on immediate', async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVMWithButtonText);
+
+        // Act
+        fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+    // Snapshot testing
+    it("should render the template correctly if the button doesn't have text in defer block on immediate", async () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVMWithoutButtonText);
+
+        // Act
+        fixture.detectChanges();
+        await (
+            await fixture.getDeferBlocks()
+        )[0].render(DeferBlockState.Complete);
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the required assistive text inside the email input if it is dirty and has error', () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
+        component.formGroup.controls.email.markAsDirty();
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the required assistive text inside the password input if it is dirty and has error', () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVM);
+        component.formGroup.controls.password.markAsDirty();
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should not render the error message if there is no error provided', () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVMWithoutErrorMessage);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Snapshot testing
+    it('should render the error message if an error is provided', () => {
+        // Arrange
+        updateGetVMSignal(mockLoginPageVMWithErrorMessage);
+
+        // Act
+        fixture.detectChanges();
+
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    // Unit testing
+    it('should initialize the form with empty values', () => {
+        // There is no need to arrange
+
+        // There is no need to act
+
+        // Assert
+        expect(component.formGroup.controls.email.value).toBe('');
+        expect(component.formGroup.controls.password.value).toBe('');
     });
 });

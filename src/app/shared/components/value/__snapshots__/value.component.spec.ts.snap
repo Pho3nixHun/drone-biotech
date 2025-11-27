@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ValueComponent should render the template correctly if the type is withKey 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <!--container-->
+    
+  <!--container-->
+</div>
+`;
+
+exports[`ValueComponent should render the template correctly if the type is withoutKey 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+   1 
+  <!--container-->
+  <!--container-->
+</div>
+`;

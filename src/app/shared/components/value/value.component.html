@@ -1,0 +1,9 @@
+@let vM = vm();
+@switch (vM.type) {
+    @case ('withoutKey') {
+        {{ vM.value }}
+    }
+    @case ('withKey') {
+        {{ vM.key | transloco: vM.params }}
+    }
+}

@@ -1,0 +1,27 @@
+/* stylelint-disable media-feature-range-notation */
+@layer components {
+    .avatar {
+        --text: var(--text-inverse);
+
+        width: var(--size-width);
+        height: var(--size-height);
+        color: var(--text);
+
+        @apply inline-flex items-center rounded-full justify-center font-bold;
+
+        img {
+            @apply w-full h-full object-cover rounded-full
+        }
+
+
+        @media (max-width: 40rem) {
+            width: var(--component-size-sm);
+            height: var(--component-size-sm);
+        }
+
+        @media (min-width: 40rem) {
+            width: var(--component-size-md);
+            height: var(--component-size-md);
+        }
+    }
+}

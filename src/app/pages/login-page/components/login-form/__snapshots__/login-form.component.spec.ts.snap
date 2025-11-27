@@ -1,13 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LoginFormComponent should project the contents, render the template correctly when there is a VM provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-login-form
-    ng-reflect-vm="[object Object]"
-  >
+  <app-login-form>
     <div
       class="flex flex-col md:flex-row-reverse h-auto md:h-[75vh] w-full max-w-4xl md:mx-0 bg-white rounded-2xl shadow-md overflow-hidden"
     >

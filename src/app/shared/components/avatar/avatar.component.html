@@ -1,5 +1,27 @@
-<div
-    class="md:w-12 md:h-12 w-8 h-8 rounded-full flex justify-center items-center relative"
->
-    <ng-content />
-</div>
+@let vM = vm();
+
+@switch (vM.type) {
+    @case ('withInitials') {
+        @let colors =
+            [
+                'bg-purple-200',
+                'bg-red-200',
+                'bg-green-200',
+                'bg-blue-200',
+                'bg-yellow-200',
+            ];
+        <div
+            class="avatar"
+            [ngClass]="
+                colors[mapInitialsToRemainder(vM.initials, colors.length)]
+            "
+        >
+            <span>{{ vM.initials }}</span>
+        </div>
+    }
+    @case ('withImage') {
+        <div class="avatar">
+            <img [src]="vM.imageSrc" [alt]="vM.altTextKey | transloco" />
+        </div>
+    }
+}

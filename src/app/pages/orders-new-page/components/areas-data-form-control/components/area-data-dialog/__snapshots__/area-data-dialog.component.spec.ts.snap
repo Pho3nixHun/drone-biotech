@@ -1,20 +1,3069 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`AreaDataDialogComponent when the vm is correct without areaData should render the content if the correct vm is provided 1`] = `
+exports[`AreaDataDialogComponent should be closed 1`] = `
 <div
-  id="root2"
-  ng-version="19.2.9"
+  id="root0"
+  ng-version="20.1.7"
 >
-  <!--container-->
-  <!--container-->
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+  >
+    <!--container-->
+  </dialog>
 </div>
 `;
 
-exports[`AreaDataDialogComponent when the vm is not correct should not render the content 1`] = `
+exports[`AreaDataDialogComponent should disable confirm button if form invalid 1`] = `
 <div
-  id="root0"
-  ng-version="19.2.9"
+  id="root6"
+  ng-version="20.1.7"
 >
-  <!--container-->
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-pristine ng-invalid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
+                              >
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] = `
+<div
+  id="root7"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-pristine ng-valid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-valid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-valid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <!--container-->
+                              <app-button>
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`AreaDataDialogComponent should render the max length error assistive text for mission name 1`] = `
+<div
+  id="root2"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-pristine ng-invalid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input invalid"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text invalid"
+                  >
+                    <span
+                      leftassistivetext=""
+                    >
+                      missionNameMaxCharactersAllowedAssistiveText
+                    </span>
+                    <!--container-->
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right invalid"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
+                              >
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`AreaDataDialogComponent should render the min error assistive text for dose per hq 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-dirty ng-invalid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
+                              >
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-dirty ng-invalid"
+            >
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input invalid"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text invalid"
+                  >
+                    <span
+                      leftassistivetext=""
+                    >
+                      dosePerHqMinErrorAssistiveText
+                    </span>
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right invalid"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`AreaDataDialogComponent should render the required error assistive text for application date 1`] = `
+<div
+  id="root5"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-dirty ng-invalid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
+                              >
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-dirty ng-invalid"
+            >
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input invalid"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text invalid"
+                  >
+                    <span
+                      leftassistivetext=""
+                    >
+                      requiredAssistiveText
+                    </span>
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right invalid"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`AreaDataDialogComponent should render the required error assistive text for mission name 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-dirty ng-invalid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-dirty ng-invalid"
+            >
+              <div>
+                <label
+                  class="label invalid"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input invalid"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text invalid"
+                  >
+                    <!--container-->
+                    <span
+                      leftassistivetext=""
+                    >
+                      requiredAssistiveText
+                    </span>
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right invalid"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
+                              >
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;
+
+exports[`AreaDataDialogComponent should render the template correctly if it is opened and set the vm after calling the open function 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <dialog
+    class="lg:w-3/4 w-full h-full"
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="flex flex-row flex-wrap gap-3 justify-between"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <form
+            class="ng-untouched ng-pristine ng-invalid"
+            novalidate=""
+          >
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   mission 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="email"
+                    class="input"
+                    id="id"
+                    placeholder="missionPlace"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  >
+                    <span
+                      rightassistivetext=""
+                    >
+                      missionNameMaxCharactersCounterAssistiveText
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-advanced-marker-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-polygon-form-control
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <app-tabs>
+              <div
+                class="flex gap-4 flex-row"
+              >
+                <div>
+                  <app-tabs-nav>
+                    <nav
+                      class="tabs tabs-bordered w-full tabs-vertical"
+                      role="tablist"
+                    >
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 active w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#coords"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           add
+                        </button>
+                      </app-tab-button>
+                      <app-tab-button
+                        class="w-full"
+                      >
+                        <button
+                          class="h-10 flex flex-row items-center gap-x-1 w-32 text-left border-r-2 border-primary/20 hover:border-primary/50 active-tab:border-primary active-tab:text-primary hover:text-primary/70 text-primary/40"
+                          data-tab="#map"
+                          role="tab"
+                        >
+                          <mat-icon
+                            aria-hidden="true"
+                            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                            data-mat-icon-type="font"
+                            role="img"
+                          >
+                            
+                          </mat-icon>
+                           
+                        </button>
+                      </app-tab-button>
+                    </nav>
+                  </app-tabs-nav>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <app-tab-panel>
+                    <div
+                      id="coords"
+                      role="tabpanel"
+                    >
+                      <app-gmp-map
+                        appgmpinfowindow=""
+                        appgmpplaceautocomplete=""
+                        appgmppolygondrawing=""
+                        class="h-96 block"
+                      >
+                        <div
+                          style="height: 100%;"
+                        >
+                          <app-stack
+                            class="ml-2.5 mb-10"
+                            orientation="vertical"
+                          >
+                            <div
+                              class="stack vertical gap-none"
+                            >
+                              <!--container-->
+                              <app-button
+                                class="*:rounded-t-none"
+                              >
+                                <button
+                                  class="btn primary"
+                                >
+                                  <mat-icon
+                                    aria-hidden="true"
+                                    class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                                    data-mat-icon-type="font"
+                                    role="img"
+                                  >
+                                    add
+                                  </mat-icon>
+                                </button>
+                              </app-button>
+                              <!--container-->
+                              <!--container-->
+                              <!--container-->
+                            </div>
+                          </app-stack>
+                        </div>
+                      </app-gmp-map>
+                    </div>
+                  </app-tab-panel>
+                  <app-tab-panel>
+                    <div
+                      class="hidden"
+                      id="map"
+                      role="tabpanel"
+                    >
+                      <app-input-textarea
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <textarea
+                              autocomplete="off"
+                              class="input min-h-40"
+                              id=""
+                              placeholder=""
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-textarea>
+                      <app-input-text
+                        class="ng-untouched ng-pristine ng-invalid"
+                      >
+                        <div>
+                          <label
+                            class="label"
+                            for=""
+                            hidden=""
+                          >
+                            <!--container-->
+                          </label>
+                          <div
+                            class="flex flex-row"
+                          >
+                            <input
+                              autocomplete="current-password"
+                              class="input"
+                              id=""
+                              placeholder=""
+                              type="datetime-local"
+                            />
+                          </div>
+                          <div
+                            class="grid grid-cols-2"
+                          >
+                            <span
+                              class="helper-text"
+                            >
+                              <!--container-->
+                            </span>
+                            <span
+                              class="helper-text text-right"
+                            />
+                          </div>
+                        </div>
+                        <!--container-->
+                      </app-input-text>
+                    </div>
+                  </app-tab-panel>
+                </div>
+              </div>
+            </app-tabs>
+            <app-input-number
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   dosePer 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="dosePerPlace"
+                    type="number"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-number>
+            <app-input-text
+              class="ng-untouched ng-pristine ng-invalid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   applicationDate 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <input
+                    autocomplete="off"
+                    class="input"
+                    id="id"
+                    placeholder="applicationDatePlace"
+                    type="datetime-local"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  >
+                    <!--container-->
+                  </span>
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-text>
+            <app-input-textarea
+              class="ng-untouched ng-pristine ng-valid"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="id"
+                >
+                   comment 
+                  <!--container-->
+                </label>
+                <div
+                  class="flex flex-row"
+                >
+                  <textarea
+                    autocomplete="off"
+                    class="input min-h-40"
+                    id="id"
+                    placeholder="commentPlace"
+                  />
+                </div>
+                <div
+                  class="grid grid-cols-2"
+                >
+                  <span
+                    class="helper-text"
+                  />
+                  <span
+                    class="helper-text text-right"
+                  />
+                </div>
+              </div>
+              <!--container-->
+            </app-input-textarea>
+          </form>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary disabled"
+                  disabled=""
+                >
+                   confirm 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   cancel 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
 </div>
 `;
