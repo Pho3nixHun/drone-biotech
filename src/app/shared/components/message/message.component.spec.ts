@@ -1,22 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, input } from '@angular/core';
-import { MessageComponent, MessageVM } from './message.component';
+import { Component } from '@angular/core';
+import { MessageComponent } from './message.component';
 import { AvatarComponent } from '@components/avatar/avatar.component';
+import { ChatBubbleComponent } from '@components/chat-bubble/chat-bubble.component';
 
 @Component({
-    imports: [MessageComponent, AvatarComponent],
+    imports: [MessageComponent, ChatBubbleComponent, AvatarComponent],
     template: `
-        <app-message [vm]="vm()"
+        <app-message
             ><app-avatar
                 [vm]="{ type: 'withInitials', initials: 'JB' }"
             ></app-avatar>
             <time>Time</time>
+            <span name>Jack</span>
+            <app-chat-bubble type="receiver"></app-chat-bubble>
+            <div>Should not be rendered</div>
         </app-message>
     `,
 })
-class TestHostComponent {
-    vm = input.required<MessageVM>();
-}
+class TestHostComponent {}
 
 describe('MessageComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
@@ -32,20 +34,8 @@ describe('MessageComponent', () => {
     });
 
     // Snapshot testing
-    it('should render the template correctly if the type is receiver', () => {
+    it('should render the template and project the content correctly', () => {
         // Arrange
-        fixture.componentRef.setInput('vm', mockMessageReceiver);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    it('should render the template correctly if the type is sender', () => {
-        // Arrange
-        fixture.componentRef.setInput('vm', mockMessageSender);
 
         // Act
         fixture.detectChanges();
@@ -54,13 +44,3 @@ describe('MessageComponent', () => {
         expect(compiled).toMatchSnapshot();
     });
 });
-
-const mockMessageReceiver: MessageVM = {
-    type: 'receiver',
-    message: 'receiver_message',
-};
-
-const mockMessageSender: MessageVM = {
-    type: 'sender',
-    message: 'sender_message',
-};

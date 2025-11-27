@@ -161,32 +161,58 @@
             </app-cluster>
         </app-frame>
 
+        <!-- Messages about an order -->
         @let chatFrameXVM = vM.chatFrameXVM;
         <app-frame [vm]="chatFrameXVM">
-            <app-stack orientation="vertical" gap="sm">
+            <!-- Messages stack start -->
+            <app-stack orientation="vertical" gap="md">
                 @for (messageXVM of chatFrameXVM.messageXVMs; track $index) {
-                    <app-message [vm]="messageXVM">
-                        <app-avatar
-                            class="chat-avatar"
-                            [vm]="messageXVM.avatarVM"
-                        />
-                        {{
-                            t(messageXVM.nameXRoleValueKey, {
-                                name: messageXVM.name,
-                                role: t(
-                                    mapRoleToTranslocoTextKey(messageXVM.role)
-                                ),
-                            })
-                        }}
-                        <time>{{
-                            t(messageXVM.dateTimeValueKey, {
-                                date: messageXVM.dateTime,
-                            })
-                        }}</time>
+                    <!-- Message item -->
+                    @let isSender = messageXVM.type === 'sender';
+                    <app-message
+                        class="max-w-5/6"
+                        [ngClass]="{
+                            'self-end': isSender,
+                        }"
+                    >
+                        @if (!isSender) {
+                            <app-avatar [vm]="messageXVM.avatarVM" />
+                        }
+                        @if (!isSender) {
+                            <span name>
+                                {{
+                                    t(messageXVM.nameXRoleValueKey, {
+                                        name: messageXVM.name,
+                                        role: t(
+                                            mapRoleToTranslocoTextKey(
+                                                messageXVM.role
+                                            )
+                                        ),
+                                    })
+                                }}
+                            </span>
+                        }
+                        <app-chat-bubble [type]="messageXVM.type">{{
+                            messageXVM.message
+                        }}</app-chat-bubble>
+                        <time
+                            class="block"
+                            [ngClass]="{
+                                'text-end': isSender,
+                            }"
+                            >{{
+                                t(messageXVM.dateTimeValueKey, {
+                                    date: messageXVM.dateTime,
+                                })
+                            }}</time
+                        >
                     </app-message>
+                    <!-- Message item end -->
                 }
             </app-stack>
+            <!-- Messages stack end -->
 
+            <!-- Message input field with button -->
             @if (!chatFrameXVM.readonlyMessageControl) {
                 @let disabled =
                     messageControl.disabled ||
@@ -213,6 +239,7 @@
                     </app-button>
                 </app-input-text>
             }
+            <!-- Message input end -->
         </app-frame>
 
         @let actionsFrameXVM = vM.actionsFrameXVM;

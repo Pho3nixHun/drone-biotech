@@ -5,11 +5,11 @@ import { WithTitle } from '@interfaces/with-title.interface';
 import { ButtonXVM } from '@components/button/button.model';
 import { WithLink } from '@interfaces/with-link.interface';
 import { InputTextXVM } from '@components/input-text/input-text.component';
-import { MessageVM } from '@components/message/message.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
 import { OfficeCancelDialogVM } from './components/office-cancel-dialog/office-cancel-dialog.model';
 import { CustomerCancelDialogVM } from './components/customer-cancel-dialog/customer-cancel-dialog.model';
 import { KeyValueXVM } from '@interfaces/key-value.interface';
+import { ChatBubbleType } from '@components/chat-bubble/chat-bubble.component';
 
 // Domain logic models
 
@@ -81,13 +81,15 @@ export interface MapOverviewFrameXVM extends FrameVM {
 }
 
 // UI representation of a chat/log item with role + avatar
-interface MessageXVM extends MessageVM {
+interface MessageXVM {
     dateTime: Date;
     dateTimeValueKey: string;
     name: string;
     role: UserRole;
     nameXRoleValueKey: string;
     avatarVM: AvatarVM;
+    message: string;
+    type: ChatBubbleType;
 }
 
 // Scrollable list of message items

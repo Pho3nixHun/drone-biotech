@@ -217,7 +217,7 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                     'MissionDetailsPage.logs.message.nameXRoleValue',
                 dateTime: new Date('2025-10-06T09:35:00'),
                 message:
-                    'Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.',
+                    'Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.Thanks for the update. I’ll be heading out to the field in 10 minutes for the morning check.',
                 avatarVM: {
                     type: 'withImage',
                     imageSrc: 'assets/farming.jpg',
@@ -250,7 +250,7 @@ export const missionDetailsPageVM: MissionDetailsPageVM = {
                     'MissionDetailsPage.logs.message.nameXRoleValue',
                 dateTime: new Date('2025-10-06T10:00:00'),
                 message:
-                    'Hi team, I just wanted to check on the status of my last order. Any updates?',
+                    'Hi team, I just wanted to check on the status of my last order. Any updates? Hi team, I just wanted to check on the status of my last order. Any updates? Hi team, I just wanted to check on the status of my last order. Any updates? Hi team, I just wanted to check on the status of my last order. Any updates?',
                 avatarVM: {
                     type: 'withImage',
                     imageSrc: 'assets/lepke.jpg',

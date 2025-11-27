@@ -673,7 +673,7 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
             {
                 type: 'receiver',
                 role: 'office',
-                name: 'Field Manager',
+                name: 'Field Manager Field Manager Field Manager Field Manager',
                 dateTimeValueKey: 'OrderDetailsPage.chat.dateTimeValue',
                 nameXRoleValueKey: 'OrderDetailsPage.chat.nameXRoleValue',
                 dateTime: new Date('2025-10-06T10:05:00'),

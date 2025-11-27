@@ -1,15 +1,15 @@
+/* stylelint-disable custom-property-pattern */
 /* stylelint-disable at-rule-no-unknown */
 /* stylelint-disable import-notation */
 /* stylelint-disable at-rule-empty-line-before */
 
 @import "tailwindcss";
-
+@import './app/shared/components/chat-bubble/chat-bubble.component.css';
+@import './app/shared/components/message/message.component.css';
+@import './app/shared/components/avatar/avatar.component.css';
 @import './app/shared/components/badge/badge.component.css';
-
 @import './app/shared/components/cluster/cluster.component.css';
-
 @import './app/shared/components/stack/stack.component.css';
-
 @import './app/shared/components/button/button.component.css';
 
 /* 
@@ -18,6 +18,7 @@ Primitive tokens (Tier-1):
 */
 :root {
     /* Spacing scale */
+    --space-0\.5: 2px;
     --space-1: 4px;
     --space-2: 8px;
     --space-3: 12px;
@@ -40,6 +41,14 @@ Semantic tokens (Tier-2):
     - Values with semantic meaning 
 */
 @theme {
+    /* Surface colors */
+    --surface-primary: var(--color-gray-50);
+    --surface-secondary: var(--color-gray-100);
+    --surface-tertiary: var(--color-gray-200);
+    --surface-elevated: var(--color-white);
+    --surface-brand: var(--color-blue-600);
+    --surface-brand-subtle: var(--color-blue-50);
+
     /* Text semantic colors */
     --text-primary: var(--color-gray-900);
     --text-secondary: var(--color-gray-700);
@@ -77,6 +86,7 @@ Semantic tokens (Tier-2):
     --state-error-subtle: var(--color-red-200);
 
     /* Layout gap semantic scales */
+    --layout-gap-2xs: var(--space-0\.5);
     --layout-gap-xs: var(--space-2);
     --layout-gap-sm: var(--space-4);
     --layout-gap-md: var(--space-6);
@@ -90,6 +100,10 @@ Semantic tokens (Tier-2):
     --component-gap-md: var(--space-4);
     --component-gap-lg: var(--space-6);
     --component-gap-xl: var(--space-8);
+
+    /* Component length semantic scales */
+    --component-size-sm: var(--space-8);
+    --component-size-md: var(--space-10);
 }
 
 html {

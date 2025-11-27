@@ -28,6 +28,7 @@ import {
 import { CustomerCancelDialogComponent } from './components/customer-cancel-dialog/customer-cancel-dialog.component';
 import { OfficeCancelDialogComponent } from './components/office-cancel-dialog/office-cancel-dialog.component';
 import { emptyStringValidator } from '@validators/empty-string.validator';
+import { ChatBubbleComponent } from '@components/chat-bubble/chat-bubble.component';
 
 @Component({
     selector: 'app-mission-details-page',
@@ -55,6 +56,7 @@ import { emptyStringValidator } from '@validators/empty-string.validator';
         NgTemplateOutlet,
         OfficeCancelDialogComponent,
         NgClass,
+        ChatBubbleComponent,
     ],
     templateUrl: './mission-details-page.component.html',
 })

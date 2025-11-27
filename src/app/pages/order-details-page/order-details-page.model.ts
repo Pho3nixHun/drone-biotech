@@ -2,7 +2,6 @@ import { WithLink } from '@interfaces/with-link.interface';
 import { ButtonXVM } from '@components/button/button.model';
 import { WithRouterLink } from '@interfaces/with-router-link.interface';
 import { FrameVM } from '@components/frame/frame.model';
-import { MessageVM } from '@components/message/message.component';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
 import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
@@ -10,6 +9,7 @@ import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.mod
 import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { CloseOrderDialogVM } from './components/close-order-dialog/close-order-dialog.model';
 import { KeyValueXVM } from '@interfaces/key-value.interface';
+import { ChatBubbleType } from '@components/chat-bubble/chat-bubble.component';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -38,13 +38,15 @@ interface ChatFrameXVM extends FrameVM {
     submitMessageButtonXVM: ButtonXVM<'withIcon'>;
 }
 
-interface MessageXVM extends MessageVM {
+interface MessageXVM {
     dateTime: Date;
     dateTimeValueKey: string;
     name: string;
     role: Role;
     nameXRoleValueKey: string;
     avatarVM: AvatarVM;
+    message: string;
+    type: ChatBubbleType;
 }
 
 export type MissionStatus = 'scheduled' | 'preparing' | 'completed';

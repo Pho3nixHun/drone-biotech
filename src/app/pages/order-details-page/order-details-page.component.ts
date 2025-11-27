@@ -33,6 +33,7 @@ import { StackComponent } from '@components/stack/stack.component';
 import { CloseOrderDialogDialogResponse } from './components/close-order-dialog/close-order-dialog.model';
 import { CloseOrderDialogComponent } from './components/close-order-dialog/close-order-dialog.component';
 import { ClusterComponent } from '@components/cluster/cluster.component';
+import { ChatBubbleComponent } from '@components/chat-bubble/chat-bubble.component';
 
 @Component({
     selector: 'app-order-details-page',
@@ -62,6 +63,7 @@ import { ClusterComponent } from '@components/cluster/cluster.component';
         NgTemplateOutlet,
         CloseOrderDialogComponent,
         ClusterComponent,
+        ChatBubbleComponent,
     ],
     templateUrl: './order-details-page.component.html',
 })

@@ -94,36 +94,63 @@
 
         <!-- Log frame, contains the messages, logs about the mission -->
         @let logFrameXVM = vm.logFrameXVM;
-        @let submitButtonXVM = logFrameXVM.submitButtonXVM;
-        @let submitButtonDisabled =
-            messageControl.disabled ||
-            messageControl.hasError('emptyString') ||
-            messageControl.hasError('required');
+
         <app-frame [vm]="logFrameXVM">
+            <!-- Messages stack start -->
             <app-stack orientation="vertical" gap="md">
                 @for (messageXVM of logFrameXVM.messageXVMs; track $index) {
-                    <app-message [vm]="messageXVM">
-                        <app-avatar
-                            class="chat-avatar"
-                            [vm]="messageXVM.avatarVM"
-                        />
-                        {{
-                            t(messageXVM.nameXRoleValueKey, {
-                                name: messageXVM.name,
-                                role: t(
-                                    mapRoleToTranslocoTextKey(messageXVM.role)
-                                ),
-                            })
-                        }}
-                        <time>{{
-                            t(messageXVM.dateTimeValueKey, {
-                                date: messageXVM.dateTime,
-                            })
-                        }}</time>
+                    <!-- Message item -->
+                    @let isSender = messageXVM.type === 'sender';
+                    <app-message
+                        class="max-w-5/6"
+                        [ngClass]="{
+                            'self-end': isSender,
+                        }"
+                    >
+                        @if (!isSender) {
+                            <app-avatar [vm]="messageXVM.avatarVM" />
+                        }
+                        @if (!isSender) {
+                            <span name>
+                                {{
+                                    t(messageXVM.nameXRoleValueKey, {
+                                        name: messageXVM.name,
+                                        role: t(
+                                            mapRoleToTranslocoTextKey(
+                                                messageXVM.role
+                                            )
+                                        ),
+                                    })
+                                }}
+                            </span>
+                        }
+                        <app-chat-bubble [type]="messageXVM.type">{{
+                            messageXVM.message
+                        }}</app-chat-bubble>
+                        <time
+                            class="block"
+                            [ngClass]="{
+                                'text-end': isSender,
+                            }"
+                            >{{
+                                t(messageXVM.dateTimeValueKey, {
+                                    date: messageXVM.dateTime,
+                                })
+                            }}</time
+                        >
                     </app-message>
+                    <!-- Message item end -->
                 }
             </app-stack>
+            <!-- Messages stack end -->
+
+            <!-- Message input field with button -->
             @if (!logFrameXVM.readonlyMessageControl) {
+                @let submitButtonDisabled =
+                    messageControl.disabled ||
+                    messageControl.hasError('emptyString') ||
+                    messageControl.hasError('required');
+
                 <app-input-text
                     [vm]="logFrameXVM.messageInputTextXVM"
                     [formControl]="messageControl"
@@ -133,17 +160,18 @@
                     }"
                 >
                     <app-button
-                        [vm]="submitButtonXVM"
+                        [vm]="logFrameXVM.submitButtonXVM"
                         [disabled]="submitButtonDisabled"
                         (click)="!submitButtonDisabled && sendMessage()"
                         class="*:rounded-l-none"
                     >
                         <mat-icon>
-                            {{ submitButtonXVM.icon }}
+                            {{ logFrameXVM.submitButtonXVM.icon }}
                         </mat-icon>
                     </app-button>
                 </app-input-text>
             }
+            <!-- Message input end -->
         </app-frame>
         <!-- Log frame end -->
     </app-page-layout>

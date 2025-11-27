@@ -5,16 +5,16 @@ exports[`AvatarComponent should render the template correctly with image 1`] = `
   id="root0"
   ng-version="20.1.7"
 >
+  <!--container-->
   <div
-    class="avatar size-10 *:rounded-full"
+    class="avatar"
   >
-    <!--container-->
     <img
       alt="imageAltText"
       src="image.jpg"
     />
-    <!--container-->
   </div>
+  <!--container-->
 </div>
 `;
 
@@ -24,15 +24,13 @@ exports[`AvatarComponent should render the template correctly with initials 1`] 
   ng-version="20.1.7"
 >
   <div
-    class="avatar size-10 *:rounded-full avatar-placeholder"
+    class="avatar bg-purple-200"
   >
-    <div
-      class="text-purple-500 bg-purple-200"
-    >
-       JB 
-    </div>
-    <!--container-->
-    <!--container-->
+    <span>
+      JB
+    </span>
   </div>
+  <!--container-->
+  <!--container-->
 </div>
 `;
