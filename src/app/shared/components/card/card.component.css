@@ -1,0 +1,9 @@
+@layer components {
+    .card {
+        @apply flex flex-col rounded-md shadow-md hover:shadow-xl transition;
+
+        [media] {
+            @apply overflow-hidden rounded-md;
+        }
+    }
+}

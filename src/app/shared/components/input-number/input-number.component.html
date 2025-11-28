@@ -1,0 +1,38 @@
+<div *transloco="let t">
+    @let vM = vm();
+    <label
+        [for]="vM.id"
+        [hidden]="!vM.labelKey"
+        class="label"
+        [ngClass]="{ invalid: invalid() }"
+    >
+        @if (vM.labelKey; as labelKey) {
+            {{ t(labelKey) }}
+        }
+    </label>
+    <div class="flex flex-row">
+        <input
+            class="input"
+            type="number"
+            [ngClass]="{ invalid: invalid(), disabled: disabled() }"
+            [id]="vM.id"
+            [value]="value()"
+            [disabled]="disabled()"
+            [placeholder]="t(vM.placeholderKey)"
+            (blur)="markAsTouched()"
+            (input)="changed($event)"
+            [readonly]="vM.readonly"
+            autocomplete="off"
+        />
+        <ng-content select="app-button" />
+    </div>
+
+    <div class="grid grid-cols-2">
+        <span class="helper-text" [ngClass]="{ invalid: invalid() }">
+            <ng-content select="[leftAssistiveText]" />
+        </span>
+        <span class="helper-text text-right" [ngClass]="{ invalid: invalid() }">
+            <ng-content select="[rightAssistiveText]" />
+        </span>
+    </div>
+</div>

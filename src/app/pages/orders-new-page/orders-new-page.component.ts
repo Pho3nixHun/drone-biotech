@@ -1,13 +1,14 @@
-import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FrameComponent } from '@components/frame/frame.component';
 import { OrdersNewPageService } from './orders-new-page.service';
-import { LocationStoreModule } from 'src/app/stores/location/location.module';
 import { TranslocoModule } from '@jsverse/transloco';
 import { AreasDataFormControlComponent } from './components/areas-data-form-control/areas-data-form-control.component';
-import { AreaData } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { ButtonComponent } from '@components/button/button.component';
+import { InputTextComponent } from '@components/input-text/input-text.component';
+import { minArrayLengthValidator } from '@validators/min-array-length.validator';
+import { Mission } from './components/areas-data-form-control/components/area-data-dialog/area-data-dialog.model';
 
 /**
  * OrdersNewPageComponent
@@ -29,14 +30,15 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
 @Component({
     selector: 'app-orders-new-page',
     imports: [
-        NgClass,
         ReactiveFormsModule,
         TranslocoModule,
-        LocationStoreModule,
         FrameComponent,
         AreasDataFormControlComponent,
         PageLayoutComponent,
+        ButtonComponent,
+        InputTextComponent,
     ],
+
     templateUrl: './orders-new-page.component.html',
 })
 export class OrdersNewPageComponent {
@@ -44,7 +46,7 @@ export class OrdersNewPageComponent {
     private readonly fb = inject(FormBuilder);
     protected readonly vm = this.ordersService.getVM();
 
-    public areasDataFormGroup = this.fb.group({
+    protected readonly formGroup = this.fb.group({
         internalOrderNumber: this.fb.control<string>('', Validators.required),
         contact: this.fb.group({
             name: this.fb.control<string>('', Validators.required),
@@ -55,12 +57,15 @@ export class OrdersNewPageComponent {
             ]),
         }),
         endCustomer: this.fb.control<string>('', Validators.required),
-        areasData: this.fb.control<AreaData[]>([], [Validators.required]),
+        missions: this.fb.control<Mission[]>(
+            [],
+            [Validators.required, minArrayLengthValidator(1)]
+        ),
     });
 
     protected submitForm() {
-        if (this.areasDataFormGroup.valid) {
-            this.areasDataFormGroup.reset();
+        if (this.formGroup.valid) {
+            this.formGroup.reset();
         }
     }
 }

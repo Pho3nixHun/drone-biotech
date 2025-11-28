@@ -1,109 +1,116 @@
-import { OrderService } from '@services/order/order.service';
-import { ORDER_DETAILS_PAGE_CONFIG } from './order-details-page.config';
-import { inject, Injectable } from '@angular/core';
-import {
-    combineLatest,
-    concat,
-    map,
-    merge,
-    Observable,
-    of,
-    scan,
-    Subject,
-} from 'rxjs';
-import {
-    Message,
-    OrderDetailsPageVM,
-    OrderStatus,
-} from './order-details-page.model';
-import {
-    mapHeaderXVM,
-    mapOrderDetailsSectionCardXVM,
-    mapOrderActionsSectionCardXVM,
-    mapMessagesSectionCardXVM,
-} from './order-details-page.mapper';
+import { computed, inject, Injectable, signal } from '@angular/core';
+import { orderDetailsPageVM } from './order-details-page.mock';
+import { Message, OrderDetailsPageVM } from './order-details-page.model';
+import { AuthStore } from '@stores/auth/auth.store';
 
 @Injectable({
     providedIn: 'root',
 })
 export class OrderDetailsPageService {
-    private readonly config = inject(ORDER_DETAILS_PAGE_CONFIG);
-    private readonly orderService = inject(OrderService);
+    private readonly store = inject(AuthStore);
+    private readonly user = this.store.user;
 
-    private readonly order$ = this.orderService.getOrder();
-    private readonly statusSubject = new Subject<OrderStatus>();
-    private readonly messagesSubject = new Subject<Message>();
+    private readonly vm = signal(orderDetailsPageVM);
 
-    private readonly status$ = concat(
-        this.order$.pipe(map((order) => order.status)),
-        this.statusSubject
+    private readonly computedVM = computed<OrderDetailsPageVM | undefined>(
+        () => {
+            const vm = this.vm();
+            const user = this.user();
+            if (!user) return undefined;
+
+            const {
+                headerXVM,
+                actionsFrameXVM,
+                status,
+                overviewFrameXVM,
+                chatFrameXVM,
+                missionsFrameXVM,
+            } = vm;
+            const { closeOrderButtonXVM, completionTemplateButtonXVM } =
+                actionsFrameXVM;
+
+            const addNewMissionEnabled =
+                status !== 'closed' &&
+                status !== 'done' &&
+                ((user.role === 'customer' && status === 'new') ||
+                    user.role === 'office');
+
+            const computedVM: OrderDetailsPageVM = {
+                ...vm,
+                headerXVM: {
+                    ...headerXVM,
+                    addNewMissionEnabled,
+                },
+                actionsFrameXVM: {
+                    ...actionsFrameXVM,
+                    closeOrderButtonXVM: {
+                        ...closeOrderButtonXVM,
+                        hidden: status === 'closed',
+                    },
+                    completionTemplateButtonXVM: {
+                        ...completionTemplateButtonXVM,
+                        hidden: !['done', 'closed'].includes(status),
+                    },
+                },
+                user: {
+                    name: user.displayName,
+                    photoUrl: user.photoURL,
+                    role: user.role,
+                },
+                chatFrameXVM: {
+                    ...chatFrameXVM,
+                    readonlyMessageControl: status === 'closed',
+                },
+                missionsFrameXVM: {
+                    ...missionsFrameXVM,
+
+                    missionCardXVMs: missionsFrameXVM.missionCardXVMs.map(
+                        (mission) => {
+                            const { entryPoint, polygon } = mission.gmpMapXVM;
+
+                            return {
+                                ...mission,
+                                gmpMapXVM: {
+                                    ...mission.gmpMapXVM,
+                                    bounds: polygon.coordinates.reduce(
+                                        (acc, coords) => acc.extend(coords),
+                                        new google.maps.LatLngBounds(
+                                            entryPoint.coordinates
+                                        )
+                                    ),
+                                },
+                            };
+                        }
+                    ),
+                },
+                overviewFrameXVM: {
+                    ...overviewFrameXVM,
+                    gmpMapXVM: {
+                        ...overviewFrameXVM.gmpMapXVM,
+                        bounds: overviewFrameXVM.gmpMapXVM.missions.reduce(
+                            (acc, polygon) => {
+                                for (const c of polygon.coordinates)
+                                    acc.extend(c);
+                                return acc;
+                            },
+                            new google.maps.LatLngBounds()
+                        ),
+                    },
+                },
+            };
+            return computedVM;
+        }
     );
-
-    private readonly addMissionButtonVisibility$ = this.status$.pipe(
-        map((status) => status !== 'completed')
-    );
-
-    private readonly closeOrderButtonIsDisabled$ = this.status$.pipe(
-        map((status) => status === 'completed')
-    );
-
-    private readonly messages$: Observable<Message[]> = merge(
-        this.order$.pipe(
-            map((order) =>
-                order.messages.map((message) => ({
-                    ...message,
-                    senderName: message.sender,
-                }))
-            )
-        ),
-        this.messagesSubject.pipe(map((message) => [message]))
-    ).pipe(scan((acc, curr) => [...acc, ...curr]));
 
     public getVM() {
-        return this.vm$;
+        return this.computedVM;
     }
 
-    public closeOrder() {
-        this.statusSubject.next('completed');
+    closeOrder() {
+        // TODO: implement closing order
     }
-
-    public sendMessage(message: Message) {
-        this.messagesSubject.next(message);
+    sendMessage(message: Message) {
+        // TODO: implement sending message
+        void message;
     }
-
-    private readonly vm$: Observable<OrderDetailsPageVM> = combineLatest([
-        this.order$,
-        this.status$,
-        this.addMissionButtonVisibility$,
-        this.closeOrderButtonIsDisabled$,
-        this.messages$,
-        of(this.config),
-    ]).pipe(
-        map(
-            ([
-                order,
-                status,
-                addMissionButtonVisibility,
-                closeOrderButtonIsDisabled,
-                messages,
-                config,
-            ]) => ({
-                ...config,
-                headerXVM: mapHeaderXVM(
-                    config,
-                    order,
-                    status,
-                    addMissionButtonVisibility
-                ),
-                sectionCardXVMs: [
-                    mapOrderDetailsSectionCardXVM(config, order),
-                    mapOrderActionsSectionCardXVM(
-                        config,
-                        closeOrderButtonIsDisabled
-                    ),
-                    mapMessagesSectionCardXVM(config, messages),
-                ],
-            })
-        )
-    );
 }
