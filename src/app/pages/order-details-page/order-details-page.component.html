@@ -88,75 +88,19 @@
             </app-cluster>
         </app-frame>
 
+        <!-- A frame to visualize a list of mission cards -->
         <app-frame [vm]="vM.missionsFrameXVM">
             <app-cluster gapX="md" gapY="md">
                 @for (
-                    cardXVM of vM.missionsFrameXVM.missionCardXVMs;
+                    missionCardXVM of vM.missionsFrameXVM.missionCardXVMs;
                     track $index
                 ) {
-                    <app-card>
-                        @if (cardXVM.gmpMapXVM.bounds; as bounds) {
-                            <app-gmp-map
-                                class="h-60"
-                                [view]="bounds"
-                                appGmpPolygonDrawing
-                                [polygonInput]="cardXVM.gmpMapXVM.polygon"
-                                [appGmpAdvancedMarker]="
-                                    cardXVM.gmpMapXVM.entryPoint
-                                "
-                            />
-                        }
-                        @let cardBodyXVM = cardXVM.cardBodyXVM;
-                        <app-card-body>
-                            <h3>
-                                {{
-                                    t(cardBodyXVM.titleKey, {
-                                        id: cardBodyXVM.title,
-                                    })
-                                }}
-                            </h3>
-                            <app-badge
-                                size="sm"
-                                variant="outline"
-                                [intent]="
-                                    mapMissionStatusToBadgeIntent(
-                                        cardBodyXVM.status
-                                    )
-                                "
-                            >
-                                {{
-                                    t(
-                                        mapMissionStatusToTranslocoTextKey(
-                                            cardBodyXVM.status
-                                        )
-                                    )
-                                }}
-                            </app-badge>
-                            @for (
-                                keyValueXVM of cardBodyXVM.keyValueXVMs;
-                                track $index
-                            ) {
-                                <app-stack orientation="horizontal" gap="sm">
-                                    <app-key class="text-base-300/30">{{
-                                        t(keyValueXVM.keyXVM.textKey)
-                                    }}</app-key>
-                                    <app-value [vm]="keyValueXVM.valueVM" />
-                                </app-stack>
-                            }
-                        </app-card-body>
-                        <app-card-footer>
-                            @let buttonXVM = cardXVM.cardFooterXVM.buttonXVM;
-                            <a
-                                [routerLink]="buttonXVM.routerLink"
-                                [fragment]="buttonXVM.fragment"
-                                class="w-full"
-                            >
-                                <app-button [vm]="buttonXVM" class="*:w-full">
-                                    {{ t(buttonXVM.textKey) }}
-                                </app-button>
-                            </a>
-                        </app-card-footer>
-                    </app-card>
+                    <ng-container
+                        [ngTemplateOutlet]="missionCard"
+                        [ngTemplateOutletContext]="{
+                            $implicit: missionCardXVM,
+                        }"
+                    />
                 }
             </app-cluster>
         </app-frame>
@@ -293,6 +237,74 @@
                 }}</app-key>
                 <app-value [vm]="summary.valueVM" class="font-medium" />
             </app-stack>
+        }
+    </ng-template>
+
+    <!-- A card that is responsible for visualizing information about a mission (like Google Maps) -->
+    <ng-template #missionCard let-cardXVM>
+        @if (isMissionCardXVM(cardXVM)) {
+            @let gmpMapXVM = cardXVM.gmpMapXVM;
+            @let editButtonXVM = cardXVM.editButtonXVM;
+
+            <app-card *transloco="let t" class="flex-1 min-w-80 max-w-96">
+                @if (gmpMapXVM.bounds; as bounds) {
+                    <app-gmp-map
+                        media
+                        class="h-60"
+                        [view]="bounds"
+                        appGmpPolygonDrawing
+                        [polygonInput]="gmpMapXVM.polygon"
+                        [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
+                    />
+                }
+                <app-card-body>
+                    <span title>
+                        {{
+                            t(cardXVM.titleKey, {
+                                id: cardXVM.missionName,
+                            })
+                        }}
+                    </span>
+                    <app-badge
+                        size="sm"
+                        variant="outline"
+                        [intent]="mapMissionStatusToBadgeIntent(cardXVM.status)"
+                    >
+                        {{
+                            t(
+                                mapMissionStatusToTranslocoTextKey(
+                                    cardXVM.status
+                                )
+                            )
+                        }}
+                    </app-badge>
+
+                    <app-stack orientation="vertical" gap="xs" class="text-sm">
+                        @for (
+                            keyValueXVM of cardXVM.keyValueXVMs;
+                            track $index
+                        ) {
+                            <app-stack orientation="horizontal" gap="xs">
+                                <app-key style="color: var(--text-subtle)">{{
+                                    t(keyValueXVM.keyXVM.textKey)
+                                }}</app-key>
+                                <app-value
+                                    [vm]="keyValueXVM.valueVM"
+                                    style="color: var(--text-secondary)"
+                                />
+                            </app-stack>
+                        }
+                    </app-stack>
+                    <a
+                        [routerLink]="editButtonXVM.routerLink"
+                        [fragment]="editButtonXVM.fragment"
+                    >
+                        <app-button [vm]="editButtonXVM" class="*:w-full">
+                            {{ t(editButtonXVM.textKey) }}
+                        </app-button>
+                    </a>
+                </app-card-body>
+            </app-card>
         }
     </ng-template>
 }

@@ -4,12 +4,12 @@ import { WithRouterLink } from '@interfaces/with-router-link.interface';
 import { FrameVM } from '@components/frame/frame.model';
 import { InputTextXVM } from '@components/input-text/input-text.component';
 import { AvatarVM } from '@components/avatar/avatar.model';
-import { CardBodyXVM } from '@components/card/components/card-body/card-body.component';
 import { Polygon } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.model';
 import { AdvancedMarker } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
 import { CloseOrderDialogVM } from './components/close-order-dialog/close-order-dialog.model';
 import { KeyValueXVM } from '@interfaces/key-value.interface';
 import { ChatBubbleType } from '@components/chat-bubble/chat-bubble.component';
+import { isObject } from '@utils/is-object.typeguard';
 
 export type Role = 'customer' | 'office' | 'pilot';
 
@@ -51,18 +51,14 @@ interface MessageXVM {
 
 export type MissionStatus = 'scheduled' | 'preparing' | 'completed';
 
-interface MissionCardFooterXVM {
-    buttonXVM: ButtonXVM<'withText'> & WithRouterLink;
-}
-interface MissionCardBodyXVM extends Required<Pick<CardBodyXVM, 'titleKey'>> {
+export interface MissionCardXVM {
+    type: 'missionCardXVM';
+    titleKey: string;
+    missionName: string;
+    gmpMapXVM: GmpMapXVM;
     status: MissionStatus;
     keyValueXVMs: KeyValueXVM[];
-    title: string;
-}
-interface MissionCardXVM {
-    gmpMapXVM: GmpMapXVM;
-    cardBodyXVM: MissionCardBodyXVM;
-    cardFooterXVM: MissionCardFooterXVM;
+    editButtonXVM: ButtonXVM<'withText'> & WithRouterLink;
 }
 
 interface MissionsFrameXVM extends FrameVM {
@@ -111,3 +107,6 @@ interface OverviewGmpMapXVM {
     bounds: google.maps.LatLngBounds | null;
     missions: Polygon[];
 }
+
+export const isMissionCardXVM = (obj: unknown): obj is MissionCardXVM =>
+    isObject(obj) && 'type' in obj && obj.type === 'missionCardXVM';

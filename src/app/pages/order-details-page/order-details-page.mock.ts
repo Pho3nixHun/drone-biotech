@@ -187,53 +187,48 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
         titleKey: 'OrderDetailsPage.missions.title',
         missionCardXVMs: [
             {
-                cardFooterXVM: {
-                    buttonXVM: {
-                        routerLink: ['/'],
-                        variant: 'ghost',
-                        secondary: true,
-                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                type: 'missionCardXVM',
+                editButtonXVM: {
+                    routerLink: ['/'],
+                    variant: 'ghost',
+                    secondary: true,
+                    textKey: 'OrderDetailsPage.missions.card.edit.text',
+                },
+                missionName: 'A-12345',
+                titleKey: 'OrderDetailsPage.missions.card.title',
+                keyValueXVMs: [
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.name.text',
+                        },
+                        valueVM: {
+                            type: 'withoutKey',
+                            value: 'North Field',
+                        },
                     },
-                },
-                cardBodyXVM: {
-                    title: 'A-12345',
-                    titleKey: 'OrderDetailsPage.missions.card.title',
-                    keyValueXVMs: [
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.name.text',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'North Field',
-                            },
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.area.text',
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.text',
-                            },
-                            valueVM: {
-                                key: 'OrderDetailsPage.missions.card.area.value',
-                                type: 'withKey',
-                                params: { area: 45.8 },
-                            },
+                        valueVM: {
+                            key: 'OrderDetailsPage.missions.card.area.value',
+                            type: 'withKey',
+                            params: { area: 45.8 },
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                params: { date: new Date(122436234) },
-                            },
+                    },
+                    {
+                        keyXVM: {
+                            textKey:
+                                'OrderDetailsPage.missions.card.area.scheduledDate.text',
                         },
-                    ],
-                    status: 'completed',
-                },
+                        valueVM: {
+                            type: 'withKey',
+                            key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                            params: { date: new Date(122436234) },
+                        },
+                    },
+                ],
+                status: 'completed',
                 gmpMapXVM: {
                     polygon: {
                         colors: {
@@ -254,53 +249,48 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                cardFooterXVM: {
-                    buttonXVM: {
-                        routerLink: ['/'],
-                        variant: 'ghost',
-                        secondary: true,
-                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                type: 'missionCardXVM',
+                editButtonXVM: {
+                    routerLink: ['/'],
+                    variant: 'ghost',
+                    secondary: true,
+                    textKey: 'OrderDetailsPage.missions.card.edit.text',
+                },
+                missionName: 'A-12346',
+                titleKey: 'OrderDetailsPage.missions.card.title',
+                keyValueXVMs: [
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.name.text',
+                        },
+                        valueVM: {
+                            type: 'withoutKey',
+                            value: 'South Field',
+                        },
                     },
-                },
-                cardBodyXVM: {
-                    title: 'A-12346',
-                    titleKey: 'OrderDetailsPage.missions.card.title',
-                    keyValueXVMs: [
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.name.text',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'South Field',
-                            },
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.area.text',
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.text',
-                            },
-                            valueVM: {
-                                key: 'OrderDetailsPage.missions.card.area.value',
-                                type: 'withKey',
-                                params: { area: 62.1 },
-                            },
+                        valueVM: {
+                            key: 'OrderDetailsPage.missions.card.area.value',
+                            type: 'withKey',
+                            params: { area: 62.1 },
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                params: { date: new Date(12240234) },
-                            },
+                    },
+                    {
+                        keyXVM: {
+                            textKey:
+                                'OrderDetailsPage.missions.card.area.scheduledDate.text',
                         },
-                    ],
-                    status: 'preparing',
-                },
+                        valueVM: {
+                            type: 'withKey',
+                            key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                            params: { date: new Date(12240234) },
+                        },
+                    },
+                ],
+                status: 'preparing',
                 gmpMapXVM: {
                     polygon: {
                         colors: {
@@ -321,53 +311,48 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                cardFooterXVM: {
-                    buttonXVM: {
-                        routerLink: ['/'],
-                        variant: 'ghost',
-                        secondary: true,
-                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                type: 'missionCardXVM',
+                editButtonXVM: {
+                    routerLink: ['/'],
+                    variant: 'ghost',
+                    secondary: true,
+                    textKey: 'OrderDetailsPage.missions.card.edit.text',
+                },
+                missionName: 'A-12347',
+                titleKey: 'OrderDetailsPage.missions.card.title',
+                keyValueXVMs: [
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.name.text',
+                        },
+                        valueVM: {
+                            type: 'withoutKey',
+                            value: 'East Meadow',
+                        },
                     },
-                },
-                cardBodyXVM: {
-                    title: 'A-12347',
-                    titleKey: 'OrderDetailsPage.missions.card.title',
-                    keyValueXVMs: [
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.name.text',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'East Meadow',
-                            },
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.area.text',
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.text',
-                            },
-                            valueVM: {
-                                key: 'OrderDetailsPage.missions.card.area.value',
-                                type: 'withKey',
-                                params: { area: 80.1 },
-                            },
+                        valueVM: {
+                            key: 'OrderDetailsPage.missions.card.area.value',
+                            type: 'withKey',
+                            params: { area: 80.1 },
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                params: { date: new Date(122214234) },
-                            },
+                    },
+                    {
+                        keyXVM: {
+                            textKey:
+                                'OrderDetailsPage.missions.card.area.scheduledDate.text',
                         },
-                    ],
-                    status: 'scheduled',
-                },
+                        valueVM: {
+                            type: 'withKey',
+                            key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                            params: { date: new Date(122214234) },
+                        },
+                    },
+                ],
+                status: 'scheduled',
                 gmpMapXVM: {
                     polygon: {
                         colors: {
@@ -388,53 +373,48 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                cardFooterXVM: {
-                    buttonXVM: {
-                        routerLink: ['/'],
-                        variant: 'ghost',
-                        secondary: true,
-                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                type: 'missionCardXVM',
+                editButtonXVM: {
+                    routerLink: ['/'],
+                    variant: 'ghost',
+                    secondary: true,
+                    textKey: 'OrderDetailsPage.missions.card.edit.text',
+                },
+                missionName: 'A-12348',
+                titleKey: 'OrderDetailsPage.missions.card.title',
+                keyValueXVMs: [
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.name.text',
+                        },
+                        valueVM: {
+                            type: 'withoutKey',
+                            value: 'West Orchard',
+                        },
                     },
-                },
-                cardBodyXVM: {
-                    title: 'A-12348',
-                    titleKey: 'OrderDetailsPage.missions.card.title',
-                    keyValueXVMs: [
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.name.text',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'West Orchard',
-                            },
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.area.text',
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.text',
-                            },
-                            valueVM: {
-                                key: 'OrderDetailsPage.missions.card.area.value',
-                                type: 'withKey',
-                                params: { area: 42.9 },
-                            },
+                        valueVM: {
+                            key: 'OrderDetailsPage.missions.card.area.value',
+                            type: 'withKey',
+                            params: { area: 42.9 },
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                params: { date: new Date(121224234) },
-                            },
+                    },
+                    {
+                        keyXVM: {
+                            textKey:
+                                'OrderDetailsPage.missions.card.area.scheduledDate.text',
                         },
-                    ],
-                    status: 'completed',
-                },
+                        valueVM: {
+                            type: 'withKey',
+                            key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                            params: { date: new Date(121224234) },
+                        },
+                    },
+                ],
+                status: 'completed',
                 gmpMapXVM: {
                     polygon: {
                         colors: {
@@ -455,53 +435,48 @@ export const orderDetailsPageVM: OrderDetailsPageVM = {
                 },
             },
             {
-                cardFooterXVM: {
-                    buttonXVM: {
-                        routerLink: ['/'],
-                        variant: 'ghost',
-                        secondary: true,
-                        textKey: 'OrderDetailsPage.missions.card.edit.text',
+                type: 'missionCardXVM',
+                editButtonXVM: {
+                    routerLink: ['/'],
+                    variant: 'ghost',
+                    secondary: true,
+                    textKey: 'OrderDetailsPage.missions.card.edit.text',
+                },
+                missionName: 'A-12349',
+                titleKey: 'OrderDetailsPage.missions.card.title',
+                keyValueXVMs: [
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.name.text',
+                        },
+                        valueVM: {
+                            type: 'withoutKey',
+                            value: 'Central Vineyard',
+                        },
                     },
-                },
-                cardBodyXVM: {
-                    title: 'A-12349',
-                    titleKey: 'OrderDetailsPage.missions.card.title',
-                    keyValueXVMs: [
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.name.text',
-                            },
-                            valueVM: {
-                                type: 'withoutKey',
-                                value: 'Central Vineyard',
-                            },
+                    {
+                        keyXVM: {
+                            textKey: 'OrderDetailsPage.missions.card.area.text',
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.text',
-                            },
-                            valueVM: {
-                                key: 'OrderDetailsPage.missions.card.area.value',
-                                type: 'withKey',
-                                params: { area: 61 },
-                            },
+                        valueVM: {
+                            key: 'OrderDetailsPage.missions.card.area.value',
+                            type: 'withKey',
+                            params: { area: 61 },
                         },
-                        {
-                            keyXVM: {
-                                textKey:
-                                    'OrderDetailsPage.missions.card.area.scheduledDate.text',
-                            },
-                            valueVM: {
-                                type: 'withKey',
-                                key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
-                                params: { date: new Date(122423214) },
-                            },
+                    },
+                    {
+                        keyXVM: {
+                            textKey:
+                                'OrderDetailsPage.missions.card.area.scheduledDate.text',
                         },
-                    ],
-                    status: 'preparing',
-                },
+                        valueVM: {
+                            type: 'withKey',
+                            key: 'OrderDetailsPage.missions.card.area.scheduledDate.value',
+                            params: { date: new Date(122423214) },
+                        },
+                    },
+                ],
+                status: 'preparing',
                 gmpMapXVM: {
                     bounds: null,
                     entryPoint: { coordinates: { lat: 47.24, lng: 21.21 } },

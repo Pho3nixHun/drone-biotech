@@ -4,6 +4,8 @@
 /* stylelint-disable at-rule-empty-line-before */
 
 @import "tailwindcss";
+@import './app/shared/components/card/card.component.css';
+@import './app/shared/components/card/components/card-body/card-body.component.css';
 @import './app/shared/components/chat-bubble/chat-bubble.component.css';
 @import './app/shared/components/message/message.component.css';
 @import './app/shared/components/avatar/avatar.component.css';

@@ -1,0 +1,24 @@
+@layer components {
+    .card-body {
+        --padding-top: var(--component-gap-md);
+        --row-gap: var(--layout-gap-sm);
+        --title-text: var(--text-secondary);
+        --padding-bottom: var(--component-gap-sm);
+        --padding-x: var(--component-gap-md);
+
+        padding: var(--padding-top) var(--padding-x) var(--padding-bottom) var(--padding-x);
+        row-gap: var(--row-gap);
+
+        @apply flex flex-col;
+
+        [header] {
+            @apply flex flex-row justify-between;
+
+            [title] {
+                color: var(--title-text);
+
+                @apply font-semibold;
+            }
+        }
+    }
+}

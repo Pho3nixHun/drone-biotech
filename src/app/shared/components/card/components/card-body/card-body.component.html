@@ -1,14 +1,6 @@
-<div class="flex flex-col pt-4 pb-2 px-4 space-y-1.5">
-    <div class="grid grid-cols-2">
-        <div>
-            <ng-content select="h3" />
-        </div>
-        <div class="ml-auto">
-            <ng-content select="app-badge" />
-        </div>
-        <div><ng-content select="h4" /></div>
+<div class="card-body">
+    <div header>
+        <ng-content select="[title], app-badge" />
     </div>
-    <div class="flex flex-col">
-        <ng-content />
-    </div>
+    <ng-content />
 </div>

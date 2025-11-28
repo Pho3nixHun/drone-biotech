@@ -28,12 +28,12 @@ import { CardBodyComponent } from '@components/card/components/card-body/card-bo
 import { GmpMapComponent } from '@components/gmp-map/gmp-map.component';
 import { GmpPolygonDrawingDirective } from '@directives/gmp-polygon-drawing/gmp-polygon-drawing.directive';
 import { GmpAdvancedMarkerDirective } from '@directives/gmp-advanced-marker/gmp-advanced-marker.directive';
-import { CardFooterComponent } from '@components/card/components/card-footer/card-footer.component';
 import { StackComponent } from '@components/stack/stack.component';
 import { CloseOrderDialogDialogResponse } from './components/close-order-dialog/close-order-dialog.model';
 import { CloseOrderDialogComponent } from './components/close-order-dialog/close-order-dialog.component';
 import { ClusterComponent } from '@components/cluster/cluster.component';
 import { ChatBubbleComponent } from '@components/chat-bubble/chat-bubble.component';
+import { isMissionCardXVM } from './order-details-page.model';
 
 @Component({
     selector: 'app-order-details-page',
@@ -58,7 +58,6 @@ import { ChatBubbleComponent } from '@components/chat-bubble/chat-bubble.compone
         GmpMapComponent,
         GmpPolygonDrawingDirective,
         GmpAdvancedMarkerDirective,
-        CardFooterComponent,
         StackComponent,
         NgTemplateOutlet,
         CloseOrderDialogComponent,
@@ -106,4 +105,5 @@ export class OrderDetailsPageComponent {
         mapMissionStatusToBadgeIntent;
     protected readonly mapOrderStatusToTranslocoTextKey =
         mapOrderStatusToTranslocoTextKey;
+    protected readonly isMissionCardXVM = isMissionCardXVM;
 }
