@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BadgeComponent should render accent intent badge correctly 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge accent"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render error intent badge correctly 1`] = `
+<div
+  id="root4"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge error"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render pilled badge correctly 1`] = `
+<div
+  id="root8"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge pilled"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render rounded badge correctly 1`] = `
+<div
+  id="root7"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge rounded"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render success intent badge correctly 1`] = `
+<div
+  id="root6"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge success"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render the default badge correctly 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render the filled badge correctly 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge filled"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render the outlined badge correctly 1`] = `
+<div
+  id="root2"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge outlined"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;
+
+exports[`BadgeComponent should render warning intent badge correctly 1`] = `
+<div
+  id="root5"
+  ng-version="20.1.7"
+>
+  <app-badge>
+    <span
+      class="badge warning"
+    >
+      Text
+    </span>
+  </app-badge>
+</div>
+`;

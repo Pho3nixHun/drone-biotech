@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ProductsPageComponent should not render the template when there is no VM provided 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <!--container-->
 </div>
@@ -12,110 +12,72 @@ exports[`ProductsPageComponent should not render the template when there is no V
 exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are provided 1`] = `
 <div
   id="root2"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
-      <app-frame
-        ng-reflect-vm="[object Object]"
-      >
+      <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="frame"
         >
-          <h2>
-            title0
-          </h2>
-          <!--container-->
+          <div
+            header=""
+          >
+            <h2>
+              title0
+            </h2>
+            <!--container-->
+          </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.0.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText0"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.0.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.0.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="LandingPage.products.1.title"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    LandingPage.products.1.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.1.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
-              >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-                >
-                  <img
-                    alt="LandingPage.products.2.title"
-                    class="w-auto h-auto object-cover rounded-md"
-                    src="assets/lepke.jpg"
-                  />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
-                  >
-                    LandingPage.products.2.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.2.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText0 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription0 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
               <!--container-->
             </div>
           </app-product-list>
         </section>
         <!--container-->
       </app-frame>
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
 </div>
 `;
@@ -123,110 +85,212 @@ exports[`ProductsPageComponent should render 1 <app-product-item> if 1 items are
 exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are provided 1`] = `
 <div
   id="root3"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
-      <app-frame
-        ng-reflect-vm="[object Object]"
-      >
+      <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="frame"
         >
-          <h2>
-            title0
-          </h2>
-          <!--container-->
+          <div
+            header=""
+          >
+            <h2>
+              title0
+            </h2>
+            <!--container-->
+          </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.0.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText0"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.0.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.0.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText0 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription0 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.1.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText1"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.1.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.1.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText1 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription1 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.2.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText2"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.2.title
-                  </h3>
-                  <p
-                    class="mt-4"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText2 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription2 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
+              >
+                <div
+                  class="card"
+                >
+                  <img
+                    alt="productAltText1"
+                    class="object-none"
+                    media=""
+                    src="assets/lepke.jpg"
+                  />
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.2.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText1 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription1 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
+              >
+                <div
+                  class="card"
+                >
+                  <img
+                    alt="productAltText2"
+                    class="object-none"
+                    media=""
+                    src="assets/lepke.jpg"
+                  />
+                  <app-card-body
+                    class="h-52"
+                  >
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText2 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription2 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
               <!--container-->
             </div>
           </app-product-list>
         </section>
         <!--container-->
       </app-frame>
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
 </div>
 `;
@@ -234,110 +298,142 @@ exports[`ProductsPageComponent should render 5 <app-product-item> if 5 items are
 exports[`ProductsPageComponent should render the template when the VM is provided 1`] = `
 <div
   id="root1"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
-      <app-frame
-        ng-reflect-vm="[object Object]"
-      >
+      <app-frame>
         <section
-          class="flex flex-col gap-y-10 py-10"
+          class="frame"
         >
-          <h2>
-            title0
-          </h2>
-          <!--container-->
+          <div
+            header=""
+          >
+            <h2>
+              title0
+            </h2>
+            <!--container-->
+          </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.0.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText0"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.0.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.0.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText0 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription0 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.1.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText1"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.1.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.1.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
-                ng-reflect-vm="[object Object]"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText1 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription1 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
-                    alt="LandingPage.products.2.title"
-                    class="w-auto h-auto object-cover rounded-md"
+                    alt="productAltText2"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    LandingPage.products.2.title
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    LandingPage.products.2.description
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           productAltText2 
+                        </h3>
+                      </div>
+                      <p>
+                         productDescription2 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
               <!--container-->
             </div>
           </app-product-list>
         </section>
         <!--container-->
       </app-frame>
-      <!--container-->
     </section>
   </app-page-layout>
+  <!--container-->
   <!--container-->
 </div>
 `;

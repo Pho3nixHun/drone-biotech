@@ -4,6 +4,7 @@ import { PilotDashboardPageService } from './pilot-dashboard-page.service';
 import { provideMockStore } from '@ngrx/store/testing';
 import { PILOT_DASHBOARD_PAGE_CONFIG } from './pilot-dashboard-page.config';
 import { pilotDashboardPageConfig } from './pilot-dashboard-page.mock';
+import { provideMockAuthStore } from '@stores/auth/auth.testing';
 
 describe('PilotDashboardPageService', () => {
     let service: PilotDashboardPageService;
@@ -16,6 +17,7 @@ describe('PilotDashboardPageService', () => {
                     provide: PILOT_DASHBOARD_PAGE_CONFIG,
                     useValue: pilotDashboardPageConfig,
                 },
+                provideMockAuthStore(),
             ],
         });
         service = TestBed.inject(PilotDashboardPageService);

@@ -2,24 +2,25 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { getTranslocoModule } from 'transloco-testing.module';
 import {
-    enLandingMock,
-    landingPageVMMock,
-    landingPageVMMockWithRoutes,
-    landingPageVMWithFiveFramesMock,
-    landingPageVMWithFivePartnerLogoXMock,
-    landingPageVMWithFiveProductItemMock,
-    landingPageVMWithFiveTestimonialMock,
-    landingPageVMWithOneFrameMock,
-    landingPageVMWithOnePartnerLogoXMock,
-    landingPageVMWithOneProductItemMock,
-    landingPageVMWithOneTestimonialMock,
-    landingPageVMWithOnlyPartnerFrameMock,
-    landingPageVMWithOnlyProductFrameMock,
-    landingPageVMWithoutFrameMock,
-    landingPageVMWithoutHeroXVM,
-    landingPageVMWithoutPartnerLogoXMock,
-    landingPageVMWithoutProductItemMock,
-    landingPageVMWithoutTestimonialMock,
+    enMock,
+    mockVM,
+    mockVMWithButtonTextsInHero,
+    mockVMWithFiveFrames,
+    mockVMWithFiveMixedPartnerLogoXVM,
+    mockVMWithFivePartnerLogoXVM,
+    mockVMWithFiveProductItem,
+    mockVMWithFiveTestimonial,
+    mockVMWithHero,
+    mockVMWithOneFrame,
+    mockVMWithOnePartnerLogoXVM,
+    mockVMWithOneProductItem,
+    mockVMWithOneTestimonial,
+    mockVMWithoutButtonTextsInHero,
+    mockVMWithoutFrames,
+    mockVMWithoutHero,
+    mockVMWithoutPartnerLogoXVM,
+    mockVMWithoutProductItem,
+    mockVMWithoutTestimonial,
 } from './landing-page.mock';
 import { provideSwiperTestingModule } from '@modules/swiper/swiper-testing.module';
 import {
@@ -37,7 +38,7 @@ describe('LandingPageComponent', () => {
             imports: [
                 LandingPageComponent,
                 getTranslocoModule({
-                    langs: { en: enLandingMock },
+                    langs: { en: enMock },
                     translocoConfig: {
                         availableLangs: ['en'],
                         defaultLang: 'en',
@@ -50,18 +51,17 @@ describe('LandingPageComponent', () => {
                 provideRouter([]),
             ],
         }).compileComponents();
-        updateGetVMSignal(undefined);
         fixture = TestBed.createComponent(LandingPageComponent);
-        fixture.detectChanges();
         compiled = fixture.debugElement.nativeElement;
+        updateGetVMSignal(undefined);
     });
 
     //Snapshot test
-    it('should render loading state without VM', () => {
-        // Arrange
-        /* No need to set VM as it is undefined by default */
-        // Act
-        /* No need to act on nothing */
+    it('should not render anything if the VM is not provided', () => {
+        // There is no need to arrange
+
+        // There is no need to act
+
         // Assert
         expect(compiled).toMatchSnapshot();
     });
@@ -69,7 +69,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render the template when there is a VM provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMMock);
+        updateGetVMSignal(mockVM);
         // Act
         fixture.detectChanges();
         // Assert
@@ -79,7 +79,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should not render the hero section when the heroXVM is not provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithoutHeroXVM);
+        updateGetVMSignal(mockVMWithoutHero);
         // Act
         fixture.detectChanges();
         // Assert
@@ -89,7 +89,27 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render the hero section when the heroXVM is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMMock);
+        updateGetVMSignal(mockVMWithHero);
+        // Act
+        fixture.detectChanges();
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should render the texts of the buttons inside the hero if provided', () => {
+        // Arrange
+        updateGetVMSignal(mockVMWithButtonTextsInHero);
+        // Act
+        fixture.detectChanges();
+        // Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should not render the texts of the buttons inside the hero if provided', () => {
+        // Arrange
+        updateGetVMSignal(mockVMWithoutButtonTextsInHero);
         // Act
         fixture.detectChanges();
         // Assert
@@ -99,7 +119,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should not render frames when 0 frame is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithoutFrameMock);
+        updateGetVMSignal(mockVMWithoutFrames);
 
         // Act
         fixture.detectChanges();
@@ -111,7 +131,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 1 frame when 1 frame is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithOneFrameMock);
+        updateGetVMSignal(mockVMWithOneFrame);
 
         // Act
         fixture.detectChanges();
@@ -123,31 +143,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 5 frames in order when 5 frames are provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithFiveFramesMock);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should render only product frames when only product frames are provided', () => {
-        // Arrange
-        updateGetVMSignal(landingPageVMWithOnlyProductFrameMock);
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should render only partner frames when only partner frames are provided', () => {
-        // Arrange
-        updateGetVMSignal(landingPageVMWithOnlyPartnerFrameMock);
+        updateGetVMSignal(mockVMWithFiveFrames);
 
         // Act
         fixture.detectChanges();
@@ -159,7 +155,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should not render <app-product-item> when 0 is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithoutProductItemMock);
+        updateGetVMSignal(mockVMWithoutProductItem);
 
         // Act
         fixture.detectChanges();
@@ -171,7 +167,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 1 <app-product-item> when 1 is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithOneProductItemMock);
+        updateGetVMSignal(mockVMWithOneProductItem);
 
         // Act
         fixture.detectChanges();
@@ -183,19 +179,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 5 <app-product-item> in order when 5 <app-product-item>  are provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithFiveProductItemMock);
-
-        // Act
-        fixture.detectChanges();
-
-        //Assert
-        expect(compiled).toMatchSnapshot();
-    });
-
-    //Snapshot test
-    it('should have the correct routerLinks on product-items', () => {
-        // Arrange
-        updateGetVMSignal(landingPageVMMockWithRoutes);
+        updateGetVMSignal(mockVMWithFiveProductItem);
 
         // Act
         fixture.detectChanges();
@@ -207,7 +191,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should not render <app-partner-logo> when 0 is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithoutPartnerLogoXMock);
+        updateGetVMSignal(mockVMWithoutPartnerLogoXVM);
 
         // Act
         fixture.detectChanges();
@@ -219,7 +203,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 1 <app-partner-logo> when 1 is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithOnePartnerLogoXMock);
+        updateGetVMSignal(mockVMWithOnePartnerLogoXVM);
 
         // Act
         fixture.detectChanges();
@@ -231,7 +215,19 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 5 <app-partner-logo> in order when 5 app-partner-logo are provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithFivePartnerLogoXMock);
+        updateGetVMSignal(mockVMWithFivePartnerLogoXVM);
+
+        // Act
+        fixture.detectChanges();
+
+        //Assert
+        expect(compiled).toMatchSnapshot();
+    });
+
+    //Snapshot test
+    it('should render 5 mixed <app-partner-logo> in order when 5 app-partner-logo are provided', () => {
+        // Arrange
+        updateGetVMSignal(mockVMWithFiveMixedPartnerLogoXVM);
 
         // Act
         fixture.detectChanges();
@@ -243,7 +239,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should not render <app-testimonial-item> when 0 is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithoutTestimonialMock);
+        updateGetVMSignal(mockVMWithoutTestimonial);
 
         // Act
         fixture.detectChanges();
@@ -255,7 +251,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 1 <app-testimonial-item> when 1 is provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithOneTestimonialMock);
+        updateGetVMSignal(mockVMWithOneTestimonial);
 
         // Act
         fixture.detectChanges();
@@ -267,7 +263,7 @@ describe('LandingPageComponent', () => {
     //Snapshot test
     it('should render 5 <app-testimonial-item> in order when 5 app-testimonial-item are provided', () => {
         // Arrange
-        updateGetVMSignal(landingPageVMWithFiveTestimonialMock);
+        updateGetVMSignal(mockVMWithFiveTestimonial);
 
         // Act
         fixture.detectChanges();

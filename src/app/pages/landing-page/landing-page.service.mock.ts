@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { LandingPageVM } from './landing-page-vm.model';
+import { LandingPageVM } from './landing-page.model';
 import { LandingPageService } from './landing-page.service';
 
 const getVMSignal = signal<LandingPageVM | undefined>(undefined);

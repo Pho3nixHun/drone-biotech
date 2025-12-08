@@ -1,0 +1,14 @@
+<span
+    class="badge"
+    [ngClass]="{
+        accent: intent() === 'accent',
+        success: intent() === 'success',
+        warning: intent() === 'warning',
+        error: intent() === 'error',
+        filled: variant() === 'fill',
+        outlined: variant() === 'outline',
+        rounded: shape() === 'rounded',
+        pilled: shape() === 'pilled',
+    }"
+    ><ng-content
+/></span>

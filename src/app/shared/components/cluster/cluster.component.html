@@ -1,0 +1,36 @@
+@let isGapXNone = gapX() === 'none';
+@let isGapXXs = gapX() === 'xs';
+@let isGapXSm = gapX() === 'sm';
+@let isGapXMd = gapX() === 'md';
+@let isGapXLg = gapX() === 'lg';
+@let isGapXXl = gapX() === 'xl';
+@let isGapX2xl = gapX() === '2xl';
+@let isGapYNone = gapY() === 'none';
+@let isGapYXs = gapY() === 'xs';
+@let isGapYSm = gapY() === 'sm';
+@let isGapYMd = gapY() === 'md';
+@let isGapYLg = gapY() === 'lg';
+@let isGapYXl = gapY() === 'xl';
+@let isGapY2xl = gapY() === '2xl';
+
+<div
+    class="cluster"
+    [ngClass]="{
+        'gap-x-none': isGapXNone,
+        'gap-x-xs': isGapXXs,
+        'gap-x-sm': isGapXSm,
+        'gap-x-md': isGapXMd,
+        'gap-x-lg': isGapXLg,
+        'gap-x-xl': isGapXXl,
+        'gap-x-2xl': isGapX2xl,
+        'gap-y-none': isGapYNone,
+        'gap-y-xs': isGapYXs,
+        'gap-y-sm': isGapYSm,
+        'gap-y-md': isGapYMd,
+        'gap-y-lg': isGapYLg,
+        'gap-y-xl': isGapYXl,
+        'gap-y-2xl': isGapY2xl,
+    }"
+>
+    <ng-content />
+</div>

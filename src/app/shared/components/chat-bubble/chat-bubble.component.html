@@ -1,0 +1,9 @@
+<div
+    class="chat-bubble"
+    [ngClass]="{
+        receiver: type() === 'receiver',
+        sender: type() === 'sender',
+    }"
+>
+    <ng-content />
+</div>

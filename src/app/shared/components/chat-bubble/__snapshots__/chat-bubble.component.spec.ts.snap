@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ChatBubbleComponent should render the receiver type bubble 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-chat-bubble>
+    <div
+      class="chat-bubble receiver"
+    >
+       Text 
+    </div>
+  </app-chat-bubble>
+</div>
+`;
+
+exports[`ChatBubbleComponent should render the sender type bubble 1`] = `
+<div
+  id="root1"
+  ng-version="20.1.7"
+>
+  <app-chat-bubble>
+    <div
+      class="chat-bubble sender"
+    >
+       Text 
+    </div>
+  </app-chat-bubble>
+</div>
+`;

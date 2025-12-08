@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CloseOrderDialogComponent should render the template correctly 1`] = `
+<div
+  id="root3"
+  ng-version="20.1.7"
+>
+  <dialog
+    open=""
+  >
+    <app-dialog-layout>
+      <section
+        class="flex flex-col p-4 md:p-10 shadow-md space-y-4"
+      >
+        <app-page-header>
+          <header
+            class="page-header"
+          >
+            <div
+              content=""
+            >
+              <h2>
+                 tit 
+              </h2>
+            </div>
+            <app-button
+              actiongroup=""
+            >
+              <button
+                class="btn primary"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                  data-mat-icon-type="font"
+                  role="img"
+                >
+                  close
+                </mat-icon>
+              </button>
+            </app-button>
+          </header>
+        </app-page-header>
+        <div
+          class="space-y-4"
+        >
+          <p>
+            tit
+          </p>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <app-stack
+            footeractiongroup=""
+            orientation="horizontal"
+          >
+            <div
+              class="stack horizontal gap-none"
+            >
+              <app-button
+                class="*:rounded-r-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   conf 
+                </button>
+              </app-button>
+              <app-button
+                class="*:rounded-l-none"
+              >
+                <button
+                  class="btn primary"
+                >
+                   close 
+                </button>
+              </app-button>
+            </div>
+          </app-stack>
+        </div>
+      </section>
+    </app-dialog-layout>
+    <!--container-->
+    <!--container-->
+  </dialog>
+</div>
+`;

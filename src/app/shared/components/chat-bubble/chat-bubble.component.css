@@ -1,0 +1,22 @@
+@layer components {
+    .chat-bubble {
+        --padding-x: var(--component-gap-sm);
+        --padding-y: var(--component-gap-sm);
+
+        padding: var(--padding-y) var(--padding-x);
+        background-color: var(--background-color);
+        color: var(--text-color);
+
+        @apply rounded-xl;
+
+        &.receiver {
+            --background-color: var(--surface-tertiary);
+            --text-color: var(--text-secondary)
+        }
+
+        &.sender {
+            --background-color: var(--surface-brand);
+            --text-color: var(--text-inverse)
+        }
+    }
+}

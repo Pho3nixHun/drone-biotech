@@ -1,13 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NavItemComponent should render the template with the provided VM and ng-content 1`] = `
 <div
   id="root0"
-  ng-version="19.2.9"
+  ng-version="20.1.7"
 >
-  <app-nav-item
-    ng-reflect-vm="[object Object]"
-  >
+  <app-nav-item>
     <a
       class="nav-item"
       href=""

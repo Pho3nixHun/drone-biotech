@@ -1,43 +1,71 @@
-<app-page-layout>
-    @if (vm(); as vm) {
+@if (vm(); as vm) {
+    <app-page-layout>
         @if (vm.heroXVM; as heroXVM) {
             <app-hero [vm]="heroXVM" *transloco="let t">
                 <h1>{{ t(heroXVM.titleKey) }}</h1>
                 <p>{{ t(heroXVM.descriptionKey) }}</p>
-                <a href="" class="btn btn-primary">{{
-                    t(heroXVM.primaryButtonLabelKey)
-                }}</a>
-                <a href="" class="btn btn-default">{{
-                    t(heroXVM.secondaryButtonLabelKey)
-                }}</a>
+                <app-stack orientation="horizontal">
+                    <app-button
+                        [vm]="heroXVM.primaryButtonXVM"
+                        class="*:rounded-r-none"
+                    >
+                        {{ t(heroXVM.primaryButtonXVM.textKey) }}
+                    </app-button>
+                    <app-button
+                        [vm]="heroXVM.secondaryButtonXVM"
+                        class="*:rounded-l-none"
+                    >
+                        {{ t(heroXVM.secondaryButtonXVM.textKey) }}
+                    </app-button>
+                </app-stack>
             </app-hero>
         }
 
         @for (frameVM of vm.frameXVMs; track $index) {
-            <ng-container
-                [ngTemplateOutlet]="
-                    isProductFrame(frameVM) ? productFrame : partnerFrame
-                "
-                [ngTemplateOutletContext]="{ frameVM }"
-            ></ng-container>
+            <app-frame [id]="frameVM.id" [vm]="frameVM">
+                <ng-container
+                    [ngTemplateOutlet]="
+                        frameVM.type === 'productFrame'
+                            ? productFrame
+                            : partnerFrame
+                    "
+                    [ngTemplateOutletContext]="{ frameVM }"
+                />
+            </app-frame>
         }
-    } @else {
-        Loading...
-    }
-</app-page-layout>
+    </app-page-layout>
+}
 
 <ng-template #productFrame let-vm="frameVM">
-    <app-frame [id]="vm.id" [vm]="vm">
-        <app-product-list>
-            @for (item of vm.productItemXVMs; track $index) {
-                <app-product-item [vm]="item" [routerLink]="item.routerLink" />
+    @if (isProductFrame(vm)) {
+        <app-product-list *transloco="let t">
+            @for (cardXVM of vm.productCardXVMs; track $index) {
+                <app-card
+                    [routerLink]="cardXVM.routerLink"
+                    class="cursor-pointer min-w-80 max-w-96"
+                    style="height: 500px"
+                    ><img
+                        class="object-none"
+                        [src]="cardXVM.imageSrc"
+                        [alt]="cardXVM.altTextKey"
+                        media
+                    />
+                    <app-card-body class="h-52">
+                        <h3 title>
+                            {{ t(cardXVM.titleKey) }}
+                        </h3>
+                        <p>
+                            {{ t(cardXVM.descriptionKey) }}
+                        </p>
+                    </app-card-body></app-card
+                >
             }
         </app-product-list>
-    </app-frame>
+    }
 </ng-template>
 
 <ng-template #partnerFrame let-vm="frameVM">
-    <app-frame [id]="vm.id" [vm]="vm">
+    @if (isPartnerAndTestimonialFrame(vm)) {
         @if (vm.partnerLogoXVMs; as partnerLogoXVMs) {
             <app-partner-list>
                 @for (logo of partnerLogoXVMs; track $index) {
@@ -54,24 +82,23 @@
                     }
                 }
             </app-partner-list>
+            @if (vm.testimonialItemVMs) {
+                <swiper-container
+                    keyboard="true"
+                    pagination="true"
+                    pagination-clickable="true"
+                    pagination-dynamic-bullets="true"
+                    autoplay-delay="2500"
+                    autoplay-disable-on-interaction="false"
+                    space-between="30"
+                >
+                    @for (testimonial of vm.testimonialItemVMs; track $index) {
+                        <swiper-slide class="pb-10">
+                            <app-testimonial-item [vm]="testimonial" />
+                        </swiper-slide>
+                    }
+                </swiper-container>
+            }
         }
-        @if (vm.testimonialItemVMs) {
-            <swiper-container
-                keyboard="true"
-                pagination="true"
-                pagination-clickable="true"
-                pagination-dynamic-bullets="true"
-                autoplay-delay="2500"
-                autoplay-disable-on-interaction="false"
-                class="w-full sm:w-2/3 md:w-1/2"
-                space-between="30"
-            >
-                @for (testimonial of vm.testimonialItemVMs; track $index) {
-                    <swiper-slide class="pb-10">
-                        <app-testimonial-item [vm]="testimonial" />
-                    </swiper-slide>
-                }
-            </swiper-container>
-        }
-    </app-frame>
+    }
 </ng-template>

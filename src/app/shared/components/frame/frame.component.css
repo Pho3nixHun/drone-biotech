@@ -1,0 +1,17 @@
+@layer components {
+    .frame {
+        --row-gap: var(--layout-gap-sm);
+
+        row-gap: var(--row-gap);
+
+        @apply flex flex-col;
+
+        [header] {
+            @apply grid grid-cols-2;
+
+            [action] {
+                @apply col-start-2 justify-self-end;
+            }
+        }
+    }
+}

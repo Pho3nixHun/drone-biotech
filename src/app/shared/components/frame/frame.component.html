@@ -1,6 +1,9 @@
-<section *transloco="let t" class="flex flex-col gap-y-10 py-10">
-    @if (vm(); as vm) {
-        <h2>{{ t(vm.titleKey) }}</h2>
-    }
+<section *transloco="let t" class="frame">
+    <div header>
+        @if (vm(); as vm) {
+            <h2>{{ t(vm.titleKey) }}</h2>
+        }
+        <ng-content select="[action]" />
+    </div>
     <ng-content />
 </section>

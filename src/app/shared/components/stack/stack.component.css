@@ -1,0 +1,50 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+/* stylelint-disable selector-class-pattern */
+
+@layer components {
+    .stack {
+        @apply flex;
+
+        &.horizontal {
+            @apply flex-row;
+
+            column-gap: var(--stack-gap);
+            row-gap: 0;
+        }
+
+        &.vertical {
+            @apply flex-col;
+
+            row-gap: var(--stack-gap);
+            column-gap: 0;
+        }
+
+        &.gap-none {
+            --stack-gap: 0;
+        }
+
+        &.gap-xs {
+            --stack-gap: var(--layout-gap-xs);
+        }
+
+        &.gap-sm {
+            --stack-gap: var(--layout-gap-sm);
+        }
+
+        &.gap-md {
+            --stack-gap: var(--layout-gap-md);
+        }
+
+        &.gap-lg {
+            --stack-gap: var(--layout-gap-lg);
+        }
+
+        &.gap-xl {
+            --stack-gap: var(--layout-gap-xl);
+        }
+
+        &.gap-2xl {
+            --stack-gap: var(--layout-gap-2xl);
+        }
+    }
+}

@@ -1,9 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductListComponent } from './product-list.component';
 import { Component } from '@angular/core';
-import { ProductItemComponent } from '../product-item/product-item.component';
 import { getTranslocoModule } from 'transloco-testing.module';
-import { ProductItemVM } from '@components/product-item/product-item-vm.model';
+import { CardComponent } from '@components/card/card.component';
 
 const en = {
     title: 'Title',
@@ -11,23 +10,14 @@ const en = {
     altText: 'Butterfly',
 };
 @Component({
-    imports: [ProductListComponent, ProductItemComponent],
+    imports: [ProductListComponent, CardComponent],
     template: `
         <app-product-list>
-            <app-product-item [vm]="vm" />
-            <app-product-item [vm]="vm" />
-            <div>This should not been projected</div>
+            <app-card />
         </app-product-list>
     `,
 })
-class TestHostComponent {
-    vm: ProductItemVM = {
-        titleKey: 'title',
-        descriptionKey: 'description',
-        imageSrc: 'assets/lepke.jpg',
-        altTextKey: 'altText',
-    };
-}
+class TestHostComponent {}
 describe('ProductListComponent', () => {
     let fixture: ComponentFixture<TestHostComponent>;
     let compiled: HTMLElement;

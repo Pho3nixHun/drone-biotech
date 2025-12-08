@@ -1,11 +1,9 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { selectUserRole } from '@stores/auth/auth.selector';
 import { UserRole } from '@stores/auth/auth.model';
-import { firstValueFrom } from 'rxjs';
 import { DashboardPageRouteSegment } from '../../../pages/dashboard-page/dashboard-page-route-segment';
+import { AuthStore } from '@stores/auth/auth.store';
 
 const routes: Record<UserRole, DashboardPageRouteSegment> = {
     customer: DashboardPageRouteSegment.CUSTOMER,
@@ -17,9 +15,12 @@ export const redirectGuard: CanActivateFn = async (
     route,
     state,
     router = inject(Router),
-    store = inject(Store)
+    store = inject(AuthStore)
 ) => {
-    const currentRole = await firstValueFrom(store.select(selectUserRole));
+    const user = store.user();
+    if (!user) return false;
+
+    const currentRole = user.role;
 
     const navigateToRoleDashboard: boolean | undefined =
         route.firstChild?.data?.['navigateToRoleDashboard'];

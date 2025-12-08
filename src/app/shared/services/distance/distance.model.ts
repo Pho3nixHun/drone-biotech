@@ -1,6 +1,6 @@
-import { InjectionToken } from '@angular/core';
 import { Location } from 'src/app/stores/location/location.model';
 import { Coordinates } from '@stores/location/location.model';
+import { HEAD_OFFICE_LOCATION } from '@tokens/head-office-location.token';
 
 export const provideMockHeadOfficeLocation = (
     coordinates: Coordinates = { lat: 90, lng: 90 }
@@ -8,10 +8,6 @@ export const provideMockHeadOfficeLocation = (
     provide: HEAD_OFFICE_LOCATION,
     useValue: coordinates,
 });
-
-export const HEAD_OFFICE_LOCATION = new InjectionToken<Coordinates>(
-    'Config for the location of the headOffice'
-);
 
 export const mapLocationToCoordinates = (
     location: Location | null,

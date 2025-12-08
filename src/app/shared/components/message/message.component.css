@@ -1,0 +1,30 @@
+@layer components {
+    .message {
+        --gap-x-xs: var(--layout-gap-xs);
+        --gap-y-2xs: var(--layout-gap-2xs);
+        --name-text: var(--text-secondary);
+        --time-text: var(--text-subtle);
+
+        gap: 0 var(--gap-x-xs);
+
+        @apply flex flex-row;
+
+        div {
+            gap: var(--gap-y-2xs) 0;
+
+            @apply flex flex-col;
+
+            [name] {
+                color: var(--name-text);
+
+                @apply text-sm font-bold;
+            }
+
+            time {
+                color: var(--time-text);
+
+                @apply text-xs;
+            }
+        }
+    }
+}

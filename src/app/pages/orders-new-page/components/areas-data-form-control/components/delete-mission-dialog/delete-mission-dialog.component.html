@@ -1,0 +1,37 @@
+<dialog #dialog>
+    @if (vm(); as vm) {
+        <app-dialog-layout *transloco="let t">
+            <app-page-header>
+                <h2>
+                    {{ t(vm.titleKey) }}
+                </h2>
+                <app-button
+                    actionGroup
+                    [vm]="vm.closeButtonXVM"
+                    (click)="cancel()"
+                >
+                    <mat-icon>{{ vm.closeButtonXVM.icon }}</mat-icon>
+                </app-button>
+            </app-page-header>
+
+            <p>{{ t(vm.confirmTextKey) }}</p>
+
+            <app-stack orientation="horizontal" footerActionGroup>
+                <app-button
+                    [vm]="vm.confirmButtonXVM"
+                    (click)="submit()"
+                    class="*:rounded-r-none"
+                >
+                    {{ t(vm.confirmButtonXVM.textKey) }}
+                </app-button>
+                <app-button
+                    [vm]="vm.cancelButtonXVM"
+                    (click)="cancel()"
+                    class="*:rounded-l-none"
+                >
+                    {{ t(vm.cancelButtonXVM.textKey) }}
+                </app-button>
+            </app-stack>
+        </app-dialog-layout>
+    }
+</dialog>

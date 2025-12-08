@@ -1,0 +1,206 @@
+@if (vm(); as vm) {
+    <app-page-layout *transloco="let t">
+        <!-- Page header that contains mission title, badge and creation date -->
+        @let headerXVM = vm.headerXVM;
+        @let status = vm.status;
+        @let creationDateKeyValueXVM = headerXVM.creationDateKeyValueXVM;
+
+        <!-- Page header that contains mission title, badge and creation date -->
+        <app-page-header>
+            <h1>{{ t(headerXVM.titleKey) }}</h1>
+            <app-stack orientation="horizontal" gap="sm" metadata>
+                <app-badge
+                    shape="pilled"
+                    [intent]="mapMissionStatusToBadgeIntent(status)"
+                    >{{
+                        t(mapMissionStatusToTranslocoTextKey(status))
+                    }}</app-badge
+                >
+                <app-stack
+                    orientation="horizontal"
+                    gap="xs"
+                    class="flex items-center"
+                >
+                    <app-key>{{
+                        t(creationDateKeyValueXVM.keyXVM.textKey)
+                    }}</app-key>
+                    <time>
+                        <app-value [vm]="creationDateKeyValueXVM.valueVM" />
+                    </time>
+                </app-stack>
+            </app-stack>
+
+            <app-stack orientation="horizontal" gap="md" actionGroup>
+                @for (action of headerXVM.dialogActions; track action.type) {
+                    @switch (action.type) {
+                        @case ('customerCancel') {
+                            <ng-container
+                                [ngTemplateOutlet]="dialogButton"
+                                [ngTemplateOutletContext]="{
+                                    dialogRef: customerCancelDialog,
+                                    action: action,
+                                }"
+                            />
+                        }
+                        @case ('officeCancel') {
+                            <ng-container
+                                [ngTemplateOutlet]="dialogButton"
+                                [ngTemplateOutletContext]="{
+                                    dialogRef: officeCancelDialog,
+                                    action: action,
+                                }"
+                            />
+                        }
+                    }
+                }
+            </app-stack>
+        </app-page-header>
+        <!-- Page header end -->
+
+        <!-- Overview of the mission with map -->
+        @let mapOverviewFrameXVM = vm.mapOverviewFrameXVM;
+        @let gmpMapXVM = mapOverviewFrameXVM.gmpMapXVM;
+        @let openInGMButtonXVM = mapOverviewFrameXVM.openInGMButtonXVM;
+
+        <app-frame [vm]="mapOverviewFrameXVM">
+            @if (openInGMButtonXVM.link; as link) {
+                <a [href]="link.href" action class="w-fit">
+                    <app-button [vm]="openInGMButtonXVM">
+                        {{ t(openInGMButtonXVM.textKey) }}
+                    </app-button>
+                </a>
+            }
+            @if (gmpMapXVM.bounds; as bounds) {
+                <app-gmp-map
+                    class="h-96"
+                    [view]="bounds"
+                    appGmpPolygonDrawing
+                    [polygonInput]="gmpMapXVM.polygon"
+                    [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
+                />
+
+                <app-stack orientation="vertical" gap="xs">
+                    @for (
+                        overview of vm.mapOverviewFrameXVM.overviews;
+                        track $index
+                    ) {
+                        <app-stack orientation="horizontal" gap="sm">
+                            <app-key>{{ t(overview.keyXVM.textKey) }}</app-key>
+                            <app-value [vm]="overview.valueVM" />
+                        </app-stack>
+                    }
+                </app-stack>
+            }
+        </app-frame>
+        <!-- Overview end -->
+
+        <!-- Log frame, contains the messages, logs about the mission -->
+        @let logFrameXVM = vm.logFrameXVM;
+
+        <app-frame [vm]="logFrameXVM">
+            <!-- Messages stack start -->
+            <app-stack orientation="vertical" gap="md">
+                @for (messageXVM of logFrameXVM.messageXVMs; track $index) {
+                    <!-- Message item -->
+                    @let isSender = messageXVM.type === 'sender';
+                    <app-message
+                        class="max-w-5/6"
+                        [ngClass]="{
+                            'self-end': isSender,
+                        }"
+                    >
+                        @if (!isSender) {
+                            <app-avatar [vm]="messageXVM.avatarVM" />
+                        }
+                        @if (!isSender) {
+                            <span name>
+                                {{
+                                    t(messageXVM.nameXRoleValueKey, {
+                                        name: messageXVM.name,
+                                        role: t(
+                                            mapRoleToTranslocoTextKey(
+                                                messageXVM.role
+                                            )
+                                        ),
+                                    })
+                                }}
+                            </span>
+                        }
+                        <app-chat-bubble [type]="messageXVM.type">{{
+                            messageXVM.message
+                        }}</app-chat-bubble>
+                        <time
+                            class="block"
+                            [ngClass]="{
+                                'text-end': isSender,
+                            }"
+                            >{{
+                                t(messageXVM.dateTimeValueKey, {
+                                    date: messageXVM.dateTime,
+                                })
+                            }}</time
+                        >
+                    </app-message>
+                    <!-- Message item end -->
+                }
+            </app-stack>
+            <!-- Messages stack end -->
+
+            <!-- Message input field with button -->
+            @if (!logFrameXVM.readonlyMessageControl) {
+                @let submitButtonDisabled =
+                    messageControl.disabled ||
+                    messageControl.hasError('emptyString') ||
+                    messageControl.hasError('required');
+
+                <app-input-text
+                    [vm]="logFrameXVM.messageInputTextXVM"
+                    [formControl]="messageControl"
+                    class="[&_.input]:rounded-r-none"
+                    [ngClass]="{
+                        disabled: messageControl.disabled,
+                    }"
+                >
+                    <app-button
+                        [vm]="logFrameXVM.submitButtonXVM"
+                        [disabled]="submitButtonDisabled"
+                        (click)="!submitButtonDisabled && sendMessage()"
+                        class="*:rounded-l-none"
+                    >
+                        <mat-icon>
+                            {{ logFrameXVM.submitButtonXVM.icon }}
+                        </mat-icon>
+                    </app-button>
+                </app-input-text>
+            }
+            <!-- Message input end -->
+        </app-frame>
+        <!-- Log frame end -->
+    </app-page-layout>
+}
+
+<!-- Dialog for customer cancel -->
+<app-customer-cancel-dialog
+    #customerCancelDialog
+    (response)="
+        $event.type === 'confirm' && service.cancelMission($event.reason)
+    "
+/>
+
+<!-- Dialog for office cancel -->
+<app-office-cancel-dialog
+    #officeCancelDialog
+    (response)="
+        $event.type === 'confirm' && service.cancelMission($event.reason)
+    "
+/>
+
+<!-- Reusable dialog button layout -->
+<ng-template #dialogButton let-action="action" let-dialogRef="dialogRef">
+    <app-button
+        [vm]="action.buttonXVM"
+        (click)="dialogRef.open(action.dialogLayoutXVM)"
+    >
+        {{ action.buttonXVM.textKey | transloco }}
+    </app-button>
+</ng-template>

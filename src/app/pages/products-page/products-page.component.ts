@@ -1,9 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FrameComponent } from '@components/frame/frame.component';
-import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { ProductsPageService } from './products-page.service';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
+import { CardComponent } from '@components/card/card.component';
+import { CardBodyComponent } from '@components/card/components/card-body/card-body.component';
+import { RouterModule } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
 
 /**
  * ProductsPageComponent
@@ -25,9 +28,12 @@ import { PageLayoutComponent } from '@components/page-layout/page-layout.compone
     selector: 'app-products-page',
     imports: [
         FrameComponent,
-        ProductItemComponent,
         ProductListComponent,
         PageLayoutComponent,
+        CardComponent,
+        CardBodyComponent,
+        RouterModule,
+        TranslocoModule,
     ],
     templateUrl: './products-page.component.html',
 })

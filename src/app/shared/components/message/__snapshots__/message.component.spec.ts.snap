@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`MessageComponent should render the template and project the content correctly 1`] = `
+<div
+  id="root0"
+  ng-version="20.1.7"
+>
+  <app-message>
+    <div
+      class="message"
+    >
+      <app-avatar>
+        <div
+          class="avatar bg-purple-200"
+        >
+          <span>
+            JB
+          </span>
+        </div>
+        <!--container-->
+        <!--container-->
+      </app-avatar>
+      <div>
+        <time>
+          Time
+        </time>
+        <span
+          name=""
+        >
+          Jack
+        </span>
+        <app-chat-bubble
+          type="receiver"
+        >
+          <div
+            class="chat-bubble receiver"
+          />
+        </app-chat-bubble>
+      </div>
+    </div>
+  </app-message>
+</div>
+`;
