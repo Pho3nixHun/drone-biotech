@@ -1,5 +1,5 @@
 import { AppComponentVM } from './app-vm.model';
-import { FrameID } from './pages/landing-page/landing-page-vm.model';
+import { FrameID } from './pages/landing-page/landing-page.model';
 import { AppRouteSegment } from './app-route-segment';
 import { OrdersRouteSegment } from './pages/orders-new-page/orders-route-segment';
 import { MatIcon } from '@interfaces/mat-icon.enum';

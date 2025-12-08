@@ -5,9 +5,14 @@ exports[`ValueComponent should render the template correctly if the type is with
   id="root1"
   ng-version="20.1.7"
 >
-  <!--container-->
-    
-  <!--container-->
+  <span
+    class="block"
+    style="color: var(--text-secondary);"
+  >
+    <!--container-->
+      
+    <!--container-->
+  </span>
 </div>
 `;
 
@@ -16,8 +21,13 @@ exports[`ValueComponent should render the template correctly if the type is with
   id="root0"
   ng-version="20.1.7"
 >
-   1 
-  <!--container-->
-  <!--container-->
+  <span
+    class="block"
+    style="color: var(--text-secondary);"
+  >
+     1 
+    <!--container-->
+    <!--container-->
+  </span>
 </div>
 `;

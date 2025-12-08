@@ -15,10 +15,10 @@ exports[`CustomerCancelDialogComponent should render the template correctly 1`] 
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                 tit

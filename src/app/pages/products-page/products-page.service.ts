@@ -1,37 +1,34 @@
-import { computed, inject, Injectable, Signal } from '@angular/core';
-import { ProductsPageVM } from './products-page-vm.model';
+import { computed, inject, Injectable, signal, Signal } from '@angular/core';
+import { ProductsPageVM } from './products-page.model';
 import { productsPageVMDefault } from './products-page.mock';
-import { ProductsService } from '@services/products/products.service';
 import { Store } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { selectID } from 'src/app/stores/router/router.selectors';
-import { ProductItemXVM } from '../landing-page/landing-page-vm.model';
+import { selectID } from '@stores/router/router.selectors';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ProductsPageService {
-    private readonly productsService = inject(ProductsService);
     private readonly store = inject(Store);
-    private readonly idSignal = toSignal(this.store.select(selectID));
-    private readonly productsSignal = computed<ProductItemXVM[] | null>(() => {
-        const id = this.idSignal();
-        if (!id) return this.productsService.getAllProducts();
+    private readonly id = toSignal(this.store.select(selectID));
+    private readonly vm: Signal<ProductsPageVM> = signal(productsPageVMDefault);
 
-        const productItem = this.productsService.getProductById(id);
-        return productItem ? Array.of(productItem) : null;
-    });
+    private readonly computedVM = computed(() => {
+        const id = this.id();
+        const vm = this.vm();
+        if (!id) return vm;
 
-    private readonly computedVM = computed<ProductsPageVM>(() => {
-        const products = this.productsSignal();
-
-        return {
-            productListFrame: {
-                ...productsPageVMDefault.productListFrame,
-                productItemVMs: products,
+        const { productFrame } = vm;
+        const { productCardXVMs } = productFrame;
+        const productsPageVM: ProductsPageVM = {
+            ...vm,
+            productFrame: {
+                ...productFrame,
+                productCardXVMs: productCardXVMs.filter((x) => x.id === id),
             },
         };
+        return productsPageVM;
     });
 
-    public getVM = (): Signal<ProductsPageVM> => this.computedVM;
+    public getVM = () => this.computedVM;
 }

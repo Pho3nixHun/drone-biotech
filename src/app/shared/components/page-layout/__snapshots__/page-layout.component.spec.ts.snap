@@ -7,7 +7,7 @@ exports[`PageLayoutComponent should render the template when the VM is provided 
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <p>
         Should be projected

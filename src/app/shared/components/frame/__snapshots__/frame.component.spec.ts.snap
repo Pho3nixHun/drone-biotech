@@ -7,15 +7,12 @@ exports[`FrameComponent should render the template when the vm is not provided 1
 >
   <app-frame>
     <section
-      class="flex flex-col gap-y-4"
+      class="frame"
     >
       <div
-        class="grid grid-cols-2"
+        header=""
       >
         <!--container-->
-        <div
-          class="flex justify-end"
-        />
       </div>
       <div>
         Should be projected
@@ -33,18 +30,15 @@ exports[`FrameComponent should render the template when the vm is provided 1`] =
 >
   <app-frame>
     <section
-      class="flex flex-col gap-y-4"
+      class="frame"
     >
       <div
-        class="grid grid-cols-2"
+        header=""
       >
         <h2>
           Our Products
         </h2>
         <!--container-->
-        <div
-          class="flex justify-end"
-        />
       </div>
       <div>
         Should be projected

@@ -1,16 +1,31 @@
 @if (vm(); as vm) {
-    <app-page-layout>
-        @if (vm.productListFrame.productItemVMs) {
-            <app-frame [vm]="vm.productListFrame">
-                <app-product-list>
-                    @for (
-                        item of vm.productListFrame.productItemVMs;
-                        track $index
-                    ) {
-                        <app-product-item [vm]="item" />
-                    }
-                </app-product-list>
-            </app-frame>
-        }
+    <app-page-layout *transloco="let t">
+        <app-frame [vm]="vm.productFrame">
+            <app-product-list>
+                @for (
+                    cardXVM of vm.productFrame.productCardXVMs;
+                    track $index
+                ) {
+                    <app-card
+                        class="cursor-pointer min-w-80 max-w-96"
+                        style="height: 500px"
+                        ><img
+                            class="object-none"
+                            [src]="cardXVM.imageSrc"
+                            [alt]="cardXVM.altTextKey"
+                            media
+                        />
+                        <app-card-body class="h-52">
+                            <h3 title>
+                                {{ t(cardXVM.titleKey) }}
+                            </h3>
+                            <p>
+                                {{ t(cardXVM.descriptionKey) }}
+                            </p>
+                        </app-card-body></app-card
+                    >
+                }
+            </app-product-list>
+        </app-frame>
     </app-page-layout>
 }

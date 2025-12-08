@@ -28,10 +28,10 @@ exports[`AreaDataDialogComponent should disable confirm button if form invalid 1
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 
@@ -462,10 +462,10 @@ exports[`AreaDataDialogComponent should enable confirm button if form valid 1`] 
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 
@@ -893,10 +893,10 @@ exports[`AreaDataDialogComponent should render the max length error assistive te
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 
@@ -1332,10 +1332,10 @@ exports[`AreaDataDialogComponent should render the min error assistive text for 
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 
@@ -1771,10 +1771,10 @@ exports[`AreaDataDialogComponent should render the required error assistive text
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 
@@ -2210,10 +2210,10 @@ exports[`AreaDataDialogComponent should render the required error assistive text
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 
@@ -2649,10 +2649,10 @@ exports[`AreaDataDialogComponent should render the template correctly if it is o
       >
         <app-page-header>
           <header
-            class="flex flex-row flex-wrap gap-3 justify-between"
+            class="page-header"
           >
             <div
-              class="flex flex-col gap-3"
+              content=""
             >
               <h2>
                  tit 

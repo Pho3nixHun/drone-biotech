@@ -1,5 +1,5 @@
 import { AppRouteSegment } from 'src/app/app-route-segment';
-import { FrameID, LandingPageVM } from './landing-page-vm.model';
+import { FrameID, LandingPageVM } from './landing-page.model';
 
 export const enMock = {
     hero: {
@@ -87,11 +87,38 @@ export const enMock = {
 export const landingPageVMDefault: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'productFrame',
             id: FrameID.PRODUCTS,
             titleKey: 'LandingPage.frames.0.title',
-            productItemXVMs: [],
+            productCardXVMs: [
+                {
+                    id: '1',
+                    routerLink: [AppRouteSegment.PRODUCT, '1'],
+                    altTextKey: 'LandingPage.products.0.title',
+                    titleKey: 'LandingPage.products.0.title',
+                    descriptionKey: 'LandingPage.products.0.description',
+                    imageSrc: 'assets/lepke.jpg',
+                },
+                {
+                    id: '2',
+                    routerLink: [AppRouteSegment.PRODUCT, '2'],
+                    altTextKey: 'LandingPage.products.1.title',
+                    titleKey: 'LandingPage.products.1.title',
+                    descriptionKey: 'LandingPage.products.1.description',
+                    imageSrc: 'assets/lepke.jpg',
+                },
+                {
+                    id: '3',
+                    routerLink: [AppRouteSegment.PRODUCT, '3'],
+                    altTextKey: 'LandingPage.products.2.title',
+                    titleKey: 'LandingPage.products.2.title',
+                    descriptionKey: 'LandingPage.products.2.description',
+                    imageSrc: 'assets/lepke.jpg',
+                },
+            ],
         },
         {
+            type: 'partnerAndTestimonialFrame',
             id: FrameID.PARTNERS,
             titleKey: 'LandingPage.frames.1.title',
             partnerLogoXVMs: [
@@ -238,9 +265,10 @@ export const mockVMWithoutFrames: LandingPageVM = {
 export const mockVMWithOneFrame: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'productFrame',
             id: FrameID.PRODUCTS,
             titleKey: enMock.frame1.title,
-            productItemXVMs: [],
+            productCardXVMs: [],
         },
     ],
 };
@@ -248,27 +276,32 @@ export const mockVMWithOneFrame: LandingPageVM = {
 export const mockVMWithFiveFrames: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'productFrame',
             id: '1',
             titleKey: enMock.frame1.title,
-            productItemXVMs: [],
+            productCardXVMs: [],
         },
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [],
             testimonialItemVMs: [],
         },
         {
+            type: 'productFrame',
             id: '3',
             titleKey: enMock.frame3.title,
-            productItemXVMs: [],
+            productCardXVMs: [],
         },
         {
+            type: 'productFrame',
             id: '4',
             titleKey: enMock.frame4.title,
-            productItemXVMs: [],
+            productCardXVMs: [],
         },
         {
+            type: 'partnerAndTestimonialFrame',
             id: '4',
             titleKey: enMock.frame5.title,
             partnerLogoXVMs: [],
@@ -280,9 +313,10 @@ export const mockVMWithFiveFrames: LandingPageVM = {
 export const mockVMWithoutProductItem: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'productFrame',
             id: FrameID.PRODUCTS,
             titleKey: enMock.frame1.title,
-            productItemXVMs: [],
+            productCardXVMs: [],
         },
     ],
 };
@@ -290,9 +324,10 @@ export const mockVMWithoutProductItem: LandingPageVM = {
 export const mockVMWithOneProductItem: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'productFrame',
             id: FrameID.PRODUCTS,
             titleKey: enMock.frame1.title,
-            productItemXVMs: [
+            productCardXVMs: [
                 {
                     id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
@@ -309,9 +344,10 @@ export const mockVMWithOneProductItem: LandingPageVM = {
 export const mockVMWithFiveProductItem: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'productFrame',
             id: FrameID.PRODUCTS,
             titleKey: enMock.frame1.title,
-            productItemXVMs: [
+            productCardXVMs: [
                 {
                     id: '1',
                     routerLink: [AppRouteSegment.PRODUCT, '1'],
@@ -360,6 +396,7 @@ export const mockVMWithFiveProductItem: LandingPageVM = {
 export const mockVMWithoutPartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [],
@@ -371,6 +408,7 @@ export const mockVMWithoutPartnerLogoXVM: LandingPageVM = {
 export const mockVMWithOnePartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [
@@ -387,6 +425,7 @@ export const mockVMWithOnePartnerLogoXVM: LandingPageVM = {
 export const mockVMWithFivePartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '1',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [
@@ -419,6 +458,7 @@ export const mockVMWithFivePartnerLogoXVM: LandingPageVM = {
 export const mockVMWithFiveMixedPartnerLogoXVM: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [
@@ -460,6 +500,7 @@ export const mockVMWithFiveMixedPartnerLogoXVM: LandingPageVM = {
 export const mockVMWithoutTestimonial: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [],
@@ -471,6 +512,7 @@ export const mockVMWithoutTestimonial: LandingPageVM = {
 export const mockVMWithOneTestimonial: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [],
@@ -489,6 +531,7 @@ export const mockVMWithOneTestimonial: LandingPageVM = {
 export const mockVMWithFiveTestimonial: LandingPageVM = {
     frameXVMs: [
         {
+            type: 'partnerAndTestimonialFrame',
             id: '2',
             titleKey: enMock.frame2.title,
             partnerLogoXVMs: [],

@@ -1,0 +1,15 @@
+@layer components {
+    .page-header {
+        --gap-y: var(--layout-gap-xs);
+
+        gap: var(--gap-y) 0;
+
+        @apply flex flex-row flex-wrap justify-between;
+
+        [content] {
+            gap: var(--gap-y) 0;
+
+            @apply flex flex-col;
+        }
+    }
+}

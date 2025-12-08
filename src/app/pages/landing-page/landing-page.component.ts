@@ -2,7 +2,6 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeroComponent } from '@components/hero/hero.component';
-import { ProductItemComponent } from '@components/product-item/product-item.component';
 import { ProductListComponent } from '@components/product-list/product-list.component';
 import { FrameComponent } from '@components/frame/frame.component';
 import { PartnerListComponent } from '@components/partner-list/partner-list.component';
@@ -12,10 +11,15 @@ import { SwiperModule } from '@modules/swiper/swiper.module';
 import { Rel } from '@interfaces/with-link.interface';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LandingPageService } from './landing-page.service';
-import { isProductFrame } from './landing-page-vm.model';
+import {
+    isProductFrame,
+    isPartnerAndTestimonialFrame,
+} from './landing-page.model';
 import { PageLayoutComponent } from '@components/page-layout/page-layout.component';
 import { ButtonComponent } from '@components/button/button.component';
 import { StackComponent } from '@components/stack/stack.component';
+import { CardComponent } from '@components/card/card.component';
+import { CardBodyComponent } from '@components/card/components/card-body/card-body.component';
 
 /**
  * LandingPageComponent
@@ -43,7 +47,8 @@ import { StackComponent } from '@components/stack/stack.component';
         NgTemplateOutlet,
         PartnerListComponent,
         PartnerLogoComponent,
-        ProductItemComponent,
+        CardComponent,
+        CardBodyComponent,
         ProductListComponent,
         RouterModule,
         SwiperModule,
@@ -63,4 +68,6 @@ export class LandingPageComponent {
     protected readonly defaultRel: Rel[] = [Rel.NoOpener, Rel.NoReferrer];
     protected readonly defaultTarget = '_self';
     protected readonly isProductFrame = isProductFrame;
+    protected readonly isPartnerAndTestimonialFrame =
+        isPartnerAndTestimonialFrame;
 }

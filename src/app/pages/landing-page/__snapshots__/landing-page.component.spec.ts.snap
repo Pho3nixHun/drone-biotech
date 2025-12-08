@@ -7,25 +7,22 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -34,11 +31,9 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -48,10 +43,12 @@ exports[`LandingPageComponent should not render <app-partner-logo> when 0 is pro
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -68,37 +65,36 @@ exports[`LandingPageComponent should not render <app-product-item> when 0 is pro
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="products"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame1tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -115,25 +111,22 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -142,11 +135,9 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -156,10 +147,12 @@ exports[`LandingPageComponent should not render <app-testimonial-item> when 0 is
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -187,7 +180,7 @@ exports[`LandingPageComponent should not render frames when 0 frame is provided 
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <!--container-->
@@ -206,7 +199,7 @@ exports[`LandingPageComponent should not render the hero section when the heroXV
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <!--container-->
@@ -225,7 +218,7 @@ exports[`LandingPageComponent should not render the texts of the buttons inside 
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <app-hero>
         <section
@@ -289,25 +282,22 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -325,11 +315,9 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -339,10 +327,12 @@ exports[`LandingPageComponent should render 1 <app-partner-logo> when 1 is provi
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -359,62 +349,72 @@ exports[`LandingPageComponent should render 1 <app-product-item> when 1 is provi
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="products"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame1tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
-              <app-product-item
-                class="h-full"
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
                 tabindex="0"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
                     alt="1alt1"
-                    class="w-auto h-auto object-cover rounded-md"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    1tit1
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1desc1
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           1tit1 
+                        </h3>
+                      </div>
+                      <p>
+                         1desc1 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -431,25 +431,22 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -458,11 +455,9 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -498,10 +493,12 @@ exports[`LandingPageComponent should render 1 <app-testimonial-item> when 1 is p
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -518,37 +515,36 @@ exports[`LandingPageComponent should render 1 frame when 1 frame is provided 1`]
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="products"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame1tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -565,25 +561,22 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="1"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -637,11 +630,9 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -651,10 +642,12 @@ exports[`LandingPageComponent should render 5 <app-partner-logo> in order when 5
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -671,162 +664,216 @@ exports[`LandingPageComponent should render 5 <app-product-item> in order when 5
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="products"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame1tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
-              <app-product-item
-                class="h-full"
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
                 tabindex="0"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
                     alt="1alt1"
-                    class="w-auto h-auto object-cover rounded-md"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    1tit1
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1desc1
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           1tit1 
+                        </h3>
+                      </div>
+                      <p>
+                         1desc1 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
                 tabindex="0"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
                     alt="1alt2"
-                    class="w-auto h-auto object-cover rounded-md"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    1tit2
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1desc2
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           1tit2 
+                        </h3>
+                      </div>
+                      <p>
+                         1desc2 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
                 tabindex="0"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
                     alt="1alt3"
-                    class="w-auto h-auto object-cover rounded-md"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    1tit3
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1desc3
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           1tit3 
+                        </h3>
+                      </div>
+                      <p>
+                         1desc3 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
                 tabindex="0"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
                     alt="1alt4"
-                    class="w-auto h-auto object-cover rounded-md"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    1tit4
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1desc4
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
-              <app-product-item
-                class="h-full"
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           1tit4 
+                        </h3>
+                      </div>
+                      <p>
+                         1desc4 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
+              <app-card
+                class="cursor-pointer min-w-80 max-w-96"
+                style="height: 500px;"
                 tabindex="0"
               >
-                <a
-                  class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
+                <div
+                  class="card"
                 >
                   <img
                     alt="1alt5"
-                    class="w-auto h-auto object-cover rounded-md"
+                    class="object-none"
+                    media=""
                     src="assets/lepke.jpg"
                   />
-                  <h3
-                    class="font-bold text-xl sm:text-2xl mt-4"
+                  <app-card-body
+                    class="h-52"
                   >
-                    1tit5
-                  </h3>
-                  <p
-                    class="mt-4"
-                  >
-                    1desc5
-                  </p>
-                </a>
-                <!--container-->
-              </app-product-item>
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        header=""
+                      >
+                        <h3
+                          title=""
+                        >
+                           1tit5 
+                        </h3>
+                      </div>
+                      <p>
+                         1desc5 
+                      </p>
+                    </div>
+                  </app-card-body>
+                </div>
+              </app-card>
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -843,25 +890,22 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -870,11 +914,9 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -1014,10 +1056,12 @@ exports[`LandingPageComponent should render 5 <app-testimonial-item> in order wh
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -1034,53 +1078,49 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="1"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame1tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -1089,11 +1129,9 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -1103,82 +1141,79 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <app-frame
         id="3"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame3tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <app-frame
         id="4"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame4tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-product-list>
             <div
-              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
             >
               <!--container-->
             </div>
           </app-product-list>
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <app-frame
         id="4"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame5tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -1187,11 +1222,9 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -1201,10 +1234,12 @@ exports[`LandingPageComponent should render 5 frames in order when 5 frames are 
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -1221,25 +1256,22 @@ exports[`LandingPageComponent should render 5 mixed <app-partner-logo> in order 
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <app-frame
         id="2"
       >
         <section
-          class="flex flex-col gap-y-4"
+          class="frame"
         >
           <div
-            class="grid grid-cols-2"
+            header=""
           >
             <h2>
               frame2tit
             </h2>
             <!--container-->
-            <div
-              class="flex justify-end"
-            />
           </div>
           <app-partner-list>
             <div
@@ -1311,11 +1343,9 @@ exports[`LandingPageComponent should render 5 mixed <app-partner-logo> in order 
               <!--container-->
             </div>
           </app-partner-list>
-          <!--container-->
           <swiper-container
             autoplay-delay="2500"
             autoplay-disable-on-interaction="false"
-            class="w-full sm:w-2/3 md:w-1/2"
             keyboard="true"
             pagination="true"
             pagination-clickable="true"
@@ -1325,10 +1355,12 @@ exports[`LandingPageComponent should render 5 mixed <app-partner-logo> in order 
             <!--container-->
           </swiper-container>
           <!--container-->
+          <!--container-->
+          <!--container-->
+          <!--ng-container-->
         </section>
         <!--container-->
       </app-frame>
-      <!--ng-container-->
       <!--container-->
     </section>
   </app-page-layout>
@@ -1345,7 +1377,7 @@ exports[`LandingPageComponent should render the hero section when the heroXVM is
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <app-hero>
         <section
@@ -1409,7 +1441,7 @@ exports[`LandingPageComponent should render the template when there is a VM prov
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <!--container-->
       <!--container-->
@@ -1428,7 +1460,7 @@ exports[`LandingPageComponent should render the texts of the buttons inside the 
 >
   <app-page-layout>
     <section
-      class="flex flex-col gap-y-10 mx-5 sm:mx-20 lg:mx-32"
+      class="page-layout"
     >
       <app-hero>
         <section

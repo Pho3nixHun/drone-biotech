@@ -4,6 +4,9 @@
 /* stylelint-disable at-rule-empty-line-before */
 
 @import "tailwindcss";
+@import './app/shared/components/page-layout/page-layout.component.css';
+@import './app/shared/components/page-header/page-header.component.css';
+@import './app/shared/components/frame/frame.component.css';
 @import './app/shared/components/card/card.component.css';
 @import './app/shared/components/card/components/card-body/card-body.component.css';
 @import './app/shared/components/chat-bubble/chat-bubble.component.css';
@@ -88,7 +91,7 @@ Semantic tokens (Tier-2):
     --state-error-subtle: var(--color-red-200);
 
     /* Layout gap semantic scales */
-    --layout-gap-2xs: var(--space-0\.5);
+    --layout-gap-2xs: var(--space-1);
     --layout-gap-xs: var(--space-2);
     --layout-gap-sm: var(--space-4);
     --layout-gap-md: var(--space-6);
@@ -97,6 +100,7 @@ Semantic tokens (Tier-2):
     --layout-gap-2xl: var(--space-16);
 
     /* Component gap semantic scales */
+    --component-gap-2xs: var(--space-0\.5);
     --component-gap-xs: var(--space-1);
     --component-gap-sm: var(--space-2);
     --component-gap-md: var(--space-4);
@@ -116,16 +120,28 @@ html {
 }
 
 @layer base {
+    body {
+        color: var(--text-primary);
+        background-color: var(--surface-primary);
+    }
+
     h1 {
-        @apply font-black text-2xl sm:text-3xl lg:text-4xl transition-all ease-in-out;
+        @apply text-2xl font-medium lg:text-3xl;
     }
 
     h2 {
-        @apply font-black text-xl sm:text-2xl lg:text-3xl transition-all ease-in-out;
+        @apply font-medium text-xl lg:text-2xl;
     }
 
     h3 {
-        @apply font-black text-lg transition-all ease-in-out;
+        @apply font-medium text-lg lg:text-xl;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply transition-all;
     }
 
     app-hero p {

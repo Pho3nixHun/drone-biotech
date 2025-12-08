@@ -5,9 +5,10 @@
         @let status = vm.status;
         @let creationDateKeyValueXVM = headerXVM.creationDateKeyValueXVM;
 
+        <!-- Page header that contains mission title, badge and creation date -->
         <app-page-header>
             <h1>{{ t(headerXVM.titleKey) }}</h1>
-            <app-stack orientation="horizontal" gap="md" metadata>
+            <app-stack orientation="horizontal" gap="sm" metadata>
                 <app-badge
                     shape="pilled"
                     [intent]="mapMissionStatusToBadgeIntent(status)"
@@ -15,34 +16,38 @@
                         t(mapMissionStatusToTranslocoTextKey(status))
                     }}</app-badge
                 >
-                <time>
-                    <app-stack orientation="horizontal" gap="sm">
-                        <app-key>{{
-                            t(creationDateKeyValueXVM.keyXVM.textKey)
-                        }}</app-key>
+                <app-stack
+                    orientation="horizontal"
+                    gap="xs"
+                    class="flex items-center"
+                >
+                    <app-key>{{
+                        t(creationDateKeyValueXVM.keyXVM.textKey)
+                    }}</app-key>
+                    <time>
                         <app-value [vm]="creationDateKeyValueXVM.valueVM" />
-                    </app-stack>
-                </time>
+                    </time>
+                </app-stack>
             </app-stack>
 
             <app-stack orientation="horizontal" gap="md" actionGroup>
-                @for (action of headerXVM.dialogActions; track $index) {
+                @for (action of headerXVM.dialogActions; track action.type) {
                     @switch (action.type) {
                         @case ('customerCancel') {
                             <ng-container
-                                [ngTemplateOutlet]="customerCancel"
+                                [ngTemplateOutlet]="dialogButton"
                                 [ngTemplateOutletContext]="{
-                                    buttonXVM: action.buttonXVM,
-                                    dialogVM: action.dialogLayoutXVM,
+                                    dialogRef: customerCancelDialog,
+                                    action: action,
                                 }"
                             />
                         }
                         @case ('officeCancel') {
                             <ng-container
-                                [ngTemplateOutlet]="officeCancel"
+                                [ngTemplateOutlet]="dialogButton"
                                 [ngTemplateOutletContext]="{
-                                    buttonXVM: action.buttonXVM,
-                                    dialogVM: action.dialogLayoutXVM,
+                                    dialogRef: officeCancelDialog,
+                                    action: action,
                                 }"
                             />
                         }
@@ -59,7 +64,7 @@
 
         <app-frame [vm]="mapOverviewFrameXVM">
             @if (openInGMButtonXVM.link; as link) {
-                <a [href]="link.href">
+                <a [href]="link.href" action class="w-fit">
                     <app-button [vm]="openInGMButtonXVM">
                         {{ t(openInGMButtonXVM.textKey) }}
                     </app-button>
@@ -74,17 +79,14 @@
                     [appGmpAdvancedMarker]="gmpMapXVM.entryPoint"
                 />
 
-                <app-stack orientation="vertical" gap="sm">
+                <app-stack orientation="vertical" gap="xs">
                     @for (
                         overview of vm.mapOverviewFrameXVM.overviews;
                         track $index
                     ) {
                         <app-stack orientation="horizontal" gap="sm">
                             <app-key>{{ t(overview.keyXVM.textKey) }}</app-key>
-                            <app-value
-                                class="font-medium"
-                                [vm]="overview.valueVM"
-                            />
+                            <app-value [vm]="overview.valueVM" />
                         </app-stack>
                     }
                 </app-stack>
@@ -177,30 +179,28 @@
     </app-page-layout>
 }
 
-<!-- Dialog for customer cancel start -->
-<ng-template #customerCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
-    <app-button [vm]="buttonXVM" (click)="customerCancelDialog.open(dialogVM)">
-        {{ buttonXVM.textKey | transloco }}
-    </app-button>
-    <app-customer-cancel-dialog
-        #customerCancelDialog
-        (response)="
-            $event.type === 'confirm' && service.cancelMission($event.reason)
-        "
-    />
-</ng-template>
-<!-- Dialog end -->
+<!-- Dialog for customer cancel -->
+<app-customer-cancel-dialog
+    #customerCancelDialog
+    (response)="
+        $event.type === 'confirm' && service.cancelMission($event.reason)
+    "
+/>
 
-<!-- Dialog for office cancel start -->
-<ng-template #officeCancel let-buttonXVM="buttonXVM" let-dialogVM="dialogVM">
-    <app-button [vm]="buttonXVM" (click)="officeCancelDialog.open(dialogVM)">
-        {{ buttonXVM.textKey | transloco }}
+<!-- Dialog for office cancel -->
+<app-office-cancel-dialog
+    #officeCancelDialog
+    (response)="
+        $event.type === 'confirm' && service.cancelMission($event.reason)
+    "
+/>
+
+<!-- Reusable dialog button layout -->
+<ng-template #dialogButton let-action="action" let-dialogRef="dialogRef">
+    <app-button
+        [vm]="action.buttonXVM"
+        (click)="dialogRef.open(action.dialogLayoutXVM)"
+    >
+        {{ action.buttonXVM.textKey | transloco }}
     </app-button>
-    <app-office-cancel-dialog
-        #officeCancelDialog
-        (response)="
-            $event.type === 'confirm' && service.cancelMission($event.reason)
-        "
-    />
 </ng-template>
-<!-- Dialog end -->

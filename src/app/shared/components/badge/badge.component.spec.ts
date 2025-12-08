@@ -5,16 +5,11 @@ import { Component, input } from '@angular/core';
 type Intent = 'accent' | 'error' | 'warning' | 'success';
 type Variant = 'fill' | 'outline';
 type Shape = 'rounded' | 'pilled';
-type Size = 'md' | 'sm';
 
 @Component({
     imports: [BadgeComponent],
     template: `
-        <app-badge
-            [intent]="intent()"
-            [variant]="variant()"
-            [shape]="shape()"
-            [size]="size()"
+        <app-badge [intent]="intent()" [variant]="variant()" [shape]="shape()"
             >Text</app-badge
         >
     `,
@@ -23,7 +18,6 @@ class TestHostComponent {
     public intent = input<Intent>();
     public variant = input<Variant>();
     public shape = input<Shape>();
-    public size = input<Size>();
 }
 
 describe('BadgeComponent', () => {
@@ -116,28 +110,7 @@ describe('BadgeComponent', () => {
         // Assert
         expect(compiled).toMatchSnapshot();
     });
-    // Snapshot testing
-    it('should render small size badge correctly', () => {
-        // Arrange
-        fixture.componentRef.setInput('size', 'sm');
 
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
-    // Snapshot testing
-    it('should render medium size badge correctly', () => {
-        // Arrange
-        fixture.componentRef.setInput('size', 'md');
-
-        // Act
-        fixture.detectChanges();
-
-        // Assert
-        expect(compiled).toMatchSnapshot();
-    });
     // Snapshot testing
     it('should render rounded badge correctly', () => {
         // Arrange

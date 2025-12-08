@@ -1,0 +1,23 @@
+@layer components {
+    .page-layout {
+        --page-gap-y: var(--layout-gap-lg);
+        --page-margin-x: var(--layout-gap-md);
+
+        gap: var(--page-gap-y) 0;
+        margin-inline: var(--page-margin-x);
+
+        @apply flex flex-col mb-10 transition;
+
+        @media (width >=40rem) {
+            --page-margin-x: var(--layout-gap-lg);
+        }
+
+        @media (width >=48rem) {
+            --page-margin-x: var(--layout-gap-xl);
+        }
+
+        @media (width >=64rem) {
+            --page-margin-x: var(--layout-gap-2xl);
+        }
+    }
+}

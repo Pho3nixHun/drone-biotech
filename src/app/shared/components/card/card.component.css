@@ -1,6 +1,6 @@
 @layer components {
     .card {
-        @apply flex flex-col rounded-md shadow-md hover:shadow-xl transition;
+        @apply flex flex-col rounded-md shadow-md hover:shadow-xl hover:scale-105 transition bg-white h-full;
 
         [media] {
             @apply overflow-hidden rounded-md;

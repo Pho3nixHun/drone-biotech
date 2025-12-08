@@ -48,7 +48,7 @@ exports[`AppComponent should not render <app-nav-item> when there is no item pro
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -142,7 +142,7 @@ exports[`AppComponent should not render sign out button if the user is not logge
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -236,7 +236,7 @@ exports[`AppComponent should not render the <app-header> when the headerCanBeSho
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -339,7 +339,7 @@ exports[`AppComponent should render <app-nav-item> and <a> with routerLink in or
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -406,7 +406,7 @@ exports[`AppComponent should render 1 <a> with routerLink when 1 item is provide
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -475,7 +475,7 @@ exports[`AppComponent should render 1 <app-nav-item> when 1 item is provided 1`]
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -570,7 +570,7 @@ exports[`AppComponent should render 5 <a> with routerLink in order when 5 items 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -675,7 +675,7 @@ exports[`AppComponent should render 5 <app-nav-item> in order when 5 items are p
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -769,7 +769,7 @@ exports[`AppComponent should render sign out button if the user is logged in 1`]
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -863,7 +863,7 @@ exports[`AppComponent should render the <app-header> when the headerCanBeShown$ 
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->
@@ -957,7 +957,7 @@ exports[`AppComponent should render the template when the VM is provided 1`] = `
     </app-header>
     <!--container-->
     <div
-      class="flex-grow mt-72 md:mt-25"
+      class="grow mt-72 md:mt-25"
     >
       <router-outlet />
       <!--container-->

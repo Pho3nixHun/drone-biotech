@@ -47,7 +47,7 @@ export type MissionStatus =
 // Common structure for an actionable dialog
 export interface DialogActionBase<XVM = unknown> {
     accessConditions: { role: UserRole; status: MissionStatus }[];
-    buttonXVM: ButtonXVM;
+    buttonXVM: ButtonXVM<'withText'>;
     dialogLayoutXVM: XVM;
 }
 

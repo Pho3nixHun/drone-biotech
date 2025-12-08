@@ -7,59 +7,13 @@ exports[`ProductListComponent should render the template when the VM is provided
 >
   <app-product-list>
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 transition-all"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all place-items-center"
     >
-      <app-product-item
-        class="h-full"
-      >
-        <a
-          class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-        >
-          <img
-            alt="Butterfly"
-            class="w-auto h-auto object-cover rounded-md"
-            src="assets/lepke.jpg"
-          />
-          <h3
-            class="font-bold text-xl sm:text-2xl mt-4"
-          >
-            Title
-          </h3>
-          <p
-            class="mt-4"
-          >
-            Description
-          </p>
-        </a>
-        <!--container-->
-      </app-product-item>
-      <app-product-item
-        class="h-full"
-      >
-        <a
-          class="cursor-pointer block p-4 w-full h-full rounded-md shadow-md hover:shadow-xl transition-all"
-        >
-          <img
-            alt="Butterfly"
-            class="w-auto h-auto object-cover rounded-md"
-            src="assets/lepke.jpg"
-          />
-          <h3
-            class="font-bold text-xl sm:text-2xl mt-4"
-          >
-            Title
-          </h3>
-          <p
-            class="mt-4"
-          >
-            Description
-          </p>
-        </a>
-        <!--container-->
-      </app-product-item>
-      <div>
-        This should not been projected
-      </div>
+      <app-card>
+        <div
+          class="card"
+        />
+      </app-card>
     </div>
   </app-product-list>
 </div>
